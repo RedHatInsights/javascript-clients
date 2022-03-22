@@ -20,7 +20,7 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- * Pairings of C.R.C rule URL and its KCS solution number (node_id)
+ *
  * @export
  * @interface Kcs
  */
@@ -39,7 +39,7 @@ export interface Kcs {
     node_id: string;
 }
 /**
- * The category for a rule.  In Advisor this is one of \'Security\', \'Availability\', \'Stability\' or \'Performance\'.  We don\'t use a Choices field because we want other projects to use this and choose their own categories.
+ *
  * @export
  * @interface RuleCategory
  */
@@ -58,7 +58,7 @@ export interface RuleCategory {
     name: string;
 }
 /**
- * Basic information about whether we are ready to serve information.
+ *
  * @export
  * @interface StatusReady
  */
@@ -101,7 +101,7 @@ export interface StatusReady {
     errors: Array<string>;
 }
 /**
- * RHN-based system types classified by role and product code.
+ *
  * @export
  * @interface SystemType
  */

@@ -25,7 +25,7 @@
 
 • **attributes**: *[CveDetailOutDataAttributes](cvedetailoutdataattributes.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L172)*
+*Defined in [git-api/api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L191)*
 
 **`memberof`** CveDetailOutData
 
@@ -35,7 +35,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L178)*
+*Defined in [git-api/api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L197)*
 
 CVE id.
 
@@ -47,7 +47,7 @@ ___
 
 • **patch_access**: *boolean | null*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L184)*
+*Defined in [git-api/api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L203)*
 
 If show_advisories_details=true shows access to patch service else null
 
@@ -59,7 +59,7 @@ ___
 
 • **type**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L190)*
+*Defined in [git-api/api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L209)*
 
 Type of the record.
 

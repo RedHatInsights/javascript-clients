@@ -24,7 +24,7 @@
 
 • **external_tenant**? : *string*
 
-*Defined in [packages/catalog/api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1319)*
+*Defined in [api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1319)*
 
 The Request account number
 
@@ -36,7 +36,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1325)*
+*Defined in [api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1325)*
 
 The internal tenant id
 
@@ -48,7 +48,7 @@ ___
 
 • **seeded**? : *boolean*
 
-*Defined in [packages/catalog/api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1331)*
+*Defined in [api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1331)*
 
 Tenant Seeded
 

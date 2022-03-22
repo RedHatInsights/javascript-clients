@@ -25,7 +25,7 @@
 
 • **account**? : *string*
 
-*Defined in [packages/config-manager/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L33)*
 
 **`memberof`** AccountState
 
@@ -35,7 +35,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/config-manager/api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L45)*
+*Defined in [api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L45)*
 
 **`memberof`** AccountState
 
@@ -45,7 +45,7 @@ ___
 
 • **label**? : *string*
 
-*Defined in [packages/config-manager/api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L51)*
 
 **`memberof`** AccountState
 
@@ -55,6 +55,6 @@ ___
 
 • **state**? : *[State](state.md)*
 
-*Defined in [packages/config-manager/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L39)*
+*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L39)*
 
 **`memberof`** AccountState

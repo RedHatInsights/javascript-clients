@@ -22,6 +22,6 @@
 
 • **results**: *Array‹[ActiveTag](activetag.md)›*
 
-*Defined in [packages/host-inventory/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)*
 
 **`memberof`** ActiveTagsAllOf

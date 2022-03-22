@@ -43,7 +43,7 @@
 
 • **addresses**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L597)*
+*Defined in [api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L597)*
 
 **`memberof`** ContainerNode
 
@@ -53,7 +53,7 @@ ___
 
 • **allocatable_cpus**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L603)*
+*Defined in [api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L603)*
 
 **`memberof`** ContainerNode
 
@@ -63,7 +63,7 @@ ___
 
 • **allocatable_memory**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L609)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L609)*
 
 **`memberof`** ContainerNode
 
@@ -73,7 +73,7 @@ ___
 
 • **allocatable_pods**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L615)*
+*Defined in [api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L615)*
 
 **`memberof`** ContainerNode
 
@@ -83,7 +83,7 @@ ___
 
 • **archived_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L621)*
+*Defined in [api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L621)*
 
 **`memberof`** ContainerNode
 
@@ -93,7 +93,7 @@ ___
 
 • **conditions**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L627)*
+*Defined in [api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L627)*
 
 **`memberof`** ContainerNode
 
@@ -103,7 +103,7 @@ ___
 
 • **cpus**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L633)*
+*Defined in [api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L633)*
 
 **`memberof`** ContainerNode
 
@@ -113,7 +113,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L639)*
+*Defined in [api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L639)*
 
 **`memberof`** ContainerNode
 
@@ -123,7 +123,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L645)*
+*Defined in [api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L645)*
 
 ID of the resource
 
@@ -135,7 +135,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L651)*
+*Defined in [api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L651)*
 
 **`memberof`** ContainerNode
 
@@ -145,7 +145,7 @@ ___
 
 • **lives_on_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L657)*
+*Defined in [api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L657)*
 
 ID of the resource
 
@@ -157,7 +157,7 @@ ___
 
 • **lives_on_type**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L663)*
+*Defined in [api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L663)*
 
 **`memberof`** ContainerNode
 
@@ -167,7 +167,7 @@ ___
 
 • **memory**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L669)*
+*Defined in [api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L669)*
 
 **`memberof`** ContainerNode
 
@@ -177,7 +177,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L675)*
+*Defined in [api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L675)*
 
 **`memberof`** ContainerNode
 
@@ -187,7 +187,7 @@ ___
 
 • **node_info**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L681)*
+*Defined in [api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L681)*
 
 **`memberof`** ContainerNode
 
@@ -197,7 +197,7 @@ ___
 
 • **pods**? : *number*
 
-*Defined in [packages/topological-inventory/api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L687)*
+*Defined in [api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L687)*
 
 **`memberof`** ContainerNode
 
@@ -207,7 +207,7 @@ ___
 
 • **resource_version**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L693)*
+*Defined in [api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L693)*
 
 **`memberof`** ContainerNode
 
@@ -217,7 +217,7 @@ ___
 
 • **source_created_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L699)*
+*Defined in [api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L699)*
 
 **`memberof`** ContainerNode
 
@@ -227,7 +227,7 @@ ___
 
 • **source_deleted_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L705)*
+*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L705)*
 
 **`memberof`** ContainerNode
 
@@ -237,7 +237,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L711)*
+*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L711)*
 
 ID of the resource
 
@@ -249,7 +249,7 @@ ___
 
 • **source_ref**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L717)*
+*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L717)*
 
 **`memberof`** ContainerNode
 
@@ -259,6 +259,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L723)*
+*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L723)*
 
 **`memberof`** ContainerNode

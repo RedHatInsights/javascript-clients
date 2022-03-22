@@ -1620,19 +1620,19 @@ export interface SystemProfileOperatingSystem {
      * @type {number}
      * @memberof SystemProfileOperatingSystem
      */
-    major?: number;
+    major: number;
     /**
      * Minor release of OS (aka the y version)
      * @type {number}
      * @memberof SystemProfileOperatingSystem
      */
-    minor?: number;
+    minor: number;
     /**
      * Name of the distro/os
      * @type {string}
      * @memberof SystemProfileOperatingSystem
      */
-    name?: SystemProfileOperatingSystemNameEnum;
+    name: SystemProfileOperatingSystemNameEnum;
 }
 
 /**
@@ -1640,7 +1640,8 @@ export interface SystemProfileOperatingSystem {
     * @enum {string}
     */
 export enum SystemProfileOperatingSystemNameEnum {
-    RHEL = 'RHEL'
+    RHEL = 'RHEL',
+    CentOS = 'CentOS'
 }
 
 /**
@@ -2080,6 +2081,49 @@ export class DefaultApi extends BaseAPI {
 export const HostsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
+         * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete all hosts on the account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteAllHosts: async (confirmDeleteAll?: boolean, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/hosts/all`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (confirmDeleteAll !== undefined) {
+                localVarQueryParameter['confirm_delete_all'] = confirmDeleteAll;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -2113,6 +2157,94 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 
             if (branchId !== undefined) {
                 localVarQueryParameter['branch_id'] = branchId;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete the entire list of hosts filtered by the given parameters
+         * @param {string} [displayName] Filter by display_name
+         * @param {string} [fqdn] Filter by FQDN
+         * @param {string} [hostnameOrId] Filter by display_name, fqdn, id
+         * @param {string} [insightsId] Filter by insights_id
+         * @param {string} [providerId] Filter by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
+         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/hosts`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (fqdn !== undefined) {
+                localVarQueryParameter['fqdn'] = fqdn;
+            }
+
+            if (hostnameOrId !== undefined) {
+                localVarQueryParameter['hostname_or_id'] = hostnameOrId;
+            }
+
+            if (insightsId !== undefined) {
+                localVarQueryParameter['insights_id'] = insightsId;
+            }
+
+            if (providerId !== undefined) {
+                localVarQueryParameter['provider_id'] = providerId;
+            }
+
+            if (providerType !== undefined) {
+                localVarQueryParameter['provider_type'] = providerType;
+            }
+
+            if (registeredWith !== undefined) {
+                localVarQueryParameter['registered_with'] = registeredWith;
+            }
+
+            if (staleness) {
+                localVarQueryParameter['staleness'] = staleness;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
             }
 
 
@@ -2774,6 +2906,20 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
 export const HostsApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete all hosts on the account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiHostDeleteAllHosts(confirmDeleteAll?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteAllHosts(confirmDeleteAll, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -2783,6 +2929,29 @@ export const HostsApiFp = function(configuration?: Configuration) {
          */
         async apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteById(hostIdList, branchId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete the entire list of hosts filtered by the given parameters
+         * @param {string} [displayName] Filter by display_name
+         * @param {string} [fqdn] Filter by FQDN
+         * @param {string} [hostnameOrId] Filter by display_name, fqdn, id
+         * @param {string} [insightsId] Filter by insights_id
+         * @param {string} [providerId] Filter by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
+         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2967,6 +3136,16 @@ export const HostsApiFp = function(configuration?: Configuration) {
 export const HostsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete all hosts on the account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteAllHosts(confirmDeleteAll?: boolean, options?: any): AxiosPromise<void> {
+            return HostsApiFp(configuration).apiHostDeleteAllHosts(confirmDeleteAll, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete hosts by IDs
          * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -2976,6 +3155,25 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          */
         apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any): AxiosPromise<void> {
             return HostsApiFp(configuration).apiHostDeleteById(hostIdList, branchId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Delete the entire list of hosts filtered by the given parameters
+         * @param {string} [displayName] Filter by display_name
+         * @param {string} [fqdn] Filter by FQDN
+         * @param {string} [hostnameOrId] Filter by display_name, fqdn, id
+         * @param {string} [insightsId] Filter by insights_id
+         * @param {string} [providerId] Filter by provider_id
+         * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
+         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
+            return HostsApiFp(configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
@@ -3121,6 +3319,18 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
  */
 export class HostsApi extends BaseAPI {
     /**
+     * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
+     * @summary Delete all hosts on the account
+     * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostDeleteAllHosts(confirmDeleteAll?: boolean, options?: any) {
+        return HostsApiFp(this.configuration).apiHostDeleteAllHosts(confirmDeleteAll, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
      * Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
      * @summary Delete hosts by IDs
      * @param {Array<string>} hostIdList A comma separated list of host IDs.
@@ -3131,6 +3341,27 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostDeleteById(hostIdList: Array<string>, branchId?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostDeleteById(hostIdList, branchId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
+     * @summary Delete the entire list of hosts filtered by the given parameters
+     * @param {string} [displayName] Filter by display_name
+     * @param {string} [fqdn] Filter by FQDN
+     * @param {string} [hostnameOrId] Filter by display_name, fqdn, id
+     * @param {string} [insightsId] Filter by insights_id
+     * @param {string} [providerId] Filter by provider_id
+     * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
+     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
+     * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostsApi
+     */
+    public apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
+        return HostsApiFp(this.configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

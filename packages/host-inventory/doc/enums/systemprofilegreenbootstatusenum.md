@@ -17,7 +17,7 @@
 
 • **Green**: = "green"
 
-*Defined in [packages/host-inventory/api.ts:1385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1385)*
+*Defined in [api.ts:1385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1385)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **Red**: = "red"
 
-*Defined in [packages/host-inventory/api.ts:1384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1384)*
+*Defined in [api.ts:1384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1384)*

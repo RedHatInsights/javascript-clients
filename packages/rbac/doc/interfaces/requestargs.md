@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [packages/rbac/base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L40)*
+*Defined in [base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L40)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [packages/rbac/base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L39)*
+*Defined in [base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L39)*

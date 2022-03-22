@@ -30,7 +30,7 @@ Limited deployment information from systems managed by rpm-ostree as reported by
 
 • **booted**: *boolean*
 
-*Defined in [packages/host-inventory/api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L992)*
+*Defined in [api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L992)*
 
 Whether the deployment is currently booted
 
@@ -42,7 +42,7 @@ ___
 
 • **checksum**: *string*
 
-*Defined in [packages/host-inventory/api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L968)*
+*Defined in [api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L968)*
 
 The checksum / commit of the deployment
 
@@ -54,7 +54,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [packages/host-inventory/api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L962)*
+*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L962)*
 
 ID of the deployment
 
@@ -66,7 +66,7 @@ ___
 
 • **origin**: *string*
 
-*Defined in [packages/host-inventory/api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L974)*
+*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L974)*
 
 The origin repo from which the commit was installed
 
@@ -78,7 +78,7 @@ ___
 
 • **osname**: *string*
 
-*Defined in [packages/host-inventory/api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L980)*
+*Defined in [api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L980)*
 
 The operating system name
 
@@ -90,7 +90,7 @@ ___
 
 • **pinned**: *boolean*
 
-*Defined in [packages/host-inventory/api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L998)*
+*Defined in [api.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L998)*
 
 Whether the deployment is currently pinned
 
@@ -102,7 +102,7 @@ ___
 
 • **version**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L986)*
+*Defined in [api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L986)*
 
 The version of the deployment
 

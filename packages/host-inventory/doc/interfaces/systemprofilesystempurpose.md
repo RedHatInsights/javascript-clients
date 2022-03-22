@@ -26,7 +26,7 @@ Object for system purpose information
 
 • **role**? : *[SystemProfileSystemPurposeRoleEnum](../enums/systemprofilesystempurposeroleenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1720)*
+*Defined in [api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1721)*
 
 The intended role of the system
 
@@ -38,7 +38,7 @@ ___
 
 • **sla**? : *[SystemProfileSystemPurposeSlaEnum](../enums/systemprofilesystempurposeslaenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1726)*
+*Defined in [api.ts:1727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1727)*
 
 The intended SLA of the system
 
@@ -50,7 +50,7 @@ ___
 
 • **usage**? : *[SystemProfileSystemPurposeUsageEnum](../enums/systemprofilesystempurposeusageenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1714)*
+*Defined in [api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1715)*
 
 The intended usage of the system
 

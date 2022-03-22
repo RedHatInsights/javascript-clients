@@ -27,7 +27,7 @@ Information about how much systems are affected by a security rule, broken down 
 
 • **_1**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L864)*
+*Defined in [api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L914)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -37,7 +37,7 @@ ___
 
 • **_2**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L870)*
+*Defined in [api.ts:920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L920)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -47,7 +47,7 @@ ___
 
 • **_3**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L876)*
+*Defined in [api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L926)*
 
 **`memberof`** ExecutiveReportRulesBySeverity
 
@@ -57,6 +57,6 @@ ___
 
 • **_4**: *[ExecutiveReportRulesBySeverity1](executivereportrulesbyseverity1.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L882)*
+*Defined in [api.ts:932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L932)*
 
 **`memberof`** ExecutiveReportRulesBySeverity

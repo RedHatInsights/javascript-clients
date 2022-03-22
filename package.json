@@ -4,6 +4,10 @@
   "description": "Javascript clients for swagger API",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
   "scripts": {
     "bootstrap": "lerna exec npm install",
     "clear-packages": "lerna exec rm -- -rf node_modules; lerna exec rm -- package-lock.json; rm -rf node_modules",

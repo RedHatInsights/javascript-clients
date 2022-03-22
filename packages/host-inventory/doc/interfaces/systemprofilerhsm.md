@@ -24,7 +24,7 @@ Object for subscription-manager details
 
 • **version**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1657)*
+*Defined in [api.ts:1658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1658)*
 
 System release set by subscription-manager
 

@@ -25,7 +25,7 @@ Information about a host tag
 
 • **count**: *number | null*
 
-*Defined in [packages/host-inventory/api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)*
+*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)*
 
 The number of hosts with the given tag. If the value is null this indicates that the count is unknown.
 
@@ -37,6 +37,6 @@ ___
 
 • **tag**: *[StructuredTag](structuredtag.md)*
 
-*Defined in [packages/host-inventory/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L33)*
 
 **`memberof`** ActiveTag

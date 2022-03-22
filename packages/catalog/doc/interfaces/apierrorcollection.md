@@ -24,7 +24,7 @@ API Error collection
 
 • **errors**? : *Array‹[ApiError](apierror.md)›*
 
-*Defined in [packages/catalog/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L52)*
+*Defined in [api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L52)*
 
 Error list from the API query
 

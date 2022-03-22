@@ -30,7 +30,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [packages/topological-inventory/base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L66)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **field**: *string*
 
-*Defined in [packages/topological-inventory/base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L67)*
+*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L67)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[message](requirederror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Overrides void*
 
-*Defined in [packages/topological-inventory/base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L66)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[stack](requirederror.md#optional-stack)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1033

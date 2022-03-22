@@ -22,6 +22,6 @@
 
 • **data**: *Array‹[GroupOut](groupout.md)›*
 
-*Defined in [packages/rbac/api.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L951)*
+*Defined in [api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L963)*
 
 **`memberof`** GroupPaginationAllOf

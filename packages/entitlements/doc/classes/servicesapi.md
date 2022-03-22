@@ -36,7 +36,7 @@ ServicesApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/entitlements/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/entitlements/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/entitlements/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/entitlements/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **servicesGet**(`options?`: any): *Promise‹AxiosResponse‹object››*
 
-*Defined in [packages/entitlements/api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L129)*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L129)*
 
 **`summary`** get a list of services a user is entitled to
 

@@ -22,6 +22,6 @@
 
 • **user_id**? : *string*
 
-*Defined in [packages/rbac/api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L293)*
+*Defined in [api.ts:293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L293)*
 
 **`memberof`** CrossAccountRequestByUserIdAllOf

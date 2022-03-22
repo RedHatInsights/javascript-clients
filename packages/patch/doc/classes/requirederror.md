@@ -18,6 +18,7 @@
 
 ### Properties
 
+* [cause](requirederror.md#optional-cause)
 * [field](requirederror.md#field)
 * [message](requirederror.md#message)
 * [name](requirederror.md#name)
@@ -30,7 +31,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [packages/patch/base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L66)*
 
 **Parameters:**
 
@@ -43,11 +44,21 @@ Name | Type |
 
 ## Properties
 
+### `Optional` cause
+
+• **cause**? : *[Error](requirederror.md#static-error)*
+
+*Inherited from [RequiredError](requirederror.md).[cause](requirederror.md#optional-cause)*
+
+Defined in node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
+
 ###  field
 
 • **field**: *string*
 
-*Defined in [packages/patch/base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/base.ts#L67)*
+*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L67)*
 
 ___
 
@@ -57,7 +68,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[message](requirederror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 
@@ -67,7 +78,7 @@ ___
 
 *Overrides void*
 
-*Defined in [packages/patch/base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L66)*
 
 ___
 
@@ -79,7 +90,7 @@ ___
 
 *Overrides [RequiredError](requirederror.md).[stack](requirederror.md#optional-stack)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -87,4 +98,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1033

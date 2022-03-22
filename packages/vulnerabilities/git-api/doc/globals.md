@@ -15,6 +15,7 @@
 
 * [AffectedSystemsIdsOut](interfaces/affectedsystemsidsout.md)
 * [AffectedSystemsOut](interfaces/affectedsystemsout.md)
+* [AnnouncementOut](interfaces/announcementout.md)
 * [BulkChangeOut](interfaces/bulkchangeout.md)
 * [BusinessRiskListOut](interfaces/businessrisklistout.md)
 * [BusinessRiskListOutData](interfaces/businessrisklistoutdata.md)
@@ -25,6 +26,7 @@
 * [CveDetailOutDataAttributes](interfaces/cvedetailoutdataattributes.md)
 * [CveRiskIn](interfaces/cveriskin.md)
 * [CveStatusIn](interfaces/cvestatusin.md)
+* [DashbarOut](interfaces/dashbarout.md)
 * [Dashboard](interfaces/dashboard.md)
 * [DashboardCvesBySeverity](interfaces/dashboardcvesbyseverity.md)
 * [DashboardCvesBySeverity0to39](interfaces/dashboardcvesbyseverity0to39.md)
@@ -111,7 +113,7 @@
 
 Ƭ **CveOrList**: *Array‹string› | string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L341)*
+*Defined in [git-api/api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L360)*
 
 **`export`** 
 
@@ -121,7 +123,7 @@ ___
 
 Ƭ **InventoryIdOrList**: *Array‹string› | string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1078)*
+*Defined in [git-api/api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1128)*
 
 **`export`** 
 
@@ -131,7 +133,7 @@ ___
 
 • **BASE_PATH**: *string* = "http://localhost/api/vulnerability/v1".replace(/\/+$/, "")
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L20)*
+*Defined in [git-api/base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L20)*
 
 ## Functions
 
@@ -139,7 +141,7 @@ ___
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:2581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2581)*
+*Defined in [git-api/api.ts:2631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2631)*
 
 DefaultApi - axios parameter creator
 
@@ -157,6 +159,8 @@ Name | Type |
 
 * **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **getAnnouncement**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **getApiStatus**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getBusinessRiskList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
@@ -172,6 +176,8 @@ Name | Type |
 * **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `ruleKey?`: Array‹string›, `knownExploit?`: Array‹boolean›, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `report?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **getDashbar**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -199,8 +205,6 @@ Name | Type |
 
 * **setStatus**(`statusIn`: [StatusIn](interfaces/statusin.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
-
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
@@ -209,7 +213,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:5416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L5416)*
+*Defined in [git-api/api.ts:5492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L5492)*
 
 DefaultApi - factory interface
 
@@ -229,6 +233,8 @@ Name | Type |
 
 * **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *AxiosPromise‹[AffectedSystemsIdsOut](interfaces/affectedsystemsidsout.md)›*
 
+* **getAnnouncement**(`options?`: any): *AxiosPromise‹[AnnouncementOut](interfaces/announcementout.md)›*
+
 * **getApiStatus**(`options?`: any): *AxiosPromise‹void›*
 
 * **getBusinessRiskList**(`options?`: any): *AxiosPromise‹[BusinessRiskListOut](interfaces/businessrisklistout.md)›*
@@ -244,6 +250,8 @@ Name | Type |
 * **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `ruleKey?`: Array‹string›, `knownExploit?`: Array‹boolean›, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `report?`: boolean, `options?`: any): *AxiosPromise‹[SystemCvesOut](interfaces/systemcvesout.md)›*
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options?`: any): *AxiosPromise‹[VulnerabilitiesPostOut](interfaces/vulnerabilitiespostout.md)›*
+
+* **getDashbar**(`options?`: any): *AxiosPromise‹[DashbarOut](interfaces/dashbarout.md)›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *AxiosPromise‹[Dashboard](interfaces/dashboard.md)›*
 
@@ -271,8 +279,6 @@ Name | Type |
 
 * **setStatus**(`statusIn`: [StatusIn](interfaces/statusin.md), `options?`: any): *AxiosPromise‹[StatusOut](interfaces/statusout.md)›*
 
-* **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *AxiosPromise‹void›*
-
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options?`: any): *AxiosPromise‹[BulkChangeOut](interfaces/bulkchangeout.md)›*
 
 ___
@@ -281,7 +287,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:4851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4851)*
+*Defined in [git-api/api.ts:4916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4916)*
 
 DefaultApi - functional programming interface
 
@@ -299,6 +305,8 @@ Name | Type |
 
 * **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *Promise‹function›*
 
+* **getAnnouncement**(`options?`: any): *Promise‹function›*
+
 * **getApiStatus**(`options?`: any): *Promise‹function›*
 
 * **getBusinessRiskList**(`options?`: any): *Promise‹function›*
@@ -314,6 +322,8 @@ Name | Type |
 * **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `ruleKey?`: Array‹string›, `knownExploit?`: Array‹boolean›, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `report?`: boolean, `options?`: any): *Promise‹function›*
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options?`: any): *Promise‹function›*
+
+* **getDashbar**(`options?`: any): *Promise‹function›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *Promise‹function›*
 
@@ -341,8 +351,6 @@ Name | Type |
 
 * **setStatus**(`statusIn`: [StatusIn](interfaces/statusin.md), `options?`: any): *Promise‹function›*
 
-* **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *Promise‹function›*
-
 * **setSystemsOptOut**(`optOutIn`: [OptOutIn](interfaces/optoutin.md), `options?`: any): *Promise‹function›*
 
 ## Object literals
@@ -351,7 +359,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L26)*
+*Defined in [git-api/base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L26)*
 
 **`export`** 
 
@@ -359,22 +367,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L27)*
+*Defined in [git-api/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L30)*
+*Defined in [git-api/base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L28)*
+*Defined in [git-api/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [packages/vulnerabilities/git-api/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L29)*
+*Defined in [git-api/base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/base.ts#L29)*

@@ -24,7 +24,7 @@
 
 • **provider_control_parameters**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2095)*
+*Defined in [api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2095)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys
 
@@ -36,7 +36,7 @@ ___
 
 • **service_parameters**? : *object*
 
-*Defined in [packages/topological-inventory/api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2089)*
+*Defined in [api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2089)*
 
 JSON object with provisioning parameters
 
@@ -48,7 +48,7 @@ ___
 
 • **service_plan_id**? : *string*
 
-*Defined in [packages/topological-inventory/api.ts:2101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2101)*
+*Defined in [api.ts:2101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2101)*
 
 ID of the resource
 

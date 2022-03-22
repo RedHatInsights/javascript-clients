@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ContainerResourceQuota](containerresourcequota.md)›*
 
-*Defined in [packages/topological-inventory/api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L974)*
+*Defined in [api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L974)*
 
 **`memberof`** ContainerResourceQuotaCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/topological-inventory/api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L968)*
+*Defined in [api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L968)*
 
 **`memberof`** ContainerResourceQuotaCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/topological-inventory/api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L962)*
+*Defined in [api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L962)*
 
 **`memberof`** ContainerResourceQuotaCollection

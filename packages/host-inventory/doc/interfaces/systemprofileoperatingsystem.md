@@ -16,17 +16,17 @@ Object for OS details. Supports range operations
 
 ### Properties
 
-* [major](systemprofileoperatingsystem.md#optional-major)
-* [minor](systemprofileoperatingsystem.md#optional-minor)
-* [name](systemprofileoperatingsystem.md#optional-name)
+* [major](systemprofileoperatingsystem.md#major)
+* [minor](systemprofileoperatingsystem.md#minor)
+* [name](systemprofileoperatingsystem.md#name)
 
 ## Properties
 
-### `Optional` major
+###  major
 
-• **major**? : *number*
+• **major**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1623)*
+*Defined in [api.ts:1623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1623)*
 
 Major release of OS (aka the x version)
 
@@ -34,11 +34,11 @@ Major release of OS (aka the x version)
 
 ___
 
-### `Optional` minor
+###  minor
 
-• **minor**? : *number*
+• **minor**: *number*
 
-*Defined in [packages/host-inventory/api.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1629)*
+*Defined in [api.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1629)*
 
 Minor release of OS (aka the y version)
 
@@ -46,11 +46,11 @@ Minor release of OS (aka the y version)
 
 ___
 
-### `Optional` name
+###  name
 
-• **name**? : *[SystemProfileOperatingSystemNameEnum](../enums/systemprofileoperatingsystemnameenum.md)*
+• **name**: *[SystemProfileOperatingSystemNameEnum](../enums/systemprofileoperatingsystemnameenum.md)*
 
-*Defined in [packages/host-inventory/api.ts:1635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1635)*
+*Defined in [api.ts:1635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1635)*
 
 Name of the distro/os
 

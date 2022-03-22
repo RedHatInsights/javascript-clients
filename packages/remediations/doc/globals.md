@@ -291,7 +291,7 @@ Name | Type |
 
 * **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `localhost?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `satOrg?`: string, `localhost?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -309,7 +309,7 @@ ___
 
 ▸ **RemediationsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2611)*
+*Defined in [api.ts:2617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2617)*
 
 RemediationsApi - factory interface
 
@@ -351,7 +351,7 @@ Name | Type |
 
 * **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options?`: any): *AxiosPromise‹[RemediationIssueSystemList](interfaces/remediationissuesystemlist.md)›*
 
-* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `localhost?`: boolean, `options?`: any): *AxiosPromise‹string›*
+* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `satOrg?`: string, `localhost?`: boolean, `options?`: any): *AxiosPromise‹string›*
 
 * **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options?`: any): *AxiosPromise‹[RemediationList](interfaces/remediationlist.md)›*
 
@@ -369,7 +369,7 @@ ___
 
 ▸ **RemediationsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2305)*
+*Defined in [api.ts:2310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2310)*
 
 RemediationsApi - functional programming interface
 
@@ -409,7 +409,7 @@ Name | Type |
 
 * **getRemediationIssueSystems**(`id`: string, `issue`: string, `limit?`: number, `offset?`: number, `sort?`: "display_name" | "-display_name", `options?`: any): *Promise‹function›*
 
-* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `localhost?`: boolean, `options?`: any): *Promise‹function›*
+* **getRemediationPlaybook**(`id`: string, `hosts?`: Array‹string›, `satOrg?`: string, `localhost?`: boolean, `options?`: any): *Promise‹function›*
 
 * **getRemediations**(`sort?`: "updated_at" | "-updated_at" | "name" | "-name" | "system_count" | "-system_count" | "issue_count" | "-issue_count", `filter?`: string, `limit?`: number, `offset?`: number, `system?`: string, `hideArchived?`: boolean, `options?`: any): *Promise‹function›*
 
@@ -427,7 +427,7 @@ ___
 
 ▸ **ResolutionsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3110)*
+*Defined in [api.ts:3118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3118)*
 
 ResolutionsApi - axios parameter creator
 
@@ -451,7 +451,7 @@ ___
 
 ▸ **ResolutionsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3231)*
+*Defined in [api.ts:3239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3239)*
 
 ResolutionsApi - factory interface
 
@@ -477,7 +477,7 @@ ___
 
 ▸ **ResolutionsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3194)*
+*Defined in [api.ts:3202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3202)*
 
 ResolutionsApi - functional programming interface
 
@@ -501,7 +501,7 @@ ___
 
 ▸ **VersionApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3294)*
+*Defined in [api.ts:3302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3302)*
 
 VersionApi - axios parameter creator
 
@@ -523,7 +523,7 @@ ___
 
 ▸ **VersionApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3355)*
+*Defined in [api.ts:3363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3363)*
 
 VersionApi - factory interface
 
@@ -547,7 +547,7 @@ ___
 
 ▸ **VersionApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3333)*
+*Defined in [api.ts:3341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3341)*
 
 VersionApi - functional programming interface
 
