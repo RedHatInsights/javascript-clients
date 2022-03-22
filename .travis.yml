@@ -1,14 +1,12 @@
 language: java
 jdk:
   - openjdk11
-env:
-  - NODE_VERSION="16"
 cache:
   directories:
   - "$HOME/.npm"
 before_install:
  - printf "@redhat-cloud-services:registry=https://registry.npmjs.org/\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
- - nvm install $NODE_VERSION
+ - nvm install 16
 install:
  - npm ci
 before_script:
