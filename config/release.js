@@ -78,7 +78,7 @@ ${packages.map(({ name, version }) => `**${packageName(name, version)}**`).join(
                 version: newVersion
             }
         };
-    }))).recuce(({ packagesUpdated, packagesInfo }, { path, meta }) => ({
+    }))).reduce(({ packagesUpdated, packagesInfo }, { path, meta }) => ({
         packagesUpdated: [
             ...packagesUpdated,
             path
