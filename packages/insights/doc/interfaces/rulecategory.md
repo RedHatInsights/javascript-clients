@@ -2,8 +2,6 @@
 
 # Interface: RuleCategory
 
-The category for a rule.  In Advisor this is one of \'Security\', \'Availability\', \'Stability\' or \'Performance\'.  We don\'t use a Choices field because we want other projects to use this and choose their own categories.
-
 **`export`** 
 
 **`interface`** RuleCategory
@@ -25,7 +23,7 @@ The category for a rule.  In Advisor this is one of \'Security\', \'Availability
 
 • **id**? : *number*
 
-*Defined in [packages/insights/api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L52)*
+*Defined in [api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L52)*
 
 **`memberof`** RuleCategory
 
@@ -35,6 +33,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/insights/api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L58)*
+*Defined in [api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L58)*
 
 **`memberof`** RuleCategory

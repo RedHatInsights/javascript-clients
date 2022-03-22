@@ -39,7 +39,7 @@
 
 • **artifacts**? : *object*
 
-*Defined in [packages/catalog/api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L518)*
+*Defined in [api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L518)*
 
 Contains a prefix-stripped key/value object that contains all of the information exposed from product provisioning. Must be exposed from Tower with prefix \'expose_to_cloud_redhat_com_\'
 
@@ -51,7 +51,7 @@ ___
 
 • **completed_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L476)*
+*Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L476)*
 
 **`memberof`** OrderItem
 
@@ -61,7 +61,7 @@ ___
 
 • **count**: *number*
 
-*Defined in [packages/catalog/api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L428)*
+*Defined in [api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L428)*
 
 **`memberof`** OrderItem
 
@@ -71,7 +71,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L464)*
+*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L464)*
 
 **`memberof`** OrderItem
 
@@ -81,7 +81,7 @@ ___
 
 • **external_url**? : *string*
 
-*Defined in [packages/catalog/api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L494)*
+*Defined in [api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L494)*
 
 The external url of the service instance used with relation to this order item
 
@@ -93,7 +93,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/catalog/api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L416)*
+*Defined in [api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L416)*
 
 **`memberof`** OrderItem
 
@@ -103,7 +103,7 @@ ___
 
 • **insights_request_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L500)*
+*Defined in [api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L500)*
 
 The insights request id can be used to collect log data for this order item as its processed by the system
 
@@ -115,7 +115,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/catalog/api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L422)*
+*Defined in [api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L422)*
 
 Name of the Portfolio Item or Order Process
 
@@ -127,7 +127,7 @@ ___
 
 • **order_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L458)*
+*Defined in [api.ts:458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L458)*
 
 The Order that the OrderItem belongs to.
 
@@ -139,7 +139,7 @@ ___
 
 • **order_request_sent_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L470)*
+*Defined in [api.ts:470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L470)*
 
 The time at which the order request was sent to the catalog inventory Service
 
@@ -151,7 +151,7 @@ ___
 
 • **owner**? : *string*
 
-*Defined in [packages/catalog/api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L488)*
+*Defined in [api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L488)*
 
 **`memberof`** OrderItem
 
@@ -161,7 +161,7 @@ ___
 
 • **portfolio_item_id**: *string*
 
-*Defined in [packages/catalog/api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L446)*
+*Defined in [api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L446)*
 
 Stores the Portfolio Item ID.
 
@@ -173,7 +173,7 @@ ___
 
 • **process_scope**? : *string*
 
-*Defined in [packages/catalog/api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L512)*
+*Defined in [api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L512)*
 
 Denotes the scope in which the order item will run for the order it belongs to. It can be \'before\', \'after\', or \'product\'
 
@@ -185,7 +185,7 @@ ___
 
 • **process_sequence**? : *number*
 
-*Defined in [packages/catalog/api.ts:506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L506)*
+*Defined in [api.ts:506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L506)*
 
 The sequence that this order item is ran relative to the other order items within the order.
 
@@ -197,7 +197,7 @@ ___
 
 • **provider_control_parameters**? : *object | null*
 
-*Defined in [packages/catalog/api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L440)*
+*Defined in [api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L440)*
 
 The provider specific parameters needed to provision this service. This might include namespaces, special keys.
 
@@ -209,7 +209,7 @@ ___
 
 • **service_parameters**? : *object | null*
 
-*Defined in [packages/catalog/api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L434)*
+*Defined in [api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L434)*
 
 **`memberof`** OrderItem
 
@@ -219,7 +219,7 @@ ___
 
 • **state**? : *[OrderItemStateEnum](../enums/orderitemstateenum.md)*
 
-*Defined in [packages/catalog/api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L452)*
+*Defined in [api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L452)*
 
 Current state of this order item.
 
@@ -231,6 +231,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [packages/catalog/api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L482)*
+*Defined in [api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L482)*
 
 **`memberof`** OrderItem

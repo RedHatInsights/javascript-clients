@@ -25,7 +25,7 @@
 
 • **access**: *Array‹[Access](access.md)›*
 
-*Defined in [packages/rbac/api.ts:1750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1750)*
+*Defined in [api.ts:1762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1762)*
 
 **`memberof`** RoleIn
 
@@ -35,7 +35,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [packages/rbac/api.ts:1744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1744)*
+*Defined in [api.ts:1756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1756)*
 
 **`memberof`** RoleIn
 
@@ -45,7 +45,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [packages/rbac/api.ts:1738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1738)*
+*Defined in [api.ts:1750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1750)*
 
 **`memberof`** RoleIn
 
@@ -55,6 +55,6 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/rbac/api.ts:1732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1732)*
+*Defined in [api.ts:1744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1744)*
 
 **`memberof`** RoleIn

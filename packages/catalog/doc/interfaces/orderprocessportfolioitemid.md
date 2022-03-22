@@ -22,6 +22,6 @@
 
 • **portfolio_item_id**? : *string*
 
-*Defined in [packages/catalog/api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L682)*
+*Defined in [api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L682)*
 
 **`memberof`** OrderProcessPortfolioItemId

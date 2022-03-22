@@ -22,6 +22,6 @@
 
 • **isEntitled**? : *boolean*
 
-*Defined in [packages/entitlements/api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L33)*
 
 **`memberof`** ServiceDetails

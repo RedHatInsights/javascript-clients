@@ -29,7 +29,7 @@ The workflow to process approval requests. Each workflow is linked to multiple g
 
 • **description**? : *string | null*
 
-*Defined in [packages/approval/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L625)*
+*Defined in [api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L625)*
 
 Describe the workflow in more details
 
@@ -41,7 +41,7 @@ ___
 
 • **group_refs**? : *Array‹[GroupRef](groupref.md)› | null*
 
-*Defined in [packages/approval/api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L631)*
+*Defined in [api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L631)*
 
 Array of RBAC groups associated with workflow. The groups need to have approval permission
 
@@ -53,7 +53,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/approval/api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L607)*
+*Defined in [api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L607)*
 
 ID of the workflow
 
@@ -65,7 +65,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [packages/approval/api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L637)*
+*Defined in [api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L637)*
 
 JSON metadata about the workflow
 
@@ -77,7 +77,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [packages/approval/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L619)*
+*Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L619)*
 
 Name of the workflow
 
@@ -89,7 +89,7 @@ ___
 
 • **template_id**? : *string*
 
-*Defined in [packages/approval/api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L613)*
+*Defined in [api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L613)*
 
 ID of the template that the workflow belongs to
 

@@ -24,7 +24,7 @@
 
 • **compliance_openscap**: *[StateComplianceOpenscapEnum](../enums/statecomplianceopenscapenum.md)*
 
-*Defined in [packages/config-manager/api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L70)*
+*Defined in [api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L70)*
 
 **`memberof`** State
 
@@ -34,7 +34,7 @@ ___
 
 • **insights**: *[StateInsightsEnum](../enums/stateinsightsenum.md)*
 
-*Defined in [packages/config-manager/api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L64)*
+*Defined in [api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L64)*
 
 **`memberof`** State
 
@@ -44,6 +44,6 @@ ___
 
 • **remediations**: *[StateRemediationsEnum](../enums/stateremediationsenum.md)*
 
-*Defined in [packages/config-manager/api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L76)*
+*Defined in [api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L76)*
 
 **`memberof`** State

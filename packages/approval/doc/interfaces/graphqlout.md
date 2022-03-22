@@ -23,7 +23,7 @@
 
 • **data**? : *object*
 
-*Defined in [packages/approval/api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L198)*
+*Defined in [api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L198)*
 
 Results from the GraphQL query
 
@@ -35,7 +35,7 @@ ___
 
 • **errors**? : *Array‹object›*
 
-*Defined in [packages/approval/api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L204)*
+*Defined in [api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L204)*
 
 Errors resulting from the GraphQL query
 

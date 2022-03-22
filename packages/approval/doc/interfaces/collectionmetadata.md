@@ -24,7 +24,7 @@
 
 • **count**? : *number*
 
-*Defined in [packages/approval/api.ts:148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L148)*
+*Defined in [api.ts:148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L148)*
 
 Total number of items in the result set, of which only a subset is returned defined by the QueryLimit parameter
 
@@ -36,7 +36,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [packages/approval/api.ts:154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L154)*
+*Defined in [api.ts:154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L154)*
 
 The number of items each page can display
 
@@ -48,7 +48,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [packages/approval/api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L160)*
+*Defined in [api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L160)*
 
 Offset from beginning of the result set
 

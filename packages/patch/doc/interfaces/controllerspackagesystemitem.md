@@ -15,6 +15,8 @@
 ### Properties
 
 * [available_evra](controllerspackagesystemitem.md#optional-available_evra)
+* [baseline_name](controllerspackagesystemitem.md#optional-baseline_name)
+* [baseline_uptodate](controllerspackagesystemitem.md#optional-baseline_uptodate)
 * [display_name](controllerspackagesystemitem.md#optional-display_name)
 * [id](controllerspackagesystemitem.md#optional-id)
 * [installed_evra](controllerspackagesystemitem.md#optional-installed_evra)
@@ -27,7 +29,27 @@
 
 • **available_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L595)*
+*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L848)*
+
+**`memberof`** ControllersPackageSystemItem
+
+___
+
+### `Optional` baseline_name
+
+• **baseline_name**? : *string*
+
+*Defined in [api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L854)*
+
+**`memberof`** ControllersPackageSystemItem
+
+___
+
+### `Optional` baseline_uptodate
+
+• **baseline_uptodate**? : *boolean*
+
+*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L860)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -37,7 +59,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [packages/patch/api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L601)*
+*Defined in [api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L866)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -47,7 +69,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/patch/api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L607)*
+*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L872)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -57,7 +79,7 @@ ___
 
 • **installed_evra**? : *string*
 
-*Defined in [packages/patch/api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L613)*
+*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L878)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -67,7 +89,7 @@ ___
 
 • **tags**? : *Array‹[ControllersSystemTag](controllerssystemtag.md)›*
 
-*Defined in [packages/patch/api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L619)*
+*Defined in [api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L884)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -77,6 +99,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [packages/patch/api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/c0f4325/packages/patch/api.ts#L625)*
+*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L890)*
 
 **`memberof`** ControllersPackageSystemItem

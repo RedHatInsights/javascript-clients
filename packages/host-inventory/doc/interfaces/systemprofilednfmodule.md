@@ -25,7 +25,7 @@ Representation of one DNF module
 
 • **name**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1517)*
+*Defined in [api.ts:1517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1517)*
 
 **`memberof`** SystemProfileDnfModule
 
@@ -35,6 +35,6 @@ ___
 
 • **stream**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:1523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1523)*
+*Defined in [api.ts:1523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1523)*
 
 **`memberof`** SystemProfileDnfModule

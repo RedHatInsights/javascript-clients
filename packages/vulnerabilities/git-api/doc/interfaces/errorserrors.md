@@ -21,11 +21,9 @@
 
 ###  detail
 
-• **detail**: *string*
+• **detail**: *string | object*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L677)*
-
-Error detail.
+*Defined in [git-api/api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L727)*
 
 **`memberof`** ErrorsErrors
 
@@ -35,7 +33,7 @@ ___
 
 • **status**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L683)*
+*Defined in [git-api/api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L733)*
 
 String representation of HTTP status code.
 

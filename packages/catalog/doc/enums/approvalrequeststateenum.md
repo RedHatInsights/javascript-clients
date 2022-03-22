@@ -20,7 +20,7 @@
 
 • **Approved**: = "approved"
 
-*Defined in [packages/catalog/api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L104)*
+*Defined in [api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L104)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **Canceled**: = "canceled"
 
-*Defined in [packages/catalog/api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L106)*
+*Defined in [api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L106)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **Denied**: = "denied"
 
-*Defined in [packages/catalog/api.ts:105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L105)*
+*Defined in [api.ts:105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L105)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **Error**: = "error"
 
-*Defined in [packages/catalog/api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L107)*
+*Defined in [api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L107)*
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 • **Undecided**: = "undecided"
 
-*Defined in [packages/catalog/api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*
+*Defined in [api.ts:103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L103)*

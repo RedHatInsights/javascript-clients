@@ -22,7 +22,7 @@
 
 • **results**? : *object*
 
-*Defined in [packages/host-inventory/api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1842)*
+*Defined in [api.ts:1843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1843)*
 
 The list of tags on the systems
 

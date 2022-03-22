@@ -25,7 +25,7 @@ The desired increment relative to its current position, or placement to top or b
 
 • **increment**? : *number | null*
 
-*Defined in [packages/catalog/api.ts:1040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1040)*
+*Defined in [api.ts:1040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1040)*
 
 Move the record up (negative) or down (positive) in the list. Do not set it if placement is used
 
@@ -37,7 +37,7 @@ ___
 
 • **placement**? : *[RepositionPlacementEnum](../enums/repositionplacementenum.md)*
 
-*Defined in [packages/catalog/api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1046)*
+*Defined in [api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1046)*
 
 Place the record to the top or bottom of the list. Do not set it if increment is used
 

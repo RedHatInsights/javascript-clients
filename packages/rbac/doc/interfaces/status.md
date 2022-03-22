@@ -23,7 +23,7 @@
 
 • **api_version**: *number*
 
-*Defined in [packages/rbac/api.ts:2187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2187)*
+*Defined in [api.ts:2229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2229)*
 
 **`memberof`** Status
 
@@ -33,6 +33,6 @@ ___
 
 • **commit**? : *string*
 
-*Defined in [packages/rbac/api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2193)*
+*Defined in [api.ts:2235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2235)*
 
 **`memberof`** Status

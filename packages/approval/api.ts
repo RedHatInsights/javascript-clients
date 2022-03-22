@@ -79,32 +79,32 @@ export enum ActionOperationEnum {
 }
 
 /**
- * 
+ *
  * @export
  * @interface ActionCollection
  */
 export interface ActionCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof ActionCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof ActionCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Action>}
      * @memberof ActionCollection
      */
     data?: Array<Action>;
 }
 /**
- * 
+ *
  * @export
  * @interface CollectionLinks
  */
@@ -135,7 +135,7 @@ export interface CollectionLinks {
     next?: string;
 }
 /**
- * 
+ *
  * @export
  * @interface CollectionMetadata
  */
@@ -160,7 +160,7 @@ export interface CollectionMetadata {
     offset?: number;
 }
 /**
- * 
+ *
  * @export
  * @interface GraphqlIn
  */
@@ -185,7 +185,7 @@ export interface GraphqlIn {
     variables?: object | null;
 }
 /**
- * 
+ *
  * @export
  * @interface GraphqlOut
  */
@@ -419,25 +419,25 @@ export enum RequestDecisionEnum {
 }
 
 /**
- * 
+ *
  * @export
  * @interface RequestCollection
  */
 export interface RequestCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof RequestCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof RequestCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Request>}
      * @memberof RequestCollection
      */
@@ -569,25 +569,25 @@ export interface Template {
     metadata?: object;
 }
 /**
- * 
+ *
  * @export
  * @interface TemplateCollection
  */
 export interface TemplateCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof TemplateCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof TemplateCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Template>}
      * @memberof TemplateCollection
      */
@@ -637,25 +637,25 @@ export interface Workflow {
     metadata?: object;
 }
 /**
- * 
+ *
  * @export
  * @interface WorkflowCollection
  */
 export interface WorkflowCollection {
     /**
-     * 
+     *
      * @type {CollectionMetadata}
      * @memberof WorkflowCollection
      */
     meta?: CollectionMetadata;
     /**
-     * 
+     *
      * @type {CollectionLinks}
      * @memberof WorkflowCollection
      */
     links?: CollectionLinks;
     /**
-     * 
+     *
      * @type {Array<Workflow>}
      * @memberof WorkflowCollection
      */
@@ -697,7 +697,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -737,7 +737,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -773,7 +773,7 @@ export const ActionApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -934,7 +934,7 @@ export class ActionApi extends BaseAPI {
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -951,7 +951,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -973,7 +973,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -995,7 +995,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * 
+         *
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1014,7 +1014,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export class DefaultApi extends BaseAPI {
     /**
-     * 
+     *
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1056,7 +1056,7 @@ export const GraphqlApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1168,7 +1168,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1227,7 +1227,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1268,7 +1268,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1304,7 +1304,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1340,7 +1340,7 @@ export const RequestApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1622,7 +1622,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1658,7 +1658,7 @@ export const TemplateApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1817,7 +1817,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1857,7 +1857,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1898,7 +1898,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1967,7 +1967,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2023,7 +2023,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2064,7 +2064,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2104,7 +2104,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2145,7 +2145,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2190,7 +2190,7 @@ export const WorkflowApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};

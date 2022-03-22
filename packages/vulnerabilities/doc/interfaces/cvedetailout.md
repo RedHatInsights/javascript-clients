@@ -23,7 +23,7 @@
 
 • **data**? : *[CveDetailOutData](cvedetailoutdata.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L153)*
+*Defined in [api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L172)*
 
 **`memberof`** CveDetailOut
 
@@ -33,6 +33,6 @@ ___
 
 • **meta**? : *[MetaPermissions](metapermissions.md)*
 
-*Defined in [packages/vulnerabilities/api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L159)*
+*Defined in [api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L178)*
 
 **`memberof`** CveDetailOut

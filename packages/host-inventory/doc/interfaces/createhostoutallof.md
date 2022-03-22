@@ -33,7 +33,7 @@
 
 • **account**: *string*
 
-*Defined in [packages/host-inventory/api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L456)*
+*Defined in [api.ts:456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L456)*
 
 A Red Hat Account number that owns the host.
 
@@ -45,7 +45,7 @@ ___
 
 • **ansible_host**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L450)*
+*Defined in [api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L450)*
 
 The ansible host name for remediations
 
@@ -57,7 +57,7 @@ ___
 
 • **created**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L468)*
+*Defined in [api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L468)*
 
 A timestamp when the entry was created.
 
@@ -69,7 +69,7 @@ ___
 
 • **culled_timestamp**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L498)*
+*Defined in [api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L498)*
 
 Timestamp from which the host is considered deleted.
 
@@ -81,7 +81,7 @@ ___
 
 • **display_name**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L444)*
+*Defined in [api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L444)*
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
@@ -93,7 +93,7 @@ ___
 
 • **facts**? : *Array‹[FactSet](factset.md)›*
 
-*Defined in [packages/host-inventory/api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L480)*
+*Defined in [api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L480)*
 
 A set of facts belonging to the host.
 
@@ -105,7 +105,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L462)*
+*Defined in [api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L462)*
 
 A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
 
@@ -117,7 +117,7 @@ ___
 
 • **per_reporter_staleness**? : *object*
 
-*Defined in [packages/host-inventory/api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L510)*
+*Defined in [api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L510)*
 
 Reporting source of the last checkin status, stale_timestamp, and last_check_in.
 
@@ -133,7 +133,7 @@ ___
 
 • **reporter**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L504)*
+*Defined in [api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L504)*
 
 Reporting source of the host. Used when updating the stale_timestamp.
 
@@ -145,7 +145,7 @@ ___
 
 • **stale_timestamp**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L486)*
+*Defined in [api.ts:486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L486)*
 
 Timestamp from which the host is considered stale.
 
@@ -157,7 +157,7 @@ ___
 
 • **stale_warning_timestamp**? : *string | null*
 
-*Defined in [packages/host-inventory/api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L492)*
+*Defined in [api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L492)*
 
 Timestamp from which the host is considered too stale to be listed without an explicit toggle.
 
@@ -169,7 +169,7 @@ ___
 
 • **updated**? : *string*
 
-*Defined in [packages/host-inventory/api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L474)*
+*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L474)*
 
 A timestamp when the entry was last updated.
 

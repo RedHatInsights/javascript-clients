@@ -23,7 +23,7 @@
 
 • **data**: *Array‹[BusinessRiskListOutData](businessrisklistoutdata.md)›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L102)*
+*Defined in [git-api/api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L121)*
 
 List of available business risk/business_risk_id pairs.
 
@@ -35,6 +35,6 @@ ___
 
 • **meta**: *[BusinessRiskListOutMeta](businessrisklistoutmeta.md)*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L108)*
+*Defined in [git-api/api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L127)*
 
 **`memberof`** BusinessRiskListOut

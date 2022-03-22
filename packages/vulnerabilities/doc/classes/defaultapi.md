@@ -28,6 +28,7 @@ DefaultApi - object-oriented interface
 
 * [getAffectedSystemsByCve](defaultapi.md#getaffectedsystemsbycve)
 * [getAffectedSystemsIdsByCve](defaultapi.md#getaffectedsystemsidsbycve)
+* [getAnnouncement](defaultapi.md#getannouncement)
 * [getApiStatus](defaultapi.md#getapistatus)
 * [getBusinessRiskList](defaultapi.md#getbusinessrisklist)
 * [getCveDetails](defaultapi.md#getcvedetails)
@@ -36,6 +37,7 @@ DefaultApi - object-oriented interface
 * [getCveList](defaultapi.md#getcvelist)
 * [getCveListBySystem](defaultapi.md#getcvelistbysystem)
 * [getCveList_1](defaultapi.md#getcvelist_1)
+* [getDashbar](defaultapi.md#getdashbar)
 * [getDashboard](defaultapi.md#getdashboard)
 * [getExecutiveReport](defaultapi.md#getexecutivereport)
 * [getMitigatedSystemsByCve](defaultapi.md#getmitigatedsystemsbycve)
@@ -49,7 +51,6 @@ DefaultApi - object-oriented interface
 * [setCveBusinessRisk](defaultapi.md#setcvebusinessrisk)
 * [setCveStatus](defaultapi.md#setcvestatus)
 * [setStatus](defaultapi.md#setstatus)
-* [setSystemOptOut](defaultapi.md#setsystemoptout)
 * [setSystemsOptOut](defaultapi.md#setsystemsoptout)
 
 ## Constructors
@@ -60,7 +61,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [packages/vulnerabilities/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)*
 
 **Parameters:**
 
@@ -80,7 +81,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [packages/vulnerabilities/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)*
 
 ___
 
@@ -90,7 +91,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [packages/vulnerabilities/base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)*
 
 ___
 
@@ -100,7 +101,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [packages/vulnerabilities/base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)*
 
 ## Methods
 
@@ -108,7 +109,7 @@ ___
 
 ▸ **getAffectedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `report?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[AffectedSystemsOut](../interfaces/affectedsystemsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:5915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5915)*
+*Defined in [api.ts:5998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5998)*
 
 Report of affected systems for a given CVE.
 
@@ -156,7 +157,7 @@ ___
 
 ▸ **getAffectedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[AffectedSystemsIdsOut](../interfaces/affectedsystemsidsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:5949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5949)*
+*Defined in [api.ts:6032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6032)*
 
 Report of IDs of affected systems for a given CVE.
 
@@ -199,11 +200,35 @@ Name | Type | Description |
 
 ___
 
+###  getAnnouncement
+
+▸ **getAnnouncement**(`options?`: any): *Promise‹AxiosResponse‹[AnnouncementOut](../interfaces/announcementout.md)››*
+
+*Defined in [api.ts:6043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6043)*
+
+Get announcement shown above CVEs list.
+
+**`summary`** Announcement.
+
+**`throws`** {RequiredError}
+
+**`memberof`** DefaultApi
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`options?` | any |
+
+**Returns:** *Promise‹AxiosResponse‹[AnnouncementOut](../interfaces/announcementout.md)››*
+
+___
+
 ###  getApiStatus
 
 ▸ **getApiStatus**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [packages/vulnerabilities/api.ts:5960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5960)*
+*Defined in [api.ts:6054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6054)*
 
 Checks database availability and API response threshold time.
 
@@ -227,7 +252,7 @@ ___
 
 ▸ **getBusinessRiskList**(`options?`: any): *Promise‹AxiosResponse‹[BusinessRiskListOut](../interfaces/businessrisklistout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:5971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5971)*
+*Defined in [api.ts:6065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6065)*
 
 Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
 
@@ -251,7 +276,7 @@ ___
 
 ▸ **getCveDetails**(`cveId`: string, `showAdvisoriesDetails?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[CveDetailOut](../interfaces/cvedetailout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:5984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5984)*
+*Defined in [api.ts:6078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6078)*
 
 Show all information about given CVE.
 
@@ -277,7 +302,7 @@ ___
 
 ▸ **getCveIdsBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `ruleKey?`: Array‹string›, `knownExploit?`: Array‹boolean›, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[SystemCvesIdsOut](../interfaces/systemcvesidsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6019)*
+*Defined in [api.ts:6113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6113)*
 
 Shows IDs of all CVEs the system is exposed to.
 
@@ -325,7 +350,7 @@ ___
 
 ▸ **getCveIdsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `knownExploit?`: Array‹boolean›, `affecting?`: Array‹boolean›, `rhelVersion?`: string, `options?`: any): *Promise‹AxiosResponse‹[VulnerabilitiesIdsOut](../interfaces/vulnerabilitiesidsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6051)*
+*Defined in [api.ts:6145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6145)*
 
 Overview of vulnerabilities IDs across whole host inventory.
 
@@ -370,7 +395,7 @@ ___
 
 ▸ **getCveList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `dataFormat?`: string, `businessRiskId?`: string, `statusId?`: string, `rulePresence?`: Array‹boolean›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `knownExploit?`: Array‹boolean›, `affecting?`: Array‹boolean›, `rhelVersion?`: string, `report?`: boolean, `advancedReport?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[VulnerabilitiesOut](../interfaces/vulnerabilitiesout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6085)*
+*Defined in [api.ts:6179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6179)*
 
 Overview of vulnerabilities across whole host inventory.
 
@@ -417,7 +442,7 @@ ___
 
 ▸ **getCveListBySystem**(`inventoryId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `cvssFrom?`: number, `cvssTo?`: number, `publicFrom?`: string, `publicTo?`: string, `impact?`: string, `statusId?`: string, `dataFormat?`: string, `businessRiskId?`: string, `rulePresence?`: Array‹boolean›, `showAdvisories?`: boolean, `advisory?`: string, `ruleKey?`: Array‹string›, `knownExploit?`: Array‹boolean›, `firstReportedFrom?`: string, `firstReportedTo?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `report?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[SystemCvesOut](../interfaces/systemcvesout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6121)*
+*Defined in [api.ts:6215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6215)*
 
 Shows detailed information about all CVEs the system is exposed to.
 
@@ -466,7 +491,7 @@ ___
 
 ▸ **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](../interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options?`: any): *Promise‹AxiosResponse‹[VulnerabilitiesPostOut](../interfaces/vulnerabilitiespostout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6139)*
+*Defined in [api.ts:6233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6233)*
 
 Overview of vulnerabilities for specific CVEs provided in the body.
 
@@ -493,11 +518,35 @@ Name | Type | Description |
 
 ___
 
+###  getDashbar
+
+▸ **getDashbar**(`options?`: any): *Promise‹AxiosResponse‹[DashbarOut](../interfaces/dashbarout.md)››*
+
+*Defined in [api.ts:6244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6244)*
+
+Overview of CVE aggregations used for Dashbar.
+
+**`summary`** Aggregations for Dashbar.
+
+**`throws`** {RequiredError}
+
+**`memberof`** DefaultApi
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`options?` | any |
+
+**Returns:** *Promise‹AxiosResponse‹[DashbarOut](../interfaces/dashbarout.md)››*
+
+___
+
 ###  getDashboard
 
 ▸ **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[Dashboard](../interfaces/dashboard.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6153)*
+*Defined in [api.ts:6258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6258)*
 
 Returns top level overview of vulnerabilities affecting given account.
 
@@ -524,7 +573,7 @@ ___
 
 ▸ **getExecutiveReport**(`options?`: any): *Promise‹AxiosResponse‹[ExecutiveReport](../interfaces/executivereport.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6164)*
+*Defined in [api.ts:6269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6269)*
 
 Returns top level overview of vulnerabilities affecting given account.
 
@@ -548,7 +597,7 @@ ___
 
 ▸ **getMitigatedSystemsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[MitigatedSystemsIdsOut](../interfaces/mitigatedsystemsidsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6196)*
+*Defined in [api.ts:6301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6301)*
 
 Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
 
@@ -593,7 +642,7 @@ ___
 
 ▸ **getMitigatedSystemsIdsByCve**(`cveId`: string, `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `statusId?`: string, `dataFormat?`: string, `uuid?`: string, `ruleKey?`: Array‹string›, `rulePresence?`: Array‹boolean›, `rule?`: Array‹string›, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `showAdvisories?`: boolean, `advisory?`: string, `rhelVersion?`: string, `advisoryAvailable?`: Array‹boolean›, `remediation?`: string, `options?`: any): *Promise‹AxiosResponse‹[MitigatedSystemsOut](../interfaces/mitigatedsystemsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6228)*
+*Defined in [api.ts:6333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6333)*
 
 Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
 
@@ -638,7 +687,7 @@ ___
 
 ▸ **getPlaybookTemplate**(`ruleId`: string, `options?`: any): *Promise‹AxiosResponse‹[PlaybookTemplate](../interfaces/playbooktemplate.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6240)*
+*Defined in [api.ts:6345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6345)*
 
 Return Ansible playbook template for given rule id.
 
@@ -663,7 +712,7 @@ ___
 
 ▸ **getStatusList**(`options?`: any): *Promise‹AxiosResponse‹[StatusListOut](../interfaces/statuslistout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6251)*
+*Defined in [api.ts:6356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6356)*
 
 Returns available status and status_id pairs where status_id is internal ID of the status.
 
@@ -687,7 +736,7 @@ ___
 
 ▸ **getSystemDetails**(`inventoryId`: string, `options?`: any): *Promise‹AxiosResponse‹[SystemDetailsOut](../interfaces/systemdetailsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6263)*
+*Defined in [api.ts:6368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6368)*
 
 Provides details of a system, e.g. it\'s opt out status.
 
@@ -712,7 +761,7 @@ ___
 
 ▸ **getSystemsIds**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `excluded?`: Array‹boolean›, `rhelVersion?`: string, `options?`: any): *Promise‹AxiosResponse‹[SystemIdsOut](../interfaces/systemidsout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6288)*
+*Defined in [api.ts:6393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6393)*
 
 List systems IDs visible to logged in account.
 
@@ -750,7 +799,7 @@ ___
 
 ▸ **getSystemsList**(`filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `dataFormat?`: string, `stale?`: boolean, `uuid?`: string, `tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `excluded?`: Array‹boolean›, `rhelVersion?`: string, `report?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[SystemListOut](../interfaces/systemlistout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6314)*
+*Defined in [api.ts:6419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6419)*
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -789,7 +838,7 @@ ___
 
 ▸ **getVersion**(`options?`: any): *Promise‹AxiosResponse‹[VersionOut](../interfaces/versionout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6325)*
+*Defined in [api.ts:6430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6430)*
 
 Get application version.
 
@@ -813,7 +862,7 @@ ___
 
 ▸ **setCveBusinessRisk**(`cveRiskIn`: [CveRiskIn](../interfaces/cveriskin.md), `options?`: any): *Promise‹AxiosResponse‹[BulkChangeOut](../interfaces/bulkchangeout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6337)*
+*Defined in [api.ts:6442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6442)*
 
 Sets business risk for a CVE.
 
@@ -838,7 +887,7 @@ ___
 
 ▸ **setCveStatus**(`cveStatusIn`: [CveStatusIn](../interfaces/cvestatusin.md), `options?`: any): *Promise‹AxiosResponse‹[BulkChangeOut](../interfaces/bulkchangeout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6349)*
+*Defined in [api.ts:6454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6454)*
 
 Sets status for a CVE.
 
@@ -863,7 +912,7 @@ ___
 
 ▸ **setStatus**(`statusIn`: [StatusIn](../interfaces/statusin.md), `options?`: any): *Promise‹AxiosResponse‹[StatusOut](../interfaces/statusout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6361)*
+*Defined in [api.ts:6466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6466)*
 
 Sets status for given hosts and CVEs.
 
@@ -884,37 +933,11 @@ Name | Type | Description |
 
 ___
 
-###  setSystemOptOut
-
-▸ **setSystemOptOut**(`inventoryId`: string, `value`: boolean, `options?`: any): *Promise‹AxiosResponse‹void››*
-
-*Defined in [packages/vulnerabilities/api.ts:6374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6374)*
-
-Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
-
-**`summary`** Opt in/out a system to/from vulnerability application.
-
-**`throws`** {RequiredError}
-
-**`memberof`** DefaultApi
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`inventoryId` | string | Inventory ID. |
-`value` | boolean | opt_out setting of the host. |
-`options?` | any | - |
-
-**Returns:** *Promise‹AxiosResponse‹void››*
-
-___
-
 ###  setSystemsOptOut
 
 ▸ **setSystemsOptOut**(`optOutIn`: [OptOutIn](../interfaces/optoutin.md), `options?`: any): *Promise‹AxiosResponse‹[BulkChangeOut](../interfaces/bulkchangeout.md)››*
 
-*Defined in [packages/vulnerabilities/api.ts:6386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6386)*
+*Defined in [api.ts:6478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6478)*
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 

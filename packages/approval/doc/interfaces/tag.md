@@ -24,7 +24,7 @@ tag details
 
 • **tag**? : *string*
 
-*Defined in [packages/approval/api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L513)*
+*Defined in [api.ts:513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L513)*
 
 The string representation of the tag
 

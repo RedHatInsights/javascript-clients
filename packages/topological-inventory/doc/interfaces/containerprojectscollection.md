@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ContainerProject](containerproject.md)›*
 
-*Defined in [packages/topological-inventory/api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L858)*
+*Defined in [api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L858)*
 
 **`memberof`** ContainerProjectsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [packages/topological-inventory/api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L852)*
+*Defined in [api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L852)*
 
 **`memberof`** ContainerProjectsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [packages/topological-inventory/api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L846)*
+*Defined in [api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L846)*
 
 **`memberof`** ContainerProjectsCollection

@@ -27,7 +27,7 @@
 
 • **associated_cves**: *Array‹string›*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L969)*
+*Defined in [git-api/api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1019)*
 
 All CVEs associated with the rule
 
@@ -39,7 +39,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L975)*
+*Defined in [git-api/api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1025)*
 
 Brief description of the issue.
 
@@ -51,7 +51,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L981)*
+*Defined in [git-api/api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1031)*
 
 Name of the security rule.
 
@@ -63,7 +63,7 @@ ___
 
 • **rule_id**: *string*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L987)*
+*Defined in [git-api/api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1037)*
 
 ID of associated security rule.
 
@@ -75,7 +75,7 @@ ___
 
 • **severity**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L993)*
+*Defined in [git-api/api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1043)*
 
 Severity of the security rule.
 
@@ -87,7 +87,7 @@ ___
 
 • **systems_affected**: *number*
 
-*Defined in [packages/vulnerabilities/git-api/api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L999)*
+*Defined in [git-api/api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1049)*
 
 Number of systems affected by the rule.
 
