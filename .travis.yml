@@ -6,11 +6,15 @@ env:
 cache:
   directories:
   - "$HOME/.npm"
-script:
- - nvm install $NODE_VERSION
+before_install:
  - printf "@redhat-cloud-services:registry=https://registry.npmjs.org/\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+ - nvm install $NODE_VERSION
+install:
  - npm ci
+before_script:
  - npm run build
+script:
+ - npm run test
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
