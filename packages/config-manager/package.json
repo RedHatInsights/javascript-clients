@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/config-manager-client",
-    "version": "1.0.64",
+    "version": "1.0.75",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
