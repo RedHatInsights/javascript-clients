@@ -31,7 +31,7 @@
 
 • **admin_default**? : *boolean*
 
-*Defined in [api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)*
+*Defined in [api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L936)*
 
 **`memberof`** GroupOut
 
@@ -41,7 +41,7 @@ ___
 
 • **created**: *string*
 
-*Defined in [api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L852)*
+*Defined in [api.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L900)*
 
 **`memberof`** GroupOut
 
@@ -51,7 +51,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L840)*
+*Defined in [api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)*
 
 **`memberof`** GroupOut
 
@@ -61,7 +61,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L858)*
+*Defined in [api.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L906)*
 
 **`memberof`** GroupOut
 
@@ -71,7 +71,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L834)*
+*Defined in [api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L882)*
 
 **`memberof`** GroupOut
 
@@ -81,7 +81,7 @@ ___
 
 • **platform_default**? : *boolean*
 
-*Defined in [api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L882)*
+*Defined in [api.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L930)*
 
 **`memberof`** GroupOut
 
@@ -91,7 +91,7 @@ ___
 
 • **principalCount**? : *number*
 
-*Defined in [api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L864)*
+*Defined in [api.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L912)*
 
 **`memberof`** GroupOut
 
@@ -101,7 +101,7 @@ ___
 
 • **roleCount**? : *number*
 
-*Defined in [api.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L870)*
+*Defined in [api.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L918)*
 
 **`memberof`** GroupOut
 
@@ -111,7 +111,7 @@ ___
 
 • **system**? : *boolean*
 
-*Defined in [api.ts:876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L876)*
+*Defined in [api.ts:924](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L924)*
 
 **`memberof`** GroupOut
 
@@ -121,6 +121,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L846)*
+*Defined in [api.ts:894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L894)*
 
 **`memberof`** GroupOut

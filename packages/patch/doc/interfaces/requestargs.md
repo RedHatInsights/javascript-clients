@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L40)*
+*Defined in [base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L40)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L39)*
+*Defined in [base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L39)*

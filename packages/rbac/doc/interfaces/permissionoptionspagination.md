@@ -24,7 +24,7 @@
 
 • **data**: *Array‹string›*
 
-*Defined in [api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1289)*
+*Defined in [api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1337)*
 
 **`memberof`** PermissionOptionsPagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1283)*
+*Defined in [api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1331)*
 
 **`memberof`** PermissionOptionsPagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1277)*
+*Defined in [api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1325)*
 
 **`memberof`** PermissionOptionsPagination

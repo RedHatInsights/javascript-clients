@@ -28,7 +28,7 @@
 
 \+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `axios`: AxiosInstance): *[BaseAPI](baseapi.md)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L49)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type | Default |
 
 • **axios**: *AxiosInstance*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L51)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **basePath**: *string*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L51)*
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 • **configuration**: *[Configuration](configuration.md) | undefined*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L49)*

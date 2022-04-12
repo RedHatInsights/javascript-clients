@@ -24,7 +24,7 @@
 
 • **detail**? : *string*
 
-*Defined in [api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L771)*
+*Defined in [api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L819)*
 
 **`memberof`** Error403Errors
 
@@ -34,7 +34,7 @@ ___
 
 • **source**? : *string*
 
-*Defined in [api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L777)*
+*Defined in [api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L825)*
 
 **`memberof`** Error403Errors
 
@@ -44,6 +44,6 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L783)*
+*Defined in [api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L831)*
 
 **`memberof`** Error403Errors

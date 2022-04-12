@@ -24,7 +24,7 @@
 
 • **config**? : *[ControllersBaselineConfig](controllersbaselineconfig.md)*
 
-*Defined in [api.ts:1708](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L1708)*
+*Defined in [api.ts:1708](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1708)*
 
 **`memberof`** ControllersUpdateBaselineRequest
 
@@ -34,7 +34,7 @@ ___
 
 • **inventory_ids**? : *object*
 
-*Defined in [api.ts:1714](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L1714)*
+*Defined in [api.ts:1714](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1714)*
 
 Map of inventories to add to (true) or remove (false) from given baseline (optional)
 
@@ -50,7 +50,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L1720)*
+*Defined in [api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1720)*
 
 Updated baseline name (optional)
 

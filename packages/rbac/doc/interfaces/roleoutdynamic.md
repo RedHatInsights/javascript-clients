@@ -35,7 +35,7 @@
 
 • **accessCount**: *number*
 
-*Defined in [api.ts:1952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1952)*
+*Defined in [api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2000)*
 
 **`memberof`** RoleOutDynamic
 
@@ -45,7 +45,7 @@ ___
 
 • **admin_default**: *boolean*
 
-*Defined in [api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1976)*
+*Defined in [api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2024)*
 
 **`memberof`** RoleOutDynamic
 
@@ -55,7 +55,7 @@ ___
 
 • **applications**: *Array‹string›*
 
-*Defined in [api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1958)*
+*Defined in [api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2006)*
 
 **`memberof`** RoleOutDynamic
 
@@ -65,7 +65,7 @@ ___
 
 • **created**: *string*
 
-*Defined in [api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1934)*
+*Defined in [api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1982)*
 
 **`memberof`** RoleOutDynamic
 
@@ -75,7 +75,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1922)*
+*Defined in [api.ts:1970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1970)*
 
 **`memberof`** RoleOutDynamic
 
@@ -85,7 +85,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1916)*
+*Defined in [api.ts:1964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1964)*
 
 **`memberof`** RoleOutDynamic
 
@@ -95,7 +95,7 @@ ___
 
 • **groups_in**? : *Array‹[AdditionalGroup](additionalgroup.md)›*
 
-*Defined in [api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1988)*
+*Defined in [api.ts:2036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2036)*
 
 **`memberof`** RoleOutDynamic
 
@@ -105,7 +105,7 @@ ___
 
 • **groups_in_count**? : *number*
 
-*Defined in [api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1982)*
+*Defined in [api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2030)*
 
 **`memberof`** RoleOutDynamic
 
@@ -115,7 +115,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1940)*
+*Defined in [api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1988)*
 
 **`memberof`** RoleOutDynamic
 
@@ -125,7 +125,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1910)*
+*Defined in [api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1958)*
 
 **`memberof`** RoleOutDynamic
 
@@ -135,7 +135,7 @@ ___
 
 • **platform_default**: *boolean*
 
-*Defined in [api.ts:1970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1970)*
+*Defined in [api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2018)*
 
 **`memberof`** RoleOutDynamic
 
@@ -145,7 +145,7 @@ ___
 
 • **policyCount**: *number*
 
-*Defined in [api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1946)*
+*Defined in [api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1994)*
 
 **`memberof`** RoleOutDynamic
 
@@ -155,7 +155,7 @@ ___
 
 • **system**: *boolean*
 
-*Defined in [api.ts:1964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1964)*
+*Defined in [api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2012)*
 
 **`memberof`** RoleOutDynamic
 
@@ -165,6 +165,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:1928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1928)*
+*Defined in [api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1976)*
 
 **`memberof`** RoleOutDynamic
