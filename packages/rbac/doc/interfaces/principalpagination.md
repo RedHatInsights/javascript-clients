@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:1645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1645)*
+*Defined in [api.ts:1693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1693)*
 
 **`memberof`** PrincipalPagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:1639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1639)*
+*Defined in [api.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1687)*
 
 **`memberof`** PrincipalPagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:1633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1633)*
+*Defined in [api.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1681)*
 
 **`memberof`** PrincipalPagination

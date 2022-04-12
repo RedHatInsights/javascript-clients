@@ -177,7 +177,7 @@ Name | Type |
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getDashbar**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getDashbar**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [git-api/api.ts:5492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L5492)*
+*Defined in [git-api/api.ts:5510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L5510)*
 
 DefaultApi - factory interface
 
@@ -251,7 +251,7 @@ Name | Type |
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options?`: any): *AxiosPromise‹[VulnerabilitiesPostOut](interfaces/vulnerabilitiespostout.md)›*
 
-* **getDashbar**(`options?`: any): *AxiosPromise‹[DashbarOut](interfaces/dashbarout.md)›*
+* **getDashbar**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *AxiosPromise‹[DashbarOut](interfaces/dashbarout.md)›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *AxiosPromise‹[Dashboard](interfaces/dashboard.md)›*
 
@@ -287,7 +287,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [git-api/api.ts:4916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4916)*
+*Defined in [git-api/api.ts:4931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L4931)*
 
 DefaultApi - functional programming interface
 
@@ -323,7 +323,7 @@ Name | Type |
 
 * **getCveList_1**(`vulnerabilitiesPostIn`: [VulnerabilitiesPostIn](interfaces/vulnerabilitiespostin.md), `filter?`: string, `limit?`: number, `offset?`: number, `page?`: number, `pageSize?`: number, `sort?`: string, `options?`: any): *Promise‹function›*
 
-* **getDashbar**(`options?`: any): *Promise‹function›*
+* **getDashbar**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *Promise‹function›*
 
 * **getDashboard**(`tags?`: Array‹string›, `sapSids?`: Array‹string›, `sapSystem?`: boolean, `options?`: any): *Promise‹function›*
 

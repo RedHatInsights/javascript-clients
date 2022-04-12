@@ -24,7 +24,7 @@
 
 • **email**? : *string*
 
-*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L231)*
+*Defined in [api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L243)*
 
 **`memberof`** CrossAccountRequestByAccountAllOf
 
@@ -34,7 +34,7 @@ ___
 
 • **first_name**? : *string*
 
-*Defined in [api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L219)*
+*Defined in [api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L231)*
 
 **`memberof`** CrossAccountRequestByAccountAllOf
 
@@ -44,6 +44,6 @@ ___
 
 • **last_name**? : *string*
 
-*Defined in [api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L225)*
+*Defined in [api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L237)*
 
 **`memberof`** CrossAccountRequestByAccountAllOf

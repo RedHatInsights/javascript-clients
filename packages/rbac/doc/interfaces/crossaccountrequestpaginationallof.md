@@ -22,6 +22,6 @@
 
 • **data**: *Array‹[CrossAccountRequestByAccount](crossaccountrequestbyaccount.md) | [CrossAccountRequestByUserId](crossaccountrequestbyuserid.md)›*
 
-*Defined in [api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L583)*
+*Defined in [api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L625)*
 
 **`memberof`** CrossAccountRequestPaginationAllOf

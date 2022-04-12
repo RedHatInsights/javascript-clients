@@ -27,7 +27,7 @@
 
 • **created**: *string*
 
-*Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1045)*
+*Defined in [api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1093)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -37,7 +37,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1033)*
+*Defined in [api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1081)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -47,7 +47,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1051)*
+*Defined in [api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1099)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -57,7 +57,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1027)*
+*Defined in [api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1075)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -67,7 +67,7 @@ ___
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1057)*
+*Defined in [api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1105)*
 
 **`memberof`** GroupWithPrincipals
 
@@ -77,6 +77,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1039)*
+*Defined in [api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1087)*
 
 **`memberof`** GroupWithPrincipals

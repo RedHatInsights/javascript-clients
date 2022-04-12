@@ -84,7 +84,7 @@ ___
 
 ▸ **getStatus**(`options?`: any): *Promise‹AxiosResponse‹[Status](../interfaces/status.md)››*
 
-*Defined in [api.ts:5900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5900)*
+*Defined in [api.ts:5948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5948)*
 
 **`summary`** Obtain server status
 

@@ -24,7 +24,7 @@
 
 • **attributes**? : *[ControllersBaselineSystemAttributes](controllersbaselinesystemattributes.md)*
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L517)*
+*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L517)*
 
 **`memberof`** ControllersBaselineSystemItem
 
@@ -34,7 +34,7 @@ ___
 
 • **inventory_id**? : *string*
 
-*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L523)*
+*Defined in [api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L523)*
 
 Baseline system inventory ID (uuid format)
 
@@ -46,7 +46,7 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L529)*
+*Defined in [api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L529)*
 
 Document type name
 

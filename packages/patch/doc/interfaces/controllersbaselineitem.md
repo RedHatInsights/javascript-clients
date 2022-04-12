@@ -24,7 +24,7 @@
 
 • **attributes**? : *[ControllersBaselineItemAttributes](controllersbaselineitemattributes.md)*
 
-*Defined in [api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L460)*
+*Defined in [api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L460)*
 
 **`memberof`** ControllersBaselineItem
 
@@ -34,7 +34,7 @@ ___
 
 • **id**? : *number*
 
-*Defined in [api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L466)*
+*Defined in [api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L466)*
 
 Unique baseline id
 
@@ -46,7 +46,7 @@ ___
 
 • **type**? : *string*
 
-*Defined in [api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L472)*
+*Defined in [api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L472)*
 
 Document type name
 

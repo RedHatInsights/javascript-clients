@@ -24,7 +24,7 @@
 
 • **config**? : *[ControllersBaselineConfig](controllersbaselineconfig.md)*
 
-*Defined in [api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L592)*
+*Defined in [api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L592)*
 
 **`memberof`** ControllersCreateBaselineRequest
 
@@ -34,7 +34,7 @@ ___
 
 • **inventory_ids**? : *Array‹string›*
 
-*Defined in [api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L598)*
+*Defined in [api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L598)*
 
 Inventory IDs list of systems to associate with this baseline (optional).
 
@@ -46,7 +46,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/63c8a77/packages/patch/api.ts#L604)*
+*Defined in [api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L604)*
 
 Baseline name (optional).
 

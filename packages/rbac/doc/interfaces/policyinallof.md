@@ -23,7 +23,7 @@
 
 • **group**: *string*
 
-*Defined in [api.ts:1471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1471)*
+*Defined in [api.ts:1519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1519)*
 
 **`memberof`** PolicyInAllOf
 
@@ -33,6 +33,6 @@ ___
 
 • **roles**: *Array‹string›*
 
-*Defined in [api.ts:1477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1477)*
+*Defined in [api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1525)*
 
 **`memberof`** PolicyInAllOf

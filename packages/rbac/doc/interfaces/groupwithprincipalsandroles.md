@@ -28,7 +28,7 @@
 
 • **created**: *string*
 
-*Defined in [api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1101)*
+*Defined in [api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1149)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -38,7 +38,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1089)*
+*Defined in [api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1137)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -48,7 +48,7 @@ ___
 
 • **modified**: *string*
 
-*Defined in [api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1107)*
+*Defined in [api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1155)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1083)*
+*Defined in [api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1131)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -68,7 +68,7 @@ ___
 
 • **principals**: *Array‹[Principal](principal.md)›*
 
-*Defined in [api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1113)*
+*Defined in [api.ts:1161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1161)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -78,7 +78,7 @@ ___
 
 • **roles**: *Array‹[RoleOut](roleout.md)›*
 
-*Defined in [api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1119)*
+*Defined in [api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1167)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
 
@@ -88,6 +88,6 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1095)*
+*Defined in [api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1143)*
 
 **`memberof`** GroupWithPrincipalsAndRoles
