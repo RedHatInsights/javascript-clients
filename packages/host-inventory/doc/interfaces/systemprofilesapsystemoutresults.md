@@ -23,7 +23,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:1702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1702)*
+*Defined in [api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1771)*
 
 **`memberof`** SystemProfileSapSystemOutResults
 
@@ -33,6 +33,6 @@ ___
 
 • **value**? : *string | boolean*
 
-*Defined in [api.ts:1696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1696)*
+*Defined in [api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1765)*
 
 **`memberof`** SystemProfileSapSystemOutResults

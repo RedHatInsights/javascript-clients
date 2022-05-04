@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1558)*
+*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1570)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [api.ts:1564](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1564)*
+*Defined in [api.ts:1576](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1576)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -47,7 +47,7 @@ ___
 
 • **latest_evra**? : *string*
 
-*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1570)*
+*Defined in [api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1582)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -57,7 +57,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1576](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1576)*
+*Defined in [api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1588)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -67,7 +67,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1582)*
+*Defined in [api.ts:1594](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1594)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -77,6 +77,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1588)*
+*Defined in [api.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1600)*
 
 **`memberof`** ControllersSystemPackageInline

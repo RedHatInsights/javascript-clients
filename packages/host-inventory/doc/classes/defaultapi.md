@@ -84,7 +84,7 @@ ___
 
 ▸ **apiSystemProfileValidateSchema**(`repoBranch`: string, `repoFork?`: string, `days?`: number, `maxMessages?`: number, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:2070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2070)*
+*Defined in [api.ts:2139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2139)*
 
 Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 

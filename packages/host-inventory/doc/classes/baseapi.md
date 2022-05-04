@@ -12,7 +12,7 @@
 
   ↳ [HostsApi](hostsapi.md)
 
-  ↳ [SapSystemApi](sapsystemapi.md)
+  ↳ [SystemProfileApi](systemprofileapi.md)
 
   ↳ [TagsApi](tagsapi.md)
 

@@ -21,7 +21,7 @@
 * [DefaultApi](classes/defaultapi.md)
 * [HostsApi](classes/hostsapi.md)
 * [RequiredError](classes/requirederror.md)
-* [SapSystemApi](classes/sapsystemapi.md)
+* [SystemProfileApi](classes/systemprofileapi.md)
 * [TagsApi](classes/tagsapi.md)
 
 ### Interfaces
@@ -63,6 +63,9 @@
 * [SystemProfileMssql](interfaces/systemprofilemssql.md)
 * [SystemProfileNetworkInterface](interfaces/systemprofilenetworkinterface.md)
 * [SystemProfileOperatingSystem](interfaces/systemprofileoperatingsystem.md)
+* [SystemProfileOperatingSystemOut](interfaces/systemprofileoperatingsystemout.md)
+* [SystemProfileOperatingSystemOutResults](interfaces/systemprofileoperatingsystemoutresults.md)
+* [SystemProfileOperatingSystemOutValue](interfaces/systemprofileoperatingsystemoutvalue.md)
 * [SystemProfileRhsm](interfaces/systemprofilerhsm.md)
 * [SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)
 * [SystemProfileSapSystemOutResults](interfaces/systemprofilesapsystemoutresults.md)
@@ -86,9 +89,9 @@
 * [HostsApiAxiosParamCreator](globals.md#const-hostsapiaxiosparamcreator)
 * [HostsApiFactory](globals.md#const-hostsapifactory)
 * [HostsApiFp](globals.md#const-hostsapifp)
-* [SapSystemApiAxiosParamCreator](globals.md#const-sapsystemapiaxiosparamcreator)
-* [SapSystemApiFactory](globals.md#const-sapsystemapifactory)
-* [SapSystemApiFp](globals.md#const-sapsystemapifp)
+* [SystemProfileApiAxiosParamCreator](globals.md#const-systemprofileapiaxiosparamcreator)
+* [SystemProfileApiFactory](globals.md#const-systemprofileapifactory)
+* [SystemProfileApiFp](globals.md#const-systemprofileapifp)
 * [TagsApiAxiosParamCreator](globals.md#const-tagsapiaxiosparamcreator)
 * [TagsApiFactory](globals.md#const-tagsapifactory)
 * [TagsApiFp](globals.md#const-tagsapifp)
@@ -111,7 +114,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1937)*
+*Defined in [api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2006)*
 
 DefaultApi - axios parameter creator
 
@@ -133,7 +136,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2034)*
+*Defined in [api.ts:2103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2103)*
 
 DefaultApi - factory interface
 
@@ -157,7 +160,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2008)*
+*Defined in [api.ts:2077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2077)*
 
 DefaultApi - functional programming interface
 
@@ -179,7 +182,7 @@ ___
 
 ▸ **HostsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2081)*
+*Defined in [api.ts:2150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2150)*
 
 HostsApi - axios parameter creator
 
@@ -197,11 +200,11 @@ Name | Type |
 
 * **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `filter?`: object, `fields?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `fields?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `fields?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -223,7 +226,7 @@ ___
 
 ▸ **HostsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3136)*
+*Defined in [api.ts:3205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3205)*
 
 HostsApi - factory interface
 
@@ -243,11 +246,11 @@ Name | Type |
 
 * **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *AxiosPromise‹void›*
+* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *AxiosPromise‹void›*
 
 * **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[HostQueryOutput](interfaces/hostqueryoutput.md)›*
 
-* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `filter?`: object, `fields?`: object, `options?`: any): *AxiosPromise‹[HostQueryOutput](interfaces/hostqueryoutput.md)›*
+* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `fields?`: object, `options?`: any): *AxiosPromise‹[HostQueryOutput](interfaces/hostqueryoutput.md)›*
 
 * **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `fields?`: object, `options?`: any): *AxiosPromise‹[SystemProfileByHostOut](interfaces/systemprofilebyhostout.md)›*
 
@@ -269,7 +272,7 @@ ___
 
 ▸ **HostsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2906)*
+*Defined in [api.ts:2975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2975)*
 
 HostsApi - functional programming interface
 
@@ -287,11 +290,11 @@ Name | Type |
 
 * **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *Promise‹function›*
 
-* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *Promise‹function›*
+* **apiHostDeleteHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *Promise‹function›*
 
 * **apiHostGetHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options?`: any): *Promise‹function›*
 
-* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: "insights", `filter?`: object, `fields?`: object, `options?`: any): *Promise‹function›*
+* **apiHostGetHostList**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `branchId?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `fields?`: object, `options?`: any): *Promise‹function›*
 
 * **apiHostGetHostSystemProfileById**(`hostIdList`: Array‹string›, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `branchId?`: string, `fields?`: object, `options?`: any): *Promise‹function›*
 
@@ -309,13 +312,13 @@ Name | Type |
 
 ___
 
-### `Const` SapSystemApiAxiosParamCreator
+### `Const` SystemProfileApiAxiosParamCreator
 
-▸ **SapSystemApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+▸ **SystemProfileApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3525)*
+*Defined in [api.ts:3594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3594)*
 
-SapSystemApi - axios parameter creator
+SystemProfileApi - axios parameter creator
 
 **`export`** 
 
@@ -327,19 +330,21 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiSystemProfileGetOperatingSystem**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
-### `Const` SapSystemApiFactory
+### `Const` SystemProfileApiFactory
 
-▸ **SapSystemApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
+▸ **SystemProfileApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3723)*
+*Defined in [api.ts:3885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3885)*
 
-SapSystemApi - factory interface
+SystemProfileApi - factory interface
 
 **`export`** 
 
@@ -353,19 +358,21 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)›*
+* **apiSystemProfileGetOperatingSystem**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileOperatingSystemOut](interfaces/systemprofileoperatingsystemout.md)›*
 
-* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)›*
+* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)›*
+
+* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *AxiosPromise‹[SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)›*
 
 ___
 
-### `Const` SapSystemApiFp
+### `Const` SystemProfileApiFp
 
-▸ **SapSystemApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+▸ **SystemProfileApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3675)*
+*Defined in [api.ts:3817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3817)*
 
-SapSystemApi - functional programming interface
+SystemProfileApi - functional programming interface
 
 **`export`** 
 
@@ -377,9 +384,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹function›*
+* **apiSystemProfileGetOperatingSystem**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹function›*
 
-* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹function›*
+* **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹function›*
+
+* **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -387,7 +396,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3808)*
+*Defined in [api.ts:4004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4004)*
 
 TagsApi - axios parameter creator
 
@@ -401,7 +410,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -409,7 +418,7 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3967)*
+*Defined in [api.ts:4163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4163)*
 
 TagsApi - factory interface
 
@@ -425,7 +434,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](interfaces/activetags.md)›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *AxiosPromise‹[ActiveTags](interfaces/activetags.md)›*
 
 ___
 
@@ -433,7 +442,7 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3930)*
+*Defined in [api.ts:4126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4126)*
 
 TagsApi - functional programming interface
 
@@ -447,7 +456,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹function›*
+* **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹function›*
 
 ## Object literals
 

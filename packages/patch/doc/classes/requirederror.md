@@ -31,7 +31,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L66)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ ___
 
 • **field**: *string*
 
-*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L67)*
+*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L67)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 *Overrides void*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L66)*
 
 ___
 
