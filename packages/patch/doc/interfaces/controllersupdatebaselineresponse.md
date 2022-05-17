@@ -14,14 +14,16 @@
 
 ### Properties
 
-* [data](controllersupdatebaselineresponse.md#optional-data)
+* [baseline_id](controllersupdatebaselineresponse.md#optional-baseline_id)
 
 ## Properties
 
-### `Optional` data
+### `Optional` baseline_id
 
-• **data**? : *[ControllersBaselineDetailItem](controllersbaselinedetailitem.md)*
+• **baseline_id**? : *number*
 
-*Defined in [api.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L1733)*
+*Defined in [api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1751)*
+
+Updated baseline unique ID, it can not be changed
 
 **`memberof`** ControllersUpdateBaselineResponse

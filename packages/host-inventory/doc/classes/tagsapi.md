@@ -82,9 +82,9 @@ ___
 
 ###  apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: "insights", `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
+▸ **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[ActiveTags](../interfaces/activetags.md)››*
 
-*Defined in [api.ts:4025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4025)*
+*Defined in [api.ts:4221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4221)*
 
 Required permissions: inventory:hosts:read
 
@@ -111,7 +111,7 @@ Name | Type |
 `insightsId?` | string |
 `providerId?` | string |
 `providerType?` | "alibaba" &#124; "aws" &#124; "azure" &#124; "gcp" &#124; "ibm" |
-`registeredWith?` | "insights" |
+`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector"› |
 `filter?` | object |
 `options?` | any |
 

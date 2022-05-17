@@ -15,6 +15,7 @@
 ### Properties
 
 * [config](controllersbaselinedetailattributes.md#optional-config)
+* [description](controllersbaselinedetailattributes.md#optional-description)
 * [name](controllersbaselinedetailattributes.md#optional-name)
 
 ## Properties
@@ -23,7 +24,17 @@
 
 • **config**? : *[ControllersBaselineConfig](controllersbaselineconfig.md)*
 
-*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L403)*
+*Defined in [api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L403)*
+
+**`memberof`** ControllersBaselineDetailAttributes
+
+___
+
+### `Optional` description
+
+• **description**? : *string*
+
+*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L409)*
 
 **`memberof`** ControllersBaselineDetailAttributes
 
@@ -33,7 +44,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L409)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L415)*
 
 Baseline name
 

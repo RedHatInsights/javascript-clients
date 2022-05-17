@@ -1645,6 +1645,75 @@ export enum SystemProfileOperatingSystemNameEnum {
 }
 
 /**
+ *
+ * @export
+ * @interface SystemProfileOperatingSystemOut
+ */
+export interface SystemProfileOperatingSystemOut {
+    /**
+     * Total number of items
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOut
+     */
+    total?: number;
+    /**
+     * The number of items on the current page
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOut
+     */
+    count?: number;
+    /**
+     * The list of operating_system values on the account
+     * @type {Array<SystemProfileOperatingSystemOutResults>}
+     * @memberof SystemProfileOperatingSystemOut
+     */
+    results?: Array<SystemProfileOperatingSystemOutResults>;
+}
+/**
+ *
+ * @export
+ * @interface SystemProfileOperatingSystemOutResults
+ */
+export interface SystemProfileOperatingSystemOutResults {
+    /**
+     *
+     * @type {SystemProfileOperatingSystemOutValue}
+     * @memberof SystemProfileOperatingSystemOutResults
+     */
+    value?: SystemProfileOperatingSystemOutValue;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOutResults
+     */
+    count?: number;
+}
+/**
+ *
+ * @export
+ * @interface SystemProfileOperatingSystemOutValue
+ */
+export interface SystemProfileOperatingSystemOutValue {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemProfileOperatingSystemOutValue
+     */
+    name?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOutValue
+     */
+    major?: number | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemProfileOperatingSystemOutValue
+     */
+    minor?: number | null;
+}
+/**
  * Object for subscription-manager details
  * @export
  * @interface SystemProfileRhsm
@@ -2181,14 +2250,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostDeleteHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2231,7 +2300,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['provider_type'] = providerType;
             }
 
-            if (registeredWith !== undefined) {
+            if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
 
@@ -2345,13 +2414,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2422,7 +2491,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['tags'] = tags;
             }
 
-            if (registeredWith !== undefined) {
+            if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
 
@@ -2943,14 +3012,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2992,13 +3061,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3165,14 +3234,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
+        apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
             return HostsApiFp(configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3206,13 +3275,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3352,7 +3421,7 @@ export class HostsApi extends BaseAPI {
      * @param {string} [insightsId] Filter by insights_id
      * @param {string} [providerId] Filter by provider_id
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
@@ -3360,7 +3429,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
+    public apiHostDeleteHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostDeleteHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, staleness, tags, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3397,14 +3466,14 @@ export class HostsApi extends BaseAPI {
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: 'insights', filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3519,25 +3588,98 @@ export class HostsApi extends BaseAPI {
 
 
 /**
- * SapSystemApi - axios parameter creator
+ * SystemProfileApi - axios parameter creator
  * @export
  */
-export const SapSystemApiAxiosParamCreator = function (configuration?: Configuration) {
+export const SystemProfileApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all operating system versions and counts on an account
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids: async (search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiSystemProfileGetOperatingSystem: async (search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/system_profile/operating_system`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (search !== undefined) {
+                localVarQueryParameter['search'] = search;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (staleness) {
+                localVarQueryParameter['staleness'] = staleness;
+            }
+
+            if (registeredWith) {
+                localVarQueryParameter['registered_with'] = registeredWith;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary get all sap sids values and counts on an account
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileGetSapSids: async (search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/system_profile/sap_sids`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3576,7 +3718,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['staleness'] = staleness;
             }
 
-            if (registeredWith !== undefined) {
+            if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
 
@@ -3599,17 +3741,17 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all sap system values and counts on an account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSystem: async (tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiSystemProfileGetSapSystem: async (tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/system_profile/sap_system`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3644,7 +3786,7 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['staleness'] = staleness;
             }
 
-            if (registeredWith !== undefined) {
+            if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
 
@@ -3669,26 +3811,26 @@ export const SapSystemApiAxiosParamCreator = function (configuration?: Configura
 };
 
 /**
- * SapSystemApi - functional programming interface
+ * SystemProfileApi - functional programming interface
  * @export
  */
-export const SapSystemApiFp = function(configuration?: Configuration) {
+export const SystemProfileApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all operating system versions and counts on an account
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
-            const localVarAxiosArgs = await SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options);
+        async apiSystemProfileGetOperatingSystem(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileOperatingSystemOut>> {
+            const localVarAxiosArgs = await SystemProfileApiAxiosParamCreator(configuration).apiSystemProfileGetOperatingSystem(search, tags, perPage, page, staleness, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3696,18 +3838,38 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all sap sids values and counts on an account
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
-            const localVarAxiosArgs = await SapSystemApiAxiosParamCreator(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options);
+        async apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
+            const localVarAxiosArgs = await SystemProfileApiAxiosParamCreator(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary get all sap system values and counts on an account
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileSapSystemOut>> {
+            const localVarAxiosArgs = await SystemProfileApiAxiosParamCreator(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3717,85 +3879,119 @@ export const SapSystemApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * SapSystemApi - factory interface
+ * SystemProfileApi - factory interface
  * @export
  */
-export const SapSystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const SystemProfileApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all operating system versions and counts on an account
          * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
-            return SapSystemApiFp(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
+        apiSystemProfileGetOperatingSystem(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileOperatingSystemOut> {
+            return SystemProfileApiFp(configuration).apiSystemProfileGetOperatingSystem(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get sap system values
+         * @summary get all sap sids values and counts on an account
+         * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
-            return SapSystemApiFp(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
+        apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
+            return SystemProfileApiFp(configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Required permissions: inventory:hosts:read
+         * @summary get all sap system values and counts on an account
+         * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
+            return SystemProfileApiFp(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * SapSystemApi - object-oriented interface
+ * SystemProfileApi - object-oriented interface
  * @export
- * @class SapSystemApi
+ * @class SystemProfileApi
  * @extends {BaseAPI}
  */
-export class SapSystemApi extends BaseAPI {
+export class SystemProfileApi extends BaseAPI {
     /**
      * Required permissions: inventory:hosts:read
-     * @summary get sap system values
+     * @summary get all operating system versions and counts on an account
      * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SapSystemApi
+     * @memberof SystemProfileApi
      */
-    public apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any) {
-        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
+    public apiSystemProfileGetOperatingSystem(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
+        return SystemProfileApiFp(this.configuration).apiSystemProfileGetOperatingSystem(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Required permissions: inventory:hosts:read
-     * @summary get sap system values
+     * @summary get all sap sids values and counts on an account
+     * @param {string} [search] Only include tags that match the given search string. The value is matched against namespace, key and value.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
-     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SapSystemApi
+     * @memberof SystemProfileApi
      */
-    public apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any) {
-        return SapSystemApiFp(this.configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
+    public apiSystemProfileGetSapSids(search?: string, tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
+        return SystemProfileApiFp(this.configuration).apiSystemProfileGetSapSids(search, tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Required permissions: inventory:hosts:read
+     * @summary get all sap system values and counts on an account
+     * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemProfileApi
+     */
+    public apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
+        return SystemProfileApiFp(this.configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3823,12 +4019,12 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3899,7 +4095,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['provider_type'] = providerType;
             }
 
-            if (registeredWith !== undefined) {
+            if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
 
@@ -3945,12 +4141,12 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
+        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
             const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3982,12 +4178,12 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [insightsId] Filter by insights_id
          * @param {string} [providerId] Filter by provider_id
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-         * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+         * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
             return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
@@ -4016,13 +4212,13 @@ export class TagsApi extends BaseAPI {
      * @param {string} [insightsId] Filter by insights_id
      * @param {string} [providerId] Filter by provider_id
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
-     * @param {'insights'} [registeredWith] Filters out any host not registered with the specified service
+     * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: 'insights', filter?: { [key: string]: object; }, options?: any) {
+    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
         return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 

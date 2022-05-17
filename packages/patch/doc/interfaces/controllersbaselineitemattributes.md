@@ -23,7 +23,7 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L485)*
+*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L491)*
 
 Baseline name
 
@@ -35,7 +35,7 @@ ___
 
 • **systems**? : *number*
 
-*Defined in [api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/669b7c5/packages/patch/api.ts#L491)*
+*Defined in [api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L497)*
 
 Count of the systems associated with the baseline
 
