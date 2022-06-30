@@ -30,7 +30,7 @@
 
 • **bios_uuid**? : *string | null*
 
-*Defined in [api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L188)*
+*Defined in [api.ts:188](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L188)*
 
 A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
 
@@ -42,7 +42,7 @@ ___
 
 • **fqdn**? : *string | null*
 
-*Defined in [api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L200)*
+*Defined in [api.ts:200](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L200)*
 
 A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
 
@@ -54,7 +54,7 @@ ___
 
 • **insights_id**? : *string | null*
 
-*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L170)*
+*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L170)*
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
@@ -66,7 +66,7 @@ ___
 
 • **ip_addresses**? : *Array‹string› | null*
 
-*Defined in [api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L194)*
+*Defined in [api.ts:194](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L194)*
 
 Host’s network IP addresses.  This field is considered to be a canonical fact.
 
@@ -78,7 +78,7 @@ ___
 
 • **mac_addresses**? : *Array‹string› | null*
 
-*Defined in [api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L206)*
+*Defined in [api.ts:206](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L206)*
 
 Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
 
@@ -90,7 +90,7 @@ ___
 
 • **provider_id**? : *string | null*
 
-*Defined in [api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L212)*
+*Defined in [api.ts:212](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L212)*
 
 Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
 
@@ -102,7 +102,7 @@ ___
 
 • **provider_type**? : *string | null*
 
-*Defined in [api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L218)*
+*Defined in [api.ts:218](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L218)*
 
 Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
 
@@ -114,7 +114,7 @@ ___
 
 • **satellite_id**? : *string | null*
 
-*Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L182)*
+*Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L182)*
 
 A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -126,7 +126,7 @@ ___
 
 • **subscription_manager_id**? : *string | null*
 
-*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L176)*
+*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L176)*
 
 A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
 

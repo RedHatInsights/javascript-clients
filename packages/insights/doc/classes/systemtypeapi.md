@@ -37,7 +37,7 @@ SystemtypeApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **systemtypeList**(`options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)[]››*
 
-*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L860)*
+*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L860)*
 
 List all system types by role and product code
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **systemtypeRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*
 
-*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L872)*
+*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L872)*
 
 Retrieve details of a single system type
 

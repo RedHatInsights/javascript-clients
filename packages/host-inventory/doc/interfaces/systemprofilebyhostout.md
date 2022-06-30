@@ -28,7 +28,7 @@ Structure of the output of the host system profile query
 
 • **count**: *number*
 
-*Defined in [api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1430)*
+*Defined in [api.ts:1448](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1448)*
 
 The number of items on the current page
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1436)*
+*Defined in [api.ts:1454](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1454)*
 
 The page number
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1442)*
+*Defined in [api.ts:1460](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1460)*
 
 The number of items to return per page
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [api.ts:1454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1454)*
+*Defined in [api.ts:1472](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1472)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1448)*
+*Defined in [api.ts:1466](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1466)*
 
 Total number of items
 

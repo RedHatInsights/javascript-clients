@@ -28,7 +28,7 @@
 
 • **filter**? : *object*
 
-*Defined in [api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L705)*
+*Defined in [api.ts:718](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L718)*
 
 Used filters
 
@@ -44,7 +44,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L711)*
+*Defined in [api.ts:724](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L724)*
 
 Used response limit (page size) - pagination
 
@@ -56,7 +56,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L717)*
+*Defined in [api.ts:730](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L730)*
 
 Used response offset - pagination
 
@@ -68,7 +68,7 @@ ___
 
 • **search**? : *string*
 
-*Defined in [api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L723)*
+*Defined in [api.ts:736](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L736)*
 
 Used search terms
 
@@ -80,7 +80,7 @@ ___
 
 • **sort**? : *Array‹string›*
 
-*Defined in [api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L729)*
+*Defined in [api.ts:742](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L742)*
 
 Used sorting fields
 
@@ -92,7 +92,7 @@ ___
 
 • **subtotals**? : *object*
 
-*Defined in [api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L735)*
+*Defined in [api.ts:748](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L748)*
 
 Some subtotals used by some endpoints
 
@@ -108,7 +108,7 @@ ___
 
 • **total_items**? : *number*
 
-*Defined in [api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L741)*
+*Defined in [api.ts:754](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L754)*
 
 Total items count to return
 

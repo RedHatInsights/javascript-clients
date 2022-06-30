@@ -22,7 +22,7 @@
 
 • **total_items**: *number*
 
-*Defined in [git-api/api.ts:2230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2230)*
+*Defined in [git-api/api.ts:2230](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L2230)*
 
 Total number of available status/status_id pairs.
 

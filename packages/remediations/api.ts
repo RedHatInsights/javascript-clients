@@ -1185,13 +1185,13 @@ export interface UserOut {
      * @type {string}
      * @memberof UserOut
      */
-    first_name: string;
+    first_name?: string;
     /**
      *
      * @type {string}
      * @memberof UserOut
      */
-    last_name: string;
+    last_name?: string;
 }
 
 /**

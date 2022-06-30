@@ -25,7 +25,7 @@
 
 • **level**? : *[ProgressMessageLevelEnum](../enums/progressmessagelevelenum.md)*
 
-*Defined in [api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L978)*
+*Defined in [api.ts:978](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L978)*
 
 **`memberof`** ProgressMessage
 
@@ -35,7 +35,7 @@ ___
 
 • **message**? : *string*
 
-*Defined in [api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L984)*
+*Defined in [api.ts:984](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L984)*
 
 **`memberof`** ProgressMessage
 
@@ -45,7 +45,7 @@ ___
 
 • **order_item_id**? : *string*
 
-*Defined in [api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L990)*
+*Defined in [api.ts:990](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L990)*
 
 **`memberof`** ProgressMessage
 
@@ -55,6 +55,6 @@ ___
 
 • **received_at**? : *string*
 
-*Defined in [api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L972)*
+*Defined in [api.ts:972](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L972)*
 
 **`memberof`** ProgressMessage

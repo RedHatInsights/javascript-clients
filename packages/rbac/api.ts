@@ -692,26 +692,7 @@ export interface CrossAccountRequestUpdateIn {
      * @memberof CrossAccountRequestUpdateIn
      */
     roles: Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestUpdateIn
-     */
-    status?: CrossAccountRequestUpdateInStatusEnum;
 }
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum CrossAccountRequestUpdateInStatusEnum {
-    Pending = 'pending',
-    Approved = 'approved',
-    Expired = 'expired',
-    Cancelled = 'cancelled',
-    Denied = 'denied'
-}
-
 /**
  *
  * @export
@@ -2580,13 +2561,14 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
          * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options: any = {}): Promise<RequestArgs> => {
+        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/cross-account-requests/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2619,6 +2601,10 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
                 localVarQueryParameter['account'] = account;
             }
 
+            if (orgId !== undefined) {
+                localVarQueryParameter['org_id'] = orgId;
+            }
+
             if (approvedOnly !== undefined) {
                 localVarQueryParameter['approved_only'] = approvedOnly;
             }
@@ -2645,8 +2631,8 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
             };
         },
         /**
-         * Update a cross account request
-         * @summary Update a cross account request
+         * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
+         * @summary Patch a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
          * @param {*} [options] Override http request option.
@@ -2696,7 +2682,7 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
             };
         },
         /**
-         * Update a cross account request
+         * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
          * @summary Update a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
@@ -2793,22 +2779,23 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
          * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
-            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options);
+        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
+            const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Update a cross account request
-         * @summary Update a cross account request
+         * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
+         * @summary Patch a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
          * @param {*} [options] Override http request option.
@@ -2822,7 +2809,7 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
             };
         },
         /**
-         * Update a cross account request
+         * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
          * @summary Update a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
@@ -2875,18 +2862,19 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+         * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
          * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): AxiosPromise<CrossAccountRequestPagination> {
-            return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options).then((request) => request(axios, basePath));
+        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): AxiosPromise<CrossAccountRequestPagination> {
+            return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update a cross account request
-         * @summary Update a cross account request
+         * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
+         * @summary Patch a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
          * @param {*} [options] Override http request option.
@@ -2896,7 +2884,7 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
             return CrossAccountRequestApiFp(configuration).patchCrossAccountRequest(uuid, crossAccountRequestPatch, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update a cross account request
+         * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
          * @summary Update a cross account request
          * @param {string} uuid ID of cross account request to get
          * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest
@@ -2950,6 +2938,7 @@ export class CrossAccountRequestApi extends BaseAPI {
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
      * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
+     * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
      * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
      * @param {'pending' | 'approved' | 'denied' | 'cancelled' | 'expired'} [status] Parameter for filtering resource based on status.
      * @param {'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status'} [orderBy] Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date.
@@ -2957,13 +2946,13 @@ export class CrossAccountRequestApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CrossAccountRequestApi
      */
-    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any) {
-        return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, approvedOnly, status, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any) {
+        return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Update a cross account request
-     * @summary Update a cross account request
+     * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
+     * @summary Patch a cross account request
      * @param {string} uuid ID of cross account request to get
      * @param {CrossAccountRequestPatch} crossAccountRequestPatch Updates to CrossAccountRequest
      * @param {*} [options] Override http request option.
@@ -2975,7 +2964,7 @@ export class CrossAccountRequestApi extends BaseAPI {
     }
 
     /**
-     * Update a cross account request
+     * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
      * @summary Update a cross account request
      * @param {string} uuid ID of cross account request to get
      * @param {CrossAccountRequestUpdateIn} crossAccountRequestUpdateIn Updates to CrossAccountRequest

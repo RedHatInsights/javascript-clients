@@ -17,7 +17,7 @@
 
 • **Equal**: = "equal"
 
-*Defined in [api.ts:1752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1752)*
+*Defined in [api.ts:1733](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1733)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **In**: = "in"
 
-*Defined in [api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1753)*
+*Defined in [api.ts:1734](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1734)*

@@ -18,7 +18,7 @@
 
 • **After**: = "after"
 
-*Defined in [api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L642)*
+*Defined in [api.ts:642](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L642)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **Before**: = "before"
 
-*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L641)*
+*Defined in [api.ts:641](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L641)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **Return**: = "return"
 
-*Defined in [api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L643)*
+*Defined in [api.ts:643](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L643)*

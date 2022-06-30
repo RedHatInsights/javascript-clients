@@ -23,7 +23,7 @@
 
 • **portfolio_id**: *string*
 
-*Defined in [api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L234)*
+*Defined in [api.ts:234](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L234)*
 
 The Portfolio this portfolio item should belong to
 
@@ -35,7 +35,7 @@ ___
 
 • **service_offering_ref**? : *string*
 
-*Defined in [api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L240)*
+*Defined in [api.ts:240](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L240)*
 
 The service offering ref should be retrieved from a call to the catalog inventory Service.
 

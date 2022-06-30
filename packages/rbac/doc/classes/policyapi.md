@@ -40,7 +40,7 @@ PolicyApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **createPolicies**(`policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [api.ts:4892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4892)*
+*Defined in [api.ts:4881](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4881)*
 
 **`summary`** Create a policy in a tenant
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **deletePolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:4904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4904)*
+*Defined in [api.ts:4893](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4893)*
 
 **`summary`** Delete a policy in the tenant
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **getPolicy**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [api.ts:4916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4916)*
+*Defined in [api.ts:4905](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4905)*
 
 **`summary`** Get a policy in the tenant
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **listPolicies**(`limit?`: number, `offset?`: number, `name?`: string, `scope?`: "account" | "principal", `groupName?`: string, `groupUuid?`: string, `orderBy?`: "name" | "modified", `options?`: any): *Promise‹AxiosResponse‹[PolicyPagination](../interfaces/policypagination.md)››*
 
-*Defined in [api.ts:4934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4934)*
+*Defined in [api.ts:4923](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4923)*
 
 By default, responses are sorted in ascending order by policy name
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **updatePolicy**(`uuid`: string, `policyIn`: [PolicyIn](../interfaces/policyin.md), `options?`: any): *Promise‹AxiosResponse‹[PolicyExtended](../interfaces/policyextended.md)››*
 
-*Defined in [api.ts:4947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4947)*
+*Defined in [api.ts:4936](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4936)*
 
 **`summary`** Update a policy in the tenant
 

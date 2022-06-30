@@ -31,6 +31,7 @@
 * [ControllersBaselineItemAttributes](interfaces/controllersbaselineitemattributes.md)
 * [ControllersBaselineSystemAttributes](interfaces/controllersbaselinesystemattributes.md)
 * [ControllersBaselineSystemItem](interfaces/controllersbaselinesystemitem.md)
+* [ControllersBaselineSystemsRemoveRequest](interfaces/controllersbaselinesystemsremoverequest.md)
 * [ControllersBaselineSystemsResponse](interfaces/controllersbaselinesystemsresponse.md)
 * [ControllersBaselinesResponse](interfaces/controllersbaselinesresponse.md)
 * [ControllersCreateBaselineRequest](interfaces/controllerscreatebaselinerequest.md)
@@ -89,7 +90,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L20)*
 
 ## Functions
 
@@ -97,7 +98,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1790)*
+*Defined in [api.ts:1803](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1803)*
 
 DefaultApi - axios parameter creator
 
@@ -135,7 +136,7 @@ Name | Type |
 
 * **exportSystemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterBaselineName?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **latestPackage**(`packageName`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -157,6 +158,8 @@ Name | Type |
 
 * **packageVersions**(`packageName`: string, `limit?`: number, `offset?`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **removeBaselineSystems**(`body`: [ControllersBaselineSystemsRemoveRequest](interfaces/controllersbaselinesystemsremoverequest.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **systemPackages**(`inventoryId`: string, `limit?`: number, `offset?`: number, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **updateBaseline**(`baselineId`: number, `body`: [ControllersUpdateBaselineRequest](interfaces/controllersupdatebaselinerequest.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
@@ -171,7 +174,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4670](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L4670)*
+*Defined in [api.ts:4750](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L4750)*
 
 DefaultApi - factory interface
 
@@ -211,7 +214,7 @@ Name | Type |
 
 * **exportSystemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options?`: any): *AxiosPromise‹Array‹[ControllersSystemPackageInline](interfaces/controllerssystempackageinline.md)››*
 
-* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[ControllersSystemInlineItem](interfaces/controllerssysteminlineitem.md)››*
+* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterBaselineName?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[ControllersSystemInlineItem](interfaces/controllerssysteminlineitem.md)››*
 
 * **latestPackage**(`packageName`: string, `options?`: any): *AxiosPromise‹[ControllersPackageDetailResponse](interfaces/controllerspackagedetailresponse.md)›*
 
@@ -233,6 +236,8 @@ Name | Type |
 
 * **packageVersions**(`packageName`: string, `limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[ControllersPackageVersionsResponse](interfaces/controllerspackageversionsresponse.md)›*
 
+* **removeBaselineSystems**(`body`: [ControllersBaselineSystemsRemoveRequest](interfaces/controllersbaselinesystemsremoverequest.md), `options?`: any): *AxiosPromise‹void›*
+
 * **systemPackages**(`inventoryId`: string, `limit?`: number, `offset?`: number, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options?`: any): *AxiosPromise‹[ControllersSystemPackageResponse](interfaces/controllerssystempackageresponse.md)›*
 
 * **updateBaseline**(`baselineId`: number, `body`: [ControllersUpdateBaselineRequest](interfaces/controllersupdatebaselinerequest.md), `options?`: any): *AxiosPromise‹[ControllersUpdateBaselineResponse](interfaces/controllersupdatebaselineresponse.md)›*
@@ -247,7 +252,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4068](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L4068)*
+*Defined in [api.ts:4133](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L4133)*
 
 DefaultApi - functional programming interface
 
@@ -285,7 +290,7 @@ Name | Type |
 
 * **exportSystemPackages**(`inventoryId`: string, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options?`: any): *Promise‹function›*
 
-* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options?`: any): *Promise‹function›*
+* **exportSystems**(`search?`: string, `filterId?`: string, `filterDisplayName?`: string, `filterLastEvaluation?`: string, `filterLastUpload?`: string, `filterRhsaCount?`: string, `filterRhbaCount?`: string, `filterRheaCount?`: string, `filterOtherCount?`: string, `filterStale?`: string, `filterPackagesInstalled?`: string, `filterPackagesUpdatable?`: string, `filterSystemProfileSapSystem?`: string, `filterSystemProfileSapSidsIn?`: Array‹string›, `filterSystemProfileAnsible?`: string, `filterSystemProfileAnsibleControllerVersion?`: string, `filterSystemProfileMssql?`: string, `filterSystemProfileMssqlVersion?`: string, `filterOsname?`: string, `filterOsminor?`: string, `filterOsmajor?`: string, `filterBaselineName?`: string, `filterOs?`: string, `tags?`: Array‹string›, `options?`: any): *Promise‹function›*
 
 * **latestPackage**(`packageName`: string, `options?`: any): *Promise‹function›*
 
@@ -307,6 +312,8 @@ Name | Type |
 
 * **packageVersions**(`packageName`: string, `limit?`: number, `offset?`: number, `options?`: any): *Promise‹function›*
 
+* **removeBaselineSystems**(`body`: [ControllersBaselineSystemsRemoveRequest](interfaces/controllersbaselinesystemsremoverequest.md), `options?`: any): *Promise‹function›*
+
 * **systemPackages**(`inventoryId`: string, `limit?`: number, `offset?`: number, `search?`: string, `filterName?`: string, `filterDescription?`: string, `filterEvra?`: string, `filterSummary?`: string, `filterUpdatable?`: boolean, `options?`: any): *Promise‹function›*
 
 * **updateBaseline**(`baselineId`: number, `body`: [ControllersUpdateBaselineRequest](interfaces/controllersupdatebaselinerequest.md), `options?`: any): *Promise‹function›*
@@ -321,7 +328,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L26)*
 
 **`export`** 
 
@@ -329,22 +336,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/base.ts#L29)*

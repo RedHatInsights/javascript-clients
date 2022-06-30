@@ -39,7 +39,7 @@
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L884)*
+*Defined in [api.ts:884](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L884)*
 
 **`memberof`** PortfolioItem
 
@@ -49,7 +49,7 @@ ___
 
 • **description**? : *string | null*
 
-*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L812)*
+*Defined in [api.ts:812](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L812)*
 
 **`memberof`** PortfolioItem
 
@@ -59,7 +59,7 @@ ___
 
 • **distributor**? : *string | null*
 
-*Defined in [api.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L836)*
+*Defined in [api.ts:836](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L836)*
 
 **`memberof`** PortfolioItem
 
@@ -69,7 +69,7 @@ ___
 
 • **documentation_url**? : *string | null*
 
-*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L842)*
+*Defined in [api.ts:842](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L842)*
 
 **`memberof`** PortfolioItem
 
@@ -79,7 +79,7 @@ ___
 
 • **favorite**? : *boolean*
 
-*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L800)*
+*Defined in [api.ts:800](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L800)*
 
 **`memberof`** PortfolioItem
 
@@ -89,7 +89,7 @@ ___
 
 • **icon_id**? : *string*
 
-*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L878)*
+*Defined in [api.ts:878](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L878)*
 
 The Portfolio Item Icon ID
 
@@ -101,7 +101,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L794)*
+*Defined in [api.ts:794](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L794)*
 
 **`memberof`** PortfolioItem
 
@@ -111,7 +111,7 @@ ___
 
 • **long_description**? : *string | null*
 
-*Defined in [api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L830)*
+*Defined in [api.ts:830](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L830)*
 
 **`memberof`** PortfolioItem
 
@@ -121,7 +121,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [api.ts:896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L896)*
+*Defined in [api.ts:896](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L896)*
 
 JSON Metadata about the portfolio item
 
@@ -133,7 +133,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L806)*
+*Defined in [api.ts:806](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L806)*
 
 **`memberof`** PortfolioItem
 
@@ -143,7 +143,7 @@ ___
 
 • **orphan**? : *boolean*
 
-*Defined in [api.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L818)*
+*Defined in [api.ts:818](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L818)*
 
 **`memberof`** PortfolioItem
 
@@ -153,7 +153,7 @@ ___
 
 • **owner**? : *string*
 
-*Defined in [api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L854)*
+*Defined in [api.ts:854](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L854)*
 
 **`memberof`** PortfolioItem
 
@@ -163,7 +163,7 @@ ___
 
 • **portfolio_id**? : *string*
 
-*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L872)*
+*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L872)*
 
 ID of a parent portfolio
 
@@ -175,7 +175,7 @@ ___
 
 • **service_offering_source_ref**? : *string*
 
-*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L860)*
+*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L860)*
 
 The source reference this product was created from
 
@@ -187,7 +187,7 @@ ___
 
 • **service_offering_type**? : *string*
 
-*Defined in [api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L866)*
+*Defined in [api.ts:866](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L866)*
 
 The service offering type stored by the catalog inventory Service
 
@@ -199,7 +199,7 @@ ___
 
 • **state**? : *string*
 
-*Defined in [api.ts:824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L824)*
+*Defined in [api.ts:824](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L824)*
 
 **`memberof`** PortfolioItem
 
@@ -209,7 +209,7 @@ ___
 
 • **support_url**? : *string | null*
 
-*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L848)*
+*Defined in [api.ts:848](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L848)*
 
 **`memberof`** PortfolioItem
 
@@ -219,6 +219,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L890)*
+*Defined in [api.ts:890](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L890)*
 
 **`memberof`** PortfolioItem

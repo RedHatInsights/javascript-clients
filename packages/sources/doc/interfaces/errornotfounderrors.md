@@ -23,7 +23,7 @@
 
 • **detail**? : *string*
 
-*Defined in [api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L532)*
+*Defined in [api.ts:532](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L532)*
 
 **`memberof`** ErrorNotFoundErrors
 
@@ -33,6 +33,6 @@ ___
 
 • **status**? : *number*
 
-*Defined in [api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L526)*
+*Defined in [api.ts:526](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L526)*
 
 **`memberof`** ErrorNotFoundErrors

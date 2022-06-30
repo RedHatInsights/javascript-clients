@@ -33,7 +33,7 @@ Do not edit the class manually.
 
 • **accessToken**? : *string | function*
 
-*Defined in [configuration.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L19)*
+*Defined in [configuration.ts:19](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L19)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **apiKey**? : *string | Promise‹string› | function | function*
 
-*Defined in [configuration.ts:16](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L16)*
+*Defined in [configuration.ts:16](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L16)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **baseOptions**? : *any*
 
-*Defined in [configuration.ts:21](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L21)*
+*Defined in [configuration.ts:21](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L21)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **basePath**? : *string*
 
-*Defined in [configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L20)*
+*Defined in [configuration.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L20)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **password**? : *string*
 
-*Defined in [configuration.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L18)*
+*Defined in [configuration.ts:18](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L18)*
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 • **username**? : *string*
 
-*Defined in [configuration.ts:17](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/configuration.ts#L17)*
+*Defined in [configuration.ts:17](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/configuration.ts#L17)*

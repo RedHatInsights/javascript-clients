@@ -22,6 +22,6 @@
 
 • **exclude**? : *Array‹string›*
 
-*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L578)*
+*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L578)*
 
 **`memberof`** PlaybookRunsInput

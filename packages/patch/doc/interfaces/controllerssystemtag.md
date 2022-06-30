@@ -24,7 +24,7 @@
 
 • **key**? : *string*
 
-*Defined in [api.ts:1638](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1638)*
+*Defined in [api.ts:1651](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1651)*
 
 **`memberof`** ControllersSystemTag
 
@@ -34,7 +34,7 @@ ___
 
 • **namespace**? : *string*
 
-*Defined in [api.ts:1644](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1644)*
+*Defined in [api.ts:1657](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1657)*
 
 **`memberof`** ControllersSystemTag
 
@@ -44,6 +44,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [api.ts:1650](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1650)*
+*Defined in [api.ts:1663](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1663)*
 
 **`memberof`** ControllersSystemTag

@@ -19,7 +19,7 @@
 
 • **Delete**: = "delete"
 
-*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1197)*
+*Defined in [api.ts:1197](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1197)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **Order**: = "order"
 
-*Defined in [api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1198)*
+*Defined in [api.ts:1198](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1198)*
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **Read**: = "read"
 
-*Defined in [api.ts:1195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1195)*
+*Defined in [api.ts:1195](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1195)*
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **Update**: = "update"
 
-*Defined in [api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1196)*
+*Defined in [api.ts:1196](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1196)*

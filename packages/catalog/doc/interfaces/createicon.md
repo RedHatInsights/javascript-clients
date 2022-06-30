@@ -24,7 +24,7 @@
 
 • **content**? : *any*
 
-*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L209)*
+*Defined in [api.ts:209](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L209)*
 
 The binary image contents, maximum size is 250KB
 
@@ -36,7 +36,7 @@ ___
 
 • **portfolio_id**? : *string*
 
-*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L215)*
+*Defined in [api.ts:215](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L215)*
 
 The Portfolio this Icon belongs to
 
@@ -48,7 +48,7 @@ ___
 
 • **portfolio_item_id**? : *string*
 
-*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L221)*
+*Defined in [api.ts:221](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L221)*
 
 The Portfolio Item this Icon belongs to
 

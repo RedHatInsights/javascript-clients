@@ -52,7 +52,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com/api/insights/v1".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L20)*
 
 ## Functions
 
@@ -60,7 +60,7 @@
 
 ▸ **KcsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L133)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L133)*
 
 KcsApi - axios parameter creator
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **KcsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L250)*
+*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L250)*
 
 KcsApi - factory interface
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **KcsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L213)*
+*Defined in [api.ts:213](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L213)*
 
 KcsApi - functional programming interface
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **RulecategoryApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L313)*
+*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L313)*
 
 RulecategoryApi - axios parameter creator
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **RulecategoryApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L424)*
+*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L424)*
 
 RulecategoryApi - factory interface
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **RulecategoryApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L388)*
+*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L388)*
 
 RulecategoryApi - functional programming interface
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L485)*
+*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L485)*
 
 StatusApi - axios parameter creator
 
@@ -234,7 +234,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L632)*
+*Defined in [api.ts:632](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L632)*
 
 StatusApi - factory interface
 
@@ -262,7 +262,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L584)*
+*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L584)*
 
 StatusApi - functional programming interface
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **SystemtypeApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L711)*
+*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L711)*
 
 SystemtypeApi - axios parameter creator
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **SystemtypeApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L822)*
+*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L822)*
 
 SystemtypeApi - factory interface
 
@@ -338,7 +338,7 @@ ___
 
 ▸ **SystemtypeApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L786)*
+*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L786)*
 
 SystemtypeApi - functional programming interface
 
@@ -362,7 +362,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L26)*
 
 **`export`** 
 
@@ -370,22 +370,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L29)*

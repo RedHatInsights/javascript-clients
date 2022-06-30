@@ -26,7 +26,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L164)*
+*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L170)*
 
 A number of entries returned from offset
 
@@ -38,7 +38,7 @@ ___
 
 • **limit**? : *number*
 
-*Defined in [api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L170)*
+*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L176)*
 
 A max number of entries to return
 
@@ -50,7 +50,7 @@ ___
 
 • **offset**? : *number*
 
-*Defined in [api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L176)*
+*Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L182)*
 
 A number representing he starting point for retrieving entries
 
@@ -62,7 +62,7 @@ ___
 
 • **results**? : *Array‹[StateArchive](statearchive.md)›*
 
-*Defined in [api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L182)*
+*Defined in [api.ts:188](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L188)*
 
 Query results
 
@@ -74,7 +74,7 @@ ___
 
 • **total**? : *number*
 
-*Defined in [api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L158)*
+*Defined in [api.ts:164](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L164)*
 
 A total count of found entries
 

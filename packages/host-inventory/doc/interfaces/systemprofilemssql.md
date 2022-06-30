@@ -24,7 +24,7 @@ Object containing data specific to the MS SQL workload
 
 • **version**? : *string*
 
-*Defined in [api.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1561)*
+*Defined in [api.ts:1579](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1579)*
 
 MSSQL version number
 

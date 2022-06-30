@@ -26,7 +26,7 @@
 
 • **advisory_id**? : *string*
 
-*Defined in [api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L754)*
+*Defined in [api.ts:767](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L767)*
 
 **`memberof`** ControllersPackageDetailAttributes
 
@@ -36,7 +36,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L760)*
+*Defined in [api.ts:773](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L773)*
 
 **`memberof`** ControllersPackageDetailAttributes
 
@@ -46,7 +46,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L766)*
+*Defined in [api.ts:779](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L779)*
 
 **`memberof`** ControllersPackageDetailAttributes
 
@@ -56,7 +56,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L772)*
+*Defined in [api.ts:785](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L785)*
 
 **`memberof`** ControllersPackageDetailAttributes
 
@@ -66,6 +66,6 @@ ___
 
 • **version**? : *string*
 
-*Defined in [api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L778)*
+*Defined in [api.ts:791](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L791)*
 
 **`memberof`** ControllersPackageDetailAttributes

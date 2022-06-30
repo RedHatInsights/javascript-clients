@@ -25,7 +25,7 @@ API Error
 
 • **details**? : *string*
 
-*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L39)*
+*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L39)*
 
 Error details
 
@@ -37,7 +37,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L33)*
 
 HTTP status code
 

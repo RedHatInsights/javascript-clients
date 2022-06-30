@@ -22,7 +22,7 @@
 
 • **to_time**? : *string*
 
-*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L390)*
+*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L390)*
 
 Filter applicable advisories (updates) by the latest publish time.
 

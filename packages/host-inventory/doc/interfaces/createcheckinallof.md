@@ -22,7 +22,7 @@
 
 • **checkin_frequency**? : *number*
 
-*Defined in [api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L298)*
+*Defined in [api.ts:298](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L298)*
 
 How long from now to expect another check-in (in minutes).
 

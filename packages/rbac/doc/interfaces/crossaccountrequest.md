@@ -28,7 +28,7 @@
 
 • **created**? : *string*
 
-*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L139)*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L139)*
 
 **`memberof`** CrossAccountRequest
 
@@ -38,7 +38,7 @@ ___
 
 • **end_date**? : *any*
 
-*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L151)*
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L151)*
 
 **`memberof`** CrossAccountRequest
 
@@ -48,7 +48,7 @@ ___
 
 • **request_id**? : *string*
 
-*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L115)*
+*Defined in [api.ts:115](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L115)*
 
 **`memberof`** CrossAccountRequest
 
@@ -58,7 +58,7 @@ ___
 
 • **start_date**? : *any*
 
-*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L145)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L145)*
 
 **`memberof`** CrossAccountRequest
 
@@ -68,7 +68,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L133)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L133)*
 
 **`memberof`** CrossAccountRequest
 
@@ -78,7 +78,7 @@ ___
 
 • **target_account**? : *string*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L121)*
+*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L121)*
 
 **`memberof`** CrossAccountRequest
 
@@ -88,6 +88,6 @@ ___
 
 • **target_org**? : *string*
 
-*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L127)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L127)*
 
 **`memberof`** CrossAccountRequest

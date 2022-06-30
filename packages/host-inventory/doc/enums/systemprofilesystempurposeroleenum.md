@@ -18,7 +18,7 @@
 
 • **ComputeNode**: = "Red Hat Enterprise Linux Compute Node"
 
-*Defined in [api.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1815)*
+*Defined in [api.ts:1833](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1833)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **Server**: = "Red Hat Enterprise Linux Server"
 
-*Defined in [api.ts:1813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1813)*
+*Defined in [api.ts:1831](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1831)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **Workstation**: = "Red Hat Enterprise Linux Workstation"
 
-*Defined in [api.ts:1814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1814)*
+*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1832)*

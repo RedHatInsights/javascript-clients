@@ -22,7 +22,7 @@
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L510)*
+*Defined in [api.ts:510](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L510)*
 
 Baseline system display name
 

@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Cluster](cluster.md)›*
 
-*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L229)*
+*Defined in [api.ts:229](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L229)*
 
 **`memberof`** ClustersCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L223)*
+*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L223)*
 
 **`memberof`** ClustersCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L217)*
+*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L217)*
 
 **`memberof`** ClustersCollection

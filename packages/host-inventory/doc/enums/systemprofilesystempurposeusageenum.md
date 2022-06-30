@@ -18,7 +18,7 @@
 
 • **DevelopmentTest**: = "Development/Test"
 
-*Defined in [api.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1805)*
+*Defined in [api.ts:1823](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1823)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **DisasterRecovery**: = "Disaster Recovery"
 
-*Defined in [api.ts:1806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1806)*
+*Defined in [api.ts:1824](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1824)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **Production**: = "Production"
 
-*Defined in [api.ts:1804](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1804)*
+*Defined in [api.ts:1822](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1822)*

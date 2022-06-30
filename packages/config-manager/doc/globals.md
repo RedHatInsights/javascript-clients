@@ -46,7 +46,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com/api/config-manager/v1".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L20)*
 
 ## Functions
 
@@ -54,7 +54,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L189)*
+*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L195)*
 
 DefaultApi - axios parameter creator
 
@@ -78,6 +78,8 @@ Name | Type |
 
 * **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
+* **postManage**(`body?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
 * **updateStates**(`state`: [State](interfaces/state.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
@@ -86,7 +88,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L517)*
+*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L572)*
 
 DefaultApi - factory interface
 
@@ -112,6 +114,8 @@ Name | Type |
 
 * **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *AxiosPromise‹[StateArchives](interfaces/statearchives.md)›*
 
+* **postManage**(`body?`: boolean, `options?`: any): *AxiosPromise‹void›*
+
 * **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹[AccountState](interfaces/accountstate.md)›*
 
 ___
@@ -120,7 +124,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L423)*
+*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L464)*
 
 DefaultApi - functional programming interface
 
@@ -144,6 +148,8 @@ Name | Type |
 
 * **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹function›*
 
+* **postManage**(`body?`: boolean, `options?`: any): *Promise‹function›*
+
 * **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *Promise‹function›*
 
 ## Object literals
@@ -152,7 +158,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L26)*
 
 **`export`** 
 
@@ -160,22 +166,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L29)*

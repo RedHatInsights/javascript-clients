@@ -25,7 +25,7 @@
 
 • **count**: *number*
 
-*Defined in [api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L887)*
+*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L905)*
 
 The number of items on the current page
 
@@ -37,7 +37,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L893)*
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L911)*
 
 The page number
 
@@ -49,7 +49,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L899)*
+*Defined in [api.ts:917](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L917)*
 
 The number of items to return per page
 
@@ -61,7 +61,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L905)*
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L923)*
 
 Total number of items
 
