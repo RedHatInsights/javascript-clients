@@ -22,6 +22,6 @@
 
 • **resolution**: *string*
 
-*Defined in [api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L827)*
+*Defined in [api.ts:827](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L827)*
 
 **`memberof`** RemediationIssueIn

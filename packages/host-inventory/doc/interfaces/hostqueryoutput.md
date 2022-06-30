@@ -28,7 +28,7 @@ A paginated host search query result with host entries and their Inventory metad
 
 • **count**: *number*
 
-*Defined in [api.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L744)*
+*Defined in [api.ts:762](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L762)*
 
 The number of items on the current page
 
@@ -40,7 +40,7 @@ ___
 
 • **page**: *number*
 
-*Defined in [api.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L750)*
+*Defined in [api.ts:768](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L768)*
 
 The page number
 
@@ -52,7 +52,7 @@ ___
 
 • **per_page**: *number*
 
-*Defined in [api.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L756)*
+*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L774)*
 
 The number of items to return per page
 
@@ -64,7 +64,7 @@ ___
 
 • **results**: *Array‹[HostOut](hostout.md)›*
 
-*Defined in [api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L768)*
+*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L786)*
 
 Actual host search query result entries.
 
@@ -76,7 +76,7 @@ ___
 
 • **total**: *number*
 
-*Defined in [api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L762)*
+*Defined in [api.ts:780](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L780)*
 
 Total number of items
 

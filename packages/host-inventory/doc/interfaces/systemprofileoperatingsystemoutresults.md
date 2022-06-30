@@ -23,7 +23,7 @@
 
 • **count**? : *number*
 
-*Defined in [api.ts:1689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1689)*
+*Defined in [api.ts:1707](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1707)*
 
 **`memberof`** SystemProfileOperatingSystemOutResults
 
@@ -33,6 +33,6 @@ ___
 
 • **value**? : *[SystemProfileOperatingSystemOutValue](systemprofileoperatingsystemoutvalue.md)*
 
-*Defined in [api.ts:1683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1683)*
+*Defined in [api.ts:1701](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1701)*
 
 **`memberof`** SystemProfileOperatingSystemOutResults

@@ -22,6 +22,6 @@
 
 • **azure**? : *[AuthenticationExtraAzure](authenticationextraazure.md)*
 
-*Defined in [api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L278)*
+*Defined in [api.ts:278](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L278)*
 
 **`memberof`** AuthenticationExtra

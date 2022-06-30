@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[CrossAccountRequestByAccount](crossaccountrequestbyaccount.md) | [CrossAccountRequestByUserId](crossaccountrequestbyuserid.md)›*
 
-*Defined in [api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L612)*
+*Defined in [api.ts:612](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L612)*
 
 **`memberof`** CrossAccountRequestPagination
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L606)*
+*Defined in [api.ts:606](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L606)*
 
 **`memberof`** CrossAccountRequestPagination
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L600)*
+*Defined in [api.ts:600](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L600)*
 
 **`memberof`** CrossAccountRequestPagination

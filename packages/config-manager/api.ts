@@ -49,6 +49,12 @@ export interface AccountState {
      * @memberof AccountState
      */
     label?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AccountState
+     */
+    apply_state?: boolean;
 }
 /**
  *
@@ -375,6 +381,41 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
+         * @summary Enable or disable automatic state management of remote hosts
+         * @param {boolean} [body]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postManage: async (body?: boolean, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/manage`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          *
          * @summary Update and roll out configuration state for requesting account
          * @param {State} state State map that needs to be updated
@@ -494,6 +535,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
+         * @summary Enable or disable automatic state management of remote hosts
+         * @param {boolean} [body]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postManage(body?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).postManage(body, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          *
          * @summary Update and roll out configuration state for requesting account
          * @param {State} state State map that needs to be updated
@@ -566,6 +621,16 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          */
         getStates(limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options?: any): AxiosPromise<StateArchives> {
             return DefaultApiFp(configuration).getStates(limit, offset, sortBy, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
+         * @summary Enable or disable automatic state management of remote hosts
+         * @param {boolean} [body]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postManage(body?: boolean, options?: any): AxiosPromise<void> {
+            return DefaultApiFp(configuration).postManage(body, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -646,6 +711,18 @@ export class DefaultApi extends BaseAPI {
      */
     public getStates(limit?: number, offset?: number, sortBy?: 'created_at' | 'created_at:asc' | 'created_at:desc', options?: any) {
         return DefaultApiFp(this.configuration).getStates(limit, offset, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
+     * @summary Enable or disable automatic state management of remote hosts
+     * @param {boolean} [body]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public postManage(body?: boolean, options?: any) {
+        return DefaultApiFp(this.configuration).postManage(body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

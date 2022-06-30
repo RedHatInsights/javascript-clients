@@ -37,7 +37,7 @@ RulecategoryApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **rulecategoryList**(`options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)[]››*
 
-*Defined in [api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L462)*
+*Defined in [api.ts:462](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L462)*
 
 Categories are listed in decreasing order of importance.
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*
 
-*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L474)*
+*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L474)*
 
 Categories are listed in decreasing order of importance.
 

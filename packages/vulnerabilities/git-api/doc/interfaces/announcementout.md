@@ -23,7 +23,7 @@
 
 • **last_updated**: *string*
 
-*Defined in [git-api/api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
+*Defined in [git-api/api.ts:83](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L83)*
 
 Datetime string.
 
@@ -35,7 +35,7 @@ ___
 
 • **message**: *string*
 
-*Defined in [git-api/api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
+*Defined in [git-api/api.ts:89](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L89)*
 
 Announcement message.
 

@@ -23,7 +23,7 @@
 
 • **Approve**: = "approve"
 
-*Defined in [api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L71)*
+*Defined in [api.ts:71](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L71)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **Cancel**: = "cancel"
 
-*Defined in [api.ts:72](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L72)*
+*Defined in [api.ts:72](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L72)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **Deny**: = "deny"
 
-*Defined in [api.ts:73](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L73)*
+*Defined in [api.ts:73](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L73)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **Error**: = "error"
 
-*Defined in [api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L74)*
+*Defined in [api.ts:74](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L74)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **Memo**: = "memo"
 
-*Defined in [api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L76)*
+*Defined in [api.ts:76](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L76)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **Notify**: = "notify"
 
-*Defined in [api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L75)*
+*Defined in [api.ts:75](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L75)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **Skip**: = "skip"
 
-*Defined in [api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L77)*
+*Defined in [api.ts:77](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L77)*
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 • **Start**: = "start"
 
-*Defined in [api.ts:78](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L78)*
+*Defined in [api.ts:78](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L78)*

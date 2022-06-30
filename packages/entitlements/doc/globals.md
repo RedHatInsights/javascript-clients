@@ -37,7 +37,7 @@
 
 • **BASE_PATH**: *string* = "https://raw.githubusercontent.com/api/entitlements/v1".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L20)*
 
 ## Functions
 
@@ -45,7 +45,7 @@
 
 ▸ **ServicesApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L40)*
+*Defined in [api.ts:40](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/api.ts#L40)*
 
 ServicesApi - axios parameter creator
 
@@ -67,7 +67,7 @@ ___
 
 ▸ **ServicesApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L101)*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/api.ts#L101)*
 
 ServicesApi - factory interface
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **ServicesApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L79)*
+*Defined in [api.ts:79](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/api.ts#L79)*
 
 ServicesApi - functional programming interface
 
@@ -113,7 +113,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L26)*
 
 **`export`** 
 
@@ -121,22 +121,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/entitlements/base.ts#L29)*

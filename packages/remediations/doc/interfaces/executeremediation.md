@@ -22,6 +22,6 @@
 
 • **id**: *string*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L95)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L95)*
 
 **`memberof`** ExecuteRemediation

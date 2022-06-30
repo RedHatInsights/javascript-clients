@@ -24,7 +24,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L787)*
+*Defined in [api.ts:768](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L768)*
 
 **`memberof`** CrossAccountRequestWithRolesRoles
 
@@ -34,7 +34,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L781)*
+*Defined in [api.ts:762](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L762)*
 
 **`memberof`** CrossAccountRequestWithRolesRoles
 
@@ -44,6 +44,6 @@ ___
 
 • **permissions**? : *Array‹[Permission](permission.md)›*
 
-*Defined in [api.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L793)*
+*Defined in [api.ts:774](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L774)*
 
 **`memberof`** CrossAccountRequestWithRolesRoles

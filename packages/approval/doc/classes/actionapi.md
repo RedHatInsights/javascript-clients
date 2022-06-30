@@ -38,7 +38,7 @@ ActionApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
 
 ## Methods
 
@@ -86,7 +86,7 @@ ___
 
 ▸ **createAction**(`requestId`: string, `action`: [Action](../interfaces/action.md), `options?`: any): *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*
 
-*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)*
+*Defined in [api.ts:899](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L899)*
 
 Create an action under a request identified by its id. Admin can create approve, deny, memo, and cancel operations; approver can create approve, deny, and memo operations; while requester can create only cancel operation.
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **listActionsByRequest**(`requestId`: string, `options?`: any): *Promise‹AxiosResponse‹[ActionCollection](../interfaces/actioncollection.md)››*
 
-*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)*
+*Defined in [api.ts:911](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L911)*
 
 Find actions of a request identified by its id, available to everyone
 
@@ -137,7 +137,7 @@ ___
 
 ▸ **showAction**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Action](../interfaces/action.md)››*
 
-*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L923)*
+*Defined in [api.ts:923](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L923)*
 
 Find an action by its id, available to everyone
 

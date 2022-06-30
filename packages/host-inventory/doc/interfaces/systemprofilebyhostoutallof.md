@@ -22,7 +22,7 @@
 
 • **results**: *Array‹[HostSystemProfileOut](hostsystemprofileout.md)›*
 
-*Defined in [api.ts:1467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1467)*
+*Defined in [api.ts:1485](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1485)*
 
 Actual host search query result entries.
 

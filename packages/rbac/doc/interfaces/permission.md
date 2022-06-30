@@ -26,7 +26,7 @@
 
 • **application**? : *string*
 
-*Defined in [api.ts:1288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1288)*
+*Defined in [api.ts:1269](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1269)*
 
 **`memberof`** Permission
 
@@ -36,7 +36,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:1312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1312)*
+*Defined in [api.ts:1293](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1293)*
 
 **`memberof`** Permission
 
@@ -46,7 +46,7 @@ ___
 
 • **permission**? : *string*
 
-*Defined in [api.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1306)*
+*Defined in [api.ts:1287](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1287)*
 
 **`memberof`** Permission
 
@@ -56,7 +56,7 @@ ___
 
 • **resource_type**? : *string*
 
-*Defined in [api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1294)*
+*Defined in [api.ts:1275](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1275)*
 
 **`memberof`** Permission
 
@@ -66,6 +66,6 @@ ___
 
 • **verb**? : *string*
 
-*Defined in [api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1300)*
+*Defined in [api.ts:1281](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1281)*
 
 **`memberof`** Permission

@@ -24,7 +24,7 @@
 
 • **name**? : *string*
 
-*Defined in [api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3526)*
+*Defined in [api.ts:3526](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3526)*
 
 **`memberof`** Tagging
 
@@ -34,7 +34,7 @@ ___
 
 • **tag_id**? : *string*
 
-*Defined in [api.ts:3520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3520)*
+*Defined in [api.ts:3520](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3520)*
 
 ID of the resource
 
@@ -46,6 +46,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [api.ts:3532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3532)*
+*Defined in [api.ts:3532](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3532)*
 
 **`memberof`** Tagging

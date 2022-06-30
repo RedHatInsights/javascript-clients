@@ -27,7 +27,7 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 • **_0to3_9**: *[DashboardCvesBySeverity0to39](dashboardcvesbyseverity0to39.md)*
 
-*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L503)*
+*Defined in [api.ts:503](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L503)*
 
 **`memberof`** DashboardCvesBySeverity
 
@@ -37,7 +37,7 @@ ___
 
 • **_4to7_9**: *[DashboardCvesBySeverity4to79](dashboardcvesbyseverity4to79.md)*
 
-*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L509)*
+*Defined in [api.ts:509](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L509)*
 
 **`memberof`** DashboardCvesBySeverity
 
@@ -47,7 +47,7 @@ ___
 
 • **_8to10**: *[DashboardCvesBySeverity8to10](dashboardcvesbyseverity8to10.md)*
 
-*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L515)*
+*Defined in [api.ts:515](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L515)*
 
 **`memberof`** DashboardCvesBySeverity
 
@@ -57,6 +57,6 @@ ___
 
 • **na**: *[DashboardCvesBySeverityNa](dashboardcvesbyseverityna.md)*
 
-*Defined in [api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L521)*
+*Defined in [api.ts:521](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L521)*
 
 **`memberof`** DashboardCvesBySeverity

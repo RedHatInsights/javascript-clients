@@ -38,7 +38,7 @@ SystemProfileApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L49)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -78,15 +78,15 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L49)*
 
 ## Methods
 
 ###  apiSystemProfileGetOperatingSystem
 
-▸ **apiSystemProfileGetOperatingSystem**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileOperatingSystemOut](../interfaces/systemprofileoperatingsystemout.md)››*
+▸ **apiSystemProfileGetOperatingSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileOperatingSystemOut](../interfaces/systemprofileoperatingsystemout.md)››*
 
-*Defined in [api.ts:3958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3958)*
+*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L3976)*
 
 Required permissions: inventory:hosts:read
 
@@ -100,12 +100,11 @@ Required permissions: inventory:hosts:read
 
 Name | Type |
 ------ | ------ |
-`search?` | string |
 `tags?` | Array‹string› |
 `perPage?` | number |
 `page?` | number |
 `staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
-`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector"› |
+`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector" &#124; "!yupana" &#124; "!puptoo" &#124; "!rhsm-conduit" &#124; "!cloud-connector"› |
 `filter?` | object |
 `options?` | any |
 
@@ -115,9 +114,9 @@ ___
 
 ###  apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
+▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3976)*
+*Defined in [api.ts:3994](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L3994)*
 
 Required permissions: inventory:hosts:read
 
@@ -136,7 +135,7 @@ Name | Type |
 `perPage?` | number |
 `page?` | number |
 `staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
-`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector"› |
+`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector" &#124; "!yupana" &#124; "!puptoo" &#124; "!rhsm-conduit" &#124; "!cloud-connector"› |
 `filter?` | object |
 `options?` | any |
 
@@ -146,9 +145,9 @@ ___
 
 ###  apiSystemProfileGetSapSystem
 
-▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
+▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:3993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3993)*
+*Defined in [api.ts:4011](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L4011)*
 
 Required permissions: inventory:hosts:read
 
@@ -166,7 +165,7 @@ Name | Type |
 `perPage?` | number |
 `page?` | number |
 `staleness?` | Array‹"fresh" &#124; "stale" &#124; "stale_warning" &#124; "unknown"› |
-`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector"› |
+`registeredWith?` | Array‹"insights" &#124; "yupana" &#124; "puptoo" &#124; "rhsm-conduit" &#124; "cloud-connector" &#124; "!yupana" &#124; "!puptoo" &#124; "!rhsm-conduit" &#124; "!cloud-connector"› |
 `filter?` | object |
 `options?` | any |
 

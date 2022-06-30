@@ -22,7 +22,7 @@
 
 • **baseline_id**? : *number*
 
-*Defined in [api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L642)*
+*Defined in [api.ts:655](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L655)*
 
 Updated baseline unique ID, it can not be changed
 

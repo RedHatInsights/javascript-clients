@@ -40,7 +40,7 @@ CrossAccountRequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **createCrossAccountRequests**(`crossAccountRequestIn`: [CrossAccountRequestIn](../interfaces/crossaccountrequestin.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestOut](../interfaces/crossaccountrequestout.md)››*
 
-*Defined in [api.ts:2927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2927)*
+*Defined in [api.ts:2915](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2915)*
 
 **`summary`** Create a cross account request
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getCrossAccountRequest**(`uuid`: string, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [api.ts:2942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2942)*
+*Defined in [api.ts:2930](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2930)*
 
 **`summary`** Get a cross account request
 
@@ -135,9 +135,9 @@ ___
 
 ###  listCrossAccountRequests
 
-▸ **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
+▸ **listCrossAccountRequests**(`limit?`: number, `offset?`: number, `queryBy?`: "user_id" | "target_account", `account?`: string, `orgId?`: string, `approvedOnly?`: "true", `status?`: "pending" | "approved" | "denied" | "cancelled" | "expired", `orderBy?`: "request_id" | "start_date" | "end_date" | "created" | "modified" | "status", `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestPagination](../interfaces/crossaccountrequestpagination.md)››*
 
-*Defined in [api.ts:2960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2960)*
+*Defined in [api.ts:2949](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2949)*
 
 By default, responses are sorted in ascending order by created_at
 
@@ -155,6 +155,7 @@ Name | Type |
 `offset?` | number |
 `queryBy?` | "user_id" &#124; "target_account" |
 `account?` | string |
+`orgId?` | string |
 `approvedOnly?` | "true" |
 `status?` | "pending" &#124; "approved" &#124; "denied" &#124; "cancelled" &#124; "expired" |
 `orderBy?` | "request_id" &#124; "start_date" &#124; "end_date" &#124; "created" &#124; "modified" &#124; "status" |
@@ -168,11 +169,11 @@ ___
 
 ▸ **patchCrossAccountRequest**(`uuid`: string, `crossAccountRequestPatch`: [CrossAccountRequestPatch](../interfaces/crossaccountrequestpatch.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [api.ts:2973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2973)*
+*Defined in [api.ts:2962](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2962)*
 
-Update a cross account request
+Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
 
-**`summary`** Update a cross account request
+**`summary`** Patch a cross account request
 
 **`throws`** {RequiredError}
 
@@ -194,9 +195,9 @@ ___
 
 ▸ **putCrossAccountRequest**(`uuid`: string, `crossAccountRequestUpdateIn`: [CrossAccountRequestUpdateIn](../interfaces/crossaccountrequestupdatein.md), `options?`: any): *Promise‹AxiosResponse‹[CrossAccountRequestDetailByAccount](../interfaces/crossaccountrequestdetailbyaccount.md) | [CrossAccountRequestDetailByUseId](../interfaces/crossaccountrequestdetailbyuseid.md)››*
 
-*Defined in [api.ts:2986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2986)*
+*Defined in [api.ts:2975](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2975)*
 
-Update a cross account request
+For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
 
 **`summary`** Update a cross account request
 

@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:1527](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1527)*
+*Defined in [api.ts:1540](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1540)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [api.ts:1533](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1533)*
+*Defined in [api.ts:1546](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1546)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -47,7 +47,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1539](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1539)*
+*Defined in [api.ts:1552](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1552)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -57,7 +57,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [api.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1545)*
+*Defined in [api.ts:1558](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1558)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -67,7 +67,7 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [api.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1551)*
+*Defined in [api.ts:1564](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1564)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -77,6 +77,6 @@ ___
 
 • **updates**? : *Array‹[ModelsPackageUpdate](modelspackageupdate.md)›*
 
-*Defined in [api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/22e0c417/packages/patch/api.ts#L1557)*
+*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1570)*
 
 **`memberof`** ControllersSystemPackageData

@@ -22,6 +22,6 @@
 
 • **task_id**? : *string*
 
-*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1570)*
+*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1570)*
 
 **`memberof`** InlineResponse200

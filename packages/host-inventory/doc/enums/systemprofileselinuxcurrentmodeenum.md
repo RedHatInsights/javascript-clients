@@ -18,7 +18,7 @@
 
 • **Disabled**: = "disabled"
 
-*Defined in [api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1370)*
+*Defined in [api.ts:1388](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1388)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **Enforcing**: = "enforcing"
 
-*Defined in [api.ts:1368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1368)*
+*Defined in [api.ts:1386](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1386)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **Permissive**: = "permissive"
 
-*Defined in [api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1369)*
+*Defined in [api.ts:1387](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1387)*

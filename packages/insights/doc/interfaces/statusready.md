@@ -27,7 +27,7 @@
 
 • **advisor**: *boolean*
 
-*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L95)*
+*Defined in [api.ts:95](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L95)*
 
 **`memberof`** StatusReady
 
@@ -37,7 +37,7 @@ ___
 
 • **database**: *boolean*
 
-*Defined in [api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L77)*
+*Defined in [api.ts:77](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L77)*
 
 **`memberof`** StatusReady
 
@@ -47,7 +47,7 @@ ___
 
 • **django**: *boolean*
 
-*Defined in [api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L71)*
+*Defined in [api.ts:71](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L71)*
 
 **`memberof`** StatusReady
 
@@ -57,7 +57,7 @@ ___
 
 • **environment**: *boolean*
 
-*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L89)*
+*Defined in [api.ts:89](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L89)*
 
 **`memberof`** StatusReady
 
@@ -67,7 +67,7 @@ ___
 
 • **errors**: *Array‹string›*
 
-*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L101)*
+*Defined in [api.ts:101](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L101)*
 
 **`memberof`** StatusReady
 
@@ -77,7 +77,7 @@ ___
 
 • **rbac**: *boolean*
 
-*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L83)*
 
 RBAC (Role-Based Access Control)
 

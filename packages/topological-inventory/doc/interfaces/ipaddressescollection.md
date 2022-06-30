@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Ipaddress](ipaddress.md)›*
 
-*Defined in [api.ts:1704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1704)*
+*Defined in [api.ts:1704](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1704)*
 
 **`memberof`** IpaddressesCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:1698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1698)*
+*Defined in [api.ts:1698](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1698)*
 
 **`memberof`** IpaddressesCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:1692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1692)*
+*Defined in [api.ts:1692](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1692)*
 
 **`memberof`** IpaddressesCollection

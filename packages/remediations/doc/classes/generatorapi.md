@@ -36,7 +36,7 @@ GeneratorApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **generate**(`playbookDefinition`: [PlaybookDefinition](../interfaces/playbookdefinition.md), `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [api.ts:1427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1427)*
+*Defined in [api.ts:1427](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L1427)*
 
 Generates an Ansible Playbook based on input parameters
 

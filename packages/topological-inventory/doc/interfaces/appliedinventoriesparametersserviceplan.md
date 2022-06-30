@@ -22,7 +22,7 @@
 
 • **service_parameters**? : *object*
 
-*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L33)*
 
 The provider specific parameters needed to compute list of used service inventories
 

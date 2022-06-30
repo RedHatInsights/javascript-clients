@@ -22,7 +22,7 @@
 
 • **permissions**: *Array‹string›*
 
-*Defined in [git-api/api.ts:1749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1749)*
+*Defined in [git-api/api.ts:1749](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L1749)*
 
 Fetched permissions from RBAC for given user
 

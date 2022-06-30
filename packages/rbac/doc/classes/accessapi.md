@@ -36,7 +36,7 @@ AccessApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **getPrincipalAccess**(`application`: string, `username?`: string, `orderBy?`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
 
-*Defined in [api.ts:2461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2461)*
+*Defined in [api.ts:2442](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2442)*
 
 Access responses are sorted in ascending order by an ID internal to the database
 
