@@ -38,7 +38,7 @@ SystemProfileApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)*
 
 ## Methods
 
@@ -86,11 +86,11 @@ ___
 
 ▸ **apiSystemProfileGetOperatingSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileOperatingSystemOut](../interfaces/systemprofileoperatingsystemout.md)››*
 
-*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L3976)*
+*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3976)*
 
 Required permissions: inventory:hosts:read
 
-**`summary`** get all operating system versions and counts on an account
+**`summary`** get all operating system versions and counts on the account
 
 **`throws`** {RequiredError}
 
@@ -116,11 +116,11 @@ ___
 
 ▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:3994](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L3994)*
+*Defined in [api.ts:3994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3994)*
 
 Required permissions: inventory:hosts:read
 
-**`summary`** get all sap sids values and counts on an account
+**`summary`** get all sap sids values and counts on the account
 
 **`throws`** {RequiredError}
 
@@ -147,11 +147,11 @@ ___
 
 ▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:4011](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L4011)*
+*Defined in [api.ts:4011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4011)*
 
 Required permissions: inventory:hosts:read
 
-**`summary`** get all sap system values and counts on an account
+**`summary`** get all sap system values and counts on the account
 
 **`throws`** {RequiredError}
 

@@ -25,7 +25,7 @@
 
 • **end_date**? : *string*
 
-*Defined in [api.ts:644](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L644)*
+*Defined in [api.ts:644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L644)*
 
 **`memberof`** CrossAccountRequestPatch
 
@@ -35,7 +35,7 @@ ___
 
 • **roles**? : *Array‹string›*
 
-*Defined in [api.ts:650](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L650)*
+*Defined in [api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L650)*
 
 **`memberof`** CrossAccountRequestPatch
 
@@ -45,7 +45,7 @@ ___
 
 • **start_date**? : *string*
 
-*Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L638)*
+*Defined in [api.ts:638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L638)*
 
 **`memberof`** CrossAccountRequestPatch
 
@@ -55,6 +55,6 @@ ___
 
 • **status**? : *[CrossAccountRequestPatchStatusEnum](../enums/crossaccountrequestpatchstatusenum.md)*
 
-*Defined in [api.ts:656](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L656)*
+*Defined in [api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L656)*
 
 **`memberof`** CrossAccountRequestPatch

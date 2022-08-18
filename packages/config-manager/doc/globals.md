@@ -46,7 +46,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com/api/config-manager/v1".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L20)*
 
 ## Functions
 
@@ -54,7 +54,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:195](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L195)*
+*Defined in [api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L207)*
 
 DefaultApi - axios parameter creator
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L572)*
+*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L584)*
 
 DefaultApi - factory interface
 
@@ -124,7 +124,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L464)*
+*Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L476)*
 
 DefaultApi - functional programming interface
 
@@ -158,7 +158,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L26)*
 
 **`export`** 
 
@@ -166,22 +166,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L29)*

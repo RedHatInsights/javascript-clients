@@ -37,7 +37,7 @@ KcsApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[Kcs](../interfaces/kcs.md)[]››*
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L290)*
+*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L290)*
 
 Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **kcsRead**(`nodeId`: string, `options?`: any): *Promise‹AxiosResponse‹string[]››*
 
-*Defined in [api.ts:302](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/insights/api.ts#L302)*
+*Defined in [api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L302)*
 
 Returns a list of C.R.C rule url(s) for that KCS solution
 

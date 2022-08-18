@@ -19,6 +19,7 @@
 * [id](statearchive.md#optional-id)
 * [initiator](statearchive.md#optional-initiator)
 * [label](statearchive.md#optional-label)
+* [org_id](statearchive.md#optional-org_id)
 * [state](statearchive.md#optional-state)
 
 ## Properties
@@ -27,7 +28,7 @@
 
 • **account**? : *string*
 
-*Defined in [api.ts:121](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L121)*
+*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L127)*
 
 **`memberof`** StateArchive
 
@@ -37,7 +38,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L145)*
+*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L151)*
 
 **`memberof`** StateArchive
 
@@ -47,7 +48,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:127](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L127)*
+*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L133)*
 
 **`memberof`** StateArchive
 
@@ -57,7 +58,7 @@ ___
 
 • **initiator**? : *string*
 
-*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L139)*
+*Defined in [api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L145)*
 
 **`memberof`** StateArchive
 
@@ -67,7 +68,17 @@ ___
 
 • **label**? : *string*
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L133)*
+*Defined in [api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L139)*
+
+**`memberof`** StateArchive
+
+___
+
+### `Optional` org_id
+
+• **org_id**? : *string*
+
+*Defined in [api.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L163)*
 
 **`memberof`** StateArchive
 
@@ -77,6 +88,6 @@ ___
 
 • **state**? : *[State](state.md)*
 
-*Defined in [api.ts:151](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L151)*
+*Defined in [api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L157)*
 
 **`memberof`** StateArchive

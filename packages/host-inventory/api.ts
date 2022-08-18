@@ -374,13 +374,13 @@ export interface CreateHostOut {
      * @type {string}
      * @memberof CreateHostOut
      */
-    account: string;
+    account?: string | null;
     /**
      * The Org ID of the tenant that owns the host.
      * @type {string}
      * @memberof CreateHostOut
      */
-    org_id?: string;
+    org_id: string;
     /**
      * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
      * @type {string}
@@ -459,13 +459,13 @@ export interface CreateHostOutAllOf {
      * @type {string}
      * @memberof CreateHostOutAllOf
      */
-    account: string;
+    account?: string | null;
     /**
      * The Org ID of the tenant that owns the host.
      * @type {string}
      * @memberof CreateHostOutAllOf
      */
-    org_id?: string;
+    org_id: string;
     /**
      * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
      * @type {string}
@@ -673,13 +673,13 @@ export interface HostOut {
      * @type {string}
      * @memberof HostOut
      */
-    account: string;
+    account?: string | null;
     /**
      * The Org ID of the tenant that owns the host.
      * @type {string}
      * @memberof HostOut
      */
-    org_id?: string;
+    org_id: string;
     /**
      * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
      * @type {string}
@@ -2170,7 +2170,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete all hosts on the account
-         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on the account
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3000,7 +3000,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
         /**
          * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete all hosts on the account
-         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on the account
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3231,7 +3231,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
         /**
          * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
          * @summary Delete all hosts on the account
-         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+         * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on the account
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3415,7 +3415,7 @@ export class HostsApi extends BaseAPI {
     /**
      * Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
      * @summary Delete all hosts on the account
-     * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on an account
+     * @param {boolean} [confirmDeleteAll] Confirmation to delete all hosts on the account
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -3621,7 +3621,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all operating system versions and counts on an account
+         * @summary get all operating system versions and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3689,7 +3689,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap sids values and counts on an account
+         * @summary get all sap sids values and counts on the account
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
@@ -3762,7 +3762,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap system values and counts on an account
+         * @summary get all sap system values and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3839,7 +3839,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all operating system versions and counts on an account
+         * @summary get all operating system versions and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3858,7 +3858,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap sids values and counts on an account
+         * @summary get all sap sids values and counts on the account
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
@@ -3878,7 +3878,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap system values and counts on an account
+         * @summary get all sap system values and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3906,7 +3906,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
     return {
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all operating system versions and counts on an account
+         * @summary get all operating system versions and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3921,7 +3921,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap sids values and counts on an account
+         * @summary get all sap sids values and counts on the account
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
@@ -3937,7 +3937,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
         },
         /**
          * Required permissions: inventory:hosts:read
-         * @summary get all sap system values and counts on an account
+         * @summary get all sap system values and counts on the account
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3962,7 +3962,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
 export class SystemProfileApi extends BaseAPI {
     /**
      * Required permissions: inventory:hosts:read
-     * @summary get all operating system versions and counts on an account
+     * @summary get all operating system versions and counts on the account
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -3979,7 +3979,7 @@ export class SystemProfileApi extends BaseAPI {
 
     /**
      * Required permissions: inventory:hosts:read
-     * @summary get all sap sids values and counts on an account
+     * @summary get all sap sids values and counts on the account
      * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
@@ -3997,7 +3997,7 @@ export class SystemProfileApi extends BaseAPI {
 
     /**
      * Required permissions: inventory:hosts:read
-     * @summary get all sap system values and counts on an account
+     * @summary get all sap system values and counts on the account
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.

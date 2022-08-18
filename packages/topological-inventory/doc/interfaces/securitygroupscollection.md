@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[SecurityGroup](securitygroup.md)›*
 
-*Defined in [api.ts:2248](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2248)*
+*Defined in [api.ts:2248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2248)*
 
 **`memberof`** SecurityGroupsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:2242](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2242)*
+*Defined in [api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2242)*
 
 **`memberof`** SecurityGroupsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:2236](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2236)*
+*Defined in [api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2236)*
 
 **`memberof`** SecurityGroupsCollection

@@ -29,7 +29,7 @@
 
 • **available_evra**? : *string*
 
-*Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L873)*
+*Defined in [api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L873)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -39,7 +39,7 @@ ___
 
 • **baseline_name**? : *string*
 
-*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L879)*
+*Defined in [api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L879)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -49,7 +49,7 @@ ___
 
 • **baseline_uptodate**? : *boolean*
 
-*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L885)*
+*Defined in [api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L885)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -59,7 +59,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:891](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L891)*
+*Defined in [api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L891)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -69,7 +69,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:897](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L897)*
+*Defined in [api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L897)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -79,7 +79,7 @@ ___
 
 • **installed_evra**? : *string*
 
-*Defined in [api.ts:903](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L903)*
+*Defined in [api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L903)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -89,7 +89,7 @@ ___
 
 • **tags**? : *Array‹[ControllersSystemTag](controllerssystemtag.md)›*
 
-*Defined in [api.ts:909](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L909)*
+*Defined in [api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L909)*
 
 **`memberof`** ControllersPackageSystemItem
 
@@ -99,6 +99,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [api.ts:915](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L915)*
+*Defined in [api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L915)*
 
 **`memberof`** ControllersPackageSystemItem

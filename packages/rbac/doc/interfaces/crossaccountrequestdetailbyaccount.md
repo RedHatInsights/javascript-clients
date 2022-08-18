@@ -32,7 +32,7 @@
 
 • **created**? : *string*
 
-*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L366)*
+*Defined in [api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L366)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -42,7 +42,7 @@ ___
 
 • **email**? : *any*
 
-*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L390)*
+*Defined in [api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L390)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -52,7 +52,7 @@ ___
 
 • **end_date**? : *string*
 
-*Defined in [api.ts:354](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L354)*
+*Defined in [api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L354)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -62,7 +62,7 @@ ___
 
 • **first_name**? : *any*
 
-*Defined in [api.ts:378](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L378)*
+*Defined in [api.ts:378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L378)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -72,7 +72,7 @@ ___
 
 • **last_name**? : *any*
 
-*Defined in [api.ts:384](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L384)*
+*Defined in [api.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L384)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -82,7 +82,7 @@ ___
 
 • **request_id**? : *string*
 
-*Defined in [api.ts:330](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L330)*
+*Defined in [api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L330)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -92,7 +92,7 @@ ___
 
 • **roles**? : *Array‹[CrossAccountRequestWithRolesRoles](crossaccountrequestwithrolesroles.md)›*
 
-*Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L372)*
+*Defined in [api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L372)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -102,7 +102,7 @@ ___
 
 • **start_date**? : *string*
 
-*Defined in [api.ts:348](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L348)*
+*Defined in [api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L348)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -112,7 +112,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L360)*
+*Defined in [api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L360)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -122,7 +122,7 @@ ___
 
 • **target_account**? : *string*
 
-*Defined in [api.ts:336](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L336)*
+*Defined in [api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L336)*
 
 **`memberof`** CrossAccountRequestDetailByAccount
 
@@ -132,6 +132,6 @@ ___
 
 • **target_org**? : *string*
 
-*Defined in [api.ts:342](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L342)*
+*Defined in [api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L342)*
 
 **`memberof`** CrossAccountRequestDetailByAccount

@@ -22,6 +22,6 @@
 
 • **user_id**? : *any*
 
-*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L489)*
+*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L489)*
 
 **`memberof`** CrossAccountRequestDetailByUseIdAllOf

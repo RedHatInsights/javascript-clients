@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [api.ts:242](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L242)*
+*Defined in [api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L242)*
 
 **`memberof`** CollectionLinks
 
@@ -35,7 +35,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [api.ts:248](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L248)*
+*Defined in [api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L248)*
 
 **`memberof`** CollectionLinks
 
@@ -45,7 +45,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [api.ts:254](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L254)*
+*Defined in [api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L254)*
 
 **`memberof`** CollectionLinks
 
@@ -55,6 +55,6 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [api.ts:260](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L260)*
+*Defined in [api.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L260)*
 
 **`memberof`** CollectionLinks

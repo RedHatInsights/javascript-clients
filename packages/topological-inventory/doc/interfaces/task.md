@@ -29,7 +29,7 @@
 
 • **completed_at**? : *string*
 
-*Defined in [api.ts:3570](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3570)*
+*Defined in [api.ts:3570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3570)*
 
 **`memberof`** Task
 
@@ -39,7 +39,7 @@ ___
 
 • **context**? : *object*
 
-*Defined in [api.ts:3576](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3576)*
+*Defined in [api.ts:3576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3576)*
 
 **`memberof`** Task
 
@@ -49,7 +49,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:3582](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3582)*
+*Defined in [api.ts:3582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3582)*
 
 **`memberof`** Task
 
@@ -59,7 +59,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3588](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3588)*
+*Defined in [api.ts:3588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3588)*
 
 ID of the resource
 
@@ -71,7 +71,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3594](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3594)*
+*Defined in [api.ts:3594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3594)*
 
 **`memberof`** Task
 
@@ -81,7 +81,7 @@ ___
 
 • **state**? : *string*
 
-*Defined in [api.ts:3600](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3600)*
+*Defined in [api.ts:3600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3600)*
 
 **`memberof`** Task
 
@@ -91,7 +91,7 @@ ___
 
 • **status**? : *string*
 
-*Defined in [api.ts:3606](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3606)*
+*Defined in [api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3606)*
 
 **`memberof`** Task
 
@@ -101,6 +101,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:3612](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3612)*
+*Defined in [api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3612)*
 
 **`memberof`** Task

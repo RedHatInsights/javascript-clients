@@ -40,7 +40,7 @@ RequestApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 ## Methods
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **createRequest**(`requestIn`: [RequestIn](../interfaces/requestin.md), `options?`: any): *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
-*Defined in [api.ts:1521](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1521)*
+*Defined in [api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1521)*
 
 Create an approval request using given parameters, available to everyone
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **listRequests**(`xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
-*Defined in [api.ts:1537](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1537)*
+*Defined in [api.ts:1537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1537)*
 
 The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **listRequestsByRequest**(`requestId`: string, `xRhPersona?`: "approval/admin" | "approval/approver" | "approval/requester", `options?`: any): *Promise‹AxiosResponse‹[RequestCollection](../interfaces/requestcollection.md)››*
 
-*Defined in [api.ts:1550](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1550)*
+*Defined in [api.ts:1550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1550)*
 
 Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **showRequest**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Request](../interfaces/request.md)››*
 
-*Defined in [api.ts:1562](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1562)*
+*Defined in [api.ts:1562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1562)*
 
 Find an approval request by its id, available to anyone who can access the request
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **showRequestContent**(`requestId`: string, `options?`: any): *Promise‹AxiosResponse‹object››*
 
-*Defined in [api.ts:1574](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1574)*
+*Defined in [api.ts:1574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1574)*
 
 Find the request content based on a request id, available to everyone
 

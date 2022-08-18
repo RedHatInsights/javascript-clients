@@ -18,6 +18,7 @@
 * [apply_state](accountstate.md#optional-apply_state)
 * [id](accountstate.md#optional-id)
 * [label](accountstate.md#optional-label)
+* [org_id](accountstate.md#optional-org_id)
 * [state](accountstate.md#optional-state)
 
 ## Properties
@@ -26,7 +27,7 @@
 
 • **account**? : *string*
 
-*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L33)*
+*Defined in [api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L33)*
 
 **`memberof`** AccountState
 
@@ -36,7 +37,7 @@ ___
 
 • **apply_state**? : *boolean*
 
-*Defined in [api.ts:57](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L57)*
+*Defined in [api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L57)*
 
 **`memberof`** AccountState
 
@@ -46,7 +47,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:45](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L45)*
+*Defined in [api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L45)*
 
 **`memberof`** AccountState
 
@@ -56,7 +57,17 @@ ___
 
 • **label**? : *string*
 
-*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L51)*
+*Defined in [api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L51)*
+
+**`memberof`** AccountState
+
+___
+
+### `Optional` org_id
+
+• **org_id**? : *string*
+
+*Defined in [api.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L63)*
 
 **`memberof`** AccountState
 
@@ -66,6 +77,6 @@ ___
 
 • **state**? : *[State](state.md)*
 
-*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L39)*
+*Defined in [api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L39)*
 
 **`memberof`** AccountState

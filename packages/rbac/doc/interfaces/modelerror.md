@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹[ErrorErrors](errorerrors.md)›*
 
-*Defined in [api.ts:1212](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1212)*
+*Defined in [api.ts:1212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1212)*
 
 **`memberof`** ModelError

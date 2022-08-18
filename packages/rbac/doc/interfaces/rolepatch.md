@@ -24,7 +24,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:2160](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2160)*
+*Defined in [api.ts:2208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2208)*
 
 **`memberof`** RolePatch
 
@@ -34,7 +34,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:2154](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2154)*
+*Defined in [api.ts:2202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2202)*
 
 **`memberof`** RolePatch
 
@@ -44,6 +44,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:2148](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2148)*
+*Defined in [api.ts:2196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2196)*
 
 **`memberof`** RolePatch

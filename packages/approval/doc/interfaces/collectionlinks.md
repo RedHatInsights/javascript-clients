@@ -25,7 +25,7 @@
 
 • **first**? : *string*
 
-*Defined in [api.ts:117](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L117)*
+*Defined in [api.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L117)*
 
 The link to fetch the first group of items in the result set
 
@@ -37,7 +37,7 @@ ___
 
 • **last**? : *string*
 
-*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L123)*
+*Defined in [api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L123)*
 
 The link to fetch the last group of items in the result set
 
@@ -49,7 +49,7 @@ ___
 
 • **next**? : *string*
 
-*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L135)*
+*Defined in [api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L135)*
 
 The link to fetch the next group of items in the result set
 
@@ -61,7 +61,7 @@ ___
 
 • **prev**? : *string*
 
-*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L129)*
+*Defined in [api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L129)*
 
 The link to fetch the previous group of items in the result set
 

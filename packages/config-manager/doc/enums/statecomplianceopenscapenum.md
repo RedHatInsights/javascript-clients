@@ -17,7 +17,7 @@
 
 • **Disabled**: = "disabled"
 
-*Defined in [api.ts:99](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L99)*
+*Defined in [api.ts:105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L105)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **Enabled**: = "enabled"
 
-*Defined in [api.ts:98](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L98)*
+*Defined in [api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L104)*

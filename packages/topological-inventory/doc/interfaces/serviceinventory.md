@@ -33,7 +33,7 @@
 
 • **archived_at**? : *string*
 
-*Defined in [api.ts:2542](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2542)*
+*Defined in [api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2542)*
 
 **`memberof`** ServiceInventory
 
@@ -43,7 +43,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:2548](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2548)*
+*Defined in [api.ts:2548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2548)*
 
 **`memberof`** ServiceInventory
 
@@ -53,7 +53,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:2554](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2554)*
+*Defined in [api.ts:2554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2554)*
 
 **`memberof`** ServiceInventory
 
@@ -63,7 +63,7 @@ ___
 
 • **extra**? : *object*
 
-*Defined in [api.ts:2560](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2560)*
+*Defined in [api.ts:2560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2560)*
 
 **`memberof`** ServiceInventory
 
@@ -73,7 +73,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:2566](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2566)*
+*Defined in [api.ts:2566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2566)*
 
 ID of the resource
 
@@ -85,7 +85,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [api.ts:2572](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2572)*
+*Defined in [api.ts:2572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2572)*
 
 **`memberof`** ServiceInventory
 
@@ -95,7 +95,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:2578](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2578)*
+*Defined in [api.ts:2578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2578)*
 
 **`memberof`** ServiceInventory
 
@@ -105,7 +105,7 @@ ___
 
 • **source_created_at**? : *string*
 
-*Defined in [api.ts:2584](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2584)*
+*Defined in [api.ts:2584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2584)*
 
 **`memberof`** ServiceInventory
 
@@ -115,7 +115,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [api.ts:2590](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2590)*
+*Defined in [api.ts:2590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2590)*
 
 ID of the resource
 
@@ -127,7 +127,7 @@ ___
 
 • **source_ref**? : *string*
 
-*Defined in [api.ts:2596](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2596)*
+*Defined in [api.ts:2596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2596)*
 
 **`memberof`** ServiceInventory
 
@@ -137,7 +137,7 @@ ___
 
 • **source_updated_at**? : *string*
 
-*Defined in [api.ts:2602](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2602)*
+*Defined in [api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2602)*
 
 **`memberof`** ServiceInventory
 
@@ -147,6 +147,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:2608](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L2608)*
+*Defined in [api.ts:2608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2608)*
 
 **`memberof`** ServiceInventory

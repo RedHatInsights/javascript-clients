@@ -24,7 +24,7 @@
 
 • **data**: *Array‹[RoleOutDynamic](roleoutdynamic.md)›*
 
-*Defined in [api.ts:2122](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2122)*
+*Defined in [api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2170)*
 
 **`memberof`** RolePaginationDynamic
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[PaginationLinks](paginationlinks.md)*
 
-*Defined in [api.ts:2116](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2116)*
+*Defined in [api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2164)*
 
 **`memberof`** RolePaginationDynamic
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[PaginationMeta](paginationmeta.md)*
 
-*Defined in [api.ts:2110](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L2110)*
+*Defined in [api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2158)*
 
 **`memberof`** RolePaginationDynamic

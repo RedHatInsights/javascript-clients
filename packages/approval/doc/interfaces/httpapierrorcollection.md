@@ -24,7 +24,7 @@ API Error collection
 
 • **errors**? : *Array‹[HttpApiError](httpapierror.md)›*
 
-*Defined in [api.ts:255](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L255)*
+*Defined in [api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L255)*
 
 Error list from the API query
 

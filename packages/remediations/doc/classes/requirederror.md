@@ -30,7 +30,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L66)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **field**: *string*
 
-*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L67)*
+*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L67)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Overrides void*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L66)*
 
 ___
 

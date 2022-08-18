@@ -22,7 +22,7 @@
 
 • **inventory_ids**? : *Array‹string›*
 
-*Defined in [api.ts:548](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L548)*
+*Defined in [api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L548)*
 
 List of inventory IDs to have baselines removed
 

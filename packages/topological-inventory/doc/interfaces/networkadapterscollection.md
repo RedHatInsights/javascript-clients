@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[NetworkAdapter](networkadapter.md)›*
 
-*Defined in [api.ts:1935](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1935)*
+*Defined in [api.ts:1935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1935)*
 
 **`memberof`** NetworkAdaptersCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:1929](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1929)*
+*Defined in [api.ts:1929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1929)*
 
 **`memberof`** NetworkAdaptersCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:1923](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1923)*
+*Defined in [api.ts:1923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1923)*
 
 **`memberof`** NetworkAdaptersCollection

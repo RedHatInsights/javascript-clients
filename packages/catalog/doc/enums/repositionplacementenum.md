@@ -17,7 +17,7 @@
 
 • **Bottom**: = "bottom"
 
-*Defined in [api.ts:1054](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1054)*
+*Defined in [api.ts:1054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1054)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **Top**: = "top"
 
-*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1055)*
+*Defined in [api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1055)*

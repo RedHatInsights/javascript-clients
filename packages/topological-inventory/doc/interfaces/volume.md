@@ -38,7 +38,7 @@
 
 • **archived_at**? : *string*
 
-*Defined in [api.ts:3851](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3851)*
+*Defined in [api.ts:3851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3851)*
 
 **`memberof`** Volume
 
@@ -48,7 +48,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:3857](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3857)*
+*Defined in [api.ts:3857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3857)*
 
 **`memberof`** Volume
 
@@ -58,7 +58,7 @@ ___
 
 • **extra**? : *object*
 
-*Defined in [api.ts:3863](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3863)*
+*Defined in [api.ts:3863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3863)*
 
 **`memberof`** Volume
 
@@ -68,7 +68,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3869](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3869)*
+*Defined in [api.ts:3869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3869)*
 
 ID of the resource
 
@@ -80,7 +80,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [api.ts:3875](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3875)*
+*Defined in [api.ts:3875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3875)*
 
 **`memberof`** Volume
 
@@ -90,7 +90,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3881](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3881)*
+*Defined in [api.ts:3881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3881)*
 
 **`memberof`** Volume
 
@@ -100,7 +100,7 @@ ___
 
 • **orchestration_stack_id**? : *string*
 
-*Defined in [api.ts:3887](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3887)*
+*Defined in [api.ts:3887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3887)*
 
 ID of the resource
 
@@ -112,7 +112,7 @@ ___
 
 • **size**? : *number*
 
-*Defined in [api.ts:3893](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3893)*
+*Defined in [api.ts:3893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3893)*
 
 Size of the volume in bytes
 
@@ -124,7 +124,7 @@ ___
 
 • **source_created_at**? : *string*
 
-*Defined in [api.ts:3899](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3899)*
+*Defined in [api.ts:3899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3899)*
 
 **`memberof`** Volume
 
@@ -134,7 +134,7 @@ ___
 
 • **source_deleted_at**? : *string*
 
-*Defined in [api.ts:3905](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3905)*
+*Defined in [api.ts:3905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3905)*
 
 **`memberof`** Volume
 
@@ -144,7 +144,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [api.ts:3911](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3911)*
+*Defined in [api.ts:3911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3911)*
 
 ID of the resource
 
@@ -156,7 +156,7 @@ ___
 
 • **source_ref**? : *string*
 
-*Defined in [api.ts:3917](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3917)*
+*Defined in [api.ts:3917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3917)*
 
 **`memberof`** Volume
 
@@ -166,7 +166,7 @@ ___
 
 • **source_region_id**? : *string*
 
-*Defined in [api.ts:3923](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3923)*
+*Defined in [api.ts:3923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3923)*
 
 ID of the resource
 
@@ -178,7 +178,7 @@ ___
 
 • **state**? : *string*
 
-*Defined in [api.ts:3929](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3929)*
+*Defined in [api.ts:3929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3929)*
 
 **`memberof`** Volume
 
@@ -188,7 +188,7 @@ ___
 
 • **subscription_id**? : *string*
 
-*Defined in [api.ts:3935](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3935)*
+*Defined in [api.ts:3935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3935)*
 
 ID of the resource
 
@@ -200,7 +200,7 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:3941](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3941)*
+*Defined in [api.ts:3941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3941)*
 
 **`memberof`** Volume
 
@@ -210,7 +210,7 @@ ___
 
 • **volume_type_id**? : *string*
 
-*Defined in [api.ts:3947](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3947)*
+*Defined in [api.ts:3947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3947)*
 
 ID of the resource
 

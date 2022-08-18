@@ -1881,6 +1881,18 @@ export interface RoleOut {
      * @memberof RoleOut
      */
     admin_default?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOut
+     */
+    external_role_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOut
+     */
+    external_tenant?: string;
 }
 /**
  *
@@ -1924,6 +1936,18 @@ export interface RoleOutAllOf {
      * @memberof RoleOutAllOf
      */
     admin_default?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutAllOf
+     */
+    external_role_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutAllOf
+     */
+    external_tenant?: string;
 }
 /**
  *
@@ -2015,6 +2039,18 @@ export interface RoleOutDynamic {
      * @memberof RoleOutDynamic
      */
     groups_in?: Array<AdditionalGroup>;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutDynamic
+     */
+    external_role_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutDynamic
+     */
+    external_tenant?: string;
 }
 /**
  *
@@ -2070,6 +2106,18 @@ export interface RoleOutDynamicAllOf {
      * @memberof RoleOutDynamicAllOf
      */
     groups_in?: Array<AdditionalGroup>;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutDynamicAllOf
+     */
+    external_role_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleOutDynamicAllOf
+     */
+    external_tenant?: string;
 }
 /**
  *
@@ -2237,6 +2285,18 @@ export interface RoleWithAccess {
      * @memberof RoleWithAccess
      */
     admin_default?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleWithAccess
+     */
+    external_role_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleWithAccess
+     */
+    external_tenant?: string;
     /**
      *
      * @type {Array<Access>}
@@ -2501,13 +2561,13 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
          *
          * @summary Get a cross account request
          * @param {string} uuid ID of cross account request to get
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCrossAccountRequest: async (uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options: any = {}): Promise<RequestArgs> => {
+        getCrossAccountRequest: async (uuid: string, queryBy?: 'user_id' | 'target_org', account?: string, approvedOnly?: 'true', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getCrossAccountRequest.');
@@ -2559,7 +2619,7 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
          * @summary List the cross account requests for a user or account
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
@@ -2568,7 +2628,7 @@ export const CrossAccountRequestApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options: any = {}): Promise<RequestArgs> => {
+        listCrossAccountRequests: async (limit?: number, offset?: number, queryBy?: 'user_id' | 'target_org', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/cross-account-requests/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2759,13 +2819,13 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
          *
          * @summary Get a cross account request
          * @param {string} uuid ID of cross account request to get
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestDetail>> {
+        async getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_org', account?: string, approvedOnly?: 'true', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestDetail>> {
             const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2777,7 +2837,7 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
          * @summary List the cross account requests for a user or account
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
@@ -2786,7 +2846,7 @@ export const CrossAccountRequestApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
+        async listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_org', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CrossAccountRequestPagination>> {
             const localVarAxiosArgs = await CrossAccountRequestApiAxiosParamCreator(configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2846,13 +2906,13 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
          *
          * @summary Get a cross account request
          * @param {string} uuid ID of cross account request to get
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any): AxiosPromise<CrossAccountRequestDetail> {
+        getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_org', account?: string, approvedOnly?: 'true', options?: any): AxiosPromise<CrossAccountRequestDetail> {
             return CrossAccountRequestApiFp(configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options).then((request) => request(axios, basePath));
         },
         /**
@@ -2860,7 +2920,7 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
          * @summary List the cross account requests for a user or account
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
-         * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+         * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
          * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
          * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
          * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
@@ -2869,7 +2929,7 @@ export const CrossAccountRequestApiFactory = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): AxiosPromise<CrossAccountRequestPagination> {
+        listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_org', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any): AxiosPromise<CrossAccountRequestPagination> {
             return CrossAccountRequestApiFp(configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
@@ -2920,14 +2980,14 @@ export class CrossAccountRequestApi extends BaseAPI {
      *
      * @summary Get a cross account request
      * @param {string} uuid ID of cross account request to get
-     * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+     * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
      * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
      * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrossAccountRequestApi
      */
-    public getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_account', account?: string, approvedOnly?: 'true', options?: any) {
+    public getCrossAccountRequest(uuid: string, queryBy?: 'user_id' | 'target_org', account?: string, approvedOnly?: 'true', options?: any) {
         return CrossAccountRequestApiFp(this.configuration).getCrossAccountRequest(uuid, queryBy, account, approvedOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2936,7 +2996,7 @@ export class CrossAccountRequestApi extends BaseAPI {
      * @summary List the cross account requests for a user or account
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
-     * @param {'user_id' | 'target_account'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s account number. The default value is target_account.
+     * @param {'user_id' | 'target_org'} [queryBy] Parameter for filtering resource by either a user\&#39;s ID, or a client\&#39;s org. The default value is target_org.
      * @param {string} [account] Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number.
      * @param {string} [orgId] Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id.
      * @param {'true'} [approvedOnly] Parameter for filtering resource which have been approved.
@@ -2946,7 +3006,7 @@ export class CrossAccountRequestApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CrossAccountRequestApi
      */
-    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_account', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any) {
+    public listCrossAccountRequests(limit?: number, offset?: number, queryBy?: 'user_id' | 'target_org', account?: string, orgId?: string, approvedOnly?: 'true', status?: 'pending' | 'approved' | 'denied' | 'cancelled' | 'expired', orderBy?: 'request_id' | 'start_date' | 'end_date' | 'created' | 'modified' | 'status', options?: any) {
         return CrossAccountRequestApiFp(this.configuration).listCrossAccountRequests(limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3490,13 +3550,14 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
+         * @param {string} [roleExternalTenant] Parameter for filtering group roles by role &#x60;external_tenant&#x60; using string search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup: async (uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
+        listRolesForGroup: async (uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, roleExternalTenant?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling listRolesForGroup.');
@@ -3536,6 +3597,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (roleSystem !== undefined) {
                 localVarQueryParameter['role_system'] = roleSystem;
+            }
+
+            if (roleExternalTenant !== undefined) {
+                localVarQueryParameter['role_external_tenant'] = roleExternalTenant;
             }
 
             if (limit !== undefined) {
@@ -3778,14 +3843,15 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
+         * @param {string} [roleExternalTenant] Parameter for filtering group roles by role &#x60;external_tenant&#x60; using string search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options);
+        async listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, roleExternalTenant?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupRolesPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, roleExternalTenant, limit, offset, orderBy, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3934,14 +4000,15 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
          * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
          * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
+         * @param {string} [roleExternalTenant] Parameter for filtering group roles by role &#x60;external_tenant&#x60; using string search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
-            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options).then((request) => request(axios, basePath));
+        listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, roleExternalTenant?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any): AxiosPromise<GroupRolesPagination> {
+            return GroupApiFp(configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, roleExternalTenant, limit, offset, orderBy, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4101,6 +4168,7 @@ export class GroupApi extends BaseAPI {
      * @param {string} [roleDisplayName] Parameter for filtering group roles by role &#x60;display_name&#x60; using string contains search.
      * @param {string} [roleDescription] Parameter for filtering group roles by role &#x60;description&#x60; using string contains search.
      * @param {boolean} [roleSystem] Parameter for filtering group roles by system flag.
+     * @param {string} [roleExternalTenant] Parameter for filtering group roles by role &#x60;external_tenant&#x60; using string search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
@@ -4108,8 +4176,8 @@ export class GroupApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
-        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public listRolesForGroup(uuid: string, exclude?: boolean, roleName?: string, roleDisplayName?: string, roleDescription?: string, roleSystem?: boolean, roleExternalTenant?: string, limit?: number, offset?: number, orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', options?: any) {
+        return GroupApiFp(this.configuration).listRolesForGroup(uuid, exclude, roleName, roleDisplayName, roleDescription, roleSystem, roleExternalTenant, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5325,10 +5393,11 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
+         * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles: async (limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options: any = {}): Promise<RequestArgs> => {
+        listRoles: async (limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5391,6 +5460,10 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (permission !== undefined) {
                 localVarQueryParameter['permission'] = permission;
+            }
+
+            if (externalTenant !== undefined) {
+                localVarQueryParameter['external_tenant'] = externalTenant;
             }
 
 
@@ -5587,11 +5660,12 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
+         * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
-            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options);
+        async listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5694,11 +5768,12 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
+         * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
-            return RoleApiFp(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(axios, basePath));
+        listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+            return RoleApiFp(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -5798,12 +5873,13 @@ export class RoleApi extends BaseAPI {
      * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
+     * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, options?: any) {
-        return RoleApiFp(this.configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, options).then((request) => request(this.axios, this.basePath));
+    public listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any) {
+        return RoleApiFp(this.configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
