@@ -22,6 +22,6 @@
 
 • **tag**? : *string*
 
-*Defined in [api.ts:1281](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1281)*
+*Defined in [api.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1281)*
 
 **`memberof`** Tag

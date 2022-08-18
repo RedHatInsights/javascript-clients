@@ -27,7 +27,7 @@ Object containing data specific to Ansible Automation Platform
 
 • **catalog_worker_version**? : *string*
 
-*Defined in [api.ts:1429](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1429)*
+*Defined in [api.ts:1429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1429)*
 
 The catalog-worker version on the host
 
@@ -39,7 +39,7 @@ ___
 
 • **controller_version**? : *string*
 
-*Defined in [api.ts:1417](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1417)*
+*Defined in [api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1417)*
 
 The ansible-tower or automation-controller version on the host
 
@@ -51,7 +51,7 @@ ___
 
 • **hub_version**? : *string*
 
-*Defined in [api.ts:1423](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1423)*
+*Defined in [api.ts:1423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1423)*
 
 The automation-hub version on the host
 
@@ -63,7 +63,7 @@ ___
 
 • **sso_version**? : *string*
 
-*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1435)*
+*Defined in [api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1435)*
 
 The SSO version on the host
 

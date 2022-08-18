@@ -37,7 +37,7 @@
 
 • **archived_at**? : *string*
 
-*Defined in [api.ts:1820](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1820)*
+*Defined in [api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1820)*
 
 **`memberof`** NetworkAdapter
 
@@ -47,7 +47,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:1826](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1826)*
+*Defined in [api.ts:1826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1826)*
 
 **`memberof`** NetworkAdapter
 
@@ -57,7 +57,7 @@ ___
 
 • **device_id**? : *string*
 
-*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1832)*
+*Defined in [api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1832)*
 
 ID of the resource
 
@@ -69,7 +69,7 @@ ___
 
 • **device_type**? : *string*
 
-*Defined in [api.ts:1838](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1838)*
+*Defined in [api.ts:1838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1838)*
 
 **`memberof`** NetworkAdapter
 
@@ -79,7 +79,7 @@ ___
 
 • **extra**? : *object*
 
-*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1844)*
+*Defined in [api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1844)*
 
 **`memberof`** NetworkAdapter
 
@@ -89,7 +89,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:1850](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1850)*
+*Defined in [api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1850)*
 
 ID of the resource
 
@@ -101,7 +101,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [api.ts:1856](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1856)*
+*Defined in [api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1856)*
 
 **`memberof`** NetworkAdapter
 
@@ -111,7 +111,7 @@ ___
 
 • **mac_address**? : *string*
 
-*Defined in [api.ts:1862](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1862)*
+*Defined in [api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1862)*
 
 **`memberof`** NetworkAdapter
 
@@ -121,7 +121,7 @@ ___
 
 • **orchestration_stack_id**? : *string*
 
-*Defined in [api.ts:1868](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1868)*
+*Defined in [api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1868)*
 
 ID of the resource
 
@@ -133,7 +133,7 @@ ___
 
 • **source_created_at**? : *string*
 
-*Defined in [api.ts:1874](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1874)*
+*Defined in [api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1874)*
 
 **`memberof`** NetworkAdapter
 
@@ -143,7 +143,7 @@ ___
 
 • **source_deleted_at**? : *string*
 
-*Defined in [api.ts:1880](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1880)*
+*Defined in [api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1880)*
 
 **`memberof`** NetworkAdapter
 
@@ -153,7 +153,7 @@ ___
 
 • **source_id**? : *string*
 
-*Defined in [api.ts:1886](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1886)*
+*Defined in [api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1886)*
 
 ID of the resource
 
@@ -165,7 +165,7 @@ ___
 
 • **source_ref**? : *string*
 
-*Defined in [api.ts:1892](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1892)*
+*Defined in [api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1892)*
 
 **`memberof`** NetworkAdapter
 
@@ -175,7 +175,7 @@ ___
 
 • **source_region_id**? : *string*
 
-*Defined in [api.ts:1898](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1898)*
+*Defined in [api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1898)*
 
 ID of the resource
 
@@ -187,7 +187,7 @@ ___
 
 • **subscription_id**? : *string*
 
-*Defined in [api.ts:1904](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1904)*
+*Defined in [api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1904)*
 
 ID of the resource
 
@@ -199,6 +199,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:1910](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1910)*
+*Defined in [api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1910)*
 
 **`memberof`** NetworkAdapter

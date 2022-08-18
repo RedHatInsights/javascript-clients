@@ -55,6 +55,12 @@ export interface AccountState {
      * @memberof AccountState
      */
     apply_state?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountState
+     */
+    org_id?: string;
 }
 /**
  *
@@ -149,6 +155,12 @@ export interface StateArchive {
      * @memberof StateArchive
      */
     state?: State;
+    /**
+     *
+     * @type {string}
+     * @memberof StateArchive
+     */
+    org_id?: string;
 }
 /**
  *

@@ -27,7 +27,7 @@
 
 • **connection_status**: *[PlaybookExecutorStatusConnectionStatusEnum](../enums/playbookexecutorstatusconnectionstatusenum.md)*
 
-*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L275)*
+*Defined in [api.ts:275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L275)*
 
 **`memberof`** PlaybookExecutorStatus
 
@@ -37,7 +37,7 @@ ___
 
 • **endpoint_id**: *string | null*
 
-*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L245)*
+*Defined in [api.ts:245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L245)*
 
 **`memberof`** PlaybookExecutorStatus
 
@@ -47,7 +47,7 @@ ___
 
 • **executor_id**: *string | null*
 
-*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L251)*
+*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L251)*
 
 **`memberof`** PlaybookExecutorStatus
 
@@ -57,7 +57,7 @@ ___
 
 • **executor_name**: *string | null*
 
-*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L263)*
+*Defined in [api.ts:263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L263)*
 
 **`memberof`** PlaybookExecutorStatus
 
@@ -67,7 +67,7 @@ ___
 
 • **executor_type**: *string | null*
 
-*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L257)*
+*Defined in [api.ts:257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L257)*
 
 **`memberof`** PlaybookExecutorStatus
 
@@ -77,6 +77,6 @@ ___
 
 • **system_count**: *number*
 
-*Defined in [api.ts:269](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L269)*
+*Defined in [api.ts:269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L269)*
 
 **`memberof`** PlaybookExecutorStatus

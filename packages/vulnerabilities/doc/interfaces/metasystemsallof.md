@@ -23,7 +23,7 @@
 
 • **excluded**: *string | null*
 
-*Defined in [api.ts:1841](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L1841)*
+*Defined in [api.ts:1841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1841)*
 
 Display setting of opted out systems.
 
@@ -35,7 +35,7 @@ ___
 
 • **rhel_version**: *string | null*
 
-*Defined in [api.ts:1847](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/api.ts#L1847)*
+*Defined in [api.ts:1847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1847)*
 
 Filter base on system RHEL version.
 

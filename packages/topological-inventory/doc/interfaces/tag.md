@@ -28,7 +28,7 @@
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:3471](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3471)*
+*Defined in [api.ts:3471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3471)*
 
 **`memberof`** Tag
 
@@ -38,7 +38,7 @@ ___
 
 • **description**? : *string*
 
-*Defined in [api.ts:3477](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3477)*
+*Defined in [api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3477)*
 
 **`memberof`** Tag
 
@@ -48,7 +48,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:3483](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3483)*
+*Defined in [api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3483)*
 
 ID of the resource
 
@@ -60,7 +60,7 @@ ___
 
 • **last_seen_at**? : *string*
 
-*Defined in [api.ts:3489](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3489)*
+*Defined in [api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3489)*
 
 **`memberof`** Tag
 
@@ -70,7 +70,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:3495](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3495)*
+*Defined in [api.ts:3495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3495)*
 
 **`memberof`** Tag
 
@@ -80,7 +80,7 @@ ___
 
 • **namespace**? : *string*
 
-*Defined in [api.ts:3501](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3501)*
+*Defined in [api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3501)*
 
 **`memberof`** Tag
 
@@ -90,6 +90,6 @@ ___
 
 • **value**? : *string*
 
-*Defined in [api.ts:3507](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L3507)*
+*Defined in [api.ts:3507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3507)*
 
 **`memberof`** Tag

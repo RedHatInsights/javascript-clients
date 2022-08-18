@@ -46,7 +46,7 @@ GroupApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 **Parameters:**
 
@@ -66,7 +66,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)*
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)*
 
 ## Methods
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **addPrincipalToGroup**(`uuid`: string, `groupPrincipalIn`: [GroupPrincipalIn](../interfaces/groupprincipalin.md), `options?`: any): *Promise‹AxiosResponse‹[GroupWithPrincipalsAndRoles](../interfaces/groupwithprincipalsandroles.md)››*
 
-*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L3976)*
+*Defined in [api.ts:4043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4043)*
 
 **`summary`** Add a principal to a group in the tenant
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **addRoleToGroup**(`uuid`: string, `groupRoleIn`: [GroupRoleIn](../interfaces/grouprolein.md), `options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
-*Defined in [api.ts:3989](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L3989)*
+*Defined in [api.ts:4056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4056)*
 
 **`summary`** Add a role to a group in the tenant
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **createGroup**(`group`: [Group](../interfaces/group.md), `options?`: any): *Promise‹AxiosResponse‹[GroupOut](../interfaces/groupout.md)››*
 
-*Defined in [api.ts:4001](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4001)*
+*Defined in [api.ts:4068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4068)*
 
 **`summary`** Create a group in a tenant
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **deleteGroup**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:4013](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4013)*
+*Defined in [api.ts:4080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4080)*
 
 **`summary`** Delete a group in the tenant
 
@@ -188,7 +188,7 @@ ___
 
 ▸ **deletePrincipalFromGroup**(`uuid`: string, `usernames`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:4026](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4026)*
+*Defined in [api.ts:4093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4093)*
 
 **`summary`** Remove a principal from a group in the tenant
 
@@ -212,7 +212,7 @@ ___
 
 ▸ **deleteRoleFromGroup**(`uuid`: string, `roles`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:4039](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4039)*
+*Defined in [api.ts:4106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4106)*
 
 **`summary`** Remove a role from a group in the tenant
 
@@ -236,7 +236,7 @@ ___
 
 ▸ **getGroup**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹[GroupWithPrincipalsAndRoles](../interfaces/groupwithprincipalsandroles.md)››*
 
-*Defined in [api.ts:4051](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4051)*
+*Defined in [api.ts:4118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4118)*
 
 **`summary`** Get a group in the tenant
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "username", `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
 
-*Defined in [api.ts:4067](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4067)*
+*Defined in [api.ts:4134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4134)*
 
 By default, responses are sorted in ascending order by username
 
@@ -288,7 +288,7 @@ ___
 
 ▸ **listGroups**(`limit?`: number, `offset?`: number, `name?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `username?`: string, `uuid?`: Array‹string›, `roleNames?`: Array‹string›, `roleDiscriminator?`: "all" | "any", `orderBy?`: "name" | "modified" | "principalCount" | "policyCount", `platformDefault?`: boolean, `adminDefault?`: boolean, `system?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[GroupPagination](../interfaces/grouppagination.md)››*
 
-*Defined in [api.ts:4091](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4091)*
+*Defined in [api.ts:4158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4158)*
 
 By default, responses are sorted in ascending order by group name
 
@@ -323,9 +323,9 @@ ___
 
 ###  listRolesForGroup
 
-▸ **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDisplayName?`: string, `roleDescription?`: string, `roleSystem?`: boolean, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options?`: any): *Promise‹AxiosResponse‹[GroupRolesPagination](../interfaces/grouprolespagination.md)››*
+▸ **listRolesForGroup**(`uuid`: string, `exclude?`: boolean, `roleName?`: string, `roleDisplayName?`: string, `roleDescription?`: string, `roleSystem?`: boolean, `roleExternalTenant?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `options?`: any): *Promise‹AxiosResponse‹[GroupRolesPagination](../interfaces/grouprolespagination.md)››*
 
-*Defined in [api.ts:4111](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4111)*
+*Defined in [api.ts:4179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4179)*
 
 By default, responses are sorted in ascending order by role name
 
@@ -345,6 +345,7 @@ Name | Type | Description |
 `roleDisplayName?` | string | - |
 `roleDescription?` | string | - |
 `roleSystem?` | boolean | - |
+`roleExternalTenant?` | string | - |
 `limit?` | number | - |
 `offset?` | number | - |
 `orderBy?` | "name" &#124; "display_name" &#124; "modified" &#124; "policyCount" | - |
@@ -358,7 +359,7 @@ ___
 
 ▸ **updateGroup**(`uuid`: string, `group`: [Group](../interfaces/group.md), `options?`: any): *Promise‹AxiosResponse‹[GroupOut](../interfaces/groupout.md)››*
 
-*Defined in [api.ts:4124](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L4124)*
+*Defined in [api.ts:4192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4192)*
 
 **`summary`** Update a group in the tenant
 

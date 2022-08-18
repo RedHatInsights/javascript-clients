@@ -30,7 +30,7 @@
 
 • **after_portfolio_item_id**? : *string*
 
-*Defined in [api.ts:608](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L608)*
+*Defined in [api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L608)*
 
 The ID of the portfolio item associated to the \'after\' step
 
@@ -42,7 +42,7 @@ ___
 
 • **before_portfolio_item_id**? : *string*
 
-*Defined in [api.ts:602](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L602)*
+*Defined in [api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L602)*
 
 The ID of the portfolio item associated to the \'before\' step
 
@@ -54,7 +54,7 @@ ___
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:590](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L590)*
+*Defined in [api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L590)*
 
 **`memberof`** OrderProcess
 
@@ -64,7 +64,7 @@ ___
 
 • **description**? : *string | null*
 
-*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L584)*
+*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L584)*
 
 The order process description.
 
@@ -76,7 +76,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L572)*
+*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L572)*
 
 **`memberof`** OrderProcess
 
@@ -86,7 +86,7 @@ ___
 
 • **metadata**? : *object*
 
-*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L620)*
+*Defined in [api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L620)*
 
 JSON Metadata about the order process
 
@@ -98,7 +98,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L578)*
+*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)*
 
 The name of the order process.
 
@@ -110,7 +110,7 @@ ___
 
 • **return_portfolio_item_id**? : *string*
 
-*Defined in [api.ts:614](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L614)*
+*Defined in [api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L614)*
 
 The ID of the portfolio item associated to the item\'s return
 
@@ -122,6 +122,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:596](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L596)*
+*Defined in [api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L596)*
 
 **`memberof`** OrderProcess

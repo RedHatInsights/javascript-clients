@@ -17,7 +17,7 @@
 
 • **CentOS**: = "CentOS"
 
-*Defined in [api.ts:1662](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1662)*
+*Defined in [api.ts:1662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1662)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **RHEL**: = "RHEL"
 
-*Defined in [api.ts:1661](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/host-inventory/api.ts#L1661)*
+*Defined in [api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1661)*

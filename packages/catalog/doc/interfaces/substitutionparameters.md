@@ -22,7 +22,7 @@
 
 • **attributes**? : *[SubstitutionParametersAttributesEnum](../enums/substitutionparametersattributesenum.md)*
 
-*Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/catalog/api.ts#L1243)*
+*Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1243)*
 
 substitutable string
 

@@ -29,7 +29,7 @@
 
 • **created_at**? : *string*
 
-*Defined in [api.ts:94](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L94)*
+*Defined in [api.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L94)*
 
 **`memberof`** ApplicationType
 
@@ -39,7 +39,7 @@ ___
 
 • **dependent_applications**? : *object*
 
-*Defined in [api.ts:100](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L100)*
+*Defined in [api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L100)*
 
 **`memberof`** ApplicationType
 
@@ -49,7 +49,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:106](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L106)*
+*Defined in [api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L106)*
 
 **`memberof`** ApplicationType
 
@@ -59,7 +59,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:112](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L112)*
+*Defined in [api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L112)*
 
 ID of the resource
 
@@ -71,7 +71,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:118](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L118)*
+*Defined in [api.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L118)*
 
 **`memberof`** ApplicationType
 
@@ -81,7 +81,7 @@ ___
 
 • **supported_authentication_types**? : *object*
 
-*Defined in [api.ts:124](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L124)*
+*Defined in [api.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L124)*
 
 **`memberof`** ApplicationType
 
@@ -91,7 +91,7 @@ ___
 
 • **supported_source_types**? : *object*
 
-*Defined in [api.ts:130](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L130)*
+*Defined in [api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L130)*
 
 **`memberof`** ApplicationType
 
@@ -101,6 +101,6 @@ ___
 
 • **updated_at**? : *string*
 
-*Defined in [api.ts:136](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L136)*
+*Defined in [api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L136)*
 
 **`memberof`** ApplicationType

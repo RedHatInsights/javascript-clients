@@ -25,7 +25,7 @@
 
 • **critical_cves**? : *number*
 
-*Defined in [git-api/api.ts:423](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L423)*
+*Defined in [git-api/api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L423)*
 
 **`memberof`** DashbarOut
 
@@ -35,7 +35,7 @@ ___
 
 • **cves_with_rule**? : *number*
 
-*Defined in [git-api/api.ts:429](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L429)*
+*Defined in [git-api/api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L429)*
 
 **`memberof`** DashbarOut
 
@@ -45,7 +45,7 @@ ___
 
 • **exploitable_cves**? : *number*
 
-*Defined in [git-api/api.ts:435](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L435)*
+*Defined in [git-api/api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L435)*
 
 **`memberof`** DashbarOut
 
@@ -55,6 +55,6 @@ ___
 
 • **important_cves**? : *number*
 
-*Defined in [git-api/api.ts:441](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/vulnerabilities/git-api/api.ts#L441)*
+*Defined in [git-api/api.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L441)*
 
 **`memberof`** DashbarOut

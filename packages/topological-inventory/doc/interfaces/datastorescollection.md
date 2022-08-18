@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Datastore](datastore.md)›*
 
-*Defined in [api.ts:1231](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1231)*
+*Defined in [api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1231)*
 
 **`memberof`** DatastoresCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:1225](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1225)*
+*Defined in [api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1225)*
 
 **`memberof`** DatastoresCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/api.ts#L1219)*
+*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1219)*
 
 **`memberof`** DatastoresCollection

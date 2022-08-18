@@ -22,6 +22,6 @@
 
 • **error**? : *string*
 
-*Defined in [api.ts:1796](https://github.com/RedHatInsights/javascript-clients.gi/blob/2c41ef32/packages/patch/api.ts#L1796)*
+*Defined in [api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1796)*
 
 **`memberof`** UtilsErrorResponse

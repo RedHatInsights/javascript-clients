@@ -17,7 +17,7 @@
 
 • **Bottom**: = "bottom"
 
-*Defined in [api.ts:282](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L282)*
+*Defined in [api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L282)*
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **Top**: = "top"
 
-*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L283)*
+*Defined in [api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L283)*

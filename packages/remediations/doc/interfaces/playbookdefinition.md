@@ -23,7 +23,7 @@
 
 • **auto_reboot**? : *boolean*
 
-*Defined in [api.ts:152](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L152)*
+*Defined in [api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L152)*
 
 Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
 
@@ -35,6 +35,6 @@ ___
 
 • **issues**: *Array‹[PlaybookDefinitionIssues](playbookdefinitionissues.md)›*
 
-*Defined in [api.ts:146](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/remediations/api.ts#L146)*
+*Defined in [api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L146)*
 
 **`memberof`** PlaybookDefinition

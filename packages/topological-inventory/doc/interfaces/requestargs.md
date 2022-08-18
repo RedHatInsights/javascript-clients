@@ -23,7 +23,7 @@
 
 • **options**: *any*
 
-*Defined in [base.ts:40](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/base.ts#L40)*
+*Defined in [base.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L40)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **url**: *string*
 
-*Defined in [base.ts:39](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/topological-inventory/base.ts#L39)*
+*Defined in [base.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/base.ts#L39)*

@@ -42,7 +42,7 @@ DefaultApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
 
 **Parameters:**
 
@@ -62,7 +62,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)*
 
 ## Methods
 
@@ -90,7 +90,7 @@ ___
 
 ▸ **getCurrentState**(`options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [api.ts:662](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L662)*
+*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L674)*
 
 **`summary`** Get the current state for requesting account
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **getPlaybookById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L674)*
+*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L686)*
 
 **`summary`** Get ansible playbook for current state configuration
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **getPlaybookPreview**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹string››*
 
-*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L686)*
+*Defined in [api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L698)*
 
 **`summary`** Get a preview of the playbook built from the provided state map
 
@@ -158,7 +158,7 @@ ___
 
 ▸ **getStateById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
 
-*Defined in [api.ts:698](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L698)*
+*Defined in [api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L710)*
 
 **`summary`** Get single state change for requesting account
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
 
-*Defined in [api.ts:712](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L712)*
+*Defined in [api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L724)*
 
 **`summary`** Get archive of state changes for requesting account
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **postManage**(`body?`: boolean, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:724](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L724)*
+*Defined in [api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L736)*
 
 Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **updateStates**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
 
-*Defined in [api.ts:736](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/config-manager/api.ts#L736)*
+*Defined in [api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L748)*
 
 **`summary`** Update and roll out configuration state for requesting account
 

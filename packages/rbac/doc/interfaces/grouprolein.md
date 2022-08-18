@@ -22,6 +22,6 @@
 
 • **roles**: *Array‹string›*
 
-*Defined in [api.ts:1018](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/rbac/api.ts#L1018)*
+*Defined in [api.ts:1018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1018)*
 
 **`memberof`** GroupRoleIn

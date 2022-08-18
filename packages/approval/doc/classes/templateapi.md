@@ -37,7 +37,7 @@ TemplateApi - object-oriented interface
 
 *Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type | Default |
 
 *Inherited from [BaseAPI](baseapi.md).[axios](baseapi.md#protected-axios)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
 
-*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L51)*
+*Defined in [base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
 
-*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/base.ts#L49)*
+*Defined in [base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)*
 
 ## Methods
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **listTemplates**(`limit?`: number, `offset?`: number, `filter?`: object, `sortBy?`: string, `options?`: any): *Promise‹AxiosResponse‹[TemplateCollection](../interfaces/templatecollection.md)››*
 
-*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1766)*
+*Defined in [api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1766)*
 
 Find all templates, available to admin only
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **showTemplate**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Template](../interfaces/template.md)››*
 
-*Defined in [api.ts:1778](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L1778)*
+*Defined in [api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1778)*
 
 Find a template by its id, available to admin only
 

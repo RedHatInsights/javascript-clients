@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[Authentication](authentication.md)›*
 
-*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L316)*
+*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L316)*
 
 **`memberof`** AuthenticationsCollection
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[CollectionLinks](collectionlinks.md)*
 
-*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L310)*
+*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L310)*
 
 **`memberof`** AuthenticationsCollection
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[CollectionMetadata](collectionmetadata.md)*
 
-*Defined in [api.ts:304](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/sources/api.ts#L304)*
+*Defined in [api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L304)*
 
 **`memberof`** AuthenticationsCollection

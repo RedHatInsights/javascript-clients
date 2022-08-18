@@ -25,7 +25,7 @@ Group reference describing a RBAC group name and ID
 
 • **name**? : *string*
 
-*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L217)*
+*Defined in [api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L217)*
 
 Name of the RBAC group
 
@@ -37,7 +37,7 @@ ___
 
 • **uuid**: *string*
 
-*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients.gi/blob/master/packages/approval/api.ts#L223)*
+*Defined in [api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L223)*
 
 RBAC ID of the group
 
