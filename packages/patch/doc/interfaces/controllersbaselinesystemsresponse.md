@@ -24,7 +24,7 @@
 
 • **data**? : *Array‹[ControllersBaselineSystemItem](controllersbaselinesystemitem.md)›*
 
-*Defined in [api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L561)*
+*Defined in [api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L561)*
 
 **`memberof`** ControllersBaselineSystemsResponse
 
@@ -34,7 +34,7 @@ ___
 
 • **links**? : *[ControllersLinks](controllerslinks.md)*
 
-*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L567)*
+*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L567)*
 
 **`memberof`** ControllersBaselineSystemsResponse
 
@@ -44,6 +44,6 @@ ___
 
 • **meta**? : *[ControllersListMeta](controllerslistmeta.md)*
 
-*Defined in [api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L573)*
+*Defined in [api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L573)*
 
 **`memberof`** ControllersBaselineSystemsResponse

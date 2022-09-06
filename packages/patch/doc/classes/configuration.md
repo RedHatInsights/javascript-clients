@@ -27,7 +27,7 @@
 
 \+ **new Configuration**(`param`: [ConfigurationParameters](../interfaces/configurationparameters.md)): *[Configuration](configuration.md)*
 
-*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L65)*
+*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L65)*
 
 **Parameters:**
 
@@ -43,7 +43,7 @@ Name | Type | Default |
 
 • **accessToken**? : *string | function*
 
-*Defined in [configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L51)*
+*Defined in [configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L51)*
 
 parameter for oauth2 security
 
@@ -59,7 +59,7 @@ ___
 
 • **apiKey**? : *string | Promise‹string› | function | function*
 
-*Defined in [configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L30)*
+*Defined in [configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L30)*
 
 parameter for apiKey security
 
@@ -73,7 +73,7 @@ ___
 
 • **baseOptions**? : *any*
 
-*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L65)*
+*Defined in [configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L65)*
 
 base options for axios calls
 
@@ -85,7 +85,7 @@ ___
 
 • **basePath**? : *string*
 
-*Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L58)*
+*Defined in [configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L58)*
 
 override base path
 
@@ -97,7 +97,7 @@ ___
 
 • **password**? : *string*
 
-*Defined in [configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L44)*
+*Defined in [configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L44)*
 
 parameter for basic security
 
@@ -109,7 +109,7 @@ ___
 
 • **username**? : *string*
 
-*Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/configuration.ts#L37)*
+*Defined in [configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/configuration.ts#L37)*
 
 parameter for basic security
 

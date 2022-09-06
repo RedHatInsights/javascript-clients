@@ -27,7 +27,7 @@ SystemtypeApi - object-oriented interface
 ### Methods
 
 * [systemtypeList](systemtypeapi.md#systemtypelist)
-* [systemtypeRead](systemtypeapi.md#systemtyperead)
+* [systemtypeRetrieve](systemtypeapi.md#systemtyperetrieve)
 
 ## Constructors
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **systemtypeList**(`options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)[]››*
 
-*Defined in [api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L860)*
+*Defined in [api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L789)*
 
 List all system types by role and product code
 
@@ -105,11 +105,11 @@ Name | Type |
 
 ___
 
-###  systemtypeRead
+###  systemtypeRetrieve
 
-▸ **systemtypeRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*
+▸ **systemtypeRetrieve**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[SystemType](../interfaces/systemtype.md)››*
 
-*Defined in [api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L872)*
+*Defined in [api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L801)*
 
 Retrieve details of a single system type
 

@@ -57,7 +57,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[message](requirederror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1029
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1041
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[stack](requirederror.md#optional-stack)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1030
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1042
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1039
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1051

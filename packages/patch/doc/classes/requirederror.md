@@ -31,7 +31,7 @@
 
 \+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L66)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 ### `Optional` cause
 
-• **cause**? : *[Error](requirederror.md#static-error)*
+• **cause**? : *unknown*
 
 *Inherited from [RequiredError](requirederror.md).[cause](requirederror.md#optional-cause)*
 
@@ -58,7 +58,7 @@ ___
 
 • **field**: *string*
 
-*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L67)*
+*Defined in [base.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L67)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 *Inherited from [RequiredError](requirederror.md).[message](requirederror.md#message)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1029
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1041
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 *Overrides void*
 
-*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L66)*
+*Defined in [base.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L66)*
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 *Overrides [RequiredError](requirederror.md).[stack](requirederror.md#optional-stack)*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1030
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1042
 
 ___
 
@@ -98,4 +98,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:1039
+Defined in node_modules/typescript/lib/lib.es5.d.ts:1051

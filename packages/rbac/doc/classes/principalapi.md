@@ -82,9 +82,9 @@ ___
 
 ###  listPrincipals
 
-▸ **listPrincipals**(`limit?`: number, `offset?`: number, `matchCriteria?`: "partial" | "exact", `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
+▸ **listPrincipals**(`limit?`: number, `offset?`: number, `matchCriteria?`: "partial" | "exact", `usernames?`: string, `sortOrder?`: "asc" | "desc", `email?`: string, `status?`: "enabled" | "disabled" | "all", `adminOnly?`: "true" | "false", `orderBy?`: "username", `usernameOnly?`: "true" | "false", `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
 
-*Defined in [api.ts:5182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5182)*
+*Defined in [api.ts:5211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5211)*
 
 By default, responses are sorted in ascending order by username
 
@@ -107,6 +107,7 @@ Name | Type |
 `status?` | "enabled" &#124; "disabled" &#124; "all" |
 `adminOnly?` | "true" &#124; "false" |
 `orderBy?` | "username" |
+`usernameOnly?` | "true" &#124; "false" |
 `options?` | any |
 
 **Returns:** *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
