@@ -90,7 +90,7 @@
 
 • **BASE_PATH**: *string* = "https://cloud.redhat.com".replace(/\/+$/, "")
 
-*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L20)*
+*Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L20)*
 
 ## Functions
 
@@ -98,7 +98,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1803)*
+*Defined in [api.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1803)*
 
 DefaultApi - axios parameter creator
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4750](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L4750)*
+*Defined in [api.ts:4750](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L4750)*
 
 DefaultApi - factory interface
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4133](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L4133)*
+*Defined in [api.ts:4133](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L4133)*
 
 DefaultApi - functional programming interface
 
@@ -328,7 +328,7 @@ Name | Type |
 
 ### ▪ **COLLECTION_FORMATS**: *object*
 
-*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L26)*
+*Defined in [base.ts:26](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L26)*
 
 **`export`** 
 
@@ -336,22 +336,22 @@ Name | Type |
 
 • **csv**: *string* = ","
 
-*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L27)*
+*Defined in [base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L27)*
 
 ###  pipes
 
 • **pipes**: *string* = "|"
 
-*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L30)*
+*Defined in [base.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L30)*
 
 ###  ssv
 
 • **ssv**: *string* = " "
 
-*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L28)*
+*Defined in [base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L28)*
 
 ###  tsv
 
 • **tsv**: *string* = "	"
 
-*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/base.ts#L29)*
+*Defined in [base.ts:29](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/base.ts#L29)*

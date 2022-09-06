@@ -32,7 +32,7 @@
 
 • **associated_cves**: *Array‹string›*
 
-*Defined in [git-api/api.ts:1062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1062)*
+*Defined in [git-api/api.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1068)*
 
 List of CVEs associated with the rule.
 
@@ -44,7 +44,7 @@ ___
 
 • **change_risk**: *number | null*
 
-*Defined in [git-api/api.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1068)*
+*Defined in [git-api/api.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1074)*
 
 Indicates how likely remediation can change environment on the remediatied system.
 
@@ -56,7 +56,7 @@ ___
 
 • **description**: *string | null*
 
-*Defined in [git-api/api.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1074)*
+*Defined in [git-api/api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1080)*
 
 Description of the rule.
 
@@ -68,7 +68,7 @@ ___
 
 • **kbase_node_id**: *number | null*
 
-*Defined in [git-api/api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1080)*
+*Defined in [git-api/api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1086)*
 
 ID of associated Red Hat knowledgebase article.
 
@@ -80,7 +80,7 @@ ___
 
 • **playbook_count**: *number | null*
 
-*Defined in [git-api/api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1086)*
+*Defined in [git-api/api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1092)*
 
 Number of available Ansible playbooks for remediation/mitigation.
 
@@ -92,7 +92,7 @@ ___
 
 • **publish_date**: *string | null*
 
-*Defined in [git-api/api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1092)*
+*Defined in [git-api/api.ts:1098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1098)*
 
 Date when the rule was published.
 
@@ -104,7 +104,7 @@ ___
 
 • **reboot_required**: *boolean | null*
 
-*Defined in [git-api/api.ts:1098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1098)*
+*Defined in [git-api/api.ts:1104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1104)*
 
 Indicator whter reboot is required to mitigate vulnerability.
 
@@ -116,7 +116,7 @@ ___
 
 • **rule_id**: *string*
 
-*Defined in [git-api/api.ts:1104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1104)*
+*Defined in [git-api/api.ts:1110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1110)*
 
 ID(s) of associated security rule(s).
 
@@ -128,7 +128,7 @@ ___
 
 • **rule_impact**: *number | null*
 
-*Defined in [git-api/api.ts:1110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1110)*
+*Defined in [git-api/api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1116)*
 
 Shows rules impact number from 1 to 4
 
@@ -140,7 +140,7 @@ ___
 
 • **summary**: *string | null*
 
-*Defined in [git-api/api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1116)*
+*Defined in [git-api/api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1122)*
 
 Summary of the rule.
 
@@ -152,7 +152,7 @@ ___
 
 • **systems_affected**? : *number*
 
-*Defined in [git-api/api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1122)*
+*Defined in [git-api/api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1128)*
 
 Number of systems affected by the rule.
 

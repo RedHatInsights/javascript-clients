@@ -22,6 +22,6 @@
 
 • **evra**? : *string*
 
-*Defined in [api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L953)*
+*Defined in [api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L953)*
 
 **`memberof`** ControllersPackageVersionItem

@@ -20,8 +20,8 @@
 
 ###  data
 
-• **data**: *Array‹[Principal](principal.md)›*
+• **data**: *Array‹[Principal](principal.md) | [PrincipalMinimal](principalminimal.md)›*
 
-*Defined in [api.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1687)*
+*Defined in [api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1700)*
 
 **`memberof`** PrincipalPaginationAllOf

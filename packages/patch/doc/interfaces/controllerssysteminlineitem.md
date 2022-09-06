@@ -46,7 +46,7 @@
 
 • **baseline_name**? : *string*
 
-*Defined in [api.ts:1207](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1207)*
+*Defined in [api.ts:1207](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1207)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -56,7 +56,7 @@ ___
 
 • **baseline_uptodate**? : *boolean*
 
-*Defined in [api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1213)*
+*Defined in [api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1213)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -66,7 +66,7 @@ ___
 
 • **created**? : *string*
 
-*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1219)*
+*Defined in [api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1219)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -76,7 +76,7 @@ ___
 
 • **culled_timestamp**? : *string*
 
-*Defined in [api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1225)*
+*Defined in [api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1225)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -86,7 +86,7 @@ ___
 
 • **display_name**? : *string*
 
-*Defined in [api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1231)*
+*Defined in [api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1231)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -96,7 +96,7 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1237)*
+*Defined in [api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1237)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -106,7 +106,7 @@ ___
 
 • **insights_id**? : *string*
 
-*Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1243)*
+*Defined in [api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1243)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -116,7 +116,7 @@ ___
 
 • **last_evaluation**? : *string*
 
-*Defined in [api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1249)*
+*Defined in [api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1249)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -126,7 +126,7 @@ ___
 
 • **last_upload**? : *string*
 
-*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1255)*
+*Defined in [api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1255)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -136,7 +136,7 @@ ___
 
 • **os**? : *string*
 
-*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1261)*
+*Defined in [api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1261)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -146,7 +146,7 @@ ___
 
 • **os_major**? : *string*
 
-*Defined in [api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1267)*
+*Defined in [api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1267)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -156,7 +156,7 @@ ___
 
 • **os_minor**? : *string*
 
-*Defined in [api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1273)*
+*Defined in [api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1273)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -166,7 +166,7 @@ ___
 
 • **os_name**? : *string*
 
-*Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1279)*
+*Defined in [api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1279)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -176,7 +176,7 @@ ___
 
 • **other_count**? : *number*
 
-*Defined in [api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1285)*
+*Defined in [api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1285)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -186,7 +186,7 @@ ___
 
 • **packages_installed**? : *number*
 
-*Defined in [api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1291)*
+*Defined in [api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1291)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -196,7 +196,7 @@ ___
 
 • **packages_updatable**? : *number*
 
-*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1297)*
+*Defined in [api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1297)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -206,7 +206,7 @@ ___
 
 • **rhba_count**? : *number*
 
-*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1303)*
+*Defined in [api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1303)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -216,7 +216,7 @@ ___
 
 • **rhea_count**? : *number*
 
-*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1309)*
+*Defined in [api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1309)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -226,7 +226,7 @@ ___
 
 • **rhsa_count**? : *number*
 
-*Defined in [api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1315)*
+*Defined in [api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1315)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -236,7 +236,7 @@ ___
 
 • **rhsm**? : *string*
 
-*Defined in [api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1321)*
+*Defined in [api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1321)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -246,7 +246,7 @@ ___
 
 • **stale**? : *boolean*
 
-*Defined in [api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1327)*
+*Defined in [api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1327)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -256,7 +256,7 @@ ___
 
 • **stale_timestamp**? : *string*
 
-*Defined in [api.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1333)*
+*Defined in [api.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1333)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -266,7 +266,7 @@ ___
 
 • **stale_warning_timestamp**? : *string*
 
-*Defined in [api.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1339)*
+*Defined in [api.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1339)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -276,7 +276,7 @@ ___
 
 • **tags**? : *Array‹[ControllersSystemTag](controllerssystemtag.md)›*
 
-*Defined in [api.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1345)*
+*Defined in [api.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1345)*
 
 **`memberof`** ControllersSystemInlineItem
 
@@ -286,6 +286,6 @@ ___
 
 • **third_party**? : *boolean*
 
-*Defined in [api.ts:1351](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1351)*
+*Defined in [api.ts:1351](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1351)*
 
 **`memberof`** ControllersSystemInlineItem

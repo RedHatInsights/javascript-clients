@@ -27,7 +27,7 @@ KcsApi - object-oriented interface
 ### Methods
 
 * [kcsList](kcsapi.md#kcslist)
-* [kcsRead](kcsapi.md#kcsread)
+* [kcsRetrieve](kcsapi.md#kcsretrieve)
 
 ## Constructors
 
@@ -85,11 +85,9 @@ ___
 
 ▸ **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *Promise‹AxiosResponse‹[Kcs](../interfaces/kcs.md)[]››*
 
-*Defined in [api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L290)*
+*Defined in [api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L240)*
 
-Returns a list of dicts of the C.R.C rule URL and its KCS solution number
-
-**`summary`** Looks for all active rules with KCS solutions
+Looks for all active rules with KCS solutions  Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
 **`throws`** {RequiredError}
 
@@ -106,15 +104,13 @@ Name | Type |
 
 ___
 
-###  kcsRead
+###  kcsRetrieve
 
-▸ **kcsRead**(`nodeId`: string, `options?`: any): *Promise‹AxiosResponse‹string[]››*
+▸ **kcsRetrieve**(`nodeId`: string, `options?`: any): *Promise‹AxiosResponse‹string[]››*
 
-*Defined in [api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L302)*
+*Defined in [api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L251)*
 
-Returns a list of C.R.C rule url(s) for that KCS solution
-
-**`summary`** Gets active rule(s) for a particular KCS solution (node_id)
+Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution
 
 **`throws`** {RequiredError}
 
@@ -122,9 +118,9 @@ Returns a list of C.R.C rule url(s) for that KCS solution
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`nodeId` | string | KCS solution number |
-`options?` | any | - |
+Name | Type |
+------ | ------ |
+`nodeId` | string |
+`options?` | any |
 
 **Returns:** *Promise‹AxiosResponse‹string[]››*

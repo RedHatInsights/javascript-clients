@@ -2,6 +2,8 @@
 
 # Interface: SystemType
 
+RHN-based system types classified by role and product code.
+
 **`export`** 
 
 **`interface`** SystemType
@@ -14,17 +16,17 @@
 
 ### Properties
 
-* [id](systemtype.md#optional-id)
+* [id](systemtype.md#id)
 * [product_code](systemtype.md#product_code)
 * [role](systemtype.md#role)
 
 ## Properties
 
-### `Optional` id
+###  id
 
-• **id**? : *number*
+• **id**: *number*
 
-*Defined in [api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L114)*
+*Defined in [api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L71)*
 
 **`memberof`** SystemType
 
@@ -34,7 +36,7 @@ ___
 
 • **product_code**: *string*
 
-*Defined in [api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L126)*
+*Defined in [api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)*
 
 **`memberof`** SystemType
 
@@ -44,6 +46,6 @@ ___
 
 • **role**: *string*
 
-*Defined in [api.ts:120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L120)*
+*Defined in [api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L77)*
 
 **`memberof`** SystemType

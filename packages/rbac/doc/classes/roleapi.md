@@ -90,7 +90,7 @@ ___
 
 ▸ **createRoles**(`roleIn`: [RoleIn](../interfaces/rolein.md), `options?`: any): *Promise‹AxiosResponse‹[RoleWithAccess](../interfaces/rolewithaccess.md)››*
 
-*Defined in [api.ts:5818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5818)*
+*Defined in [api.ts:5847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5847)*
 
 **`summary`** Create a roles for a tenant
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **deleteRole**(`uuid`: string, `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:5830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5830)*
+*Defined in [api.ts:5859](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5859)*
 
 **`summary`** Delete a role in the tenant
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **getRole**(`uuid`: string, `scope?`: "account" | "principal", `options?`: any): *Promise‹AxiosResponse‹[RoleWithAccess](../interfaces/rolewithaccess.md)››*
 
-*Defined in [api.ts:5843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5843)*
+*Defined in [api.ts:5872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5872)*
 
 **`summary`** Get a role in the tenant
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getRoleAccess**(`uuid`: string, `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
 
-*Defined in [api.ts:5857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5857)*
+*Defined in [api.ts:5886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5886)*
 
 **`summary`** Get access for a role in the tenant
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **listRoles**(`limit?`: number, `offset?`: number, `name?`: string, `system?`: boolean, `displayName?`: string, `nameMatch?`: "partial" | "exact", `scope?`: "account" | "principal", `orderBy?`: "name" | "display_name" | "modified" | "policyCount", `addFields?`: Array‹"groups_in" | "groups_in_count"›, `username?`: string, `application?`: string, `permission?`: string, `externalTenant?`: string, `options?`: any): *Promise‹AxiosResponse‹[RolePaginationDynamic](../interfaces/rolepaginationdynamic.md)››*
 
-*Defined in [api.ts:5881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5881)*
+*Defined in [api.ts:5910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5910)*
 
 By default, responses are sorted in ascending order by role name
 
@@ -222,7 +222,7 @@ ___
 
 ▸ **patchRole**(`uuid`: string, `rolePatch?`: [RolePatch](../interfaces/rolepatch.md), `options?`: any): *Promise‹AxiosResponse‹[RoleWithAccess](../interfaces/rolewithaccess.md)››*
 
-*Defined in [api.ts:5894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5894)*
+*Defined in [api.ts:5923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5923)*
 
 **`summary`** Patch a Role in the tenant
 
@@ -246,7 +246,7 @@ ___
 
 ▸ **updateRole**(`uuid`: string, `roleWithAccess`: [RoleWithAccess](../interfaces/rolewithaccess.md), `options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:5907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5907)*
+*Defined in [api.ts:5936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5936)*
 
 **`summary`** Update a Role in the tenant
 

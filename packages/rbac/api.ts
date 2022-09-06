@@ -1602,6 +1602,19 @@ export interface PrincipalIn {
 /**
  *
  * @export
+ * @interface PrincipalMinimal
+ */
+export interface PrincipalMinimal {
+    /**
+     *
+     * @type {string}
+     * @memberof PrincipalMinimal
+     */
+    username: string;
+}
+/**
+ *
+ * @export
  * @interface PrincipalOut
  */
 export interface PrincipalOut {
@@ -1668,10 +1681,10 @@ export interface PrincipalPagination {
     links?: PaginationLinks;
     /**
      *
-     * @type {Array<Principal>}
+     * @type {Array<Principal | PrincipalMinimal>}
      * @memberof PrincipalPagination
      */
-    data: Array<Principal>;
+    data: Array<Principal | PrincipalMinimal>;
 }
 /**
  *
@@ -1681,10 +1694,10 @@ export interface PrincipalPagination {
 export interface PrincipalPaginationAllOf {
     /**
      *
-     * @type {Array<Principal>}
+     * @type {Array<Principal | PrincipalMinimal>}
      * @memberof PrincipalPaginationAllOf
      */
-    data: Array<Principal>;
+    data: Array<Principal | PrincipalMinimal>;
 }
 /**
  *
@@ -3386,10 +3399,11 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup: async (uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
+        getPrincipalsFromGroup: async (uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -3425,6 +3439,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (orderBy !== undefined) {
                 localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (usernameOnly !== undefined) {
+                localVarQueryParameter['username_only'] = usernameOnly;
             }
 
 
@@ -3798,11 +3816,12 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options);
+        async getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -3963,11 +3982,12 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options).then((request) => request(axios, basePath));
+        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any): AxiosPromise<PrincipalPagination> {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by group name
@@ -4127,12 +4147,13 @@ export class GroupApi extends BaseAPI {
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+     * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5026,10 +5047,11 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals: async (limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options: any = {}): Promise<RequestArgs> => {
+        listPrincipals: async (limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: 'true' | 'false', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5082,6 +5104,10 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['order_by'] = orderBy;
             }
 
+            if (usernameOnly !== undefined) {
+                localVarQueryParameter['username_only'] = usernameOnly;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5116,11 +5142,12 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
-            const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options);
+        async listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5147,11 +5174,12 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+         * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any): AxiosPromise<PrincipalPagination> {
-            return PrincipalApiFp(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(axios, basePath));
+        listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any): AxiosPromise<PrincipalPagination> {
+            return PrincipalApiFp(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5175,12 +5203,13 @@ export class PrincipalApi extends BaseAPI {
      * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
      * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
+     * @param {'true' | 'false'} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', options?: any) {
-        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, options).then((request) => request(this.axios, this.basePath));
+    public listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: 'true' | 'false', options?: any) {
+        return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

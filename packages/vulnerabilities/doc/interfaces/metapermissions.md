@@ -22,7 +22,7 @@
 
 • **permissions**: *Array‹string›*
 
-*Defined in [api.ts:1749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1749)*
+*Defined in [api.ts:1755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1755)*
 
 Fetched permissions from RBAC for given user
 
