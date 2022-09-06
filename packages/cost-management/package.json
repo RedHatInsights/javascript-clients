@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/cost-management-client",
-    "version": "1.0.110",
+    "version": "1.0.111",
     "description": "A generated javascript client for Cost Management",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

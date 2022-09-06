@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/approval-client",
-    "version": "1.0.110",
+    "version": "1.0.111",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
