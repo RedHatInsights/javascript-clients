@@ -28,7 +28,7 @@
     },
     "devDependencies": {
         "@types/node": "^13.11.1",
-        "typedoc": "^0.17.4",
+        "typedoc": "^0.23.16",
         "typedoc-plugin-markdown": "^2.2.17"
     }
 }

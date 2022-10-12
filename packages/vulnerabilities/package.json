@@ -33,7 +33,7 @@
         "yaml": "^1.8.3"
     },
     "devDependencies": {
-        "typedoc": "^0.17.4",
+        "typedoc": "^0.23.16",
         "typedoc-plugin-markdown": "^2.2.17"
     }
 }

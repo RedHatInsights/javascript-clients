@@ -37,10 +37,10 @@
         "@typescript-eslint/eslint-plugin": "^2.28.0",
         "eslint": "^6.8.0",
         "eslint-plugin-jest": "^23.8.2",
-        "jest": "^25.3.0",
+        "jest": "^29.1.2",
         "npm-run-all": "^4.1.5",
         "ts-jest": "^25.3.1",
-        "typedoc": "^0.17.4",
+        "typedoc": "^0.23.16",
         "typedoc-plugin-markdown": "^2.2.17",
         "typescript": "^3.8.3"
     }
