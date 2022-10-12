@@ -4,12 +4,6 @@
 
 ## Index
 
-### Enumerations
-
-* [StateComplianceOpenscapEnum](enums/statecomplianceopenscapenum.md)
-* [StateInsightsEnum](enums/stateinsightsenum.md)
-* [StateRemediationsEnum](enums/stateremediationsenum.md)
-
 ### Classes
 
 * [BaseAPI](classes/baseapi.md)
@@ -19,12 +13,11 @@
 
 ### Interfaces
 
-* [AccountState](interfaces/accountstate.md)
 * [ConfigurationParameters](interfaces/configurationparameters.md)
+* [InlineObject](interfaces/inlineobject.md)
+* [InlineResponse200](interfaces/inlineresponse200.md)
+* [Profile](interfaces/profile.md)
 * [RequestArgs](interfaces/requestargs.md)
-* [State](interfaces/state.md)
-* [StateArchive](interfaces/statearchive.md)
-* [StateArchives](interfaces/statearchives.md)
 
 ### Variables
 
@@ -44,7 +37,7 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* = "https://cloud.redhat.com/api/config-manager/v1".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "https://raw.githubusercontent.com/api/config-manager/v2".replace(/\/+$/, "")
 
 *Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L20)*
 
@@ -54,7 +47,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L207)*
+*Defined in [api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L162)*
 
 DefaultApi - axios parameter creator
 
@@ -68,19 +61,13 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getCurrentState**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **createProfile**(`inlineObject`: [InlineObject](interfaces/inlineobject.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPlaybookById**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getPlaybook**(`profileId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getProfile**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **getStateById**(`id`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
-
-* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
-
-* **postManage**(`body?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
-
-* **updateStates**(`state`: [State](interfaces/state.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **getProfiles**(`limit?`: number, `offset?`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -88,7 +75,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L584)*
+*Defined in [api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L391)*
 
 DefaultApi - factory interface
 
@@ -104,19 +91,13 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getCurrentState**(`options?`: any): *AxiosPromise‹[AccountState](interfaces/accountstate.md)›*
+* **createProfile**(`inlineObject`: [InlineObject](interfaces/inlineobject.md), `options?`: any): *AxiosPromise‹[Profile](interfaces/profile.md)›*
 
-* **getPlaybookById**(`id`: string, `options?`: any): *AxiosPromise‹string›*
+* **getPlaybook**(`profileId`: string, `options?`: any): *AxiosPromise‹object›*
 
-* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹string›*
+* **getProfile**(`id`: string, `options?`: any): *AxiosPromise‹[Profile](interfaces/profile.md)›*
 
-* **getStateById**(`id`: string, `options?`: any): *AxiosPromise‹[StateArchive](interfaces/statearchive.md)›*
-
-* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *AxiosPromise‹[StateArchives](interfaces/statearchives.md)›*
-
-* **postManage**(`body?`: boolean, `options?`: any): *AxiosPromise‹void›*
-
-* **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *AxiosPromise‹[AccountState](interfaces/accountstate.md)›*
+* **getProfiles**(`limit?`: number, `offset?`: number, `options?`: any): *AxiosPromise‹[InlineResponse200](interfaces/inlineresponse200.md)›*
 
 ___
 
@@ -124,7 +105,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L476)*
+*Defined in [api.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L325)*
 
 DefaultApi - functional programming interface
 
@@ -138,19 +119,13 @@ Name | Type |
 
 **Returns:** *object*
 
-* **getCurrentState**(`options?`: any): *Promise‹function›*
+* **createProfile**(`inlineObject`: [InlineObject](interfaces/inlineobject.md), `options?`: any): *Promise‹function›*
 
-* **getPlaybookById**(`id`: string, `options?`: any): *Promise‹function›*
+* **getPlaybook**(`profileId`: string, `options?`: any): *Promise‹function›*
 
-* **getPlaybookPreview**(`state`: [State](interfaces/state.md), `options?`: any): *Promise‹function›*
+* **getProfile**(`id`: string, `options?`: any): *Promise‹function›*
 
-* **getStateById**(`id`: string, `options?`: any): *Promise‹function›*
-
-* **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹function›*
-
-* **postManage**(`body?`: boolean, `options?`: any): *Promise‹function›*
-
-* **updateStates**(`state`: [State](interfaces/state.md), `options?`: any): *Promise‹function›*
+* **getProfiles**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹function›*
 
 ## Object literals
 

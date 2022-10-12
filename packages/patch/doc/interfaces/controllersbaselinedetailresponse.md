@@ -22,6 +22,6 @@
 
 • **data**? : *[ControllersBaselineDetailItem](controllersbaselinedetailitem.md)*
 
-*Defined in [api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L453)*
+*Defined in [api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L453)*
 
 **`memberof`** ControllersBaselineDetailResponse
