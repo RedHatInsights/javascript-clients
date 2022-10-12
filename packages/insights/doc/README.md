@@ -1,6 +1,4 @@
-[@redhat-cloud-services/insights-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/insights-client
+@redhat-cloud-services/insights-client / [Exports](modules.md)
 
 # Javascript client for Insights API
 If you want to use [RedHatInsights/insights-advisor-api](https://github.com/RedHatInsights/insights-advisor-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

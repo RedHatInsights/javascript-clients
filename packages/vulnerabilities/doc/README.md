@@ -1,6 +1,4 @@
-[@redhat-cloud-services/vulnerabilities-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/vulnerabilities-client
+@redhat-cloud-services/vulnerabilities-client / [Exports](modules.md)
 
 # Javascript client for Vulnerability API
 If you want to use [RedHatInsights/vulnerability-engine](https://github.com/RedHatInsights/vulnerability-engine) you shouldn't use get requests directly, but rather use this client to integrate with this service.

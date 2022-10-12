@@ -1,6 +1,0 @@
-node_modules
-.openapi-*
-git_push.sh
-*.ts
-tsconfig.json
-!dist/*

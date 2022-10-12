@@ -1,6 +1,4 @@
-[@redhat-cloud-services/config-manager-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/config-manager-client
+@redhat-cloud-services/config-manager-client / [Exports](modules.md)
 
 # Javascript client for Config Manager API
 If you want to use [RedHatInsights/config-manager](https://github.com/RedHatInsights/config-manager) you shouldn't use get requests directly, but rather use this client to integrate with this service.

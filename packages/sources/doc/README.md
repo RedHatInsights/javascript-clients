@@ -1,6 +1,4 @@
-[@redhat-cloud-services/sources-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/sources-client
+@redhat-cloud-services/sources-client / [Exports](modules.md)
 
 # Javascript client for Sources API
 If you want to use [ManageIQ/sources-api](https://github.com/ManageIQ/sources-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

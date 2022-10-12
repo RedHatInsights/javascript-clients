@@ -1,6 +1,4 @@
-[@redhat-cloud-services/approval-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/approval-client
+@redhat-cloud-services/approval-client / [Exports](modules.md)
 
 # Javascript client for Approval API
 If you want to use [ManageIQ/approval-api](https://github.com/ManageIQ/approval-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

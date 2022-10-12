@@ -1,6 +1,4 @@
-[@redhat-cloud-services/remediations-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/remediations-client
+@redhat-cloud-services/remediations-client / [Exports](modules.md)
 
 Javascript client for Remediations API
 =======================================
