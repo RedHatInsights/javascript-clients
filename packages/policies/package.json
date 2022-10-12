@@ -23,5 +23,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }
