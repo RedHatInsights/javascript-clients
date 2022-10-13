@@ -1,6 +1,4 @@
-[@redhat-cloud-services/catalog-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/catalog-client
+@redhat-cloud-services/catalog-client / [Exports](modules.md)
 
 # Javascript client for Catalog API
 If you want to use [ManageIQ/catalog-api](https://github.com/ManageIQ/catalog-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

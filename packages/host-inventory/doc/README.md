@@ -1,6 +1,4 @@
-[@redhat-cloud-services/host-inventory-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/host-inventory-client
+@redhat-cloud-services/host-inventory-client / [Exports](modules.md)
 
 # Javascript client for Inventory API
 If you want to use [RedHatInsights/insights-host-inventory](https://github.com/RedHatInsights/insights-host-inventory) you shouldn't use get requests directly, but rather use this client to integrate with this service.

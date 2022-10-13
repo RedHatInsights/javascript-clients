@@ -1,6 +1,4 @@
-[@redhat-cloud-services/entitlements-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/entitlements-client
+@redhat-cloud-services/entitlements-client / [Exports](modules.md)
 
 # Javascript client for Inventory API
 If you want to use [RedHatInsights/entitlements-api](https://github.com/RedHatInsights/entitlements-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

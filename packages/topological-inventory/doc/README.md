@@ -1,6 +1,4 @@
-[@redhat-cloud-services/topological-inventory-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/topological-inventory-client
+@redhat-cloud-services/topological-inventory-client / [Exports](modules.md)
 
 # Javascript client for Topological inventory API
 If you want to use [ManageIQ/topological-inventory-api](https://github.com/ManageIQ/https://github.com/ManageIQ/topological_inventory-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.

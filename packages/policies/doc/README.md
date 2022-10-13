@@ -1,6 +1,4 @@
-[@redhat-cloud-services/policies-client](README.md) › [Globals](globals.md)
-
-# @redhat-cloud-services/policies-client
+@redhat-cloud-services/policies-client / [Exports](modules.md)
 
 # Javascript Clients
 Auto generated Javascript clients for swagger API
@@ -31,5 +29,5 @@ Please do not copy your swagger definition file to this repository as that would
 
 ### Building all clients
 Run these commands from root folder
-* To install all dependencies in all packages run `npm run bootstrap`
+* To install all dependencies in all packages run `npm install`
 * To build all packages run `npm run generate` - this will generete code from swagger files, builds them and generates doc
