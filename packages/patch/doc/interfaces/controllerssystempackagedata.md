@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:1540](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1540)*
+*Defined in [api.ts:1540](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1540)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [api.ts:1546](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1546)*
+*Defined in [api.ts:1546](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1546)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -47,7 +47,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1552)*
+*Defined in [api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1552)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -57,7 +57,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1558)*
+*Defined in [api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1558)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -67,7 +67,7 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [api.ts:1564](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1564)*
+*Defined in [api.ts:1564](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1564)*
 
 **`memberof`** ControllersSystemPackageData
 
@@ -77,6 +77,6 @@ ___
 
 • **updates**? : *Array‹[ModelsPackageUpdate](modelspackageupdate.md)›*
 
-*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/daadefd7/packages/patch/api.ts#L1570)*
+*Defined in [api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/898b2150/packages/patch/api.ts#L1570)*
 
 **`memberof`** ControllersSystemPackageData

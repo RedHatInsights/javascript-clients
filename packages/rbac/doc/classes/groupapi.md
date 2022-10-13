@@ -257,7 +257,7 @@ ___
 
 ###  getPrincipalsFromGroup
 
-▸ **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "username", `usernameOnly?`: "true" | "false", `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
+▸ **getPrincipalsFromGroup**(`uuid`: string, `principalUsername?`: string, `limit?`: number, `offset?`: number, `orderBy?`: "username", `usernameOnly?`: boolean, `options?`: any): *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*
 
 *Defined in [api.ts:4155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4155)*
 
@@ -278,7 +278,7 @@ Name | Type | Description |
 `limit?` | number | - |
 `offset?` | number | - |
 `orderBy?` | "username" | - |
-`usernameOnly?` | "true" &#124; "false" | - |
+`usernameOnly?` | boolean | - |
 `options?` | any | - |
 
 **Returns:** *Promise‹AxiosResponse‹[PrincipalPagination](../interfaces/principalpagination.md)››*

@@ -26,13 +26,10 @@ DefaultApi - object-oriented interface
 
 ### Methods
 
-* [getCurrentState](defaultapi.md#getcurrentstate)
-* [getPlaybookById](defaultapi.md#getplaybookbyid)
-* [getPlaybookPreview](defaultapi.md#getplaybookpreview)
-* [getStateById](defaultapi.md#getstatebyid)
-* [getStates](defaultapi.md#getstates)
-* [postManage](defaultapi.md#postmanage)
-* [updateStates](defaultapi.md#updatestates)
+* [createProfile](defaultapi.md#createprofile)
+* [getPlaybook](defaultapi.md#getplaybook)
+* [getProfile](defaultapi.md#getprofile)
+* [getProfiles](defaultapi.md#getprofiles)
 
 ## Constructors
 
@@ -86,13 +83,15 @@ ___
 
 ## Methods
 
-###  getCurrentState
+###  createProfile
 
-▸ **getCurrentState**(`options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
+▸ **createProfile**(`inlineObject`: [InlineObject](../interfaces/inlineobject.md), `options?`: any): *Promise‹AxiosResponse‹[Profile](../interfaces/profile.md)››*
 
-*Defined in [api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L674)*
+*Defined in [api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L452)*
 
-**`summary`** Get the current state for requesting account
+Create and optionally activate a new profile.
+
+**`summary`** Create a new profile
 
 **`throws`** {RequiredError}
 
@@ -102,19 +101,22 @@ ___
 
 Name | Type |
 ------ | ------ |
+`inlineObject` | [InlineObject](../interfaces/inlineobject.md) |
 `options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
+**Returns:** *Promise‹AxiosResponse‹[Profile](../interfaces/profile.md)››*
 
 ___
 
-###  getPlaybookById
+###  getPlaybook
 
-▸ **getPlaybookById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹string››*
+▸ **getPlaybook**(`profileId`: string, `options?`: any): *Promise‹AxiosResponse‹object››*
 
-*Defined in [api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L686)*
+*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L464)*
 
-**`summary`** Get ansible playbook for current state configuration
+Constructs and returns a Ansible playbook suitable to configure a host for the requested profile.
+
+**`summary`** Retrieve an Ansible playbook for the requested profile
 
 **`throws`** {RequiredError}
 
@@ -122,22 +124,24 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`id` | string | state archive identifier |
-`options?` | any | - |
+Name | Type |
+------ | ------ |
+`profileId` | string |
+`options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹string››*
+**Returns:** *Promise‹AxiosResponse‹object››*
 
 ___
 
-###  getPlaybookPreview
+###  getProfile
 
-▸ **getPlaybookPreview**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹string››*
+▸ **getProfile**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[Profile](../interfaces/profile.md)››*
 
-*Defined in [api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L698)*
+*Defined in [api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L476)*
 
-**`summary`** Get a preview of the playbook built from the provided state map
+Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.
+
+**`summary`** Get a specific profile
 
 **`throws`** {RequiredError}
 
@@ -145,45 +149,24 @@ ___
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`state` | [State](../interfaces/state.md) | State map used to generate a preview playbook |
-`options?` | any | - |
+Name | Type |
+------ | ------ |
+`id` | string |
+`options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹string››*
-
-___
-
-###  getStateById
-
-▸ **getStateById**(`id`: string, `options?`: any): *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
-
-*Defined in [api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L710)*
-
-**`summary`** Get single state change for requesting account
-
-**`throws`** {RequiredError}
-
-**`memberof`** DefaultApi
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`id` | string | state archive identifier |
-`options?` | any | - |
-
-**Returns:** *Promise‹AxiosResponse‹[StateArchive](../interfaces/statearchive.md)››*
+**Returns:** *Promise‹AxiosResponse‹[Profile](../interfaces/profile.md)››*
 
 ___
 
-###  getStates
+###  getProfiles
 
-▸ **getStates**(`limit?`: number, `offset?`: number, `sortBy?`: "created_at" | "created_at:asc" | "created_at:desc", `options?`: any): *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
+▸ **getProfiles**(`limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
 
-*Defined in [api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L724)*
+*Defined in [api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L489)*
 
-**`summary`** Get archive of state changes for requesting account
+Retrieve a paginated array of profiles for the identified account. The URL query parameters \'limit\' and \'offset\' can be used to paginate the results. The default value of \'limit\' is 50. The default value of \'offset\' is 0.
+
+**`summary`** Get a list of all profiles
 
 **`throws`** {RequiredError}
 
@@ -195,55 +178,6 @@ Name | Type |
 ------ | ------ |
 `limit?` | number |
 `offset?` | number |
-`sortBy?` | "created_at" &#124; "created_at:asc" &#124; "created_at:desc" |
 `options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹[StateArchives](../interfaces/statearchives.md)››*
-
-___
-
-###  postManage
-
-▸ **postManage**(`body?`: boolean, `options?`: any): *Promise‹AxiosResponse‹void››*
-
-*Defined in [api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L736)*
-
-Send an HTTP POST method to this path to enable or disable automatic management of remote hosts. The request body must be set to either `true` or `false`.
-
-**`summary`** Enable or disable automatic state management of remote hosts
-
-**`throws`** {RequiredError}
-
-**`memberof`** DefaultApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`body?` | boolean |
-`options?` | any |
-
-**Returns:** *Promise‹AxiosResponse‹void››*
-
-___
-
-###  updateStates
-
-▸ **updateStates**(`state`: [State](../interfaces/state.md), `options?`: any): *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
-
-*Defined in [api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L748)*
-
-**`summary`** Update and roll out configuration state for requesting account
-
-**`throws`** {RequiredError}
-
-**`memberof`** DefaultApi
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`state` | [State](../interfaces/state.md) | State map that needs to be updated |
-`options?` | any | - |
-
-**Returns:** *Promise‹AxiosResponse‹[AccountState](../interfaces/accountstate.md)››*
+**Returns:** *Promise‹AxiosResponse‹[InlineResponse200](../interfaces/inlineresponse200.md)››*
