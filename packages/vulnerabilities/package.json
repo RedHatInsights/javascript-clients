@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/vulnerabilities-client",
-    "version": "1.0.113",
+    "version": "1.0.114",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
