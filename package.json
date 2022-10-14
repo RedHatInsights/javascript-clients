@@ -13,7 +13,8 @@
     "doc": "npm run doc --workspaces",
     "build": "npm run build --workspaces",
     "generate:prod": "npm run generate:prod --workspaces",
-    "release:bot": "node config/release.js"
+    "release:bot": "node config/release.js",
+    "test": "exit 0"
   },
   "workspaces": [
     "packages/*"

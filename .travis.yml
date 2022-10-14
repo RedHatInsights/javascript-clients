@@ -9,8 +9,10 @@ before_install:
  - nvm install 17
 install:
  - npm ci
-script:
+before_script:
  - npm run build
+script:
+ - npm run test
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
