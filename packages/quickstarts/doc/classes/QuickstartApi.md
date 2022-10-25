@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### quickstartsGet
 
-▸ **quickstartsGet**(`options?`): `Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md)\>\>
+▸ **quickstartsGet**(`bundle?`, `application?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md)\>\>
 
 **`Summary`**
 
@@ -113,6 +113,10 @@ QuickstartApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `bundle?` | `string` | If set, content is associated with a specific CRC bundle |
+| `application?` | `string` | If set, content is associated with a specific CRC application |
+| `limit?` | `number` | Pagination limit |
+| `offset?` | `number` | Pagination offset |
 | `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
@@ -121,13 +125,13 @@ QuickstartApi
 
 #### Defined in
 
-[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L567)
+[api.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L630)
 
 ___
 
 ### quickstartsIdGet
 
-▸ **quickstartsIdGet**(`options?`): `Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md)\>\>
+▸ **quickstartsIdGet**(`id`, `options?`): `Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md)\>\>
 
 **`Summary`**
 
@@ -143,6 +147,7 @@ QuickstartApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `id` | `number` | identifier |
 | `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
@@ -151,4 +156,4 @@ QuickstartApi
 
 #### Defined in
 
-[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L578)
+[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L642)

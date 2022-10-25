@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### helptopicsGet
 
-▸ **helptopicsGet**(`options?`): `Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md)\>\>
+▸ **helptopicsGet**(`bundle?`, `application?`, `name?`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md)\>\>
 
 **`Summary`**
 
@@ -113,6 +113,9 @@ HelptopicApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `bundle?` | `string` | If set, content is associated with a specific CRC bundle |
+| `application?` | `string` | If set, content is associated with a specific CRC application |
+| `name?` | `string` | Search content by name |
 | `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
@@ -121,13 +124,13 @@ HelptopicApi
 
 #### Defined in
 
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L409)
+[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L433)
 
 ___
 
 ### helptopicsNameGet
 
-▸ **helptopicsNameGet**(`options?`): `Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md)\>\>
+▸ **helptopicsNameGet**(`name`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md)\>\>
 
 **`Summary`**
 
@@ -143,6 +146,7 @@ HelptopicApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `name` | `string` | identifier |
 | `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
@@ -151,4 +155,4 @@ HelptopicApi
 
 #### Defined in
 
-[api.ts:420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L420)
+[api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L445)

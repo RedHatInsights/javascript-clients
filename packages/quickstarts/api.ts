@@ -106,10 +106,10 @@ export interface V1HelpTopic {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1HelpTopic
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {string}
@@ -142,12 +142,6 @@ export interface V1HelpTopic {
     'updatedAt'?: string;
 }
 /**
- * @type V1HelpTopicDeletedAt
- * @export
- */
-export type V1HelpTopicDeletedAt = null | string;
-
-/**
  *
  * @export
  * @interface V1HelpTopicTagsInner
@@ -161,10 +155,10 @@ export interface V1HelpTopicTagsInner {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1HelpTopicTagsInner
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {number}
@@ -210,10 +204,10 @@ export interface V1Quickstart {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1Quickstart
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {number}
@@ -274,10 +268,13 @@ export const HelptopicApiAxiosParamCreator = function (configuration?: Configura
         /**
          *
          * @summary Returns list of all help topics
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {string} [name] Search content by name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        helptopicsGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        helptopicsGet: async (bundle?: string, application?: string, name?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/helptopics`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -289,6 +286,18 @@ export const HelptopicApiAxiosParamCreator = function (configuration?: Configura
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (bundle !== undefined) {
+                localVarQueryParameter['bundle'] = bundle;
+            }
+
+            if (application !== undefined) {
+                localVarQueryParameter['application'] = application;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
+            }
 
 
 
@@ -304,11 +313,15 @@ export const HelptopicApiAxiosParamCreator = function (configuration?: Configura
         /**
          *
          * @summary Return a help topics set by topic name
+         * @param {string} name identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        helptopicsNameGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/helptopics/{name}`;
+        helptopicsNameGet: async (name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'name' is not null or undefined
+            assertParamExists('helptopicsNameGet', 'name', name)
+            const localVarPath = `/helptopics/{name}`
+                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -344,21 +357,25 @@ export const HelptopicApiFp = function(configuration?: Configuration) {
         /**
          *
          * @summary Returns list of all help topics
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {string} [name] Search content by name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async helptopicsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsGet(options);
+        async helptopicsGet(bundle?: string, application?: string, name?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsGet(bundle, application, name, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          *
          * @summary Return a help topics set by topic name
+         * @param {string} name identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async helptopicsNameGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsNameGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsNameGet(options);
+        async helptopicsNameGet(name: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsNameGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsNameGet(name, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -374,20 +391,24 @@ export const HelptopicApiFactory = function (configuration?: Configuration, base
         /**
          *
          * @summary Returns list of all help topics
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {string} [name] Search content by name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        helptopicsGet(options?: any): AxiosPromise<HelptopicsGet200Response> {
-            return localVarFp.helptopicsGet(options).then((request) => request(axios, basePath));
+        helptopicsGet(bundle?: string, application?: string, name?: string, options?: any): AxiosPromise<HelptopicsGet200Response> {
+            return localVarFp.helptopicsGet(bundle, application, name, options).then((request) => request(axios, basePath));
         },
         /**
          *
          * @summary Return a help topics set by topic name
+         * @param {string} name identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        helptopicsNameGet(options?: any): AxiosPromise<HelptopicsNameGet200Response> {
-            return localVarFp.helptopicsNameGet(options).then((request) => request(axios, basePath));
+        helptopicsNameGet(name: string, options?: any): AxiosPromise<HelptopicsNameGet200Response> {
+            return localVarFp.helptopicsNameGet(name, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -402,23 +423,27 @@ export class HelptopicApi extends BaseAPI {
     /**
      *
      * @summary Returns list of all help topics
+     * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+     * @param {string} [application] If set, content is associated with a specific CRC application
+     * @param {string} [name] Search content by name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HelptopicApi
      */
-    public helptopicsGet(options?: AxiosRequestConfig) {
-        return HelptopicApiFp(this.configuration).helptopicsGet(options).then((request) => request(this.axios, this.basePath));
+    public helptopicsGet(bundle?: string, application?: string, name?: string, options?: AxiosRequestConfig) {
+        return HelptopicApiFp(this.configuration).helptopicsGet(bundle, application, name, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      *
      * @summary Return a help topics set by topic name
+     * @param {string} name identifier
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HelptopicApi
      */
-    public helptopicsNameGet(options?: AxiosRequestConfig) {
-        return HelptopicApiFp(this.configuration).helptopicsNameGet(options).then((request) => request(this.axios, this.basePath));
+    public helptopicsNameGet(name: string, options?: AxiosRequestConfig) {
+        return HelptopicApiFp(this.configuration).helptopicsNameGet(name, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -432,10 +457,14 @@ export const QuickstartApiAxiosParamCreator = function (configuration?: Configur
         /**
          *
          * @summary Returns list of all quickstarts
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {number} [limit] Pagination limit
+         * @param {number} [offset] Pagination offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quickstartsGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        quickstartsGet: async (bundle?: string, application?: string, limit?: number, offset?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/quickstarts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -447,6 +476,22 @@ export const QuickstartApiAxiosParamCreator = function (configuration?: Configur
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (bundle !== undefined) {
+                localVarQueryParameter['bundle'] = bundle;
+            }
+
+            if (application !== undefined) {
+                localVarQueryParameter['application'] = application;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
 
 
 
@@ -462,11 +507,15 @@ export const QuickstartApiAxiosParamCreator = function (configuration?: Configur
         /**
          *
          * @summary Return a quickstarts by ID
+         * @param {number} id identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quickstartsIdGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/quickstarts/{id}`;
+        quickstartsIdGet: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('quickstartsIdGet', 'id', id)
+            const localVarPath = `/quickstarts/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -502,21 +551,26 @@ export const QuickstartApiFp = function(configuration?: Configuration) {
         /**
          *
          * @summary Returns list of all quickstarts
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {number} [limit] Pagination limit
+         * @param {number} [offset] Pagination offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async quickstartsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuickstartsGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsGet(options);
+        async quickstartsGet(bundle?: string, application?: string, limit?: number, offset?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuickstartsGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsGet(bundle, application, limit, offset, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          *
          * @summary Return a quickstarts by ID
+         * @param {number} id identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async quickstartsIdGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<V1Quickstart>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsIdGet(options);
+        async quickstartsIdGet(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<V1Quickstart>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsIdGet(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -532,20 +586,25 @@ export const QuickstartApiFactory = function (configuration?: Configuration, bas
         /**
          *
          * @summary Returns list of all quickstarts
+         * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+         * @param {string} [application] If set, content is associated with a specific CRC application
+         * @param {number} [limit] Pagination limit
+         * @param {number} [offset] Pagination offset
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quickstartsGet(options?: any): AxiosPromise<QuickstartsGet200Response> {
-            return localVarFp.quickstartsGet(options).then((request) => request(axios, basePath));
+        quickstartsGet(bundle?: string, application?: string, limit?: number, offset?: number, options?: any): AxiosPromise<QuickstartsGet200Response> {
+            return localVarFp.quickstartsGet(bundle, application, limit, offset, options).then((request) => request(axios, basePath));
         },
         /**
          *
          * @summary Return a quickstarts by ID
+         * @param {number} id identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quickstartsIdGet(options?: any): AxiosPromise<V1Quickstart> {
-            return localVarFp.quickstartsIdGet(options).then((request) => request(axios, basePath));
+        quickstartsIdGet(id: number, options?: any): AxiosPromise<V1Quickstart> {
+            return localVarFp.quickstartsIdGet(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -560,23 +619,28 @@ export class QuickstartApi extends BaseAPI {
     /**
      *
      * @summary Returns list of all quickstarts
+     * @param {string} [bundle] If set, content is associated with a specific CRC bundle
+     * @param {string} [application] If set, content is associated with a specific CRC application
+     * @param {number} [limit] Pagination limit
+     * @param {number} [offset] Pagination offset
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuickstartApi
      */
-    public quickstartsGet(options?: AxiosRequestConfig) {
-        return QuickstartApiFp(this.configuration).quickstartsGet(options).then((request) => request(this.axios, this.basePath));
+    public quickstartsGet(bundle?: string, application?: string, limit?: number, offset?: number, options?: AxiosRequestConfig) {
+        return QuickstartApiFp(this.configuration).quickstartsGet(bundle, application, limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      *
      * @summary Return a quickstarts by ID
+     * @param {number} id identifier
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuickstartApi
      */
-    public quickstartsIdGet(options?: AxiosRequestConfig) {
-        return QuickstartApiFp(this.configuration).quickstartsIdGet(options).then((request) => request(this.axios, this.basePath));
+    public quickstartsIdGet(id: number, options?: AxiosRequestConfig) {
+        return QuickstartApiFp(this.configuration).quickstartsIdGet(id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

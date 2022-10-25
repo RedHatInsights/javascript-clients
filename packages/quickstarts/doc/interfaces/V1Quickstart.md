@@ -32,7 +32,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L204)
+[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L198)
 
 ___
 
@@ -46,7 +46,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L210)
+[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L204)
 
 ___
 
@@ -60,7 +60,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L216)
+[api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L210)
 
 ___
 
@@ -74,7 +74,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L222)
+[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L216)
 
 ___
 
@@ -88,7 +88,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L228)
+[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L222)
 
 ___
 
@@ -102,7 +102,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L234)
+[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L228)
 
 ___
 
@@ -116,4 +116,4 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L240)
+[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L234)
