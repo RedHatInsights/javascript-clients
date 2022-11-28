@@ -27,7 +27,7 @@ RemediationConnectionStatus
 
 #### Defined in
 
-[api.ts:616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L616)
+[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L629)
 
 ___
 
@@ -41,4 +41,4 @@ RemediationConnectionStatus
 
 #### Defined in
 
-[api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L610)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L623)

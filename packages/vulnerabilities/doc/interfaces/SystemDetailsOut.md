@@ -27,7 +27,7 @@ SystemDetailsOut
 
 #### Defined in
 
-[api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2337)
+[api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2343)
 
 ___
 
@@ -41,4 +41,4 @@ SystemDetailsOut
 
 #### Defined in
 
-[api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2343)
+[api.ts:2349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2349)

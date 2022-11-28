@@ -27,7 +27,7 @@ PlaybookRunsList
 
 #### Defined in
 
-[api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L591)
+[api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L604)
 
 ___
 
@@ -41,4 +41,4 @@ PlaybookRunsList
 
 #### Defined in
 
-[api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L597)
+[api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L610)

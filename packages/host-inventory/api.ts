@@ -1161,11 +1161,23 @@ export interface SystemProfile {
      */
     os_kernel_version?: string;
     /**
+     * Release name of the system distribution (from yum/dnf)
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    releasever?: string;
+    /**
      *
      * @type {string}
      * @memberof SystemProfile
      */
     arch?: string;
+    /**
+     * The architecture family (from yum/dnf)
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    basearch?: string;
     /**
      *
      * @type {Array<string>}
@@ -1281,6 +1293,12 @@ export interface SystemProfile {
      */
     enabled_services?: Array<string>;
     /**
+     *
+     * @type {SystemProfileSap}
+     * @memberof SystemProfile
+     */
+    sap?: SystemProfileSap;
+    /**
      * Indicates if SAP is installed on the system
      * @type {boolean}
      * @memberof SystemProfile
@@ -1376,6 +1394,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     mssql?: SystemProfileMssql;
+    /**
+     * System update method
+     * @type {string}
+     * @memberof SystemProfile
+     */
+    system_update_method?: SystemProfileSystemUpdateMethodEnum;
 }
 
 /**
@@ -1401,6 +1425,15 @@ export enum SystemProfileHostTypeEnum {
 export enum SystemProfileGreenbootStatusEnum {
     Red = 'red',
     Green = 'green'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileSystemUpdateMethodEnum {
+    Dnf = 'dnf',
+    RpmOstree = 'rpm-ostree',
+    Yum = 'yum'
 }
 
 /**
@@ -1745,6 +1778,37 @@ export interface SystemProfileRhsm {
     version?: string;
 }
 /**
+ * Object containing data specific to the SAP workload
+ * @export
+ * @interface SystemProfileSap
+ */
+export interface SystemProfileSap {
+    /**
+     * Indicates if SAP is installed on the system
+     * @type {boolean}
+     * @memberof SystemProfileSap
+     */
+    sap_system?: boolean;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfileSap
+     */
+    sids?: Array<string>;
+    /**
+     * The instance number of the SAP HANA system (a two-digit number between 00 and 99)
+     * @type {string}
+     * @memberof SystemProfileSap
+     */
+    instance_number?: string;
+    /**
+     * The version of the SAP HANA lifecycle management program
+     * @type {string}
+     * @memberof SystemProfileSap
+     */
+    version?: string;
+}
+/**
  *
  * @export
  * @interface SystemProfileSapSystemOut
@@ -1878,6 +1942,12 @@ export interface SystemProfileYumRepo {
      * @memberof SystemProfileYumRepo
      */
     base_url?: string;
+    /**
+     * URL of a mirrorlist for the repository
+     * @type {string}
+     * @memberof SystemProfileYumRepo
+     */
+    mirrorlist?: string;
 }
 /**
  *
@@ -2015,6 +2085,12 @@ export interface YumRepo {
      * @memberof YumRepo
      */
     base_url?: string;
+    /**
+     * URL of a mirrorlist for the repository
+     * @type {string}
+     * @memberof YumRepo
+     */
+    mirrorlist?: string;
 }
 
 /**

@@ -30,4 +30,4 @@ SystemProfileMssql
 
 #### Defined in
 
-[api.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1579)
+[api.ts:1612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1612)

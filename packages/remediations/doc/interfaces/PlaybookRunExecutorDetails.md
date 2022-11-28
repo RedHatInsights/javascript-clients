@@ -32,7 +32,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L414)
+[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L427)
 
 ___
 
@@ -46,7 +46,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L408)
+[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L421)
 
 ___
 
@@ -60,7 +60,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L396)
+[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L409)
 
 ___
 
@@ -74,7 +74,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L390)
+[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L403)
 
 ___
 
@@ -88,7 +88,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L402)
+[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L415)
 
 ___
 
@@ -102,7 +102,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L426)
+[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L439)
 
 ___
 
@@ -116,4 +116,4 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L420)
+[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L433)

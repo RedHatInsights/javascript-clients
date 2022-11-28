@@ -28,7 +28,7 @@ UserOut
 
 #### Defined in
 
-[api.ts:1188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1188)
+[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1214)
 
 ___
 
@@ -42,7 +42,7 @@ UserOut
 
 #### Defined in
 
-[api.ts:1194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1194)
+[api.ts:1220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1220)
 
 ___
 
@@ -56,4 +56,4 @@ UserOut
 
 #### Defined in
 
-[api.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1182)
+[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1208)

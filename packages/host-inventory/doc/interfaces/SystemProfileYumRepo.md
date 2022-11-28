@@ -18,6 +18,7 @@ SystemProfileYumRepo
 - [enabled](SystemProfileYumRepo.md#enabled)
 - [gpgcheck](SystemProfileYumRepo.md#gpgcheck)
 - [id](SystemProfileYumRepo.md#id)
+- [mirrorlist](SystemProfileYumRepo.md#mirrorlist)
 - [name](SystemProfileYumRepo.md#name)
 
 ## Properties
@@ -32,7 +33,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1880)
+[api.ts:1944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1944)
 
 ___
 
@@ -46,7 +47,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1874)
+[api.ts:1938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1938)
 
 ___
 
@@ -60,7 +61,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1868)
+[api.ts:1932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1932)
 
 ___
 
@@ -74,7 +75,23 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1856)
+[api.ts:1920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1920)
+
+___
+
+### mirrorlist
+
+• `Optional` **mirrorlist**: `string`
+
+URL of a mirrorlist for the repository
+
+**`Memberof`**
+
+SystemProfileYumRepo
+
+#### Defined in
+
+[api.ts:1950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1950)
 
 ___
 
@@ -88,4 +105,4 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1862)
+[api.ts:1926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1926)
