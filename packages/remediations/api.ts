@@ -135,6 +135,19 @@ export interface Meta {
 /**
  *
  * @export
+ * @interface MultipleDelete
+ */
+export interface MultipleDelete {
+    /**
+     * Count of remediations deleted
+     * @type {number}
+     * @memberof MultipleDelete
+     */
+    deleted_count?: number;
+}
+/**
+ *
+ * @export
  * @interface PlaybookDefinition
  */
 export interface PlaybookDefinition {
@@ -1008,6 +1021,19 @@ export interface RemediationListLinks {
 /**
  *
  * @export
+ * @interface RemediationsList
+ */
+export interface RemediationsList {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof RemediationsList
+     */
+    remediation_ids: Array<string>;
+}
+/**
+ *
+ * @export
  * @interface RequestError
  */
 export interface RequestError {
@@ -1674,6 +1700,45 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteRemediations: async (remediationsList: RemediationsList, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'remediationsList' is not null or undefined
+            if (remediationsList === null || remediationsList === undefined) {
+                throw new RequiredError('remediationsList','Required parameter remediationsList was null or undefined when calling deleteRemediations.');
+            }
+            const localVarPath = `/remediations`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof remediationsList !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(remediationsList !== undefined ? remediationsList : {}) : (remediationsList || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2398,6 +2463,20 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteRemediations(remediationsList: RemediationsList, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MultipleDelete>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).deleteRemediations(remediationsList, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
          * @summary Download Remediations
          * @param {Array<string>} [selectedRemediations] Selected Remediations for download
@@ -2681,6 +2760,16 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).deleteRemediationIssueSystem(id, issue, system, options).then((request) => request(axios, basePath));
         },
         /**
+         * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteRemediations(remediationsList: RemediationsList, options?: any): AxiosPromise<MultipleDelete> {
+            return RemediationsApiFp(configuration).deleteRemediations(remediationsList, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
          * @summary Download Remediations
          * @param {Array<string>} [selectedRemediations] Selected Remediations for download
@@ -2922,6 +3011,18 @@ export class RemediationsApi extends BaseAPI {
      */
     public deleteRemediationIssueSystem(id: string, issue: string, system: string, options?: any) {
         return RemediationsApiFp(this.configuration).deleteRemediationIssueSystem(id, issue, system, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
+     * @summary Bulk Delete Remediations
+     * @param {RemediationsList} remediationsList
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemediationsApi
+     */
+    public deleteRemediations(remediationsList: RemediationsList, options?: any) {
+        return RemediationsApiFp(this.configuration).deleteRemediations(remediationsList, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

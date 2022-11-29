@@ -26,4 +26,4 @@ PlaybookRunsInput
 
 #### Defined in
 
-[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L578)
+[api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L591)

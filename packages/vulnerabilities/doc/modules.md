@@ -171,7 +171,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2637)
+[api.ts:2643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2643)
 
 ___
 
@@ -226,7 +226,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:5636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5636)
+[api.ts:5642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5642)
 
 ___
 
@@ -279,4 +279,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5037)
+[api.ts:5043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5043)

@@ -18,6 +18,7 @@ YumRepo
 - [enabled](YumRepo.md#enabled)
 - [gpgcheck](YumRepo.md#gpgcheck)
 - [id](YumRepo.md#id)
+- [mirrorlist](YumRepo.md#mirrorlist)
 - [name](YumRepo.md#name)
 
 ## Properties
@@ -32,7 +33,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2017)
+[api.ts:2087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2087)
 
 ___
 
@@ -46,7 +47,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2011)
+[api.ts:2081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2081)
 
 ___
 
@@ -60,7 +61,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2005)
+[api.ts:2075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2075)
 
 ___
 
@@ -74,7 +75,23 @@ YumRepo
 
 #### Defined in
 
-[api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1993)
+[api.ts:2063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2063)
+
+___
+
+### mirrorlist
+
+• `Optional` **mirrorlist**: `string`
+
+URL of a mirrorlist for the repository
+
+**`Memberof`**
+
+YumRepo
+
+#### Defined in
+
+[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2093)
 
 ___
 
@@ -88,4 +105,4 @@ YumRepo
 
 #### Defined in
 
-[api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1999)
+[api.ts:2069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2069)

@@ -28,4 +28,4 @@ StatusListOutMeta
 
 #### Defined in
 
-[api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2236)
+[api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2242)

@@ -28,7 +28,7 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2436)
+[api.ts:2442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2442)
 
 ___
 
@@ -42,7 +42,7 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2442)
+[api.ts:2448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2448)
 
 ___
 
@@ -56,4 +56,4 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2448)
+[api.ts:2454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2454)

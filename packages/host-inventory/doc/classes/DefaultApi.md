@@ -126,4 +126,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:2157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2157)
+[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2233)

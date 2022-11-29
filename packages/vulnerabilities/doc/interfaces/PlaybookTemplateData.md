@@ -14,6 +14,7 @@ PlaybookTemplateData
 
 - [description](PlaybookTemplateData.md#description)
 - [play](PlaybookTemplateData.md#play)
+- [reboot\_required](PlaybookTemplateData.md#reboot_required)
 - [version](PlaybookTemplateData.md#version)
 
 ## Properties
@@ -50,6 +51,22 @@ PlaybookTemplateData
 
 ___
 
+### reboot\_required
+
+• `Optional` **reboot\_required**: `boolean`
+
+Indicator whter reboot is required to mitigate vulnerability.
+
+**`Memberof`**
+
+PlaybookTemplateData
+
+#### Defined in
+
+[api.ts:2154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2154)
+
+___
+
 ### version
 
 • **version**: `string`
@@ -62,4 +79,4 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2154)
+[api.ts:2160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2160)

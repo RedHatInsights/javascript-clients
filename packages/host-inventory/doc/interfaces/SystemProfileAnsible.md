@@ -33,7 +33,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:1429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1429)
+[api.ts:1462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1462)
 
 ___
 
@@ -49,7 +49,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1417)
+[api.ts:1450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1450)
 
 ___
 
@@ -65,7 +65,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:1423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1423)
+[api.ts:1456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1456)
 
 ___
 
@@ -81,4 +81,4 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1435)
+[api.ts:1468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1468)

@@ -26,4 +26,4 @@ RemediationCreated
 
 #### Defined in
 
-[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L629)
+[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L642)

@@ -30,7 +30,7 @@ RemediationIssue
 
 #### Defined in
 
-[api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L796)
+[api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L809)
 
 ___
 
@@ -44,7 +44,7 @@ RemediationIssue
 
 #### Defined in
 
-[api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L790)
+[api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L803)
 
 ___
 
@@ -58,7 +58,7 @@ RemediationIssue
 
 #### Defined in
 
-[api.ts:802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L802)
+[api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L815)
 
 ___
 
@@ -74,7 +74,7 @@ RemediationIssue
 
 #### Defined in
 
-[api.ts:808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L808)
+[api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L821)
 
 ___
 
@@ -88,4 +88,4 @@ RemediationIssue
 
 #### Defined in
 
-[api.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L814)
+[api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L827)

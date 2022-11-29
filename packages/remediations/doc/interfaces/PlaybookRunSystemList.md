@@ -27,7 +27,7 @@ PlaybookRunSystemList
 
 #### Defined in
 
-[api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L509)
+[api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L522)
 
 ___
 
@@ -41,4 +41,4 @@ PlaybookRunSystemList
 
 #### Defined in
 
-[api.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L515)
+[api.ts:528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L528)
