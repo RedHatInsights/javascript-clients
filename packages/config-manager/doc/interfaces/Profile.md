@@ -29,6 +29,8 @@ Profile
 
 • `Optional` **account\_id**: `string`
 
+Red Hat account number
+
 **`Memberof`**
 
 Profile
@@ -42,6 +44,8 @@ ___
 ### active
 
 • `Optional` **active**: `boolean`
+
+Remote host configuration enabled state
 
 **`Memberof`**
 
@@ -57,6 +61,8 @@ ___
 
 • `Optional` **compliance**: `boolean`
 
+Remote configuration status for running Compliance data collection
+
 **`Memberof`**
 
 Profile
@@ -70,6 +76,8 @@ ___
 ### created\_at
 
 • `Optional` **created\_at**: `string`
+
+Time of profile creation
 
 **`Memberof`**
 
@@ -85,6 +93,8 @@ ___
 
 • `Optional` **creator**: `string`
 
+Username of the profile creator
+
 **`Memberof`**
 
 Profile
@@ -98,6 +108,8 @@ ___
 ### id
 
 • `Optional` **id**: `string`
+
+Profile unique identity value
 
 **`Memberof`**
 
@@ -113,6 +125,8 @@ ___
 
 • `Optional` **insights**: `boolean`
 
+Remote configuration status for running Insights data collection
+
 **`Memberof`**
 
 Profile
@@ -126,6 +140,8 @@ ___
 ### name
 
 • `Optional` **name**: `string`
+
+Descriptive name for the profile
 
 **`Memberof`**
 
@@ -141,6 +157,8 @@ ___
 
 • `Optional` **org\_id**: `string`
 
+Red Hat organization identity value
+
 **`Memberof`**
 
 Profile
@@ -154,6 +172,8 @@ ___
 ### remediations
 
 • `Optional` **remediations**: `boolean`
+
+Remote configuration status for running Remediation playbooks
 
 **`Memberof`**
 

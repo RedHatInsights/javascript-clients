@@ -26,25 +26,25 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
  */
 export interface InlineObject {
     /**
-     *
+     * Remote host configuration enabled state
      * @type {boolean}
      * @memberof InlineObject
      */
     active: boolean;
     /**
-     *
+     * Remote configuration status for running Compliance data collection
      * @type {boolean}
      * @memberof InlineObject
      */
     compliance: boolean;
     /**
-     *
+     * Remote configuration status for running Insights data collection
      * @type {boolean}
      * @memberof InlineObject
      */
     insights: boolean;
     /**
-     *
+     * Remote configuration status for running Remediation playbooks
      * @type {boolean}
      * @memberof InlineObject
      */
@@ -94,61 +94,61 @@ export interface InlineResponse200 {
  */
 export interface Profile {
     /**
-     *
+     * Red Hat account number
      * @type {string}
      * @memberof Profile
      */
     account_id?: string;
     /**
-     *
+     * Remote host configuration enabled state
      * @type {boolean}
      * @memberof Profile
      */
     active?: boolean;
     /**
-     *
+     * Time of profile creation
      * @type {string}
      * @memberof Profile
      */
     created_at?: string;
     /**
-     *
+     * Username of the profile creator
      * @type {string}
      * @memberof Profile
      */
     creator?: string;
     /**
-     *
+     * Descriptive name for the profile
      * @type {string}
      * @memberof Profile
      */
     name?: string;
     /**
-     *
+     * Red Hat organization identity value
      * @type {string}
      * @memberof Profile
      */
     org_id?: string;
     /**
-     *
+     * Profile unique identity value
      * @type {string}
      * @memberof Profile
      */
     id?: string;
     /**
-     *
+     * Remote configuration status for running Compliance data collection
      * @type {boolean}
      * @memberof Profile
      */
     compliance?: boolean;
     /**
-     *
+     * Remote configuration status for running Insights data collection
      * @type {boolean}
      * @memberof Profile
      */
     insights?: boolean;
     /**
-     *
+     * Remote configuration status for running Remediation playbooks
      * @type {boolean}
      * @memberof Profile
      */
