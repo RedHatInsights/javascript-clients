@@ -25,6 +25,8 @@ Please do not copy your swagger definition file to this repository as that would
 }
 ```
 
+test
+
 ### Building all clients
 Run these commands from root folder
 * To install all dependencies in all packages run `npm install`
