@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/entitlements-client",
-    "version": "1.0.116",
+    "version": "1.0.117",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
