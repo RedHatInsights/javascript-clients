@@ -23,6 +23,8 @@ InlineObject
 
 • **active**: `boolean`
 
+Remote host configuration enabled state
+
 **`Memberof`**
 
 InlineObject
@@ -36,6 +38,8 @@ ___
 ### compliance
 
 • **compliance**: `boolean`
+
+Remote configuration status for running Compliance data collection
 
 **`Memberof`**
 
@@ -51,6 +55,8 @@ ___
 
 • **insights**: `boolean`
 
+Remote configuration status for running Insights data collection
+
 **`Memberof`**
 
 InlineObject
@@ -64,6 +70,8 @@ ___
 ### remediations
 
 • **remediations**: `boolean`
+
+Remote configuration status for running Remediation playbooks
 
 **`Memberof`**
 
