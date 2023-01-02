@@ -121,7 +121,7 @@ BaseAPI.configuration
 
 ### getAffectedSystemsByCve
 
-▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md)\>\>
+▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md), `any`\>\>
 
 Report of affected systems for a given CVE.
 
@@ -169,7 +169,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -179,7 +179,7 @@ ___
 
 ### getAffectedSystemsIdsByCve
 
-▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md)\>\>
+▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md), `any`\>\>
 
 Report of IDs of affected systems for a given CVE.
 
@@ -226,7 +226,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -236,7 +236,7 @@ ___
 
 ### getAnnouncement
 
-▸ **getAnnouncement**(`options?`): `Promise`<`AxiosResponse`<[`AnnouncementOut`](../interfaces/AnnouncementOut.md)\>\>
+▸ **getAnnouncement**(`options?`): `Promise`<`AxiosResponse`<[`AnnouncementOut`](../interfaces/AnnouncementOut.md), `any`\>\>
 
 Get announcement shown above CVEs list.
 
@@ -258,7 +258,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AnnouncementOut`](../interfaces/AnnouncementOut.md)\>\>
+`Promise`<`AxiosResponse`<[`AnnouncementOut`](../interfaces/AnnouncementOut.md), `any`\>\>
 
 #### Defined in
 
@@ -268,7 +268,7 @@ ___
 
 ### getApiStatus
 
-▸ **getApiStatus**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **getApiStatus**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Checks database availability and API response threshold time.
 
@@ -290,7 +290,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -300,7 +300,7 @@ ___
 
 ### getBusinessRiskList
 
-▸ **getBusinessRiskList**(`options?`): `Promise`<`AxiosResponse`<[`BusinessRiskListOut`](../interfaces/BusinessRiskListOut.md)\>\>
+▸ **getBusinessRiskList**(`options?`): `Promise`<`AxiosResponse`<[`BusinessRiskListOut`](../interfaces/BusinessRiskListOut.md), `any`\>\>
 
 Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
 
@@ -322,7 +322,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`BusinessRiskListOut`](../interfaces/BusinessRiskListOut.md)\>\>
+`Promise`<`AxiosResponse`<[`BusinessRiskListOut`](../interfaces/BusinessRiskListOut.md), `any`\>\>
 
 #### Defined in
 
@@ -332,7 +332,7 @@ ___
 
 ### getCveDetails
 
-▸ **getCveDetails**(`cveId`, `showAdvisoriesDetails?`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md)\>\>
+▸ **getCveDetails**(`cveId`, `showAdvisoriesDetails?`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md), `any`\>\>
 
 Show all information about given CVE.
 
@@ -356,7 +356,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md)\>\>
+`Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md), `any`\>\>
 
 #### Defined in
 
@@ -366,7 +366,7 @@ ___
 
 ### getCveIdsBySystem
 
-▸ **getCveIdsBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesIdsOut`](../interfaces/SystemCvesIdsOut.md)\>\>
+▸ **getCveIdsBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesIdsOut`](../interfaces/SystemCvesIdsOut.md), `any`\>\>
 
 Shows IDs of all CVEs the system is exposed to.
 
@@ -412,7 +412,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemCvesIdsOut`](../interfaces/SystemCvesIdsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemCvesIdsOut`](../interfaces/SystemCvesIdsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -422,7 +422,7 @@ ___
 
 ### getCveIdsList
 
-▸ **getCveIdsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md)\>\>
+▸ **getCveIdsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md), `any`\>\>
 
 Overview of vulnerabilities IDs across whole host inventory.
 
@@ -467,7 +467,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -477,7 +477,7 @@ ___
 
 ### getCveList
 
-▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md)\>\>
+▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md), `any`\>\>
 
 Overview of vulnerabilities across whole host inventory.
 
@@ -524,7 +524,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md)\>\>
+`Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md), `any`\>\>
 
 #### Defined in
 
@@ -534,7 +534,7 @@ ___
 
 ### getCveListBySystem
 
-▸ **getCveListBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesOut`](../interfaces/SystemCvesOut.md)\>\>
+▸ **getCveListBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesOut`](../interfaces/SystemCvesOut.md), `any`\>\>
 
 Shows detailed information about all CVEs the system is exposed to.
 
@@ -581,7 +581,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemCvesOut`](../interfaces/SystemCvesOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemCvesOut`](../interfaces/SystemCvesOut.md), `any`\>\>
 
 #### Defined in
 
@@ -591,7 +591,7 @@ ___
 
 ### getCveList\_1
 
-▸ **getCveList_1**(`vulnerabilitiesPostIn`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesPostOut`](../interfaces/VulnerabilitiesPostOut.md)\>\>
+▸ **getCveList_1**(`vulnerabilitiesPostIn`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesPostOut`](../interfaces/VulnerabilitiesPostOut.md), `any`\>\>
 
 Overview of vulnerabilities for specific CVEs provided in the body.
 
@@ -620,7 +620,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`VulnerabilitiesPostOut`](../interfaces/VulnerabilitiesPostOut.md)\>\>
+`Promise`<`AxiosResponse`<[`VulnerabilitiesPostOut`](../interfaces/VulnerabilitiesPostOut.md), `any`\>\>
 
 #### Defined in
 
@@ -630,7 +630,7 @@ ___
 
 ### getDashbar
 
-▸ **getDashbar**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`DashbarOut`](../interfaces/DashbarOut.md)\>\>
+▸ **getDashbar**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`DashbarOut`](../interfaces/DashbarOut.md), `any`\>\>
 
 Overview of CVE aggregations used for Dashbar.
 
@@ -657,7 +657,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`DashbarOut`](../interfaces/DashbarOut.md)\>\>
+`Promise`<`AxiosResponse`<[`DashbarOut`](../interfaces/DashbarOut.md), `any`\>\>
 
 #### Defined in
 
@@ -667,7 +667,7 @@ ___
 
 ### getDashboard
 
-▸ **getDashboard**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`Dashboard`](../interfaces/Dashboard.md)\>\>
+▸ **getDashboard**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`Dashboard`](../interfaces/Dashboard.md), `any`\>\>
 
 Returns top level overview of vulnerabilities affecting given account.
 
@@ -694,7 +694,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Dashboard`](../interfaces/Dashboard.md)\>\>
+`Promise`<`AxiosResponse`<[`Dashboard`](../interfaces/Dashboard.md), `any`\>\>
 
 #### Defined in
 
@@ -704,7 +704,7 @@ ___
 
 ### getExecutiveReport
 
-▸ **getExecutiveReport**(`options?`): `Promise`<`AxiosResponse`<[`ExecutiveReport`](../interfaces/ExecutiveReport.md)\>\>
+▸ **getExecutiveReport**(`options?`): `Promise`<`AxiosResponse`<[`ExecutiveReport`](../interfaces/ExecutiveReport.md), `any`\>\>
 
 Returns top level overview of vulnerabilities affecting given account.
 
@@ -726,7 +726,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ExecutiveReport`](../interfaces/ExecutiveReport.md)\>\>
+`Promise`<`AxiosResponse`<[`ExecutiveReport`](../interfaces/ExecutiveReport.md), `any`\>\>
 
 #### Defined in
 
@@ -736,7 +736,7 @@ ___
 
 ### getMitigatedSystemsByCve
 
-▸ **getMitigatedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md)\>\>
+▸ **getMitigatedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
 
 Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
 
@@ -781,7 +781,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -791,7 +791,7 @@ ___
 
 ### getMitigatedSystemsIdsByCve
 
-▸ **getMitigatedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md)\>\>
+▸ **getMitigatedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
 
 Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
 
@@ -836,7 +836,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -846,7 +846,7 @@ ___
 
 ### getPlaybookTemplate
 
-▸ **getPlaybookTemplate**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookTemplate`](../interfaces/PlaybookTemplate.md)\>\>
+▸ **getPlaybookTemplate**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookTemplate`](../interfaces/PlaybookTemplate.md), `any`\>\>
 
 Return Ansible playbook template for given rule id.
 
@@ -869,7 +869,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PlaybookTemplate`](../interfaces/PlaybookTemplate.md)\>\>
+`Promise`<`AxiosResponse`<[`PlaybookTemplate`](../interfaces/PlaybookTemplate.md), `any`\>\>
 
 #### Defined in
 
@@ -879,7 +879,7 @@ ___
 
 ### getStatusList
 
-▸ **getStatusList**(`options?`): `Promise`<`AxiosResponse`<[`StatusListOut`](../interfaces/StatusListOut.md)\>\>
+▸ **getStatusList**(`options?`): `Promise`<`AxiosResponse`<[`StatusListOut`](../interfaces/StatusListOut.md), `any`\>\>
 
 Returns available status and status_id pairs where status_id is internal ID of the status.
 
@@ -901,7 +901,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StatusListOut`](../interfaces/StatusListOut.md)\>\>
+`Promise`<`AxiosResponse`<[`StatusListOut`](../interfaces/StatusListOut.md), `any`\>\>
 
 #### Defined in
 
@@ -911,7 +911,7 @@ ___
 
 ### getSystemDetails
 
-▸ **getSystemDetails**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`SystemDetailsOut`](../interfaces/SystemDetailsOut.md)\>\>
+▸ **getSystemDetails**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`SystemDetailsOut`](../interfaces/SystemDetailsOut.md), `any`\>\>
 
 Provides details of a system, e.g. it\'s opt out status.
 
@@ -934,7 +934,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemDetailsOut`](../interfaces/SystemDetailsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemDetailsOut`](../interfaces/SystemDetailsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -944,7 +944,7 @@ ___
 
 ### getSystemsIds
 
-▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md)\>\>
+▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md), `any`\>\>
 
 List systems IDs visible to logged in account.
 
@@ -982,7 +982,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -992,7 +992,7 @@ ___
 
 ### getSystemsList
 
-▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md)\>\>
+▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md), `any`\>\>
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -1031,7 +1031,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md), `any`\>\>
 
 #### Defined in
 
@@ -1041,7 +1041,7 @@ ___
 
 ### getVersion
 
-▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`VersionOut`](../interfaces/VersionOut.md)\>\>
+▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`VersionOut`](../interfaces/VersionOut.md), `any`\>\>
 
 Get application version.
 
@@ -1063,7 +1063,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`VersionOut`](../interfaces/VersionOut.md)\>\>
+`Promise`<`AxiosResponse`<[`VersionOut`](../interfaces/VersionOut.md), `any`\>\>
 
 #### Defined in
 
@@ -1073,7 +1073,7 @@ ___
 
 ### setCveBusinessRisk
 
-▸ **setCveBusinessRisk**(`cveRiskIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+▸ **setCveBusinessRisk**(`cveRiskIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 Sets business risk for a CVE.
 
@@ -1096,7 +1096,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 #### Defined in
 
@@ -1106,7 +1106,7 @@ ___
 
 ### setCveStatus
 
-▸ **setCveStatus**(`cveStatusIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+▸ **setCveStatus**(`cveStatusIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 Sets status for a CVE.
 
@@ -1129,7 +1129,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 #### Defined in
 
@@ -1139,7 +1139,7 @@ ___
 
 ### setStatus
 
-▸ **setStatus**(`statusIn`, `options?`): `Promise`<`AxiosResponse`<[`StatusOut`](../interfaces/StatusOut.md)\>\>
+▸ **setStatus**(`statusIn`, `options?`): `Promise`<`AxiosResponse`<[`StatusOut`](../interfaces/StatusOut.md), `any`\>\>
 
 Sets status for given hosts and CVEs.
 
@@ -1162,7 +1162,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StatusOut`](../interfaces/StatusOut.md)\>\>
+`Promise`<`AxiosResponse`<[`StatusOut`](../interfaces/StatusOut.md), `any`\>\>
 
 #### Defined in
 
@@ -1172,7 +1172,7 @@ ___
 
 ### setSystemsOptOut
 
-▸ **setSystemsOptOut**(`optOutIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+▸ **setSystemsOptOut**(`optOutIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
 
@@ -1195,7 +1195,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md)\>\>
+`Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
 #### Defined in
 

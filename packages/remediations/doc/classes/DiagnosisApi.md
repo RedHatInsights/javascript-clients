@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getDiagnosis
 
-▸ **getDiagnosis**(`system`, `remediation?`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md)\>\>
+▸ **getDiagnosis**(`system`, `remediation?`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
 
 Provides host-specific diagnosis information
 
@@ -121,7 +121,7 @@ DiagnosisApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md)\>\>
+`Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
 
 #### Defined in
 

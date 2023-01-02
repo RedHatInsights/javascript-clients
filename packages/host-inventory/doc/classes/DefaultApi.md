@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiSystemProfileValidateSchema
 
-▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 
@@ -122,7 +122,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

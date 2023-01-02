@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getVersion
 
-▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
+▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 Provides information about the version of the service
 
@@ -118,7 +118,7 @@ VersionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
+`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 #### Defined in
 

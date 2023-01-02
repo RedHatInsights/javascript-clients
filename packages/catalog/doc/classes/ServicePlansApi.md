@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 ### createServicePlan
 
-▸ **createServicePlan**(`importServicePlan?`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[]\>\>
+▸ **createServicePlan**(`importServicePlan?`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[], `any`\>\>
 
 Returns the new Service Plan
 
@@ -124,7 +124,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[], `any`\>\>
 
 #### Defined in
 
@@ -134,7 +134,7 @@ ___
 
 ### patchServicePlanModified
 
-▸ **patchServicePlanModified**(`id`, `patchModifiedServicePlan?`, `options?`): `Promise`<`AxiosResponse`<`object`\>\>
+▸ **patchServicePlanModified**(`id`, `patchModifiedServicePlan?`, `options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
 
 **`Summary`**
 
@@ -156,7 +156,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`\>\>
+`Promise`<`AxiosResponse`<`object`, `any`\>\>
 
 #### Defined in
 
@@ -166,7 +166,7 @@ ___
 
 ### resetServicePlanModified
 
-▸ **resetServicePlanModified**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[]\>\>
+▸ **resetServicePlanModified**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[], `any`\>\>
 
 Resets the Service Plan\'s Modified schema and returns the new one if it has been reset
 
@@ -189,7 +189,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)[], `any`\>\>
 
 #### Defined in
 
@@ -199,7 +199,7 @@ ___
 
 ### showServicePlan
 
-▸ **showServicePlan**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+▸ **showServicePlan**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 Returns the specified Service Plan
 
@@ -222,7 +222,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 #### Defined in
 
@@ -232,7 +232,7 @@ ___
 
 ### showServicePlanBase
 
-▸ **showServicePlanBase**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+▸ **showServicePlanBase**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 Returns the specified Service Plan\'s base schema
 
@@ -255,7 +255,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 #### Defined in
 
@@ -265,7 +265,7 @@ ___
 
 ### showServicePlanModified
 
-▸ **showServicePlanModified**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+▸ **showServicePlanModified**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 Returns the specified Service Plan\'s modified schema
 
@@ -288,7 +288,7 @@ ServicePlansApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md)\>\>
+`Promise`<`AxiosResponse`<[`ServicePlan`](../interfaces/ServicePlan.md), `any`\>\>
 
 #### Defined in
 
