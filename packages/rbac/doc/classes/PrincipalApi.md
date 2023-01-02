@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### listPrincipals
 
-▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -128,7 +128,7 @@ PrincipalApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 #### Defined in
 

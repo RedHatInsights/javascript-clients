@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### systemtypeList
 
-▸ **systemtypeList**(`options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[]\>\>
+▸ **systemtypeList**(`options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
 
 List all system types by role and product code
 
@@ -119,7 +119,7 @@ SystemtypeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[]\>\>
+`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
 
 #### Defined in
 
@@ -129,7 +129,7 @@ ___
 
 ### systemtypeRetrieve
 
-▸ **systemtypeRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)\>\>
+▸ **systemtypeRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
 
 Retrieve details of a single system type
 
@@ -152,7 +152,7 @@ SystemtypeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
 
 #### Defined in
 

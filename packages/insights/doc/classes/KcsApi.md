@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### kcsList
 
-▸ **kcsList**(`nodeIds?`, `options?`): `Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[]\>\>
+▸ **kcsList**(`nodeIds?`, `options?`): `Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
 
 Looks for all active rules with KCS solutions  Returns a list of dicts of the C.R.C rule URL and its KCS solution number
 
@@ -116,7 +116,7 @@ KcsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[]\>\>
+`Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
 
 #### Defined in
 
@@ -126,7 +126,7 @@ ___
 
 ### kcsRetrieve
 
-▸ **kcsRetrieve**(`nodeId`, `options?`): `Promise`<`AxiosResponse`<`string`[]\>\>
+▸ **kcsRetrieve**(`nodeId`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
 
 Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution
 
@@ -145,7 +145,7 @@ KcsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[]\>\>
+`Promise`<`AxiosResponse`<`string`[], `any`\>\>
 
 #### Defined in
 

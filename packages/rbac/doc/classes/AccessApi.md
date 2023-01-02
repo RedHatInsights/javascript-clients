@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getPrincipalAccess
 
-▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
+▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
 
 Access responses are sorted in ascending order by an ID internal to the database
 
@@ -123,7 +123,7 @@ AccessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
 
 #### Defined in
 

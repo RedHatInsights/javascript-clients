@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### getResolutionsForIssue
 
-▸ **getResolutionsForIssue**(`issue`, `options?`): `Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md)\>\>
+▸ **getResolutionsForIssue**(`issue`, `options?`): `Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
 
 Provides information about resolutions available for the given issue
 
@@ -120,7 +120,7 @@ ResolutionsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md)\>\>
+`Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
 
 #### Defined in
 
@@ -130,7 +130,7 @@ ___
 
 ### getResolutionsForIssues
 
-▸ **getResolutionsForIssues**(`resolutionsBatchInput`, `options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }\>\>
+▸ **getResolutionsForIssues**(`resolutionsBatchInput`, `options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
 
 Provides information about resolutions available for the given issues
 
@@ -153,7 +153,7 @@ ResolutionsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }\>\>
+`Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
 
 #### Defined in
 

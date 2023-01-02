@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### postGraphql
 
-▸ **postGraphql**(`graphqlIn`, `options?`): `Promise`<`AxiosResponse`<[`GraphqlOut`](../interfaces/GraphqlOut.md)\>\>
+▸ **postGraphql**(`graphqlIn`, `options?`): `Promise`<`AxiosResponse`<[`GraphqlOut`](../interfaces/GraphqlOut.md), `any`\>\>
 
 Perform a GraphQL query
 
@@ -119,7 +119,7 @@ GraphqlApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GraphqlOut`](../interfaces/GraphqlOut.md)\>\>
+`Promise`<`AxiosResponse`<[`GraphqlOut`](../interfaces/GraphqlOut.md), `any`\>\>
 
 #### Defined in
 

@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### quickstartsGet
 
-▸ **quickstartsGet**(`bundle?`, `application?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md)\>\>
+▸ **quickstartsGet**(`bundle?`, `application?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md), `any`\>\>
 
 **`Summary`**
 
@@ -117,11 +117,11 @@ QuickstartApi
 | `application?` | `string` | If set, content is associated with a specific CRC application |
 | `limit?` | `number` | Pagination limit |
 | `offset?` | `number` | Pagination offset |
-| `options?` | `AxiosRequestConfig` | Override http request option. |
+| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md)\>\>
+`Promise`<`AxiosResponse`<[`QuickstartsGet200Response`](../interfaces/QuickstartsGet200Response.md), `any`\>\>
 
 #### Defined in
 
@@ -131,7 +131,7 @@ ___
 
 ### quickstartsIdGet
 
-▸ **quickstartsIdGet**(`id`, `options?`): `Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md)\>\>
+▸ **quickstartsIdGet**(`id`, `options?`): `Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md), `any`\>\>
 
 **`Summary`**
 
@@ -148,11 +148,11 @@ QuickstartApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `number` | identifier |
-| `options?` | `AxiosRequestConfig` | Override http request option. |
+| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md)\>\>
+`Promise`<`AxiosResponse`<[`V1Quickstart`](../interfaces/V1Quickstart.md), `any`\>\>
 
 #### Defined in
 

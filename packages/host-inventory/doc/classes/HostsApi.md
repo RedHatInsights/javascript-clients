@@ -107,7 +107,7 @@ BaseAPI.configuration
 
 ### apiHostDeleteAllHosts
 
-▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
 
@@ -130,7 +130,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -140,7 +140,7 @@ ___
 
 ### apiHostDeleteById
 
-▸ **apiHostDeleteById**(`hostIdList`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostDeleteById**(`hostIdList`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
 
@@ -164,7 +164,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -174,7 +174,7 @@ ___
 
 ### apiHostDeleteHostsByFilter
 
-▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -206,7 +206,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -216,7 +216,7 @@ ___
 
 ### apiHostGetHostById
 
-▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
+▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -245,7 +245,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -255,7 +255,7 @@ ___
 
 ### apiHostGetHostList
 
-▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
+▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -293,7 +293,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -303,7 +303,7 @@ ___
 
 ### apiHostGetHostSystemProfileById
 
-▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md)\>\>
+▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
 
 Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
 
@@ -332,7 +332,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
 
 #### Defined in
 
@@ -342,7 +342,7 @@ ___
 
 ### apiHostGetHostTagCount
 
-▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md)\>\>
+▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
 
 Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
@@ -369,7 +369,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md)\>\>
+`Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
 
 #### Defined in
 
@@ -379,7 +379,7 @@ ___
 
 ### apiHostGetHostTags
 
-▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md)\>\>
+▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
 
 Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
@@ -407,7 +407,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md)\>\>
+`Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
 
 #### Defined in
 
@@ -417,7 +417,7 @@ ___
 
 ### apiHostHostCheckin
 
-▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md)\>\>
+▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md), `any`\>\>
 
 Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -440,7 +440,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md)\>\>
+`Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md), `any`\>\>
 
 #### Defined in
 
@@ -450,7 +450,7 @@ ___
 
 ### apiHostMergeFacts
 
-▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -476,7 +476,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -486,7 +486,7 @@ ___
 
 ### apiHostPatchById
 
-▸ **apiHostPatchById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostPatchById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Update a host <br /><br /> Required permissions: inventory:hosts:write
 
@@ -511,7 +511,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -521,7 +521,7 @@ ___
 
 ### apiHostReplaceFacts
 
-▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
 
@@ -547,7 +547,7 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

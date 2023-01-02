@@ -102,7 +102,7 @@ BaseAPI.configuration
 
 ### createRoles
 
-▸ **createRoles**(`roleIn`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+▸ **createRoles**(`roleIn`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 **`Summary`**
 
@@ -123,7 +123,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### deleteRole
 
-▸ **deleteRole**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deleteRole**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -154,7 +154,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -164,7 +164,7 @@ ___
 
 ### getRole
 
-▸ **getRole**(`uuid`, `scope?`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+▸ **getRole**(`uuid`, `scope?`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 **`Summary`**
 
@@ -186,7 +186,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 #### Defined in
 
@@ -196,7 +196,7 @@ ___
 
 ### getRoleAccess
 
-▸ **getRoleAccess**(`uuid`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
+▸ **getRoleAccess**(`uuid`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
 
 **`Summary`**
 
@@ -219,7 +219,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
 
 #### Defined in
 
@@ -229,7 +229,7 @@ ___
 
 ### listRoles
 
-▸ **listRoles**(`limit?`, `offset?`, `name?`, `system?`, `displayName?`, `nameMatch?`, `scope?`, `orderBy?`, `addFields?`, `username?`, `application?`, `permission?`, `externalTenant?`, `options?`): `Promise`<`AxiosResponse`<[`RolePaginationDynamic`](../interfaces/RolePaginationDynamic.md)\>\>
+▸ **listRoles**(`limit?`, `offset?`, `name?`, `system?`, `displayName?`, `nameMatch?`, `scope?`, `orderBy?`, `addFields?`, `username?`, `application?`, `permission?`, `externalTenant?`, `options?`): `Promise`<`AxiosResponse`<[`RolePaginationDynamic`](../interfaces/RolePaginationDynamic.md), `any`\>\>
 
 By default, responses are sorted in ascending order by role name
 
@@ -264,7 +264,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RolePaginationDynamic`](../interfaces/RolePaginationDynamic.md)\>\>
+`Promise`<`AxiosResponse`<[`RolePaginationDynamic`](../interfaces/RolePaginationDynamic.md), `any`\>\>
 
 #### Defined in
 
@@ -274,7 +274,7 @@ ___
 
 ### patchRole
 
-▸ **patchRole**(`uuid`, `rolePatch?`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+▸ **patchRole**(`uuid`, `rolePatch?`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 **`Summary`**
 
@@ -296,7 +296,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md)\>\>
+`Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 #### Defined in
 
@@ -306,7 +306,7 @@ ___
 
 ### updateRole
 
-▸ **updateRole**(`uuid`, `roleWithAccess`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **updateRole**(`uuid`, `roleWithAccess`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -328,7 +328,7 @@ RoleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
