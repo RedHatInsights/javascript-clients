@@ -21,6 +21,6 @@
         "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/catalog-api/master/public/doc/openapi-3-v1.3.json' npm run generate"
     },
     "dependencies": {
-        "axios": "^0.21.1"
+        "axios": "^0.27.2"
     }
 }

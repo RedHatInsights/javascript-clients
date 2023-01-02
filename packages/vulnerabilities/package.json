@@ -29,7 +29,7 @@
         "generate:single": "npm run generate:prod && npm run doc"
     },
     "dependencies": {
-        "axios": "^0.21.1"
+        "axios": "^0.27.2"
     },
     "devDependencies": {
         "request": "^2.88.2",
