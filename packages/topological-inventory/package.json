@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/topological-inventory-client",
-    "version": "1.0.118",
+    "version": "1.1.0",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
