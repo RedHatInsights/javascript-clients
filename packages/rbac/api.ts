@@ -831,6 +831,44 @@ export interface ErrorErrors {
     status?: string;
 }
 /**
+ * Error structure for the \"Not Found\" responses.
+ * @export
+ * @interface ErrorNotFound
+ */
+export interface ErrorNotFound {
+    /**
+     *
+     * @type {Array<ErrorNotFoundErrors>}
+     * @memberof ErrorNotFound
+     */
+    errors: Array<ErrorNotFoundErrors>;
+}
+/**
+ *
+ * @export
+ * @interface ErrorNotFoundErrors
+ */
+export interface ErrorNotFoundErrors {
+    /**
+     * Detail of the error.
+     * @type {string}
+     * @memberof ErrorNotFoundErrors
+     */
+    detail?: string;
+    /**
+     * Status of the response
+     * @type {string}
+     * @memberof ErrorNotFoundErrors
+     */
+    status?: string;
+    /**
+     * Source of the error.
+     * @type {string}
+     * @memberof ErrorNotFoundErrors
+     */
+    source?: string;
+}
+/**
  *
  * @export
  * @interface Group
@@ -5418,7 +5456,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
@@ -5426,7 +5464,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles: async (limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options: any = {}): Promise<RequestArgs> => {
+        listRoles: async (limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count' | 'access'>, username?: string, application?: string, permission?: string, externalTenant?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5685,7 +5723,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
@@ -5693,7 +5731,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
+        async listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count' | 'access'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RolePaginationDynamic>> {
             const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5793,7 +5831,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-         * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+         * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
@@ -5801,7 +5839,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
+        listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count' | 'access'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any): AxiosPromise<RolePaginationDynamic> {
             return RoleApiFp(configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5898,7 +5936,7 @@ export class RoleApi extends BaseAPI {
      * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
-     * @param {Array<'groups_in' | 'groups_in_count'>} [addFields] Parameter for add list of fields to display for roles.
+     * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
      * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
@@ -5907,7 +5945,7 @@ export class RoleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any) {
+    public listRoles(limit?: number, offset?: number, name?: string, system?: boolean, displayName?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', orderBy?: 'name' | 'display_name' | 'modified' | 'policyCount', addFields?: Array<'groups_in' | 'groups_in_count' | 'access'>, username?: string, application?: string, permission?: string, externalTenant?: string, options?: any) {
         return RoleApiFp(this.configuration).listRoles(limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options).then((request) => request(this.axios, this.basePath));
     }
 
