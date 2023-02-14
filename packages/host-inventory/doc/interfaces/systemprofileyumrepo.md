@@ -20,6 +20,7 @@ Representation of one yum repository
 * [enabled](systemprofileyumrepo.md#optional-enabled)
 * [gpgcheck](systemprofileyumrepo.md#optional-gpgcheck)
 * [id](systemprofileyumrepo.md#optional-id)
+* [mirrorlist](systemprofileyumrepo.md#optional-mirrorlist)
 * [name](systemprofileyumrepo.md#optional-name)
 
 ## Properties
@@ -28,7 +29,7 @@ Representation of one yum repository
 
 • **base_url**? : *string*
 
-*Defined in [api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1880)*
+*Defined in [api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2089)*
 
 **`memberof`** SystemProfileYumRepo
 
@@ -38,7 +39,7 @@ ___
 
 • **enabled**? : *boolean*
 
-*Defined in [api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1874)*
+*Defined in [api.ts:2083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2083)*
 
 **`memberof`** SystemProfileYumRepo
 
@@ -48,7 +49,7 @@ ___
 
 • **gpgcheck**? : *boolean*
 
-*Defined in [api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1868)*
+*Defined in [api.ts:2077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2077)*
 
 **`memberof`** SystemProfileYumRepo
 
@@ -58,7 +59,19 @@ ___
 
 • **id**? : *string*
 
-*Defined in [api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1856)*
+*Defined in [api.ts:2065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2065)*
+
+**`memberof`** SystemProfileYumRepo
+
+___
+
+### `Optional` mirrorlist
+
+• **mirrorlist**? : *string*
+
+*Defined in [api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2095)*
+
+URL of a mirrorlist for the repository
 
 **`memberof`** SystemProfileYumRepo
 
@@ -68,6 +81,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1862)*
+*Defined in [api.ts:2071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2071)*
 
 **`memberof`** SystemProfileYumRepo

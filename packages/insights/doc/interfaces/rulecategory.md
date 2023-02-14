@@ -14,14 +14,14 @@
 
 ### Properties
 
-* [id](rulecategory.md#optional-id)
+* [id](rulecategory.md#id)
 * [name](rulecategory.md#name)
 
 ## Properties
 
-### `Optional` id
+###  id
 
-• **id**? : *number*
+• **id**: *number*
 
 *Defined in [api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L52)*
 

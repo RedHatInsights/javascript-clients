@@ -24,7 +24,7 @@
 
 • **check_in_succeeded**? : *boolean*
 
-*Defined in [api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L967)*
+*Defined in [api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1112)*
 
 **`memberof`** PerReporterStaleness
 
@@ -34,7 +34,7 @@ ___
 
 • **last_check_in**? : *string*
 
-*Defined in [api.ts:955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L955)*
+*Defined in [api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1100)*
 
 **`memberof`** PerReporterStaleness
 
@@ -44,6 +44,6 @@ ___
 
 • **stale_timestamp**? : *string*
 
-*Defined in [api.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L961)*
+*Defined in [api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1106)*
 
 **`memberof`** PerReporterStaleness

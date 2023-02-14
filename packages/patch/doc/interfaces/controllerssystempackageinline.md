@@ -27,7 +27,7 @@
 
 • **description**? : *string*
 
-*Defined in [api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1583)*
+*Defined in [api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1583)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -37,7 +37,7 @@ ___
 
 • **evra**? : *string*
 
-*Defined in [api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1589)*
+*Defined in [api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1589)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -47,7 +47,7 @@ ___
 
 • **latest_evra**? : *string*
 
-*Defined in [api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1595)*
+*Defined in [api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1595)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -57,7 +57,7 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1601)*
+*Defined in [api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1601)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -67,7 +67,7 @@ ___
 
 • **summary**? : *string*
 
-*Defined in [api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1607)*
+*Defined in [api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1607)*
 
 **`memberof`** ControllersSystemPackageInline
 
@@ -77,6 +77,6 @@ ___
 
 • **updatable**? : *boolean*
 
-*Defined in [api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/77019e3d/packages/patch/api.ts#L1613)*
+*Defined in [api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/b3a33353/packages/patch/api.ts#L1613)*
 
 **`memberof`** ControllersSystemPackageInline

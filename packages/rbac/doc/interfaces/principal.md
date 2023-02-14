@@ -27,7 +27,7 @@
 
 • **email**: *string*
 
-*Defined in [api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1563)*
+*Defined in [api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1601)*
 
 **`memberof`** Principal
 
@@ -37,7 +37,7 @@ ___
 
 • **first_name**? : *string*
 
-*Defined in [api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1569)*
+*Defined in [api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1607)*
 
 **`memberof`** Principal
 
@@ -47,7 +47,7 @@ ___
 
 • **is_active**? : *boolean*
 
-*Defined in [api.ts:1581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1581)*
+*Defined in [api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1619)*
 
 **`memberof`** Principal
 
@@ -57,7 +57,7 @@ ___
 
 • **is_org_admin**? : *boolean*
 
-*Defined in [api.ts:1587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1587)*
+*Defined in [api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1625)*
 
 **`memberof`** Principal
 
@@ -67,7 +67,7 @@ ___
 
 • **last_name**? : *string*
 
-*Defined in [api.ts:1575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1575)*
+*Defined in [api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1613)*
 
 **`memberof`** Principal
 
@@ -77,6 +77,6 @@ ___
 
 • **username**: *string*
 
-*Defined in [api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1557)*
+*Defined in [api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1595)*
 
 **`memberof`** Principal

@@ -26,7 +26,7 @@
 
 • **counts**: *[Counts](counts.md)*
 
-*Defined in [api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L328)*
+*Defined in [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L341)*
 
 **`memberof`** PlaybookExecutors
 
@@ -36,7 +36,7 @@ ___
 
 • **executor_id**: *string*
 
-*Defined in [api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L304)*
+*Defined in [api.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L317)*
 
 **`memberof`** PlaybookExecutors
 
@@ -46,7 +46,7 @@ ___
 
 • **executor_name**: *string*
 
-*Defined in [api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L310)*
+*Defined in [api.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L323)*
 
 **`memberof`** PlaybookExecutors
 
@@ -56,7 +56,7 @@ ___
 
 • **status**: *[PlaybookRunExecutorStatus](../enums/playbookrunexecutorstatus.md)*
 
-*Defined in [api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L316)*
+*Defined in [api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L329)*
 
 **`memberof`** PlaybookExecutors
 
@@ -66,6 +66,6 @@ ___
 
 • **system_count**: *number*
 
-*Defined in [api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L322)*
+*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L335)*
 
 **`memberof`** PlaybookExecutors

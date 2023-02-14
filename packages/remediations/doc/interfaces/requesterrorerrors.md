@@ -26,7 +26,7 @@
 
 • **code**: *string*
 
-*Defined in [api.ts:1044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1044)*
+*Defined in [api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1070)*
 
 **`memberof`** RequestErrorErrors
 
@@ -36,7 +36,7 @@ ___
 
 • **details**? : *object*
 
-*Defined in [api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1056)*
+*Defined in [api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1082)*
 
 **`memberof`** RequestErrorErrors
 
@@ -46,7 +46,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1032)*
+*Defined in [api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1058)*
 
 **`memberof`** RequestErrorErrors
 
@@ -56,7 +56,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [api.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1038)*
+*Defined in [api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1064)*
 
 **`memberof`** RequestErrorErrors
 
@@ -66,6 +66,6 @@ ___
 
 • **title**: *string*
 
-*Defined in [api.ts:1050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1050)*
+*Defined in [api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1076)*
 
 **`memberof`** RequestErrorErrors

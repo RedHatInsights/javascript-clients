@@ -13,16 +13,19 @@
 * [SystemProfileSystemPurposeRoleEnum](enums/systemprofilesystempurposeroleenum.md)
 * [SystemProfileSystemPurposeSlaEnum](enums/systemprofilesystempurposeslaenum.md)
 * [SystemProfileSystemPurposeUsageEnum](enums/systemprofilesystempurposeusageenum.md)
+* [SystemProfileSystemUpdateMethodEnum](enums/systemprofilesystemupdatemethodenum.md)
 
 ### Classes
 
 * [BaseAPI](classes/baseapi.md)
 * [Configuration](classes/configuration.md)
 * [DefaultApi](classes/defaultapi.md)
+* [GroupsApi](classes/groupsapi.md)
 * [HostsApi](classes/hostsapi.md)
 * [RequiredError](classes/requirederror.md)
 * [SystemProfileApi](classes/systemprofileapi.md)
 * [TagsApi](classes/tagsapi.md)
+* [UnleashApi](classes/unleashapi.md)
 
 ### Interfaces
 
@@ -35,11 +38,18 @@
 * [ConfigurationParameters](interfaces/configurationparameters.md)
 * [CreateCheckIn](interfaces/createcheckin.md)
 * [CreateCheckInAllOf](interfaces/createcheckinallof.md)
+* [CreateGroup](interfaces/creategroup.md)
+* [CreateGroupAllOf](interfaces/creategroupallof.md)
 * [CreateHostOut](interfaces/createhostout.md)
 * [CreateHostOutAllOf](interfaces/createhostoutallof.md)
 * [DiskDevice](interfaces/diskdevice.md)
 * [DnfModule](interfaces/dnfmodule.md)
 * [FactSet](interfaces/factset.md)
+* [GroupIn](interfaces/groupin.md)
+* [GroupInAllOf](interfaces/groupinallof.md)
+* [GroupOut](interfaces/groupout.md)
+* [GroupQueryOutput](interfaces/groupqueryoutput.md)
+* [GroupQueryOutputAllOf](interfaces/groupqueryoutputallof.md)
 * [HostOut](interfaces/hostout.md)
 * [HostOutAllOf](interfaces/hostoutallof.md)
 * [HostQueryOutput](interfaces/hostqueryoutput.md)
@@ -67,6 +77,7 @@
 * [SystemProfileOperatingSystemOutResults](interfaces/systemprofileoperatingsystemoutresults.md)
 * [SystemProfileOperatingSystemOutValue](interfaces/systemprofileoperatingsystemoutvalue.md)
 * [SystemProfileRhsm](interfaces/systemprofilerhsm.md)
+* [SystemProfileSap](interfaces/systemprofilesap.md)
 * [SystemProfileSapSystemOut](interfaces/systemprofilesapsystemout.md)
 * [SystemProfileSapSystemOutResults](interfaces/systemprofilesapsystemoutresults.md)
 * [SystemProfileSystemPurpose](interfaces/systemprofilesystempurpose.md)
@@ -75,6 +86,7 @@
 * [TagCountOutAllOf](interfaces/tagcountoutallof.md)
 * [TagsOut](interfaces/tagsout.md)
 * [TagsOutAllOf](interfaces/tagsoutallof.md)
+* [UnleashToggleOut](interfaces/unleashtoggleout.md)
 * [YumRepo](interfaces/yumrepo.md)
 
 ### Variables
@@ -86,6 +98,9 @@
 * [DefaultApiAxiosParamCreator](globals.md#const-defaultapiaxiosparamcreator)
 * [DefaultApiFactory](globals.md#const-defaultapifactory)
 * [DefaultApiFp](globals.md#const-defaultapifp)
+* [GroupsApiAxiosParamCreator](globals.md#const-groupsapiaxiosparamcreator)
+* [GroupsApiFactory](globals.md#const-groupsapifactory)
+* [GroupsApiFp](globals.md#const-groupsapifp)
 * [HostsApiAxiosParamCreator](globals.md#const-hostsapiaxiosparamcreator)
 * [HostsApiFactory](globals.md#const-hostsapifactory)
 * [HostsApiFp](globals.md#const-hostsapifp)
@@ -95,6 +110,9 @@
 * [TagsApiAxiosParamCreator](globals.md#const-tagsapiaxiosparamcreator)
 * [TagsApiFactory](globals.md#const-tagsapifactory)
 * [TagsApiFp](globals.md#const-tagsapifp)
+* [UnleashApiAxiosParamCreator](globals.md#const-unleashapiaxiosparamcreator)
+* [UnleashApiFactory](globals.md#const-unleashapifactory)
+* [UnleashApiFp](globals.md#const-unleashapifp)
 
 ### Object literals
 
@@ -114,7 +132,7 @@
 
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2024)*
+*Defined in [api.ts:2264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2264)*
 
 DefaultApi - axios parameter creator
 
@@ -136,7 +154,7 @@ ___
 
 ▸ **DefaultApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:2121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2121)*
+*Defined in [api.ts:2361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2361)*
 
 DefaultApi - factory interface
 
@@ -160,7 +178,7 @@ ___
 
 ▸ **DefaultApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2095)*
+*Defined in [api.ts:2335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2335)*
 
 DefaultApi - functional programming interface
 
@@ -178,11 +196,121 @@ Name | Type |
 
 ___
 
+### `Const` GroupsApiAxiosParamCreator
+
+▸ **GroupsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [api.ts:2408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2408)*
+
+GroupsApi - axios parameter creator
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **apiGroupCreateGroup**(`createGroup`: [CreateGroup](interfaces/creategroup.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupDeleteGroup**(`groupId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupDeleteHostsFromGroup**(`groupId`: string, `hostIdList`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupGetGroup**(`groupId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupGetGroupList**(`name?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupGetGroupsById**(`groupIdList`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupPatchGroupById**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+* **apiGroupUpdateGroupDetails**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+___
+
+### `Const` GroupsApiFactory
+
+▸ **GroupsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
+
+*Defined in [api.ts:2952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2952)*
+
+GroupsApi - factory interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+`basePath?` | string |
+`axios?` | AxiosInstance |
+
+**Returns:** *object*
+
+* **apiGroupCreateGroup**(`createGroup`: [CreateGroup](interfaces/creategroup.md), `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
+
+* **apiGroupDeleteGroup**(`groupId`: string, `options?`: any): *AxiosPromise‹void›*
+
+* **apiGroupDeleteHostsFromGroup**(`groupId`: string, `hostIdList`: Array‹string›, `options?`: any): *AxiosPromise‹void›*
+
+* **apiGroupGetGroup**(`groupId`: string, `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
+
+* **apiGroupGetGroupList**(`name?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options?`: any): *AxiosPromise‹[GroupQueryOutput](interfaces/groupqueryoutput.md)›*
+
+* **apiGroupGetGroupsById**(`groupIdList`: Array‹string›, `options?`: any): *AxiosPromise‹[GroupQueryOutput](interfaces/groupqueryoutput.md)›*
+
+* **apiGroupPatchGroupById**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
+
+* **apiGroupUpdateGroupDetails**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options?`: any): *AxiosPromise‹[GroupOut](interfaces/groupout.md)›*
+
+___
+
+### `Const` GroupsApiFp
+
+▸ **GroupsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [api.ts:2824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2824)*
+
+GroupsApi - functional programming interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **apiGroupCreateGroup**(`createGroup`: [CreateGroup](interfaces/creategroup.md), `options?`: any): *Promise‹function›*
+
+* **apiGroupDeleteGroup**(`groupId`: string, `options?`: any): *Promise‹function›*
+
+* **apiGroupDeleteHostsFromGroup**(`groupId`: string, `hostIdList`: Array‹string›, `options?`: any): *Promise‹function›*
+
+* **apiGroupGetGroup**(`groupId`: string, `options?`: any): *Promise‹function›*
+
+* **apiGroupGetGroupList**(`name?`: string, `perPage?`: number, `page?`: number, `orderBy?`: "display_name" | "updated" | "operating_system", `orderHow?`: "ASC" | "DESC", `options?`: any): *Promise‹function›*
+
+* **apiGroupGetGroupsById**(`groupIdList`: Array‹string›, `options?`: any): *Promise‹function›*
+
+* **apiGroupPatchGroupById**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options?`: any): *Promise‹function›*
+
+* **apiGroupUpdateGroupDetails**(`groupId`: string, `groupIn`: [GroupIn](interfaces/groupin.md), `options?`: any): *Promise‹function›*
+
+___
+
 ### `Const` HostsApiAxiosParamCreator
 
 ▸ **HostsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2168)*
+*Defined in [api.ts:3161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3161)*
 
 HostsApi - axios parameter creator
 
@@ -198,7 +326,7 @@ Name | Type |
 
 * **apiHostDeleteAllHosts**(`confirmDeleteAll?`: boolean, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiHostDeleteHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **apiHostDeleteHostsByFilter**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -216,7 +344,7 @@ Name | Type |
 
 * **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **apiHostPatchHostById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 * **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
@@ -226,7 +354,7 @@ ___
 
 ▸ **HostsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3229)*
+*Defined in [api.ts:4222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4222)*
 
 HostsApi - factory interface
 
@@ -244,7 +372,7 @@ Name | Type |
 
 * **apiHostDeleteAllHosts**(`confirmDeleteAll?`: boolean, `options?`: any): *AxiosPromise‹void›*
 
-* **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
+* **apiHostDeleteHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **apiHostDeleteHostsByFilter**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *AxiosPromise‹void›*
 
@@ -262,7 +390,7 @@ Name | Type |
 
 * **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
-* **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
+* **apiHostPatchHostById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
 * **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *AxiosPromise‹void›*
 
@@ -272,7 +400,7 @@ ___
 
 ▸ **HostsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:2998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2998)*
+*Defined in [api.ts:3991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3991)*
 
 HostsApi - functional programming interface
 
@@ -288,7 +416,7 @@ Name | Type |
 
 * **apiHostDeleteAllHosts**(`confirmDeleteAll?`: boolean, `options?`: any): *Promise‹function›*
 
-* **apiHostDeleteById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *Promise‹function›*
+* **apiHostDeleteHostById**(`hostIdList`: Array‹string›, `branchId?`: string, `options?`: any): *Promise‹function›*
 
 * **apiHostDeleteHostsByFilter**(`displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `tags?`: Array‹string›, `filter?`: object, `options?`: any): *Promise‹function›*
 
@@ -306,7 +434,7 @@ Name | Type |
 
 * **apiHostMergeFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *Promise‹function›*
 
-* **apiHostPatchById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *Promise‹function›*
+* **apiHostPatchHostById**(`hostIdList`: Array‹string›, `patchHostIn`: [PatchHostIn](interfaces/patchhostin.md), `branchId?`: string, `options?`: any): *Promise‹function›*
 
 * **apiHostReplaceFacts**(`hostIdList`: Array‹string›, `namespace`: string, `body`: object, `branchId?`: string, `options?`: any): *Promise‹function›*
 
@@ -316,7 +444,7 @@ ___
 
 ▸ **SystemProfileApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3620)*
+*Defined in [api.ts:4613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4613)*
 
 SystemProfileApi - axios parameter creator
 
@@ -342,7 +470,7 @@ ___
 
 ▸ **SystemProfileApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:3905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3905)*
+*Defined in [api.ts:4898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4898)*
 
 SystemProfileApi - factory interface
 
@@ -370,7 +498,7 @@ ___
 
 ▸ **SystemProfileApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:3838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3838)*
+*Defined in [api.ts:4831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4831)*
 
 SystemProfileApi - functional programming interface
 
@@ -396,7 +524,7 @@ ___
 
 ▸ **TagsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4022)*
+*Defined in [api.ts:5015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5015)*
 
 TagsApi - axios parameter creator
 
@@ -418,7 +546,7 @@ ___
 
 ▸ **TagsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:4181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4181)*
+*Defined in [api.ts:5174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5174)*
 
 TagsApi - factory interface
 
@@ -442,7 +570,7 @@ ___
 
 ▸ **TagsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:4144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4144)*
+*Defined in [api.ts:5137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5137)*
 
 TagsApi - functional programming interface
 
@@ -457,6 +585,74 @@ Name | Type |
 **Returns:** *object*
 
 * **apiTagGetTags**(`tags?`: Array‹string›, `orderBy?`: "tag" | "count", `orderHow?`: "ASC" | "DESC", `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `search?`: string, `displayName?`: string, `fqdn?`: string, `hostnameOrId?`: string, `insightsId?`: string, `providerId?`: string, `providerType?`: "alibaba" | "aws" | "azure" | "gcp" | "ibm", `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹function›*
+
+___
+
+### `Const` UnleashApiAxiosParamCreator
+
+▸ **UnleashApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [api.ts:5243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5243)*
+
+UnleashApi - axios parameter creator
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **apiUnleashGetInventoryGroupsToggle**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+
+___
+
+### `Const` UnleashApiFactory
+
+▸ **UnleashApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
+
+*Defined in [api.ts:5312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5312)*
+
+UnleashApi - factory interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+`basePath?` | string |
+`axios?` | AxiosInstance |
+
+**Returns:** *object*
+
+* **apiUnleashGetInventoryGroupsToggle**(`options?`: any): *AxiosPromise‹[UnleashToggleOut](interfaces/unleashtoggleout.md)›*
+
+___
+
+### `Const` UnleashApiFp
+
+▸ **UnleashApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
+
+*Defined in [api.ts:5290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5290)*
+
+UnleashApi - functional programming interface
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`configuration?` | [Configuration](classes/configuration.md) |
+
+**Returns:** *object*
+
+* **apiUnleashGetInventoryGroupsToggle**(`options?`: any): *Promise‹function›*
 
 ## Object literals
 

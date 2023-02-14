@@ -20,7 +20,6 @@
 * [Kcs](interfaces/kcs.md)
 * [RequestArgs](interfaces/requestargs.md)
 * [RuleCategory](interfaces/rulecategory.md)
-* [StatusReady](interfaces/statusready.md)
 * [SystemType](interfaces/systemtype.md)
 
 ### Variables
@@ -50,7 +49,7 @@
 
 ### `Const` BASE_PATH
 
-• **BASE_PATH**: *string* = "https://cloud.redhat.com/api/insights/v1".replace(/\/+$/, "")
+• **BASE_PATH**: *string* = "https://console.redhat.com".replace(/\/+$/, "")
 
 *Defined in [base.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L20)*
 
@@ -60,7 +59,7 @@
 
 ▸ **KcsApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L133)*
+*Defined in [api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L90)*
 
 KcsApi - axios parameter creator
 
@@ -76,7 +75,7 @@ Name | Type |
 
 * **kcsList**(`nodeIds?`: Array‹string›, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **kcsRead**(`nodeId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **kcsRetrieve**(`nodeId`: string, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -84,7 +83,7 @@ ___
 
 ▸ **KcsApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L250)*
+*Defined in [api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L203)*
 
 KcsApi - factory interface
 
@@ -102,7 +101,7 @@ Name | Type |
 
 * **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *AxiosPromise‹Array‹[Kcs](interfaces/kcs.md)››*
 
-* **kcsRead**(`nodeId`: string, `options?`: any): *AxiosPromise‹Array‹string››*
+* **kcsRetrieve**(`nodeId`: string, `options?`: any): *AxiosPromise‹Array‹string››*
 
 ___
 
@@ -110,7 +109,7 @@ ___
 
 ▸ **KcsApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L213)*
+*Defined in [api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L168)*
 
 KcsApi - functional programming interface
 
@@ -126,7 +125,7 @@ Name | Type |
 
 * **kcsList**(`nodeIds?`: Array‹string›, `options?`: any): *Promise‹function›*
 
-* **kcsRead**(`nodeId`: string, `options?`: any): *Promise‹function›*
+* **kcsRetrieve**(`nodeId`: string, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -134,7 +133,7 @@ ___
 
 ▸ **RulecategoryApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L313)*
+*Defined in [api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L262)*
 
 RulecategoryApi - axios parameter creator
 
@@ -150,7 +149,7 @@ Name | Type |
 
 * **rulecategoryList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **rulecategoryRead**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **rulecategoryRetrieve**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -158,7 +157,7 @@ ___
 
 ▸ **RulecategoryApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L424)*
+*Defined in [api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L369)*
 
 RulecategoryApi - factory interface
 
@@ -176,7 +175,7 @@ Name | Type |
 
 * **rulecategoryList**(`options?`: any): *AxiosPromise‹Array‹[RuleCategory](interfaces/rulecategory.md)››*
 
-* **rulecategoryRead**(`id`: number, `options?`: any): *AxiosPromise‹[RuleCategory](interfaces/rulecategory.md)›*
+* **rulecategoryRetrieve**(`id`: number, `options?`: any): *AxiosPromise‹[RuleCategory](interfaces/rulecategory.md)›*
 
 ___
 
@@ -184,7 +183,7 @@ ___
 
 ▸ **RulecategoryApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L388)*
+*Defined in [api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L335)*
 
 RulecategoryApi - functional programming interface
 
@@ -200,7 +199,7 @@ Name | Type |
 
 * **rulecategoryList**(`options?`: any): *Promise‹function›*
 
-* **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹function›*
+* **rulecategoryRetrieve**(`id`: number, `options?`: any): *Promise‹function›*
 
 ___
 
@@ -208,7 +207,7 @@ ___
 
 ▸ **StatusApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L485)*
+*Defined in [api.ts:426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L426)*
 
 StatusApi - axios parameter creator
 
@@ -222,11 +221,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statusList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **statusLiveRetrieve**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **statusLiveRead**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **statusReadyRetrieve**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **statusReadyRead**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **statusRetrieve**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -234,7 +233,7 @@ ___
 
 ▸ **StatusApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:632](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L632)*
+*Defined in [api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L567)*
 
 StatusApi - factory interface
 
@@ -250,11 +249,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statusList**(`options?`: any): *AxiosPromise‹void›*
+* **statusLiveRetrieve**(`options?`: any): *AxiosPromise‹void›*
 
-* **statusLiveRead**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+* **statusReadyRetrieve**(`options?`: any): *AxiosPromise‹void›*
 
-* **statusReadyRead**(`options?`: any): *AxiosPromise‹[StatusReady](interfaces/statusready.md)›*
+* **statusRetrieve**(`options?`: any): *AxiosPromise‹void›*
 
 ___
 
@@ -262,7 +261,7 @@ ___
 
 ▸ **StatusApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L584)*
+*Defined in [api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L522)*
 
 StatusApi - functional programming interface
 
@@ -276,11 +275,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **statusList**(`options?`: any): *Promise‹function›*
+* **statusLiveRetrieve**(`options?`: any): *Promise‹function›*
 
-* **statusLiveRead**(`options?`: any): *Promise‹function›*
+* **statusReadyRetrieve**(`options?`: any): *Promise‹function›*
 
-* **statusReadyRead**(`options?`: any): *Promise‹function›*
+* **statusRetrieve**(`options?`: any): *Promise‹function›*
 
 ___
 
@@ -288,7 +287,7 @@ ___
 
 ▸ **SystemtypeApiAxiosParamCreator**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L711)*
+*Defined in [api.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L640)*
 
 SystemtypeApi - axios parameter creator
 
@@ -304,7 +303,7 @@ Name | Type |
 
 * **systemtypeList**(`options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
-* **systemtypeRead**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
+* **systemtypeRetrieve**(`id`: number, `options`: any): *Promise‹[RequestArgs](interfaces/requestargs.md)›*
 
 ___
 
@@ -312,7 +311,7 @@ ___
 
 ▸ **SystemtypeApiFactory**(`configuration?`: [Configuration](classes/configuration.md), `basePath?`: string, `axios?`: AxiosInstance): *object*
 
-*Defined in [api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L822)*
+*Defined in [api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L751)*
 
 SystemtypeApi - factory interface
 
@@ -330,7 +329,7 @@ Name | Type |
 
 * **systemtypeList**(`options?`: any): *AxiosPromise‹Array‹[SystemType](interfaces/systemtype.md)››*
 
-* **systemtypeRead**(`id`: number, `options?`: any): *AxiosPromise‹[SystemType](interfaces/systemtype.md)›*
+* **systemtypeRetrieve**(`id`: number, `options?`: any): *AxiosPromise‹[SystemType](interfaces/systemtype.md)›*
 
 ___
 
@@ -338,7 +337,7 @@ ___
 
 ▸ **SystemtypeApiFp**(`configuration?`: [Configuration](classes/configuration.md)): *object*
 
-*Defined in [api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L786)*
+*Defined in [api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L715)*
 
 SystemtypeApi - functional programming interface
 
@@ -354,7 +353,7 @@ Name | Type |
 
 * **systemtypeList**(`options?`: any): *Promise‹function›*
 
-* **systemtypeRead**(`id`: number, `options?`: any): *Promise‹function›*
+* **systemtypeRetrieve**(`id`: number, `options?`: any): *Promise‹function›*
 
 ## Object literals
 

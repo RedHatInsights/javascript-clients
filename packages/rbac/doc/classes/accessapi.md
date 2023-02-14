@@ -84,7 +84,7 @@ ___
 
 ▸ **getPrincipalAccess**(`application`: string, `username?`: string, `orderBy?`: "application" | "resource_type" | "verb", `limit?`: number, `offset?`: number, `options?`: any): *Promise‹AxiosResponse‹[AccessPagination](../interfaces/accesspagination.md)››*
 
-*Defined in [api.ts:2502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2502)*
+*Defined in [api.ts:2553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2553)*
 
 Access responses are sorted in ascending order by an ID internal to the database
 

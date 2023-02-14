@@ -15,6 +15,7 @@
 ### Properties
 
 * [advisories_list](cvedetailoutdataattributes.md#advisories_list)
+* [affected_but_not_vulnerable](cvedetailoutdataattributes.md#affected_but_not_vulnerable)
 * [business_risk](cvedetailoutdataattributes.md#business_risk)
 * [business_risk_id](cvedetailoutdataattributes.md#business_risk_id)
 * [business_risk_text](cvedetailoutdataattributes.md#business_risk_text)
@@ -44,9 +45,21 @@
 
 • **advisories_list**: *Array‹string | object› | null*
 
-*Defined in [api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L222)*
+*Defined in [api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L216)*
 
 List of advisory names or detailed advisory information
+
+**`memberof`** CveDetailOutDataAttributes
+
+___
+
+###  affected_but_not_vulnerable
+
+• **affected_but_not_vulnerable**: *number | null*
+
+*Defined in [api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L222)*
+
+Number of systems that are affected by given CVE but are not vulnerable.
 
 **`memberof`** CveDetailOutDataAttributes
 

@@ -20,7 +20,7 @@
 
 • **Canceled**: = "canceled"
 
-*Defined in [api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L452)*
+*Defined in [api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L465)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **Failure**: = "failure"
 
-*Defined in [api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L451)*
+*Defined in [api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L464)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **Pending**: = "pending"
 
-*Defined in [api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L448)*
+*Defined in [api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L461)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **Running**: = "running"
 
-*Defined in [api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L449)*
+*Defined in [api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L462)*
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 • **Success**: = "success"
 
-*Defined in [api.ts:450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L450)*
+*Defined in [api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L463)*

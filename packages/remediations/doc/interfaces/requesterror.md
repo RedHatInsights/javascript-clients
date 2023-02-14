@@ -22,6 +22,6 @@
 
 • **errors**: *Array‹[RequestErrorErrors](requesterrorerrors.md)›*
 
-*Defined in [api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1019)*
+*Defined in [api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1045)*
 
 **`memberof`** RequestError

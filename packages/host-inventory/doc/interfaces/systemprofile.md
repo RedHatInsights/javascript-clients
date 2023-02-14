@@ -18,6 +18,7 @@ Representation of the system profile fields
 
 * [ansible](systemprofile.md#optional-ansible)
 * [arch](systemprofile.md#optional-arch)
+* [basearch](systemprofile.md#optional-basearch)
 * [bios_release_date](systemprofile.md#optional-bios_release_date)
 * [bios_vendor](systemprofile.md#optional-bios_vendor)
 * [bios_version](systemprofile.md#optional-bios_version)
@@ -53,11 +54,13 @@ Representation of the system profile fields
 * [os_kernel_version](systemprofile.md#optional-os_kernel_version)
 * [os_release](systemprofile.md#optional-os_release)
 * [owner_id](systemprofile.md#optional-owner_id)
+* [releasever](systemprofile.md#optional-releasever)
 * [rhc_client_id](systemprofile.md#optional-rhc_client_id)
 * [rhc_config_state](systemprofile.md#optional-rhc_config_state)
 * [rhsm](systemprofile.md#optional-rhsm)
 * [rpm_ostree_deployments](systemprofile.md#optional-rpm_ostree_deployments)
 * [running_processes](systemprofile.md#optional-running_processes)
+* [sap](systemprofile.md#optional-sap)
 * [sap_instance_number](systemprofile.md#optional-sap_instance_number)
 * [sap_sids](systemprofile.md#optional-sap_sids)
 * [sap_system](systemprofile.md#optional-sap_system)
@@ -69,6 +72,7 @@ Representation of the system profile fields
 * [subscription_status](systemprofile.md#optional-subscription_status)
 * [system_memory_bytes](systemprofile.md#optional-system_memory_bytes)
 * [system_purpose](systemprofile.md#optional-system_purpose)
+* [system_update_method](systemprofile.md#optional-system_update_method)
 * [tuned_profile](systemprofile.md#optional-tuned_profile)
 * [yum_repos](systemprofile.md#optional-yum_repos)
 
@@ -78,7 +82,7 @@ Representation of the system profile fields
 
 • **ansible**? : *[SystemProfileAnsible](systemprofileansible.md)*
 
-*Defined in [api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1372)*
+*Defined in [api.ts:1535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1535)*
 
 **`memberof`** SystemProfile
 
@@ -88,7 +92,19 @@ ___
 
 • **arch**? : *string*
 
-*Defined in [api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1168)*
+*Defined in [api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1319)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` basearch
+
+• **basearch**? : *string*
+
+*Defined in [api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1325)*
+
+The architecture family (from yum/dnf)
 
 **`memberof`** SystemProfile
 
@@ -98,7 +114,7 @@ ___
 
 • **bios_release_date**? : *string*
 
-*Defined in [api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1138)*
+*Defined in [api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1283)*
 
 **`memberof`** SystemProfile
 
@@ -108,7 +124,7 @@ ___
 
 • **bios_vendor**? : *string*
 
-*Defined in [api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1126)*
+*Defined in [api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1271)*
 
 **`memberof`** SystemProfile
 
@@ -118,7 +134,7 @@ ___
 
 • **bios_version**? : *string*
 
-*Defined in [api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1132)*
+*Defined in [api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1277)*
 
 **`memberof`** SystemProfile
 
@@ -128,7 +144,7 @@ ___
 
 • **captured_date**? : *string*
 
-*Defined in [api.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1252)*
+*Defined in [api.ts:1409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1409)*
 
 **`memberof`** SystemProfile
 
@@ -138,7 +154,7 @@ ___
 
 • **cloud_provider**? : *string*
 
-*Defined in [api.ts:1216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1216)*
+*Defined in [api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1373)*
 
 **`memberof`** SystemProfile
 
@@ -148,7 +164,7 @@ ___
 
 • **cores_per_socket**? : *number*
 
-*Defined in [api.ts:1090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1090)*
+*Defined in [api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1235)*
 
 **`memberof`** SystemProfile
 
@@ -158,7 +174,7 @@ ___
 
 • **cpu_flags**? : *Array‹string›*
 
-*Defined in [api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1144)*
+*Defined in [api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1289)*
 
 **`memberof`** SystemProfile
 
@@ -168,7 +184,7 @@ ___
 
 • **cpu_model**? : *string*
 
-*Defined in [api.ts:1072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1072)*
+*Defined in [api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1217)*
 
 The cpu model name
 
@@ -180,7 +196,7 @@ ___
 
 • **disk_devices**? : *Array‹[DiskDevice](diskdevice.md)›*
 
-*Defined in [api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1120)*
+*Defined in [api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1265)*
 
 **`memberof`** SystemProfile
 
@@ -190,7 +206,7 @@ ___
 
 • **dnf_modules**? : *Array‹[DnfModule](dnfmodule.md)›*
 
-*Defined in [api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1228)*
+*Defined in [api.ts:1385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1385)*
 
 **`memberof`** SystemProfile
 
@@ -200,7 +216,7 @@ ___
 
 • **enabled_services**? : *Array‹string›*
 
-*Defined in [api.ts:1282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1282)*
+*Defined in [api.ts:1439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1439)*
 
 **`memberof`** SystemProfile
 
@@ -210,7 +226,7 @@ ___
 
 • **gpg_pubkeys**? : *Array‹string›*
 
-*Defined in [api.ts:1270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1270)*
+*Defined in [api.ts:1427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1427)*
 
 **`memberof`** SystemProfile
 
@@ -220,7 +236,7 @@ ___
 
 • **greenboot_fallback_detected**? : *boolean*
 
-*Defined in [api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1348)*
+*Defined in [api.ts:1511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1511)*
 
 Indicates whether greenboot detected a rolled back update on an edge device.
 
@@ -232,7 +248,7 @@ ___
 
 • **greenboot_status**? : *[SystemProfileGreenbootStatusEnum](../enums/systemprofilegreenbootstatusenum.md)*
 
-*Defined in [api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1342)*
+*Defined in [api.ts:1505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1505)*
 
 Indicates the greenboot status of an edge device.
 
@@ -244,7 +260,7 @@ ___
 
 • **host_type**? : *[SystemProfileHostTypeEnum](../enums/systemprofilehosttypeenum.md)*
 
-*Defined in [api.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1336)*
+*Defined in [api.ts:1499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1499)*
 
 Indicates the type of host.
 
@@ -256,7 +272,7 @@ ___
 
 • **infrastructure_type**? : *string*
 
-*Defined in [api.ts:1102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1102)*
+*Defined in [api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1247)*
 
 **`memberof`** SystemProfile
 
@@ -266,7 +282,7 @@ ___
 
 • **infrastructure_vendor**? : *string*
 
-*Defined in [api.ts:1108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1108)*
+*Defined in [api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1253)*
 
 **`memberof`** SystemProfile
 
@@ -276,7 +292,7 @@ ___
 
 • **insights_client_version**? : *string*
 
-*Defined in [api.ts:1240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1240)*
+*Defined in [api.ts:1397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1397)*
 
 The version number of insights client. supports wildcards
 
@@ -288,7 +304,7 @@ ___
 
 • **insights_egg_version**? : *string*
 
-*Defined in [api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1246)*
+*Defined in [api.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1403)*
 
 **`memberof`** SystemProfile
 
@@ -298,7 +314,7 @@ ___
 
 • **installed_packages**? : *Array‹string›*
 
-*Defined in [api.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1258)*
+*Defined in [api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1415)*
 
 **`memberof`** SystemProfile
 
@@ -308,7 +324,7 @@ ___
 
 • **installed_packages_delta**? : *Array‹string›*
 
-*Defined in [api.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1264)*
+*Defined in [api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1421)*
 
 **`memberof`** SystemProfile
 
@@ -318,7 +334,7 @@ ___
 
 • **installed_products**? : *Array‹[InstalledProduct](installedproduct.md)›*
 
-*Defined in [api.ts:1234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1234)*
+*Defined in [api.ts:1391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1391)*
 
 **`memberof`** SystemProfile
 
@@ -328,7 +344,7 @@ ___
 
 • **installed_services**? : *Array‹string›*
 
-*Defined in [api.ts:1276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1276)*
+*Defined in [api.ts:1433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1433)*
 
 **`memberof`** SystemProfile
 
@@ -338,7 +354,7 @@ ___
 
 • **is_marketplace**? : *boolean*
 
-*Defined in [api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1330)*
+*Defined in [api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1493)*
 
 Indicates whether the host is part of a marketplace install from AWS, Azure, etc.
 
@@ -350,7 +366,7 @@ ___
 
 • **katello_agent_running**? : *boolean*
 
-*Defined in [api.ts:1204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1204)*
+*Defined in [api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1361)*
 
 **`memberof`** SystemProfile
 
@@ -360,7 +376,7 @@ ___
 
 • **kernel_modules**? : *Array‹string›*
 
-*Defined in [api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1174)*
+*Defined in [api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1331)*
 
 **`memberof`** SystemProfile
 
@@ -370,7 +386,7 @@ ___
 
 • **last_boot_time**? : *string*
 
-*Defined in [api.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1180)*
+*Defined in [api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1337)*
 
 **`memberof`** SystemProfile
 
@@ -380,7 +396,7 @@ ___
 
 • **mssql**? : *[SystemProfileMssql](systemprofilemssql.md)*
 
-*Defined in [api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1378)*
+*Defined in [api.ts:1541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1541)*
 
 **`memberof`** SystemProfile
 
@@ -390,7 +406,7 @@ ___
 
 • **network_interfaces**? : *Array‹[NetworkInterface](networkinterface.md)›*
 
-*Defined in [api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1114)*
+*Defined in [api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1259)*
 
 **`memberof`** SystemProfile
 
@@ -400,7 +416,7 @@ ___
 
 • **number_of_cpus**? : *number*
 
-*Defined in [api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1078)*
+*Defined in [api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1223)*
 
 **`memberof`** SystemProfile
 
@@ -410,7 +426,7 @@ ___
 
 • **number_of_sockets**? : *number*
 
-*Defined in [api.ts:1084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1084)*
+*Defined in [api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1229)*
 
 **`memberof`** SystemProfile
 
@@ -420,7 +436,7 @@ ___
 
 • **operating_system**? : *[SystemProfileOperatingSystem](systemprofileoperatingsystem.md)*
 
-*Defined in [api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1150)*
+*Defined in [api.ts:1295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1295)*
 
 **`memberof`** SystemProfile
 
@@ -430,7 +446,7 @@ ___
 
 • **os_kernel_version**? : *string*
 
-*Defined in [api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1162)*
+*Defined in [api.ts:1307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1307)*
 
 The kernel version represented with a three, optionally four, number scheme.
 
@@ -442,7 +458,7 @@ ___
 
 • **os_release**? : *string*
 
-*Defined in [api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1156)*
+*Defined in [api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1301)*
 
 **`memberof`** SystemProfile
 
@@ -452,9 +468,21 @@ ___
 
 • **owner_id**? : *string*
 
-*Defined in [api.ts:1054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1054)*
+*Defined in [api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1199)*
 
 A UUID associated with the host\'s RHSM certificate
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` releasever
+
+• **releasever**? : *string*
+
+*Defined in [api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1313)*
+
+Release name of the system distribution (from yum/dnf)
 
 **`memberof`** SystemProfile
 
@@ -464,7 +492,7 @@ ___
 
 • **rhc_client_id**? : *string*
 
-*Defined in [api.ts:1060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1060)*
+*Defined in [api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1205)*
 
 A UUID associated with a cloud_connector
 
@@ -476,7 +504,7 @@ ___
 
 • **rhc_config_state**? : *string*
 
-*Defined in [api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1066)*
+*Defined in [api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1211)*
 
 A UUID associated with the config manager state
 
@@ -488,7 +516,7 @@ ___
 
 • **rhsm**? : *[SystemProfileRhsm](systemprofilerhsm.md)*
 
-*Defined in [api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1360)*
+*Defined in [api.ts:1523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1523)*
 
 **`memberof`** SystemProfile
 
@@ -498,7 +526,7 @@ ___
 
 • **rpm_ostree_deployments**? : *Array‹[RPMOSTreeDeployment](rpmostreedeployment.md)›*
 
-*Defined in [api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1354)*
+*Defined in [api.ts:1517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1517)*
 
 The list of deployments on the system as reported by rpm-ostree status --json
 
@@ -510,7 +538,17 @@ ___
 
 • **running_processes**? : *Array‹string›*
 
-*Defined in [api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1186)*
+*Defined in [api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1343)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` sap
+
+• **sap**? : *[SystemProfileSap](systemprofilesap.md)*
+
+*Defined in [api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1445)*
 
 **`memberof`** SystemProfile
 
@@ -520,7 +558,7 @@ ___
 
 • **sap_instance_number**? : *string*
 
-*Defined in [api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1300)*
+*Defined in [api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)*
 
 The instance number of the SAP HANA system (a two-digit number between 00 and 99)
 
@@ -532,7 +570,7 @@ ___
 
 • **sap_sids**? : *Array‹string›*
 
-*Defined in [api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1294)*
+*Defined in [api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1457)*
 
 **`memberof`** SystemProfile
 
@@ -542,7 +580,7 @@ ___
 
 • **sap_system**? : *boolean*
 
-*Defined in [api.ts:1288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1288)*
+*Defined in [api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1451)*
 
 Indicates if SAP is installed on the system
 
@@ -554,7 +592,7 @@ ___
 
 • **sap_version**? : *string*
 
-*Defined in [api.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1306)*
+*Defined in [api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1469)*
 
 The version of the SAP HANA lifecycle management program
 
@@ -566,7 +604,7 @@ ___
 
 • **satellite_managed**? : *boolean*
 
-*Defined in [api.ts:1210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1210)*
+*Defined in [api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1367)*
 
 **`memberof`** SystemProfile
 
@@ -576,7 +614,7 @@ ___
 
 • **selinux_config_file**? : *string*
 
-*Defined in [api.ts:1324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1324)*
+*Defined in [api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1487)*
 
 The SELinux mode provided in the config file
 
@@ -588,7 +626,7 @@ ___
 
 • **selinux_current_mode**? : *[SystemProfileSelinuxCurrentModeEnum](../enums/systemprofileselinuxcurrentmodeenum.md)*
 
-*Defined in [api.ts:1318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1318)*
+*Defined in [api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1481)*
 
 The current SELinux mode, either enforcing, permissive, or disabled
 
@@ -600,7 +638,7 @@ ___
 
 • **subscription_auto_attach**? : *string*
 
-*Defined in [api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1198)*
+*Defined in [api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1355)*
 
 **`memberof`** SystemProfile
 
@@ -610,7 +648,7 @@ ___
 
 • **subscription_status**? : *string*
 
-*Defined in [api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1192)*
+*Defined in [api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1349)*
 
 **`memberof`** SystemProfile
 
@@ -620,7 +658,7 @@ ___
 
 • **system_memory_bytes**? : *number*
 
-*Defined in [api.ts:1096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1096)*
+*Defined in [api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1241)*
 
 **`memberof`** SystemProfile
 
@@ -630,7 +668,19 @@ ___
 
 • **system_purpose**? : *[SystemProfileSystemPurpose](systemprofilesystempurpose.md)*
 
-*Defined in [api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1366)*
+*Defined in [api.ts:1529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1529)*
+
+**`memberof`** SystemProfile
+
+___
+
+### `Optional` system_update_method
+
+• **system_update_method**? : *[SystemProfileSystemUpdateMethodEnum](../enums/systemprofilesystemupdatemethodenum.md)*
+
+*Defined in [api.ts:1547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1547)*
+
+System update method
 
 **`memberof`** SystemProfile
 
@@ -640,7 +690,7 @@ ___
 
 • **tuned_profile**? : *string*
 
-*Defined in [api.ts:1312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1312)*
+*Defined in [api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1475)*
 
 Current profile resulting from command tuned-adm active
 
@@ -652,6 +702,6 @@ ___
 
 • **yum_repos**? : *Array‹[YumRepo](yumrepo.md)›*
 
-*Defined in [api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1222)*
+*Defined in [api.ts:1379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1379)*
 
 **`memberof`** SystemProfile

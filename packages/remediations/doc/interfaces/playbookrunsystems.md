@@ -26,7 +26,7 @@
 
 • **playbook_run_executor_id**: *string*
 
-*Defined in [api.ts:565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L565)*
+*Defined in [api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L578)*
 
 **`memberof`** PlaybookRunSystems
 
@@ -36,7 +36,7 @@ ___
 
 • **status**: *[PlaybookRunSystemStatus](../enums/playbookrunsystemstatus.md)*
 
-*Defined in [api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L553)*
+*Defined in [api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L566)*
 
 **`memberof`** PlaybookRunSystems
 
@@ -46,7 +46,7 @@ ___
 
 • **system_id**: *string*
 
-*Defined in [api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L541)*
+*Defined in [api.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L554)*
 
 **`memberof`** PlaybookRunSystems
 
@@ -56,7 +56,7 @@ ___
 
 • **system_name**: *string*
 
-*Defined in [api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L547)*
+*Defined in [api.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L560)*
 
 **`memberof`** PlaybookRunSystems
 
@@ -66,6 +66,6 @@ ___
 
 • **updated_at**: *string*
 
-*Defined in [api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L559)*
+*Defined in [api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L572)*
 
 **`memberof`** PlaybookRunSystems

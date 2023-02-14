@@ -26,9 +26,9 @@ StatusApi - object-oriented interface
 
 ### Methods
 
-* [statusList](statusapi.md#statuslist)
-* [statusLiveRead](statusapi.md#statusliveread)
-* [statusReadyRead](statusapi.md#statusreadyread)
+* [statusLiveRetrieve](statusapi.md#statusliveretrieve)
+* [statusReadyRetrieve](statusapi.md#statusreadyretrieve)
+* [statusRetrieve](statusapi.md#statusretrieve)
 
 ## Constructors
 
@@ -82,15 +82,13 @@ ___
 
 ## Methods
 
-###  statusList
+###  statusLiveRetrieve
 
-▸ **statusList**(`options?`: any): *Promise‹AxiosResponse‹void››*
+▸ **statusLiveRetrieve**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:678](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L678)*
+*Defined in [api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L609)*
 
-A list of statistics views.
-
-**`summary`** Provide a simple list of URLs contained here.
+Is the Advisor API live and serving requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
 
 **`throws`** {RequiredError}
 
@@ -106,15 +104,13 @@ Name | Type |
 
 ___
 
-###  statusLiveRead
+###  statusReadyRetrieve
 
-▸ **statusLiveRead**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
+▸ **statusReadyRetrieve**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L689)*
+*Defined in [api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L619)*
 
-This returns a dictionary with properties defining the status of the components Advisor relies on. At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
-
-**`summary`** Is the Advisor API live and serving requests?
+Is the Advisor API ready to serve requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  * \'django\' should always be True.  If Django isn\'t ready, you can\'t   get this information :-) * \'database\' is True when a database access returns successfully with   valid information. * \'rbac\' is True when we can make a request to the RBAC API and get   a valid response. * \'advisor\' is True if all of the above are True.
 
 **`throws`** {RequiredError}
 
@@ -126,19 +122,17 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
+**Returns:** *Promise‹AxiosResponse‹void››*
 
 ___
 
-###  statusReadyRead
+###  statusRetrieve
 
-▸ **statusReadyRead**(`options?`: any): *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
+▸ **statusRetrieve**(`options?`: any): *Promise‹AxiosResponse‹void››*
 
-*Defined in [api.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L700)*
+*Defined in [api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L629)*
 
-This returns a dictionary with properties defining the status of the components Advisor relies on. * \'django\' should always be True.  If Django isn\'t ready, you can\'t get this information :-) * \'database\' is True when a database access returns successfully with valid information. * \'rbac\' is True when we can make a request to the RBAC API and get a valid response. * \'advisor\' is True if all of the above are True.
-
-**`summary`** Is the Advisor API ready to serve requests?
+Provide a simple list of URLs contained here.  A list of statistics views.
 
 **`throws`** {RequiredError}
 
@@ -150,4 +144,4 @@ Name | Type |
 ------ | ------ |
 `options?` | any |
 
-**Returns:** *Promise‹AxiosResponse‹[StatusReady](../interfaces/statusready.md)››*
+**Returns:** *Promise‹AxiosResponse‹void››*

@@ -10,11 +10,15 @@
 
   ↳ [DefaultApi](defaultapi.md)
 
+  ↳ [GroupsApi](groupsapi.md)
+
   ↳ [HostsApi](hostsapi.md)
 
   ↳ [SystemProfileApi](systemprofileapi.md)
 
   ↳ [TagsApi](tagsapi.md)
+
+  ↳ [UnleashApi](unleashapi.md)
 
 ## Index
 

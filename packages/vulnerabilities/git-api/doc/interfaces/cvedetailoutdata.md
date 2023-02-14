@@ -16,7 +16,6 @@
 
 * [attributes](cvedetailoutdata.md#attributes)
 * [id](cvedetailoutdata.md#id)
-* [patch_access](cvedetailoutdata.md#patch_access)
 * [type](cvedetailoutdata.md#type)
 
 ## Properties
@@ -43,23 +42,11 @@ CVE id.
 
 ___
 
-###  patch_access
-
-• **patch_access**: *boolean | null*
-
-*Defined in [git-api/api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L203)*
-
-If show_advisories_details=true shows access to patch service else null
-
-**`memberof`** CveDetailOutData
-
-___
-
 ###  type
 
 • **type**: *string*
 
-*Defined in [git-api/api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L209)*
+*Defined in [git-api/api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L203)*
 
 Type of the record.
 

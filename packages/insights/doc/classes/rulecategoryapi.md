@@ -27,7 +27,7 @@ RulecategoryApi - object-oriented interface
 ### Methods
 
 * [rulecategoryList](rulecategoryapi.md#rulecategorylist)
-* [rulecategoryRead](rulecategoryapi.md#rulecategoryread)
+* [rulecategoryRetrieve](rulecategoryapi.md#rulecategoryretrieve)
 
 ## Constructors
 
@@ -85,11 +85,9 @@ ___
 
 ▸ **rulecategoryList**(`options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)[]››*
 
-*Defined in [api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L462)*
+*Defined in [api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L404)*
 
-Categories are listed in decreasing order of importance.
-
-**`summary`** Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
+Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
 
 **`throws`** {RequiredError}
 
@@ -105,15 +103,13 @@ Name | Type |
 
 ___
 
-###  rulecategoryRead
+###  rulecategoryRetrieve
 
-▸ **rulecategoryRead**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*
+▸ **rulecategoryRetrieve**(`id`: number, `options?`: any): *Promise‹AxiosResponse‹[RuleCategory](../interfaces/rulecategory.md)››*
 
-*Defined in [api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L474)*
+*Defined in [api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L415)*
 
-Categories are listed in decreasing order of importance.
-
-**`summary`** Rules are divided into categories, the usual being Availability, Stability, Security and Performance.
+Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
 
 **`throws`** {RequiredError}
 

@@ -24,7 +24,7 @@
 
 • **major**? : *number | null*
 
-*Defined in [api.ts:1726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1726)*
+*Defined in [api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1904)*
 
 **`memberof`** SystemProfileOperatingSystemOutValue
 
@@ -34,7 +34,7 @@ ___
 
 • **minor**? : *number | null*
 
-*Defined in [api.ts:1732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1732)*
+*Defined in [api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1910)*
 
 **`memberof`** SystemProfileOperatingSystemOutValue
 
@@ -44,6 +44,6 @@ ___
 
 • **name**? : *string*
 
-*Defined in [api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1720)*
+*Defined in [api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1898)*
 
 **`memberof`** SystemProfileOperatingSystemOutValue

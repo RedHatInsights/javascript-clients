@@ -86,7 +86,7 @@ ___
 
 ▸ **apiSystemProfileGetOperatingSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileOperatingSystemOut](../interfaces/systemprofileoperatingsystemout.md)››*
 
-*Defined in [api.ts:3976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3976)*
+*Defined in [api.ts:4969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4969)*
 
 Required permissions: inventory:hosts:read
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **apiSystemProfileGetSapSids**(`search?`: string, `tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:3994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3994)*
+*Defined in [api.ts:4987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4987)*
 
 Required permissions: inventory:hosts:read
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **apiSystemProfileGetSapSystem**(`tags?`: Array‹string›, `perPage?`: number, `page?`: number, `staleness?`: Array‹"fresh" | "stale" | "stale_warning" | "unknown"›, `registeredWith?`: Array‹"insights" | "yupana" | "puptoo" | "rhsm-conduit" | "cloud-connector" | "!yupana" | "!puptoo" | "!rhsm-conduit" | "!cloud-connector"›, `filter?`: object, `options?`: any): *Promise‹AxiosResponse‹[SystemProfileSapSystemOut](../interfaces/systemprofilesapsystemout.md)››*
 
-*Defined in [api.ts:4011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4011)*
+*Defined in [api.ts:5004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5004)*
 
 Required permissions: inventory:hosts:read
 
