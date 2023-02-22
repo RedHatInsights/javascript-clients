@@ -27,7 +27,7 @@ Status
 
 #### Defined in
 
-[api.ts:2331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2331)
+[api.ts:2381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2381)
 
 ___
 
@@ -41,4 +41,4 @@ Status
 
 #### Defined in
 
-[api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2337)
+[api.ts:2387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2387)

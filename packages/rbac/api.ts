@@ -2102,6 +2102,12 @@ export interface RoleOutDynamic {
      * @memberof RoleOutDynamic
      */
     external_tenant?: string;
+    /**
+     *
+     * @type {Array<Access>}
+     * @memberof RoleOutDynamic
+     */
+    access?: Array<Access>;
 }
 /**
  *
@@ -2169,6 +2175,12 @@ export interface RoleOutDynamicAllOf {
      * @memberof RoleOutDynamicAllOf
      */
     external_tenant?: string;
+    /**
+     *
+     * @type {Array<Access>}
+     * @memberof RoleOutDynamicAllOf
+     */
+    access?: Array<Access>;
 }
 /**
  *
@@ -3505,6 +3517,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
+         * @param {string} [excludeUsername] A username for a principal to filter for groups where principal is not a member and can be added manually
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
@@ -3515,7 +3528,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups: async (limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options: any = {}): Promise<RequestArgs> => {
+        listGroups: async (limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, excludeUsername?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/groups/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3554,6 +3567,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (username !== undefined) {
                 localVarQueryParameter['username'] = username;
+            }
+
+            if (excludeUsername !== undefined) {
+                localVarQueryParameter['exclude_username'] = excludeUsername;
             }
 
             if (uuid) {
@@ -3874,6 +3891,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
+         * @param {string} [excludeUsername] A username for a principal to filter for groups where principal is not a member and can be added manually
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
@@ -3884,8 +3902,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options);
+        async listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, excludeUsername?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).listGroups(limit, offset, name, nameMatch, scope, username, excludeUsername, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4036,6 +4054,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
          * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
          * @param {string} [username] A username for a principal to filter for groups
+         * @param {string} [excludeUsername] A username for a principal to filter for groups where principal is not a member and can be added manually
          * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
          * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
          * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
@@ -4046,8 +4065,8 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any): AxiosPromise<GroupPagination> {
-            return GroupApiFp(configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options).then((request) => request(axios, basePath));
+        listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, excludeUsername?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any): AxiosPromise<GroupPagination> {
+            return GroupApiFp(configuration).listGroups(limit, offset, name, nameMatch, scope, username, excludeUsername, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by role name
@@ -4203,6 +4222,7 @@ export class GroupApi extends BaseAPI {
      * @param {'partial' | 'exact'} [nameMatch] Parameter for specifying the matching criteria for an object\&#39;s name or display_name.
      * @param {'account' | 'principal'} [scope] Parameter for filtering resource by scope.
      * @param {string} [username] A username for a principal to filter for groups
+     * @param {string} [excludeUsername] A username for a principal to filter for groups where principal is not a member and can be added manually
      * @param {Array<string>} [uuid] A list of UUIDs to filter listed groups.
      * @param {Array<string>} [roleNames] List of role name to filter for groups. It is exact match but case-insensitive
      * @param {'all' | 'any'} [roleDiscriminator] Discriminator that works with role_names to indicate matching all/any of the role names
@@ -4214,8 +4234,8 @@ export class GroupApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any) {
-        return GroupApiFp(this.configuration).listGroups(limit, offset, name, nameMatch, scope, username, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options).then((request) => request(this.axios, this.basePath));
+    public listGroups(limit?: number, offset?: number, name?: string, nameMatch?: 'partial' | 'exact', scope?: 'account' | 'principal', username?: string, excludeUsername?: string, uuid?: Array<string>, roleNames?: Array<string>, roleDiscriminator?: 'all' | 'any', orderBy?: 'name' | 'modified' | 'principalCount' | 'policyCount', platformDefault?: boolean, adminDefault?: boolean, system?: boolean, options?: any) {
+        return GroupApiFp(this.configuration).listGroups(limit, offset, name, nameMatch, scope, username, excludeUsername, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

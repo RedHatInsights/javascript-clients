@@ -28,7 +28,7 @@ PolicyPagination
 
 #### Defined in
 
-[api.ts:1531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1531)
+[api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1569)
 
 ___
 
@@ -42,7 +42,7 @@ PolicyPagination
 
 #### Defined in
 
-[api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1525)
+[api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1563)
 
 ___
 
@@ -56,4 +56,4 @@ PolicyPagination
 
 #### Defined in
 
-[api.ts:1519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1519)
+[api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1557)

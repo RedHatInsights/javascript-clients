@@ -36,7 +36,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1178)
+[api.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1172)
 
 ___
 
@@ -52,7 +52,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1184)
+[api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1178)
 
 ___
 
@@ -68,7 +68,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1190)
+[api.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1184)
 
 ___
 
@@ -84,7 +84,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1196)
+[api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1190)
 
 ___
 
@@ -100,7 +100,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1202)
+[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1196)
 
 ___
 
@@ -116,7 +116,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1208)
+[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1202)
 
 ___
 
@@ -132,7 +132,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1214)
+[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1208)
 
 ___
 
@@ -148,7 +148,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1220)
+[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1214)
 
 ___
 
@@ -164,4 +164,4 @@ Meta
 
 #### Defined in
 
-[api.ts:1226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1226)
+[api.ts:1220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1220)

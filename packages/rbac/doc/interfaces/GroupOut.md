@@ -35,7 +35,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L917)
+[api.ts:955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L955)
 
 ___
 
@@ -49,7 +49,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L881)
+[api.ts:919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L919)
 
 ___
 
@@ -63,7 +63,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L869)
+[api.ts:907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L907)
 
 ___
 
@@ -77,7 +77,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L887)
+[api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L925)
 
 ___
 
@@ -91,7 +91,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L863)
+[api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L901)
 
 ___
 
@@ -105,7 +105,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L911)
+[api.ts:949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L949)
 
 ___
 
@@ -119,7 +119,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L893)
+[api.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L931)
 
 ___
 
@@ -133,7 +133,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L899)
+[api.ts:937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L937)
 
 ___
 
@@ -147,7 +147,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L905)
+[api.ts:943](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L943)
 
 ___
 
@@ -161,4 +161,4 @@ GroupOut
 
 #### Defined in
 
-[api.ts:875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L875)
+[api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L913)

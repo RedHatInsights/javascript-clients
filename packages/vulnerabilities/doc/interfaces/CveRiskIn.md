@@ -30,7 +30,7 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)
+[api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L373)
 
 ___
 
@@ -46,7 +46,7 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)
+[api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)
 
 ___
 
@@ -60,4 +60,4 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L391)
+[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)

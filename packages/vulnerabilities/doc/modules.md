@@ -106,7 +106,7 @@
 
 #### Defined in
 
-[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L366)
+[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L360)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[api.ts:1134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1134)
+[api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1128)
 
 ## Functions
 
@@ -147,7 +147,7 @@ DefaultApi - axios parameter creator
 | `getAnnouncement` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getApiStatus` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getBusinessRiskList` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getCveDetails` | (`cveId`: `string`, `showAdvisoriesDetails?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `getCveDetails` | (`cveId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getCveIdsBySystem` | (`inventoryId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `rulePresence?`: `boolean`[], `showAdvisories?`: `boolean`, `advisory?`: `string`, `ruleKey?`: `string`[], `knownExploit?`: `boolean`[], `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getCveIdsList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getCveList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `report?`: `boolean`, `advancedReport?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -171,7 +171,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2643)
+[api.ts:2637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2637)
 
 ___
 
@@ -202,7 +202,7 @@ DefaultApi - factory interface
 | `getAnnouncement` | (`options?`: `any`) => `AxiosPromise`<[`AnnouncementOut`](interfaces/AnnouncementOut.md)\> |
 | `getApiStatus` | (`options?`: `any`) => `AxiosPromise`<`void`\> |
 | `getBusinessRiskList` | (`options?`: `any`) => `AxiosPromise`<[`BusinessRiskListOut`](interfaces/BusinessRiskListOut.md)\> |
-| `getCveDetails` | (`cveId`: `string`, `showAdvisoriesDetails?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`CveDetailOut`](interfaces/CveDetailOut.md)\> |
+| `getCveDetails` | (`cveId`: `string`, `options?`: `any`) => `AxiosPromise`<[`CveDetailOut`](interfaces/CveDetailOut.md)\> |
 | `getCveIdsBySystem` | (`inventoryId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `rulePresence?`: `boolean`[], `showAdvisories?`: `boolean`, `advisory?`: `string`, `ruleKey?`: `string`[], `knownExploit?`: `boolean`[], `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `options?`: `any`) => `AxiosPromise`<[`SystemCvesIdsOut`](interfaces/SystemCvesIdsOut.md)\> |
 | `getCveIdsList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`VulnerabilitiesIdsOut`](interfaces/VulnerabilitiesIdsOut.md)\> |
 | `getCveList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `report?`: `boolean`, `advancedReport?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`VulnerabilitiesOut`](interfaces/VulnerabilitiesOut.md)\> |
@@ -226,7 +226,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:5642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5642)
+[api.ts:5630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5630)
 
 ___
 
@@ -255,7 +255,7 @@ DefaultApi - functional programming interface
 | `getAnnouncement` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AnnouncementOut`](interfaces/AnnouncementOut.md)\>\> |
 | `getApiStatus` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `getBusinessRiskList` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`BusinessRiskListOut`](interfaces/BusinessRiskListOut.md)\>\> |
-| `getCveDetails` | (`cveId`: `string`, `showAdvisoriesDetails?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`CveDetailOut`](interfaces/CveDetailOut.md)\>\> |
+| `getCveDetails` | (`cveId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`CveDetailOut`](interfaces/CveDetailOut.md)\>\> |
 | `getCveIdsBySystem` | (`inventoryId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `rulePresence?`: `boolean`[], `showAdvisories?`: `boolean`, `advisory?`: `string`, `ruleKey?`: `string`[], `knownExploit?`: `boolean`[], `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemCvesIdsOut`](interfaces/SystemCvesIdsOut.md)\>\> |
 | `getCveIdsList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`VulnerabilitiesIdsOut`](interfaces/VulnerabilitiesIdsOut.md)\>\> |
 | `getCveList` | (`filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `cvssFrom?`: `number`, `cvssTo?`: `number`, `publicFrom?`: `string`, `publicTo?`: `string`, `impact?`: `string`, `dataFormat?`: `string`, `businessRiskId?`: `string`, `statusId?`: `string`, `rulePresence?`: `boolean`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `knownExploit?`: `boolean`[], `affecting?`: `boolean`[], `rhelVersion?`: `string`, `report?`: `boolean`, `advancedReport?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`VulnerabilitiesOut`](interfaces/VulnerabilitiesOut.md)\>\> |
@@ -279,4 +279,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5043)
+[api.ts:5032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5032)

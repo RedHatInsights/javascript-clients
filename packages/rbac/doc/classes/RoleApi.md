@@ -127,7 +127,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5847)
+[api.ts:5905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5905)
 
 ___
 
@@ -158,7 +158,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5859](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5859)
+[api.ts:5917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5917)
 
 ___
 
@@ -190,7 +190,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5872)
+[api.ts:5930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5930)
 
 ___
 
@@ -223,7 +223,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5886)
+[api.ts:5944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5944)
 
 ___
 
@@ -255,7 +255,7 @@ RoleApi
 | `nameMatch?` | ``"exact"`` \| ``"partial"`` | Parameter for specifying the matching criteria for an object\&#39;s name or display_name. |
 | `scope?` | ``"account"`` \| ``"principal"`` | Parameter for filtering resource by scope. |
 | `orderBy?` | ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"`` | Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
-| `addFields?` | (``"groups_in"`` \| ``"groups_in_count"``)[] | Parameter for add list of fields to display for roles. |
+| `addFields?` | (``"groups_in"`` \| ``"groups_in_count"`` \| ``"access"``)[] | Parameter for add list of fields to display for roles. |
 | `username?` | `string` | Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header). |
 | `application?` | `string` | The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications. |
 | `permission?` | `string` | The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions. |
@@ -268,7 +268,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5910)
+[api.ts:5968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5968)
 
 ___
 
@@ -300,7 +300,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5923)
+[api.ts:5981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5981)
 
 ___
 
@@ -332,4 +332,4 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5936)
+[api.ts:5994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5994)

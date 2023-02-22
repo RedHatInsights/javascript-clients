@@ -27,7 +27,7 @@ Group
 
 #### Defined in
 
-[api.ts:850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L850)
+[api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)
 
 ___
 
@@ -41,4 +41,4 @@ Group
 
 #### Defined in
 
-[api.ts:844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L844)
+[api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L882)

@@ -28,7 +28,7 @@ RolePagination
 
 #### Defined in
 
-[api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2158)
+[api.ts:2208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2208)
 
 ___
 
@@ -42,7 +42,7 @@ RolePagination
 
 #### Defined in
 
-[api.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2152)
+[api.ts:2202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2202)
 
 ___
 
@@ -56,4 +56,4 @@ RolePagination
 
 #### Defined in
 
-[api.ts:2146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2146)
+[api.ts:2196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2196)

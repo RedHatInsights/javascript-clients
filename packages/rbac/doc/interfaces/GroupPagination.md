@@ -28,7 +28,7 @@ GroupPagination
 
 #### Defined in
 
-[api.ts:979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L979)
+[api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1017)
 
 ___
 
@@ -42,7 +42,7 @@ GroupPagination
 
 #### Defined in
 
-[api.ts:973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L973)
+[api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1011)
 
 ___
 
@@ -56,4 +56,4 @@ GroupPagination
 
 #### Defined in
 
-[api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L967)
+[api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1005)

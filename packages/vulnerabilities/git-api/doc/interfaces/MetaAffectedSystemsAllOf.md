@@ -34,7 +34,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1348)
+[api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1342)
 
 ___
 
@@ -50,7 +50,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1354)
+[api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1348)
 
 ___
 
@@ -66,7 +66,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1360)
+[api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1354)
 
 ___
 
@@ -82,7 +82,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1366)
+[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1360)
 
 ___
 
@@ -98,7 +98,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1372)
+[api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1366)
 
 ___
 
@@ -114,7 +114,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1378)
+[api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1372)
 
 ___
 
@@ -130,4 +130,4 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1384)
+[api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1378)

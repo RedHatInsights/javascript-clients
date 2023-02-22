@@ -32,7 +32,7 @@ InstalledProduct
 
 #### Defined in
 
-[api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L837)
+[api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L994)
 
 ___
 
@@ -46,7 +46,7 @@ InstalledProduct
 
 #### Defined in
 
-[api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)
+[api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L988)
 
 ___
 
@@ -62,4 +62,4 @@ InstalledProduct
 
 #### Defined in
 
-[api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L843)
+[api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1000)

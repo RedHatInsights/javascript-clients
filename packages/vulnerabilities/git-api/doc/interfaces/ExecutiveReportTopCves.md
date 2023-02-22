@@ -35,7 +35,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L970)
+[api.ts:964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L964)
 
 ___
 
@@ -51,7 +51,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L976)
+[api.ts:970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L970)
 
 ___
 
@@ -67,7 +67,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L982)
+[api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L976)
 
 ___
 
@@ -83,7 +83,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L988)
+[api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L982)
 
 ___
 
@@ -99,7 +99,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L994)
+[api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L988)
 
 ___
 
@@ -115,7 +115,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1000)
+[api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L994)
 
 ___
 
@@ -131,7 +131,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1006)
+[api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1000)
 
 ___
 
@@ -147,4 +147,4 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1012)
+[api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1006)

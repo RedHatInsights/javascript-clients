@@ -26,4 +26,4 @@ PrincipalPaginationAllOf
 
 #### Defined in
 
-[api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1700)
+[api.ts:1738](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1738)

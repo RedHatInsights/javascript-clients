@@ -29,7 +29,7 @@ PaginationLinks
 
 #### Defined in
 
-[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1225)
+[api.ts:1263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1263)
 
 ___
 
@@ -43,7 +43,7 @@ PaginationLinks
 
 #### Defined in
 
-[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1243)
+[api.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1281)
 
 ___
 
@@ -57,7 +57,7 @@ PaginationLinks
 
 #### Defined in
 
-[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1237)
+[api.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1275)
 
 ___
 
@@ -71,4 +71,4 @@ PaginationLinks
 
 #### Defined in
 
-[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1231)
+[api.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1269)

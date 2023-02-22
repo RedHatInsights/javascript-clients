@@ -28,7 +28,7 @@ PermissionPagination
 
 #### Defined in
 
-[api.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1356)
+[api.ts:1394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1394)
 
 ___
 
@@ -42,7 +42,7 @@ PermissionPagination
 
 #### Defined in
 
-[api.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1350)
+[api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1388)
 
 ___
 
@@ -56,4 +56,4 @@ PermissionPagination
 
 #### Defined in
 
-[api.ts:1344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1344)
+[api.ts:1382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1382)

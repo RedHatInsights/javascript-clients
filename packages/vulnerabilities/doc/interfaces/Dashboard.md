@@ -32,7 +32,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L460)
+[api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L454)
 
 ___
 
@@ -48,7 +48,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L466)
+[api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L460)
 
 ___
 
@@ -64,7 +64,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L472)
+[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L466)
 
 ___
 
@@ -78,7 +78,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L478)
+[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L472)
 
 ___
 
@@ -94,7 +94,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L484)
+[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L478)
 
 ___
 
@@ -110,7 +110,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L490)
+[api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L484)
 
 ___
 
@@ -126,4 +126,4 @@ Dashboard
 
 #### Defined in
 
-[api.ts:496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L496)
+[api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L490)

@@ -33,7 +33,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1927)
+[api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1965)
 
 ___
 
@@ -47,7 +47,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1951)
+[api.ts:1989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1989)
 
 ___
 
@@ -61,7 +61,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1933)
+[api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1971)
 
 ___
 
@@ -75,7 +75,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1957)
+[api.ts:1995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1995)
 
 ___
 
@@ -89,7 +89,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1963)
+[api.ts:2001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2001)
 
 ___
 
@@ -103,7 +103,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1945)
+[api.ts:1983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1983)
 
 ___
 
@@ -117,7 +117,7 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1921)
+[api.ts:1959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1959)
 
 ___
 
@@ -131,4 +131,4 @@ RoleOutAllOf
 
 #### Defined in
 
-[api.ts:1939](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1939)
+[api.ts:1977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1977)
