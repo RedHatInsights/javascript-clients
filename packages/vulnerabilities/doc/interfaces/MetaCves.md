@@ -48,7 +48,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1457)
+[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1451)
 
 ___
 
@@ -64,7 +64,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1463)
+[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1457)
 
 ___
 
@@ -80,7 +80,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1469)
+[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1463)
 
 ___
 
@@ -96,7 +96,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1397)
+[api.ts:1391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1391)
 
 ___
 
@@ -112,7 +112,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1403)
+[api.ts:1397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1397)
 
 ___
 
@@ -128,7 +128,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1475)
+[api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1469)
 
 ___
 
@@ -144,7 +144,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1481)
+[api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1475)
 
 ___
 
@@ -160,7 +160,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1487)
+[api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1481)
 
 ___
 
@@ -176,7 +176,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1409)
+[api.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1403)
 
 ___
 
@@ -192,7 +192,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1415)
+[api.ts:1409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1409)
 
 ___
 
@@ -208,7 +208,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1421)
+[api.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1415)
 
 ___
 
@@ -224,7 +224,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1427)
+[api.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1421)
 
 ___
 
@@ -240,7 +240,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1433)
+[api.ts:1427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1427)
 
 ___
 
@@ -256,7 +256,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1493)
+[api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1487)
 
 ___
 
@@ -272,7 +272,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1451)
+[api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1445)
 
 ___
 
@@ -288,7 +288,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1499)
+[api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1493)
 
 ___
 
@@ -304,7 +304,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1505)
+[api.ts:1499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1499)
 
 ___
 
@@ -320,7 +320,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1511)
+[api.ts:1505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1505)
 
 ___
 
@@ -336,7 +336,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1439)
+[api.ts:1433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1433)
 
 ___
 
@@ -352,7 +352,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1517)
+[api.ts:1511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1511)
 
 ___
 
@@ -368,4 +368,4 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1445)
+[api.ts:1439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1439)

@@ -127,4 +127,4 @@ AccessApi
 
 #### Defined in
 
-[api.ts:2515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2515)
+[api.ts:2565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2565)

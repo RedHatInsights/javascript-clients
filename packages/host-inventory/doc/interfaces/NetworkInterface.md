@@ -34,7 +34,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L856)
+[api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1013)
 
 ___
 
@@ -48,7 +48,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L862)
+[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1019)
 
 ___
 
@@ -64,7 +64,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L874)
+[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1031)
 
 ___
 
@@ -80,7 +80,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L868)
+[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)
 
 ___
 
@@ -96,7 +96,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L880)
+[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)
 
 ___
 
@@ -112,7 +112,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L886)
+[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)
 
 ___
 
@@ -128,4 +128,4 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L892)
+[api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)

@@ -33,7 +33,7 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1025)
+[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1019)
 
 ___
 
@@ -49,7 +49,7 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1031)
+[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1025)
 
 ___
 
@@ -65,7 +65,7 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1037)
+[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1031)
 
 ___
 
@@ -81,7 +81,7 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1043)
+[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1037)
 
 ___
 
@@ -97,7 +97,7 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1049)
+[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1043)
 
 ___
 
@@ -113,4 +113,4 @@ ExecutiveReportTopRules
 
 #### Defined in
 
-[api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1055)
+[api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1049)

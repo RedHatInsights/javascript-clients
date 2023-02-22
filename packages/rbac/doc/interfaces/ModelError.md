@@ -26,4 +26,4 @@ ModelError
 
 #### Defined in
 
-[api.ts:1212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1212)
+[api.ts:1250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1250)

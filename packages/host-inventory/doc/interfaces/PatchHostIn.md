@@ -31,7 +31,7 @@ PatchHostIn
 
 #### Defined in
 
-[api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L936)
+[api.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1093)
 
 ___
 
@@ -47,4 +47,4 @@ PatchHostIn
 
 #### Defined in
 
-[api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L942)
+[api.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1099)

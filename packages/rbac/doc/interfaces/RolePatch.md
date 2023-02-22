@@ -28,7 +28,7 @@ RolePatch
 
 #### Defined in
 
-[api.ts:2221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2221)
+[api.ts:2271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2271)
 
 ___
 
@@ -42,7 +42,7 @@ RolePatch
 
 #### Defined in
 
-[api.ts:2215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2215)
+[api.ts:2265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2265)
 
 ___
 
@@ -56,4 +56,4 @@ RolePatch
 
 #### Defined in
 
-[api.ts:2209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2209)
+[api.ts:2259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2259)

@@ -28,7 +28,7 @@ PrincipalPagination
 
 #### Defined in
 
-[api.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1687)
+[api.ts:1725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1725)
 
 ___
 
@@ -42,7 +42,7 @@ PrincipalPagination
 
 #### Defined in
 
-[api.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1681)
+[api.ts:1719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1719)
 
 ___
 
@@ -56,4 +56,4 @@ PrincipalPagination
 
 #### Defined in
 
-[api.ts:1675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1675)
+[api.ts:1713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1713)

@@ -26,4 +26,4 @@ PolicyPaginationAllOf
 
 #### Defined in
 
-[api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1544)
+[api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1582)

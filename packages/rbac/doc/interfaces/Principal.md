@@ -31,7 +31,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1563)
+[api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1601)
 
 ___
 
@@ -45,7 +45,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1569)
+[api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1607)
 
 ___
 
@@ -59,7 +59,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1581)
+[api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1619)
 
 ___
 
@@ -73,7 +73,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1587)
+[api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1625)
 
 ___
 
@@ -87,7 +87,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1575)
+[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1613)
 
 ___
 
@@ -101,4 +101,4 @@ Principal
 
 #### Defined in
 
-[api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1557)
+[api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1595)

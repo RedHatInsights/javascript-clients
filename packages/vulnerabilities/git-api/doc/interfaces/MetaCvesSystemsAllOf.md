@@ -28,4 +28,4 @@ MetaCvesSystemsAllOf
 
 #### Defined in
 
-[api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1742)
+[api.ts:1736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1736)

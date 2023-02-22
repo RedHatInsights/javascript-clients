@@ -34,7 +34,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L752)
+[api.ts:746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L746)
 
 ___
 
@@ -50,7 +50,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L758)
+[api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L752)
 
 ___
 
@@ -64,7 +64,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L764)
+[api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L758)
 
 ___
 
@@ -78,7 +78,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L770)
+[api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L764)
 
 ___
 
@@ -92,7 +92,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L776)
+[api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L770)
 
 ___
 
@@ -108,7 +108,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L782)
+[api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L776)
 
 ___
 
@@ -124,7 +124,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L788)
+[api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L782)
 
 ___
 
@@ -138,7 +138,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L794)
+[api.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L788)
 
 ___
 
@@ -152,4 +152,4 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L800)
+[api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L794)

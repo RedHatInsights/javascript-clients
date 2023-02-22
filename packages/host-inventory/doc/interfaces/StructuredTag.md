@@ -28,7 +28,7 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1035)
+[api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1192)
 
 ___
 
@@ -42,7 +42,7 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1029)
+[api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1186)
 
 ___
 
@@ -56,4 +56,4 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1041)
+[api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1198)

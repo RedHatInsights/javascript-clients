@@ -14,7 +14,6 @@ CveDetailOutData
 
 - [attributes](CveDetailOutData.md#attributes)
 - [id](CveDetailOutData.md#id)
-- [patch\_access](CveDetailOutData.md#patch_access)
 - [type](CveDetailOutData.md#type)
 
 ## Properties
@@ -49,22 +48,6 @@ CveDetailOutData
 
 ___
 
-### patch\_access
-
-• **patch\_access**: `boolean`
-
-If show_advisories_details=true shows access to patch service else null
-
-**`Memberof`**
-
-CveDetailOutData
-
-#### Defined in
-
-[api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L203)
-
-___
-
 ### type
 
 • **type**: `string`
@@ -77,4 +60,4 @@ CveDetailOutData
 
 #### Defined in
 
-[api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L209)
+[api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L203)

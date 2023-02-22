@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -127,6 +127,8 @@ TagsApi
 | `insightsId?` | `string` | Filter by insights_id |
 | `providerId?` | `string` | Filter by provider_id |
 | `providerType?` | ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"`` | Filter by provider_type |
+| `updatedStart?` | `string` | Only show hosts last modified after the given date |
+| `updatedEnd?` | `string` | Only show hosts last modified before the given date |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
 | `filter?` | `Object` | Filters hosts based on system_profile fields |
 | `options?` | `any` | Override http request option. |
@@ -137,4 +139,4 @@ TagsApi
 
 #### Defined in
 
-[api.ts:4315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4315)
+[api.ts:5224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5224)

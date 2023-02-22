@@ -28,7 +28,7 @@ Role
 
 #### Defined in
 
-[api.ts:1773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1773)
+[api.ts:1811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1811)
 
 ___
 
@@ -42,7 +42,7 @@ Role
 
 #### Defined in
 
-[api.ts:1767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1767)
+[api.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1805)
 
 ___
 
@@ -56,4 +56,4 @@ Role
 
 #### Defined in
 
-[api.ts:1761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1761)
+[api.ts:1799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1799)

@@ -26,4 +26,4 @@ PrincipalMinimal
 
 #### Defined in
 
-[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1613)
+[api.ts:1651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1651)

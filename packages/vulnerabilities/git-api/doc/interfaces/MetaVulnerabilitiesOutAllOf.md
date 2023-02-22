@@ -37,7 +37,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1993)
+[api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1987)
 
 ___
 
@@ -53,7 +53,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1999)
+[api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1993)
 
 ___
 
@@ -69,7 +69,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2005)
+[api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1999)
 
 ___
 
@@ -85,7 +85,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2011)
+[api.ts:2005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2005)
 
 ___
 
@@ -101,7 +101,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2017)
+[api.ts:2011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2011)
 
 ___
 
@@ -117,7 +117,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2023)
+[api.ts:2017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2017)
 
 ___
 
@@ -133,7 +133,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2029)
+[api.ts:2023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2023)
 
 ___
 
@@ -149,7 +149,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2035)
+[api.ts:2029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2029)
 
 ___
 
@@ -165,7 +165,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2041)
+[api.ts:2035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2035)
 
 ___
 
@@ -181,4 +181,4 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2047)
+[api.ts:2041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2041)
