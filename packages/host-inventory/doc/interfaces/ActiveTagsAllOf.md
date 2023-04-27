@@ -26,4 +26,4 @@ ActiveTagsAllOf
 
 #### Defined in
 
-[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)
+[api.ts:89](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L89)

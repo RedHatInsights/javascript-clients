@@ -15,12 +15,12 @@ GroupOut
 ### Properties
 
 - [account](GroupOut.md#account)
-- [created\_at](GroupOut.md#created_at)
-- [host\_ids](GroupOut.md#host_ids)
+- [created](GroupOut.md#created)
+- [host\_count](GroupOut.md#host_count)
 - [id](GroupOut.md#id)
 - [name](GroupOut.md#name)
 - [org\_id](GroupOut.md#org_id)
-- [updated\_at](GroupOut.md#updated_at)
+- [updated](GroupOut.md#updated)
 
 ## Properties
 
@@ -36,13 +36,13 @@ GroupOut
 
 #### Defined in
 
-[api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L686)
+[api.ts:654](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L654)
 
 ___
 
-### created\_at
+### created
 
-• `Optional` **created\_at**: `string`
+• `Optional` **created**: `string`
 
 A timestamp when the entry was created.
 
@@ -52,15 +52,15 @@ GroupOut
 
 #### Defined in
 
-[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L698)
+[api.ts:666](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L666)
 
 ___
 
-### host\_ids
+### host\_count
 
-• `Optional` **host\_ids**: `string`[]
+• `Optional` **host\_count**: `number`
 
-A comma-separated list of host IDs that belong to the group.
+The number of hosts associated with the group.
 
 **`Memberof`**
 
@@ -68,7 +68,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L680)
+[api.ts:648](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L648)
 
 ___
 
@@ -82,7 +82,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L668)
+[api.ts:636](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L636)
 
 ___
 
@@ -98,7 +98,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L674)
+[api.ts:642](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L642)
 
 ___
 
@@ -114,13 +114,13 @@ GroupOut
 
 #### Defined in
 
-[api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L692)
+[api.ts:660](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L660)
 
 ___
 
-### updated\_at
+### updated
 
-• `Optional` **updated\_at**: `string`
+• `Optional` **updated**: `string`
 
 A timestamp when the entry was last updated.
 
@@ -130,4 +130,4 @@ GroupOut
 
 #### Defined in
 
-[api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L704)
+[api.ts:672](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L672)

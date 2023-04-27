@@ -32,7 +32,6 @@ GroupsApi - object-oriented interface
 - [apiGroupGetGroupList](GroupsApi.md#apigroupgetgrouplist)
 - [apiGroupGetGroupsById](GroupsApi.md#apigroupgetgroupsbyid)
 - [apiGroupPatchGroupById](GroupsApi.md#apigrouppatchgroupbyid)
-- [apiGroupUpdateGroupDetails](GroupsApi.md#apigroupupdategroupdetails)
 
 ## Constructors
 
@@ -54,7 +53,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -68,7 +67,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -82,7 +81,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -96,13 +95,13 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiGroupCreateGroup
 
-▸ **apiGroupCreateGroup**(`createGroup`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
 
 Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -120,7 +119,7 @@ GroupsApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `createGroup` | [`CreateGroup`](../interfaces/CreateGroup.md) | Data required to create a record for a group. |
+| `groupIn` | [`GroupIn`](../interfaces/GroupIn.md) | Data required to create a record for a group. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -129,7 +128,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3003)
+[api.ts:2920](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2920)
 
 ___
 
@@ -162,7 +161,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3015)
+[api.ts:2932](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2932)
 
 ___
 
@@ -196,7 +195,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3028)
+[api.ts:2945](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2945)
 
 ___
 
@@ -223,8 +222,8 @@ GroupsApi
 | `name?` | `string` | Filter by group name |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"name"`` \| ``"updated_at"`` \| ``"host_ids"`` | Ordering field name |
-| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
+| `orderBy?` | ``"name"`` \| ``"host_ids"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -233,13 +232,13 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3044)
+[api.ts:2961](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2961)
 
 ___
 
 ### apiGroupGetGroupsById
 
-▸ **apiGroupGetGroupsById**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
+▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
 
 Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
 
@@ -258,6 +257,10 @@ GroupsApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `groupIdList` | `string`[] | A comma-separated list of group IDs. |
+| `perPage?` | `number` | A number of items to return per page. |
+| `page?` | `number` | A page number of the items to return. |
+| `orderBy?` | ``"name"`` \| ``"host_ids"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -266,7 +269,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3056)
+[api.ts:2977](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2977)
 
 ___
 
@@ -291,7 +294,7 @@ GroupsApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `groupId` | `string` | Group ID. |
-| `groupIn` | [`GroupIn`](../interfaces/GroupIn.md) | A dictionary with the new information to merge with the original one. |
+| `groupIn` | [`GroupIn`](../interfaces/GroupIn.md) | A dictionary with new information to merge with the original group. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -300,38 +303,4 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3069)
-
-___
-
-### apiGroupUpdateGroupDetails
-
-▸ **apiGroupUpdateGroupDetails**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
-
-Replace information from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-
-**`Summary`**
-
-Replace group information [Not Implemented]
-
-**`Throws`**
-
-**`Memberof`**
-
-GroupsApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `groupId` | `string` | Group ID. |
-| `groupIn` | [`GroupIn`](../interfaces/GroupIn.md) | A dictionary with the information to replace the original one. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:3082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3082)
+[api.ts:2990](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L2990)

@@ -37,7 +37,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L249)
+[api.ts:249](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L249)
 
 ___
 
@@ -53,7 +53,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L285)
+[api.ts:285](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L285)
 
 ___
 
@@ -67,7 +67,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L261)
+[api.ts:261](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L261)
 
 ___
 
@@ -81,7 +81,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L231)
+[api.ts:231](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L231)
 
 ___
 
@@ -95,7 +95,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L255)
+[api.ts:255](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L255)
 
 ___
 
@@ -109,7 +109,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L267)
+[api.ts:267](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L267)
 
 ___
 
@@ -123,7 +123,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L273)
+[api.ts:273](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L273)
 
 ___
 
@@ -137,7 +137,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L279)
+[api.ts:279](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L279)
 
 ___
 
@@ -151,7 +151,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L243)
+[api.ts:243](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L243)
 
 ___
 
@@ -165,4 +165,4 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L237)
+[api.ts:237](https://github.com/gkarat/javascript-clients/blob/master/packages/host-inventory/api.ts#L237)
