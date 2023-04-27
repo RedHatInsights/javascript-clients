@@ -21,7 +21,6 @@ GroupIn
 ### Properties
 
 - [host\_ids](GroupIn.md#host_ids)
-- [id](GroupIn.md#id)
 - [name](GroupIn.md#name)
 
 ## Properties
@@ -42,25 +41,7 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L655)
-
-___
-
-### id
-
-• `Optional` **id**: `string`
-
-**`Memberof`**
-
-GroupInAllOf
-
-#### Inherited from
-
-[GroupInAllOf](GroupInAllOf.md).[id](GroupInAllOf.md#id)
-
-#### Defined in
-
-[api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L643)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L623)
 
 ___
 
@@ -80,4 +61,4 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L649)
+[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L617)

@@ -27,7 +27,7 @@ SystemProfileOperatingSystemOutResults
 
 #### Defined in
 
-[api.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1897)
+[api.ts:1865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1865)
 
 ___
 
@@ -41,4 +41,4 @@ SystemProfileOperatingSystemOutResults
 
 #### Defined in
 
-[api.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1891)
+[api.ts:1859](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1859)

@@ -51,7 +51,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L833)
+[api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L801)
 
 ___
 
@@ -67,7 +67,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L827)
+[api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L795)
 
 ___
 
@@ -83,7 +83,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L785)
+[api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L753)
 
 ___
 
@@ -99,7 +99,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L851)
+[api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L819)
 
 ___
 
@@ -115,7 +115,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L881)
+[api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L849)
 
 ___
 
@@ -131,7 +131,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L821)
+[api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L789)
 
 ___
 
@@ -147,7 +147,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L863)
+[api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)
 
 ___
 
@@ -163,7 +163,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L797)
+[api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L765)
 
 ___
 
@@ -179,7 +179,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L845)
+[api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L813)
 
 ___
 
@@ -195,7 +195,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L767)
+[api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L735)
 
 ___
 
@@ -211,7 +211,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L791)
+[api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L759)
 
 ___
 
@@ -227,7 +227,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L803)
+[api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)
 
 ___
 
@@ -243,7 +243,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L839)
+[api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L807)
 
 ___
 
@@ -263,7 +263,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L893)
+[api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)
 
 ___
 
@@ -279,7 +279,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L809)
+[api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L777)
 
 ___
 
@@ -295,7 +295,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L815)
+[api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L783)
 
 ___
 
@@ -311,7 +311,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:887](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L887)
+[api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L855)
 
 ___
 
@@ -327,7 +327,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L779)
+[api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L747)
 
 ___
 
@@ -343,7 +343,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L869)
+[api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L837)
 
 ___
 
@@ -359,7 +359,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:875](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L875)
+[api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L843)
 
 ___
 
@@ -375,7 +375,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L773)
+[api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L741)
 
 ___
 
@@ -391,4 +391,4 @@ HostOut
 
 #### Defined in
 
-[api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L857)
+[api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L825)

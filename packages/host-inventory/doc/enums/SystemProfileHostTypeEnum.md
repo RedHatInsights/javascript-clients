@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[api.ts:1576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1576)
+[api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1544)

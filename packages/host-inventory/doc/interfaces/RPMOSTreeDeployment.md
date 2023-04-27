@@ -36,7 +36,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1167)
+[api.ts:1135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1135)
 
 ___
 
@@ -52,7 +52,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1143)
+[api.ts:1111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1111)
 
 ___
 
@@ -68,7 +68,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1137)
+[api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1105)
 
 ___
 
@@ -84,7 +84,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1149)
+[api.ts:1117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1117)
 
 ___
 
@@ -100,7 +100,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1155)
+[api.ts:1123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1123)
 
 ___
 
@@ -116,7 +116,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1173)
+[api.ts:1141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1141)
 
 ___
 
@@ -132,4 +132,4 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1161)
+[api.ts:1129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1129)
