@@ -34,7 +34,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1782)
+[api.ts:1750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1750)
 
 ___
 
@@ -48,7 +48,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1788)
+[api.ts:1756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1756)
 
 ___
 
@@ -64,7 +64,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1800)
+[api.ts:1768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1768)
 
 ___
 
@@ -80,7 +80,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1794)
+[api.ts:1762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1762)
 
 ___
 
@@ -96,7 +96,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1806)
+[api.ts:1774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1774)
 
 ___
 
@@ -112,7 +112,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1812)
+[api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1780)
 
 ___
 
@@ -128,4 +128,4 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1818)
+[api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1786)

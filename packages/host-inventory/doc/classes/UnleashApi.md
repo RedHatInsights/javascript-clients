@@ -122,4 +122,4 @@ UnleashApi
 
 #### Defined in
 
-[api.ts:5332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5332)
+[api.ts:5264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5264)

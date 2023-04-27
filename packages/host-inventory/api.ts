@@ -298,32 +298,6 @@ export interface CreateCheckInAllOf {
     checkin_frequency?: number;
 }
 /**
- * Data required to create a group.
- * @export
- * @interface CreateGroup
- */
-export interface CreateGroup extends CreateGroupAllOf {
-}
-/**
- *
- * @export
- * @interface CreateGroupAllOf
- */
-export interface CreateGroupAllOf {
-    /**
-     * A group’s human-readable name.
-     * @type {string}
-     * @memberof CreateGroupAllOf
-     */
-    name?: string;
-    /**
-     * A comma-separated list of host IDs that belong to the group.
-     * @type {Array<string>}
-     * @memberof CreateGroupAllOf
-     */
-    host_ids?: Array<string> | null;
-}
-/**
  * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
  * @export
  * @interface CreateHostOut
@@ -636,12 +610,6 @@ export interface GroupIn extends GroupInAllOf {
  */
 export interface GroupInAllOf {
     /**
-     *
-     * @type {string}
-     * @memberof GroupInAllOf
-     */
-    id?: string;
-    /**
      * A group’s human-readable name.
      * @type {string}
      * @memberof GroupInAllOf
@@ -673,11 +641,11 @@ export interface GroupOut {
      */
     name?: string;
     /**
-     * A comma-separated list of host IDs that belong to the group.
-     * @type {Array<string>}
+     * The number of hosts associated with the group.
+     * @type {number}
      * @memberof GroupOut
      */
-    host_ids?: Array<string> | null;
+    host_count?: number;
     /**
      * A Red Hat Account number that owns the host.
      * @type {string}
@@ -695,13 +663,13 @@ export interface GroupOut {
      * @type {string}
      * @memberof GroupOut
      */
-    created_at?: string;
+    created?: string;
     /**
      * A timestamp when the entry was last updated.
      * @type {string}
      * @memberof GroupOut
      */
-    updated_at?: string;
+    updated?: string;
 }
 /**
  * A paginated group search query result with group entries and their Inventory metadata.
@@ -2422,14 +2390,14 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
-         * @param {CreateGroup} createGroup Data required to create a record for a group.
+         * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupCreateGroup: async (createGroup: CreateGroup, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'createGroup' is not null or undefined
-            if (createGroup === null || createGroup === undefined) {
-                throw new RequiredError('createGroup','Required parameter createGroup was null or undefined when calling apiGroupCreateGroup.');
+        apiGroupCreateGroup: async (groupIn: GroupIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'groupIn' is not null or undefined
+            if (groupIn === null || groupIn === undefined) {
+                throw new RequiredError('groupIn','Required parameter groupIn was null or undefined when calling apiGroupCreateGroup.');
             }
             const localVarPath = `/groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -2467,8 +2435,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof createGroup !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(createGroup !== undefined ? createGroup : {}) : (createGroup || "");
+            const needsSerialization = (typeof groupIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(groupIn !== undefined ? groupIn : {}) : (groupIn || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2536,7 +2504,7 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiGroupDeleteHostsFromGroup.');
             }
-            const localVarPath = `/groups/{group_id}/{host_id_list}`
+            const localVarPath = `/groups/{group_id}/hosts/{host_id_list}`
                 .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)))
                 .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -2575,12 +2543,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'updated_at' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'updated_at' | 'host_ids', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2636,10 +2604,14 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
          * @summary Find groups by their IDs [Not Implemented]
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById: async (groupIdList: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupsById: async (groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupIdList' is not null or undefined
             if (groupIdList === null || groupIdList === undefined) {
                 throw new RequiredError('groupIdList','Required parameter groupIdList was null or undefined when calling apiGroupGetGroupsById.');
@@ -2663,6 +2635,22 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2680,7 +2668,7 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Merge group information [Not Implemented]
          * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the new information to merge with the original one.
+         * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2729,59 +2717,6 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Replace information from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Replace group information [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the information to replace the original one.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiGroupUpdateGroupDetails: async (groupId: string, groupIn: GroupIn, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
-            if (groupId === null || groupId === undefined) {
-                throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling apiGroupUpdateGroupDetails.');
-            }
-            // verify required parameter 'groupIn' is not null or undefined
-            if (groupIn === null || groupIn === undefined) {
-                throw new RequiredError('groupIn','Required parameter groupIn was null or undefined when calling apiGroupUpdateGroupDetails.');
-            }
-            const localVarPath = `/groups/{group_id}`
-                .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication ApiKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof groupIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(groupIn !== undefined ? groupIn : {}) : (groupIn || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -2794,12 +2729,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
         /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
-         * @param {CreateGroup} createGroup Data required to create a record for a group.
+         * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupCreateGroup(createGroup: CreateGroup, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
-            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupCreateGroup(createGroup, options);
+        async apiGroupCreateGroup(groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupCreateGroup(groupIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2840,12 +2775,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'updated_at' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'updated_at' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -2856,11 +2791,15 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
          * @summary Find groups by their IDs [Not Implemented]
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupsById(groupIdList: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
-            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupsById(groupIdList, options);
+        async apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2870,27 +2809,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Merge group information [Not Implemented]
          * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the new information to merge with the original one.
+         * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupPatchGroupById(groupId, groupIn, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Replace information from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Replace group information [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the information to replace the original one.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiGroupUpdateGroupDetails(groupId: string, groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
-            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupUpdateGroupDetails(groupId, groupIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2908,12 +2832,12 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
         /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
-         * @param {CreateGroup} createGroup Data required to create a record for a group.
+         * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupCreateGroup(createGroup: CreateGroup, options?: any): AxiosPromise<GroupOut> {
-            return GroupsApiFp(configuration).apiGroupCreateGroup(createGroup, options).then((request) => request(axios, basePath));
+        apiGroupCreateGroup(groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
+            return GroupsApiFp(configuration).apiGroupCreateGroup(groupIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
@@ -2942,45 +2866,38 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'updated_at' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'updated_at' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
             return GroupsApiFp(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
          * @summary Find groups by their IDs [Not Implemented]
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById(groupIdList: Array<string>, options?: any): AxiosPromise<GroupQueryOutput> {
-            return GroupsApiFp(configuration).apiGroupGetGroupsById(groupIdList, options).then((request) => request(axios, basePath));
+        apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+            return GroupsApiFp(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
          * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Merge group information [Not Implemented]
          * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the new information to merge with the original one.
+         * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
             return GroupsApiFp(configuration).apiGroupPatchGroupById(groupId, groupIn, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Replace information from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Replace group information [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {GroupIn} groupIn A dictionary with the information to replace the original one.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiGroupUpdateGroupDetails(groupId: string, groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
-            return GroupsApiFp(configuration).apiGroupUpdateGroupDetails(groupId, groupIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2995,13 +2912,13 @@ export class GroupsApi extends BaseAPI {
     /**
      * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
      * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
-     * @param {CreateGroup} createGroup Data required to create a record for a group.
+     * @param {GroupIn} groupIn Data required to create a record for a group.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupCreateGroup(createGroup: CreateGroup, options?: any) {
-        return GroupsApiFp(this.configuration).apiGroupCreateGroup(createGroup, options).then((request) => request(this.axios, this.basePath));
+    public apiGroupCreateGroup(groupIn: GroupIn, options?: any) {
+        return GroupsApiFp(this.configuration).apiGroupCreateGroup(groupIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3035,13 +2952,13 @@ export class GroupsApi extends BaseAPI {
      * @param {string} [name] Filter by group name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'name' | 'updated_at' | 'host_ids'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
+     * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'updated_at' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3049,38 +2966,29 @@ export class GroupsApi extends BaseAPI {
      * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
      * @summary Find groups by their IDs [Not Implemented]
      * @param {Array<string>} groupIdList A comma-separated list of group IDs.
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {'name' | 'host_ids'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupsById(groupIdList: Array<string>, options?: any) {
-        return GroupsApiFp(this.configuration).apiGroupGetGroupsById(groupIdList, options).then((request) => request(this.axios, this.basePath));
+    public apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return GroupsApiFp(this.configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
      * @summary Merge group information [Not Implemented]
      * @param {string} groupId Group ID.
-     * @param {GroupIn} groupIn A dictionary with the new information to merge with the original one.
+     * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
     public apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any) {
         return GroupsApiFp(this.configuration).apiGroupPatchGroupById(groupId, groupIn, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Replace information from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Replace group information [Not Implemented]
-     * @param {string} groupId Group ID.
-     * @param {GroupIn} groupIn A dictionary with the information to replace the original one.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof GroupsApi
-     */
-    public apiGroupUpdateGroupDetails(groupId: string, groupIn: GroupIn, options?: any) {
-        return GroupsApiFp(this.configuration).apiGroupUpdateGroupDetails(groupId, groupIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3195,6 +3103,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -3202,7 +3111,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostsByFilter: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostDeleteHostsByFilter: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3255,6 +3164,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['updated_end'] = (updatedEnd as any instanceof Date) ?
                     (updatedEnd as any).toISOString() :
                     updatedEnd;
+            }
+
+            if (groupName !== undefined) {
+                localVarQueryParameter['group_name'] = groupName;
             }
 
             if (registeredWith) {
@@ -3371,6 +3284,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3384,7 +3298,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3437,6 +3351,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['updated_end'] = (updatedEnd as any instanceof Date) ?
                     (updatedEnd as any).toISOString() :
                     updatedEnd;
+            }
+
+            if (groupName !== undefined) {
+                localVarQueryParameter['group_name'] = groupName;
             }
 
             if (branchId !== undefined) {
@@ -3567,8 +3485,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
-         * @summary Get the number of tags on a host
+         * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
+         * @summary Get the number of tags on a host or hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3820,10 +3738,10 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Update a host <br /><br /> Required permissions: inventory:hosts:write
-         * @summary Update a host
+         * Update hosts <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the hosts
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3990,6 +3908,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -3997,8 +3916,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, staleness, tags, filter, options);
+        async apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4035,6 +3954,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4048,8 +3968,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
-            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+            const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4076,8 +3996,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
-         * @summary Get the number of tags on a host
+         * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
+         * @summary Get the number of tags on a host or hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4144,10 +4064,10 @@ export const HostsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Update a host <br /><br /> Required permissions: inventory:hosts:write
-         * @summary Update a host
+         * Update hosts <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the hosts
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4217,6 +4137,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4224,8 +4145,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
-            return HostsApiFp(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, staleness, tags, filter, options).then((request) => request(axios, basePath));
+        apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
+            return HostsApiFp(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
@@ -4254,6 +4175,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4267,8 +4189,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
-            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+            return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
          * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
@@ -4287,8 +4209,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(axios, basePath));
         },
         /**
-         * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
-         * @summary Get the number of tags on a host
+         * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
+         * @summary Get the number of tags on a host or hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4339,10 +4261,10 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
             return HostsApiFp(configuration).apiHostMergeFacts(hostIdList, namespace, body, branchId, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update a host <br /><br /> Required permissions: inventory:hosts:write
-         * @summary Update a host
+         * Update hosts <br /><br /> Required permissions: inventory:hosts:write
+         * @summary Update hosts
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+         * @param {PatchHostIn} patchHostIn A group of fields to be updated on the hosts
          * @param {string} [branchId] Filter by branch_id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4409,6 +4331,7 @@ export class HostsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
+     * @param {string} [groupName] Filter by group name
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4417,8 +4340,8 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
-        return HostsApiFp(this.configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, staleness, tags, filter, options).then((request) => request(this.axios, this.basePath));
+    public apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
+        return HostsApiFp(this.configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4450,6 +4373,7 @@ export class HostsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
+     * @param {string} [groupName] Filter by group name
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -4464,8 +4388,8 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
-        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
+        return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4487,8 +4411,8 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Get the number of tags on a host <br /><br /> Required permissions: inventory:hosts:read
-     * @summary Get the number of tags on a host
+     * Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
+     * @summary Get the number of tags on a host or hosts
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -4547,10 +4471,10 @@ export class HostsApi extends BaseAPI {
     }
 
     /**
-     * Update a host <br /><br /> Required permissions: inventory:hosts:write
-     * @summary Update a host
+     * Update hosts <br /><br /> Required permissions: inventory:hosts:write
+     * @summary Update hosts
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-     * @param {PatchHostIn} patchHostIn A group of fields to be updated on the host
+     * @param {PatchHostIn} patchHostIn A group of fields to be updated on the hosts
      * @param {string} [branchId] Filter by branch_id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5004,12 +4928,13 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5092,6 +5017,10 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
                     updatedEnd;
             }
 
+            if (groupName !== undefined) {
+                localVarQueryParameter['group_name'] = groupName;
+            }
+
             if (registeredWith) {
                 localVarQueryParameter['registered_with'] = registeredWith;
             }
@@ -5140,13 +5069,14 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
-            const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, filter, options);
+        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
+            const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5179,13 +5109,14 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
+         * @param {string} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
-            return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, filter, options).then((request) => request(axios, basePath));
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
+            return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5215,14 +5146,15 @@ export class TagsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
+     * @param {string} [groupName] Filter by group name
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
-        return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
+    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
+        return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

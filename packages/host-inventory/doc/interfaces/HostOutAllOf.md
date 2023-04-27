@@ -28,4 +28,4 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L906)
+[api.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L874)
