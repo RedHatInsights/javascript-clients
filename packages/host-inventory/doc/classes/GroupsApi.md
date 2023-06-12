@@ -28,10 +28,11 @@ GroupsApi - object-oriented interface
 
 - [apiGroupCreateGroup](GroupsApi.md#apigroupcreategroup)
 - [apiGroupDeleteGroups](GroupsApi.md#apigroupdeletegroups)
-- [apiGroupDeleteHostsFromGroup](GroupsApi.md#apigroupdeletehostsfromgroup)
 - [apiGroupGetGroupList](GroupsApi.md#apigroupgetgrouplist)
 - [apiGroupGetGroupsById](GroupsApi.md#apigroupgetgroupsbyid)
 - [apiGroupPatchGroupById](GroupsApi.md#apigrouppatchgroupbyid)
+- [apiHostGroupAddHostListToGroup](GroupsApi.md#apihostgroupaddhostlisttogroup)
+- [apiHostGroupDeleteHostsFromGroup](GroupsApi.md#apihostgroupdeletehostsfromgroup)
 
 ## Constructors
 
@@ -128,7 +129,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:2920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2920)
+[api.ts:3163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3163)
 
 ___
 
@@ -161,41 +162,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:2932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2932)
-
-___
-
-### apiGroupDeleteHostsFromGroup
-
-▸ **apiGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-
-**`Summary`**
-
-Delete one or more hosts from a group [Not Implemented]
-
-**`Throws`**
-
-**`Memberof`**
-
-GroupsApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `groupId` | `string` | Group ID. |
-| `hostIdList` | `string`[] | A comma-separated list of host IDs. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:2945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2945)
+[api.ts:3175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3175)
 
 ___
 
@@ -232,7 +199,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:2961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2961)
+[api.ts:3191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3191)
 
 ___
 
@@ -269,7 +236,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:2977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2977)
+[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3207)
 
 ___
 
@@ -303,4 +270,72 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:2990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2990)
+[api.ts:3220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3220)
+
+___
+
+### apiHostGroupAddHostListToGroup
+
+▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+
+Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
+
+**`Summary`**
+
+Add host IDs to the provided group
+
+**`Throws`**
+
+**`Memberof`**
+
+GroupsApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `groupId` | `string` | Group ID. |
+| `requestBody` | `string`[] | A list of hosts IDs to associate with the provided group. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+
+#### Defined in
+
+[api.ts:3233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3233)
+
+___
+
+### apiHostGroupDeleteHostsFromGroup
+
+▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+
+Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+
+**`Summary`**
+
+Delete one or more hosts from a group [Not Implemented]
+
+**`Throws`**
+
+**`Memberof`**
+
+GroupsApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `groupId` | `string` | Group ID. |
+| `hostIdList` | `string`[] | A comma-separated list of host IDs. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
+
+#### Defined in
+
+[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3246)

@@ -29,7 +29,7 @@ ExecutiveReportCvesBySeverityNa
 
 #### Defined in
 
-[api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L895)
+[api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L959)
 
 ___
 
@@ -45,4 +45,4 @@ ExecutiveReportCvesBySeverityNa
 
 #### Defined in
 
-[api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L901)
+[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L965)

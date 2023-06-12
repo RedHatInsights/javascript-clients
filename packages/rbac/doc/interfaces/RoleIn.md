@@ -29,7 +29,7 @@ RoleIn
 
 #### Defined in
 
-[api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1842)
+[api.ts:1854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1854)
 
 ___
 
@@ -43,7 +43,7 @@ RoleIn
 
 #### Defined in
 
-[api.ts:1836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1836)
+[api.ts:1848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1848)
 
 ___
 
@@ -57,7 +57,7 @@ RoleIn
 
 #### Defined in
 
-[api.ts:1830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1830)
+[api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1842)
 
 ___
 
@@ -71,4 +71,4 @@ RoleIn
 
 #### Defined in
 
-[api.ts:1824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1824)
+[api.ts:1836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1836)

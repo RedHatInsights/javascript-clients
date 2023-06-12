@@ -26,4 +26,4 @@ RoleInAllOf
 
 #### Defined in
 
-[api.ts:1855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1855)
+[api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1867)

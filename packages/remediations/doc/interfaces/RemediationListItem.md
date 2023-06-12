@@ -19,6 +19,7 @@ RemediationListItem
 - [issue\_count](RemediationListItem.md#issue_count)
 - [name](RemediationListItem.md#name)
 - [needs\_reboot](RemediationListItem.md#needs_reboot)
+- [playbook\_runs](RemediationListItem.md#playbook_runs)
 - [resolved\_count](RemediationListItem.md#resolved_count)
 - [system\_count](RemediationListItem.md#system_count)
 - [updated\_at](RemediationListItem.md#updated_at)
@@ -125,6 +126,20 @@ RemediationListItem
 #### Defined in
 
 [api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L982)
+
+___
+
+### playbook\_runs
+
+• `Optional` **playbook\_runs**: [`PlaybookRunDetails`](PlaybookRunDetails.md)[]
+
+**`Memberof`**
+
+RemediationListItem
+
+#### Defined in
+
+[api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L994)
 
 ___
 

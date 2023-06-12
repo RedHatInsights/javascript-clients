@@ -12,6 +12,7 @@ MetaAffectedSystemsAllOf
 
 ### Properties
 
+- [cves\_without\_errata](MetaAffectedSystemsAllOf.md#cves_without_errata)
 - [first\_reported\_from](MetaAffectedSystemsAllOf.md#first_reported_from)
 - [first\_reported\_to](MetaAffectedSystemsAllOf.md#first_reported_to)
 - [patch\_access](MetaAffectedSystemsAllOf.md#patch_access)
@@ -21,6 +22,22 @@ MetaAffectedSystemsAllOf
 - [status\_id](MetaAffectedSystemsAllOf.md#status_id)
 
 ## Properties
+
+### cves\_without\_errata
+
+• **cves\_without\_errata**: `boolean`
+
+CVEs without Errata feature flag
+
+**`Memberof`**
+
+MetaAffectedSystemsAllOf
+
+#### Defined in
+
+[api.ts:1412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1412)
+
+___
 
 ### first\_reported\_from
 
@@ -34,7 +51,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1342)
+[api.ts:1418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1418)
 
 ___
 
@@ -50,7 +67,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1348)
+[api.ts:1424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1424)
 
 ___
 
@@ -66,7 +83,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1354)
+[api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1430)
 
 ___
 
@@ -82,7 +99,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1360)
+[api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1436)
 
 ___
 
@@ -98,7 +115,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1366)
+[api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1442)
 
 ___
 
@@ -114,7 +131,7 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1372)
+[api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1448)
 
 ___
 
@@ -130,4 +147,4 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1378)
+[api.ts:1454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1454)
