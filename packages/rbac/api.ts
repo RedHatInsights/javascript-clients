@@ -1623,6 +1623,12 @@ export interface Principal {
      * @memberof Principal
      */
     is_org_admin?: boolean;
+    /**
+     *
+     * @type {string | number}
+     * @memberof Principal
+     */
+    external_source_id?: string | number;
 }
 /**
  *
@@ -1692,6 +1698,12 @@ export interface PrincipalOut {
      * @memberof PrincipalOut
      */
     is_org_admin?: boolean;
+    /**
+     *
+     * @type {string | number}
+     * @memberof PrincipalOut
+     */
+    external_source_id?: string | number;
     /**
      *
      * @type {string}
@@ -5281,15 +5293,15 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
     return {
         /**
          *
-         * @summary Create a roles for a tenant
+         * @summary Create a role for a tenant
          * @param {RoleIn} roleIn Role to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRoles: async (roleIn: RoleIn, options: any = {}): Promise<RequestArgs> => {
+        createRole: async (roleIn: RoleIn, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'roleIn' is not null or undefined
             if (roleIn === null || roleIn === undefined) {
-                throw new RequiredError('roleIn','Required parameter roleIn was null or undefined when calling createRoles.');
+                throw new RequiredError('roleIn','Required parameter roleIn was null or undefined when calling createRole.');
             }
             const localVarPath = `/roles/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -5478,7 +5490,7 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
-         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [application] The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
          * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
@@ -5568,9 +5580,9 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          *
-         * @summary Patch a Role in the tenant
+         * @summary Patch a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {RolePatch} [rolePatch] Patch to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5615,9 +5627,9 @@ export const RoleApiAxiosParamCreator = function (configuration?: Configuration)
         },
         /**
          *
-         * @summary Update a Role in the tenant
+         * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a Role
+         * @param {RoleWithAccess} roleWithAccess Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5675,13 +5687,13 @@ export const RoleApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
-         * @summary Create a roles for a tenant
+         * @summary Create a role for a tenant
          * @param {RoleIn} roleIn Role to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createRoles(roleIn: RoleIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess>> {
-            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).createRoles(roleIn, options);
+        async createRole(roleIn: RoleIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RoleWithAccess>> {
+            const localVarAxiosArgs = await RoleApiAxiosParamCreator(configuration).createRole(roleIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5745,7 +5757,7 @@ export const RoleApiFp = function(configuration?: Configuration) {
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
-         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [application] The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
          * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
@@ -5760,9 +5772,9 @@ export const RoleApiFp = function(configuration?: Configuration) {
         },
         /**
          *
-         * @summary Patch a Role in the tenant
+         * @summary Patch a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {RolePatch} [rolePatch] Patch to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5775,9 +5787,9 @@ export const RoleApiFp = function(configuration?: Configuration) {
         },
         /**
          *
-         * @summary Update a Role in the tenant
+         * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a Role
+         * @param {RoleWithAccess} roleWithAccess Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5799,13 +5811,13 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
     return {
         /**
          *
-         * @summary Create a roles for a tenant
+         * @summary Create a role for a tenant
          * @param {RoleIn} roleIn Role to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRoles(roleIn: RoleIn, options?: any): AxiosPromise<RoleWithAccess> {
-            return RoleApiFp(configuration).createRoles(roleIn, options).then((request) => request(axios, basePath));
+        createRole(roleIn: RoleIn, options?: any): AxiosPromise<RoleWithAccess> {
+            return RoleApiFp(configuration).createRole(roleIn, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -5853,7 +5865,7 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
          * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
          * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
          * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
-         * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
+         * @param {string} [application] The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
          * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
          * @param {*} [options] Override http request option.
@@ -5864,9 +5876,9 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
         },
         /**
          *
-         * @summary Patch a Role in the tenant
+         * @summary Patch a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RolePatch} [rolePatch] Patch to a Role
+         * @param {RolePatch} [rolePatch] Patch to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5875,9 +5887,9 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
         },
         /**
          *
-         * @summary Update a Role in the tenant
+         * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a Role
+         * @param {RoleWithAccess} roleWithAccess Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5896,14 +5908,14 @@ export const RoleApiFactory = function (configuration?: Configuration, basePath?
 export class RoleApi extends BaseAPI {
     /**
      *
-     * @summary Create a roles for a tenant
+     * @summary Create a role for a tenant
      * @param {RoleIn} roleIn Role to create
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    public createRoles(roleIn: RoleIn, options?: any) {
-        return RoleApiFp(this.configuration).createRoles(roleIn, options).then((request) => request(this.axios, this.basePath));
+    public createRole(roleIn: RoleIn, options?: any) {
+        return RoleApiFp(this.configuration).createRole(roleIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5958,7 +5970,7 @@ export class RoleApi extends BaseAPI {
      * @param {'name' | 'display_name' | 'modified' | 'policyCount'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name
      * @param {Array<'groups_in' | 'groups_in_count' | 'access'>} [addFields] Parameter for add list of fields to display for roles.
      * @param {string} [username] Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
-     * @param {string} [application] The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications.
+     * @param {string} [application] The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [permission] The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
      * @param {string} [externalTenant] Parameter for filtering roles by external tenant name using string search.
      * @param {*} [options] Override http request option.
@@ -5971,9 +5983,9 @@ export class RoleApi extends BaseAPI {
 
     /**
      *
-     * @summary Patch a Role in the tenant
+     * @summary Patch a role in the tenant
      * @param {string} uuid ID of role to update
-     * @param {RolePatch} [rolePatch] Patch to a Role
+     * @param {RolePatch} [rolePatch] Patch to a role
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
@@ -5984,9 +5996,9 @@ export class RoleApi extends BaseAPI {
 
     /**
      *
-     * @summary Update a Role in the tenant
+     * @summary Update a role in the tenant
      * @param {string} uuid ID of role to update
-     * @param {RoleWithAccess} roleWithAccess Update to a Role
+     * @param {RoleWithAccess} roleWithAccess Update to a role
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi

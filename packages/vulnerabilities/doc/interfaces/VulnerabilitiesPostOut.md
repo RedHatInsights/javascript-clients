@@ -28,7 +28,7 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2568)
+[api.ts:2680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2680)
 
 ___
 
@@ -42,7 +42,7 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2574)
+[api.ts:2686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2686)
 
 ___
 
@@ -56,4 +56,4 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2580)
+[api.ts:2692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2692)

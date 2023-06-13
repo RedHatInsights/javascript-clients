@@ -40,8 +40,6 @@ DefaultApi - object-oriented interface
 - [getDashbar](DefaultApi.md#getdashbar)
 - [getDashboard](DefaultApi.md#getdashboard)
 - [getExecutiveReport](DefaultApi.md#getexecutivereport)
-- [getMitigatedSystemsByCve](DefaultApi.md#getmitigatedsystemsbycve)
-- [getMitigatedSystemsIdsByCve](DefaultApi.md#getmitigatedsystemsidsbycve)
 - [getPlaybookTemplate](DefaultApi.md#getplaybooktemplate)
 - [getStatusList](DefaultApi.md#getstatuslist)
 - [getSystemDetails](DefaultApi.md#getsystemdetails)
@@ -50,6 +48,7 @@ DefaultApi - object-oriented interface
 - [getVersion](DefaultApi.md#getversion)
 - [setCveBusinessRisk](DefaultApi.md#setcvebusinessrisk)
 - [setCveStatus](DefaultApi.md#setcvestatus)
+- [setCvesWithoutErrata](DefaultApi.md#setcveswithouterrata)
 - [setStatus](DefaultApi.md#setstatus)
 - [setSystemsOptOut](DefaultApi.md#setsystemsoptout)
 
@@ -173,7 +172,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6160)
+[api.ts:5893](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5893)
 
 ___
 
@@ -230,7 +229,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6196)
+[api.ts:5929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5929)
 
 ___
 
@@ -262,7 +261,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6207)
+[api.ts:5940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5940)
 
 ___
 
@@ -294,7 +293,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6218)
+[api.ts:5951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5951)
 
 ___
 
@@ -326,7 +325,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6229)
+[api.ts:5962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5962)
 
 ___
 
@@ -359,7 +358,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6241)
+[api.ts:5974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5974)
 
 ___
 
@@ -415,7 +414,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6276)
+[api.ts:6009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6009)
 
 ___
 
@@ -470,7 +469,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6310)
+[api.ts:6043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6043)
 
 ___
 
@@ -527,7 +526,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6346)
+[api.ts:6079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6079)
 
 ___
 
@@ -584,7 +583,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6382)
+[api.ts:6115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6115)
 
 ___
 
@@ -623,7 +622,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6400)
+[api.ts:6133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6133)
 
 ___
 
@@ -660,7 +659,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6416)
+[api.ts:6149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6149)
 
 ___
 
@@ -697,7 +696,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6432)
+[api.ts:6165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6165)
 
 ___
 
@@ -729,117 +728,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6443)
-
-___
-
-### getMitigatedSystemsByCve
-
-▸ **getMitigatedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
-
-Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
-
-**`Summary`**
-
-IDs of mitigated systems for a given CVE which has a security rule.
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cveId` | `string` | CVE id. |
-| `filter?` | `string` | Full text filter for the display name of system. |
-| `limit?` | `number` | Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination. |
-| `offset?` | `number` | Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `page?` | `number` | Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `pageSize?` | `number` | Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `sort?` | `string` | Sorting used for response. |
-| `statusId?` | `string` | Filer based on CVE status ID. |
-| `dataFormat?` | `string` | Format of the output data, either JSON (default) or CSV. |
-| `uuid?` | `string` | Filter based on UUID of inventory. |
-| `ruleKey?` | `string`[] | Filters security rules by its error key. |
-| `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
-| `rule?` | `string`[] | Filters CVEs or systems by security rule, has two functionalities. If value is false, shows results without security rules, every other value is taken as rule error key. |
-| `tags?` | `string`[] | Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding. |
-| `sapSids?` | `string`[] | List of SAP IDs to filter with |
-| `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
-| `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
-| `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
-| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
-| `remediation?` | `string` | Filer based on available remediation type id. |
-| `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
-| `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6477)
-
-___
-
-### getMitigatedSystemsIdsByCve
-
-▸ **getMitigatedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
-
-Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
-
-**`Summary`**
-
-Mitigated systems for a given CVE which has a security rule.
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cveId` | `string` | CVE id. |
-| `filter?` | `string` | Full text filter for the display name of system. |
-| `limit?` | `number` | Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination. |
-| `offset?` | `number` | Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `page?` | `number` | Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `pageSize?` | `number` | Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `sort?` | `string` | Sorting used for response. |
-| `statusId?` | `string` | Filer based on CVE status ID. |
-| `dataFormat?` | `string` | Format of the output data, either JSON (default) or CSV. |
-| `uuid?` | `string` | Filter based on UUID of inventory. |
-| `ruleKey?` | `string`[] | Filters security rules by its error key. |
-| `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
-| `rule?` | `string`[] | Filters CVEs or systems by security rule, has two functionalities. If value is false, shows results without security rules, every other value is taken as rule error key. |
-| `tags?` | `string`[] | Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding. |
-| `sapSids?` | `string`[] | List of SAP IDs to filter with |
-| `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
-| `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
-| `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
-| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
-| `remediation?` | `string` | Filer based on available remediation type id. |
-| `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
-| `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6511)
+[api.ts:6176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6176)
 
 ___
 
@@ -872,7 +761,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6523)
+[api.ts:6188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6188)
 
 ___
 
@@ -904,7 +793,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6534)
+[api.ts:6199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6199)
 
 ___
 
@@ -937,7 +826,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6546)
+[api.ts:6211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6211)
 
 ___
 
@@ -985,7 +874,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6573)
+[api.ts:6238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6238)
 
 ___
 
@@ -1034,7 +923,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6601)
+[api.ts:6266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6266)
 
 ___
 
@@ -1066,7 +955,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6612)
+[api.ts:6277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6277)
 
 ___
 
@@ -1099,7 +988,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6624)
+[api.ts:6289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6289)
 
 ___
 
@@ -1132,7 +1021,40 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6636)
+[api.ts:6301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6301)
+
+___
+
+### setCvesWithoutErrata
+
+▸ **setCvesWithoutErrata**(`cvesWithoutErrataIn`, `options?`): `Promise`<`AxiosResponse`<[`CvesWithoutErrataOut`](../interfaces/CvesWithoutErrataOut.md), `any`\>\>
+
+Sets cves_without_errata feature flag.
+
+**`Summary`**
+
+Set cves_without_errata feature flag.
+
+**`Throws`**
+
+**`Memberof`**
+
+DefaultApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `cvesWithoutErrataIn` | [`CvesWithoutErrataIn`](../interfaces/CvesWithoutErrataIn.md) | Values to be set. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`CvesWithoutErrataOut`](../interfaces/CvesWithoutErrataOut.md), `any`\>\>
+
+#### Defined in
+
+[api.ts:6313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6313)
 
 ___
 
@@ -1165,7 +1087,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6648)
+[api.ts:6325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6325)
 
 ___
 
@@ -1198,4 +1120,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6660)
+[api.ts:6337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6337)

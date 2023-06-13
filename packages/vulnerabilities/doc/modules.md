@@ -24,6 +24,10 @@
 - [CveDetailOutDataAttributes](interfaces/CveDetailOutDataAttributes.md)
 - [CveRiskIn](interfaces/CveRiskIn.md)
 - [CveStatusIn](interfaces/CveStatusIn.md)
+- [CvesWithoutErrataIn](interfaces/CvesWithoutErrataIn.md)
+- [CvesWithoutErrataOut](interfaces/CvesWithoutErrataOut.md)
+- [CvesWithoutErrataOutUpdated](interfaces/CvesWithoutErrataOutUpdated.md)
+- [CvesWithoutErrataOutUpdatedCvesWithoutErrata](interfaces/CvesWithoutErrataOutUpdatedCvesWithoutErrata.md)
 - [DashbarOut](interfaces/DashbarOut.md)
 - [Dashboard](interfaces/Dashboard.md)
 - [DashboardCvesBySeverity](interfaces/DashboardCvesBySeverity.md)
@@ -118,7 +122,7 @@ ___
 
 #### Defined in
 
-[api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1128)
+[api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1192)
 
 ## Functions
 
@@ -156,8 +160,6 @@ DefaultApi - axios parameter creator
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getExecutiveReport` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getMitigatedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getMitigatedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getStatusList` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -166,12 +168,13 @@ DefaultApi - axios parameter creator
 | `getVersion` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `setCveBusinessRisk` | (`cveRiskIn`: [`CveRiskIn`](interfaces/CveRiskIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `setCveStatus` | (`cveStatusIn`: [`CveStatusIn`](interfaces/CveStatusIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `setCvesWithoutErrata` | (`cvesWithoutErrataIn`: [`CvesWithoutErrataIn`](interfaces/CvesWithoutErrataIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `setStatus` | (`statusIn`: [`StatusIn`](interfaces/StatusIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `setSystemsOptOut` | (`optOutIn`: [`OptOutIn`](interfaces/OptOutIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
-[api.ts:2637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2637)
+[api.ts:2749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2749)
 
 ___
 
@@ -211,8 +214,6 @@ DefaultApi - factory interface
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`DashbarOut`](interfaces/DashbarOut.md)\> |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`Dashboard`](interfaces/Dashboard.md)\> |
 | `getExecutiveReport` | (`options?`: `any`) => `AxiosPromise`<[`ExecutiveReport`](interfaces/ExecutiveReport.md)\> |
-| `getMitigatedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`MitigatedSystemsIdsOut`](interfaces/MitigatedSystemsIdsOut.md)\> |
-| `getMitigatedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`MitigatedSystemsOut`](interfaces/MitigatedSystemsOut.md)\> |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `AxiosPromise`<[`PlaybookTemplate`](interfaces/PlaybookTemplate.md)\> |
 | `getStatusList` | (`options?`: `any`) => `AxiosPromise`<[`StatusListOut`](interfaces/StatusListOut.md)\> |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `AxiosPromise`<[`SystemDetailsOut`](interfaces/SystemDetailsOut.md)\> |
@@ -221,12 +222,13 @@ DefaultApi - factory interface
 | `getVersion` | (`options?`: `any`) => `AxiosPromise`<[`VersionOut`](interfaces/VersionOut.md)\> |
 | `setCveBusinessRisk` | (`cveRiskIn`: [`CveRiskIn`](interfaces/CveRiskIn.md), `options?`: `any`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\> |
 | `setCveStatus` | (`cveStatusIn`: [`CveStatusIn`](interfaces/CveStatusIn.md), `options?`: `any`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\> |
+| `setCvesWithoutErrata` | (`cvesWithoutErrataIn`: [`CvesWithoutErrataIn`](interfaces/CvesWithoutErrataIn.md), `options?`: `any`) => `AxiosPromise`<[`CvesWithoutErrataOut`](interfaces/CvesWithoutErrataOut.md)\> |
 | `setStatus` | (`statusIn`: [`StatusIn`](interfaces/StatusIn.md), `options?`: `any`) => `AxiosPromise`<[`StatusOut`](interfaces/StatusOut.md)\> |
 | `setSystemsOptOut` | (`optOutIn`: [`OptOutIn`](interfaces/OptOutIn.md), `options?`: `any`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\> |
 
 #### Defined in
 
-[api.ts:5630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5630)
+[api.ts:5417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5417)
 
 ___
 
@@ -264,8 +266,6 @@ DefaultApi - functional programming interface
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`DashbarOut`](interfaces/DashbarOut.md)\>\> |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Dashboard`](interfaces/Dashboard.md)\>\> |
 | `getExecutiveReport` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`ExecutiveReport`](interfaces/ExecutiveReport.md)\>\> |
-| `getMitigatedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`MitigatedSystemsIdsOut`](interfaces/MitigatedSystemsIdsOut.md)\>\> |
-| `getMitigatedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`MitigatedSystemsOut`](interfaces/MitigatedSystemsOut.md)\>\> |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookTemplate`](interfaces/PlaybookTemplate.md)\>\> |
 | `getStatusList` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StatusListOut`](interfaces/StatusListOut.md)\>\> |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemDetailsOut`](interfaces/SystemDetailsOut.md)\>\> |
@@ -274,9 +274,10 @@ DefaultApi - functional programming interface
 | `getVersion` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`VersionOut`](interfaces/VersionOut.md)\>\> |
 | `setCveBusinessRisk` | (`cveRiskIn`: [`CveRiskIn`](interfaces/CveRiskIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\>\> |
 | `setCveStatus` | (`cveStatusIn`: [`CveStatusIn`](interfaces/CveStatusIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\>\> |
+| `setCvesWithoutErrata` | (`cvesWithoutErrataIn`: [`CvesWithoutErrataIn`](interfaces/CvesWithoutErrataIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`CvesWithoutErrataOut`](interfaces/CvesWithoutErrataOut.md)\>\> |
 | `setStatus` | (`statusIn`: [`StatusIn`](interfaces/StatusIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StatusOut`](interfaces/StatusOut.md)\>\> |
 | `setSystemsOptOut` | (`optOutIn`: [`OptOutIn`](interfaces/OptOutIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`BulkChangeOut`](interfaces/BulkChangeOut.md)\>\> |
 
 #### Defined in
 
-[api.ts:5032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5032)
+[api.ts:4877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L4877)

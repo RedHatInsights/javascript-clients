@@ -36,7 +36,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2183)
+[api.ts:2195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2195)
 
 ___
 
@@ -50,7 +50,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2129)
+[api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2141)
 
 ___
 
@@ -64,7 +64,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2153)
+[api.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2165)
 
 ___
 
@@ -78,7 +78,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2135)
+[api.ts:2147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2147)
 
 ___
 
@@ -92,7 +92,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2171)
+[api.ts:2183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2183)
 
 ___
 
@@ -106,7 +106,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2177)
+[api.ts:2189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2189)
 
 ___
 
@@ -120,7 +120,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2165)
+[api.ts:2177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2177)
 
 ___
 
@@ -134,7 +134,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2159)
+[api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2171)
 
 ___
 
@@ -148,7 +148,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2147)
+[api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2159)
 
 ___
 
@@ -162,7 +162,7 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2123)
+[api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2135)
 
 ___
 
@@ -176,4 +176,4 @@ RoleOutDynamicAllOf
 
 #### Defined in
 
-[api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2141)
+[api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2153)

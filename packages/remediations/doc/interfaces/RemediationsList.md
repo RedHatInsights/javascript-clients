@@ -26,4 +26,4 @@ RemediationsList
 
 #### Defined in
 
-[api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1032)
+[api.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1038)

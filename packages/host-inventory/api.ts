@@ -968,6 +968,50 @@ export interface InstalledProduct {
     status?: string;
 }
 /**
+ * A collection of pagination links for resource-types endpoints
+ * @export
+ * @interface Links
+ */
+export interface Links {
+    /**
+     * The URI path for the first page in the pagination
+     * @type {string}
+     * @memberof Links
+     */
+    first: string;
+    /**
+     * The URI path for the previous page in the pagination
+     * @type {string}
+     * @memberof Links
+     */
+    previous: string | null;
+    /**
+     * The URI path for the next page in the pagination
+     * @type {string}
+     * @memberof Links
+     */
+    next: string | null;
+    /**
+     * The URI path for the last page in the pagination
+     * @type {string}
+     * @memberof Links
+     */
+    last: string;
+}
+/**
+ * The metadata for resource-types responses
+ * @export
+ * @interface Meta
+ */
+export interface Meta {
+    /**
+     * The total number of objects returned by the query.
+     * @type {number}
+     * @memberof Meta
+     */
+    count: number;
+}
+/**
  * Representation of one network interface
  * @export
  * @interface NetworkInterface
@@ -1139,6 +1183,126 @@ export interface RPMOSTreeDeployment {
      * @memberof RPMOSTreeDeployment
      */
     pinned: boolean;
+}
+/**
+ * A paginated group search query result with group entries and their Inventory metadata in paginated resource-types response format.
+ * @export
+ * @interface ResourceTypesGroupsQueryOutput
+ */
+export interface ResourceTypesGroupsQueryOutput {
+    /**
+     *
+     * @type {Meta}
+     * @memberof ResourceTypesGroupsQueryOutput
+     */
+    meta: Meta;
+    /**
+     *
+     * @type {Links}
+     * @memberof ResourceTypesGroupsQueryOutput
+     */
+    links: Links;
+    /**
+     * Actual group search query result entries.
+     * @type {Array<GroupOut>}
+     * @memberof ResourceTypesGroupsQueryOutput
+     */
+    data: Array<GroupOut>;
+}
+/**
+ *
+ * @export
+ * @interface ResourceTypesGroupsQueryOutputAllOf
+ */
+export interface ResourceTypesGroupsQueryOutputAllOf {
+    /**
+     * Actual group search query result entries.
+     * @type {Array<GroupOut>}
+     * @memberof ResourceTypesGroupsQueryOutputAllOf
+     */
+    data: Array<GroupOut>;
+}
+/**
+ * Data describing a single resource-types RBAC object.
+ * @export
+ * @interface ResourceTypesOut
+ */
+export interface ResourceTypesOut {
+    /**
+     * The name of the resource type
+     * @type {string}
+     * @memberof ResourceTypesOut
+     */
+    value?: string;
+    /**
+     * The path for the RBAC endpoint for the resource type
+     * @type {string}
+     * @memberof ResourceTypesOut
+     */
+    path?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ResourceTypesOut
+     */
+    count?: number;
+}
+/**
+ *
+ * @export
+ * @interface ResourceTypesPaginationOut
+ */
+export interface ResourceTypesPaginationOut {
+    /**
+     *
+     * @type {Meta}
+     * @memberof ResourceTypesPaginationOut
+     */
+    meta: Meta;
+    /**
+     *
+     * @type {Links}
+     * @memberof ResourceTypesPaginationOut
+     */
+    links: Links;
+}
+/**
+ * A paginated list of resource-types RBAC objects.
+ * @export
+ * @interface ResourceTypesQueryOutput
+ */
+export interface ResourceTypesQueryOutput {
+    /**
+     *
+     * @type {Meta}
+     * @memberof ResourceTypesQueryOutput
+     */
+    meta: Meta;
+    /**
+     *
+     * @type {Links}
+     * @memberof ResourceTypesQueryOutput
+     */
+    links: Links;
+    /**
+     * Actual resource-types object data.
+     * @type {Array<ResourceTypesOut>}
+     * @memberof ResourceTypesQueryOutput
+     */
+    data: Array<ResourceTypesOut>;
+}
+/**
+ *
+ * @export
+ * @interface ResourceTypesQueryOutputAllOf
+ */
+export interface ResourceTypesQueryOutputAllOf {
+    /**
+     * Actual resource-types object data.
+     * @type {Array<ResourceTypesOut>}
+     * @memberof ResourceTypesQueryOutputAllOf
+     */
+    data: Array<ResourceTypesOut>;
 }
 /**
  *
@@ -2488,56 +2652,6 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiGroupDeleteHostsFromGroup: async (groupId: string, hostIdList: Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
-            if (groupId === null || groupId === undefined) {
-                throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling apiGroupDeleteHostsFromGroup.');
-            }
-            // verify required parameter 'hostIdList' is not null or undefined
-            if (hostIdList === null || hostIdList === undefined) {
-                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiGroupDeleteHostsFromGroup.');
-            }
-            const localVarPath = `/groups/{group_id}/hosts/{host_id_list}`
-                .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)))
-                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication ApiKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
          * @summary Read the entire list of groups [Not Implemented]
          * @param {string} [name] Filter by group name
@@ -2717,6 +2831,109 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Add host IDs to the provided group
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} requestBody A list of hosts IDs to associate with the provided group.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGroupAddHostListToGroup: async (groupId: string, requestBody: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'groupId' is not null or undefined
+            if (groupId === null || groupId === undefined) {
+                throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling apiHostGroupAddHostListToGroup.');
+            }
+            // verify required parameter 'requestBody' is not null or undefined
+            if (requestBody === null || requestBody === undefined) {
+                throw new RequiredError('requestBody','Required parameter requestBody was null or undefined when calling apiHostGroupAddHostListToGroup.');
+            }
+            const localVarPath = `/groups/{group_id}/hosts`
+                .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof requestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(requestBody !== undefined ? requestBody : {}) : (requestBody || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group [Not Implemented]
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGroupDeleteHostsFromGroup: async (groupId: string, hostIdList: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'groupId' is not null or undefined
+            if (groupId === null || groupId === undefined) {
+                throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling apiHostGroupDeleteHostsFromGroup.');
+            }
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGroupDeleteHostsFromGroup.');
+            }
+            const localVarPath = `/groups/{group_id}/hosts/{host_id_list}`
+                .replace(`{${"group_id"}}`, encodeURIComponent(String(groupId)))
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -2749,21 +2966,6 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          */
         async apiGroupDeleteGroups(groupIdList: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupDeleteGroups(groupIdList, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupDeleteHostsFromGroup(groupId, hostIdList, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2820,6 +3022,36 @@ export const GroupsApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
+        /**
+         * Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Add host IDs to the provided group
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} requestBody A list of hosts IDs to associate with the provided group.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group [Not Implemented]
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiHostGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiHostGroupDeleteHostsFromGroup(groupId, hostIdList, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
     }
 };
 
@@ -2848,17 +3080,6 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          */
         apiGroupDeleteGroups(groupIdList: Array<string>, options?: any): AxiosPromise<void> {
             return GroupsApiFp(configuration).apiGroupDeleteGroups(groupIdList, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
-         * @param {string} groupId Group ID.
-         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any): AxiosPromise<void> {
-            return GroupsApiFp(configuration).apiGroupDeleteHostsFromGroup(groupId, hostIdList, options).then((request) => request(axios, basePath));
         },
         /**
          * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
@@ -2899,6 +3120,28 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
         apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
             return GroupsApiFp(configuration).apiGroupPatchGroupById(groupId, groupIn, options).then((request) => request(axios, basePath));
         },
+        /**
+         * Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Add host IDs to the provided group
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} requestBody A list of hosts IDs to associate with the provided group.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): AxiosPromise<GroupOut> {
+            return GroupsApiFp(configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group [Not Implemented]
+         * @param {string} groupId Group ID.
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiHostGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any): AxiosPromise<void> {
+            return GroupsApiFp(configuration).apiHostGroupDeleteHostsFromGroup(groupId, hostIdList, options).then((request) => request(axios, basePath));
+        },
     };
 };
 
@@ -2931,19 +3174,6 @@ export class GroupsApi extends BaseAPI {
      */
     public apiGroupDeleteGroups(groupIdList: Array<string>, options?: any) {
         return GroupsApiFp(this.configuration).apiGroupDeleteGroups(groupIdList, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Delete one or more hosts from a group [Not Implemented]
-     * @param {string} groupId Group ID.
-     * @param {Array<string>} hostIdList A comma-separated list of host IDs.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof GroupsApi
-     */
-    public apiGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any) {
-        return GroupsApiFp(this.configuration).apiGroupDeleteHostsFromGroup(groupId, hostIdList, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2989,6 +3219,32 @@ export class GroupsApi extends BaseAPI {
      */
     public apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any) {
         return GroupsApiFp(this.configuration).apiGroupPatchGroupById(groupId, groupIn, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Add host IDs to the provided group
+     * @param {string} groupId Group ID.
+     * @param {Array<string>} requestBody A list of hosts IDs to associate with the provided group.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any) {
+        return GroupsApiFp(this.configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+     * @summary Delete one or more hosts from a group [Not Implemented]
+     * @param {string} groupId Group ID.
+     * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiHostGroupDeleteHostsFromGroup(groupId: string, hostIdList: Array<string>, options?: any) {
+        return GroupsApiFp(this.configuration).apiHostGroupDeleteHostsFromGroup(groupId, hostIdList, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4497,6 +4753,217 @@ export class HostsApi extends BaseAPI {
      */
     public apiHostReplaceFacts(hostIdList: Array<string>, namespace: string, body: object, branchId?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostReplaceFacts(hostIdList, namespace, body, branchId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * ResourceTypesApi - axios parameter creator
+ * @export
+ */
+export const ResourceTypesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of inventory groups in resource-types format
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiResourceTypeGetResourceTypeGroupsList: async (perPage?: number, page?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/resource-types/inventory-groups`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of resource types
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiResourceTypeGetResourceTypeList: async (perPage?: number, page?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/resource-types`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ResourceTypesApi - functional programming interface
+ * @export
+ */
+export const ResourceTypesApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of inventory groups in resource-types format
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceTypesGroupsQueryOutput>> {
+            const localVarAxiosArgs = await ResourceTypesApiAxiosParamCreator(configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of resource types
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiResourceTypeGetResourceTypeList(perPage?: number, page?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceTypesQueryOutput>> {
+            const localVarAxiosArgs = await ResourceTypesApiAxiosParamCreator(configuration).apiResourceTypeGetResourceTypeList(perPage, page, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * ResourceTypesApi - factory interface
+ * @export
+ */
+export const ResourceTypesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of inventory groups in resource-types format
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any): AxiosPromise<ResourceTypesGroupsQueryOutput> {
+            return ResourceTypesApiFp(configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * @summary Get the list of resource types
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiResourceTypeGetResourceTypeList(perPage?: number, page?: number, options?: any): AxiosPromise<ResourceTypesQueryOutput> {
+            return ResourceTypesApiFp(configuration).apiResourceTypeGetResourceTypeList(perPage, page, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ResourceTypesApi - object-oriented interface
+ * @export
+ * @class ResourceTypesApi
+ * @extends {BaseAPI}
+ */
+export class ResourceTypesApi extends BaseAPI {
+    /**
+     * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+     * @summary Get the list of inventory groups in resource-types format
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ResourceTypesApi
+     */
+    public apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any) {
+        return ResourceTypesApiFp(this.configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+     * @summary Get the list of resource types
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ResourceTypesApi
+     */
+    public apiResourceTypeGetResourceTypeList(perPage?: number, page?: number, options?: any) {
+        return ResourceTypesApiFp(this.configuration).apiResourceTypeGetResourceTypeList(perPage, page, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

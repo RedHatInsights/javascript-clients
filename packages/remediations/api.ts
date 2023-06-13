@@ -986,6 +986,12 @@ export interface RemediationListItem {
      * @memberof RemediationListItem
      */
     archived: boolean;
+    /**
+     *
+     * @type {Array<PlaybookRunDetails>}
+     * @memberof RemediationListItem
+     */
+    playbook_runs?: Array<PlaybookRunDetails>;
 }
 /**
  *
@@ -2126,10 +2132,11 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
          * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'playbook_runs'>} [fieldsData] Add playbook run data to the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediations: async (sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options: any = {}): Promise<RequestArgs> => {
+        getRemediations: async (sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'playbook_runs'>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/remediations`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2162,6 +2169,10 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
 
             if (hideArchived !== undefined) {
                 localVarQueryParameter['hide_archived'] = hideArchived;
+            }
+
+            if (fieldsData) {
+                localVarQueryParameter['fields[data]'] = fieldsData;
             }
 
 
@@ -2613,11 +2624,12 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
          * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'playbook_runs'>} [fieldsData] Add playbook run data to the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList>> {
-            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options);
+        async getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'playbook_runs'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList>> {
+            const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, fieldsData, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2874,11 +2886,12 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
          * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'playbook_runs'>} [fieldsData] Add playbook run data to the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any): AxiosPromise<RemediationList> {
-            return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options).then((request) => request(axios, basePath));
+        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'playbook_runs'>, options?: any): AxiosPromise<RemediationList> {
+            return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, fieldsData, options).then((request) => request(axios, basePath));
         },
         /**
          * List of executions of this remediation
@@ -3146,12 +3159,13 @@ export class RemediationsApi extends BaseAPI {
      * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
      * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
      * @param {boolean} [hideArchived] Hide archived playbooks
+     * @param {Array<'playbook_runs'>} [fieldsData] Add playbook run data to the response
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
      */
-    public getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, options?: any) {
-        return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, options).then((request) => request(this.axios, this.basePath));
+    public getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'playbook_runs'>, options?: any) {
+        return RemediationsApiFp(this.configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, fieldsData, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

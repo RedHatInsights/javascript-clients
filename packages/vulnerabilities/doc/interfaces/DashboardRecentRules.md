@@ -37,7 +37,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L659)
+[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L723)
 
 ___
 
@@ -53,7 +53,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L665)
+[api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L729)
 
 ___
 
@@ -69,7 +69,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L671)
+[api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L735)
 
 ___
 
@@ -85,7 +85,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L677)
+[api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L741)
 
 ___
 
@@ -101,7 +101,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L683)
+[api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L747)
 
 ___
 
@@ -117,7 +117,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L689)
+[api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L753)
 
 ___
 
@@ -133,7 +133,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L695)
+[api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L759)
 
 ___
 
@@ -149,4 +149,4 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L701)
+[api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L765)
