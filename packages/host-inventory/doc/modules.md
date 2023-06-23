@@ -14,6 +14,7 @@
 - [SystemProfileSystemPurposeSlaEnum](enums/SystemProfileSystemPurposeSlaEnum.md)
 - [SystemProfileSystemPurposeUsageEnum](enums/SystemProfileSystemPurposeUsageEnum.md)
 - [SystemProfileSystemUpdateMethodEnum](enums/SystemProfileSystemUpdateMethodEnum.md)
+- [SystemProfileSystemdStateEnum](enums/SystemProfileSystemdStateEnum.md)
 
 ### Classes
 
@@ -45,6 +46,8 @@
 - [GroupIn](interfaces/GroupIn.md)
 - [GroupInAllOf](interfaces/GroupInAllOf.md)
 - [GroupOut](interfaces/GroupOut.md)
+- [GroupOutWithHostCount](interfaces/GroupOutWithHostCount.md)
+- [GroupOutWithHostCountAllOf](interfaces/GroupOutWithHostCountAllOf.md)
 - [GroupQueryOutput](interfaces/GroupQueryOutput.md)
 - [GroupQueryOutputAllOf](interfaces/GroupQueryOutputAllOf.md)
 - [HostOut](interfaces/HostOut.md)
@@ -85,6 +88,7 @@
 - [SystemProfileSapSystemOut](interfaces/SystemProfileSapSystemOut.md)
 - [SystemProfileSapSystemOutResults](interfaces/SystemProfileSapSystemOutResults.md)
 - [SystemProfileSystemPurpose](interfaces/SystemProfileSystemPurpose.md)
+- [SystemProfileSystemd](interfaces/SystemProfileSystemd.md)
 - [SystemProfileYumRepo](interfaces/SystemProfileYumRepo.md)
 - [TagCountOut](interfaces/TagCountOut.md)
 - [TagCountOutAllOf](interfaces/TagCountOutAllOf.md)
@@ -143,7 +147,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2408)
+[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2491)
 
 ___
 
@@ -173,7 +177,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:2505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2505)
+[api.ts:2588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2588)
 
 ___
 
@@ -201,7 +205,7 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2479)
+[api.ts:2562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2562)
 
 ___
 
@@ -235,7 +239,7 @@ GroupsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2552)
+[api.ts:2635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2635)
 
 ___
 
@@ -261,17 +265,17 @@ GroupsApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\> |
+| `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\> |
 | `apiGroupDeleteGroups` | (`groupIdList`: `string`[], `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `apiGroupGetGroupList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_ids"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\> |
 | `apiGroupGetGroupsById` | (`groupIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_ids"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\> |
-| `apiGroupPatchGroupById` | (`groupId`: `string`, `groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\> |
-| `apiHostGroupAddHostListToGroup` | (`groupId`: `string`, `requestBody`: `string`[], `options?`: `any`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\> |
+| `apiGroupPatchGroupById` | (`groupId`: `string`, `groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\> |
+| `apiHostGroupAddHostListToGroup` | (`groupId`: `string`, `requestBody`: `string`[], `options?`: `any`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\> |
 | `apiHostGroupDeleteHostsFromGroup` | (`groupId`: `string`, `hostIdList`: `string`[], `options?`: `any`) => `AxiosPromise`<`void`\> |
 
 #### Defined in
 
-[api.ts:3062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3062)
+[api.ts:3145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3145)
 
 ___
 
@@ -295,17 +299,17 @@ GroupsApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\>\> |
+| `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\>\> |
 | `apiGroupDeleteGroups` | (`groupIdList`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `apiGroupGetGroupList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_ids"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\>\> |
 | `apiGroupGetGroupsById` | (`groupIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_ids"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\>\> |
-| `apiGroupPatchGroupById` | (`groupId`: `string`, `groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\>\> |
-| `apiHostGroupAddHostListToGroup` | (`groupId`: `string`, `requestBody`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\>\> |
+| `apiGroupPatchGroupById` | (`groupId`: `string`, `groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\>\> |
+| `apiHostGroupAddHostListToGroup` | (`groupId`: `string`, `requestBody`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\>\> |
 | `apiHostGroupDeleteHostsFromGroup` | (`groupId`: `string`, `hostIdList`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 
 #### Defined in
 
-[api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2944)
+[api.ts:3027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3027)
 
 ___
 
@@ -344,7 +348,7 @@ HostsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3257)
+[api.ts:3340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3340)
 
 ___
 
@@ -385,7 +389,7 @@ HostsApi - factory interface
 
 #### Defined in
 
-[api.ts:4362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4362)
+[api.ts:4445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4445)
 
 ___
 
@@ -424,7 +428,7 @@ HostsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4125)
+[api.ts:4208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4208)
 
 ___
 
@@ -453,7 +457,7 @@ ResourceTypesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4765)
+[api.ts:4848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4848)
 
 ___
 
@@ -484,7 +488,7 @@ ResourceTypesApi - factory interface
 
 #### Defined in
 
-[api.ts:4909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4909)
+[api.ts:4992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4992)
 
 ___
 
@@ -513,7 +517,7 @@ ResourceTypesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4870)
+[api.ts:4953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4953)
 
 ___
 
@@ -543,7 +547,7 @@ SystemProfileApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4976)
+[api.ts:5059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5059)
 
 ___
 
@@ -575,7 +579,7 @@ SystemProfileApi - factory interface
 
 #### Defined in
 
-[api.ts:5261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5261)
+[api.ts:5344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5344)
 
 ___
 
@@ -605,7 +609,7 @@ SystemProfileApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5194)
+[api.ts:5277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5277)
 
 ___
 
@@ -633,7 +637,7 @@ TagsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5378)
+[api.ts:5461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5461)
 
 ___
 
@@ -663,7 +667,7 @@ TagsApi - factory interface
 
 #### Defined in
 
-[api.ts:5559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5559)
+[api.ts:5642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5642)
 
 ___
 
@@ -691,7 +695,7 @@ TagsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5519)
+[api.ts:5602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5602)
 
 ___
 
@@ -719,7 +723,7 @@ UnleashApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5634)
+[api.ts:5717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5717)
 
 ___
 
@@ -749,7 +753,7 @@ UnleashApi - factory interface
 
 #### Defined in
 
-[api.ts:5703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5703)
+[api.ts:5786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5786)
 
 ___
 
@@ -777,4 +781,4 @@ UnleashApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5681)
+[api.ts:5764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5764)

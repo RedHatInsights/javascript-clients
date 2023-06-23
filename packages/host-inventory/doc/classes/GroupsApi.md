@@ -102,7 +102,7 @@ BaseAPI.configuration
 
 ### apiGroupCreateGroup
 
-▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -125,11 +125,11 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:3163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3163)
+[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3246)
 
 ___
 
@@ -162,7 +162,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3175)
+[api.ts:3258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3258)
 
 ___
 
@@ -199,7 +199,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3191)
+[api.ts:3274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3274)
 
 ___
 
@@ -236,13 +236,13 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3207)
+[api.ts:3290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3290)
 
 ___
 
 ### apiGroupPatchGroupById
 
-▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -266,17 +266,17 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:3220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3220)
+[api.ts:3303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3303)
 
 ___
 
 ### apiHostGroupAddHostListToGroup
 
-▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
 
@@ -300,11 +300,11 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:3233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3233)
+[api.ts:3316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3316)
 
 ___
 
@@ -338,4 +338,4 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3246)
+[api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3329)

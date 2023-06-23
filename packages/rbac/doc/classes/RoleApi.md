@@ -127,7 +127,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5917)
+[api.ts:5925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5925)
 
 ___
 
@@ -158,7 +158,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5929)
+[api.ts:5937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5937)
 
 ___
 
@@ -190,7 +190,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5942)
+[api.ts:5950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5950)
 
 ___
 
@@ -223,7 +223,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5956)
+[api.ts:5964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5964)
 
 ___
 
@@ -268,7 +268,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5980)
+[api.ts:5988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5988)
 
 ___
 
@@ -300,7 +300,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5993)
+[api.ts:6001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6001)
 
 ___
 
@@ -332,4 +332,4 @@ RoleApi
 
 #### Defined in
 
-[api.ts:6006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6006)
+[api.ts:6014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6014)

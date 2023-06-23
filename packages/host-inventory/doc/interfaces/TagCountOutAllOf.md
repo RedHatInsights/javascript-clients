@@ -32,4 +32,4 @@ TagCountOutAllOf
 
 #### Defined in
 
-[api.ts:2289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2289)
+[api.ts:2372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2372)

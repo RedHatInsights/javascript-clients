@@ -30,4 +30,4 @@ Meta
 
 #### Defined in
 
-[api.ts:1012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1012)
+[api.ts:1050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1050)

@@ -33,7 +33,7 @@ Links
 
 #### Defined in
 
-[api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L981)
+[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1019)
 
 ___
 
@@ -49,7 +49,7 @@ Links
 
 #### Defined in
 
-[api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L999)
+[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)
 
 ___
 
@@ -65,7 +65,7 @@ Links
 
 #### Defined in
 
-[api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L993)
+[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1031)
 
 ___
 
@@ -81,4 +81,4 @@ Links
 
 #### Defined in
 
-[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L987)
+[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)

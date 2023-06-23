@@ -435,6 +435,12 @@ export interface CreateHostOut {
      * @memberof CreateHostOut
      */
     per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
+    /**
+     * The groups that the host belongs to, if any.
+     * @type {Array<GroupOut>}
+     * @memberof CreateHostOut
+     */
+    groups?: Array<GroupOut>;
 }
 /**
  *
@@ -520,6 +526,12 @@ export interface CreateHostOutAllOf {
      * @memberof CreateHostOutAllOf
      */
     per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
+    /**
+     * The groups that the host belongs to, if any.
+     * @type {Array<GroupOut>}
+     * @memberof CreateHostOutAllOf
+     */
+    groups?: Array<GroupOut>;
 }
 /**
  * Representation of one mounted device
@@ -641,12 +653,6 @@ export interface GroupOut {
      */
     name?: string;
     /**
-     * The number of hosts associated with the group.
-     * @type {number}
-     * @memberof GroupOut
-     */
-    host_count?: number;
-    /**
      * A Red Hat Account number that owns the host.
      * @type {string}
      * @memberof GroupOut
@@ -670,6 +676,32 @@ export interface GroupOut {
      * @memberof GroupOut
      */
     updated?: string;
+}
+/**
+ * Data of a single group belonging to an account.
+ * @export
+ * @interface GroupOutWithHostCount
+ */
+export interface GroupOutWithHostCount extends GroupOutWithHostCountAllOf {
+}
+/**
+ *
+ * @export
+ * @interface GroupOutWithHostCountAllOf
+ */
+export interface GroupOutWithHostCountAllOf {
+    /**
+     *
+     * @type {GroupOut}
+     * @memberof GroupOutWithHostCountAllOf
+     */
+    group_out?: GroupOut;
+    /**
+     * The number of hosts associated with the group.
+     * @type {number}
+     * @memberof GroupOutWithHostCountAllOf
+     */
+    host_count?: number;
 }
 /**
  * A paginated group search query result with group entries and their Inventory metadata.
@@ -703,10 +735,10 @@ export interface GroupQueryOutput {
     total: number;
     /**
      * Actual group search query result entries.
-     * @type {Array<GroupOut>}
+     * @type {Array<GroupOutWithHostCount>}
      * @memberof GroupQueryOutput
      */
-    results: Array<GroupOut>;
+    results: Array<GroupOutWithHostCount>;
 }
 /**
  *
@@ -716,10 +748,10 @@ export interface GroupQueryOutput {
 export interface GroupQueryOutputAllOf {
     /**
      * Actual group search query result entries.
-     * @type {Array<GroupOut>}
+     * @type {Array<GroupOutWithHostCount>}
      * @memberof GroupQueryOutputAllOf
      */
-    results: Array<GroupOut>;
+    results: Array<GroupOutWithHostCount>;
 }
 /**
  * A database entry representing a single host with its Inventory metadata.
@@ -859,6 +891,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
+    /**
+     * The groups that the host belongs to, if any.
+     * @type {Array<GroupOut>}
+     * @memberof HostOut
+     */
+    groups?: Array<GroupOut>;
 }
 /**
  *
@@ -1204,10 +1242,10 @@ export interface ResourceTypesGroupsQueryOutput {
     links: Links;
     /**
      * Actual group search query result entries.
-     * @type {Array<GroupOut>}
+     * @type {Array<GroupOutWithHostCount>}
      * @memberof ResourceTypesGroupsQueryOutput
      */
-    data: Array<GroupOut>;
+    data: Array<GroupOutWithHostCount>;
 }
 /**
  *
@@ -1217,10 +1255,10 @@ export interface ResourceTypesGroupsQueryOutput {
 export interface ResourceTypesGroupsQueryOutputAllOf {
     /**
      * Actual group search query result entries.
-     * @type {Array<GroupOut>}
+     * @type {Array<GroupOutWithHostCount>}
      * @memberof ResourceTypesGroupsQueryOutputAllOf
      */
-    data: Array<GroupOut>;
+    data: Array<GroupOutWithHostCount>;
 }
 /**
  * Data describing a single resource-types RBAC object.
@@ -1431,6 +1469,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     cpu_flags?: Array<string>;
+    /**
+     *
+     * @type {SystemProfileSystemd}
+     * @memberof SystemProfile
+     */
+    systemd?: SystemProfileSystemd;
     /**
      *
      * @type {SystemProfileOperatingSystem}
@@ -2196,6 +2240,45 @@ export enum SystemProfileSystemPurposeSlaEnum {
 }
 
 /**
+ * Object for whole system systemd state, as reported by systemctl status --all
+ * @export
+ * @interface SystemProfileSystemd
+ */
+export interface SystemProfileSystemd {
+    /**
+     * The state of the systemd subsystem
+     * @type {string}
+     * @memberof SystemProfileSystemd
+     */
+    state: SystemProfileSystemdStateEnum;
+    /**
+     * The number of jobs jobs_queued
+     * @type {number}
+     * @memberof SystemProfileSystemd
+     */
+    jobs_queued: number;
+    /**
+     * The number of jobs failed
+     * @type {number}
+     * @memberof SystemProfileSystemd
+     */
+    failed: number;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SystemProfileSystemdStateEnum {
+    Initializing = 'initializing',
+    Starting = 'starting',
+    Running = 'running',
+    Degraded = 'degraded',
+    Maintenance = 'maintenance',
+    Stopping = 'stopping'
+}
+
+/**
  * Representation of one yum repository
  * @export
  * @interface SystemProfileYumRepo
@@ -2950,7 +3033,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupCreateGroup(groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+        async apiGroupCreateGroup(groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOutWithHostCount>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupCreateGroup(groupIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3015,7 +3098,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+        async apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOutWithHostCount>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupPatchGroupById(groupId, groupIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3030,7 +3113,7 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOut>> {
+        async apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupOutWithHostCount>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3068,7 +3151,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupCreateGroup(groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
+        apiGroupCreateGroup(groupIn: GroupIn, options?: any): AxiosPromise<GroupOutWithHostCount> {
             return GroupsApiFp(configuration).apiGroupCreateGroup(groupIn, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3117,7 +3200,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): AxiosPromise<GroupOut> {
+        apiGroupPatchGroupById(groupId: string, groupIn: GroupIn, options?: any): AxiosPromise<GroupOutWithHostCount> {
             return GroupsApiFp(configuration).apiGroupPatchGroupById(groupId, groupIn, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3128,7 +3211,7 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): AxiosPromise<GroupOut> {
+        apiHostGroupAddHostListToGroup(groupId: string, requestBody: Array<string>, options?: any): AxiosPromise<GroupOutWithHostCount> {
             return GroupsApiFp(configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options).then((request) => request(axios, basePath));
         },
         /**
