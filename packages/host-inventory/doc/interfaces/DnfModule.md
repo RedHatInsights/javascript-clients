@@ -29,7 +29,7 @@ DnfModule
 
 #### Defined in
 
-[api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L572)
+[api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L584)
 
 ___
 
@@ -43,4 +43,4 @@ DnfModule
 
 #### Defined in
 
-[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L578)
+[api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L590)

@@ -359,7 +359,7 @@ GroupApi - axios parameter creator
 | `deletePrincipalFromGroup` | (`uuid`: `string`, `usernames`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `deleteRoleFromGroup` | (`uuid`: `string`, `roles`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getGroup` | (`uuid`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getPrincipalsFromGroup` | (`uuid`: `string`, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `getPrincipalsFromGroup` | (`uuid`: `string`, `adminOnly?`: ``"false"`` \| ``"true"``, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `listGroups` | (`limit?`: `number`, `offset?`: `number`, `name?`: `string`, `nameMatch?`: ``"exact"`` \| ``"partial"``, `scope?`: ``"account"`` \| ``"principal"``, `username?`: `string`, `excludeUsername?`: `string`, `uuid?`: `string`[], `roleNames?`: `string`[], `roleDiscriminator?`: ``"all"`` \| ``"any"``, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"principalCount"`` \| ``"policyCount"``, `platformDefault?`: `boolean`, `adminDefault?`: `boolean`, `system?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `listRolesForGroup` | (`uuid`: `string`, `exclude?`: `boolean`, `roleName?`: `string`, `roleDisplayName?`: `string`, `roleDescription?`: `string`, `roleSystem?`: `boolean`, `roleExternalTenant?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `updateGroup` | (`uuid`: `string`, `group`: [`Group`](interfaces/Group.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -399,14 +399,14 @@ GroupApi - factory interface
 | `deletePrincipalFromGroup` | (`uuid`: `string`, `usernames`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `deleteRoleFromGroup` | (`uuid`: `string`, `roles`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `getGroup` | (`uuid`: `string`, `options?`: `any`) => `AxiosPromise`<[`GroupWithPrincipalsAndRoles`](interfaces/GroupWithPrincipalsAndRoles.md)\> |
-| `getPrincipalsFromGroup` | (`uuid`: `string`, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`PrincipalPagination`](interfaces/PrincipalPagination.md)\> |
+| `getPrincipalsFromGroup` | (`uuid`: `string`, `adminOnly?`: ``"false"`` \| ``"true"``, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`PrincipalPagination`](interfaces/PrincipalPagination.md)\> |
 | `listGroups` | (`limit?`: `number`, `offset?`: `number`, `name?`: `string`, `nameMatch?`: ``"exact"`` \| ``"partial"``, `scope?`: ``"account"`` \| ``"principal"``, `username?`: `string`, `excludeUsername?`: `string`, `uuid?`: `string`[], `roleNames?`: `string`[], `roleDiscriminator?`: ``"all"`` \| ``"any"``, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"principalCount"`` \| ``"policyCount"``, `platformDefault?`: `boolean`, `adminDefault?`: `boolean`, `system?`: `boolean`, `options?`: `any`) => `AxiosPromise`<[`GroupPagination`](interfaces/GroupPagination.md)\> |
 | `listRolesForGroup` | (`uuid`: `string`, `exclude?`: `boolean`, `roleName?`: `string`, `roleDisplayName?`: `string`, `roleDescription?`: `string`, `roleSystem?`: `boolean`, `roleExternalTenant?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"``, `options?`: `any`) => `AxiosPromise`<[`GroupRolesPagination`](interfaces/GroupRolesPagination.md)\> |
 | `updateGroup` | (`uuid`: `string`, `group`: [`Group`](interfaces/Group.md), `options?`: `any`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\> |
 
 #### Defined in
 
-[api.ts:3969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3969)
+[api.ts:3975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3975)
 
 ___
 
@@ -437,14 +437,14 @@ GroupApi - functional programming interface
 | `deletePrincipalFromGroup` | (`uuid`: `string`, `usernames`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `deleteRoleFromGroup` | (`uuid`: `string`, `roles`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `getGroup` | (`uuid`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupWithPrincipalsAndRoles`](interfaces/GroupWithPrincipalsAndRoles.md)\>\> |
-| `getPrincipalsFromGroup` | (`uuid`: `string`, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PrincipalPagination`](interfaces/PrincipalPagination.md)\>\> |
+| `getPrincipalsFromGroup` | (`uuid`: `string`, `adminOnly?`: ``"false"`` \| ``"true"``, `principalUsername?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"username"``, `usernameOnly?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PrincipalPagination`](interfaces/PrincipalPagination.md)\>\> |
 | `listGroups` | (`limit?`: `number`, `offset?`: `number`, `name?`: `string`, `nameMatch?`: ``"exact"`` \| ``"partial"``, `scope?`: ``"account"`` \| ``"principal"``, `username?`: `string`, `excludeUsername?`: `string`, `uuid?`: `string`[], `roleNames?`: `string`[], `roleDiscriminator?`: ``"all"`` \| ``"any"``, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"principalCount"`` \| ``"policyCount"``, `platformDefault?`: `boolean`, `adminDefault?`: `boolean`, `system?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupPagination`](interfaces/GroupPagination.md)\>\> |
 | `listRolesForGroup` | (`uuid`: `string`, `exclude?`: `boolean`, `roleName?`: `string`, `roleDisplayName?`: `string`, `roleDescription?`: `string`, `roleSystem?`: `boolean`, `roleExternalTenant?`: `string`, `limit?`: `number`, `offset?`: `number`, `orderBy?`: ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupRolesPagination`](interfaces/GroupRolesPagination.md)\>\> |
 | `updateGroup` | (`uuid`: `string`, `group`: [`Group`](interfaces/Group.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOut`](interfaces/GroupOut.md)\>\> |
 
 #### Defined in
 
-[api.ts:3774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3774)
+[api.ts:3779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3779)
 
 ___
 
@@ -473,7 +473,7 @@ PermissionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4294)
+[api.ts:4302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4302)
 
 ___
 
@@ -504,7 +504,7 @@ PermissionApi - factory interface
 
 #### Defined in
 
-[api.ts:4522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4522)
+[api.ts:4530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4530)
 
 ___
 
@@ -533,7 +533,7 @@ PermissionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4469)
+[api.ts:4477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4477)
 
 ___
 
@@ -565,7 +565,7 @@ PolicyApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4617)
+[api.ts:4625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4625)
 
 ___
 
@@ -599,7 +599,7 @@ PolicyApi - factory interface
 
 #### Defined in
 
-[api.ts:4963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4963)
+[api.ts:4971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4971)
 
 ___
 
@@ -631,7 +631,7 @@ PolicyApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4877)
+[api.ts:4885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4885)
 
 ___
 
@@ -659,7 +659,7 @@ PrincipalApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5106)
+[api.ts:5114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5114)
 
 ___
 
@@ -689,7 +689,7 @@ PrincipalApi - factory interface
 
 #### Defined in
 
-[api.ts:5233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5233)
+[api.ts:5241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5241)
 
 ___
 
@@ -717,7 +717,7 @@ PrincipalApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5201)
+[api.ts:5209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5209)
 
 ___
 
@@ -751,7 +751,7 @@ RoleApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5292)
+[api.ts:5300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5300)
 
 ___
 
@@ -787,7 +787,7 @@ RoleApi - factory interface
 
 #### Defined in
 
-[api.ts:5810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5810)
+[api.ts:5818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5818)
 
 ___
 
@@ -821,7 +821,7 @@ RoleApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5686)
+[api.ts:5694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5694)
 
 ___
 
@@ -849,7 +849,7 @@ StatusApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:6017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6017)
+[api.ts:6025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6025)
 
 ___
 
@@ -879,7 +879,7 @@ StatusApi - factory interface
 
 #### Defined in
 
-[api.ts:6084](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6084)
+[api.ts:6092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6092)
 
 ___
 
@@ -907,4 +907,4 @@ StatusApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6062)
+[api.ts:6070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6070)

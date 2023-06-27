@@ -3457,6 +3457,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -3465,7 +3466,7 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup: async (uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options: any = {}): Promise<RequestArgs> => {
+        getPrincipalsFromGroup: async (uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -3485,6 +3486,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            if (adminOnly !== undefined) {
+                localVarQueryParameter['admin_only'] = adminOnly;
             }
 
             if (principalUsername !== undefined) {
@@ -3879,6 +3884,7 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -3887,8 +3893,8 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options);
+        async getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4046,6 +4052,7 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
+         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
@@ -4054,8 +4061,8 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any): AxiosPromise<PrincipalPagination> {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(axios, basePath));
+        getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any): AxiosPromise<PrincipalPagination> {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by group name
@@ -4212,6 +4219,7 @@ export class GroupApi extends BaseAPI {
      * By default, responses are sorted in ascending order by username
      * @summary Get a list of principals from a group in the tenant
      * @param {string} uuid ID of group from which to get principals
+     * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
      * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
@@ -4221,8 +4229,8 @@ export class GroupApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public getPrincipalsFromGroup(uuid: string, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(this.axios, this.basePath));
+    public getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

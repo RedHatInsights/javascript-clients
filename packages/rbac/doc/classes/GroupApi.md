@@ -132,7 +132,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4132)
+[api.ts:4139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4139)
 
 ___
 
@@ -164,7 +164,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4145)
+[api.ts:4152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4152)
 
 ___
 
@@ -195,7 +195,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4157)
+[api.ts:4164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4164)
 
 ___
 
@@ -226,7 +226,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4169)
+[api.ts:4176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4176)
 
 ___
 
@@ -258,7 +258,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4182)
+[api.ts:4189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4189)
 
 ___
 
@@ -290,7 +290,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4195)
+[api.ts:4202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4202)
 
 ___
 
@@ -321,13 +321,13 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4207)
+[api.ts:4214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4214)
 
 ___
 
 ### getPrincipalsFromGroup
 
-▸ **getPrincipalsFromGroup**(`uuid`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -346,6 +346,7 @@ GroupApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | ID of group from which to get principals |
+| `adminOnly?` | ``"false"`` \| ``"true"`` | Get only admin users within an account. |
 | `principalUsername?` | `string` | Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search. |
 | `limit?` | `number` | Parameter for selecting the amount of data returned. |
 | `offset?` | `number` | Parameter for selecting the offset of data. |
@@ -359,7 +360,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4224)
+[api.ts:4232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4232)
 
 ___
 
@@ -405,7 +406,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4249)
+[api.ts:4257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4257)
 
 ___
 
@@ -447,7 +448,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4270)
+[api.ts:4278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4278)
 
 ___
 
@@ -479,4 +480,4 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4283)
+[api.ts:4291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4291)

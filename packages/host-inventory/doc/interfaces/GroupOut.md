@@ -16,7 +16,6 @@ GroupOut
 
 - [account](GroupOut.md#account)
 - [created](GroupOut.md#created)
-- [host\_count](GroupOut.md#host_count)
 - [id](GroupOut.md#id)
 - [name](GroupOut.md#name)
 - [org\_id](GroupOut.md#org_id)
@@ -36,7 +35,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L654)
+[api.ts:660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L660)
 
 ___
 
@@ -52,23 +51,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L666)
-
-___
-
-### host\_count
-
-• `Optional` **host\_count**: `number`
-
-The number of hosts associated with the group.
-
-**`Memberof`**
-
-GroupOut
-
-#### Defined in
-
-[api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L648)
+[api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L672)
 
 ___
 
@@ -82,7 +65,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L636)
+[api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L648)
 
 ___
 
@@ -98,7 +81,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L642)
+[api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L654)
 
 ___
 
@@ -114,7 +97,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L660)
+[api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L666)
 
 ___
 
@@ -130,4 +113,4 @@ GroupOut
 
 #### Defined in
 
-[api.ts:672](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L672)
+[api.ts:678](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L678)

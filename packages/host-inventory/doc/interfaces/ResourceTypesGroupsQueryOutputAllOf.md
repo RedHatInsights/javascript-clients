@@ -18,7 +18,7 @@ ResourceTypesGroupsQueryOutputAllOf
 
 ### data
 
-• **data**: [`GroupOut`](GroupOut.md)[]
+• **data**: [`GroupOutWithHostCount`](GroupOutWithHostCount.md)[]
 
 Actual group search query result entries.
 
@@ -28,4 +28,4 @@ ResourceTypesGroupsQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1223)
+[api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1261)

@@ -22,6 +22,7 @@ CreateHostOut
 - [display\_name](CreateHostOut.md#display_name)
 - [facts](CreateHostOut.md#facts)
 - [fqdn](CreateHostOut.md#fqdn)
+- [groups](CreateHostOut.md#groups)
 - [id](CreateHostOut.md#id)
 - [insights\_id](CreateHostOut.md#insights_id)
 - [ip\_addresses](CreateHostOut.md#ip_addresses)
@@ -164,6 +165,22 @@ CreateHostOut
 #### Defined in
 
 [api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L341)
+
+___
+
+### groups
+
+• `Optional` **groups**: [`GroupOut`](GroupOut.md)[]
+
+The groups that the host belongs to, if any.
+
+**`Memberof`**
+
+CreateHostOut
+
+#### Defined in
+
+[api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L443)
 
 ___
 

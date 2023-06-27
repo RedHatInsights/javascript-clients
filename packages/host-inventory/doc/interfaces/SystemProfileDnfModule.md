@@ -29,7 +29,7 @@ SystemProfileDnfModule
 
 #### Defined in
 
-[api.ts:1857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1857)
+[api.ts:1901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1901)
 
 ___
 
@@ -43,4 +43,4 @@ SystemProfileDnfModule
 
 #### Defined in
 
-[api.ts:1863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1863)
+[api.ts:1907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1907)
