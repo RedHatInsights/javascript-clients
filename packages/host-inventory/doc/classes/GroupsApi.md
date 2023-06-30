@@ -129,7 +129,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3246)
+[api.ts:3252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3252)
 
 ___
 
@@ -162,7 +162,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3258)
+[api.ts:3264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3264)
 
 ___
 
@@ -199,7 +199,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3274)
+[api.ts:3280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3280)
 
 ___
 
@@ -236,7 +236,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3290)
+[api.ts:3296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3296)
 
 ___
 
@@ -270,7 +270,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3303)
+[api.ts:3309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3309)
 
 ___
 
@@ -304,7 +304,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3316)
+[api.ts:3322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3322)
 
 ___
 
@@ -338,4 +338,4 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3329)
+[api.ts:3335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3335)

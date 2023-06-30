@@ -32,7 +32,7 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2007)
+[api.ts:2013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2013)
 
 ___
 
@@ -48,7 +48,7 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2013)
+[api.ts:2019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2019)
 
 ___
 
@@ -64,4 +64,4 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2019)
+[api.ts:2025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2025)

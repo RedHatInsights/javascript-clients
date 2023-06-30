@@ -147,7 +147,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2491)
+[api.ts:2497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2497)
 
 ___
 
@@ -177,7 +177,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:2588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2588)
+[api.ts:2594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2594)
 
 ___
 
@@ -205,7 +205,7 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2562)
+[api.ts:2568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2568)
 
 ___
 
@@ -239,7 +239,7 @@ GroupsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2635)
+[api.ts:2641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2641)
 
 ___
 
@@ -275,7 +275,7 @@ GroupsApi - factory interface
 
 #### Defined in
 
-[api.ts:3145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3145)
+[api.ts:3151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3151)
 
 ___
 
@@ -309,7 +309,7 @@ GroupsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3027)
+[api.ts:3033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3033)
 
 ___
 
@@ -348,7 +348,7 @@ HostsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3340)
+[api.ts:3346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3346)
 
 ___
 
@@ -389,7 +389,7 @@ HostsApi - factory interface
 
 #### Defined in
 
-[api.ts:4445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4445)
+[api.ts:4451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4451)
 
 ___
 
@@ -428,7 +428,7 @@ HostsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4208)
+[api.ts:4214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4214)
 
 ___
 
@@ -457,7 +457,7 @@ ResourceTypesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4848)
+[api.ts:4854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4854)
 
 ___
 
@@ -488,7 +488,7 @@ ResourceTypesApi - factory interface
 
 #### Defined in
 
-[api.ts:4992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4992)
+[api.ts:4998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4998)
 
 ___
 
@@ -517,7 +517,7 @@ ResourceTypesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4953)
+[api.ts:4959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4959)
 
 ___
 
@@ -547,7 +547,7 @@ SystemProfileApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5059)
+[api.ts:5065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5065)
 
 ___
 
@@ -579,7 +579,7 @@ SystemProfileApi - factory interface
 
 #### Defined in
 
-[api.ts:5344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5344)
+[api.ts:5350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5350)
 
 ___
 
@@ -609,7 +609,7 @@ SystemProfileApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5277)
+[api.ts:5283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5283)
 
 ___
 
@@ -637,7 +637,7 @@ TagsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5461)
+[api.ts:5467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5467)
 
 ___
 
@@ -667,7 +667,7 @@ TagsApi - factory interface
 
 #### Defined in
 
-[api.ts:5642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5642)
+[api.ts:5648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5648)
 
 ___
 
@@ -695,7 +695,7 @@ TagsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5602)
+[api.ts:5608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5608)
 
 ___
 
@@ -723,7 +723,7 @@ UnleashApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5717)
+[api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5723)
 
 ___
 
@@ -753,7 +753,7 @@ UnleashApi - factory interface
 
 #### Defined in
 
-[api.ts:5786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5786)
+[api.ts:5792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5792)
 
 ___
 
@@ -781,4 +781,4 @@ UnleashApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5764)
+[api.ts:5770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5770)
