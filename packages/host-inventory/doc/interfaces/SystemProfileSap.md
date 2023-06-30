@@ -33,7 +33,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2136)
+[api.ts:2142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2142)
 
 ___
 
@@ -49,7 +49,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2124)
+[api.ts:2130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2130)
 
 ___
 
@@ -63,7 +63,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2130)
+[api.ts:2136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2136)
 
 ___
 
@@ -79,4 +79,4 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2142)
+[api.ts:2148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2148)

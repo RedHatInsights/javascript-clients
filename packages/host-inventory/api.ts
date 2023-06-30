@@ -1561,6 +1561,12 @@ export interface SystemProfile {
     cloud_provider?: string;
     /**
      *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    public_ipv4_addresses?: Array<string>;
+    /**
+     *
      * @type {Array<YumRepo>}
      * @memberof SystemProfile
      */

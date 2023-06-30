@@ -28,4 +28,4 @@ VulnerabilitiesPostIn
 
 #### Defined in
 
-[api.ts:2667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2667)
+[api.ts:2679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2679)

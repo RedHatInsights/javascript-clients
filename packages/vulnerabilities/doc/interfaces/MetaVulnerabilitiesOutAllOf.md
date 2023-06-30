@@ -12,6 +12,7 @@ MetaVulnerabilitiesOutAllOf
 
 ### Properties
 
+- [advisory\_available](MetaVulnerabilitiesOutAllOf.md#advisory_available)
 - [affecting](MetaVulnerabilitiesOutAllOf.md#affecting)
 - [business\_risk\_id](MetaVulnerabilitiesOutAllOf.md#business_risk_id)
 - [cves\_without\_errata](MetaVulnerabilitiesOutAllOf.md#cves_without_errata)
@@ -26,6 +27,22 @@ MetaVulnerabilitiesOutAllOf
 
 ## Properties
 
+### advisory\_available
+
+• **advisory\_available**: `string`
+
+Shows whether a CVE has available advisory or not
+
+**`Memberof`**
+
+MetaVulnerabilitiesOutAllOf
+
+#### Defined in
+
+[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2093)
+
+___
+
 ### affecting
 
 • **affecting**: `string`
@@ -38,7 +55,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2087)
+[api.ts:2099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2099)
 
 ___
 
@@ -54,7 +71,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2093)
+[api.ts:2105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2105)
 
 ___
 
@@ -70,7 +87,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2099)
+[api.ts:2111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2111)
 
 ___
 
@@ -86,7 +103,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2105)
+[api.ts:2117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2117)
 
 ___
 
@@ -102,7 +119,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2111)
+[api.ts:2123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2123)
 
 ___
 
@@ -118,7 +135,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2117)
+[api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2129)
 
 ___
 
@@ -134,7 +151,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2123)
+[api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2135)
 
 ___
 
@@ -150,7 +167,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2129)
+[api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2141)
 
 ___
 
@@ -166,7 +183,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2135)
+[api.ts:2147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2147)
 
 ___
 
@@ -182,7 +199,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2141)
+[api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2153)
 
 ___
 
@@ -198,4 +215,4 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2147)
+[api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2159)

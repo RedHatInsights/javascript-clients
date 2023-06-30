@@ -12,6 +12,7 @@ MetaVulnerabilitiesOut
 
 ### Properties
 
+- [advisory\_available](MetaVulnerabilitiesOut.md#advisory_available)
 - [affecting](MetaVulnerabilitiesOut.md#affecting)
 - [business\_risk\_id](MetaVulnerabilitiesOut.md#business_risk_id)
 - [cves\_without\_errata](MetaVulnerabilitiesOut.md#cves_without_errata)
@@ -36,6 +37,22 @@ MetaVulnerabilitiesOut
 
 ## Properties
 
+### advisory\_available
+
+• **advisory\_available**: `string`
+
+Shows whether a CVE has available advisory or not
+
+**`Memberof`**
+
+MetaVulnerabilitiesOut
+
+#### Defined in
+
+[api.ts:2014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2014)
+
+___
+
 ### affecting
 
 • **affecting**: `string`
@@ -48,7 +65,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2014)
+[api.ts:2020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2020)
 
 ___
 
@@ -64,7 +81,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2020)
+[api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2026)
 
 ___
 
@@ -80,7 +97,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2026)
+[api.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2032)
 
 ___
 
@@ -96,7 +113,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2032)
+[api.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2038)
 
 ___
 
@@ -112,7 +129,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2038)
+[api.ts:2044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2044)
 
 ___
 
@@ -160,7 +177,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2044](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2044)
+[api.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2050)
 
 ___
 
@@ -272,7 +289,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2050)
+[api.ts:2056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2056)
 
 ___
 
@@ -288,7 +305,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2056)
+[api.ts:2062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2062)
 
 ___
 
@@ -304,7 +321,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2062)
+[api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2068)
 
 ___
 
@@ -320,7 +337,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2068)
+[api.ts:2074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2074)
 
 ___
 
@@ -352,7 +369,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2074)
+[api.ts:2080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2080)
 
 ___
 
