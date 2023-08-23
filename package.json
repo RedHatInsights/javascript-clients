@@ -9,6 +9,8 @@
     "npm": ">=7.0.0"
   },
   "scripts": {
+    "install": "mvn install -DskipTests",
+    "build:generator": "mvn clean package -DskipTests",
     "generate": "npm run generate:prod --workspaces && npm run doc --workspaces && npm run build --workspaces",
     "doc": "npm run doc --workspaces",
     "build": "npm run build --workspaces",
