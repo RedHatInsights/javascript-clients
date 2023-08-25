@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -129,15 +129,15 @@ TagsApi
 | `providerType?` | ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"`` | Filter by provider_type |
 | `updatedStart?` | `string` | Only show hosts last modified after the given date |
 | `updatedEnd?` | `string` | Only show hosts last modified before the given date |
-| `groupName?` | `string` | Filter by group name |
+| `groupName?` | `string`[] | Filter by group name |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
 | `filter?` | `Object` | Filters hosts based on system_profile fields |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
 
 #### Defined in
 
-[api.ts:5712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5712)
+[api.ts:6445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6445)

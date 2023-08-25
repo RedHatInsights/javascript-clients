@@ -32,7 +32,7 @@ TagsOut
 
 #### Defined in
 
-[api.ts:2391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2391)
+[api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2517)
 
 ___
 
@@ -48,7 +48,7 @@ TagsOut
 
 #### Defined in
 
-[api.ts:2397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2397)
+[api.ts:2523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2523)
 
 ___
 
@@ -64,7 +64,7 @@ TagsOut
 
 #### Defined in
 
-[api.ts:2403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2403)
+[api.ts:2529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2529)
 
 ___
 
@@ -84,7 +84,7 @@ TagsOut
 
 #### Defined in
 
-[api.ts:2415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2415)
+[api.ts:2541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2541)
 
 ___
 
@@ -100,4 +100,4 @@ TagsOut
 
 #### Defined in
 
-[api.ts:2409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2409)
+[api.ts:2535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2535)

@@ -98,7 +98,7 @@ BaseAPI.configuration
 
 ### listTenants
 
-▸ **listTenants**(`options?`): `Promise`<`AxiosResponse`<[`TenantsCollection`](../interfaces/TenantsCollection.md), `any`\>\>
+▸ **listTenants**(`options?`): `Promise`<`AxiosResponse`<[`TenantsCollection`](../interfaces/TenantsCollection.md)\>\>
 
 Get a list of tenants.
 
@@ -120,7 +120,7 @@ TenantApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TenantsCollection`](../interfaces/TenantsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TenantsCollection`](../interfaces/TenantsCollection.md)\>\>
 
 #### Defined in
 
@@ -130,7 +130,7 @@ ___
 
 ### showTenant
 
-▸ **showTenant**(`tenantId`, `options?`): `Promise`<`AxiosResponse`<[`Tenant`](../interfaces/Tenant.md), `any`\>\>
+▸ **showTenant**(`tenantId`, `options?`): `Promise`<`AxiosResponse`<[`Tenant`](../interfaces/Tenant.md)\>\>
 
 Gets the tenant specified by the tenant id.
 
@@ -153,7 +153,7 @@ TenantApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Tenant`](../interfaces/Tenant.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Tenant`](../interfaces/Tenant.md)\>\>
 
 #### Defined in
 
@@ -163,7 +163,7 @@ ___
 
 ### tenantSeed
 
-▸ **tenantSeed**(`tenantId`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **tenantSeed**(`tenantId`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Run a task to seed the Tenant Groups required for an org admin to onboard additional users.
 
@@ -186,7 +186,7 @@ TenantApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 

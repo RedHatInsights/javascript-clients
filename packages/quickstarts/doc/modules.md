@@ -54,8 +54,8 @@ HelptopicApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `helptopicsGet` | (`bundle?`: `string`, `application?`: `string`, `name?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `helptopicsNameGet` | (`name`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `helptopicsGet` | (`bundle?`: `string`, `application?`: `string`, `name?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
+| `helptopicsNameGet` | (`name`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
@@ -114,8 +114,8 @@ HelptopicApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `helptopicsGet` | (`bundle?`: `string`, `application?`: `string`, `name?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\>\> |
-| `helptopicsNameGet` | (`name`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\>\> |
+| `helptopicsGet` | (`bundle?`: `string`, `application?`: `string`, `name?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\>\> |
+| `helptopicsNameGet` | (`name`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\>\> |
 
 #### Defined in
 
@@ -143,8 +143,8 @@ QuickstartApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `quickstartsGet` | (`bundle?`: `string`, `application?`: `string`, `limit?`: `number`, `offset?`: `number`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `quickstartsIdGet` | (`id`: `number`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `quickstartsGet` | (`bundle?`: `string`, `application?`: `string`, `limit?`: `number`, `offset?`: `number`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
+| `quickstartsIdGet` | (`id`: `number`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
@@ -203,8 +203,8 @@ QuickstartApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `quickstartsGet` | (`bundle?`: `string`, `application?`: `string`, `limit?`: `number`, `offset?`: `number`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\>\> |
-| `quickstartsIdGet` | (`id`: `number`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`V1Quickstart`](interfaces/V1Quickstart.md)\>\> |
+| `quickstartsGet` | (`bundle?`: `string`, `application?`: `string`, `limit?`: `number`, `offset?`: `number`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\>\> |
+| `quickstartsIdGet` | (`id`: `number`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`V1Quickstart`](interfaces/V1Quickstart.md)\>\> |
 
 #### Defined in
 

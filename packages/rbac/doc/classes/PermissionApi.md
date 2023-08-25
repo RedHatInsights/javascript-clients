@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### listPermissionOptions
 
-▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
+▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md)\>\>
 
 By default, options of application is returned. And could be resource_type or verb on demand.
 
@@ -127,7 +127,7 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md)\>\>
 
 #### Defined in
 
@@ -137,7 +137,7 @@ ___
 
 ### listPermissions
 
-▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
+▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md)\>\>
 
 By default, responses are sorted in ascending order by permission application.
 
@@ -169,7 +169,7 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md)\>\>
 
 #### Defined in
 

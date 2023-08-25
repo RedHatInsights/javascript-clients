@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getStatus
 
-▸ **getStatus**(`options?`): `Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
+▸ **getStatus**(`options?`): `Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md)\>\>
 
 **`Summary`**
 
@@ -116,7 +116,7 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md)\>\>
 
 #### Defined in
 

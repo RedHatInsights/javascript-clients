@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### generate
 
-▸ **generate**(`playbookDefinition`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
+▸ **generate**(`playbookDefinition`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
 
 Generates an Ansible Playbook based on input parameters
 
@@ -119,7 +119,7 @@ GeneratorApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`, `any`\>\>
+`Promise`<`AxiosResponse`<`string`\>\>
 
 #### Defined in
 

@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### rulecategoryList
 
-▸ **rulecategoryList**(`options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
+▸ **rulecategoryList**(`options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[]\>\>
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
 
@@ -115,7 +115,7 @@ RulecategoryApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[]\>\>
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### rulecategoryRetrieve
 
-▸ **rulecategoryRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
+▸ **rulecategoryRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)\>\>
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
 
@@ -144,7 +144,7 @@ RulecategoryApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)\>\>
 
 #### Defined in
 

@@ -41,7 +41,7 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L635)
+[api.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L640)
 
 ___
 
@@ -61,4 +61,4 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L629)
+[api.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L634)

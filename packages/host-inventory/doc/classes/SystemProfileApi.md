@@ -29,6 +29,7 @@ SystemProfileApi - object-oriented interface
 - [apiSystemProfileGetOperatingSystem](SystemProfileApi.md#apisystemprofilegetoperatingsystem)
 - [apiSystemProfileGetSapSids](SystemProfileApi.md#apisystemprofilegetsapsids)
 - [apiSystemProfileGetSapSystem](SystemProfileApi.md#apisystemprofilegetsapsystem)
+- [apiSystemProfileValidateSchema](SystemProfileApi.md#apisystemprofilevalidateschema)
 
 ## Constructors
 
@@ -98,7 +99,7 @@ BaseAPI.configuration
 
 ### apiSystemProfileGetOperatingSystem
 
-▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
+▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -126,17 +127,17 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5421)
+[api.ts:6139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6139)
 
 ___
 
 ### apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -165,17 +166,17 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5439)
+[api.ts:6157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6157)
 
 ___
 
 ### apiSystemProfileGetSapSystem
 
-▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -203,8 +204,44 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5456)
+[api.ts:6174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6174)
+
+___
+
+### apiSystemProfileValidateSchema
+
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+
+Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+
+**`Summary`**
+
+validate system profile schema
+
+**`Throws`**
+
+**`Memberof`**
+
+SystemProfileApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `repoBranch` | `string` | The branch of the inventory-schemas repo to use |
+| `repoFork?` | `string` | The fork of the inventory-schemas repo to use |
+| `days?` | `number` | How many days worth of data to validate |
+| `maxMessages?` | `number` | Stops polling when this number of messages has been collected |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`void`\>\>
+
+#### Defined in
+
+[api.ts:6189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6189)

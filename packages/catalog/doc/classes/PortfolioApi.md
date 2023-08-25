@@ -110,7 +110,7 @@ BaseAPI.configuration
 
 ### addPortfolioTag
 
-▸ **addPortfolioTag**(`id`, `tag`, `options?`): `Promise`<`AxiosResponse`<[`Tag`](../interfaces/Tag.md)[], `any`\>\>
+▸ **addPortfolioTag**(`id`, `tag`, `options?`): `Promise`<`AxiosResponse`<[`Tag`](../interfaces/Tag.md)[]\>\>
 
 Adds a single tag to Portfolio object
 
@@ -134,7 +134,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Tag`](../interfaces/Tag.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`Tag`](../interfaces/Tag.md)[]\>\>
 
 #### Defined in
 
@@ -144,7 +144,7 @@ ___
 
 ### createPortfolio
 
-▸ **createPortfolio**(`portfolio`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+▸ **createPortfolio**(`portfolio`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 Adds a portfolio.
 
@@ -167,7 +167,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 #### Defined in
 
@@ -177,7 +177,7 @@ ___
 
 ### destroyPortfolio
 
-▸ **destroyPortfolio**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+▸ **destroyPortfolio**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 Deletes the portfolio specified by the ID.
 
@@ -200,7 +200,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 #### Defined in
 
@@ -210,7 +210,7 @@ ___
 
 ### fetchPortfolioItemsWithPortfolio
 
-▸ **fetchPortfolioItemsWithPortfolio**(`portfolioId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`PortfolioItemsCollection`](../interfaces/PortfolioItemsCollection.md), `any`\>\>
+▸ **fetchPortfolioItemsWithPortfolio**(`portfolioId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`PortfolioItemsCollection`](../interfaces/PortfolioItemsCollection.md)\>\>
 
 Gets all portfilio items in the portfolio specified by the given ID.
 
@@ -237,7 +237,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PortfolioItemsCollection`](../interfaces/PortfolioItemsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PortfolioItemsCollection`](../interfaces/PortfolioItemsCollection.md)\>\>
 
 #### Defined in
 
@@ -247,7 +247,7 @@ ___
 
 ### listPortfolioTags
 
-▸ **listPortfolioTags**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md), `any`\>\>
+▸ **listPortfolioTags**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md)\>\>
 
 Returns an array of Tag objects
 
@@ -274,7 +274,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md)\>\>
 
 #### Defined in
 
@@ -284,7 +284,7 @@ ___
 
 ### listPortfolios
 
-▸ **listPortfolios**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`PortfoliosCollection`](../interfaces/PortfoliosCollection.md), `any`\>\>
+▸ **listPortfolios**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`PortfoliosCollection`](../interfaces/PortfoliosCollection.md)\>\>
 
 Gets a list of portfolios.
 
@@ -310,7 +310,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PortfoliosCollection`](../interfaces/PortfoliosCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PortfoliosCollection`](../interfaces/PortfoliosCollection.md)\>\>
 
 #### Defined in
 
@@ -320,7 +320,7 @@ ___
 
 ### postCopyPortfolio
 
-▸ **postCopyPortfolio**(`portfolioId`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+▸ **postCopyPortfolio**(`portfolioId`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 Make a copy of the Portfolio.
 
@@ -343,7 +343,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 #### Defined in
 
@@ -353,7 +353,7 @@ ___
 
 ### removePortfolioTags
 
-▸ **removePortfolioTags**(`id`, `tag`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **removePortfolioTags**(`id`, `tag`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Remove Tags from Portfolio
 
@@ -377,7 +377,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -387,7 +387,7 @@ ___
 
 ### shareInfo
 
-▸ **shareInfo**(`portfolioId`, `options?`): `Promise`<`AxiosResponse`<[`ShareInfo`](../interfaces/ShareInfo.md)[], `any`\>\>
+▸ **shareInfo**(`portfolioId`, `options?`): `Promise`<`AxiosResponse`<[`ShareInfo`](../interfaces/ShareInfo.md)[]\>\>
 
 Fetch share information about a portfolio
 
@@ -410,7 +410,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ShareInfo`](../interfaces/ShareInfo.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`ShareInfo`](../interfaces/ShareInfo.md)[]\>\>
 
 #### Defined in
 
@@ -420,7 +420,7 @@ ___
 
 ### sharePortfolio
 
-▸ **sharePortfolio**(`portfolioId`, `sharePolicy`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **sharePortfolio**(`portfolioId`, `sharePolicy`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Share a Portfolio with one or more groups with specific permissions
 
@@ -444,7 +444,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -454,7 +454,7 @@ ___
 
 ### showPortfolio
 
-▸ **showPortfolio**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+▸ **showPortfolio**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 Gets the portfolio specified by the portfolio ID.
 
@@ -477,7 +477,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 #### Defined in
 
@@ -487,7 +487,7 @@ ___
 
 ### showPortfolioIcon
 
-▸ **showPortfolioIcon**(`portfolioId`, `cacheId?`, `options?`): `Promise`<`AxiosResponse`<`any`, `any`\>\>
+▸ **showPortfolioIcon**(`portfolioId`, `cacheId?`, `options?`): `Promise`<`AxiosResponse`<`any`\>\>
 
 Fetch the specified portfolio\'s icon image.
 
@@ -511,7 +511,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`any`, `any`\>\>
+`Promise`<`AxiosResponse`<`any`\>\>
 
 #### Defined in
 
@@ -521,7 +521,7 @@ ___
 
 ### unDeletePortfolio
 
-▸ **unDeletePortfolio**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+▸ **unDeletePortfolio**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 Undeletes the portfolio specified by the portfolio ID.
 
@@ -545,7 +545,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 #### Defined in
 
@@ -555,7 +555,7 @@ ___
 
 ### unsharePortfolio
 
-▸ **unsharePortfolio**(`portfolioId`, `unsharePolicy`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **unsharePortfolio**(`portfolioId`, `unsharePolicy`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Unshare a Portfolio with one or more groups with specific permissions
 
@@ -579,7 +579,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -589,7 +589,7 @@ ___
 
 ### updatePortfolio
 
-▸ **updatePortfolio**(`id`, `portfolio`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+▸ **updatePortfolio**(`id`, `portfolio`, `options?`): `Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 Returns the edited portfolio.
 
@@ -613,7 +613,7 @@ PortfolioApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Portfolio`](../interfaces/Portfolio.md)\>\>
 
 #### Defined in
 

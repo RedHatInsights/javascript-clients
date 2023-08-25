@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiUnleashGetInventoryGroupsToggle
 
-▸ **apiUnleashGetInventoryGroupsToggle**(`options?`): `Promise`<`AxiosResponse`<[`UnleashToggleOut`](../interfaces/UnleashToggleOut.md), `any`\>\>
+▸ **apiUnleashGetInventoryGroupsToggle**(`options?`): `Promise`<`AxiosResponse`<[`UnleashToggleOut`](../interfaces/UnleashToggleOut.md)\>\>
 
 Returns the value of the hbi.api.inventory-groups toggle, if able to be retrieved.
 
@@ -118,8 +118,8 @@ UnleashApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`UnleashToggleOut`](../interfaces/UnleashToggleOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`UnleashToggleOut`](../interfaces/UnleashToggleOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5820)
+[api.ts:6553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6553)
