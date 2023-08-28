@@ -104,7 +104,7 @@ BaseAPI.configuration
 
 ### addWorkflowToTemplate
 
-▸ **addWorkflowToTemplate**(`templateId`, `workflow`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+▸ **addWorkflowToTemplate**(`templateId`, `workflow`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 Create a workflow from a template identified by its id, available to admin only
 
@@ -128,7 +128,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 #### Defined in
 
@@ -138,7 +138,7 @@ ___
 
 ### destroyWorkflow
 
-▸ **destroyWorkflow**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **destroyWorkflow**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete an approval workflow by its id, available to admin only
 
@@ -161,7 +161,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -171,7 +171,7 @@ ___
 
 ### linkWorkflow
 
-▸ **linkWorkflow**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **linkWorkflow**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Link a resource object to a workflow identified by its id, available to admin only
 
@@ -195,7 +195,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -205,7 +205,7 @@ ___
 
 ### listWorkflows
 
-▸ **listWorkflows**(`appName?`, `objectId?`, `objectType?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md), `any`\>\>
+▸ **listWorkflows**(`appName?`, `objectId?`, `objectType?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md)\>\>
 
 Find approval workflows matching search parameters, available to admin only. Optionally select workflows linked to a resource object whose app_name, object_type and object_id are specified by query parameters. Default sorting is by sequence number in ascending order.
 
@@ -234,7 +234,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md)\>\>
 
 #### Defined in
 
@@ -244,7 +244,7 @@ ___
 
 ### listWorkflowsByTemplate
 
-▸ **listWorkflowsByTemplate**(`templateId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md), `any`\>\>
+▸ **listWorkflowsByTemplate**(`templateId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md)\>\>
 
 Find workflows based on the template id, available to admin only
 
@@ -271,7 +271,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`WorkflowCollection`](../interfaces/WorkflowCollection.md)\>\>
 
 #### Defined in
 
@@ -281,7 +281,7 @@ ___
 
 ### reposition
 
-▸ **reposition**(`id`, `reposition`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **reposition**(`id`, `reposition`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Adjust the position of a workflow related to others by an offset number
 
@@ -305,7 +305,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -315,7 +315,7 @@ ___
 
 ### showWorkflow
 
-▸ **showWorkflow**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+▸ **showWorkflow**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 Find an approval workflow by its id, available to admin only
 
@@ -338,7 +338,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 #### Defined in
 
@@ -348,7 +348,7 @@ ___
 
 ### unlinkWorkflow
 
-▸ **unlinkWorkflow**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **unlinkWorkflow**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Break the link between a resource object selected by the body and a workflow by its id, available to admin only
 
@@ -372,7 +372,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -382,7 +382,7 @@ ___
 
 ### updateWorkflow
 
-▸ **updateWorkflow**(`id`, `workflow`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+▸ **updateWorkflow**(`id`, `workflow`, `options?`): `Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 Find an approval workflow by its id and update its content, available to admin only
 
@@ -406,7 +406,7 @@ WorkflowApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Workflow`](../interfaces/Workflow.md)\>\>
 
 #### Defined in
 

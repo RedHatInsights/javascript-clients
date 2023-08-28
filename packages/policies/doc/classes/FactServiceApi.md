@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getFacts
 
-▸ **getFacts**(`options?`): `Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
+▸ **getFacts**(`options?`): `Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[]\>\>
 
 **`Summary`**
 
@@ -112,11 +112,11 @@ FactServiceApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[]\>\>
 
 #### Defined in
 

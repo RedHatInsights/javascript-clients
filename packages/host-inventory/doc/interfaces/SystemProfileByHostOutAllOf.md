@@ -28,4 +28,4 @@ SystemProfileByHostOutAllOf
 
 #### Defined in
 
-[api.ts:1857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1857)
+[api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1982)

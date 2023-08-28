@@ -26,6 +26,9 @@ GroupsApi - object-oriented interface
 
 ### Methods
 
+- [apiAssignmentRuleCreateAssignmentRule](GroupsApi.md#apiassignmentrulecreateassignmentrule)
+- [apiAssignmentRuleGetAssignmentRulesById](GroupsApi.md#apiassignmentrulegetassignmentrulesbyid)
+- [apiAssignmentRuleGetAssignmentRulesList](GroupsApi.md#apiassignmentrulegetassignmentruleslist)
 - [apiGroupCreateGroup](GroupsApi.md#apigroupcreategroup)
 - [apiGroupDeleteGroups](GroupsApi.md#apigroupdeletegroups)
 - [apiGroupGetGroupList](GroupsApi.md#apigroupgetgrouplist)
@@ -100,9 +103,116 @@ BaseAPI.configuration
 
 ## Methods
 
+### apiAssignmentRuleCreateAssignmentRule
+
+▸ **apiAssignmentRuleCreateAssignmentRule**(`assignmentRuleIn`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md)\>\>
+
+Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
+
+**`Summary`**
+
+Create Assignment Rule object
+
+**`Throws`**
+
+**`Memberof`**
+
+GroupsApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `assignmentRuleIn` | [`AssignmentRuleIn`](../interfaces/AssignmentRuleIn.md) | Data required to create Assignment Rule object |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md)\>\>
+
+#### Defined in
+
+[api.ts:3826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3826)
+
+___
+
+### apiAssignmentRuleGetAssignmentRulesById
+
+▸ **apiAssignmentRuleGetAssignmentRulesById**(`assignmentRuleIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+
+Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
+
+**`Summary`**
+
+Find assignment rules by their IDs
+
+**`Throws`**
+
+**`Memberof`**
+
+GroupsApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `assignmentRuleIdList` | `string`[] | A comma-separated list of assignment-rule IDs. |
+| `perPage?` | `number` | A number of items to return per page. |
+| `page?` | `number` | A page number of the items to return. |
+| `orderBy?` | ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+
+#### Defined in
+
+[api.ts:3842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3842)
+
+___
+
+### apiAssignmentRuleGetAssignmentRulesList
+
+▸ **apiAssignmentRuleGetAssignmentRulesList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+
+Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
+
+**`Summary`**
+
+Read the entire list of assignment-rules [Not Implemented]
+
+**`Throws`**
+
+**`Memberof`**
+
+GroupsApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name?` | `string` | Filter by assignment-rule name |
+| `perPage?` | `number` | A number of items to return per page. |
+| `page?` | `number` | A page number of the items to return. |
+| `orderBy?` | ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+
+#### Defined in
+
+[api.ts:3858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3858)
+
+___
+
 ### apiGroupCreateGroup
 
-▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -125,17 +235,17 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 #### Defined in
 
-[api.ts:3252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3252)
+[api.ts:3870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3870)
 
 ___
 
 ### apiGroupDeleteGroups
 
-▸ **apiGroupDeleteGroups**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiGroupDeleteGroups**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -158,17 +268,17 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:3264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3264)
+[api.ts:3882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3882)
 
 ___
 
 ### apiGroupGetGroupList
 
-▸ **apiGroupGetGroupList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
+▸ **apiGroupGetGroupList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
 Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
 
@@ -189,23 +299,23 @@ GroupsApi
 | `name?` | `string` | Filter by group name |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"name"`` \| ``"host_ids"`` | Ordering field name |
-| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
+| `orderBy?` | ``"name"`` \| ``"host_count"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_count |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3280)
+[api.ts:3898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3898)
 
 ___
 
 ### apiGroupGetGroupsById
 
-▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
+▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
 Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
 
@@ -226,23 +336,23 @@ GroupsApi
 | `groupIdList` | `string`[] | A comma-separated list of group IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"name"`` \| ``"host_ids"`` | Ordering field name |
-| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
+| `orderBy?` | ``"name"`` \| ``"host_count"`` | Ordering field name |
+| `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_count |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3296)
+[api.ts:3914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3914)
 
 ___
 
 ### apiGroupPatchGroupById
 
-▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -266,17 +376,17 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 #### Defined in
 
-[api.ts:3309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3309)
+[api.ts:3927](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3927)
 
 ___
 
 ### apiHostGroupAddHostListToGroup
 
-▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
 
@@ -300,17 +410,17 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
 #### Defined in
 
-[api.ts:3322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3322)
+[api.ts:3940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3940)
 
 ___
 
 ### apiHostGroupDeleteHostsFromGroup
 
-▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
 
@@ -334,8 +444,8 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:3335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3335)
+[api.ts:3953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3953)

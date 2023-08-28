@@ -98,7 +98,7 @@ BaseAPI.configuration
 
 ### statusLiveRetrieve
 
-▸ **statusLiveRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusLiveRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Is the Advisor API live and serving requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
 
@@ -116,7 +116,7 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -126,7 +126,7 @@ ___
 
 ### statusReadyRetrieve
 
-▸ **statusReadyRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusReadyRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Is the Advisor API ready to serve requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  * \'django\' should always be True.  If Django isn\'t ready, you can\'t   get this information :-) * \'database\' is True when a database access returns successfully with   valid information. * \'rbac\' is True when we can make a request to the RBAC API and get   a valid response. * \'advisor\' is True if all of the above are True.
 
@@ -144,7 +144,7 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -154,7 +154,7 @@ ___
 
 ### statusRetrieve
 
-▸ **statusRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Provide a simple list of URLs contained here.  A list of statistics views.
 
@@ -172,7 +172,7 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 

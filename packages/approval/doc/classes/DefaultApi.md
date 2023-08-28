@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getDocumentation
 
-▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`\>\>
 
 **`Summary`**
 
@@ -116,7 +116,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
+`Promise`<`AxiosResponse`<`object`\>\>
 
 #### Defined in
 

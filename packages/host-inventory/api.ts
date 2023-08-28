@@ -20,6 +20,79 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
+ * Data of a account staleness.
+ * @export
+ * @interface AccountStalenessOutput
+ */
+export interface AccountStalenessOutput {
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    id?: string;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    account?: string | null;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    org_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    conventional_staleness_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    conventional_stale_warning_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    conventional_culling_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    immutable_staleness_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    immutable_stale_warning_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    immutable_culling_delta?: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    created_at?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof AccountStalenessOutput
+     */
+    updated_at?: string;
+}
+/**
  * Information about a host tag
  * @export
  * @interface ActiveTag
@@ -87,6 +160,174 @@ export interface ActiveTagsAllOf {
      * @memberof ActiveTagsAllOf
      */
     results: Array<ActiveTag>;
+}
+/**
+ * Data for a single Assignment Rule
+ * @export
+ * @interface AssignmentRuleIn
+ */
+export interface AssignmentRuleIn extends AssignmentRuleInAllOf {
+}
+/**
+ *
+ * @export
+ * @interface AssignmentRuleInAllOf
+ */
+export interface AssignmentRuleInAllOf {
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleInAllOf
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleInAllOf
+     */
+    description?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleInAllOf
+     */
+    group_id: string;
+    /**
+     *
+     * @type {object}
+     * @memberof AssignmentRuleInAllOf
+     */
+    filter: object;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AssignmentRuleInAllOf
+     */
+    enabled: boolean;
+}
+/**
+ * Data for a single Assignment Rule response
+ * @export
+ * @interface AssignmentRuleOut
+ */
+export interface AssignmentRuleOut extends AssignmentRuleOutAllOf {
+}
+/**
+ *
+ * @export
+ * @interface AssignmentRuleOutAllOf
+ */
+export interface AssignmentRuleOutAllOf {
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    id?: string;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    org_id?: string;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    account?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    description?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    group_id: string;
+    /**
+     *
+     * @type {object}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    filter: object;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    enabled: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    created_on: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AssignmentRuleOutAllOf
+     */
+    modified_on: string;
+}
+/**
+ * A paginated assignment-rule search query result with assignment-rule entries and their Inventory metadata.
+ * @export
+ * @interface AssignmentRuleQueryOutput
+ */
+export interface AssignmentRuleQueryOutput {
+    /**
+     * The number of items on the current page
+     * @type {number}
+     * @memberof AssignmentRuleQueryOutput
+     */
+    count: number;
+    /**
+     * The page number
+     * @type {number}
+     * @memberof AssignmentRuleQueryOutput
+     */
+    page: number;
+    /**
+     * The number of items to return per page
+     * @type {number}
+     * @memberof AssignmentRuleQueryOutput
+     */
+    per_page: number;
+    /**
+     * Total number of items
+     * @type {number}
+     * @memberof AssignmentRuleQueryOutput
+     */
+    total: number;
+    /**
+     * Actual assignment-rule search query result entries.
+     * @type {Array<AssignmentRuleOut>}
+     * @memberof AssignmentRuleQueryOutput
+     */
+    results: Array<AssignmentRuleOut>;
+}
+/**
+ *
+ * @export
+ * @interface AssignmentRuleQueryOutputAllOf
+ */
+export interface AssignmentRuleQueryOutputAllOf {
+    /**
+     * Actual assignment-rule search query result entries.
+     * @type {Array<AssignmentRuleOut>}
+     * @memberof AssignmentRuleQueryOutputAllOf
+     */
+    results: Array<AssignmentRuleOut>;
 }
 /**
  *
@@ -298,242 +539,6 @@ export interface CreateCheckInAllOf {
     checkin_frequency?: number;
 }
 /**
- * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
- * @export
- * @interface CreateHostOut
- */
-export interface CreateHostOut {
-    /**
-     * An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    insights_id?: string | null;
-    /**
-     * A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    subscription_manager_id?: string | null;
-    /**
-     * A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    satellite_id?: string | null;
-    /**
-     * A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    bios_uuid?: string | null;
-    /**
-     * Host’s network IP addresses.  This field is considered to be a canonical fact.
-     * @type {Array<string>}
-     * @memberof CreateHostOut
-     */
-    ip_addresses?: Array<string> | null;
-    /**
-     * A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    fqdn?: string | null;
-    /**
-     * Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
-     * @type {Array<string>}
-     * @memberof CreateHostOut
-     */
-    mac_addresses?: Array<string> | null;
-    /**
-     * Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    provider_id?: string | null;
-    /**
-     * Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    provider_type?: string | null;
-    /**
-     * A host’s human-readable display name, e.g. in a form of a domain name.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    display_name?: string | null;
-    /**
-     * The ansible host name for remediations
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    ansible_host?: string | null;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    account?: string | null;
-    /**
-     * The Org ID of the tenant that owns the host.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    org_id: string;
-    /**
-     * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    id?: string;
-    /**
-     * A timestamp when the entry was created.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    created?: string;
-    /**
-     * A timestamp when the entry was last updated.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    updated?: string;
-    /**
-     * A set of facts belonging to the host.
-     * @type {Array<FactSet>}
-     * @memberof CreateHostOut
-     */
-    facts?: Array<FactSet>;
-    /**
-     * Timestamp from which the host is considered stale.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    stale_timestamp?: string | null;
-    /**
-     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    stale_warning_timestamp?: string | null;
-    /**
-     * Timestamp from which the host is considered deleted.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    culled_timestamp?: string | null;
-    /**
-     * Reporting source of the host. Used when updating the stale_timestamp.
-     * @type {string}
-     * @memberof CreateHostOut
-     */
-    reporter?: string | null;
-    /**
-     * Reporting source of the last checkin status, stale_timestamp, and last_check_in.
-     * @type {{ [key: string]: PerReporterStaleness; }}
-     * @memberof CreateHostOut
-     */
-    per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
-    /**
-     * The groups that the host belongs to, if any.
-     * @type {Array<GroupOut>}
-     * @memberof CreateHostOut
-     */
-    groups?: Array<GroupOut>;
-}
-/**
- *
- * @export
- * @interface CreateHostOutAllOf
- */
-export interface CreateHostOutAllOf {
-    /**
-     * A host’s human-readable display name, e.g. in a form of a domain name.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    display_name?: string | null;
-    /**
-     * The ansible host name for remediations
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    ansible_host?: string | null;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    account?: string | null;
-    /**
-     * The Org ID of the tenant that owns the host.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    org_id: string;
-    /**
-     * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    id?: string;
-    /**
-     * A timestamp when the entry was created.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    created?: string;
-    /**
-     * A timestamp when the entry was last updated.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    updated?: string;
-    /**
-     * A set of facts belonging to the host.
-     * @type {Array<FactSet>}
-     * @memberof CreateHostOutAllOf
-     */
-    facts?: Array<FactSet>;
-    /**
-     * Timestamp from which the host is considered stale.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    stale_timestamp?: string | null;
-    /**
-     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    stale_warning_timestamp?: string | null;
-    /**
-     * Timestamp from which the host is considered deleted.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    culled_timestamp?: string | null;
-    /**
-     * Reporting source of the host. Used when updating the stale_timestamp.
-     * @type {string}
-     * @memberof CreateHostOutAllOf
-     */
-    reporter?: string | null;
-    /**
-     * Reporting source of the last checkin status, stale_timestamp, and last_check_in.
-     * @type {{ [key: string]: PerReporterStaleness; }}
-     * @memberof CreateHostOutAllOf
-     */
-    per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
-    /**
-     * The groups that the host belongs to, if any.
-     * @type {Array<GroupOut>}
-     * @memberof CreateHostOutAllOf
-     */
-    groups?: Array<GroupOut>;
-}
-/**
  * Representation of one mounted device
  * @export
  * @interface DiskDevice
@@ -682,7 +687,49 @@ export interface GroupOut {
  * @export
  * @interface GroupOutWithHostCount
  */
-export interface GroupOutWithHostCount extends GroupOutWithHostCountAllOf {
+export interface GroupOutWithHostCount {
+    /**
+     *
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    id?: string;
+    /**
+     * A group’s human-readable name.
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    name?: string;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    account?: string | null;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    org_id?: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    created?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof GroupOutWithHostCount
+     */
+    updated?: string;
+    /**
+     * The number of hosts associated with the group.
+     * @type {number}
+     * @memberof GroupOutWithHostCount
+     */
+    host_count?: number;
 }
 /**
  *
@@ -690,12 +737,6 @@ export interface GroupOutWithHostCount extends GroupOutWithHostCountAllOf {
  * @interface GroupOutWithHostCountAllOf
  */
 export interface GroupOutWithHostCountAllOf {
-    /**
-     *
-     * @type {GroupOut}
-     * @memberof GroupOutWithHostCountAllOf
-     */
-    group_out?: GroupOut;
     /**
      * The number of hosts associated with the group.
      * @type {number}
@@ -754,7 +795,7 @@ export interface GroupQueryOutputAllOf {
     results: Array<GroupOutWithHostCount>;
 }
 /**
- * A database entry representing a single host with its Inventory metadata.
+ * Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
  * @export
  * @interface HostOut
  */
@@ -905,11 +946,89 @@ export interface HostOut {
  */
 export interface HostOutAllOf {
     /**
+     * A host’s human-readable display name, e.g. in a form of a domain name.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    display_name?: string | null;
+    /**
+     * The ansible host name for remediations
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    ansible_host?: string | null;
+    /**
+     * A Red Hat Account number that owns the host.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    account?: string | null;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    org_id: string;
+    /**
+     * A durable and reliable platform-wide host identifier. Applications should use this identifier to reference hosts.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    id?: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    created?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    updated?: string;
+    /**
      * A set of facts belonging to the host.
      * @type {Array<FactSet>}
      * @memberof HostOutAllOf
      */
     facts?: Array<FactSet>;
+    /**
+     * Timestamp from which the host is considered stale.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    stale_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered too stale to be listed without an explicit toggle.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    stale_warning_timestamp?: string | null;
+    /**
+     * Timestamp from which the host is considered deleted.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    culled_timestamp?: string | null;
+    /**
+     * Reporting source of the host. Used when updating the stale_timestamp.
+     * @type {string}
+     * @memberof HostOutAllOf
+     */
+    reporter?: string | null;
+    /**
+     * Reporting source of the last checkin status, stale_timestamp, and last_check_in.
+     * @type {{ [key: string]: PerReporterStaleness; }}
+     * @memberof HostOutAllOf
+     */
+    per_reporter_staleness?: { [key: string]: PerReporterStaleness; };
+    /**
+     * The groups that the host belongs to, if any.
+     * @type {Array<GroupOut>}
+     * @memberof HostOutAllOf
+     */
+    groups?: Array<GroupOut>;
 }
 /**
  * A paginated host search query result with host entries and their Inventory metadata.
@@ -1567,6 +1686,12 @@ export interface SystemProfile {
     public_ipv4_addresses?: Array<string>;
     /**
      *
+     * @type {Array<string>}
+     * @memberof SystemProfile
+     */
+    public_dns?: Array<string>;
+    /**
+     *
      * @type {Array<YumRepo>}
      * @memberof SystemProfile
      */
@@ -2031,7 +2156,8 @@ export interface SystemProfileOperatingSystem {
     */
 export enum SystemProfileOperatingSystemNameEnum {
     RHEL = 'RHEL',
-    CentOS = 'CentOS'
+    CentOS = 'CentOS',
+    CentOSLinux = 'CentOS Linux'
 }
 
 /**
@@ -2491,27 +2617,19 @@ export interface YumRepo {
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * AccountsStalenessApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AccountsStalenessApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
-         * @summary validate system profile schema
-         * @param {string} repoBranch The branch of the inventory-schemas repo to use
-         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of data to validate
-         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * Create account staleness record. Required permissions: inventory:TODO:write
+         * @summary Create account staleness record
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileValidateSchema: async (repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'repoBranch' is not null or undefined
-            if (repoBranch === null || repoBranch === undefined) {
-                throw new RequiredError('repoBranch','Required parameter repoBranch was null or undefined when calling apiSystemProfileValidateSchema.');
-            }
-            const localVarPath = `/system_profile/validate_schema`;
+        apiAccountStalenessCreateStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
@@ -2529,20 +2647,118 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
-            if (repoFork !== undefined) {
-                localVarQueryParameter['repo_fork'] = repoFork;
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessGetStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
-            if (repoBranch !== undefined) {
-                localVarQueryParameter['repo_branch'] = repoBranch;
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Reset account staleness record. Required permissions: inventory:TODO:read
+         * @summary Reset account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessResetStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness/reset`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
-            if (days !== undefined) {
-                localVarQueryParameter['days'] = days;
-            }
 
-            if (maxMessages !== undefined) {
-                localVarQueryParameter['max_messages'] = maxMessages;
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update account staleness record. Required permissions: inventory:TODO:write
+         * @summary Update account staleness record
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessUpdateStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
 
@@ -2562,23 +2778,58 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * AccountsStalenessApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
+export const AccountsStalenessApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
-         * @summary validate system profile schema
-         * @param {string} repoBranch The branch of the inventory-schemas repo to use
-         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of data to validate
-         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * Create account staleness record. Required permissions: inventory:TODO:write
+         * @summary Create account staleness record
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options);
+        async apiAccountStalenessCreateStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessCreateStaleness(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAccountStalenessGetStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessGetStaleness(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Reset account staleness record. Required permissions: inventory:TODO:read
+         * @summary Reset account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAccountStalenessResetStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessResetStaleness(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update account staleness record. Required permissions: inventory:TODO:write
+         * @summary Update account staleness record
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAccountStalenessUpdateStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessUpdateStaleness(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2588,47 +2839,99 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * DefaultApi - factory interface
+ * AccountsStalenessApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const AccountsStalenessApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
-         * @summary validate system profile schema
-         * @param {string} repoBranch The branch of the inventory-schemas repo to use
-         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-         * @param {number} [days] How many days worth of data to validate
-         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * Create account staleness record. Required permissions: inventory:TODO:write
+         * @summary Create account staleness record
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(axios, basePath));
+        apiAccountStalenessCreateStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessCreateStaleness(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessGetStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessGetStaleness(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Reset account staleness record. Required permissions: inventory:TODO:read
+         * @summary Reset account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessResetStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessResetStaleness(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update account staleness record. Required permissions: inventory:TODO:write
+         * @summary Update account staleness record
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessUpdateStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessUpdateStaleness(options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * AccountsStalenessApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class AccountsStalenessApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
+export class AccountsStalenessApi extends BaseAPI {
     /**
-     * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
-     * @summary validate system profile schema
-     * @param {string} repoBranch The branch of the inventory-schemas repo to use
-     * @param {string} [repoFork] The fork of the inventory-schemas repo to use
-     * @param {number} [days] How many days worth of data to validate
-     * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+     * Create account staleness record. Required permissions: inventory:TODO:write
+     * @summary Create account staleness record
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof AccountsStalenessApi
      */
-    public apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any) {
-        return DefaultApiFp(this.configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(this.axios, this.basePath));
+    public apiAccountStalenessCreateStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessCreateStaleness(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+     * @summary Read the entire list of account staleness
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsStalenessApi
+     */
+    public apiAccountStalenessGetStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessGetStaleness(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Reset account staleness record. Required permissions: inventory:TODO:read
+     * @summary Reset account staleness
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsStalenessApi
+     */
+    public apiAccountStalenessResetStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessResetStaleness(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update account staleness record. Required permissions: inventory:TODO:write
+     * @summary Update account staleness record
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsStalenessApi
+     */
+    public apiAccountStalenessUpdateStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessUpdateStaleness(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -2640,6 +2943,189 @@ export class DefaultApi extends BaseAPI {
  */
 export const GroupsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create Assignment Rule object
+         * @param {AssignmentRuleIn} assignmentRuleIn Data required to create Assignment Rule object
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleCreateAssignmentRule: async (assignmentRuleIn: AssignmentRuleIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'assignmentRuleIn' is not null or undefined
+            if (assignmentRuleIn === null || assignmentRuleIn === undefined) {
+                throw new RequiredError('assignmentRuleIn','Required parameter assignmentRuleIn was null or undefined when calling apiAssignmentRuleCreateAssignmentRule.');
+            }
+            const localVarPath = `/assignment-rules`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof assignmentRuleIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(assignmentRuleIn !== undefined ? assignmentRuleIn : {}) : (assignmentRuleIn || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find assignment rules by their IDs
+         * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleGetAssignmentRulesById: async (assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'assignmentRuleIdList' is not null or undefined
+            if (assignmentRuleIdList === null || assignmentRuleIdList === undefined) {
+                throw new RequiredError('assignmentRuleIdList','Required parameter assignmentRuleIdList was null or undefined when calling apiAssignmentRuleGetAssignmentRulesById.');
+            }
+            const localVarPath = `/assignment-rules/{assignment_rule_id_list}`
+                .replace(`{${"assignment_rule_id_list"}}`, encodeURIComponent(String(assignmentRuleIdList)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
+         * @summary Read the entire list of assignment-rules [Not Implemented]
+         * @param {string} [name] Filter by assignment-rule name
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleGetAssignmentRulesList: async (name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/assignment-rules`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (orderBy !== undefined) {
+                localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (orderHow !== undefined) {
+                localVarQueryParameter['order_how'] = orderHow;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
@@ -2746,12 +3232,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2809,12 +3295,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById: async (groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupsById: async (groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupIdList' is not null or undefined
             if (groupIdList === null || groupIdList === undefined) {
                 throw new RequiredError('groupIdList','Required parameter groupIdList was null or undefined when calling apiGroupGetGroupsById.');
@@ -3033,6 +3519,56 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
 export const GroupsApiFp = function(configuration?: Configuration) {
     return {
         /**
+         * Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create Assignment Rule object
+         * @param {AssignmentRuleIn} assignmentRuleIn Data required to create Assignment Rule object
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn: AssignmentRuleIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleOut>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find assignment rules by their IDs
+         * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
+         * @summary Read the entire list of assignment-rules [Not Implemented]
+         * @param {string} [name] Filter by assignment-rule name
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
          * @param {GroupIn} groupIn Data required to create a record for a group.
@@ -3066,12 +3602,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3084,12 +3620,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+        async apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3151,6 +3687,44 @@ export const GroupsApiFp = function(configuration?: Configuration) {
 export const GroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
+         * Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create Assignment Rule object
+         * @param {AssignmentRuleIn} assignmentRuleIn Data required to create Assignment Rule object
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn: AssignmentRuleIn, options?: any): AxiosPromise<AssignmentRuleOut> {
+            return GroupsApiFp(configuration).apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find assignment rules by their IDs
+         * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
+            return GroupsApiFp(configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
+         * @summary Read the entire list of assignment-rules [Not Implemented]
+         * @param {string} [name] Filter by assignment-rule name
+         * @param {number} [perPage] A number of items to return per page.
+         * @param {number} [page] A page number of the items to return.
+         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
+            return GroupsApiFp(configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
          * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
          * @param {GroupIn} groupIn Data required to create a record for a group.
@@ -3176,12 +3750,12 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
             return GroupsApiFp(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3190,12 +3764,12 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+        apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
             return GroupsApiFp(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3242,6 +3816,50 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
  */
 export class GroupsApi extends BaseAPI {
     /**
+     * Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
+     * @summary Create Assignment Rule object
+     * @param {AssignmentRuleIn} assignmentRuleIn Data required to create Assignment Rule object
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn: AssignmentRuleIn, options?: any) {
+        return GroupsApiFp(this.configuration).apiAssignmentRuleCreateAssignmentRule(assignmentRuleIn, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
+     * @summary Find assignment rules by their IDs
+     * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return GroupsApiFp(this.configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
+     * @summary Read the entire list of assignment-rules [Not Implemented]
+     * @param {string} [name] Filter by assignment-rule name
+     * @param {number} [perPage] A number of items to return per page.
+     * @param {number} [page] A page number of the items to return.
+     * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
+        return GroupsApiFp(this.configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
      * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
      * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
      * @param {GroupIn} groupIn Data required to create a record for a group.
@@ -3271,13 +3889,13 @@ export class GroupsApi extends BaseAPI {
      * @param {string} [name] Filter by group name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+     * @param {'name' | 'host_count'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3287,13 +3905,13 @@ export class GroupsApi extends BaseAPI {
      * @param {Array<string>} groupIdList A comma-separated list of group IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'name' | 'host_ids'} [orderBy] Ordering field name
-     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
+     * @param {'name' | 'host_count'} [orderBy] Ordering field name
+     * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_ids', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3448,7 +4066,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -3456,7 +4074,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostsByFilter: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostDeleteHostsByFilter: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3511,7 +4129,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                     updatedEnd;
             }
 
-            if (groupName !== undefined) {
+            if (groupName) {
                 localVarQueryParameter['group_name'] = groupName;
             }
 
@@ -3629,7 +4247,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3643,7 +4261,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3698,7 +4316,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
                     updatedEnd;
             }
 
-            if (groupName !== undefined) {
+            if (groupName) {
                 localVarQueryParameter['group_name'] = groupName;
             }
 
@@ -4253,7 +4871,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4261,7 +4879,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4299,7 +4917,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4313,7 +4931,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4384,7 +5002,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateHostOut>> {
+        async apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostHostCheckin(createCheckIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4482,7 +5100,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4490,7 +5108,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
+        apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<void> {
             return HostsApiFp(configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4520,7 +5138,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4534,7 +5152,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4589,7 +5207,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<CreateHostOut> {
+        apiHostHostCheckin(createCheckIn: CreateCheckIn, options?: any): AxiosPromise<HostOut> {
             return HostsApiFp(configuration).apiHostHostCheckin(createCheckIn, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4676,7 +5294,7 @@ export class HostsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
-     * @param {string} [groupName] Filter by group name
+     * @param {Array<string>} [groupName] Filter by group name
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4685,7 +5303,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
+    public apiHostDeleteHostsByFilter(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, filter?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostDeleteHostsByFilter(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4718,7 +5336,7 @@ export class HostsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
-     * @param {string} [groupName] Filter by group name
+     * @param {Array<string>} [groupName] Filter by group name
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -4733,7 +5351,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4854,14 +5472,15 @@ export class HostsApi extends BaseAPI {
 export const ResourceTypesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of inventory groups in resource-types format
+         * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiResourceTypeGetResourceTypeGroupsList: async (perPage?: number, page?: number, options: any = {}): Promise<RequestArgs> => {
+        apiResourceTypeGetResourceTypeGroupsList: async (name?: string, perPage?: number, page?: number, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/resource-types/inventory-groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4878,6 +5497,10 @@ export const ResourceTypesApiAxiosParamCreator = function (configuration?: Confi
                     ? await configuration.apiKey("x-rh-identity")
                     : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
             }
 
             if (perPage !== undefined) {
@@ -4902,7 +5525,7 @@ export const ResourceTypesApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of resource types
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4959,22 +5582,23 @@ export const ResourceTypesApiAxiosParamCreator = function (configuration?: Confi
 export const ResourceTypesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of inventory groups in resource-types format
+         * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceTypesGroupsQueryOutput>> {
-            const localVarAxiosArgs = await ResourceTypesApiAxiosParamCreator(configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options);
+        async apiResourceTypeGetResourceTypeGroupsList(name?: string, perPage?: number, page?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceTypesGroupsQueryOutput>> {
+            const localVarAxiosArgs = await ResourceTypesApiAxiosParamCreator(configuration).apiResourceTypeGetResourceTypeGroupsList(name, perPage, page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of resource types
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -4998,18 +5622,19 @@ export const ResourceTypesApiFp = function(configuration?: Configuration) {
 export const ResourceTypesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of inventory groups in resource-types format
+         * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any): AxiosPromise<ResourceTypesGroupsQueryOutput> {
-            return ResourceTypesApiFp(configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options).then((request) => request(axios, basePath));
+        apiResourceTypeGetResourceTypeGroupsList(name?: string, perPage?: number, page?: number, options?: any): AxiosPromise<ResourceTypesGroupsQueryOutput> {
+            return ResourceTypesApiFp(configuration).apiResourceTypeGetResourceTypeGroupsList(name, perPage, page, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+         * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
          * @summary Get the list of resource types
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -5030,20 +5655,21 @@ export const ResourceTypesApiFactory = function (configuration?: Configuration, 
  */
 export class ResourceTypesApi extends BaseAPI {
     /**
-     * Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+     * Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
      * @summary Get the list of inventory groups in resource-types format
+     * @param {string} [name] Filter by group name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourceTypesApi
      */
-    public apiResourceTypeGetResourceTypeGroupsList(perPage?: number, page?: number, options?: any) {
-        return ResourceTypesApiFp(this.configuration).apiResourceTypeGetResourceTypeGroupsList(perPage, page, options).then((request) => request(this.axios, this.basePath));
+    public apiResourceTypeGetResourceTypeGroupsList(name?: string, perPage?: number, page?: number, options?: any) {
+        return ResourceTypesApiFp(this.configuration).apiResourceTypeGetResourceTypeGroupsList(name, perPage, page, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+     * Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
      * @summary Get the list of resource types
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -5273,6 +5899,68 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileValidateSchema: async (repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'repoBranch' is not null or undefined
+            if (repoBranch === null || repoBranch === undefined) {
+                throw new RequiredError('repoBranch','Required parameter repoBranch was null or undefined when calling apiSystemProfileValidateSchema.');
+            }
+            const localVarPath = `/system_profile/validate_schema`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (repoFork !== undefined) {
+                localVarQueryParameter['repo_fork'] = repoFork;
+            }
+
+            if (repoBranch !== undefined) {
+                localVarQueryParameter['repo_branch'] = repoBranch;
+            }
+
+            if (days !== undefined) {
+                localVarQueryParameter['days'] = days;
+            }
+
+            if (maxMessages !== undefined) {
+                localVarQueryParameter['max_messages'] = maxMessages;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -5340,6 +6028,23 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
                 return axios.request(axiosRequestArgs);
             };
         },
+        /**
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await SystemProfileApiAxiosParamCreator(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
     }
 };
 
@@ -5394,6 +6099,19 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
          */
         apiSystemProfileGetSapSystem(tags?: Array<string>, perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileSapSystemOut> {
             return SystemProfileApiFp(configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+         * @summary validate system profile schema
+         * @param {string} repoBranch The branch of the inventory-schemas repo to use
+         * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+         * @param {number} [days] How many days worth of data to validate
+         * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any): AxiosPromise<void> {
+            return SystemProfileApiFp(configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5457,6 +6175,21 @@ export class SystemProfileApi extends BaseAPI {
         return SystemProfileApiFp(this.configuration).apiSystemProfileGetSapSystem(tags, perPage, page, staleness, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 
+    /**
+     * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+     * @summary validate system profile schema
+     * @param {string} repoBranch The branch of the inventory-schemas repo to use
+     * @param {string} [repoFork] The fork of the inventory-schemas repo to use
+     * @param {number} [days] How many days worth of data to validate
+     * @param {number} [maxMessages] Stops polling when this number of messages has been collected
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemProfileApi
+     */
+    public apiSystemProfileValidateSchema(repoBranch: string, repoFork?: string, days?: number, maxMessages?: number, options?: any) {
+        return SystemProfileApiFp(this.configuration).apiSystemProfileValidateSchema(repoBranch, repoFork, days, maxMessages, options).then((request) => request(this.axios, this.basePath));
+    }
+
 }
 
 
@@ -5484,13 +6217,13 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiTagGetTags: async (tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5573,7 +6306,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
                     updatedEnd;
             }
 
-            if (groupName !== undefined) {
+            if (groupName) {
                 localVarQueryParameter['group_name'] = groupName;
             }
 
@@ -5625,13 +6358,13 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
+        async apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ActiveTags>> {
             const localVarAxiosArgs = await TagsApiAxiosParamCreator(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5665,13 +6398,13 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
          * @param {string} [updatedStart] Only show hosts last modified after the given date
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
-         * @param {string} [groupName] Filter by group name
+         * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
+        apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any): AxiosPromise<ActiveTags> {
             return TagsApiFp(configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options).then((request) => request(axios, basePath));
         },
     };
@@ -5702,14 +6435,14 @@ export class TagsApi extends BaseAPI {
      * @param {'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm'} [providerType] Filter by provider_type
      * @param {string} [updatedStart] Only show hosts last modified after the given date
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
-     * @param {string} [groupName] Filter by group name
+     * @param {Array<string>} [groupName] Filter by group name
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: string, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
+    public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
         return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
     }
 

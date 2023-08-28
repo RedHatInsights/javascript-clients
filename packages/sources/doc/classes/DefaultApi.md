@@ -129,7 +129,7 @@ BaseAPI.configuration
 
 ### checkAvailabilitySource
 
-▸ **checkAvailabilitySource**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **checkAvailabilitySource**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Checks Availability of a Source
 
@@ -152,7 +152,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -162,7 +162,7 @@ ___
 
 ### createApplication
 
-▸ **createApplication**(`application`, `options?`): `Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md), `any`\>\>
+▸ **createApplication**(`application`, `options?`): `Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md)\>\>
 
 Creates a Application object
 
@@ -185,7 +185,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md)\>\>
 
 #### Defined in
 
@@ -195,7 +195,7 @@ ___
 
 ### createAuthentication
 
-▸ **createAuthentication**(`authentication`, `options?`): `Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md), `any`\>\>
+▸ **createAuthentication**(`authentication`, `options?`): `Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md)\>\>
 
 Creates a Authentication object
 
@@ -218,7 +218,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md)\>\>
 
 #### Defined in
 
@@ -228,7 +228,7 @@ ___
 
 ### createEndpoint
 
-▸ **createEndpoint**(`endpoint`, `options?`): `Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md), `any`\>\>
+▸ **createEndpoint**(`endpoint`, `options?`): `Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md)\>\>
 
 Creates a Endpoint object
 
@@ -251,7 +251,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md)\>\>
 
 #### Defined in
 
@@ -261,7 +261,7 @@ ___
 
 ### createSource
 
-▸ **createSource**(`source`, `options?`): `Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md), `any`\>\>
+▸ **createSource**(`source`, `options?`): `Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md)\>\>
 
 Creates a Source object
 
@@ -284,7 +284,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md)\>\>
 
 #### Defined in
 
@@ -294,7 +294,7 @@ ___
 
 ### deleteApplication
 
-▸ **deleteApplication**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteApplication**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Deletes a Application object
 
@@ -317,7 +317,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -327,7 +327,7 @@ ___
 
 ### deleteAuthentication
 
-▸ **deleteAuthentication**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteAuthentication**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Deletes a Authentication object
 
@@ -350,7 +350,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -360,7 +360,7 @@ ___
 
 ### deleteEndpoint
 
-▸ **deleteEndpoint**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteEndpoint**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Deletes a Endpoint object
 
@@ -383,7 +383,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -393,7 +393,7 @@ ___
 
 ### deleteSource
 
-▸ **deleteSource**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteSource**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Deletes a Source object
 
@@ -416,7 +416,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -426,7 +426,7 @@ ___
 
 ### getDocumentation
 
-▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`\>\>
 
 **`Summary`**
 
@@ -446,7 +446,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
+`Promise`<`AxiosResponse`<`object`\>\>
 
 #### Defined in
 
@@ -456,7 +456,7 @@ ___
 
 ### listApplicationTypeSources
 
-▸ **listApplicationTypeSources**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+▸ **listApplicationTypeSources**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 Returns an array of Source objects
 
@@ -483,7 +483,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 #### Defined in
 
@@ -493,7 +493,7 @@ ___
 
 ### listApplicationTypes
 
-▸ **listApplicationTypes**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md), `any`\>\>
+▸ **listApplicationTypes**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md)\>\>
 
 Returns an array of ApplicationType objects
 
@@ -519,7 +519,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md)\>\>
 
 #### Defined in
 
@@ -529,7 +529,7 @@ ___
 
 ### listApplications
 
-▸ **listApplications**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md), `any`\>\>
+▸ **listApplications**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md)\>\>
 
 Returns an array of Application objects
 
@@ -555,7 +555,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md)\>\>
 
 #### Defined in
 
@@ -565,7 +565,7 @@ ___
 
 ### listAuthentications
 
-▸ **listAuthentications**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+▸ **listAuthentications**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 Returns an array of Authentication objects
 
@@ -591,7 +591,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 #### Defined in
 
@@ -601,7 +601,7 @@ ___
 
 ### listEndpointAuthentications
 
-▸ **listEndpointAuthentications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+▸ **listEndpointAuthentications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 Returns an array of Authentication objects
 
@@ -628,7 +628,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 #### Defined in
 
@@ -638,7 +638,7 @@ ___
 
 ### listEndpoints
 
-▸ **listEndpoints**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md), `any`\>\>
+▸ **listEndpoints**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md)\>\>
 
 Returns an array of Endpoint objects
 
@@ -664,7 +664,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md)\>\>
 
 #### Defined in
 
@@ -674,7 +674,7 @@ ___
 
 ### listSourceApplicationTypes
 
-▸ **listSourceApplicationTypes**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md), `any`\>\>
+▸ **listSourceApplicationTypes**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md)\>\>
 
 Returns an array of ApplicationType objects
 
@@ -701,7 +701,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApplicationTypesCollection`](../interfaces/ApplicationTypesCollection.md)\>\>
 
 #### Defined in
 
@@ -711,7 +711,7 @@ ___
 
 ### listSourceApplications
 
-▸ **listSourceApplications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md), `any`\>\>
+▸ **listSourceApplications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md)\>\>
 
 Returns an array of Application objects
 
@@ -738,7 +738,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApplicationsCollection`](../interfaces/ApplicationsCollection.md)\>\>
 
 #### Defined in
 
@@ -748,7 +748,7 @@ ___
 
 ### listSourceAuthentications
 
-▸ **listSourceAuthentications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+▸ **listSourceAuthentications**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 Returns an array of Authentication objects
 
@@ -775,7 +775,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`AuthenticationsCollection`](../interfaces/AuthenticationsCollection.md)\>\>
 
 #### Defined in
 
@@ -785,7 +785,7 @@ ___
 
 ### listSourceEndpoints
 
-▸ **listSourceEndpoints**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md), `any`\>\>
+▸ **listSourceEndpoints**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md)\>\>
 
 Returns an array of Endpoint objects
 
@@ -812,7 +812,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`EndpointsCollection`](../interfaces/EndpointsCollection.md)\>\>
 
 #### Defined in
 
@@ -822,7 +822,7 @@ ___
 
 ### listSourceTypeSources
 
-▸ **listSourceTypeSources**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+▸ **listSourceTypeSources**(`id`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 Returns an array of Source objects
 
@@ -849,7 +849,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 #### Defined in
 
@@ -859,7 +859,7 @@ ___
 
 ### listSourceTypes
 
-▸ **listSourceTypes**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourceTypesCollection`](../interfaces/SourceTypesCollection.md), `any`\>\>
+▸ **listSourceTypes**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourceTypesCollection`](../interfaces/SourceTypesCollection.md)\>\>
 
 Returns an array of SourceType objects
 
@@ -885,7 +885,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SourceTypesCollection`](../interfaces/SourceTypesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SourceTypesCollection`](../interfaces/SourceTypesCollection.md)\>\>
 
 #### Defined in
 
@@ -895,7 +895,7 @@ ___
 
 ### listSources
 
-▸ **listSources**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+▸ **listSources**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 Returns an array of Source objects
 
@@ -921,7 +921,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SourcesCollection`](../interfaces/SourcesCollection.md)\>\>
 
 #### Defined in
 
@@ -931,7 +931,7 @@ ___
 
 ### postGraphQL
 
-▸ **postGraphQL**(`graphQLRequest`, `options?`): `Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md), `any`\>\>
+▸ **postGraphQL**(`graphQLRequest`, `options?`): `Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md)\>\>
 
 Performs a GraphQL Query
 
@@ -954,7 +954,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md)\>\>
 
 #### Defined in
 
@@ -964,7 +964,7 @@ ___
 
 ### showApplication
 
-▸ **showApplication**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md), `any`\>\>
+▸ **showApplication**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md)\>\>
 
 Returns a Application object
 
@@ -987,7 +987,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Application`](../interfaces/Application.md)\>\>
 
 #### Defined in
 
@@ -997,7 +997,7 @@ ___
 
 ### showApplicationType
 
-▸ **showApplicationType**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationType`](../interfaces/ApplicationType.md), `any`\>\>
+▸ **showApplicationType**(`id`, `options?`): `Promise`<`AxiosResponse`<[`ApplicationType`](../interfaces/ApplicationType.md)\>\>
 
 Returns a ApplicationType object
 
@@ -1020,7 +1020,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApplicationType`](../interfaces/ApplicationType.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApplicationType`](../interfaces/ApplicationType.md)\>\>
 
 #### Defined in
 
@@ -1030,7 +1030,7 @@ ___
 
 ### showAuthentication
 
-▸ **showAuthentication**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md), `any`\>\>
+▸ **showAuthentication**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md)\>\>
 
 Returns a Authentication object
 
@@ -1053,7 +1053,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Authentication`](../interfaces/Authentication.md)\>\>
 
 #### Defined in
 
@@ -1063,7 +1063,7 @@ ___
 
 ### showEndpoint
 
-▸ **showEndpoint**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md), `any`\>\>
+▸ **showEndpoint**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md)\>\>
 
 Returns a Endpoint object
 
@@ -1086,7 +1086,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Endpoint`](../interfaces/Endpoint.md)\>\>
 
 #### Defined in
 
@@ -1096,7 +1096,7 @@ ___
 
 ### showSource
 
-▸ **showSource**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md), `any`\>\>
+▸ **showSource**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md)\>\>
 
 Returns a Source object
 
@@ -1119,7 +1119,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Source`](../interfaces/Source.md)\>\>
 
 #### Defined in
 
@@ -1129,7 +1129,7 @@ ___
 
 ### showSourceType
 
-▸ **showSourceType**(`id`, `options?`): `Promise`<`AxiosResponse`<[`SourceType`](../interfaces/SourceType.md), `any`\>\>
+▸ **showSourceType**(`id`, `options?`): `Promise`<`AxiosResponse`<[`SourceType`](../interfaces/SourceType.md)\>\>
 
 Returns a SourceType object
 
@@ -1152,7 +1152,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SourceType`](../interfaces/SourceType.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SourceType`](../interfaces/SourceType.md)\>\>
 
 #### Defined in
 
@@ -1162,7 +1162,7 @@ ___
 
 ### updateApplication
 
-▸ **updateApplication**(`id`, `application`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateApplication**(`id`, `application`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates a Application object
 
@@ -1186,7 +1186,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -1196,7 +1196,7 @@ ___
 
 ### updateAuthentication
 
-▸ **updateAuthentication**(`id`, `authentication`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateAuthentication**(`id`, `authentication`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates a Authentication object
 
@@ -1220,7 +1220,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -1230,7 +1230,7 @@ ___
 
 ### updateEndpoint
 
-▸ **updateEndpoint**(`id`, `endpoint`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateEndpoint**(`id`, `endpoint`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates a Endpoint object
 
@@ -1254,7 +1254,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -1264,7 +1264,7 @@ ___
 
 ### updateSource
 
-▸ **updateSource**(`id`, `source`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateSource**(`id`, `source`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates a Source object
 
@@ -1288,7 +1288,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 

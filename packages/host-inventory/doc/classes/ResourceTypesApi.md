@@ -97,9 +97,9 @@ BaseAPI.configuration
 
 ### apiResourceTypeGetResourceTypeGroupsList
 
-▸ **apiResourceTypeGetResourceTypeGroupsList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
+▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
 
-Returns the list of groups in the current account. <br /><br /> Required permissions: inventory:*:*
+Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
 
 **`Summary`**
 
@@ -115,25 +115,26 @@ ResourceTypesApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `name?` | `string` | Filter by group name |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:5041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5041)
+[api.ts:5667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5667)
 
 ___
 
 ### apiResourceTypeGetResourceTypeList
 
-▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
+▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
 
-Returns the list of available RBAC resource types. <br /><br /> Required permissions: inventory:*:*
+Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
 
 **`Summary`**
 
@@ -155,8 +156,8 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:5054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5054)
+[api.ts:5680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5680)

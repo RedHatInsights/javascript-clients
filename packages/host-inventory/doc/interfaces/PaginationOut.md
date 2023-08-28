@@ -31,7 +31,7 @@ PaginationOut
 
 #### Defined in
 
-[api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1112)
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1231)
 
 ___
 
@@ -47,7 +47,7 @@ PaginationOut
 
 #### Defined in
 
-[api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1118)
+[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1237)
 
 ___
 
@@ -63,7 +63,7 @@ PaginationOut
 
 #### Defined in
 
-[api.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1124)
+[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1243)
 
 ___
 
@@ -79,4 +79,4 @@ PaginationOut
 
 #### Defined in
 
-[api.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1130)
+[api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1249)
