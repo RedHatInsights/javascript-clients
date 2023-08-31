@@ -29,7 +29,7 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1935)
+[api.ts:1959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1959)
 
 ___
 
@@ -45,4 +45,4 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1941)
+[api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1965)

@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### apiSystemProfileGetOperatingSystem
 
-▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
+▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -127,17 +127,17 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:6139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6139)
+[api.ts:6201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6201)
 
 ___
 
 ### apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -166,17 +166,17 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:6157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6157)
+[api.ts:6219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6219)
 
 ___
 
 ### apiSystemProfileGetSapSystem
 
-▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -204,17 +204,17 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:6174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6174)
+[api.ts:6236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6236)
 
 ___
 
 ### apiSystemProfileValidateSchema
 
-▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 
@@ -240,8 +240,8 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
-[api.ts:6189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6189)
+[api.ts:6251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6251)

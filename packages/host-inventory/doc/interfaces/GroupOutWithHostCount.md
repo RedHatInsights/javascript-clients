@@ -36,7 +36,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L708)
+[api.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L758)
 
 ___
 
@@ -52,7 +52,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L720)
+[api.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L770)
 
 ___
 
@@ -68,7 +68,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L732)
+[api.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L782)
 
 ___
 
@@ -82,7 +82,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L696)
+[api.ts:746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L746)
 
 ___
 
@@ -98,7 +98,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L702)
+[api.ts:752](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L752)
 
 ___
 
@@ -114,7 +114,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L714)
+[api.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L764)
 
 ___
 
@@ -130,4 +130,4 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L726)
+[api.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L776)

@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### apiResourceTypeGetResourceTypeGroupsList
 
-▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
+▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
 
@@ -122,17 +122,17 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5667)
+[api.ts:5729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5729)
 
 ___
 
 ### apiResourceTypeGetResourceTypeList
 
-▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
+▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
 
 Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
 
@@ -156,8 +156,8 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5680)
+[api.ts:5742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5742)

@@ -17,6 +17,8 @@ MetaAffectedSystems
 - [filter](MetaAffectedSystems.md#filter)
 - [first\_reported\_from](MetaAffectedSystems.md#first_reported_from)
 - [first\_reported\_to](MetaAffectedSystems.md#first_reported_to)
+- [group\_ids](MetaAffectedSystems.md#group_ids)
+- [group\_names](MetaAffectedSystems.md#group_names)
 - [limit](MetaAffectedSystems.md#limit)
 - [offset](MetaAffectedSystems.md#offset)
 - [page](MetaAffectedSystems.md#page)
@@ -113,6 +115,38 @@ MetaAffectedSystems
 
 ___
 
+### group\_ids
+
+• **group\_ids**: `string`
+
+ID of the inventory group.
+
+**`Memberof`**
+
+MetaAffectedSystems
+
+#### Defined in
+
+[api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1375)
+
+___
+
+### group\_names
+
+• **group\_names**: `string`
+
+Name of the inventory group.
+
+**`Memberof`**
+
+MetaAffectedSystems
+
+#### Defined in
+
+[api.ts:1381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1381)
+
+___
+
 ### limit
 
 • **limit**: `number`
@@ -205,7 +239,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1375)
+[api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1387)
 
 ___
 
@@ -237,7 +271,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1381)
+[api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1393)
 
 ___
 
@@ -253,7 +287,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1387)
+[api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1399)
 
 ___
 
@@ -269,7 +303,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1393)
+[api.ts:1405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1405)
 
 ___
 
@@ -301,7 +335,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1399)
+[api.ts:1411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1411)
 
 ___
 

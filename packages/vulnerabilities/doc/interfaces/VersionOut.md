@@ -29,7 +29,7 @@ VersionOut
 
 #### Defined in
 
-[api.ts:2610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2610)
+[api.ts:2634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2634)
 
 ___
 
@@ -45,4 +45,4 @@ VersionOut
 
 #### Defined in
 
-[api.ts:2616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2616)
+[api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2640)

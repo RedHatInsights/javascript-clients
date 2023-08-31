@@ -20,6 +20,56 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
+ * Data of a single account staleness.
+ * @export
+ * @interface AccountStalenessIn
+ */
+export interface AccountStalenessIn {
+}
+/**
+ *
+ * @export
+ * @interface AccountStalenessInAnyOf
+ */
+export interface AccountStalenessInAnyOf {
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    conventional_staleness_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    conventional_stale_warning_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    conventional_culling_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    immutable_staleness_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    immutable_stale_warning_delta?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountStalenessInAnyOf
+     */
+    immutable_culling_delta?: string;
+}
+/**
  * Data of a account staleness.
  * @export
  * @interface AccountStalenessOutput
@@ -2625,10 +2675,15 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
+         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessCreateStaleness: async (options: any = {}): Promise<RequestArgs> => {
+        apiAccountStalenessCreateStaleness: async (accountStalenessIn: AccountStalenessIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'accountStalenessIn' is not null or undefined
+            if (accountStalenessIn === null || accountStalenessIn === undefined) {
+                throw new RequiredError('accountStalenessIn','Required parameter accountStalenessIn was null or undefined when calling apiAccountStalenessCreateStaleness.');
+            }
             const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2649,11 +2704,15 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
 
 
 
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof accountStalenessIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(accountStalenessIn !== undefined ? accountStalenessIn : {}) : (accountStalenessIn || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2786,11 +2845,12 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
+         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessCreateStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessCreateStaleness(options);
+        async apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2847,11 +2907,12 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
+         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessCreateStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessCreateStaleness(options).then((request) => request(axios, basePath));
+        apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any): AxiosPromise<AccountStalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
@@ -2893,12 +2954,13 @@ export class AccountsStalenessApi extends BaseAPI {
     /**
      * Create account staleness record. Required permissions: inventory:TODO:write
      * @summary Create account staleness record
+     * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessCreateStaleness(options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessCreateStaleness(options).then((request) => request(this.axios, this.basePath));
+    public apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

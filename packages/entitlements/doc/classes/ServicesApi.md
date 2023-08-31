@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### servicesGet
 
-▸ **servicesGet**(`options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }\>\>
+▸ **servicesGet**(`options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
 
 **`Summary`**
 
@@ -116,7 +116,7 @@ ServicesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }\>\>
+`Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
 
 #### Defined in
 
