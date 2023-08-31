@@ -36,7 +36,7 @@ AssignmentRuleInAllOf
 
 #### Defined in
 
-[api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L188)
+[api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L238)
 
 ___
 
@@ -50,7 +50,7 @@ AssignmentRuleInAllOf
 
 #### Defined in
 
-[api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L206)
+[api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L256)
 
 ___
 
@@ -64,7 +64,7 @@ AssignmentRuleInAllOf
 
 #### Defined in
 
-[api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L200)
+[api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L250)
 
 ___
 
@@ -78,7 +78,7 @@ AssignmentRuleInAllOf
 
 #### Defined in
 
-[api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L194)
+[api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L244)
 
 ___
 
@@ -92,4 +92,4 @@ AssignmentRuleInAllOf
 
 #### Defined in
 
-[api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L182)
+[api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L232)

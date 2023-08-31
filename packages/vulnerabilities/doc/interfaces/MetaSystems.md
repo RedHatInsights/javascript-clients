@@ -39,7 +39,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1856)
+[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1880)
 
 ___
 
@@ -55,7 +55,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1916)
+[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1940)
 
 ___
 
@@ -71,7 +71,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1862)
+[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1886)
 
 ___
 
@@ -87,7 +87,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1868)
+[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1892)
 
 ___
 
@@ -103,7 +103,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1874)
+[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1898)
 
 ___
 
@@ -119,7 +119,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1880)
+[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1904)
 
 ___
 
@@ -135,7 +135,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1886)
+[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1910)
 
 ___
 
@@ -151,7 +151,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1892)
+[api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1916)
 
 ___
 
@@ -167,7 +167,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1910)
+[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1934)
 
 ___
 
@@ -183,7 +183,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1922)
+[api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1946)
 
 ___
 
@@ -199,7 +199,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1898)
+[api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1922)
 
 ___
 
@@ -215,4 +215,4 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1904)
+[api.ts:1928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1928)

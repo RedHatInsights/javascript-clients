@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### apiAccountStalenessCreateStaleness
 
-▸ **apiAccountStalenessCreateStaleness**(`options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+▸ **apiAccountStalenessCreateStaleness**(`accountStalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
 
 Create account staleness record. Required permissions: inventory:TODO:write
 
@@ -117,6 +117,7 @@ AccountsStalenessApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `accountStalenessIn` | [`AccountStalenessIn`](../interfaces/AccountStalenessIn.md) | Data required to create a record for a account staleness. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -125,7 +126,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2900)
+[api.ts:2962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2962)
 
 ___
 
@@ -157,7 +158,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2911)
+[api.ts:2973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2973)
 
 ___
 
@@ -189,7 +190,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2922)
+[api.ts:2984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2984)
 
 ___
 
@@ -221,4 +222,4 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2933](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2933)
+[api.ts:2995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2995)

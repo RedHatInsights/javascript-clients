@@ -36,7 +36,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L429)
+[api.ts:479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L479)
 
 ___
 
@@ -52,7 +52,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L441)
+[api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L491)
 
 ___
 
@@ -68,7 +68,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L411)
+[api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L461)
 
 ___
 
@@ -84,7 +84,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L435)
+[api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L485)
 
 ___
 
@@ -100,7 +100,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L447)
+[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L497)
 
 ___
 
@@ -116,7 +116,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L453)
+[api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L503)
 
 ___
 
@@ -132,7 +132,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L459)
+[api.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L509)
 
 ___
 
@@ -148,7 +148,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L423)
+[api.ts:473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L473)
 
 ___
 
@@ -164,4 +164,4 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L417)
+[api.ts:467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L467)

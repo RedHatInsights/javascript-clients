@@ -30,7 +30,7 @@ SystemType
 
 #### Defined in
 
-[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L71)
+[api.ts:2086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2086)
 
 ___
 
@@ -44,7 +44,7 @@ SystemType
 
 #### Defined in
 
-[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L83)
+[api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2098)
 
 ___
 
@@ -58,4 +58,4 @@ SystemType
 
 #### Defined in
 
-[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L77)
+[api.ts:2092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2092)

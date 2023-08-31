@@ -120,7 +120,7 @@ KcsApi
 
 #### Defined in
 
-[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L240)
+[api.ts:4901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4901)
 
 ___
 
@@ -149,4 +149,4 @@ KcsApi
 
 #### Defined in
 
-[api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L251)
+[api.ts:4912](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4912)

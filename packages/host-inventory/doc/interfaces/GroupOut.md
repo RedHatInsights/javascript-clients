@@ -35,7 +35,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L665)
+[api.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L715)
 
 ___
 
@@ -51,7 +51,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L677)
+[api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L727)
 
 ___
 
@@ -65,7 +65,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L653)
+[api.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L703)
 
 ___
 
@@ -81,7 +81,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L659)
+[api.ts:709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L709)
 
 ___
 
@@ -97,7 +97,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L671)
+[api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L721)
 
 ___
 
@@ -113,4 +113,4 @@ GroupOut
 
 #### Defined in
 
-[api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L683)
+[api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L733)

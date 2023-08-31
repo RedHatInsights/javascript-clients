@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[api.ts:2352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2352)
+[api.ts:2402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2402)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api.ts:2353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2353)
+[api.ts:2403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2403)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[api.ts:2351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2351)
+[api.ts:2401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2401)

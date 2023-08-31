@@ -30,7 +30,7 @@ SystemDetailsOutDataTags
 
 #### Defined in
 
-[api.ts:2535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2535)
+[api.ts:2559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2559)
 
 ___
 
@@ -46,7 +46,7 @@ SystemDetailsOutDataTags
 
 #### Defined in
 
-[api.ts:2541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2541)
+[api.ts:2565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2565)
 
 ___
 
@@ -62,4 +62,4 @@ SystemDetailsOutDataTags
 
 #### Defined in
 
-[api.ts:2547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2547)
+[api.ts:2571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2571)

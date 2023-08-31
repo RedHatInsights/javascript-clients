@@ -21,7 +21,7 @@
         "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
         "build": "tsc",
         "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-        "generate:prod": "SPEC='https://cloud.redhat.com/api/insights/v1/openapi.json' npm run generate"
+        "generate:prod": "SPEC='https://cloud.redhat.com/api/insights/v1/openapi.json' npm run generate && ./postProcess.sh"
     },
     "dependencies": {
         "axios": "^0.27.2"

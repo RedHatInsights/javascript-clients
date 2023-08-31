@@ -1,0 +1,213 @@
+[@redhat-cloud-services/insights-client](../README.md) / [Exports](../modules.md) / AutosubexclusionApi
+
+# Class: AutosubexclusionApi
+
+AutosubexclusionApi - object-oriented interface
+
+**`Export`**
+
+## Hierarchy
+
+- `BaseAPI`
+
+  ↳ **`AutosubexclusionApi`**
+
+## Table of contents
+
+### Constructors
+
+- [constructor](AutosubexclusionApi.md#constructor)
+
+### Properties
+
+- [axios](AutosubexclusionApi.md#axios)
+- [basePath](AutosubexclusionApi.md#basepath)
+- [configuration](AutosubexclusionApi.md#configuration)
+
+### Methods
+
+- [autosubexclusionCreate](AutosubexclusionApi.md#autosubexclusioncreate)
+- [autosubexclusionDestroy](AutosubexclusionApi.md#autosubexclusiondestroy)
+- [autosubexclusionList](AutosubexclusionApi.md#autosubexclusionlist)
+- [autosubexclusionRetrieve](AutosubexclusionApi.md#autosubexclusionretrieve)
+
+## Constructors
+
+### constructor
+
+• **new AutosubexclusionApi**(`configuration?`, `basePath?`, `axios?`)
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `configuration?` | [`Configuration`](Configuration.md) | `undefined` |
+| `basePath` | `string` | `BASE_PATH` |
+| `axios` | `AxiosInstance` | `globalAxios` |
+
+#### Inherited from
+
+BaseAPI.constructor
+
+#### Defined in
+
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+
+## Properties
+
+### axios
+
+• `Protected` **axios**: `AxiosInstance` = `globalAxios`
+
+#### Inherited from
+
+BaseAPI.axios
+
+#### Defined in
+
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+
+___
+
+### basePath
+
+• `Protected` **basePath**: `string` = `BASE_PATH`
+
+#### Inherited from
+
+BaseAPI.basePath
+
+#### Defined in
+
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+
+___
+
+### configuration
+
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
+
+#### Inherited from
+
+BaseAPI.configuration
+
+#### Defined in
+
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+
+## Methods
+
+### autosubexclusionCreate
+
+▸ **autosubexclusionCreate**(`subscriptionExcludedAccount`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
+
+Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
+
+**`Throws`**
+
+**`Memberof`**
+
+AutosubexclusionApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `subscriptionExcludedAccount` | [`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md) |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
+
+#### Defined in
+
+[api.ts:3758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3758)
+
+___
+
+### autosubexclusionDestroy
+
+▸ **autosubexclusionDestroy**(`orgId`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
+
+Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
+
+**`Throws`**
+
+**`Memberof`**
+
+AutosubexclusionApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `orgId` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`string`\>\>
+
+#### Defined in
+
+[api.ts:3769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3769)
+
+___
+
+### autosubexclusionList
+
+▸ **autosubexclusionList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md)\>\>
+
+Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
+
+**`Throws`**
+
+**`Memberof`**
+
+AutosubexclusionApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `limit?` | `number` | Number of results to return per page. |
+| `offset?` | `number` | The initial index from which to return the results. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md)\>\>
+
+#### Defined in
+
+[api.ts:3781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3781)
+
+___
+
+### autosubexclusionRetrieve
+
+▸ **autosubexclusionRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
+
+Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
+
+**`Throws`**
+
+**`Memberof`**
+
+AutosubexclusionApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `orgId` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
+
+#### Defined in
+
+[api.ts:3792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3792)
