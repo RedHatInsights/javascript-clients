@@ -19,11 +19,11 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { NotificationsApi } from '@redhat-cloud-services/notifications-client';
+import { BaseApi } from '@redhat-cloud-services/notifications-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = new NotificationsApi(undefined, BASE_PATH, instance);
+const notificationsApi = new BaseApi(undefined, BASE_PATH, instance);
 export notificationsApi;
 ```
 
@@ -50,7 +50,7 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = new NotificationsApi(undefined, BASE_PATH, instance);
+const notificationsApi = new BaseApi(undefined, BASE_PATH, instance);
 export notificationsApi;
 ```
 

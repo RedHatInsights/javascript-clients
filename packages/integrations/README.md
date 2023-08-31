@@ -19,11 +19,11 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { IntegrationsApi } from '@redhat-cloud-services/integrations-client';
+import { BaseApi } from '@redhat-cloud-services/integrations-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = new IntegrationsApi(undefined, BASE_PATH, instance);
+const integrationsApi = new BaseApi(undefined, BASE_PATH, instance);
 export integrationsApi;
 ```
 
@@ -50,7 +50,7 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = new IntegrationsApi(undefined, BASE_PATH, instance);
+const integrationsApi = new BaseApi(undefined, BASE_PATH, instance);
 export integrationsApi;
 ```
 
