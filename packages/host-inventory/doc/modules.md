@@ -29,6 +29,8 @@
 
 ### Interfaces
 
+- [AccountStalenessIn](interfaces/AccountStalenessIn.md)
+- [AccountStalenessInAnyOf](interfaces/AccountStalenessInAnyOf.md)
 - [AccountStalenessOutput](interfaces/AccountStalenessOutput.md)
 - [ActiveTag](interfaces/ActiveTag.md)
 - [ActiveTags](interfaces/ActiveTags.md)
@@ -148,14 +150,14 @@ AccountsStalenessApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
-[api.ts:2623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2623)
+[api.ts:2673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2673)
 
 ___
 
@@ -181,14 +183,14 @@ AccountsStalenessApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
+| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
 | `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
 | `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
 | `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
 
 #### Defined in
 
-[api.ts:2845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2845)
+[api.ts:2905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2905)
 
 ___
 
@@ -212,14 +214,14 @@ AccountsStalenessApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
+| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
 | `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
 | `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
 | `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
 
 #### Defined in
 
-[api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2784)
+[api.ts:2843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2843)
 
 ___
 
@@ -256,7 +258,7 @@ GroupsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2944)
+[api.ts:3006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3006)
 
 ___
 
@@ -295,7 +297,7 @@ GroupsApi - factory interface
 
 #### Defined in
 
-[api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3687)
+[api.ts:3749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3749)
 
 ___
 
@@ -332,7 +334,7 @@ GroupsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3519)
+[api.ts:3581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3581)
 
 ___
 
@@ -371,7 +373,7 @@ HostsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3964)
+[api.ts:4026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4026)
 
 ___
 
@@ -412,7 +414,7 @@ HostsApi - factory interface
 
 #### Defined in
 
-[api.ts:5069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5069)
+[api.ts:5131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5131)
 
 ___
 
@@ -451,7 +453,7 @@ HostsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4832)
+[api.ts:4894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4894)
 
 ___
 
@@ -480,7 +482,7 @@ ResourceTypesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5472)
+[api.ts:5534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5534)
 
 ___
 
@@ -511,7 +513,7 @@ ResourceTypesApi - factory interface
 
 #### Defined in
 
-[api.ts:5622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5622)
+[api.ts:5684](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5684)
 
 ___
 
@@ -540,7 +542,7 @@ ResourceTypesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5582)
+[api.ts:5644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5644)
 
 ___
 
@@ -571,7 +573,7 @@ SystemProfileApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5691)
+[api.ts:5753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5753)
 
 ___
 
@@ -604,7 +606,7 @@ SystemProfileApi - factory interface
 
 #### Defined in
 
-[api.ts:6055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6055)
+[api.ts:6117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6117)
 
 ___
 
@@ -635,7 +637,7 @@ SystemProfileApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5971)
+[api.ts:6033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6033)
 
 ___
 
@@ -663,7 +665,7 @@ TagsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:6200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6200)
+[api.ts:6262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6262)
 
 ___
 
@@ -693,7 +695,7 @@ TagsApi - factory interface
 
 #### Defined in
 
-[api.ts:6381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6381)
+[api.ts:6443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6443)
 
 ___
 
@@ -721,7 +723,7 @@ TagsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6341)
+[api.ts:6403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6403)
 
 ___
 
@@ -749,7 +751,7 @@ UnleashApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:6456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6456)
+[api.ts:6518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6518)
 
 ___
 
@@ -779,7 +781,7 @@ UnleashApi - factory interface
 
 #### Defined in
 
-[api.ts:6525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6525)
+[api.ts:6587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6587)
 
 ___
 
@@ -807,4 +809,4 @@ UnleashApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6503)
+[api.ts:6565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6565)

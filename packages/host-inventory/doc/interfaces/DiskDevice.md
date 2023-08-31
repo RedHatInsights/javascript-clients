@@ -32,7 +32,7 @@ DiskDevice
 
 #### Defined in
 
-[api.ts:552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L552)
+[api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L602)
 
 ___
 
@@ -48,7 +48,7 @@ DiskDevice
 
 #### Defined in
 
-[api.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L558)
+[api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L608)
 
 ___
 
@@ -64,7 +64,7 @@ DiskDevice
 
 #### Defined in
 
-[api.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L570)
+[api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L620)
 
 ___
 
@@ -84,7 +84,7 @@ DiskDevice
 
 #### Defined in
 
-[api.ts:564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L564)
+[api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L614)
 
 ___
 
@@ -100,4 +100,4 @@ DiskDevice
 
 #### Defined in
 
-[api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L576)
+[api.ts:626](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L626)

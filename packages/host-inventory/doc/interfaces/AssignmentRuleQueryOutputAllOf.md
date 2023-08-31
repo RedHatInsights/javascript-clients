@@ -28,4 +28,4 @@ AssignmentRuleQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)
+[api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L380)

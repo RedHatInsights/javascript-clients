@@ -27,7 +27,7 @@ OptOutIn
 
 #### Defined in
 
-[api.ts:2222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2222)
+[api.ts:2246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2246)
 
 ___
 
@@ -43,4 +43,4 @@ OptOutIn
 
 #### Defined in
 
-[api.ts:2228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2228)
+[api.ts:2252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2252)

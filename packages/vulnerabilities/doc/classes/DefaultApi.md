@@ -120,7 +120,7 @@ BaseAPI.configuration
 
 ### getAffectedSystemsByCve
 
-▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md)\>\>
+▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md)\>\>
 
 Report of affected systems for a given CVE.
 
@@ -164,6 +164,8 @@ DefaultApi
 | `report?` | `boolean` | Needs to be used when endpoint data is used for report generation, checks RBAC permission for report and export feature. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -172,13 +174,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5919)
+[api.ts:6022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6022)
 
 ___
 
 ### getAffectedSystemsIdsByCve
 
-▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md)\>\>
+▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md)\>\>
 
 Report of IDs of affected systems for a given CVE.
 
@@ -221,6 +223,8 @@ DefaultApi
 | `remediation?` | `string` | Filer based on available remediation type id. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -229,7 +233,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5955](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5955)
+[api.ts:6060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6060)
 
 ___
 
@@ -261,7 +265,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5966)
+[api.ts:6071](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6071)
 
 ___
 
@@ -293,7 +297,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5977)
+[api.ts:6082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6082)
 
 ___
 
@@ -325,13 +329,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5988)
+[api.ts:6093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6093)
 
 ___
 
 ### getCveDetails
 
-▸ **getCveDetails**(`cveId`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md)\>\>
+▸ **getCveDetails**(`cveId`, `advisoryAvailable?`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md)\>\>
 
 Show all information about given CVE.
 
@@ -350,6 +354,7 @@ DefaultApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `cveId` | `string` | CVE id. |
+| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -358,7 +363,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6000)
+[api.ts:6106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6106)
 
 ___
 
@@ -414,7 +419,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6035)
+[api.ts:6141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6141)
 
 ___
 
@@ -470,13 +475,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6070)
+[api.ts:6176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6176)
 
 ___
 
 ### getCveList
 
-▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `advisoryAvailable?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md)\>\>
+▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `advisoryAvailable?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md)\>\>
 
 Overview of vulnerabilities across whole host inventory.
 
@@ -520,6 +525,8 @@ DefaultApi
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
 | `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -528,7 +535,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6107)
+[api.ts:6215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6215)
 
 ___
 
@@ -585,7 +592,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6143)
+[api.ts:6251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6251)
 
 ___
 
@@ -624,7 +631,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6161)
+[api.ts:6269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6269)
 
 ___
 
@@ -661,7 +668,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6177)
+[api.ts:6285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6285)
 
 ___
 
@@ -698,7 +705,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6193)
+[api.ts:6301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6301)
 
 ___
 
@@ -730,7 +737,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6204)
+[api.ts:6312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6312)
 
 ___
 
@@ -763,7 +770,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6216)
+[api.ts:6324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6324)
 
 ___
 
@@ -795,7 +802,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6227)
+[api.ts:6335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6335)
 
 ___
 
@@ -828,13 +835,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6239)
+[api.ts:6347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6347)
 
 ___
 
 ### getSystemsIds
 
-▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md)\>\>
+▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md)\>\>
 
 List systems IDs visible to logged in account.
 
@@ -868,6 +875,8 @@ DefaultApi
 | `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -876,13 +885,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6266)
+[api.ts:6376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6376)
 
 ___
 
 ### getSystemsList
 
-▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md)\>\>
+▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md)\>\>
 
 List systems visible to logged in account with basic information related to vulnerabilities.
 
@@ -917,6 +926,8 @@ DefaultApi
 | `report?` | `boolean` | Needs to be used when endpoint data is used for report generation, checks RBAC permission for report and export feature. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -925,7 +936,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6294)
+[api.ts:6406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6406)
 
 ___
 
@@ -957,7 +968,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6305)
+[api.ts:6417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6417)
 
 ___
 
@@ -990,7 +1001,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6317)
+[api.ts:6429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6429)
 
 ___
 
@@ -1023,7 +1034,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6329)
+[api.ts:6441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6441)
 
 ___
 
@@ -1056,7 +1067,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6341)
+[api.ts:6453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6453)
 
 ___
 
@@ -1089,7 +1100,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6353)
+[api.ts:6465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6465)
 
 ___
 
@@ -1122,4 +1133,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6365)
+[api.ts:6477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6477)

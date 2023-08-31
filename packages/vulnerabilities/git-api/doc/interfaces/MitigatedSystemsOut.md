@@ -28,7 +28,7 @@ MitigatedSystemsOut
 
 #### Defined in
 
-[api.ts:2197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2197)
+[api.ts:2221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2221)
 
 ___
 
@@ -42,7 +42,7 @@ MitigatedSystemsOut
 
 #### Defined in
 
-[api.ts:2203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2203)
+[api.ts:2227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2227)
 
 ___
 
@@ -56,4 +56,4 @@ MitigatedSystemsOut
 
 #### Defined in
 
-[api.ts:2209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2209)
+[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2233)

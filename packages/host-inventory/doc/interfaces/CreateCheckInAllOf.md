@@ -28,4 +28,4 @@ CreateCheckInAllOf
 
 #### Defined in
 
-[api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L539)
+[api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L589)

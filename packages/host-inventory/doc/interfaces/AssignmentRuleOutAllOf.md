@@ -43,7 +43,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L238)
+[api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L288)
 
 ___
 
@@ -57,7 +57,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L274)
+[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L324)
 
 ___
 
@@ -71,7 +71,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L250)
+[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L300)
 
 ___
 
@@ -85,7 +85,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L268)
+[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L318)
 
 ___
 
@@ -99,7 +99,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L262)
+[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L312)
 
 ___
 
@@ -113,7 +113,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L256)
+[api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L306)
 
 ___
 
@@ -127,7 +127,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L226)
+[api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L276)
 
 ___
 
@@ -141,7 +141,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L280)
+[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)
 
 ___
 
@@ -155,7 +155,7 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L244)
+[api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L294)
 
 ___
 
@@ -171,4 +171,4 @@ AssignmentRuleOutAllOf
 
 #### Defined in
 
-[api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L232)
+[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L282)

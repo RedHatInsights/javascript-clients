@@ -119,7 +119,7 @@ RulecategoryApi
 
 #### Defined in
 
-[api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L404)
+[api.ts:7381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7381)
 
 ___
 
@@ -148,4 +148,4 @@ RulecategoryApi
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L415)
+[api.ts:7392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7392)
