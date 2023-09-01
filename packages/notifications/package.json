@@ -1,0 +1,29 @@
+{
+  "name": "notifications-client",
+  "version": "1.0.0",
+  "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+    },
+    "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
+    "scripts": {
+        "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
+        "build": "tsc",
+        "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC --custom-generator=../../target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation -o . --skip-validate-spec --enable-post-process-file",
+        "generate:prod": "SPEC='https://console.redhat.com/api/notifications/v1.0/openapi.json' npm run generate"
+    },
+    "dependencies": {
+        "axios": "^0.27.2"
+    }
+}
