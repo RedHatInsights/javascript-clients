@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / EventLogEntry
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / EventLogEntry
 
 # Interface: EventLogEntry
 
@@ -32,7 +32,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:755
+[packages/notifications/types/index.ts:755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L755)
 
 ___
 
@@ -46,7 +46,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:737
+[packages/notifications/types/index.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L737)
 
 ___
 
@@ -60,7 +60,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:731
+[packages/notifications/types/index.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L731)
 
 ___
 
@@ -74,7 +74,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:725
+[packages/notifications/types/index.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L725)
 
 ___
 
@@ -88,7 +88,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:743
+[packages/notifications/types/index.ts:743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L743)
 
 ___
 
@@ -102,7 +102,7 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:719
+[packages/notifications/types/index.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L719)
 
 ___
 
@@ -116,4 +116,4 @@ EventLogEntry
 
 #### Defined in
 
-packages/notifications/types/index.ts:749
+[packages/notifications/types/index.ts:749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L749)

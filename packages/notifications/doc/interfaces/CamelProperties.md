@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / CamelProperties
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / CamelProperties
 
 # Interface: CamelProperties
 
@@ -30,7 +30,7 @@ CamelProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:404
+[packages/notifications/types/index.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L404)
 
 ___
 
@@ -44,7 +44,7 @@ CamelProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:392
+[packages/notifications/types/index.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L392)
 
 ___
 
@@ -62,7 +62,7 @@ CamelProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:410
+[packages/notifications/types/index.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L410)
 
 ___
 
@@ -76,7 +76,7 @@ CamelProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:398
+[packages/notifications/types/index.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L398)
 
 ___
 
@@ -90,4 +90,4 @@ CamelProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:386
+[packages/notifications/types/index.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L386)

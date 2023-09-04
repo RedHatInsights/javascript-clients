@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Status
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Status
 
 # Enumeration: Status
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:1401
+[packages/integrations/types/index.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1401)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:1400
+[packages/integrations/types/index.ts:1400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1400)

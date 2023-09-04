@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / EventLogEntryAction
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / EventLogEntryAction
 
 # Interface: EventLogEntryAction
 
@@ -36,7 +36,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:805
+[packages/notifications/types/index.ts:805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L805)
 
 ___
 
@@ -50,7 +50,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:799
+[packages/notifications/types/index.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L799)
 
 ___
 
@@ -64,7 +64,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:780
+[packages/notifications/types/index.ts:780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L780)
 
 ___
 
@@ -78,7 +78,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:774
+[packages/notifications/types/index.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L774)
 
 ___
 
@@ -92,7 +92,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:768
+[packages/notifications/types/index.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L768)
 
 ___
 
@@ -108,7 +108,7 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:787
+[packages/notifications/types/index.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L787)
 
 ___
 
@@ -122,4 +122,4 @@ EventLogEntryAction
 
 #### Defined in
 
-packages/notifications/types/index.ts:793
+[packages/notifications/types/index.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L793)

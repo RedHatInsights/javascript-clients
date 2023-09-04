@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / BundleSettingsValue
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / BundleSettingsValue
 
 # Interface: BundleSettingsValue
 
@@ -30,4 +30,4 @@ BundleSettingsValue
 
 #### Defined in
 
-packages/notifications/types/index.ts:373
+[packages/notifications/types/index.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L373)

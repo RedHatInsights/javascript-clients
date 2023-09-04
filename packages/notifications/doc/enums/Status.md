@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / Status
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / Status
 
 # Enumeration: Status
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-packages/notifications/types/index.ts:1401
+[packages/notifications/types/index.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1401)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-packages/notifications/types/index.ts:1400
+[packages/notifications/types/index.ts:1400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1400)

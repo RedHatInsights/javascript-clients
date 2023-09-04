@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Bundle
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Bundle
 
 # Interface: Bundle
 
@@ -30,7 +30,7 @@ Bundle
 
 #### Defined in
 
-packages/integrations/types/index.ts:336
+[packages/integrations/types/index.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L336)
 
 ___
 
@@ -44,7 +44,7 @@ Bundle
 
 #### Defined in
 
-packages/integrations/types/index.ts:360
+[packages/integrations/types/index.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L360)
 
 ___
 
@@ -58,7 +58,7 @@ Bundle
 
 #### Defined in
 
-packages/integrations/types/index.ts:348
+[packages/integrations/types/index.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L348)
 
 ___
 
@@ -72,7 +72,7 @@ Bundle
 
 #### Defined in
 
-packages/integrations/types/index.ts:354
+[packages/integrations/types/index.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L354)
 
 ___
 
@@ -86,4 +86,4 @@ Bundle
 
 #### Defined in
 
-packages/integrations/types/index.ts:342
+[packages/integrations/types/index.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L342)

@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / BehaviorGroupActionId
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / BehaviorGroupActionId
 
 # Interface: BehaviorGroupActionId
 
@@ -27,7 +27,7 @@ BehaviorGroupActionId
 
 #### Defined in
 
-packages/notifications/types/index.ts:317
+[packages/notifications/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L317)
 
 ___
 
@@ -41,4 +41,4 @@ BehaviorGroupActionId
 
 #### Defined in
 
-packages/notifications/types/index.ts:323
+[packages/notifications/types/index.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L323)

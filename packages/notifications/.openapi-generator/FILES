@@ -1,6 +1,5 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
 EventResourceV1GetEvents/index.ts
 NotificationResourceV1AppendBehaviorGroupToEventType/index.ts
 NotificationResourceV1CreateBehaviorGroup/index.ts

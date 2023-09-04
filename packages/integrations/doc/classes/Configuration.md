@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Configuration
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Configuration
 
 # Class: Configuration
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:65
+[packages/integrations/utils/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L65)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:41
+[packages/integrations/utils/configuration.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L41)
 
 ___
 
@@ -80,7 +80,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:20
+[packages/integrations/utils/configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L20)
 
 ___
 
@@ -96,7 +96,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:55
+[packages/integrations/utils/configuration.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L55)
 
 ___
 
@@ -112,7 +112,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:48
+[packages/integrations/utils/configuration.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L48)
 
 ___
 
@@ -130,7 +130,7 @@ do not support the FormData class can still run the generated client.
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:63
+[packages/integrations/utils/configuration.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L63)
 
 ___
 
@@ -146,7 +146,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:34
+[packages/integrations/utils/configuration.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L34)
 
 ___
 
@@ -162,7 +162,7 @@ Configuration
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:27
+[packages/integrations/utils/configuration.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L27)
 
 ## Methods
 
@@ -191,4 +191,4 @@ True if the given MIME is JSON, false otherwise.
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:85
+[packages/integrations/utils/configuration.ts:85](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L85)

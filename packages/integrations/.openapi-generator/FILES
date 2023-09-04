@@ -1,6 +1,5 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
 EndpointResourceV1CreateEndpoint/index.ts
 EndpointResourceV1DeleteEndpoint/index.ts
 EndpointResourceV1DisableEndpoint/index.ts

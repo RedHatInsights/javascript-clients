@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / ServerInfo
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / ServerInfo
 
 # Interface: ServerInfo
 
@@ -26,4 +26,4 @@ ServerInfo
 
 #### Defined in
 
-packages/integrations/types/index.ts:1376
+[packages/integrations/types/index.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1376)

@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / AddAccessRequest
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / AddAccessRequest
 
 # Interface: AddAccessRequest
 
@@ -27,7 +27,7 @@ AddAccessRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:18
+[packages/integrations/types/index.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L18)
 
 ___
 
@@ -41,4 +41,4 @@ AddAccessRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:12
+[packages/integrations/types/index.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L12)

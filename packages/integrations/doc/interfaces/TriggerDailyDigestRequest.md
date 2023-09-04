@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / TriggerDailyDigestRequest
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / TriggerDailyDigestRequest
 
 # Interface: TriggerDailyDigestRequest
 
@@ -30,7 +30,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1486
+[packages/integrations/types/index.ts:1486](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1486)
 
 ___
 
@@ -44,7 +44,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1492
+[packages/integrations/types/index.ts:1492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1492)
 
 ___
 
@@ -58,7 +58,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1498
+[packages/integrations/types/index.ts:1498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1498)
 
 ___
 
@@ -72,7 +72,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1504
+[packages/integrations/types/index.ts:1504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1504)
 
 ___
 
@@ -86,4 +86,4 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1510
+[packages/integrations/types/index.ts:1510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1510)

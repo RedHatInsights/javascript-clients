@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / InternalRoleAccess
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / InternalRoleAccess
 
 # Interface: InternalRoleAccess
 
@@ -28,7 +28,7 @@ InternalRoleAccess
 
 #### Defined in
 
-packages/notifications/types/index.ts:1074
+[packages/notifications/types/index.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1074)
 
 ___
 
@@ -42,7 +42,7 @@ InternalRoleAccess
 
 #### Defined in
 
-packages/notifications/types/index.ts:1062
+[packages/notifications/types/index.ts:1062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1062)
 
 ___
 
@@ -56,4 +56,4 @@ InternalRoleAccess
 
 #### Defined in
 
-packages/notifications/types/index.ts:1068
+[packages/notifications/types/index.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1068)

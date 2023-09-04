@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / BundleSettingsValue
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / BundleSettingsValue
 
 # Interface: BundleSettingsValue
 
@@ -30,4 +30,4 @@ BundleSettingsValue
 
 #### Defined in
 
-packages/integrations/types/index.ts:373
+[packages/integrations/types/index.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L373)

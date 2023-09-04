@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / ApiConfig
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / ApiConfig
 
 # Interface: ApiConfig
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-packages/notifications/utils/base.ts:41
+[packages/notifications/utils/base.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L41)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/base.ts:42
+[packages/notifications/utils/base.ts:42](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L42)

@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / RequestSystemSubscriptionProperties
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / RequestSystemSubscriptionProperties
 
 # Interface: RequestSystemSubscriptionProperties
 
@@ -27,7 +27,7 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1363
+[packages/integrations/types/index.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1363)
 
 ___
 
@@ -41,4 +41,4 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1357
+[packages/integrations/types/index.ts:1357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1357)

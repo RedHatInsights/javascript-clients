@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / BehaviorGroupActionId
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / BehaviorGroupActionId
 
 # Interface: BehaviorGroupActionId
 
@@ -27,7 +27,7 @@ BehaviorGroupActionId
 
 #### Defined in
 
-packages/integrations/types/index.ts:317
+[packages/integrations/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L317)
 
 ___
 
@@ -41,4 +41,4 @@ BehaviorGroupActionId
 
 #### Defined in
 
-packages/integrations/types/index.ts:323
+[packages/integrations/types/index.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L323)

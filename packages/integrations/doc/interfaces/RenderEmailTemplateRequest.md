@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / RenderEmailTemplateRequest
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / RenderEmailTemplateRequest
 
 # Interface: RenderEmailTemplateRequest
 
@@ -27,7 +27,7 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1325
+[packages/integrations/types/index.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1325)
 
 ___
 
@@ -41,4 +41,4 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1319
+[packages/integrations/types/index.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1319)

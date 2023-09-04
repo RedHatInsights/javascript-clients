@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / Application
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / Application
 
 # Interface: Application
 
@@ -31,7 +31,7 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:161
+[packages/notifications/types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L161)
 
 ___
 
@@ -45,7 +45,7 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:131
+[packages/notifications/types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L131)
 
 ___
 
@@ -59,7 +59,7 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:155
+[packages/notifications/types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L155)
 
 ___
 
@@ -73,7 +73,7 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:143
+[packages/notifications/types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L143)
 
 ___
 
@@ -87,7 +87,7 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:149
+[packages/notifications/types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L149)
 
 ___
 
@@ -101,4 +101,4 @@ Application
 
 #### Defined in
 
-packages/notifications/types/index.ts:137
+[packages/notifications/types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L137)

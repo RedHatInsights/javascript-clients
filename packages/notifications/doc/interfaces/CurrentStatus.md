@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / CurrentStatus
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / CurrentStatus
 
 # Interface: CurrentStatus
 
@@ -28,7 +28,7 @@ CurrentStatus
 
 #### Defined in
 
-packages/notifications/types/index.ts:521
+[packages/notifications/types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L521)
 
 ___
 
@@ -42,7 +42,7 @@ CurrentStatus
 
 #### Defined in
 
-packages/notifications/types/index.ts:515
+[packages/notifications/types/index.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L515)
 
 ___
 
@@ -56,4 +56,4 @@ CurrentStatus
 
 #### Defined in
 
-packages/notifications/types/index.ts:509
+[packages/notifications/types/index.ts:509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L509)

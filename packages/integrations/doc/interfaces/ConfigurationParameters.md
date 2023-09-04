@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / ConfigurationParameters
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / ConfigurationParameters
 
 # Interface: ConfigurationParameters
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:8
+[packages/integrations/utils/configuration.ts:8](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L8)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:5
+[packages/integrations/utils/configuration.ts:5](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L5)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:10
+[packages/integrations/utils/configuration.ts:10](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L10)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:9
+[packages/integrations/utils/configuration.ts:9](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L9)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:11
+[packages/integrations/utils/configuration.ts:11](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L11)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:7
+[packages/integrations/utils/configuration.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L7)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/configuration.ts:6
+[packages/integrations/utils/configuration.ts:6](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/configuration.ts#L6)

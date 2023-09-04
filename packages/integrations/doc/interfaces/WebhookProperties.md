@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / WebhookProperties
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / WebhookProperties
 
 # Interface: WebhookProperties
 
@@ -30,7 +30,7 @@ WebhookProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1597
+[packages/integrations/types/index.ts:1597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1597)
 
 ___
 
@@ -44,7 +44,7 @@ WebhookProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1585
+[packages/integrations/types/index.ts:1585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1585)
 
 ___
 
@@ -58,7 +58,7 @@ WebhookProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1579
+[packages/integrations/types/index.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1579)
 
 ___
 
@@ -72,7 +72,7 @@ WebhookProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1591
+[packages/integrations/types/index.ts:1591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1591)
 
 ___
 
@@ -86,4 +86,4 @@ WebhookProperties
 
 #### Defined in
 
-packages/integrations/types/index.ts:1573
+[packages/integrations/types/index.ts:1573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1573)

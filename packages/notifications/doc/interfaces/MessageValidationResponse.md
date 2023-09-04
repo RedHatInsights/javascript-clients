@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / MessageValidationResponse
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / MessageValidationResponse
 
 # Interface: MessageValidationResponse
 
@@ -30,4 +30,4 @@ MessageValidationResponse
 
 #### Defined in
 
-packages/notifications/types/index.ts:1112
+[packages/notifications/types/index.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1112)

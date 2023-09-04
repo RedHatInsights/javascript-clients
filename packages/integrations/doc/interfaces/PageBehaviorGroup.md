@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / PageBehaviorGroup
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / PageBehaviorGroup
 
 # Interface: PageBehaviorGroup
 
@@ -28,7 +28,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:1219
+[packages/integrations/types/index.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1219)
 
 ___
 
@@ -46,7 +46,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:1225
+[packages/integrations/types/index.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1225)
 
 ___
 
@@ -60,4 +60,4 @@ PageBehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:1231
+[packages/integrations/types/index.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1231)

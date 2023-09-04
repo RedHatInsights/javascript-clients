@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / NotificationHistory
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / NotificationHistory
 
 # Interface: NotificationHistory
 
@@ -34,7 +34,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1138
+[packages/integrations/types/index.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1138)
 
 ___
 
@@ -52,7 +52,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1175
+[packages/integrations/types/index.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1175)
 
 ___
 
@@ -66,7 +66,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1169
+[packages/integrations/types/index.ts:1169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1169)
 
 ___
 
@@ -80,7 +80,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1187
+[packages/integrations/types/index.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1187)
 
 ___
 
@@ -94,7 +94,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1181
+[packages/integrations/types/index.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1181)
 
 ___
 
@@ -108,7 +108,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1144
+[packages/integrations/types/index.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1144)
 
 ___
 
@@ -124,7 +124,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1157
+[packages/integrations/types/index.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1157)
 
 ___
 
@@ -138,7 +138,7 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1150
+[packages/integrations/types/index.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1150)
 
 ___
 
@@ -152,4 +152,4 @@ NotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1163
+[packages/integrations/types/index.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1163)

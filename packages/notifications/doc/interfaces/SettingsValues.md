@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / SettingsValues
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / SettingsValues
 
 # Interface: SettingsValues
 
@@ -30,4 +30,4 @@ SettingsValues
 
 #### Defined in
 
-packages/notifications/types/index.ts:1391
+[packages/notifications/types/index.ts:1391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1391)

@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Application
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Application
 
 # Interface: Application
 
@@ -31,7 +31,7 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:161
+[packages/integrations/types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L161)
 
 ___
 
@@ -45,7 +45,7 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:131
+[packages/integrations/types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L131)
 
 ___
 
@@ -59,7 +59,7 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:155
+[packages/integrations/types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L155)
 
 ___
 
@@ -73,7 +73,7 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:143
+[packages/integrations/types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L143)
 
 ___
 
@@ -87,7 +87,7 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:149
+[packages/integrations/types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L149)
 
 ___
 
@@ -101,4 +101,4 @@ Application
 
 #### Defined in
 
-packages/integrations/types/index.ts:137
+[packages/integrations/types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L137)

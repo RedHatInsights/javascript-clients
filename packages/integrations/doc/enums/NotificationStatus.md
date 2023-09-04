@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / NotificationStatus
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / NotificationStatus
 
 # Enumeration: NotificationStatus
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:1199
+[packages/integrations/types/index.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1199)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:1198
+[packages/integrations/types/index.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1198)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:1200
+[packages/integrations/types/index.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1200)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:1201
+[packages/integrations/types/index.ts:1201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1201)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:1202
+[packages/integrations/types/index.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1202)
