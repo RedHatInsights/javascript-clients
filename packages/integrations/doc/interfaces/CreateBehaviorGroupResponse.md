@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / CreateBehaviorGroupResponse
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / CreateBehaviorGroupResponse
 
 # Interface: CreateBehaviorGroupResponse
 
@@ -31,7 +31,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:472
+[packages/integrations/types/index.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L472)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:496
+[packages/integrations/types/index.ts:496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L496)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:478
+[packages/integrations/types/index.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L478)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:484
+[packages/integrations/types/index.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L484)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:490
+[packages/integrations/types/index.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L490)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-packages/integrations/types/index.ts:466
+[packages/integrations/types/index.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L466)

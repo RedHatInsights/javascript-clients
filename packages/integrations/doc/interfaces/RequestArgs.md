@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / RequestArgs
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / RequestArgs
 
 # Interface: RequestArgs
 
@@ -25,7 +25,7 @@ RequestArgs
 
 #### Defined in
 
-packages/integrations/utils/base.ts:33
+[packages/integrations/utils/base.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L33)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/base.ts:32
+[packages/integrations/utils/base.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L32)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/base.ts:37
+[packages/integrations/utils/base.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L37)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-packages/integrations/utils/base.ts:31
+[packages/integrations/utils/base.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L31)

@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / RenderEmailTemplateRequest
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / RenderEmailTemplateRequest
 
 # Interface: RenderEmailTemplateRequest
 
@@ -27,7 +27,7 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-packages/notifications/types/index.ts:1325
+[packages/notifications/types/index.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1325)
 
 ___
 
@@ -41,4 +41,4 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-packages/notifications/types/index.ts:1319
+[packages/notifications/types/index.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1319)

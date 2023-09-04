@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / PageEventLogEntry
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / PageEventLogEntry
 
 # Interface: PageEventLogEntry
 
@@ -28,7 +28,7 @@ PageEventLogEntry
 
 #### Defined in
 
-packages/integrations/types/index.ts:1244
+[packages/integrations/types/index.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1244)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventLogEntry
 
 #### Defined in
 
-packages/integrations/types/index.ts:1250
+[packages/integrations/types/index.ts:1250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1250)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventLogEntry
 
 #### Defined in
 
-packages/integrations/types/index.ts:1256
+[packages/integrations/types/index.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1256)

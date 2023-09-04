@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / EmailSubscriptionType
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / EmailSubscriptionType
 
 # Enumeration: EmailSubscriptionType
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:551
+[packages/integrations/types/index.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L551)

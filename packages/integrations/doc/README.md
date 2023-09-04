@@ -1,4 +1,4 @@
-integrations-client / [Exports](modules.md)
+@redhat-cloud-services/integrations-client / [Exports](modules.md)
 
 # Javascript client for Integrations API
 If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with this service.

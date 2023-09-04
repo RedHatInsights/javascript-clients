@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / RequestDefaultBehaviorGroupPropertyList
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / RequestDefaultBehaviorGroupPropertyList
 
 # Interface: RequestDefaultBehaviorGroupPropertyList
 
@@ -27,7 +27,7 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-packages/integrations/types/index.ts:1344
+[packages/integrations/types/index.ts:1344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1344)
 
 ___
 
@@ -41,4 +41,4 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-packages/integrations/types/index.ts:1338
+[packages/integrations/types/index.ts:1338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1338)

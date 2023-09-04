@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / BehaviorGroup
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / BehaviorGroup
 
 # Interface: BehaviorGroup
 
@@ -34,7 +34,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:267
+[packages/integrations/types/index.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L267)
 
 ___
 
@@ -48,7 +48,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:273
+[packages/integrations/types/index.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L273)
 
 ___
 
@@ -62,7 +62,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:261
+[packages/integrations/types/index.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L261)
 
 ___
 
@@ -76,7 +76,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:255
+[packages/integrations/types/index.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L255)
 
 ___
 
@@ -90,7 +90,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:231
+[packages/integrations/types/index.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L231)
 
 ___
 
@@ -104,7 +104,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:279
+[packages/integrations/types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L279)
 
 ___
 
@@ -118,7 +118,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:249
+[packages/integrations/types/index.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L249)
 
 ___
 
@@ -132,7 +132,7 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:243
+[packages/integrations/types/index.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L243)
 
 ___
 
@@ -146,4 +146,4 @@ BehaviorGroup
 
 #### Defined in
 
-packages/integrations/types/index.ts:237
+[packages/integrations/types/index.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L237)

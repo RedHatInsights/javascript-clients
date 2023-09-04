@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / Environment
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / Environment
 
 # Enumeration: Environment
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-packages/notifications/types/index.ts:701
+[packages/notifications/types/index.ts:701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L701)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-packages/notifications/types/index.ts:702
+[packages/notifications/types/index.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L702)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-packages/notifications/types/index.ts:699
+[packages/notifications/types/index.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L699)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-packages/notifications/types/index.ts:700
+[packages/notifications/types/index.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L700)

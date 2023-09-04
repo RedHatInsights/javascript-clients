@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / EndpointPage
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / EndpointPage
 
 # Interface: EndpointPage
 
@@ -28,7 +28,7 @@ EndpointPage
 
 #### Defined in
 
-packages/notifications/types/index.ts:643
+[packages/notifications/types/index.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L643)
 
 ___
 
@@ -46,7 +46,7 @@ EndpointPage
 
 #### Defined in
 
-packages/notifications/types/index.ts:649
+[packages/notifications/types/index.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L649)
 
 ___
 
@@ -60,4 +60,4 @@ EndpointPage
 
 #### Defined in
 
-packages/notifications/types/index.ts:655
+[packages/notifications/types/index.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L655)

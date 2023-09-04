@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Application1
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Application1
 
 # Interface: Application1
 
@@ -27,7 +27,7 @@ Application1
 
 #### Defined in
 
-packages/integrations/types/index.ts:180
+[packages/integrations/types/index.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L180)
 
 ___
 
@@ -41,4 +41,4 @@ Application1
 
 #### Defined in
 
-packages/integrations/types/index.ts:174
+[packages/integrations/types/index.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L174)

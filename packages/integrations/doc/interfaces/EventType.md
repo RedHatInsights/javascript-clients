@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / EventType
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / EventType
 
 # Interface: EventType
 
@@ -32,7 +32,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:873
+[packages/integrations/types/index.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L873)
 
 ___
 
@@ -46,7 +46,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:867
+[packages/integrations/types/index.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L867)
 
 ___
 
@@ -60,7 +60,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:855
+[packages/integrations/types/index.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L855)
 
 ___
 
@@ -74,7 +74,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:849
+[packages/integrations/types/index.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L849)
 
 ___
 
@@ -88,7 +88,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:861
+[packages/integrations/types/index.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L861)
 
 ___
 
@@ -102,7 +102,7 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:837
+[packages/integrations/types/index.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L837)
 
 ___
 
@@ -116,4 +116,4 @@ EventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:843
+[packages/integrations/types/index.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L843)

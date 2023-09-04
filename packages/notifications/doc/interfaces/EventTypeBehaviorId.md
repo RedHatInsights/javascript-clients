@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / EventTypeBehaviorId
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / EventTypeBehaviorId
 
 # Interface: EventTypeBehaviorId
 
@@ -27,7 +27,7 @@ EventTypeBehaviorId
 
 #### Defined in
 
-packages/notifications/types/index.ts:917
+[packages/notifications/types/index.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L917)
 
 ___
 
@@ -41,4 +41,4 @@ EventTypeBehaviorId
 
 #### Defined in
 
-packages/notifications/types/index.ts:911
+[packages/notifications/types/index.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L911)

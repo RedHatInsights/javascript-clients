@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / HttpType
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / HttpType
 
 # Enumeration: HttpType
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:957
+[packages/integrations/types/index.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L957)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:958
+[packages/integrations/types/index.ts:958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L958)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:959
+[packages/integrations/types/index.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L959)

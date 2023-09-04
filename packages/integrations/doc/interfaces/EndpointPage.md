@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / EndpointPage
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / EndpointPage
 
 # Interface: EndpointPage
 
@@ -28,7 +28,7 @@ EndpointPage
 
 #### Defined in
 
-packages/integrations/types/index.ts:643
+[packages/integrations/types/index.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L643)
 
 ___
 
@@ -46,7 +46,7 @@ EndpointPage
 
 #### Defined in
 
-packages/integrations/types/index.ts:649
+[packages/integrations/types/index.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L649)
 
 ___
 
@@ -60,4 +60,4 @@ EndpointPage
 
 #### Defined in
 
-packages/integrations/types/index.ts:655
+[packages/integrations/types/index.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L655)

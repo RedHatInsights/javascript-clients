@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / Facet
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / Facet
 
 # Interface: Facet
 
@@ -29,7 +29,7 @@ Facet
 
 #### Defined in
 
-packages/integrations/types/index.ts:948
+[packages/integrations/types/index.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L948)
 
 ___
 
@@ -43,7 +43,7 @@ Facet
 
 #### Defined in
 
-packages/integrations/types/index.ts:942
+[packages/integrations/types/index.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L942)
 
 ___
 
@@ -57,7 +57,7 @@ Facet
 
 #### Defined in
 
-packages/integrations/types/index.ts:930
+[packages/integrations/types/index.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L930)
 
 ___
 
@@ -71,4 +71,4 @@ Facet
 
 #### Defined in
 
-packages/integrations/types/index.ts:936
+[packages/integrations/types/index.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L936)

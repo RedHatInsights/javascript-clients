@@ -1,6 +1,6 @@
-[notifications-client](README.md) / Exports
+[@redhat-cloud-services/notifications-client](README.md) / Exports
 
-# notifications-client
+# @redhat-cloud-services/notifications-client
 
 ## Table of contents
 
@@ -144,7 +144,7 @@
 
 #### Defined in
 
-packages/notifications/utils/base.ts:55
+[packages/notifications/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L55)
 
 ___
 
@@ -154,9 +154,9 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/base.ts:45
+[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L45)
 
-packages/notifications/utils/base.ts:53
+[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L53)
 
 ## Variables
 
@@ -176,9 +176,9 @@ packages/notifications/utils/base.ts:53
 
 #### Defined in
 
-packages/notifications/utils/base.ts:45
+[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L45)
 
-packages/notifications/utils/base.ts:53
+[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L53)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/base.ts:12
+[packages/notifications/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L12)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/base.ts:18
+[packages/notifications/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L18)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:13
+[packages/notifications/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L13)
 
 ## Functions
 
@@ -253,7 +253,7 @@ created base API.
 
 #### Defined in
 
-packages/notifications/utils/base.ts:145
+[packages/notifications/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L145)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:20
+[packages/notifications/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L20)
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:133
+[packages/notifications/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L133)
 
 ___
 
@@ -352,7 +352,7 @@ Retrieve the event log entries.
 
 #### Defined in
 
-packages/notifications/EventResourceV1GetEvents/index.ts:124
+[packages/notifications/EventResourceV1GetEvents/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/EventResourceV1GetEvents/index.ts#L124)
 
 ___
 
@@ -378,7 +378,7 @@ Add a behavior group to the given event type.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40
+[packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L40)
 
 ___
 
@@ -404,7 +404,7 @@ Create a behavior group - assigning actions and linking to event types as reques
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts:34
+[packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts#L34)
 
 ___
 
@@ -430,7 +430,7 @@ Delete a behavior group from the given event type.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40
+[packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L40)
 
 ___
 
@@ -456,7 +456,7 @@ Delete a behavior group.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:34
+[packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L34)
 
 ___
 
@@ -482,7 +482,7 @@ Retrieve the behavior groups of a bundle.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34
+[packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L34)
 
 ___
 
@@ -508,7 +508,7 @@ Retrieve the application by name of a given bundle name
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40
+[packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L40)
 
 ___
 
@@ -534,7 +534,7 @@ Return a thin list of configured applications. This can be used to configure a f
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:34
+[packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L34)
 
 ___
 
@@ -560,7 +560,7 @@ Retrieve the behavior groups affected by the removal of an endpoint.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts:34
+[packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts#L34)
 
 ___
 
@@ -586,7 +586,7 @@ Retrieve the bundle by name
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetBundleByName/index.ts:34
+[packages/notifications/NotificationResourceV1GetBundleByName/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L34)
 
 ___
 
@@ -612,7 +612,7 @@ Return a thin list of configured bundles. This can be used to configure a filter
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetBundleFacets/index.ts:34
+[packages/notifications/NotificationResourceV1GetBundleFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBundleFacets/index.ts#L34)
 
 ___
 
@@ -638,7 +638,7 @@ Retrieve the event types affected by the removal of a behavior group.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts:34
+[packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts#L34)
 
 ___
 
@@ -664,7 +664,7 @@ Retrieve the event type by name of a given bundle name and application name
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46
+[packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L46)
 
 ___
 
@@ -690,7 +690,7 @@ Retrieve all event types. The returned list can be filtered by bundle or applica
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetEventTypes/index.ts:76
+[packages/notifications/NotificationResourceV1GetEventTypes/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L76)
 
 ___
 
@@ -716,7 +716,7 @@ Retrieve the behavior groups linked to an event type.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64
+[packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L64)
 
 ___
 
@@ -742,7 +742,7 @@ Update the list of actions of a behavior group.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40
+[packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L40)
 
 ___
 
@@ -768,7 +768,7 @@ Update a behavior group.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:40
+[packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L40)
 
 ___
 
@@ -794,7 +794,7 @@ Update the list of behavior groups of an event type.
 
 #### Defined in
 
-packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40
+[packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L40)
 
 ___
 
@@ -816,7 +816,7 @@ ___
 
 #### Defined in
 
-packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:27
+[packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts#L27)
 
 ___
 
@@ -842,7 +842,7 @@ Save the daily digest UTC time preference. To cover all time zones conversion to
 
 #### Defined in
 
-packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34
+[packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)
 
 ___
 
@@ -866,7 +866,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:111
+[packages/notifications/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L111)
 
 ___
 
@@ -890,7 +890,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:30
+[packages/notifications/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L30)
 
 ___
 
@@ -913,7 +913,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:43
+[packages/notifications/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L43)
 
 ___
 
@@ -936,7 +936,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:53
+[packages/notifications/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L53)
 
 ___
 
@@ -961,7 +961,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:66
+[packages/notifications/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L66)
 
 ___
 
@@ -984,7 +984,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:101
+[packages/notifications/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L101)
 
 ___
 
@@ -1006,7 +1006,7 @@ ___
 
 #### Defined in
 
-packages/notifications/utils/common.ts:125
+[packages/notifications/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L125)
 
 ___
 
@@ -1028,7 +1028,7 @@ ___
 
 #### Defined in
 
-packages/notifications/UserConfigResourceV1GetPreferences/index.ts:39
+[packages/notifications/UserConfigResourceV1GetPreferences/index.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1GetPreferences/index.ts#L39)
 
 ___
 
@@ -1050,7 +1050,7 @@ ___
 
 #### Defined in
 
-packages/notifications/UserConfigResourceV1GetSettingsSchema/index.ts:33
+[packages/notifications/UserConfigResourceV1GetSettingsSchema/index.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1GetSettingsSchema/index.ts#L33)
 
 ___
 
@@ -1072,4 +1072,4 @@ ___
 
 #### Defined in
 
-packages/notifications/UserConfigResourceV1SaveSettings/index.ts:33
+[packages/notifications/UserConfigResourceV1SaveSettings/index.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1SaveSettings/index.ts#L33)

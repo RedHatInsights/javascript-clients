@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / EmailSubscriptionType
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / EmailSubscriptionType
 
 # Enumeration: EmailSubscriptionType
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-packages/notifications/types/index.ts:551
+[packages/notifications/types/index.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L551)

@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / SettingsValues
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / SettingsValues
 
 # Interface: SettingsValues
 
@@ -30,4 +30,4 @@ SettingsValues
 
 #### Defined in
 
-packages/integrations/types/index.ts:1391
+[packages/integrations/types/index.ts:1391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1391)

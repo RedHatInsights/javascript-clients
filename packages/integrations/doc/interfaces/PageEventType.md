@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / PageEventType
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / PageEventType
 
 # Interface: PageEventType
 
@@ -28,7 +28,7 @@ PageEventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:1269
+[packages/integrations/types/index.ts:1269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1269)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:1275
+[packages/integrations/types/index.ts:1275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1275)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventType
 
 #### Defined in
 
-packages/integrations/types/index.ts:1281
+[packages/integrations/types/index.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1281)

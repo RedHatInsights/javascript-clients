@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / UpdateBehaviorGroupRequest
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / UpdateBehaviorGroupRequest
 
 # Interface: UpdateBehaviorGroupRequest
 
@@ -29,7 +29,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1523
+[packages/integrations/types/index.ts:1523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1523)
 
 ___
 
@@ -43,7 +43,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1541
+[packages/integrations/types/index.ts:1541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1541)
 
 ___
 
@@ -57,7 +57,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1529
+[packages/integrations/types/index.ts:1529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1529)
 
 ___
 
@@ -71,4 +71,4 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-packages/integrations/types/index.ts:1535
+[packages/integrations/types/index.ts:1535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1535)

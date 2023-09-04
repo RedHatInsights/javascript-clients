@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / SystemSubscriptionProperties
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / SystemSubscriptionProperties
 
 # Interface: SystemSubscriptionProperties
 
@@ -28,7 +28,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:1430
+[packages/notifications/types/index.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1430)
 
 ___
 
@@ -42,7 +42,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:1424
+[packages/notifications/types/index.ts:1424](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1424)
 
 ___
 
@@ -56,4 +56,4 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-packages/notifications/types/index.ts:1418
+[packages/notifications/types/index.ts:1418](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1418)

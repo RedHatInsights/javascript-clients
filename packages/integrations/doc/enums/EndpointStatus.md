@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / EndpointStatus
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / EndpointStatus
 
 # Enumeration: EndpointStatus
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:668
+[packages/integrations/types/index.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L668)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:669
+[packages/integrations/types/index.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L669)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:666
+[packages/integrations/types/index.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L666)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:667
+[packages/integrations/types/index.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L667)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:664
+[packages/integrations/types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L664)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:665
+[packages/integrations/types/index.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L665)

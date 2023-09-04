@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / PageNotificationHistory
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / PageNotificationHistory
 
 # Interface: PageNotificationHistory
 
@@ -28,7 +28,7 @@ PageNotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1294
+[packages/integrations/types/index.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1294)
 
 ___
 
@@ -46,7 +46,7 @@ PageNotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1300
+[packages/integrations/types/index.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1300)
 
 ___
 
@@ -60,4 +60,4 @@ PageNotificationHistory
 
 #### Defined in
 
-packages/integrations/types/index.ts:1306
+[packages/integrations/types/index.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1306)

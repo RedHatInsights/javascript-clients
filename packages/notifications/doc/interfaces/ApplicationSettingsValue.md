@@ -1,4 +1,4 @@
-[notifications-client](../README.md) / [Exports](../modules.md) / ApplicationSettingsValue
+[@redhat-cloud-services/notifications-client](../README.md) / [Exports](../modules.md) / ApplicationSettingsValue
 
 # Interface: ApplicationSettingsValue
 
@@ -27,7 +27,7 @@ ApplicationSettingsValue
 
 #### Defined in
 
-packages/notifications/types/index.ts:199
+[packages/notifications/types/index.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L199)
 
 ___
 
@@ -45,4 +45,4 @@ ApplicationSettingsValue
 
 #### Defined in
 
-packages/notifications/types/index.ts:193
+[packages/notifications/types/index.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L193)

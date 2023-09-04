@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / EventLogEntryActionStatus
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / EventLogEntryActionStatus
 
 # Enumeration: EventLogEntryActionStatus
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-packages/integrations/types/index.ts:819
+[packages/integrations/types/index.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L819)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:818
+[packages/integrations/types/index.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L818)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:816
+[packages/integrations/types/index.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L816)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:817
+[packages/integrations/types/index.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L817)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-packages/integrations/types/index.ts:820
+[packages/integrations/types/index.ts:820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L820)

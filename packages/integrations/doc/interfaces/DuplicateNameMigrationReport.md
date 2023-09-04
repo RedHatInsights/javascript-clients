@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / DuplicateNameMigrationReport
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / DuplicateNameMigrationReport
 
 # Interface: DuplicateNameMigrationReport
 
@@ -27,7 +27,7 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-packages/integrations/types/index.ts:542
+[packages/integrations/types/index.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L542)
 
 ___
 
@@ -41,4 +41,4 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-packages/integrations/types/index.ts:536
+[packages/integrations/types/index.ts:536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L536)

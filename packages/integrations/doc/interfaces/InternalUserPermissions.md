@@ -1,4 +1,4 @@
-[integrations-client](../README.md) / [Exports](../modules.md) / InternalUserPermissions
+[@redhat-cloud-services/integrations-client](../README.md) / [Exports](../modules.md) / InternalUserPermissions
 
 # Interface: InternalUserPermissions
 
@@ -28,7 +28,7 @@ InternalUserPermissions
 
 #### Defined in
 
-packages/integrations/types/index.ts:1093
+[packages/integrations/types/index.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1093)
 
 ___
 
@@ -42,7 +42,7 @@ InternalUserPermissions
 
 #### Defined in
 
-packages/integrations/types/index.ts:1087
+[packages/integrations/types/index.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1087)
 
 ___
 
@@ -56,4 +56,4 @@ InternalUserPermissions
 
 #### Defined in
 
-packages/integrations/types/index.ts:1099
+[packages/integrations/types/index.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1099)
