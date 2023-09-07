@@ -29,7 +29,7 @@ Facet
 
 #### Defined in
 
-[packages/integrations/types/index.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L948)
+[packages/integrations/types/index.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1006)
 
 ___
 
@@ -43,7 +43,7 @@ Facet
 
 #### Defined in
 
-[packages/integrations/types/index.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L942)
+[packages/integrations/types/index.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1000)
 
 ___
 
@@ -57,7 +57,7 @@ Facet
 
 #### Defined in
 
-[packages/integrations/types/index.ts:930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L930)
+[packages/integrations/types/index.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L988)
 
 ___
 
@@ -71,4 +71,4 @@ Facet
 
 #### Defined in
 
-[packages/integrations/types/index.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L936)
+[packages/integrations/types/index.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L994)

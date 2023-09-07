@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/notifications/types/index.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L551)
+[packages/notifications/types/index.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L577)

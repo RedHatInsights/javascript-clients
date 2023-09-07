@@ -26,4 +26,4 @@ ServerInfo
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1376)
+[packages/notifications/types/index.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1434)

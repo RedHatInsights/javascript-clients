@@ -31,7 +31,7 @@ RuleRatingStats
 
 #### Defined in
 
-[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1796)
+[api.ts:1864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1864)
 
 ___
 
@@ -45,7 +45,7 @@ RuleRatingStats
 
 #### Defined in
 
-[api.ts:1814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1814)
+[api.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1882)
 
 ___
 
@@ -59,7 +59,7 @@ RuleRatingStats
 
 #### Defined in
 
-[api.ts:1808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1808)
+[api.ts:1876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1876)
 
 ___
 
@@ -73,4 +73,4 @@ RuleRatingStats
 
 #### Defined in
 
-[api.ts:1802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1802)
+[api.ts:1870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1870)

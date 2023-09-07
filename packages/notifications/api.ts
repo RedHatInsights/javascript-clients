@@ -212,14 +212,27 @@ export interface Application1 {
 export interface ApplicationSettingsValue {
     /**
      *
-     * @type {{ [key: string]: boolean; }}
+     * @type {{ [key: string]: EventTypeSettingsValue; }}
      * @memberof ApplicationSettingsValue
+     */
+    'eventTypes'?: { [key: string]: EventTypeSettingsValue; };
+}
+/**
+ *
+ * @export
+ * @interface ApplicationSettingsValue1
+ */
+export interface ApplicationSettingsValue1 {
+    /**
+     *
+     * @type {{ [key: string]: boolean; }}
+     * @memberof ApplicationSettingsValue1
      */
     'notifications'?: { [key: string]: boolean; };
     /**
      *
      * @type {boolean}
-     * @memberof ApplicationSettingsValue
+     * @memberof ApplicationSettingsValue1
      */
     'hasForcedEmail'?: boolean;
 }
@@ -396,6 +409,19 @@ export interface BundleSettingsValue {
      * @memberof BundleSettingsValue
      */
     'applications'?: { [key: string]: ApplicationSettingsValue; };
+}
+/**
+ *
+ * @export
+ * @interface BundleSettingsValue1
+ */
+export interface BundleSettingsValue1 {
+    /**
+     *
+     * @type {{ [key: string]: ApplicationSettingsValue1; }}
+     * @memberof BundleSettingsValue1
+     */
+    'applications'?: { [key: string]: ApplicationSettingsValue1; };
 }
 /**
  *
@@ -700,6 +726,19 @@ export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
 /**
  *
  * @export
+ * @interface EndpointTestRequest
+ */
+export interface EndpointTestRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof EndpointTestRequest
+     */
+    'message': string;
+}
+/**
+ *
+ * @export
  * @enum {string}
  */
 
@@ -940,6 +979,25 @@ export interface EventTypeBehaviorId {
      * @memberof EventTypeBehaviorId
      */
     'behaviorGroupId': string;
+}
+/**
+ *
+ * @export
+ * @interface EventTypeSettingsValue
+ */
+export interface EventTypeSettingsValue {
+    /**
+     *
+     * @type {{ [key: string]: boolean; }}
+     * @memberof EventTypeSettingsValue
+     */
+    'emailSubscriptionTypes'?: { [key: string]: boolean; };
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventTypeSettingsValue
+     */
+    'hasForcedEmail'?: boolean;
 }
 /**
  *
@@ -1410,8 +1468,21 @@ export interface ServerInfo {
 export interface SettingsValues {
     /**
      *
-     * @type {{ [key: string]: BundleSettingsValue; }}
+     * @type {{ [key: string]: BundleSettingsValue1; }}
      * @memberof SettingsValues
+     */
+    'bundles'?: { [key: string]: BundleSettingsValue1; };
+}
+/**
+ *
+ * @export
+ * @interface SettingsValuesByEventType
+ */
+export interface SettingsValuesByEventType {
+    /**
+     *
+     * @type {{ [key: string]: BundleSettingsValue; }}
+     * @memberof SettingsValuesByEventType
      */
     'bundles'?: { [key: string]: BundleSettingsValue; };
 }

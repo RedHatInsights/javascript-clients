@@ -27,7 +27,7 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/notifications/types/index.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L218)
+[packages/notifications/types/index.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L231)
 
 ___
 
@@ -41,4 +41,4 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/notifications/types/index.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L212)
+[packages/notifications/types/index.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L225)

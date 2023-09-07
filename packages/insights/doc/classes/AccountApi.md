@@ -121,7 +121,7 @@ AccountApi
 
 #### Defined in
 
-[api.ts:2565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2565)
+[api.ts:2633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2633)
 
 ___
 
@@ -151,7 +151,7 @@ AccountApi
 
 #### Defined in
 
-[api.ts:2577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2577)
+[api.ts:2645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2645)
 
 ___
 
@@ -180,4 +180,4 @@ AccountApi
 
 #### Defined in
 
-[api.ts:2588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2588)
+[api.ts:2656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2656)

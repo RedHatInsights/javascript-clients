@@ -27,7 +27,7 @@ RuleCategory
 
 #### Defined in
 
-[api.ts:1383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1383)
+[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1451)
 
 ___
 
@@ -41,4 +41,4 @@ RuleCategory
 
 #### Defined in
 
-[api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1389)
+[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1457)

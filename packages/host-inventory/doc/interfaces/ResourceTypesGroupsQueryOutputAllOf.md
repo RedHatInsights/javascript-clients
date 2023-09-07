@@ -28,4 +28,4 @@ ResourceTypesGroupsQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1430)
+[api.ts:1416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1416)

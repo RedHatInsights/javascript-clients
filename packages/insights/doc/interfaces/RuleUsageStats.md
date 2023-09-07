@@ -33,7 +33,7 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1870)
+[api.ts:1938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1938)
 
 ___
 
@@ -47,7 +47,7 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1864)
+[api.ts:1932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1932)
 
 ___
 
@@ -61,7 +61,7 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1852)
+[api.ts:1920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1920)
 
 ___
 
@@ -75,7 +75,7 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1846)
+[api.ts:1914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1914)
 
 ___
 
@@ -89,7 +89,7 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1840)
+[api.ts:1908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1908)
 
 ___
 
@@ -103,4 +103,4 @@ RuleUsageStats
 
 #### Defined in
 
-[api.ts:1858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1858)
+[api.ts:1926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1926)

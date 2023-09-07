@@ -126,7 +126,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5703)
+[api.ts:5771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5771)
 
 ___
 
@@ -155,7 +155,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5714)
+[api.ts:5782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5782)
 
 ___
 
@@ -191,7 +191,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5732](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5732)
+[api.ts:5800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5800)
 
 ___
 
@@ -225,7 +225,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5748)
+[api.ts:5816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5816)
 
 ___
 
@@ -260,7 +260,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5765)
+[api.ts:5833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5833)
 
 ___
 
@@ -293,7 +293,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5780)
+[api.ts:5848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5848)
 
 ___
 
@@ -330,7 +330,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5799)
+[api.ts:5867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5867)
 
 ___
 
@@ -360,4 +360,4 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5811)
+[api.ts:5879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5879)

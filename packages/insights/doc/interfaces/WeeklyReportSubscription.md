@@ -26,4 +26,4 @@ WeeklyReportSubscription
 
 #### Defined in
 
-[api.ts:2320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2320)
+[api.ts:2388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2388)

@@ -30,4 +30,4 @@ BundleSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L373)
+[packages/integrations/types/index.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L386)

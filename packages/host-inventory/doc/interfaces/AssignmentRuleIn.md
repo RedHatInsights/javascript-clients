@@ -10,12 +10,6 @@ Data for a single Assignment Rule
 
 AssignmentRuleIn
 
-## Hierarchy
-
-- [`AssignmentRuleInAllOf`](AssignmentRuleInAllOf.md)
-
-  ↳ **`AssignmentRuleIn`**
-
 ## Table of contents
 
 ### Properties
@@ -34,15 +28,11 @@ AssignmentRuleIn
 
 **`Memberof`**
 
-AssignmentRuleInAllOf
-
-#### Inherited from
-
-[AssignmentRuleInAllOf](AssignmentRuleInAllOf.md).[description](AssignmentRuleInAllOf.md#description)
+AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L238)
+[api.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L231)
 
 ___
 
@@ -52,15 +42,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleInAllOf
-
-#### Inherited from
-
-[AssignmentRuleInAllOf](AssignmentRuleInAllOf.md).[enabled](AssignmentRuleInAllOf.md#enabled)
+AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L256)
+[api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L249)
 
 ___
 
@@ -70,15 +56,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleInAllOf
-
-#### Inherited from
-
-[AssignmentRuleInAllOf](AssignmentRuleInAllOf.md).[filter](AssignmentRuleInAllOf.md#filter)
+AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L250)
+[api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L243)
 
 ___
 
@@ -88,15 +70,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleInAllOf
-
-#### Inherited from
-
-[AssignmentRuleInAllOf](AssignmentRuleInAllOf.md).[group_id](AssignmentRuleInAllOf.md#group_id)
+AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L244)
+[api.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L237)
 
 ___
 
@@ -106,12 +84,8 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleInAllOf
-
-#### Inherited from
-
-[AssignmentRuleInAllOf](AssignmentRuleInAllOf.md).[name](AssignmentRuleInAllOf.md#name)
+AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L232)
+[api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L225)

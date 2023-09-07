@@ -39,7 +39,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2171)
+[api.ts:2239](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2239)
 
 ___
 
@@ -53,7 +53,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2141)
+[api.ts:2209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2209)
 
 ___
 
@@ -67,7 +67,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2117)
+[api.ts:2185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2185)
 
 ___
 
@@ -81,7 +81,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2135)
+[api.ts:2203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2203)
 
 ___
 
@@ -95,7 +95,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2189)
+[api.ts:2257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2257)
 
 ___
 
@@ -109,7 +109,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2147)
+[api.ts:2215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2215)
 
 ___
 
@@ -123,7 +123,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2165)
+[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2233)
 
 ___
 
@@ -137,7 +137,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2123)
+[api.ts:2191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2191)
 
 ___
 
@@ -151,7 +151,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2159)
+[api.ts:2227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2227)
 
 ___
 
@@ -165,7 +165,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2153](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2153)
+[api.ts:2221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2221)
 
 ___
 
@@ -179,7 +179,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2177)
+[api.ts:2245](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2245)
 
 ___
 
@@ -193,7 +193,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2183)
+[api.ts:2251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2251)
 
 ___
 
@@ -207,7 +207,7 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2129)
+[api.ts:2197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2197)
 
 ___
 
@@ -221,4 +221,4 @@ SystemsDetail
 
 #### Defined in
 
-[api.ts:2111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2111)
+[api.ts:2179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2179)

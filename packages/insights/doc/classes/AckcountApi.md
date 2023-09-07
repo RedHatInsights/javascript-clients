@@ -119,7 +119,7 @@ AckcountApi
 
 #### Defined in
 
-[api.ts:3430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3430)
+[api.ts:3498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3498)
 
 ___
 
@@ -148,4 +148,4 @@ AckcountApi
 
 #### Defined in
 
-[api.ts:3441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3441)
+[api.ts:3509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3509)

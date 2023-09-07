@@ -27,7 +27,7 @@ UserConfigPreferences
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1560)
+[packages/notifications/types/index.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1631)
 
 ___
 
@@ -41,4 +41,4 @@ UserConfigPreferences
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1554)
+[packages/notifications/types/index.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1625)

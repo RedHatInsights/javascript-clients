@@ -122,4 +122,4 @@ UsageApi
 
 #### Defined in
 
-[api.ts:9681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9681)
+[api.ts:9865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9865)

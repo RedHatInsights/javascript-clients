@@ -124,7 +124,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6209)
+[api.ts:6277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6277)
 
 ___
 
@@ -153,7 +153,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6220)
+[api.ts:6288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6288)
 
 ___
 
@@ -183,7 +183,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6232)
+[api.ts:6300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6300)
 
 ___
 
@@ -216,7 +216,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6244)
+[api.ts:6312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6312)
 
 ___
 
@@ -246,4 +246,4 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6256)
+[api.ts:6324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6324)

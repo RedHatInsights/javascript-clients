@@ -28,4 +28,4 @@ SystemsForRule
 
 #### Defined in
 
-[api.ts:2202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2202)
+[api.ts:2270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2270)

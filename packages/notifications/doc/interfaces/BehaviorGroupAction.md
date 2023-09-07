@@ -28,7 +28,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/notifications/types/index.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L292)
+[packages/notifications/types/index.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L305)
 
 ___
 
@@ -42,7 +42,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/notifications/types/index.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L304)
+[packages/notifications/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L317)
 
 ___
 
@@ -56,4 +56,4 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/notifications/types/index.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L298)
+[packages/notifications/types/index.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L311)

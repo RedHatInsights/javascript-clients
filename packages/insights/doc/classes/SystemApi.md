@@ -27,6 +27,7 @@ SystemApi - object-oriented interface
 ### Methods
 
 - [systemList](SystemApi.md#systemlist)
+- [systemRenderedReportsList](SystemApi.md#systemrenderedreportslist)
 - [systemReportsList](SystemApi.md#systemreportslist)
 - [systemRetrieve](SystemApi.md#systemretrieve)
 
@@ -132,7 +133,41 @@ SystemApi
 
 #### Defined in
 
-[api.ts:8585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8585)
+[api.ts:8753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8753)
+
+___
+
+### systemRenderedReportsList
+
+▸ **systemRenderedReportsList**(`uuid`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `limit?`, `offset?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md)\>\>
+
+Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+
+**`Throws`**
+
+**`Memberof`**
+
+SystemApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `uuid` | `string` | A UUID string identifying this inventory host. |
+| `filterSystemProfileSapSidsContains?` | `string`[] | Are there systems which contain these SAP SIDs? |
+| `filterSystemProfileSapSystem?` | `boolean` | Is this a SAP system? |
+| `limit?` | `number` | Number of results to return per page. |
+| `offset?` | `number` | The initial index from which to return the results. |
+| `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md)\>\>
+
+#### Defined in
+
+[api.ts:8769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8769)
 
 ___
 
@@ -167,7 +202,7 @@ SystemApi
 
 #### Defined in
 
-[api.ts:8602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8602)
+[api.ts:8786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8786)
 
 ___
 
@@ -200,4 +235,4 @@ SystemApi
 
 #### Defined in
 
-[api.ts:8614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8614)
+[api.ts:8798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8798)

@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[api.ts:1781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1781)
+[api.ts:1849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1849)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api.ts:1782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1782)
+[api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1850)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1780)
+[api.ts:1848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1848)

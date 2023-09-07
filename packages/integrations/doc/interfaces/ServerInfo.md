@@ -26,4 +26,4 @@ ServerInfo
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1376)
+[packages/integrations/types/index.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1434)

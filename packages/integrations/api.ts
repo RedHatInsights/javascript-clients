@@ -212,14 +212,27 @@ export interface Application1 {
 export interface ApplicationSettingsValue {
     /**
      *
-     * @type {{ [key: string]: boolean; }}
+     * @type {{ [key: string]: EventTypeSettingsValue; }}
      * @memberof ApplicationSettingsValue
+     */
+    'eventTypes'?: { [key: string]: EventTypeSettingsValue; };
+}
+/**
+ *
+ * @export
+ * @interface ApplicationSettingsValue1
+ */
+export interface ApplicationSettingsValue1 {
+    /**
+     *
+     * @type {{ [key: string]: boolean; }}
+     * @memberof ApplicationSettingsValue1
      */
     'notifications'?: { [key: string]: boolean; };
     /**
      *
      * @type {boolean}
-     * @memberof ApplicationSettingsValue
+     * @memberof ApplicationSettingsValue1
      */
     'hasForcedEmail'?: boolean;
 }
@@ -396,6 +409,19 @@ export interface BundleSettingsValue {
      * @memberof BundleSettingsValue
      */
     'applications'?: { [key: string]: ApplicationSettingsValue; };
+}
+/**
+ *
+ * @export
+ * @interface BundleSettingsValue1
+ */
+export interface BundleSettingsValue1 {
+    /**
+     *
+     * @type {{ [key: string]: ApplicationSettingsValue1; }}
+     * @memberof BundleSettingsValue1
+     */
+    'applications'?: { [key: string]: ApplicationSettingsValue1; };
 }
 /**
  *
@@ -700,6 +726,19 @@ export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
 /**
  *
  * @export
+ * @interface EndpointTestRequest
+ */
+export interface EndpointTestRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof EndpointTestRequest
+     */
+    'message': string;
+}
+/**
+ *
+ * @export
  * @enum {string}
  */
 
@@ -940,6 +979,25 @@ export interface EventTypeBehaviorId {
      * @memberof EventTypeBehaviorId
      */
     'behaviorGroupId': string;
+}
+/**
+ *
+ * @export
+ * @interface EventTypeSettingsValue
+ */
+export interface EventTypeSettingsValue {
+    /**
+     *
+     * @type {{ [key: string]: boolean; }}
+     * @memberof EventTypeSettingsValue
+     */
+    'emailSubscriptionTypes'?: { [key: string]: boolean; };
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventTypeSettingsValue
+     */
+    'hasForcedEmail'?: boolean;
 }
 /**
  *
@@ -1410,8 +1468,21 @@ export interface ServerInfo {
 export interface SettingsValues {
     /**
      *
-     * @type {{ [key: string]: BundleSettingsValue; }}
+     * @type {{ [key: string]: BundleSettingsValue1; }}
      * @memberof SettingsValues
+     */
+    'bundles'?: { [key: string]: BundleSettingsValue1; };
+}
+/**
+ *
+ * @export
+ * @interface SettingsValuesByEventType
+ */
+export interface SettingsValuesByEventType {
+    /**
+     *
+     * @type {{ [key: string]: BundleSettingsValue; }}
+     * @memberof SettingsValuesByEventType
      */
     'bundles'?: { [key: string]: BundleSettingsValue; };
 }
@@ -2903,10 +2974,11 @@ export const EndpointResourceV1TestEndpointApiAxiosParamCreator = function (conf
         /**
          *
          * @param {string} uuid The UUID of the endpoint to test
+         * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        endpointResourceV1TestEndpoint: async (uuid: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        endpointResourceV1TestEndpoint: async (uuid: string, endpointTestRequest?: EndpointTestRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('endpointResourceV1TestEndpoint', 'uuid', uuid)
             const localVarPath = `/endpoints/{uuid}/test`
@@ -2924,9 +2996,12 @@ export const EndpointResourceV1TestEndpointApiAxiosParamCreator = function (conf
 
 
 
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(endpointTestRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2946,11 +3021,12 @@ export const EndpointResourceV1TestEndpointApiFp = function(configuration?: Conf
         /**
          *
          * @param {string} uuid The UUID of the endpoint to test
+         * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async endpointResourceV1TestEndpoint(uuid: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1TestEndpoint(uuid, options);
+        async endpointResourceV1TestEndpoint(uuid: string, endpointTestRequest?: EndpointTestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1TestEndpoint(uuid, endpointTestRequest, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -2966,11 +3042,12 @@ export const EndpointResourceV1TestEndpointApiFactory = function (configuration?
         /**
          *
          * @param {string} uuid The UUID of the endpoint to test
+         * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        endpointResourceV1TestEndpoint(uuid: string, options?: any): AxiosPromise<void> {
-            return localVarFp.endpointResourceV1TestEndpoint(uuid, options).then((request) => request(axios, basePath));
+        endpointResourceV1TestEndpoint(uuid: string, endpointTestRequest?: EndpointTestRequest, options?: any): AxiosPromise<void> {
+            return localVarFp.endpointResourceV1TestEndpoint(uuid, endpointTestRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2985,12 +3062,13 @@ export class EndpointResourceV1TestEndpointApi extends BaseAPI {
     /**
      *
      * @param {string} uuid The UUID of the endpoint to test
+     * @param {EndpointTestRequest} [endpointTestRequest]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EndpointResourceV1TestEndpointApi
      */
-    public endpointResourceV1TestEndpoint(uuid: string, options?: AxiosRequestConfig) {
-        return EndpointResourceV1TestEndpointApiFp(this.configuration).endpointResourceV1TestEndpoint(uuid, options).then((request) => request(this.axios, this.basePath));
+    public endpointResourceV1TestEndpoint(uuid: string, endpointTestRequest?: EndpointTestRequest, options?: AxiosRequestConfig) {
+        return EndpointResourceV1TestEndpointApiFp(this.configuration).endpointResourceV1TestEndpoint(uuid, endpointTestRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

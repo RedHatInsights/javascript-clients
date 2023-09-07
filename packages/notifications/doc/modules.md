@@ -30,12 +30,14 @@
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
 - [ApplicationSettingsValue](interfaces/ApplicationSettingsValue.md)
+- [ApplicationSettingsValue1](interfaces/ApplicationSettingsValue1.md)
 - [BasicAuthentication](interfaces/BasicAuthentication.md)
 - [BehaviorGroup](interfaces/BehaviorGroup.md)
 - [BehaviorGroupAction](interfaces/BehaviorGroupAction.md)
 - [BehaviorGroupActionId](interfaces/BehaviorGroupActionId.md)
 - [Bundle](interfaces/Bundle.md)
 - [BundleSettingsValue](interfaces/BundleSettingsValue.md)
+- [BundleSettingsValue1](interfaces/BundleSettingsValue1.md)
 - [CamelProperties](interfaces/CamelProperties.md)
 - [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [CreateBehaviorGroupRequest](interfaces/CreateBehaviorGroupRequest.md)
@@ -44,11 +46,13 @@
 - [DuplicateNameMigrationReport](interfaces/DuplicateNameMigrationReport.md)
 - [Endpoint](interfaces/Endpoint.md)
 - [EndpointPage](interfaces/EndpointPage.md)
+- [EndpointTestRequest](interfaces/EndpointTestRequest.md)
 - [EventLogEntry](interfaces/EventLogEntry.md)
 - [EventLogEntryAction](interfaces/EventLogEntryAction.md)
 - [EventType](interfaces/EventType.md)
 - [EventTypeBehavior](interfaces/EventTypeBehavior.md)
 - [EventTypeBehaviorId](interfaces/EventTypeBehaviorId.md)
+- [EventTypeSettingsValue](interfaces/EventTypeSettingsValue.md)
 - [Facet](interfaces/Facet.md)
 - [InstantEmailTemplate](interfaces/InstantEmailTemplate.md)
 - [InternalApplicationUserPermission](interfaces/InternalApplicationUserPermission.md)
@@ -67,6 +71,7 @@
 - [RequestSystemSubscriptionProperties](interfaces/RequestSystemSubscriptionProperties.md)
 - [ServerInfo](interfaces/ServerInfo.md)
 - [SettingsValues](interfaces/SettingsValues.md)
+- [SettingsValuesByEventType](interfaces/SettingsValuesByEventType.md)
 - [SystemSubscriptionProperties](interfaces/SystemSubscriptionProperties.md)
 - [Template](interfaces/Template.md)
 - [TriggerDailyDigestRequest](interfaces/TriggerDailyDigestRequest.md)
@@ -309,7 +314,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`, `any`\> |
+| `R` | `AxiosResponse`<`T`\> |
 
 ##### Parameters
 
@@ -344,7 +349,7 @@ Retrieve the event log entries.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EventResourceV1GetEventsParams`] \| [`Set`<`string`\>, `Set`<`string`\>, `string`, `Set`<`string`\>, `string`, `boolean`, `boolean`, `boolean`, `Set`<`boolean`\>, `number`, `number`, `number`, `string`, `string`, `string`, `Set`<[`EventLogEntryActionStatus`](enums/EventLogEntryActionStatus.md)\>, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EventResourceV1GetEventsParams`] \| [`Set`<`string`\>, `Set`<`string`\>, `string`, `Set`<`string`\>, `string`, `boolean`, `boolean`, `boolean`, `Set`<`boolean`\>, `number`, `number`, `number`, `string`, `string`, `string`, `Set`<[`EventLogEntryActionStatus`](enums/EventLogEntryActionStatus.md)\>, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -370,7 +375,7 @@ Add a behavior group to the given event type.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1AppendBehaviorGroupToEventTypeParams`] \| [`string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1AppendBehaviorGroupToEventTypeParams`] \| [`string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -396,7 +401,7 @@ Create a behavior group - assigning actions and linking to event types as reques
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1CreateBehaviorGroupParams`] \| [[`CreateBehaviorGroupRequest`](interfaces/CreateBehaviorGroupRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1CreateBehaviorGroupParams`] \| [[`CreateBehaviorGroupRequest`](interfaces/CreateBehaviorGroupRequest.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -422,7 +427,7 @@ Delete a behavior group from the given event type.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams`] | with all available params. |
+| `...config` | [`string`, `string`, `AxiosRequestConfig`] \| [`NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams`] | with all available params. |
 
 #### Returns
 
@@ -448,7 +453,7 @@ Delete a behavior group.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1DeleteBehaviorGroupParams`] \| [`string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1DeleteBehaviorGroupParams`] \| [`string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -474,7 +479,7 @@ Retrieve the behavior groups of a bundle.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1FindBehaviorGroupsByBundleIdParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`NotificationResourceV1FindBehaviorGroupsByBundleIdParams`] | with all available params. |
 
 #### Returns
 
@@ -500,7 +505,7 @@ Retrieve the application by name of a given bundle name
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetApplicationByNameAndBundleNameParams`] | with all available params. |
+| `...config` | [`string`, `string`, `AxiosRequestConfig`] \| [`NotificationResourceV1GetApplicationByNameAndBundleNameParams`] | with all available params. |
 
 #### Returns
 
@@ -526,7 +531,7 @@ Return a thin list of configured applications. This can be used to configure a f
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetApplicationsFacetsParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`NotificationResourceV1GetApplicationsFacetsParams`] | with all available params. |
 
 #### Returns
 
@@ -552,7 +557,7 @@ Retrieve the behavior groups affected by the removal of an endpoint.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -578,7 +583,7 @@ Retrieve the bundle by name
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetBundleByNameParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`NotificationResourceV1GetBundleByNameParams`] | with all available params. |
 
 #### Returns
 
@@ -604,7 +609,7 @@ Return a thin list of configured bundles. This can be used to configure a filter
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetBundleFacetsParams`] \| [`boolean`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1GetBundleFacetsParams`] \| [`boolean`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -630,7 +635,7 @@ Retrieve the event types affected by the removal of a behavior group.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams`] | with all available params. |
 
 #### Returns
 
@@ -656,7 +661,7 @@ Retrieve the event type by name of a given bundle name and application name
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams`] \| [`string`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams`] \| [`string`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -682,7 +687,7 @@ Retrieve all event types. The returned list can be filtered by bundle or applica
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetEventTypesParams`] \| [`Set`<`string`\>, `string`, `string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1GetEventTypesParams`] \| [`Set`<`string`\>, `string`, `string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -708,7 +713,7 @@ Retrieve the behavior groups linked to an event type.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetLinkedBehaviorGroupsParams`] \| [`string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1GetLinkedBehaviorGroupsParams`] \| [`string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -734,7 +739,7 @@ Update the list of actions of a behavior group.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateBehaviorGroupActionsParams`] \| [`string`, `string`[], `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1UpdateBehaviorGroupActionsParams`] \| [`string`, `string`[], `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -760,7 +765,7 @@ Update a behavior group.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateBehaviorGroupParams`] \| [`string`, [`UpdateBehaviorGroupRequest`](interfaces/UpdateBehaviorGroupRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1UpdateBehaviorGroupParams`] \| [`string`, [`UpdateBehaviorGroupRequest`](interfaces/UpdateBehaviorGroupRequest.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -786,7 +791,7 @@ Update the list of behavior groups of an event type.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateEventTypeBehaviorsParams`] \| [`string`, `Set`<`string`\>, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`NotificationResourceV1UpdateEventTypeBehaviorsParams`] \| [`string`, `Set`<`string`\>, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -808,7 +813,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`OrgConfigResourceV1GetDailyDigestTimePreferenceParams`] \| [`AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`OrgConfigResourceV1GetDailyDigestTimePreferenceParams`] \| [`AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -834,7 +839,7 @@ Save the daily digest UTC time preference. To cover all time zones conversion to
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`OrgConfigResourceV1SaveDailyDigestTimePreferenceParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`OrgConfigResourceV1SaveDailyDigestTimePreferenceParams`] | with all available params. |
 
 #### Returns
 
@@ -1020,7 +1025,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`<`any`\>] \| [`UserConfigResourceV1GetPreferencesParams`] | with all available params. |
+| `...config` | [`string`, `string`, `AxiosRequestConfig`] \| [`UserConfigResourceV1GetPreferencesParams`] | with all available params. |
 
 #### Returns
 
@@ -1042,7 +1047,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`UserConfigResourceV1GetSettingsSchemaParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`UserConfigResourceV1GetSettingsSchemaParams`] | with all available params. |
 
 #### Returns
 
@@ -1064,7 +1069,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`UserConfigResourceV1SaveSettingsParams`] \| [[`SettingsValues`](interfaces/SettingsValues.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`UserConfigResourceV1SaveSettingsParams`] \| [[`SettingsValues`](interfaces/SettingsValues.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 

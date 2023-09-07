@@ -32,7 +32,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2045)
+[api.ts:2031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2031)
 
 ___
 
@@ -48,7 +48,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2051)
+[api.ts:2037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2037)
 
 ___
 
@@ -64,7 +64,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2063)
+[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2049)
 
 ___
 
@@ -84,7 +84,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2057)
+[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2043)
 
 ___
 
@@ -100,4 +100,4 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2069)
+[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2055)

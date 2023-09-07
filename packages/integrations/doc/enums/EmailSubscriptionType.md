@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/integrations/types/index.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L551)
+[packages/integrations/types/index.ts:577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L577)

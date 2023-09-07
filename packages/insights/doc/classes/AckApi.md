@@ -123,7 +123,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3204)
+[api.ts:3272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3272)
 
 ___
 
@@ -152,7 +152,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3215)
+[api.ts:3283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3283)
 
 ___
 
@@ -181,7 +181,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3226](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3226)
+[api.ts:3294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3294)
 
 ___
 
@@ -211,7 +211,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3238)
+[api.ts:3306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3306)
 
 ___
 
@@ -240,7 +240,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3249)
+[api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3317)
 
 ___
 
@@ -270,4 +270,4 @@ AckApi
 
 #### Defined in
 
-[api.ts:3261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3261)
+[api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3329)

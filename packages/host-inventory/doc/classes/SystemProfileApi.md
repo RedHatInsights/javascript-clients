@@ -131,7 +131,7 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:6201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6201)
+[api.ts:6258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6258)
 
 ___
 
@@ -170,7 +170,7 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:6219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6219)
+[api.ts:6276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6276)
 
 ___
 
@@ -208,7 +208,7 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:6236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6236)
+[api.ts:6293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6293)
 
 ___
 
@@ -244,4 +244,4 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:6251](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6251)
+[api.ts:6308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6308)

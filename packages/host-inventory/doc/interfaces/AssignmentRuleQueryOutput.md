@@ -34,7 +34,7 @@ AssignmentRuleQueryOutput
 
 #### Defined in
 
-[api.ts:343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L343)
+[api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L329)
 
 ___
 
@@ -50,7 +50,7 @@ AssignmentRuleQueryOutput
 
 #### Defined in
 
-[api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L349)
+[api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L335)
 
 ___
 
@@ -66,7 +66,7 @@ AssignmentRuleQueryOutput
 
 #### Defined in
 
-[api.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L355)
+[api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L341)
 
 ___
 
@@ -82,7 +82,7 @@ AssignmentRuleQueryOutput
 
 #### Defined in
 
-[api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L367)
+[api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L353)
 
 ___
 
@@ -98,4 +98,4 @@ AssignmentRuleQueryOutput
 
 #### Defined in
 
-[api.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L361)
+[api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L347)

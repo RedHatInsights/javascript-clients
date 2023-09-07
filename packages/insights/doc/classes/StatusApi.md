@@ -120,7 +120,7 @@ StatusApi
 
 #### Defined in
 
-[api.ts:8190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8190)
+[api.ts:8258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8258)
 
 ___
 
@@ -148,7 +148,7 @@ StatusApi
 
 #### Defined in
 
-[api.ts:8200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8200)
+[api.ts:8268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8268)
 
 ___
 
@@ -176,4 +176,4 @@ StatusApi
 
 #### Defined in
 
-[api.ts:8210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8210)
+[api.ts:8278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8278)

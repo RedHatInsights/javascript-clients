@@ -41,7 +41,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1015)
+[api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1001)
 
 ___
 
@@ -57,7 +57,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1009)
+[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L995)
 
 ___
 
@@ -73,7 +73,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1033)
+[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1019)
 
 ___
 
@@ -89,7 +89,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1063)
+[api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)
 
 ___
 
@@ -105,7 +105,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1003)
+[api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L989)
 
 ___
 
@@ -121,7 +121,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1045)
+[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1031)
 
 ___
 
@@ -137,7 +137,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1081)
+[api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1067)
 
 ___
 
@@ -153,7 +153,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1027)
+[api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1013)
 
 ___
 
@@ -169,7 +169,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1021)
+[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1007)
 
 ___
 
@@ -189,7 +189,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1075)
+[api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1061)
 
 ___
 
@@ -205,7 +205,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1069)
+[api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1055)
 
 ___
 
@@ -221,7 +221,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1051)
+[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)
 
 ___
 
@@ -237,7 +237,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1057)
+[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)
 
 ___
 
@@ -253,4 +253,4 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1039)
+[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)
