@@ -118,4 +118,4 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:7496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7496)
+[api.ts:7564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7564)

@@ -30,7 +30,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1597)
+[packages/notifications/types/index.ts:1668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1668)
 
 ___
 
@@ -44,7 +44,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1585)
+[packages/notifications/types/index.ts:1656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1656)
 
 ___
 
@@ -58,7 +58,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1579)
+[packages/notifications/types/index.ts:1650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1650)
 
 ___
 
@@ -72,7 +72,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1591)
+[packages/notifications/types/index.ts:1662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1662)
 
 ___
 
@@ -86,4 +86,4 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1573)
+[packages/notifications/types/index.ts:1644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1644)

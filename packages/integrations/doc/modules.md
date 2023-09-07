@@ -30,12 +30,14 @@
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
 - [ApplicationSettingsValue](interfaces/ApplicationSettingsValue.md)
+- [ApplicationSettingsValue1](interfaces/ApplicationSettingsValue1.md)
 - [BasicAuthentication](interfaces/BasicAuthentication.md)
 - [BehaviorGroup](interfaces/BehaviorGroup.md)
 - [BehaviorGroupAction](interfaces/BehaviorGroupAction.md)
 - [BehaviorGroupActionId](interfaces/BehaviorGroupActionId.md)
 - [Bundle](interfaces/Bundle.md)
 - [BundleSettingsValue](interfaces/BundleSettingsValue.md)
+- [BundleSettingsValue1](interfaces/BundleSettingsValue1.md)
 - [CamelProperties](interfaces/CamelProperties.md)
 - [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [CreateBehaviorGroupRequest](interfaces/CreateBehaviorGroupRequest.md)
@@ -44,11 +46,13 @@
 - [DuplicateNameMigrationReport](interfaces/DuplicateNameMigrationReport.md)
 - [Endpoint](interfaces/Endpoint.md)
 - [EndpointPage](interfaces/EndpointPage.md)
+- [EndpointTestRequest](interfaces/EndpointTestRequest.md)
 - [EventLogEntry](interfaces/EventLogEntry.md)
 - [EventLogEntryAction](interfaces/EventLogEntryAction.md)
 - [EventType](interfaces/EventType.md)
 - [EventTypeBehavior](interfaces/EventTypeBehavior.md)
 - [EventTypeBehaviorId](interfaces/EventTypeBehaviorId.md)
+- [EventTypeSettingsValue](interfaces/EventTypeSettingsValue.md)
 - [Facet](interfaces/Facet.md)
 - [InstantEmailTemplate](interfaces/InstantEmailTemplate.md)
 - [InternalApplicationUserPermission](interfaces/InternalApplicationUserPermission.md)
@@ -67,6 +71,7 @@
 - [RequestSystemSubscriptionProperties](interfaces/RequestSystemSubscriptionProperties.md)
 - [ServerInfo](interfaces/ServerInfo.md)
 - [SettingsValues](interfaces/SettingsValues.md)
+- [SettingsValuesByEventType](interfaces/SettingsValuesByEventType.md)
 - [SystemSubscriptionProperties](interfaces/SystemSubscriptionProperties.md)
 - [Template](interfaces/Template.md)
 - [TriggerDailyDigestRequest](interfaces/TriggerDailyDigestRequest.md)
@@ -300,7 +305,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`, `any`\> |
+| `R` | `AxiosResponse`<`T`\> |
 
 ##### Parameters
 
@@ -335,7 +340,7 @@ Create a new endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -357,7 +362,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -379,7 +384,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -401,7 +406,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -423,7 +428,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -445,7 +450,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -467,7 +472,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -495,7 +500,7 @@ List endpoints
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -517,7 +522,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -539,7 +544,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
+| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -563,7 +568,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1SubscribeEmailParams`] \| [`string`, `string`, ``"DAILY"``, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1SubscribeEmailParams`] \| [`string`, `string`, ``"DAILY"``, `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -585,7 +590,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1TestEndpointParams`] | with all available params. |
+| `...config` | [`EndpointResourceV1TestEndpointParams`] \| [`string`, [`EndpointTestRequest`](interfaces/EndpointTestRequest.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 
@@ -593,7 +598,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L33)
+[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L39)
 
 ___
 
@@ -609,7 +614,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `string`, ``"DAILY"``, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1UnsubscribeEmailParams`] | with all available params. |
+| `...config` | [`string`, `string`, ``"DAILY"``, `AxiosRequestConfig`] \| [`EndpointResourceV1UnsubscribeEmailParams`] | with all available params. |
 
 #### Returns
 
@@ -631,7 +636,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`] | with all available params. |
 
 #### Returns
 

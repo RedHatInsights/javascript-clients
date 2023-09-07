@@ -119,7 +119,7 @@ AccountSettingApi
 
 #### Defined in
 
-[api.ts:2749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2749)
+[api.ts:2817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2817)
 
 ___
 
@@ -147,4 +147,4 @@ AccountSettingApi
 
 #### Defined in
 
-[api.ts:2759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2759)
+[api.ts:2827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2827)

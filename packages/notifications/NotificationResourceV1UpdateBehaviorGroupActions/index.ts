@@ -1,5 +1,5 @@
 // @ts-ignore
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
 import type { RequestArgs } from '../utils/base';
@@ -44,7 +44,7 @@ export const notificationResourceV1UpdateBehaviorGroupActionsParamCreator = asyn
         .replace(`{${"behaviorGroupId"}}`, encodeURIComponent(String(behaviorGroupId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT', ...options};
+    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 

@@ -216,42 +216,35 @@ export interface ActiveTagsAllOf {
  * @export
  * @interface AssignmentRuleIn
  */
-export interface AssignmentRuleIn extends AssignmentRuleInAllOf {
-}
-/**
- *
- * @export
- * @interface AssignmentRuleInAllOf
- */
-export interface AssignmentRuleInAllOf {
+export interface AssignmentRuleIn {
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleInAllOf
+     * @memberof AssignmentRuleIn
      */
     name: string;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleInAllOf
+     * @memberof AssignmentRuleIn
      */
     description?: string | null;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleInAllOf
+     * @memberof AssignmentRuleIn
      */
     group_id: string;
     /**
      *
      * @type {object}
-     * @memberof AssignmentRuleInAllOf
+     * @memberof AssignmentRuleIn
      */
     filter: object;
     /**
      *
      * @type {boolean}
-     * @memberof AssignmentRuleInAllOf
+     * @memberof AssignmentRuleIn
      */
     enabled: boolean;
 }
@@ -260,72 +253,65 @@ export interface AssignmentRuleInAllOf {
  * @export
  * @interface AssignmentRuleOut
  */
-export interface AssignmentRuleOut extends AssignmentRuleOutAllOf {
-}
-/**
- *
- * @export
- * @interface AssignmentRuleOutAllOf
- */
-export interface AssignmentRuleOutAllOf {
+export interface AssignmentRuleOut {
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     id?: string;
     /**
      * The Org ID of the tenant that owns the host.
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     org_id?: string;
     /**
      * A Red Hat Account number that owns the host.
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     account?: string | null;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     name: string;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     description?: string | null;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     group_id: string;
     /**
      *
      * @type {object}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     filter: object;
     /**
      *
      * @type {boolean}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     enabled: boolean;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     created_on: string;
     /**
      *
      * @type {string}
-     * @memberof AssignmentRuleOutAllOf
+     * @memberof AssignmentRuleOut
      */
     modified_on: string;
 }
@@ -2720,6 +2706,44 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
+         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * @summary Delete an account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessDeleteStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
@@ -2857,6 +2881,19 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * @summary Delete an account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAccountStalenessDeleteStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessDeleteStaleness(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
@@ -2915,6 +2952,15 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
             return AccountsStalenessApiFp(configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(axios, basePath));
         },
         /**
+         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * @summary Delete an account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAccountStalenessDeleteStaleness(options?: any): AxiosPromise<void> {
+            return AccountsStalenessApiFp(configuration).apiAccountStalenessDeleteStaleness(options).then((request) => request(axios, basePath));
+        },
+        /**
          * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
@@ -2961,6 +3007,17 @@ export class AccountsStalenessApi extends BaseAPI {
      */
     public apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any) {
         return AccountsStalenessApiFp(this.configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+     * @summary Delete an account staleness
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsStalenessApi
+     */
+    public apiAccountStalenessDeleteStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessDeleteStaleness(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

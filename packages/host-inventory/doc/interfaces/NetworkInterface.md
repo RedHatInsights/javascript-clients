@@ -34,7 +34,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1232)
+[api.ts:1218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1218)
 
 ___
 
@@ -48,7 +48,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1238)
+[api.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1224)
 
 ___
 
@@ -64,7 +64,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1250)
+[api.ts:1236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1236)
 
 ___
 
@@ -80,7 +80,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1244)
+[api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1230)
 
 ___
 
@@ -96,7 +96,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1256)
+[api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1242)
 
 ___
 
@@ -112,7 +112,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1262)
+[api.ts:1248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1248)
 
 ___
 
@@ -128,4 +128,4 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1268)
+[api.ts:1254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1254)

@@ -28,4 +28,4 @@ Usage
 
 #### Defined in
 
-[api.ts:2307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2307)
+[api.ts:2375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2375)

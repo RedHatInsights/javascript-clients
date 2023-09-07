@@ -123,7 +123,7 @@ SystemtypeApi
 
 #### Defined in
 
-[api.ts:8774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8774)
+[api.ts:8958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8958)
 
 ___
 
@@ -156,4 +156,4 @@ SystemtypeApi
 
 #### Defined in
 
-[api.ts:8786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8786)
+[api.ts:8970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8970)

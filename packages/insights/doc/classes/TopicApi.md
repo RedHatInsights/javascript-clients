@@ -130,7 +130,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9450)
+[api.ts:9634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9634)
 
 ___
 
@@ -163,7 +163,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9462)
+[api.ts:9646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9646)
 
 ___
 
@@ -196,7 +196,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9477)
+[api.ts:9661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9661)
 
 ___
 
@@ -230,7 +230,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9490)
+[api.ts:9674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9674)
 
 ___
 
@@ -259,7 +259,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9501)
+[api.ts:9685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9685)
 
 ___
 
@@ -288,7 +288,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9512)
+[api.ts:9696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9696)
 
 ___
 
@@ -322,7 +322,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9528)
+[api.ts:9712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9712)
 
 ___
 
@@ -356,4 +356,4 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9541)
+[api.ts:9725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9725)

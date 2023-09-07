@@ -26,4 +26,4 @@ Meta
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1125)
+[packages/integrations/types/index.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1183)

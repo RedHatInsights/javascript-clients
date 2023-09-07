@@ -127,7 +127,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7112)
+[api.ts:7180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7180)
 
 ___
 
@@ -158,7 +158,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7125)
+[api.ts:7193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7193)
 
 ___
 
@@ -208,7 +208,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7157)
+[api.ts:7225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7225)
 
 ___
 
@@ -239,7 +239,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7170)
+[api.ts:7238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7238)
 
 ___
 
@@ -268,7 +268,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7181)
+[api.ts:7249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7249)
 
 ___
 
@@ -304,7 +304,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7199)
+[api.ts:7267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7267)
 
 ___
 
@@ -339,7 +339,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7216)
+[api.ts:7284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7284)
 
 ___
 
@@ -369,4 +369,4 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7228)
+[api.ts:7296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7296)

@@ -1,5 +1,5 @@
 // @ts-ignore
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
 import type { RequestArgs } from '../utils/base';
@@ -8,7 +8,7 @@ import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } f
 import { Configuration } from '../utils/configuration';
 
 // @ts-ignore
-import type {  } from '../types';
+import type { EndpointTestRequest } from '../types';
 
 
 export type EndpointResourceV1TestEndpointParams = {
@@ -18,11 +18,17 @@ export type EndpointResourceV1TestEndpointParams = {
   * @memberof EndpointResourceV1TestEndpointApi
   */
   uuid: string,
+  /**
+  *
+  * @type { EndpointTestRequest }
+  * @memberof EndpointResourceV1TestEndpointApi
+  */
+  endpointTestRequest?: EndpointTestRequest,
   options?: AxiosRequestConfig
 }
 
 const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV1TestEndpointParams] | unknown[]): params is [EndpointResourceV1TestEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }
 /**
 *
@@ -30,18 +36,20 @@ const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1TestEndpointParamCreator = async (...config: ([EndpointResourceV1TestEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isEndpointResourceV1TestEndpointObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1TestEndpointParams;
-    const { uuid, options = {} } = params;
+export const endpointResourceV1TestEndpointParamCreator = async (...config: ([EndpointResourceV1TestEndpointParams] | [string, EndpointTestRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isEndpointResourceV1TestEndpointObjectParams(config) ? config[0] : ['uuid', 'endpointTestRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1TestEndpointParams;
+    const { uuid, endpointTestRequest, options = {} } = params;
     const localVarPath = `/endpoints/{uuid}/test`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'POST', ...options};
+    const localVarRequestOptions = { method: 'POST' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
 
+
+    localVarHeaderParameter['Content-Type'] = 'application/json';
 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
@@ -49,6 +57,7 @@ export const endpointResourceV1TestEndpointParamCreator = async (...config: ([En
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
+        serializeData: endpointTestRequest,
     };
 }
 

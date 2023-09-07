@@ -31,7 +31,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1443)
+[packages/notifications/types/index.ts:1514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1514)
 
 ___
 
@@ -45,7 +45,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1473)
+[packages/notifications/types/index.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1544)
 
 ___
 
@@ -59,7 +59,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1467)
+[packages/notifications/types/index.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1538)
 
 ___
 
@@ -73,7 +73,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1455)
+[packages/notifications/types/index.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1526)
 
 ___
 
@@ -87,7 +87,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1461)
+[packages/notifications/types/index.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1532)
 
 ___
 
@@ -101,4 +101,4 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1449)
+[packages/notifications/types/index.ts:1520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1520)

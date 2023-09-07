@@ -27,6 +27,7 @@ AccountsStalenessApi - object-oriented interface
 ### Methods
 
 - [apiAccountStalenessCreateStaleness](AccountsStalenessApi.md#apiaccountstalenesscreatestaleness)
+- [apiAccountStalenessDeleteStaleness](AccountsStalenessApi.md#apiaccountstalenessdeletestaleness)
 - [apiAccountStalenessGetStaleness](AccountsStalenessApi.md#apiaccountstalenessgetstaleness)
 - [apiAccountStalenessResetStaleness](AccountsStalenessApi.md#apiaccountstalenessresetstaleness)
 - [apiAccountStalenessUpdateStaleness](AccountsStalenessApi.md#apiaccountstalenessupdatestaleness)
@@ -126,7 +127,39 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2962)
+[api.ts:3008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3008)
+
+___
+
+### apiAccountStalenessDeleteStaleness
+
+▸ **apiAccountStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+
+Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+
+**`Summary`**
+
+Delete an account staleness
+
+**`Throws`**
+
+**`Memberof`**
+
+AccountsStalenessApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`void`\>\>
+
+#### Defined in
+
+[api.ts:3019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3019)
 
 ___
 
@@ -158,7 +191,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2973)
+[api.ts:3030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3030)
 
 ___
 
@@ -190,7 +223,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2984)
+[api.ts:3041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3041)
 
 ___
 
@@ -222,4 +255,4 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:2995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2995)
+[api.ts:3052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3052)

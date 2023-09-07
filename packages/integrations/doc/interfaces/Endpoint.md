@@ -36,7 +36,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L568)
+[packages/integrations/types/index.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L594)
 
 ___
 
@@ -50,7 +50,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L592)
+[packages/integrations/types/index.ts:618](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L618)
 
 ___
 
@@ -64,7 +64,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L598)
+[packages/integrations/types/index.ts:624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L624)
 
 ___
 
@@ -78,7 +78,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L580)
+[packages/integrations/types/index.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L606)
 
 ___
 
@@ -92,7 +92,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L586)
+[packages/integrations/types/index.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L612)
 
 ___
 
@@ -106,7 +106,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L616)
+[packages/integrations/types/index.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L642)
 
 ___
 
@@ -120,7 +120,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L610)
+[packages/integrations/types/index.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L636)
 
 ___
 
@@ -134,7 +134,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L604)
+[packages/integrations/types/index.ts:630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L630)
 
 ___
 
@@ -148,7 +148,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L628)
+[packages/integrations/types/index.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L654)
 
 ___
 
@@ -162,7 +162,7 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L622)
+[packages/integrations/types/index.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L648)
 
 ___
 
@@ -176,4 +176,4 @@ Endpoint
 
 #### Defined in
 
-[packages/integrations/types/index.ts:574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L574)
+[packages/integrations/types/index.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L600)

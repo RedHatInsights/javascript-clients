@@ -28,7 +28,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L292)
+[packages/integrations/types/index.ts:305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L305)
 
 ___
 
@@ -42,7 +42,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L304)
+[packages/integrations/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L317)
 
 ___
 
@@ -56,4 +56,4 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L298)
+[packages/integrations/types/index.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L311)

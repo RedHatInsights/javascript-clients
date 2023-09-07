@@ -122,7 +122,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7940)
+[api.ts:8008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8008)
 
 ___
 
@@ -154,7 +154,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7954)
+[api.ts:8022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8022)
 
 ___
 
@@ -186,7 +186,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7968)
+[api.ts:8036](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8036)
 
 ___
 
@@ -218,7 +218,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7982)
+[api.ts:8050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8050)
 
 ___
 
@@ -250,4 +250,4 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7996)
+[api.ts:8064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8064)

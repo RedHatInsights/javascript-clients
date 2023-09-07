@@ -28,7 +28,7 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L923)
+[api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L948)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L917)
+[api.ts:942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L942)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L911)
+[api.ts:936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L936)

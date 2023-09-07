@@ -10,12 +10,6 @@ Data for a single Assignment Rule response
 
 AssignmentRuleOut
 
-## Hierarchy
-
-- [`AssignmentRuleOutAllOf`](AssignmentRuleOutAllOf.md)
-
-  ↳ **`AssignmentRuleOut`**
-
 ## Table of contents
 
 ### Properties
@@ -41,15 +35,11 @@ A Red Hat Account number that owns the host.
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[account](AssignmentRuleOutAllOf.md#account)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L288)
+[api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L274)
 
 ___
 
@@ -59,15 +49,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[created_on](AssignmentRuleOutAllOf.md#created_on)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L324)
+[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L310)
 
 ___
 
@@ -77,15 +63,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[description](AssignmentRuleOutAllOf.md#description)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L300)
+[api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L286)
 
 ___
 
@@ -95,15 +77,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[enabled](AssignmentRuleOutAllOf.md#enabled)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L318)
+[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L304)
 
 ___
 
@@ -113,15 +91,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[filter](AssignmentRuleOutAllOf.md#filter)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L312)
+[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L298)
 
 ___
 
@@ -131,15 +105,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[group_id](AssignmentRuleOutAllOf.md#group_id)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L306)
+[api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L292)
 
 ___
 
@@ -149,15 +119,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[id](AssignmentRuleOutAllOf.md#id)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L276)
+[api.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L262)
 
 ___
 
@@ -167,15 +133,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[modified_on](AssignmentRuleOutAllOf.md#modified_on)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)
+[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L316)
 
 ___
 
@@ -185,15 +147,11 @@ ___
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[name](AssignmentRuleOutAllOf.md#name)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L294)
+[api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L280)
 
 ___
 
@@ -205,12 +163,8 @@ The Org ID of the tenant that owns the host.
 
 **`Memberof`**
 
-AssignmentRuleOutAllOf
-
-#### Inherited from
-
-[AssignmentRuleOutAllOf](AssignmentRuleOutAllOf.md).[org_id](AssignmentRuleOutAllOf.md#org_id)
+AssignmentRuleOut
 
 #### Defined in
 
-[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L282)
+[api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L268)

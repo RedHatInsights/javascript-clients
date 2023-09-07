@@ -33,7 +33,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2660)
+[api.ts:2646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2646)
 
 ___
 
@@ -47,7 +47,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2654)
+[api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2640)
 
 ___
 
@@ -61,7 +61,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2648)
+[api.ts:2634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2634)
 
 ___
 
@@ -75,7 +75,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2636)
+[api.ts:2622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2622)
 
 ___
 
@@ -91,7 +91,7 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2666)
+[api.ts:2652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2652)
 
 ___
 
@@ -105,4 +105,4 @@ YumRepo
 
 #### Defined in
 
-[api.ts:2642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2642)
+[api.ts:2628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2628)

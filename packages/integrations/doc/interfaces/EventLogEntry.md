@@ -32,7 +32,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:755](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L755)
+[packages/integrations/types/index.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L794)
 
 ___
 
@@ -46,7 +46,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L737)
+[packages/integrations/types/index.ts:776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L776)
 
 ___
 
@@ -60,7 +60,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:731](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L731)
+[packages/integrations/types/index.ts:770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L770)
 
 ___
 
@@ -74,7 +74,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L725)
+[packages/integrations/types/index.ts:764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L764)
 
 ___
 
@@ -88,7 +88,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:743](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L743)
+[packages/integrations/types/index.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L782)
 
 ___
 
@@ -102,7 +102,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L719)
+[packages/integrations/types/index.ts:758](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L758)
 
 ___
 
@@ -116,4 +116,4 @@ EventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L749)
+[packages/integrations/types/index.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L788)

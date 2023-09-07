@@ -30,7 +30,7 @@ SystemProfileSapSystemOut
 
 #### Defined in
 
-[api.ts:2343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2343)
+[api.ts:2329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2329)
 
 ___
 
@@ -46,7 +46,7 @@ SystemProfileSapSystemOut
 
 #### Defined in
 
-[api.ts:2349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2349)
+[api.ts:2335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2335)
 
 ___
 
@@ -62,4 +62,4 @@ SystemProfileSapSystemOut
 
 #### Defined in
 
-[api.ts:2337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2337)
+[api.ts:2323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2323)

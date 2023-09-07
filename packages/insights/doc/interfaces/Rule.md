@@ -46,7 +46,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1292)
+[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1360)
 
 ___
 
@@ -60,7 +60,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1298)
+[api.ts:1366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1366)
 
 ___
 
@@ -74,7 +74,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1268)
+[api.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1336)
 
 ___
 
@@ -88,7 +88,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1280)
+[api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1348)
 
 ___
 
@@ -102,7 +102,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1286)
+[api.ts:1354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1354)
 
 ___
 
@@ -116,7 +116,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1346)
+[api.ts:1414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1414)
 
 ___
 
@@ -130,7 +130,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1304)
+[api.ts:1372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1372)
 
 ___
 
@@ -144,7 +144,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1310)
+[api.ts:1378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1378)
 
 ___
 
@@ -158,7 +158,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1358)
+[api.ts:1426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1426)
 
 ___
 
@@ -174,7 +174,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1316)
+[api.ts:1384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1384)
 
 ___
 
@@ -188,7 +188,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1334)
+[api.ts:1402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1402)
 
 ___
 
@@ -202,7 +202,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1352)
+[api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1420)
 
 ___
 
@@ -216,7 +216,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1328)
+[api.ts:1396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1396)
 
 ___
 
@@ -230,7 +230,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1364)
+[api.ts:1432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1432)
 
 ___
 
@@ -246,7 +246,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1262)
+[api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1330)
 
 ___
 
@@ -260,7 +260,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1340)
+[api.ts:1408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1408)
 
 ___
 
@@ -274,7 +274,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1322)
+[api.ts:1390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1390)
 
 ___
 
@@ -288,7 +288,7 @@ Rule
 
 #### Defined in
 
-[api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1370)
+[api.ts:1438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1438)
 
 ___
 
@@ -302,4 +302,4 @@ Rule
 
 #### Defined in
 
-[api.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1274)
+[api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1342)

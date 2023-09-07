@@ -28,7 +28,7 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1747)
+[api.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1815)
 
 ___
 
@@ -42,7 +42,7 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1741)
+[api.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1809)
 
 ___
 
@@ -56,4 +56,4 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1753)
+[api.ts:1821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1821)

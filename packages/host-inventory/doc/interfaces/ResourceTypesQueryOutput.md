@@ -32,7 +32,7 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1499)
+[api.ts:1485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1485)
 
 ___
 
@@ -46,7 +46,7 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1493)
+[api.ts:1479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1479)
 
 ___
 
@@ -60,4 +60,4 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1487)
+[api.ts:1473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1473)

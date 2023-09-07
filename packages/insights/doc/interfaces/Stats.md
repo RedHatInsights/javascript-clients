@@ -34,7 +34,7 @@ Stats
 
 #### Defined in
 
-[api.ts:1969](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1969)
+[api.ts:2037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2037)
 
 ___
 
@@ -48,7 +48,7 @@ Stats
 
 #### Defined in
 
-[api.ts:1957](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1957)
+[api.ts:2025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2025)
 
 ___
 
@@ -66,4 +66,4 @@ Stats
 
 #### Defined in
 
-[api.ts:1963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1963)
+[api.ts:2031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2031)

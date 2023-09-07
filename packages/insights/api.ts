@@ -725,6 +725,31 @@ export interface PaginatedPathwayList {
 /**
  *
  * @export
+ * @interface PaginatedRenderedReportList
+ */
+export interface PaginatedRenderedReportList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedRenderedReportList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedRenderedReportList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<RenderedReport>}
+     * @memberof PaginatedRenderedReportList
+     */
+    data?: Array<RenderedReport>;
+}
+/**
+ *
+ * @export
  * @interface PaginatedReportList
  */
 export interface PaginatedReportList {
@@ -1123,6 +1148,49 @@ export interface PreferencesInput {
      * @memberof PreferencesInput
      */
     is_subscribed: boolean;
+}
+/**
+ * The actual rule fields with the report data for a particular system rendered into them, in a flat structure that\'s easier to use.
+ * @export
+ * @interface RenderedReport
+ */
+export interface RenderedReport {
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    more_info?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    resolution: string;
 }
 /**
  *
@@ -8318,6 +8386,74 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRenderedReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemRenderedReportsList.');
+            }
+            const localVarPath = `/api/insights/v1/system/{uuid}/rendered_reports/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
@@ -8468,6 +8604,24 @@ export const SystemApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRenderedReportList>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
@@ -8530,6 +8684,20 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
             return SystemApiFp(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
         },
         /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any): AxiosPromise<PaginatedRenderedReportList> {
+            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
@@ -8584,6 +8752,22 @@ export class SystemApi extends BaseAPI {
      */
     public systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
         return SystemApiFp(this.configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+     * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

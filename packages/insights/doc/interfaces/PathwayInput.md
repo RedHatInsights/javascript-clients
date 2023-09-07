@@ -32,7 +32,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1100)
+[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1125)
 
 ___
 
@@ -46,7 +46,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1094)
+[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1119)
 
 ___
 
@@ -60,7 +60,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1088)
+[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)
 
 ___
 
@@ -74,7 +74,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1112)
+[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1137)
 
 ___
 
@@ -88,4 +88,4 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1106)
+[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1131)
