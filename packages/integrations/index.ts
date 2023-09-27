@@ -45,15 +45,7 @@ export { default as endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamC
 
 
 // end of operations block
-export { default as endpointResourceV1SubscribeEmailParamCreator } from './EndpointResourceV1SubscribeEmail'
-
-
-// end of operations block
 export { default as endpointResourceV1TestEndpointParamCreator } from './EndpointResourceV1TestEndpoint'
-
-
-// end of operations block
-export { default as endpointResourceV1UnsubscribeEmailParamCreator } from './EndpointResourceV1UnsubscribeEmail'
 
 
 // end of operations block

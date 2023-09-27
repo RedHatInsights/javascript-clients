@@ -25,7 +25,8 @@ const isEndpointResourceV1GetEndpointObjectParams = (params: [EndpointResourceV1
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
+* Retrieves the public information associated with an endpoint such as its description, name, and properties.
+* @summary Retrieve an endpoint
 * @param {EndpointResourceV1GetEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

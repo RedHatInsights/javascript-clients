@@ -31,7 +31,8 @@ const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }
 /**
-*
+* Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+* @summary Generate a test notification
 * @param {EndpointResourceV1TestEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

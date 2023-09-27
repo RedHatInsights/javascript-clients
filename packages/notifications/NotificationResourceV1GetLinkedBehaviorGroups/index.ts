@@ -55,8 +55,8 @@ const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [No
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true && true && true && true && true
 }
 /**
-*
-* @summary Retrieve the behavior groups linked to an event type.
+* Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+* @summary List the behavior groups linked to an event type
 * @param {NotificationResourceV1GetLinkedBehaviorGroupsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

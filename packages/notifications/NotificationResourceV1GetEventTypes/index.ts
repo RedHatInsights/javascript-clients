@@ -67,8 +67,8 @@ const isNotificationResourceV1GetEventTypesObjectParams = (params: [Notification
   return params.length === 1 && true && true && true && true && true && true && true && true
 }
 /**
-*
-* @summary Retrieve all event types. The returned list can be filtered by bundle or application.
+* Lists all event types. You can filter the returned list by bundle or application name.
+* @summary List all event types
 * @param {NotificationResourceV1GetEventTypesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

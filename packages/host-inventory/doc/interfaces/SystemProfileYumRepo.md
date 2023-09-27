@@ -33,7 +33,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2484)
+[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2485)
 
 ___
 
@@ -47,7 +47,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2478)
+[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2479)
 
 ___
 
@@ -61,7 +61,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2472)
+[api.ts:2473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2473)
 
 ___
 
@@ -75,7 +75,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2460)
+[api.ts:2461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2461)
 
 ___
 
@@ -91,7 +91,7 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2490)
+[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2491)
 
 ___
 
@@ -105,4 +105,4 @@ SystemProfileYumRepo
 
 #### Defined in
 
-[api.ts:2466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2466)
+[api.ts:2467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2467)

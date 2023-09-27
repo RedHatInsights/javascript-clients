@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[api.ts:2444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2444)
+[api.ts:2445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2445)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2441)
+[api.ts:2442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2442)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[api.ts:2445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2445)
+[api.ts:2446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2446)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[api.ts:2443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2443)
+[api.ts:2444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2444)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[api.ts:2442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2442)
+[api.ts:2443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2443)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[api.ts:2446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2446)
+[api.ts:2447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2447)

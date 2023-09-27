@@ -25,8 +25,8 @@ const isNotificationResourceV1CreateBehaviorGroupObjectParams = (params: [Notifi
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'createBehaviorGroupRequest')
 }
 /**
-*
-* @summary Create a behavior group - assigning actions and linking to event types as requested
+* Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+* @summary Create a behavior group
 * @param {NotificationResourceV1CreateBehaviorGroupParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

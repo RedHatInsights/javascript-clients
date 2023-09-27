@@ -5,6 +5,14 @@ export * from './utils/common';
 export * from './utils/configuration';
 export * from './types'
 
+export { default as drawerResourceV1GetDrawerEntriesParamCreator } from './DrawerResourceV1GetDrawerEntries'
+
+
+// end of operations block
+export { default as drawerResourceV1UpdateNotificationReadStatusParamCreator } from './DrawerResourceV1UpdateNotificationReadStatus'
+
+
+// end of operations block
 export { default as eventResourceV1GetEventsParamCreator } from './EventResourceV1GetEvents'
 
 
@@ -82,18 +90,6 @@ export { default as orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator 
 
 // end of operations block
 export { default as orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
-
-
-// end of operations block
-export { default as userConfigResourceV1GetPreferencesParamCreator } from './UserConfigResourceV1GetPreferences'
-
-
-// end of operations block
-export { default as userConfigResourceV1GetSettingsSchemaParamCreator } from './UserConfigResourceV1GetSettingsSchema'
-
-
-// end of operations block
-export { default as userConfigResourceV1SaveSettingsParamCreator } from './UserConfigResourceV1SaveSettings'
 
 
 // end of operations block

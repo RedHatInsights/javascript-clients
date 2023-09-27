@@ -25,7 +25,8 @@ const isEndpointResourceV1GetOrCreateDrawerSubscriptionEndpointObjectParams = (p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
 }
 /**
-*
+* Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+* @summary Add a drawer endpoint
 * @param {EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

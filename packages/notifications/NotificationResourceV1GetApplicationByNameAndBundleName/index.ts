@@ -31,8 +31,8 @@ const isNotificationResourceV1GetApplicationByNameAndBundleNameObjectParams = (p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'applicationName') && Object.prototype.hasOwnProperty.call(params, 'bundleName')
 }
 /**
-*
-* @summary Retrieve the application by name of a given bundle name
+* Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+* @summary Retrieve an application by bundle and application names
 * @param {NotificationResourceV1GetApplicationByNameAndBundleNameParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

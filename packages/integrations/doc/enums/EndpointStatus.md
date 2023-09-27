@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/integrations/types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L694)
+[packages/integrations/types/index.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L707)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L695)
+[packages/integrations/types/index.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L708)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L692)
+[packages/integrations/types/index.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L705)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L693)
+[packages/integrations/types/index.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L706)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L690)
+[packages/integrations/types/index.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L703)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L691)
+[packages/integrations/types/index.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L704)

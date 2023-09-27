@@ -2443,12 +2443,13 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess: async (application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+        getPrincipalAccess: async (application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', status?: 'enabled' | 'disabled' | 'all', limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'application' is not null or undefined
             if (application === null || application === undefined) {
                 throw new RequiredError('application','Required parameter application was null or undefined when calling getPrincipalAccess.');
@@ -2479,6 +2480,10 @@ export const AccessApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (orderBy !== undefined) {
                 localVarQueryParameter['order_by'] = orderBy;
+            }
+
+            if (status !== undefined) {
+                localVarQueryParameter['status'] = status;
             }
 
             if (limit !== undefined) {
@@ -2517,13 +2522,14 @@ export const AccessApiFp = function(configuration?: Configuration) {
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
-            const localVarAxiosArgs = await AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options);
+        async getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', status?: 'enabled' | 'disabled' | 'all', limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccessPagination>> {
+            const localVarAxiosArgs = await AccessApiAxiosParamCreator(configuration).getPrincipalAccess(application, username, orderBy, status, limit, offset, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2544,13 +2550,14 @@ export const AccessApiFactory = function (configuration?: Configuration, basePat
          * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
          * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
          * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
+         * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
-            return AccessApiFp(configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options).then((request) => request(axios, basePath));
+        getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', status?: 'enabled' | 'disabled' | 'all', limit?: number, offset?: number, options?: any): AxiosPromise<AccessPagination> {
+            return AccessApiFp(configuration).getPrincipalAccess(application, username, orderBy, status, limit, offset, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2568,14 +2575,15 @@ export class AccessApi extends BaseAPI {
      * @param {string} application The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
      * @param {string} [username] Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
      * @param {'application' | 'resource_type' | 'verb'} [orderBy] Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application
+     * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccessApi
      */
-    public getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', limit?: number, offset?: number, options?: any) {
-        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, orderBy, limit, offset, options).then((request) => request(this.axios, this.basePath));
+    public getPrincipalAccess(application: string, username?: string, orderBy?: 'application' | 'resource_type' | 'verb', status?: 'enabled' | 'disabled' | 'all', limit?: number, offset?: number, options?: any) {
+        return AccessApiFp(this.configuration).getPrincipalAccess(application, username, orderBy, status, limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 
 }

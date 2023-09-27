@@ -132,7 +132,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4139)
+[api.ts:4147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4147)
 
 ___
 
@@ -164,7 +164,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4152)
+[api.ts:4160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4160)
 
 ___
 
@@ -195,7 +195,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4164)
+[api.ts:4172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4172)
 
 ___
 
@@ -226,7 +226,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4176)
+[api.ts:4184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4184)
 
 ___
 
@@ -258,7 +258,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4189)
+[api.ts:4197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4197)
 
 ___
 
@@ -290,7 +290,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4202)
+[api.ts:4210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4210)
 
 ___
 
@@ -321,7 +321,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4214)
+[api.ts:4222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4222)
 
 ___
 
@@ -360,7 +360,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4232)
+[api.ts:4240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4240)
 
 ___
 
@@ -406,7 +406,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4257)
+[api.ts:4265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4265)
 
 ___
 
@@ -448,7 +448,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4278)
+[api.ts:4286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4286)
 
 ___
 
@@ -480,4 +480,4 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4291)
+[api.ts:4299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4299)

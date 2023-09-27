@@ -25,8 +25,8 @@ const isNotificationResourceV1GetApplicationsFacetsObjectParams = (params: [Noti
   return params.length === 1 && true
 }
 /**
-*
-* @summary Return a thin list of configured applications. This can be used to configure a filter in the UI
+* Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+* @summary List configured applications
 * @param {NotificationResourceV1GetApplicationsFacetsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

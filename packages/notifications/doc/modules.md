@@ -30,19 +30,18 @@
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
 - [ApplicationSettingsValue](interfaces/ApplicationSettingsValue.md)
-- [ApplicationSettingsValue1](interfaces/ApplicationSettingsValue1.md)
 - [BasicAuthentication](interfaces/BasicAuthentication.md)
 - [BehaviorGroup](interfaces/BehaviorGroup.md)
 - [BehaviorGroupAction](interfaces/BehaviorGroupAction.md)
 - [BehaviorGroupActionId](interfaces/BehaviorGroupActionId.md)
 - [Bundle](interfaces/Bundle.md)
 - [BundleSettingsValue](interfaces/BundleSettingsValue.md)
-- [BundleSettingsValue1](interfaces/BundleSettingsValue1.md)
 - [CamelProperties](interfaces/CamelProperties.md)
 - [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [CreateBehaviorGroupRequest](interfaces/CreateBehaviorGroupRequest.md)
 - [CreateBehaviorGroupResponse](interfaces/CreateBehaviorGroupResponse.md)
 - [CurrentStatus](interfaces/CurrentStatus.md)
+- [DrawerEntryPayload](interfaces/DrawerEntryPayload.md)
 - [DuplicateNameMigrationReport](interfaces/DuplicateNameMigrationReport.md)
 - [Endpoint](interfaces/Endpoint.md)
 - [EndpointPage](interfaces/EndpointPage.md)
@@ -62,6 +61,7 @@
 - [Meta](interfaces/Meta.md)
 - [NotificationHistory](interfaces/NotificationHistory.md)
 - [PageBehaviorGroup](interfaces/PageBehaviorGroup.md)
+- [PageDrawerEntryPayload](interfaces/PageDrawerEntryPayload.md)
 - [PageEventLogEntry](interfaces/PageEventLogEntry.md)
 - [PageEventType](interfaces/PageEventType.md)
 - [PageNotificationHistory](interfaces/PageNotificationHistory.md)
@@ -70,13 +70,12 @@
 - [RequestDefaultBehaviorGroupPropertyList](interfaces/RequestDefaultBehaviorGroupPropertyList.md)
 - [RequestSystemSubscriptionProperties](interfaces/RequestSystemSubscriptionProperties.md)
 - [ServerInfo](interfaces/ServerInfo.md)
-- [SettingsValues](interfaces/SettingsValues.md)
 - [SettingsValuesByEventType](interfaces/SettingsValuesByEventType.md)
 - [SystemSubscriptionProperties](interfaces/SystemSubscriptionProperties.md)
 - [Template](interfaces/Template.md)
 - [TriggerDailyDigestRequest](interfaces/TriggerDailyDigestRequest.md)
 - [UpdateBehaviorGroupRequest](interfaces/UpdateBehaviorGroupRequest.md)
-- [UserConfigPreferences](interfaces/UserConfigPreferences.md)
+- [UpdateNotificationDrawerStatus](interfaces/UpdateNotificationDrawerStatus.md)
 - [WebhookProperties](interfaces/WebhookProperties.md)
 
 ### Type Aliases
@@ -96,6 +95,8 @@
 - [APIFactory](modules.md#apifactory)
 - [assertParamExists](modules.md#assertparamexists)
 - [createRequestFunction](modules.md#createrequestfunction)
+- [drawerResourceV1GetDrawerEntriesParamCreator](modules.md#drawerresourcev1getdrawerentriesparamcreator)
+- [drawerResourceV1UpdateNotificationReadStatusParamCreator](modules.md#drawerresourcev1updatenotificationreadstatusparamcreator)
 - [eventResourceV1GetEventsParamCreator](modules.md#eventresourcev1geteventsparamcreator)
 - [notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator](modules.md#notificationresourcev1appendbehaviorgrouptoeventtypeparamcreator)
 - [notificationResourceV1CreateBehaviorGroupParamCreator](modules.md#notificationresourcev1createbehaviorgroupparamcreator)
@@ -123,9 +124,6 @@
 - [setOAuthToObject](modules.md#setoauthtoobject)
 - [setSearchParams](modules.md#setsearchparams)
 - [toPathString](modules.md#topathstring)
-- [userConfigResourceV1GetPreferencesParamCreator](modules.md#userconfigresourcev1getpreferencesparamcreator)
-- [userConfigResourceV1GetSettingsSchemaParamCreator](modules.md#userconfigresourcev1getsettingsschemaparamcreator)
-- [userConfigResourceV1SaveSettingsParamCreator](modules.md#userconfigresourcev1savesettingsparamcreator)
 
 ## Type Aliases
 
@@ -333,15 +331,71 @@ ___
 
 ___
 
+### drawerResourceV1GetDrawerEntriesParamCreator
+
+▸ **drawerResourceV1GetDrawerEntriesParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+
+**`Summary`**
+
+Retrieve drawer notifications entries.
+
+**`Throws`**
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`DrawerResourceV1GetDrawerEntriesParams`] \| [`Set`<`string`\>, `Set`<`string`\>, `string`, `Set`<`string`\>, `number`, `number`, `number`, `boolean`, `string`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
+
+#### Returns
+
+`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+#### Defined in
+
+packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts:94
+
+___
+
+### drawerResourceV1UpdateNotificationReadStatusParamCreator
+
+▸ **drawerResourceV1UpdateNotificationReadStatusParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+Update drawer notifications status.
+
+**`Summary`**
+
+Update drawer notifications status.
+
+**`Throws`**
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`DrawerResourceV1UpdateNotificationReadStatusParams`] \| [[`UpdateNotificationDrawerStatus`](interfaces/UpdateNotificationDrawerStatus.md), `AxiosRequestConfig`] | with all available params. |
+
+#### Returns
+
+`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+#### Defined in
+
+packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts:34
+
+___
+
 ### eventResourceV1GetEventsParamCreator
 
 ▸ **eventResourceV1GetEventsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
-Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
 
 **`Summary`**
 
-Retrieve the event log entries.
+Retrieve the event log entries
 
 **`Throws`**
 
@@ -391,9 +445,11 @@ ___
 
 ▸ **notificationResourceV1CreateBehaviorGroupParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+
 **`Summary`**
 
-Create a behavior group - assigning actions and linking to event types as requested
+Create a behavior group
 
 **`Throws`**
 
@@ -417,9 +473,11 @@ ___
 
 ▸ **notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Adds a behavior group to the specified event type.
+
 **`Summary`**
 
-Delete a behavior group from the given event type.
+Add a behavior group to an event type
 
 **`Throws`**
 
@@ -443,9 +501,11 @@ ___
 
 ▸ **notificationResourceV1DeleteBehaviorGroupParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+
 **`Summary`**
 
-Delete a behavior group.
+Delete a behavior group
 
 **`Throws`**
 
@@ -469,9 +529,11 @@ ___
 
 ▸ **notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+
 **`Summary`**
 
-Retrieve the behavior groups of a bundle.
+List behavior groups in a bundle
 
 **`Throws`**
 
@@ -495,9 +557,11 @@ ___
 
 ▸ **notificationResourceV1GetApplicationByNameAndBundleNameParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+
 **`Summary`**
 
-Retrieve the application by name of a given bundle name
+Retrieve an application by bundle and application names
 
 **`Throws`**
 
@@ -521,9 +585,11 @@ ___
 
 ▸ **notificationResourceV1GetApplicationsFacetsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+
 **`Summary`**
 
-Return a thin list of configured applications. This can be used to configure a filter in the UI
+List configured applications
 
 **`Throws`**
 
@@ -547,9 +613,11 @@ ___
 
 ▸ **notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+
 **`Summary`**
 
-Retrieve the behavior groups affected by the removal of an endpoint.
+List the behavior groups affected by the removal of an endpoint
 
 **`Throws`**
 
@@ -573,9 +641,11 @@ ___
 
 ▸ **notificationResourceV1GetBundleByNameParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Retrieves the details of a bundle by searching by its name.
+
 **`Summary`**
 
-Retrieve the bundle by name
+Retrieve a bundle by name
 
 **`Throws`**
 
@@ -599,9 +669,11 @@ ___
 
 ▸ **notificationResourceV1GetBundleFacetsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+
 **`Summary`**
 
-Return a thin list of configured bundles. This can be used to configure a filter in the UI
+List configured bundles
 
 **`Throws`**
 
@@ -625,9 +697,11 @@ ___
 
 ▸ **notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+
 **`Summary`**
 
-Retrieve the event types affected by the removal of a behavior group.
+List the event types affected by the removal of a behavior group
 
 **`Throws`**
 
@@ -651,9 +725,11 @@ ___
 
 ▸ **notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+
 **`Summary`**
 
-Retrieve the event type by name of a given bundle name and application name
+Retrieve an event type by bundle, application and event type names
 
 **`Throws`**
 
@@ -677,9 +753,11 @@ ___
 
 ▸ **notificationResourceV1GetEventTypesParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Lists all event types. You can filter the returned list by bundle or application name.
+
 **`Summary`**
 
-Retrieve all event types. The returned list can be filtered by bundle or application.
+List all event types
 
 **`Throws`**
 
@@ -703,9 +781,11 @@ ___
 
 ▸ **notificationResourceV1GetLinkedBehaviorGroupsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+
 **`Summary`**
 
-Retrieve the behavior groups linked to an event type.
+List the behavior groups linked to an event type
 
 **`Throws`**
 
@@ -729,9 +809,11 @@ ___
 
 ▸ **notificationResourceV1UpdateBehaviorGroupActionsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Updates the list of actions to be executed in that particular behavior group after an event is received.
+
 **`Summary`**
 
-Update the list of actions of a behavior group.
+Update the list of behavior group actions
 
 **`Throws`**
 
@@ -755,9 +837,11 @@ ___
 
 ▸ **notificationResourceV1UpdateBehaviorGroupParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+
 **`Summary`**
 
-Update a behavior group.
+Update a behavior group
 
 **`Throws`**
 
@@ -781,9 +865,11 @@ ___
 
 ▸ **notificationResourceV1UpdateEventTypeBehaviorsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Updates the list of behavior groups associated with an event type.
+
 **`Summary`**
 
-Update the list of behavior groups of an event type.
+Update the list of behavior groups for an event type
 
 **`Throws`**
 
@@ -807,6 +893,12 @@ ___
 
 ▸ **orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+
+**`Summary`**
+
+Retrieve the daily digest time
+
 **`Throws`**
 
 #### Parameters
@@ -821,7 +913,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts#L27)
+[packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts#L28)
 
 ___
 
@@ -829,9 +921,11 @@ ___
 
 ▸ **orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
+Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+
 **`Summary`**
 
-Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+Set the daily digest time
 
 **`Throws`**
 
@@ -1012,69 +1106,3 @@ ___
 #### Defined in
 
 [packages/notifications/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L125)
-
-___
-
-### userConfigResourceV1GetPreferencesParamCreator
-
-▸ **userConfigResourceV1GetPreferencesParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-**`Throws`**
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`] \| [`UserConfigResourceV1GetPreferencesParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Defined in
-
-[packages/notifications/UserConfigResourceV1GetPreferences/index.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1GetPreferences/index.ts#L39)
-
-___
-
-### userConfigResourceV1GetSettingsSchemaParamCreator
-
-▸ **userConfigResourceV1GetSettingsSchemaParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-**`Throws`**
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`] \| [`UserConfigResourceV1GetSettingsSchemaParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Defined in
-
-[packages/notifications/UserConfigResourceV1GetSettingsSchema/index.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1GetSettingsSchema/index.ts#L33)
-
-___
-
-### userConfigResourceV1SaveSettingsParamCreator
-
-▸ **userConfigResourceV1SaveSettingsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-**`Throws`**
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`UserConfigResourceV1SaveSettingsParams`] \| [[`SettingsValues`](interfaces/SettingsValues.md), `AxiosRequestConfig`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Defined in
-
-[packages/notifications/UserConfigResourceV1SaveSettings/index.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/UserConfigResourceV1SaveSettings/index.ts#L33)

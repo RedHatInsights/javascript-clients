@@ -25,8 +25,8 @@ const isNotificationResourceV1GetBundleFacetsObjectParams = (params: [Notificati
   return params.length === 1 && true
 }
 /**
-*
-* @summary Return a thin list of configured bundles. This can be used to configure a filter in the UI
+* Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+* @summary List configured bundles
 * @param {NotificationResourceV1GetBundleFacetsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

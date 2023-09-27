@@ -27,7 +27,7 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/integrations/types/index.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L231)
+[packages/integrations/types/index.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L212)
 
 ___
 
@@ -41,4 +41,4 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/integrations/types/index.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L225)
+[packages/integrations/types/index.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L206)

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Notifications
- * The API for Notifications
+ * The API for Notifications provides endpoints that you can use to create and manage event notifications between third-party applications and the Red Hat Hybrid Cloud Console.
  *
  * The version of the OpenAPI document: v1.0
  *
@@ -220,25 +220,6 @@ export interface ApplicationSettingsValue {
 /**
  *
  * @export
- * @interface ApplicationSettingsValue1
- */
-export interface ApplicationSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: boolean; }}
-     * @memberof ApplicationSettingsValue1
-     */
-    'notifications'?: { [key: string]: boolean; };
-    /**
-     *
-     * @type {boolean}
-     * @memberof ApplicationSettingsValue1
-     */
-    'hasForcedEmail'?: boolean;
-}
-/**
- *
- * @export
  * @interface BasicAuthentication
  */
 export interface BasicAuthentication {
@@ -413,19 +394,6 @@ export interface BundleSettingsValue {
 /**
  *
  * @export
- * @interface BundleSettingsValue1
- */
-export interface BundleSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: ApplicationSettingsValue1; }}
-     * @memberof BundleSettingsValue1
-     */
-    'applications'?: { [key: string]: ApplicationSettingsValue1; };
-}
-/**
- *
- * @export
  * @interface CamelProperties
  */
 export interface CamelProperties {
@@ -576,6 +544,49 @@ export interface CurrentStatus {
 /**
  *
  * @export
+ * @interface DrawerEntryPayload
+ */
+export interface DrawerEntryPayload {
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'created'?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof DrawerEntryPayload
+     */
+    'read': boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'source'?: string;
+}
+/**
+ *
+ * @export
  * @interface DuplicateNameMigrationReport
  */
 export interface DuplicateNameMigrationReport {
@@ -599,7 +610,9 @@ export interface DuplicateNameMigrationReport {
  */
 
 export const EmailSubscriptionType = {
-    Daily: 'DAILY'
+    Instant: 'INSTANT',
+    Daily: 'DAILY',
+    Drawer: 'DRAWER'
 } as const;
 
 export type EmailSubscriptionType = typeof EmailSubscriptionType[keyof typeof EmailSubscriptionType];
@@ -863,10 +876,10 @@ export interface EventLogEntryAction {
     'endpoint_id'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof EventLogEntryAction
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
 }
 
 
@@ -1252,10 +1265,10 @@ export interface NotificationHistory {
     'endpointId'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof NotificationHistory
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
     /**
      *
      * @type {EndpointType}
@@ -1310,6 +1323,31 @@ export interface PageBehaviorGroup {
      *
      * @type {Meta}
      * @memberof PageBehaviorGroup
+     */
+    'meta': Meta;
+}
+/**
+ *
+ * @export
+ * @interface PageDrawerEntryPayload
+ */
+export interface PageDrawerEntryPayload {
+    /**
+     *
+     * @type {Array<DrawerEntryPayload>}
+     * @memberof PageDrawerEntryPayload
+     */
+    'data': Array<DrawerEntryPayload>;
+    /**
+     *
+     * @type {{ [key: string]: string; }}
+     * @memberof PageDrawerEntryPayload
+     */
+    'links': { [key: string]: string; };
+    /**
+     *
+     * @type {Meta}
+     * @memberof PageDrawerEntryPayload
      */
     'meta': Meta;
 }
@@ -1460,19 +1498,6 @@ export interface ServerInfo {
 }
 
 
-/**
- *
- * @export
- * @interface SettingsValues
- */
-export interface SettingsValues {
-    /**
-     *
-     * @type {{ [key: string]: BundleSettingsValue1; }}
-     * @memberof SettingsValues
-     */
-    'bundles'?: { [key: string]: BundleSettingsValue1; };
-}
 /**
  *
  * @export
@@ -1639,21 +1664,21 @@ export interface UpdateBehaviorGroupRequest {
 /**
  *
  * @export
- * @interface UserConfigPreferences
+ * @interface UpdateNotificationDrawerStatus
  */
-export interface UserConfigPreferences {
+export interface UpdateNotificationDrawerStatus {
+    /**
+     *
+     * @type {Set<string>}
+     * @memberof UpdateNotificationDrawerStatus
+     */
+    'notification_ids': Set<string>;
     /**
      *
      * @type {boolean}
-     * @memberof UserConfigPreferences
+     * @memberof UpdateNotificationDrawerStatus
      */
-    'instant_email'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof UserConfigPreferences
-     */
-    'daily_email'?: boolean;
+    'read_status': boolean;
 }
 /**
  *
@@ -1696,14 +1721,311 @@ export interface WebhookProperties {
 
 
 /**
+ * DrawerResourceV1GetDrawerEntriesApi - axios parameter creator
+ * @export
+ */
+export const DrawerResourceV1GetDrawerEntriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+         * @summary Retrieve drawer notifications entries.
+         * @param {Set<string>} [appIds]
+         * @param {Set<string>} [bundleIds]
+         * @param {string} [endDate]
+         * @param {Set<string>} [eventTypeIds]
+         * @param {number} [limit]
+         * @param {number} [offset]
+         * @param {number} [pageNumber]
+         * @param {boolean} [readStatus]
+         * @param {string} [sortBy]
+         * @param {string} [sortBy2]
+         * @param {string} [startDate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        drawerResourceV1GetDrawerEntries: async (appIds?: Set<string>, bundleIds?: Set<string>, endDate?: string, eventTypeIds?: Set<string>, limit?: number, offset?: number, pageNumber?: number, readStatus?: boolean, sortBy?: string, sortBy2?: string, startDate?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/notifications/drawer`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (appIds) {
+                localVarQueryParameter['appIds'] = Array.from(appIds);
+            }
+
+            if (bundleIds) {
+                localVarQueryParameter['bundleIds'] = Array.from(bundleIds);
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = (endDate as any instanceof Date) ?
+                    (endDate as any).toISOString() :
+                    endDate;
+            }
+
+            if (eventTypeIds) {
+                localVarQueryParameter['eventTypeIds'] = Array.from(eventTypeIds);
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['pageNumber'] = pageNumber;
+            }
+
+            if (readStatus !== undefined) {
+                localVarQueryParameter['readStatus'] = readStatus;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sortBy'] = sortBy;
+            }
+
+            if (sortBy2 !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy2;
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = (startDate as any instanceof Date) ?
+                    (startDate as any).toISOString() :
+                    startDate;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DrawerResourceV1GetDrawerEntriesApi - functional programming interface
+ * @export
+ */
+export const DrawerResourceV1GetDrawerEntriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DrawerResourceV1GetDrawerEntriesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+         * @summary Retrieve drawer notifications entries.
+         * @param {Set<string>} [appIds]
+         * @param {Set<string>} [bundleIds]
+         * @param {string} [endDate]
+         * @param {Set<string>} [eventTypeIds]
+         * @param {number} [limit]
+         * @param {number} [offset]
+         * @param {number} [pageNumber]
+         * @param {boolean} [readStatus]
+         * @param {string} [sortBy]
+         * @param {string} [sortBy2]
+         * @param {string} [startDate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async drawerResourceV1GetDrawerEntries(appIds?: Set<string>, bundleIds?: Set<string>, endDate?: string, eventTypeIds?: Set<string>, limit?: number, offset?: number, pageNumber?: number, readStatus?: boolean, sortBy?: string, sortBy2?: string, startDate?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PageDrawerEntryPayload>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.drawerResourceV1GetDrawerEntries(appIds, bundleIds, endDate, eventTypeIds, limit, offset, pageNumber, readStatus, sortBy, sortBy2, startDate, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DrawerResourceV1GetDrawerEntriesApi - factory interface
+ * @export
+ */
+export const DrawerResourceV1GetDrawerEntriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DrawerResourceV1GetDrawerEntriesApiFp(configuration)
+    return {
+        /**
+         * Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+         * @summary Retrieve drawer notifications entries.
+         * @param {Set<string>} [appIds]
+         * @param {Set<string>} [bundleIds]
+         * @param {string} [endDate]
+         * @param {Set<string>} [eventTypeIds]
+         * @param {number} [limit]
+         * @param {number} [offset]
+         * @param {number} [pageNumber]
+         * @param {boolean} [readStatus]
+         * @param {string} [sortBy]
+         * @param {string} [sortBy2]
+         * @param {string} [startDate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        drawerResourceV1GetDrawerEntries(appIds?: Set<string>, bundleIds?: Set<string>, endDate?: string, eventTypeIds?: Set<string>, limit?: number, offset?: number, pageNumber?: number, readStatus?: boolean, sortBy?: string, sortBy2?: string, startDate?: string, options?: any): AxiosPromise<PageDrawerEntryPayload> {
+            return localVarFp.drawerResourceV1GetDrawerEntries(appIds, bundleIds, endDate, eventTypeIds, limit, offset, pageNumber, readStatus, sortBy, sortBy2, startDate, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DrawerResourceV1GetDrawerEntriesApi - object-oriented interface
+ * @export
+ * @class DrawerResourceV1GetDrawerEntriesApi
+ * @extends {BaseAPI}
+ */
+export class DrawerResourceV1GetDrawerEntriesApi extends BaseAPI {
+    /**
+     * Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+     * @summary Retrieve drawer notifications entries.
+     * @param {Set<string>} [appIds]
+     * @param {Set<string>} [bundleIds]
+     * @param {string} [endDate]
+     * @param {Set<string>} [eventTypeIds]
+     * @param {number} [limit]
+     * @param {number} [offset]
+     * @param {number} [pageNumber]
+     * @param {boolean} [readStatus]
+     * @param {string} [sortBy]
+     * @param {string} [sortBy2]
+     * @param {string} [startDate]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DrawerResourceV1GetDrawerEntriesApi
+     */
+    public drawerResourceV1GetDrawerEntries(appIds?: Set<string>, bundleIds?: Set<string>, endDate?: string, eventTypeIds?: Set<string>, limit?: number, offset?: number, pageNumber?: number, readStatus?: boolean, sortBy?: string, sortBy2?: string, startDate?: string, options?: AxiosRequestConfig) {
+        return DrawerResourceV1GetDrawerEntriesApiFp(this.configuration).drawerResourceV1GetDrawerEntries(appIds, bundleIds, endDate, eventTypeIds, limit, offset, pageNumber, readStatus, sortBy, sortBy2, startDate, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DrawerResourceV1UpdateNotificationReadStatusApi - axios parameter creator
+ * @export
+ */
+export const DrawerResourceV1UpdateNotificationReadStatusApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Update drawer notifications status.
+         * @summary Update drawer notifications status.
+         * @param {UpdateNotificationDrawerStatus} [updateNotificationDrawerStatus]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        drawerResourceV1UpdateNotificationReadStatus: async (updateNotificationDrawerStatus?: UpdateNotificationDrawerStatus, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/notifications/drawer/read`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(updateNotificationDrawerStatus, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DrawerResourceV1UpdateNotificationReadStatusApi - functional programming interface
+ * @export
+ */
+export const DrawerResourceV1UpdateNotificationReadStatusApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DrawerResourceV1UpdateNotificationReadStatusApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Update drawer notifications status.
+         * @summary Update drawer notifications status.
+         * @param {UpdateNotificationDrawerStatus} [updateNotificationDrawerStatus]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus?: UpdateNotificationDrawerStatus, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DrawerResourceV1UpdateNotificationReadStatusApi - factory interface
+ * @export
+ */
+export const DrawerResourceV1UpdateNotificationReadStatusApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DrawerResourceV1UpdateNotificationReadStatusApiFp(configuration)
+    return {
+        /**
+         * Update drawer notifications status.
+         * @summary Update drawer notifications status.
+         * @param {UpdateNotificationDrawerStatus} [updateNotificationDrawerStatus]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus?: UpdateNotificationDrawerStatus, options?: any): AxiosPromise<number> {
+            return localVarFp.drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DrawerResourceV1UpdateNotificationReadStatusApi - object-oriented interface
+ * @export
+ * @class DrawerResourceV1UpdateNotificationReadStatusApi
+ * @extends {BaseAPI}
+ */
+export class DrawerResourceV1UpdateNotificationReadStatusApi extends BaseAPI {
+    /**
+     * Update drawer notifications status.
+     * @summary Update drawer notifications status.
+     * @param {UpdateNotificationDrawerStatus} [updateNotificationDrawerStatus]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DrawerResourceV1UpdateNotificationReadStatusApi
+     */
+    public drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus?: UpdateNotificationDrawerStatus, options?: AxiosRequestConfig) {
+        return DrawerResourceV1UpdateNotificationReadStatusApiFp(this.configuration).drawerResourceV1UpdateNotificationReadStatus(updateNotificationDrawerStatus, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
  * EventResourceV1GetEventsApi - axios parameter creator
  * @export
  */
 export const EventResourceV1GetEventsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
-         * @summary Retrieve the event log entries.
+         * Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+         * @summary Retrieve the event log entries
          * @param {Set<string>} [appIds]
          * @param {Set<string>} [bundleIds]
          * @param {string} [endDate]
@@ -1826,8 +2148,8 @@ export const EventResourceV1GetEventsApiFp = function(configuration?: Configurat
     const localVarAxiosParamCreator = EventResourceV1GetEventsApiAxiosParamCreator(configuration)
     return {
         /**
-         * Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
-         * @summary Retrieve the event log entries.
+         * Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+         * @summary Retrieve the event log entries
          * @param {Set<string>} [appIds]
          * @param {Set<string>} [bundleIds]
          * @param {string} [endDate]
@@ -1862,8 +2184,8 @@ export const EventResourceV1GetEventsApiFactory = function (configuration?: Conf
     const localVarFp = EventResourceV1GetEventsApiFp(configuration)
     return {
         /**
-         * Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
-         * @summary Retrieve the event log entries.
+         * Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+         * @summary Retrieve the event log entries
          * @param {Set<string>} [appIds]
          * @param {Set<string>} [bundleIds]
          * @param {string} [endDate]
@@ -1897,8 +2219,8 @@ export const EventResourceV1GetEventsApiFactory = function (configuration?: Conf
  */
 export class EventResourceV1GetEventsApi extends BaseAPI {
     /**
-     * Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
-     * @summary Retrieve the event log entries.
+     * Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+     * @summary Retrieve the event log entries
      * @param {Set<string>} [appIds]
      * @param {Set<string>} [bundleIds]
      * @param {string} [endDate]
@@ -2046,8 +2368,8 @@ export class NotificationResourceV1AppendBehaviorGroupToEventTypeApi extends Bas
 export const NotificationResourceV1CreateBehaviorGroupApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Create a behavior group - assigning actions and linking to event types as requested
+         * Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+         * @summary Create a behavior group
          * @param {CreateBehaviorGroupRequest} createBehaviorGroupRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2092,8 +2414,8 @@ export const NotificationResourceV1CreateBehaviorGroupApiFp = function(configura
     const localVarAxiosParamCreator = NotificationResourceV1CreateBehaviorGroupApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Create a behavior group - assigning actions and linking to event types as requested
+         * Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+         * @summary Create a behavior group
          * @param {CreateBehaviorGroupRequest} createBehaviorGroupRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2113,8 +2435,8 @@ export const NotificationResourceV1CreateBehaviorGroupApiFactory = function (con
     const localVarFp = NotificationResourceV1CreateBehaviorGroupApiFp(configuration)
     return {
         /**
-         *
-         * @summary Create a behavior group - assigning actions and linking to event types as requested
+         * Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+         * @summary Create a behavior group
          * @param {CreateBehaviorGroupRequest} createBehaviorGroupRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2133,8 +2455,8 @@ export const NotificationResourceV1CreateBehaviorGroupApiFactory = function (con
  */
 export class NotificationResourceV1CreateBehaviorGroupApi extends BaseAPI {
     /**
-     *
-     * @summary Create a behavior group - assigning actions and linking to event types as requested
+     * Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+     * @summary Create a behavior group
      * @param {CreateBehaviorGroupRequest} createBehaviorGroupRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2154,8 +2476,8 @@ export class NotificationResourceV1CreateBehaviorGroupApi extends BaseAPI {
 export const NotificationResourceV1DeleteBehaviorGroupApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Delete a behavior group.
+         * Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+         * @summary Delete a behavior group
          * @param {string} id The UUID of the behavior group to delete
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2198,8 +2520,8 @@ export const NotificationResourceV1DeleteBehaviorGroupApiFp = function(configura
     const localVarAxiosParamCreator = NotificationResourceV1DeleteBehaviorGroupApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Delete a behavior group.
+         * Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+         * @summary Delete a behavior group
          * @param {string} id The UUID of the behavior group to delete
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2219,8 +2541,8 @@ export const NotificationResourceV1DeleteBehaviorGroupApiFactory = function (con
     const localVarFp = NotificationResourceV1DeleteBehaviorGroupApiFp(configuration)
     return {
         /**
-         *
-         * @summary Delete a behavior group.
+         * Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+         * @summary Delete a behavior group
          * @param {string} id The UUID of the behavior group to delete
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2239,8 +2561,8 @@ export const NotificationResourceV1DeleteBehaviorGroupApiFactory = function (con
  */
 export class NotificationResourceV1DeleteBehaviorGroupApi extends BaseAPI {
     /**
-     *
-     * @summary Delete a behavior group.
+     * Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+     * @summary Delete a behavior group
      * @param {string} id The UUID of the behavior group to delete
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2260,8 +2582,8 @@ export class NotificationResourceV1DeleteBehaviorGroupApi extends BaseAPI {
 export const NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Delete a behavior group from the given event type.
+         * Adds a behavior group to the specified event type.
+         * @summary Add a behavior group to an event type
          * @param {string} behaviorGroupId
          * @param {string} eventTypeId
          * @param {*} [options] Override http request option.
@@ -2308,8 +2630,8 @@ export const NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiFp = funct
     const localVarAxiosParamCreator = NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Delete a behavior group from the given event type.
+         * Adds a behavior group to the specified event type.
+         * @summary Add a behavior group to an event type
          * @param {string} behaviorGroupId
          * @param {string} eventTypeId
          * @param {*} [options] Override http request option.
@@ -2330,8 +2652,8 @@ export const NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiFactory = 
     const localVarFp = NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiFp(configuration)
     return {
         /**
-         *
-         * @summary Delete a behavior group from the given event type.
+         * Adds a behavior group to the specified event type.
+         * @summary Add a behavior group to an event type
          * @param {string} behaviorGroupId
          * @param {string} eventTypeId
          * @param {*} [options] Override http request option.
@@ -2351,8 +2673,8 @@ export const NotificationResourceV1DeleteBehaviorGroupFromEventTypeApiFactory = 
  */
 export class NotificationResourceV1DeleteBehaviorGroupFromEventTypeApi extends BaseAPI {
     /**
-     *
-     * @summary Delete a behavior group from the given event type.
+     * Adds a behavior group to the specified event type.
+     * @summary Add a behavior group to an event type
      * @param {string} behaviorGroupId
      * @param {string} eventTypeId
      * @param {*} [options] Override http request option.
@@ -2373,8 +2695,8 @@ export class NotificationResourceV1DeleteBehaviorGroupFromEventTypeApi extends B
 export const NotificationResourceV1FindBehaviorGroupsByBundleIdApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups of a bundle.
+         * Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+         * @summary List behavior groups in a bundle
          * @param {string} bundleId UUID of the bundle to retrieve the behavior groups for.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2417,8 +2739,8 @@ export const NotificationResourceV1FindBehaviorGroupsByBundleIdApiFp = function(
     const localVarAxiosParamCreator = NotificationResourceV1FindBehaviorGroupsByBundleIdApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups of a bundle.
+         * Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+         * @summary List behavior groups in a bundle
          * @param {string} bundleId UUID of the bundle to retrieve the behavior groups for.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2438,8 +2760,8 @@ export const NotificationResourceV1FindBehaviorGroupsByBundleIdApiFactory = func
     const localVarFp = NotificationResourceV1FindBehaviorGroupsByBundleIdApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups of a bundle.
+         * Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+         * @summary List behavior groups in a bundle
          * @param {string} bundleId UUID of the bundle to retrieve the behavior groups for.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2458,8 +2780,8 @@ export const NotificationResourceV1FindBehaviorGroupsByBundleIdApiFactory = func
  */
 export class NotificationResourceV1FindBehaviorGroupsByBundleIdApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the behavior groups of a bundle.
+     * Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+     * @summary List behavior groups in a bundle
      * @param {string} bundleId UUID of the bundle to retrieve the behavior groups for.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2479,8 +2801,8 @@ export class NotificationResourceV1FindBehaviorGroupsByBundleIdApi extends BaseA
 export const NotificationResourceV1GetApplicationByNameAndBundleNameApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the application by name of a given bundle name
+         * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+         * @summary Retrieve an application by bundle and application names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
@@ -2527,8 +2849,8 @@ export const NotificationResourceV1GetApplicationByNameAndBundleNameApiFp = func
     const localVarAxiosParamCreator = NotificationResourceV1GetApplicationByNameAndBundleNameApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the application by name of a given bundle name
+         * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+         * @summary Retrieve an application by bundle and application names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
@@ -2549,8 +2871,8 @@ export const NotificationResourceV1GetApplicationByNameAndBundleNameApiFactory =
     const localVarFp = NotificationResourceV1GetApplicationByNameAndBundleNameApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the application by name of a given bundle name
+         * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+         * @summary Retrieve an application by bundle and application names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
@@ -2570,8 +2892,8 @@ export const NotificationResourceV1GetApplicationByNameAndBundleNameApiFactory =
  */
 export class NotificationResourceV1GetApplicationByNameAndBundleNameApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the application by name of a given bundle name
+     * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+     * @summary Retrieve an application by bundle and application names
      * @param {string} applicationName
      * @param {string} bundleName
      * @param {*} [options] Override http request option.
@@ -2592,8 +2914,8 @@ export class NotificationResourceV1GetApplicationByNameAndBundleNameApi extends 
 export const NotificationResourceV1GetApplicationsFacetsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Return a thin list of configured applications. This can be used to configure a filter in the UI
+         * Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured applications
          * @param {string} [bundleName]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2637,8 +2959,8 @@ export const NotificationResourceV1GetApplicationsFacetsApiFp = function(configu
     const localVarAxiosParamCreator = NotificationResourceV1GetApplicationsFacetsApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Return a thin list of configured applications. This can be used to configure a filter in the UI
+         * Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured applications
          * @param {string} [bundleName]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2658,8 +2980,8 @@ export const NotificationResourceV1GetApplicationsFacetsApiFactory = function (c
     const localVarFp = NotificationResourceV1GetApplicationsFacetsApiFp(configuration)
     return {
         /**
-         *
-         * @summary Return a thin list of configured applications. This can be used to configure a filter in the UI
+         * Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured applications
          * @param {string} [bundleName]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2678,8 +3000,8 @@ export const NotificationResourceV1GetApplicationsFacetsApiFactory = function (c
  */
 export class NotificationResourceV1GetApplicationsFacetsApi extends BaseAPI {
     /**
-     *
-     * @summary Return a thin list of configured applications. This can be used to configure a filter in the UI
+     * Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+     * @summary List configured applications
      * @param {string} [bundleName]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2699,8 +3021,8 @@ export class NotificationResourceV1GetApplicationsFacetsApi extends BaseAPI {
 export const NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups affected by the removal of an endpoint.
+         * Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+         * @summary List the behavior groups affected by the removal of an endpoint
          * @param {string} endpointId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2743,8 +3065,8 @@ export const NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointA
     const localVarAxiosParamCreator = NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups affected by the removal of an endpoint.
+         * Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+         * @summary List the behavior groups affected by the removal of an endpoint
          * @param {string} endpointId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2764,8 +3086,8 @@ export const NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointA
     const localVarFp = NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups affected by the removal of an endpoint.
+         * Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+         * @summary List the behavior groups affected by the removal of an endpoint
          * @param {string} endpointId
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2784,8 +3106,8 @@ export const NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointA
  */
 export class NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the behavior groups affected by the removal of an endpoint.
+     * Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+     * @summary List the behavior groups affected by the removal of an endpoint
      * @param {string} endpointId
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2805,8 +3127,8 @@ export class NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointA
 export const NotificationResourceV1GetBundleByNameApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the bundle by name
+         * Retrieves the details of a bundle by searching by its name.
+         * @summary Retrieve a bundle by name
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2849,8 +3171,8 @@ export const NotificationResourceV1GetBundleByNameApiFp = function(configuration
     const localVarAxiosParamCreator = NotificationResourceV1GetBundleByNameApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the bundle by name
+         * Retrieves the details of a bundle by searching by its name.
+         * @summary Retrieve a bundle by name
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2870,8 +3192,8 @@ export const NotificationResourceV1GetBundleByNameApiFactory = function (configu
     const localVarFp = NotificationResourceV1GetBundleByNameApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the bundle by name
+         * Retrieves the details of a bundle by searching by its name.
+         * @summary Retrieve a bundle by name
          * @param {string} bundleName
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2890,8 +3212,8 @@ export const NotificationResourceV1GetBundleByNameApiFactory = function (configu
  */
 export class NotificationResourceV1GetBundleByNameApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the bundle by name
+     * Retrieves the details of a bundle by searching by its name.
+     * @summary Retrieve a bundle by name
      * @param {string} bundleName
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2911,8 +3233,8 @@ export class NotificationResourceV1GetBundleByNameApi extends BaseAPI {
 export const NotificationResourceV1GetBundleFacetsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Return a thin list of configured bundles. This can be used to configure a filter in the UI
+         * Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured bundles
          * @param {boolean} [includeApplications]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2956,8 +3278,8 @@ export const NotificationResourceV1GetBundleFacetsApiFp = function(configuration
     const localVarAxiosParamCreator = NotificationResourceV1GetBundleFacetsApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Return a thin list of configured bundles. This can be used to configure a filter in the UI
+         * Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured bundles
          * @param {boolean} [includeApplications]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2977,8 +3299,8 @@ export const NotificationResourceV1GetBundleFacetsApiFactory = function (configu
     const localVarFp = NotificationResourceV1GetBundleFacetsApiFp(configuration)
     return {
         /**
-         *
-         * @summary Return a thin list of configured bundles. This can be used to configure a filter in the UI
+         * Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+         * @summary List configured bundles
          * @param {boolean} [includeApplications]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2997,8 +3319,8 @@ export const NotificationResourceV1GetBundleFacetsApiFactory = function (configu
  */
 export class NotificationResourceV1GetBundleFacetsApi extends BaseAPI {
     /**
-     *
-     * @summary Return a thin list of configured bundles. This can be used to configure a filter in the UI
+     * Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+     * @summary List configured bundles
      * @param {boolean} [includeApplications]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3018,8 +3340,8 @@ export class NotificationResourceV1GetBundleFacetsApi extends BaseAPI {
 export const NotificationResourceV1GetEventTypesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve all event types. The returned list can be filtered by bundle or application.
+         * Lists all event types. You can filter the returned list by bundle or application name.
+         * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
@@ -3098,8 +3420,8 @@ export const NotificationResourceV1GetEventTypesApiFp = function(configuration?:
     const localVarAxiosParamCreator = NotificationResourceV1GetEventTypesApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve all event types. The returned list can be filtered by bundle or application.
+         * Lists all event types. You can filter the returned list by bundle or application name.
+         * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
@@ -3126,8 +3448,8 @@ export const NotificationResourceV1GetEventTypesApiFactory = function (configura
     const localVarFp = NotificationResourceV1GetEventTypesApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve all event types. The returned list can be filtered by bundle or application.
+         * Lists all event types. You can filter the returned list by bundle or application name.
+         * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
@@ -3153,8 +3475,8 @@ export const NotificationResourceV1GetEventTypesApiFactory = function (configura
  */
 export class NotificationResourceV1GetEventTypesApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve all event types. The returned list can be filtered by bundle or application.
+     * Lists all event types. You can filter the returned list by bundle or application name.
+     * @summary List all event types
      * @param {Set<string>} [applicationIds]
      * @param {string} [bundleId]
      * @param {string} [eventTypeName]
@@ -3181,8 +3503,8 @@ export class NotificationResourceV1GetEventTypesApi extends BaseAPI {
 export const NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the event types affected by the removal of a behavior group.
+         * Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+         * @summary List the event types affected by the removal of a behavior group
          * @param {string} behaviorGroupId The UUID of the behavior group to check
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3225,8 +3547,8 @@ export const NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
     const localVarAxiosParamCreator = NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the event types affected by the removal of a behavior group.
+         * Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+         * @summary List the event types affected by the removal of a behavior group
          * @param {string} behaviorGroupId The UUID of the behavior group to check
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3246,8 +3568,8 @@ export const NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
     const localVarFp = NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the event types affected by the removal of a behavior group.
+         * Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+         * @summary List the event types affected by the removal of a behavior group
          * @param {string} behaviorGroupId The UUID of the behavior group to check
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3266,8 +3588,8 @@ export const NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
  */
 export class NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the event types affected by the removal of a behavior group.
+     * Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+     * @summary List the event types affected by the removal of a behavior group
      * @param {string} behaviorGroupId The UUID of the behavior group to check
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3287,8 +3609,8 @@ export class NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
 export const NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the event type by name of a given bundle name and application name
+         * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+         * @summary Retrieve an event type by bundle, application and event type names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {string} eventTypeName
@@ -3339,8 +3661,8 @@ export const NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNam
     const localVarAxiosParamCreator = NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the event type by name of a given bundle name and application name
+         * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+         * @summary Retrieve an event type by bundle, application and event type names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {string} eventTypeName
@@ -3362,8 +3684,8 @@ export const NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNam
     const localVarFp = NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the event type by name of a given bundle name and application name
+         * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+         * @summary Retrieve an event type by bundle, application and event type names
          * @param {string} applicationName
          * @param {string} bundleName
          * @param {string} eventTypeName
@@ -3384,8 +3706,8 @@ export const NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNam
  */
 export class NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the event type by name of a given bundle name and application name
+     * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+     * @summary Retrieve an event type by bundle, application and event type names
      * @param {string} applicationName
      * @param {string} bundleName
      * @param {string} eventTypeName
@@ -3407,8 +3729,8 @@ export class NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNam
 export const NotificationResourceV1GetLinkedBehaviorGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups linked to an event type.
+         * Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+         * @summary List the behavior groups linked to an event type
          * @param {string} eventTypeId
          * @param {number} [limit]
          * @param {number} [offset]
@@ -3480,8 +3802,8 @@ export const NotificationResourceV1GetLinkedBehaviorGroupsApiFp = function(confi
     const localVarAxiosParamCreator = NotificationResourceV1GetLinkedBehaviorGroupsApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups linked to an event type.
+         * Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+         * @summary List the behavior groups linked to an event type
          * @param {string} eventTypeId
          * @param {number} [limit]
          * @param {number} [offset]
@@ -3506,8 +3828,8 @@ export const NotificationResourceV1GetLinkedBehaviorGroupsApiFactory = function 
     const localVarFp = NotificationResourceV1GetLinkedBehaviorGroupsApiFp(configuration)
     return {
         /**
-         *
-         * @summary Retrieve the behavior groups linked to an event type.
+         * Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+         * @summary List the behavior groups linked to an event type
          * @param {string} eventTypeId
          * @param {number} [limit]
          * @param {number} [offset]
@@ -3531,8 +3853,8 @@ export const NotificationResourceV1GetLinkedBehaviorGroupsApiFactory = function 
  */
 export class NotificationResourceV1GetLinkedBehaviorGroupsApi extends BaseAPI {
     /**
-     *
-     * @summary Retrieve the behavior groups linked to an event type.
+     * Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+     * @summary List the behavior groups linked to an event type
      * @param {string} eventTypeId
      * @param {number} [limit]
      * @param {number} [offset]
@@ -3557,8 +3879,8 @@ export class NotificationResourceV1GetLinkedBehaviorGroupsApi extends BaseAPI {
 export const NotificationResourceV1UpdateBehaviorGroupApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Update a behavior group.
+         * Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+         * @summary Update a behavior group
          * @param {string} id The UUID of the behavior group to update
          * @param {UpdateBehaviorGroupRequest} updateBehaviorGroupRequest New parameters
          * @param {*} [options] Override http request option.
@@ -3607,8 +3929,8 @@ export const NotificationResourceV1UpdateBehaviorGroupApiFp = function(configura
     const localVarAxiosParamCreator = NotificationResourceV1UpdateBehaviorGroupApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Update a behavior group.
+         * Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+         * @summary Update a behavior group
          * @param {string} id The UUID of the behavior group to update
          * @param {UpdateBehaviorGroupRequest} updateBehaviorGroupRequest New parameters
          * @param {*} [options] Override http request option.
@@ -3629,8 +3951,8 @@ export const NotificationResourceV1UpdateBehaviorGroupApiFactory = function (con
     const localVarFp = NotificationResourceV1UpdateBehaviorGroupApiFp(configuration)
     return {
         /**
-         *
-         * @summary Update a behavior group.
+         * Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+         * @summary Update a behavior group
          * @param {string} id The UUID of the behavior group to update
          * @param {UpdateBehaviorGroupRequest} updateBehaviorGroupRequest New parameters
          * @param {*} [options] Override http request option.
@@ -3650,8 +3972,8 @@ export const NotificationResourceV1UpdateBehaviorGroupApiFactory = function (con
  */
 export class NotificationResourceV1UpdateBehaviorGroupApi extends BaseAPI {
     /**
-     *
-     * @summary Update a behavior group.
+     * Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+     * @summary Update a behavior group
      * @param {string} id The UUID of the behavior group to update
      * @param {UpdateBehaviorGroupRequest} updateBehaviorGroupRequest New parameters
      * @param {*} [options] Override http request option.
@@ -3672,8 +3994,8 @@ export class NotificationResourceV1UpdateBehaviorGroupApi extends BaseAPI {
 export const NotificationResourceV1UpdateBehaviorGroupActionsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Update the list of actions of a behavior group.
+         * Updates the list of actions to be executed in that particular behavior group after an event is received.
+         * @summary Update the list of behavior group actions
          * @param {string} behaviorGroupId The UUID of the behavior group to update
          * @param {Array<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3720,8 +4042,8 @@ export const NotificationResourceV1UpdateBehaviorGroupActionsApiFp = function(co
     const localVarAxiosParamCreator = NotificationResourceV1UpdateBehaviorGroupActionsApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Update the list of actions of a behavior group.
+         * Updates the list of actions to be executed in that particular behavior group after an event is received.
+         * @summary Update the list of behavior group actions
          * @param {string} behaviorGroupId The UUID of the behavior group to update
          * @param {Array<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3742,8 +4064,8 @@ export const NotificationResourceV1UpdateBehaviorGroupActionsApiFactory = functi
     const localVarFp = NotificationResourceV1UpdateBehaviorGroupActionsApiFp(configuration)
     return {
         /**
-         *
-         * @summary Update the list of actions of a behavior group.
+         * Updates the list of actions to be executed in that particular behavior group after an event is received.
+         * @summary Update the list of behavior group actions
          * @param {string} behaviorGroupId The UUID of the behavior group to update
          * @param {Array<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3763,8 +4085,8 @@ export const NotificationResourceV1UpdateBehaviorGroupActionsApiFactory = functi
  */
 export class NotificationResourceV1UpdateBehaviorGroupActionsApi extends BaseAPI {
     /**
-     *
-     * @summary Update the list of actions of a behavior group.
+     * Updates the list of actions to be executed in that particular behavior group after an event is received.
+     * @summary Update the list of behavior group actions
      * @param {string} behaviorGroupId The UUID of the behavior group to update
      * @param {Array<string>} [requestBody]
      * @param {*} [options] Override http request option.
@@ -3785,8 +4107,8 @@ export class NotificationResourceV1UpdateBehaviorGroupActionsApi extends BaseAPI
 export const NotificationResourceV1UpdateEventTypeBehaviorsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Update the list of behavior groups of an event type.
+         * Updates the list of behavior groups associated with an event type.
+         * @summary Update the list of behavior groups for an event type
          * @param {string} eventTypeId UUID of the eventType to associate with the behavior group(s)
          * @param {Set<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3833,8 +4155,8 @@ export const NotificationResourceV1UpdateEventTypeBehaviorsApiFp = function(conf
     const localVarAxiosParamCreator = NotificationResourceV1UpdateEventTypeBehaviorsApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Update the list of behavior groups of an event type.
+         * Updates the list of behavior groups associated with an event type.
+         * @summary Update the list of behavior groups for an event type
          * @param {string} eventTypeId UUID of the eventType to associate with the behavior group(s)
          * @param {Set<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3855,8 +4177,8 @@ export const NotificationResourceV1UpdateEventTypeBehaviorsApiFactory = function
     const localVarFp = NotificationResourceV1UpdateEventTypeBehaviorsApiFp(configuration)
     return {
         /**
-         *
-         * @summary Update the list of behavior groups of an event type.
+         * Updates the list of behavior groups associated with an event type.
+         * @summary Update the list of behavior groups for an event type
          * @param {string} eventTypeId UUID of the eventType to associate with the behavior group(s)
          * @param {Set<string>} [requestBody]
          * @param {*} [options] Override http request option.
@@ -3876,8 +4198,8 @@ export const NotificationResourceV1UpdateEventTypeBehaviorsApiFactory = function
  */
 export class NotificationResourceV1UpdateEventTypeBehaviorsApi extends BaseAPI {
     /**
-     *
-     * @summary Update the list of behavior groups of an event type.
+     * Updates the list of behavior groups associated with an event type.
+     * @summary Update the list of behavior groups for an event type
      * @param {string} eventTypeId UUID of the eventType to associate with the behavior group(s)
      * @param {Set<string>} [requestBody]
      * @param {*} [options] Override http request option.
@@ -3898,7 +4220,8 @@ export class NotificationResourceV1UpdateEventTypeBehaviorsApi extends BaseAPI {
 export const OrgConfigResourceV1GetDailyDigestTimePreferenceApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+         * @summary Retrieve the daily digest time
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3937,7 +4260,8 @@ export const OrgConfigResourceV1GetDailyDigestTimePreferenceApiFp = function(con
     const localVarAxiosParamCreator = OrgConfigResourceV1GetDailyDigestTimePreferenceApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+         * @summary Retrieve the daily digest time
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3956,7 +4280,8 @@ export const OrgConfigResourceV1GetDailyDigestTimePreferenceApiFactory = functio
     const localVarFp = OrgConfigResourceV1GetDailyDigestTimePreferenceApiFp(configuration)
     return {
         /**
-         *
+         * Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+         * @summary Retrieve the daily digest time
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3974,7 +4299,8 @@ export const OrgConfigResourceV1GetDailyDigestTimePreferenceApiFactory = functio
  */
 export class OrgConfigResourceV1GetDailyDigestTimePreferenceApi extends BaseAPI {
     /**
-     *
+     * Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+     * @summary Retrieve the daily digest time
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrgConfigResourceV1GetDailyDigestTimePreferenceApi
@@ -3993,8 +4319,8 @@ export class OrgConfigResourceV1GetDailyDigestTimePreferenceApi extends BaseAPI 
 export const OrgConfigResourceV1SaveDailyDigestTimePreferenceApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
-         * @summary Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+         * Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+         * @summary Set the daily digest time
          * @param {string} [body]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4037,8 +4363,8 @@ export const OrgConfigResourceV1SaveDailyDigestTimePreferenceApiFp = function(co
     const localVarAxiosParamCreator = OrgConfigResourceV1SaveDailyDigestTimePreferenceApiAxiosParamCreator(configuration)
     return {
         /**
-         *
-         * @summary Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+         * Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+         * @summary Set the daily digest time
          * @param {string} [body]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4058,8 +4384,8 @@ export const OrgConfigResourceV1SaveDailyDigestTimePreferenceApiFactory = functi
     const localVarFp = OrgConfigResourceV1SaveDailyDigestTimePreferenceApiFp(configuration)
     return {
         /**
-         *
-         * @summary Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+         * Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+         * @summary Set the daily digest time
          * @param {string} [body]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4078,8 +4404,8 @@ export const OrgConfigResourceV1SaveDailyDigestTimePreferenceApiFactory = functi
  */
 export class OrgConfigResourceV1SaveDailyDigestTimePreferenceApi extends BaseAPI {
     /**
-     *
-     * @summary Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+     * Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+     * @summary Set the daily digest time
      * @param {string} [body]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4087,320 +4413,6 @@ export class OrgConfigResourceV1SaveDailyDigestTimePreferenceApi extends BaseAPI
      */
     public orgConfigResourceV1SaveDailyDigestTimePreference(body?: string, options?: AxiosRequestConfig) {
         return OrgConfigResourceV1SaveDailyDigestTimePreferenceApiFp(this.configuration).orgConfigResourceV1SaveDailyDigestTimePreference(body, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
- * UserConfigResourceV1GetPreferencesApi - axios parameter creator
- * @export
- */
-export const UserConfigResourceV1GetPreferencesApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1GetPreferences: async (applicationName: string, bundleName: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'applicationName' is not null or undefined
-            assertParamExists('userConfigResourceV1GetPreferences', 'applicationName', applicationName)
-            // verify required parameter 'bundleName' is not null or undefined
-            assertParamExists('userConfigResourceV1GetPreferences', 'bundleName', bundleName)
-            const localVarPath = `/user-config/notification-preference/{bundleName}/{applicationName}`
-                .replace(`{${"applicationName"}}`, encodeURIComponent(String(applicationName)))
-                .replace(`{${"bundleName"}}`, encodeURIComponent(String(bundleName)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1GetPreferencesApi - functional programming interface
- * @export
- */
-export const UserConfigResourceV1GetPreferencesApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = UserConfigResourceV1GetPreferencesApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async userConfigResourceV1GetPreferences(applicationName: string, bundleName: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserConfigPreferences>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.userConfigResourceV1GetPreferences(applicationName, bundleName, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1GetPreferencesApi - factory interface
- * @export
- */
-export const UserConfigResourceV1GetPreferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = UserConfigResourceV1GetPreferencesApiFp(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1GetPreferences(applicationName: string, bundleName: string, options?: any): AxiosPromise<UserConfigPreferences> {
-            return localVarFp.userConfigResourceV1GetPreferences(applicationName, bundleName, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * UserConfigResourceV1GetPreferencesApi - object-oriented interface
- * @export
- * @class UserConfigResourceV1GetPreferencesApi
- * @extends {BaseAPI}
- */
-export class UserConfigResourceV1GetPreferencesApi extends BaseAPI {
-    /**
-     *
-     * @param {string} applicationName
-     * @param {string} bundleName
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserConfigResourceV1GetPreferencesApi
-     */
-    public userConfigResourceV1GetPreferences(applicationName: string, bundleName: string, options?: AxiosRequestConfig) {
-        return UserConfigResourceV1GetPreferencesApiFp(this.configuration).userConfigResourceV1GetPreferences(applicationName, bundleName, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
- * UserConfigResourceV1GetSettingsSchemaApi - axios parameter creator
- * @export
- */
-export const UserConfigResourceV1GetSettingsSchemaApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @param {string} [bundleName]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1GetSettingsSchema: async (bundleName?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/user-config/notification-preference`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (bundleName !== undefined) {
-                localVarQueryParameter['bundleName'] = bundleName;
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1GetSettingsSchemaApi - functional programming interface
- * @export
- */
-export const UserConfigResourceV1GetSettingsSchemaApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = UserConfigResourceV1GetSettingsSchemaApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @param {string} [bundleName]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async userConfigResourceV1GetSettingsSchema(bundleName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.userConfigResourceV1GetSettingsSchema(bundleName, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1GetSettingsSchemaApi - factory interface
- * @export
- */
-export const UserConfigResourceV1GetSettingsSchemaApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = UserConfigResourceV1GetSettingsSchemaApiFp(configuration)
-    return {
-        /**
-         *
-         * @param {string} [bundleName]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1GetSettingsSchema(bundleName?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.userConfigResourceV1GetSettingsSchema(bundleName, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * UserConfigResourceV1GetSettingsSchemaApi - object-oriented interface
- * @export
- * @class UserConfigResourceV1GetSettingsSchemaApi
- * @extends {BaseAPI}
- */
-export class UserConfigResourceV1GetSettingsSchemaApi extends BaseAPI {
-    /**
-     *
-     * @param {string} [bundleName]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserConfigResourceV1GetSettingsSchemaApi
-     */
-    public userConfigResourceV1GetSettingsSchema(bundleName?: string, options?: AxiosRequestConfig) {
-        return UserConfigResourceV1GetSettingsSchemaApiFp(this.configuration).userConfigResourceV1GetSettingsSchema(bundleName, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
- * UserConfigResourceV1SaveSettingsApi - axios parameter creator
- * @export
- */
-export const UserConfigResourceV1SaveSettingsApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @param {SettingsValues} [settingsValues]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1SaveSettings: async (settingsValues?: SettingsValues, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/user-config/notification-preference`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(settingsValues, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1SaveSettingsApi - functional programming interface
- * @export
- */
-export const UserConfigResourceV1SaveSettingsApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = UserConfigResourceV1SaveSettingsApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @param {SettingsValues} [settingsValues]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async userConfigResourceV1SaveSettings(settingsValues?: SettingsValues, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.userConfigResourceV1SaveSettings(settingsValues, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * UserConfigResourceV1SaveSettingsApi - factory interface
- * @export
- */
-export const UserConfigResourceV1SaveSettingsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = UserConfigResourceV1SaveSettingsApiFp(configuration)
-    return {
-        /**
-         *
-         * @param {SettingsValues} [settingsValues]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        userConfigResourceV1SaveSettings(settingsValues?: SettingsValues, options?: any): AxiosPromise<void> {
-            return localVarFp.userConfigResourceV1SaveSettings(settingsValues, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * UserConfigResourceV1SaveSettingsApi - object-oriented interface
- * @export
- * @class UserConfigResourceV1SaveSettingsApi
- * @extends {BaseAPI}
- */
-export class UserConfigResourceV1SaveSettingsApi extends BaseAPI {
-    /**
-     *
-     * @param {SettingsValues} [settingsValues]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserConfigResourceV1SaveSettingsApi
-     */
-    public userConfigResourceV1SaveSettings(settingsValues?: SettingsValues, options?: AxiosRequestConfig) {
-        return UserConfigResourceV1SaveSettingsApiFp(this.configuration).userConfigResourceV1SaveSettings(settingsValues, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

@@ -20,129 +20,6 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- * Data of a single account staleness.
- * @export
- * @interface AccountStalenessIn
- */
-export interface AccountStalenessIn {
-}
-/**
- *
- * @export
- * @interface AccountStalenessInAnyOf
- */
-export interface AccountStalenessInAnyOf {
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    conventional_staleness_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    conventional_stale_warning_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    conventional_culling_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    immutable_staleness_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    immutable_stale_warning_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessInAnyOf
-     */
-    immutable_culling_delta?: string;
-}
-/**
- * Data of a account staleness.
- * @export
- * @interface AccountStalenessOutput
- */
-export interface AccountStalenessOutput {
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    id?: string;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    account?: string | null;
-    /**
-     * The Org ID of the tenant that owns the host.
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    org_id?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    conventional_staleness_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    conventional_stale_warning_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    conventional_culling_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    immutable_staleness_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    immutable_stale_warning_delta?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    immutable_culling_delta?: string;
-    /**
-     * A timestamp when the entry was created.
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    created_at?: string;
-    /**
-     * A timestamp when the entry was last updated.
-     * @type {string}
-     * @memberof AccountStalenessOutput
-     */
-    updated_at?: string;
-}
-/**
  * Information about a host tag
  * @export
  * @interface ActiveTag
@@ -1498,6 +1375,130 @@ export interface ResourceTypesQueryOutputAllOf {
     data: Array<ResourceTypesOut>;
 }
 /**
+ * @type StalenessId
+ * Account Staleness UID
+ * @export
+ */
+export type StalenessId = string;
+
+/**
+ * Data of a single account staleness.
+ * @export
+ * @interface StalenessIn
+ */
+export interface StalenessIn {
+}
+/**
+ *
+ * @export
+ * @interface StalenessInAnyOf
+ */
+export interface StalenessInAnyOf {
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    conventional_staleness_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    conventional_stale_warning_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    conventional_culling_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    immutable_staleness_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    immutable_stale_warning_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessInAnyOf
+     */
+    immutable_culling_delta?: number;
+}
+/**
+ * Data of a account staleness.
+ * @export
+ * @interface StalenessOutput
+ */
+export interface StalenessOutput {
+    /**
+     *
+     * @type {StalenessId}
+     * @memberof StalenessOutput
+     */
+    id?: StalenessId;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof StalenessOutput
+     */
+    org_id?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_staleness_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_stale_warning_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_culling_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_staleness_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_stale_warning_delta?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_culling_delta?: number;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof StalenessOutput
+     */
+    created_at?: string;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof StalenessOutput
+     */
+    updated_at?: string;
+}
+/**
  *
  * @export
  * @interface StructuredTag
@@ -2661,14 +2662,14 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
-         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
+         * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessCreateStaleness: async (accountStalenessIn: AccountStalenessIn, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'accountStalenessIn' is not null or undefined
-            if (accountStalenessIn === null || accountStalenessIn === undefined) {
-                throw new RequiredError('accountStalenessIn','Required parameter accountStalenessIn was null or undefined when calling apiAccountStalenessCreateStaleness.');
+        apiStalenessCreateStaleness: async (stalenessIn: StalenessIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'stalenessIn' is not null or undefined
+            if (stalenessIn === null || stalenessIn === undefined) {
+                throw new RequiredError('stalenessIn','Required parameter stalenessIn was null or undefined when calling apiStalenessCreateStaleness.');
             }
             const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -2688,6 +2689,15 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
 
 
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -2697,8 +2707,8 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof accountStalenessIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(accountStalenessIn !== undefined ? accountStalenessIn : {}) : (accountStalenessIn || "");
+            const needsSerialization = (typeof stalenessIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(stalenessIn !== undefined ? stalenessIn : {}) : (stalenessIn || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2711,7 +2721,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessDeleteStaleness: async (options: any = {}): Promise<RequestArgs> => {
+        apiStalenessDeleteStaleness: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2730,6 +2740,15 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2749,7 +2768,54 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessGetStaleness: async (options: any = {}): Promise<RequestArgs> => {
+        apiStalenessGetDefaultStaleness: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/account/staleness/defaults`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiStalenessGetStaleness: async (options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2768,42 +2834,13 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Reset account staleness record. Required permissions: inventory:TODO:read
-         * @summary Reset account staleness
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiAccountStalenessResetStaleness: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/account/staleness/reset`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication ApiKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
             }
 
 
@@ -2820,12 +2857,17 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Update account staleness record. Required permissions: inventory:TODO:write
+         * Update account staleness record. Required permissions: inventory:staleness:write
          * @summary Update account staleness record
+         * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessUpdateStaleness: async (options: any = {}): Promise<RequestArgs> => {
+        apiStalenessUpdateStaleness: async (stalenessIn: StalenessIn, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'stalenessIn' is not null or undefined
+            if (stalenessIn === null || stalenessIn === undefined) {
+                throw new RequiredError('stalenessIn','Required parameter stalenessIn was null or undefined when calling apiStalenessUpdateStaleness.');
+            }
             const localVarPath = `/account/staleness`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -2844,13 +2886,26 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            // authentication BearerAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
 
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof stalenessIn !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(stalenessIn !== undefined ? stalenessIn : {}) : (stalenessIn || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -2869,12 +2924,12 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
-         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
+         * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options);
+        async apiStalenessCreateStaleness(stalenessIn: StalenessIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiStalenessCreateStaleness(stalenessIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2886,8 +2941,8 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessDeleteStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessDeleteStaleness(options);
+        async apiStalenessDeleteStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiStalenessDeleteStaleness(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2899,34 +2954,35 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessGetStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessGetStaleness(options);
+        async apiStalenessGetDefaultStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiStalenessGetDefaultStaleness(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Reset account staleness record. Required permissions: inventory:TODO:read
-         * @summary Reset account staleness
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessResetStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessResetStaleness(options);
+        async apiStalenessGetStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiStalenessGetStaleness(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Update account staleness record. Required permissions: inventory:TODO:write
+         * Update account staleness record. Required permissions: inventory:staleness:write
          * @summary Update account staleness record
+         * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAccountStalenessUpdateStaleness(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountStalenessOutput>> {
-            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiAccountStalenessUpdateStaleness(options);
+        async apiStalenessUpdateStaleness(stalenessIn: StalenessIn, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StalenessOutput>> {
+            const localVarAxiosArgs = await AccountsStalenessApiAxiosParamCreator(configuration).apiStalenessUpdateStaleness(stalenessIn, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -2944,12 +3000,12 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
         /**
          * Create account staleness record. Required permissions: inventory:TODO:write
          * @summary Create account staleness record
-         * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
+         * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any): AxiosPromise<AccountStalenessOutput> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(axios, basePath));
+        apiStalenessCreateStaleness(stalenessIn: StalenessIn, options?: any): AxiosPromise<StalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiStalenessCreateStaleness(stalenessIn, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
@@ -2957,8 +3013,8 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessDeleteStaleness(options?: any): AxiosPromise<void> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessDeleteStaleness(options).then((request) => request(axios, basePath));
+        apiStalenessDeleteStaleness(options?: any): AxiosPromise<void> {
+            return AccountsStalenessApiFp(configuration).apiStalenessDeleteStaleness(options).then((request) => request(axios, basePath));
         },
         /**
          * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
@@ -2966,26 +3022,27 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessGetStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessGetStaleness(options).then((request) => request(axios, basePath));
+        apiStalenessGetDefaultStaleness(options?: any): AxiosPromise<StalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiStalenessGetDefaultStaleness(options).then((request) => request(axios, basePath));
         },
         /**
-         * Reset account staleness record. Required permissions: inventory:TODO:read
-         * @summary Reset account staleness
+         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessResetStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessResetStaleness(options).then((request) => request(axios, basePath));
+        apiStalenessGetStaleness(options?: any): AxiosPromise<StalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiStalenessGetStaleness(options).then((request) => request(axios, basePath));
         },
         /**
-         * Update account staleness record. Required permissions: inventory:TODO:write
+         * Update account staleness record. Required permissions: inventory:staleness:write
          * @summary Update account staleness record
+         * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAccountStalenessUpdateStaleness(options?: any): AxiosPromise<AccountStalenessOutput> {
-            return AccountsStalenessApiFp(configuration).apiAccountStalenessUpdateStaleness(options).then((request) => request(axios, basePath));
+        apiStalenessUpdateStaleness(stalenessIn: StalenessIn, options?: any): AxiosPromise<StalenessOutput> {
+            return AccountsStalenessApiFp(configuration).apiStalenessUpdateStaleness(stalenessIn, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3000,13 +3057,13 @@ export class AccountsStalenessApi extends BaseAPI {
     /**
      * Create account staleness record. Required permissions: inventory:TODO:write
      * @summary Create account staleness record
-     * @param {AccountStalenessIn} accountStalenessIn Data required to create a record for a account staleness.
+     * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessCreateStaleness(accountStalenessIn: AccountStalenessIn, options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessCreateStaleness(accountStalenessIn, options).then((request) => request(this.axios, this.basePath));
+    public apiStalenessCreateStaleness(stalenessIn: StalenessIn, options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiStalenessCreateStaleness(stalenessIn, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3016,8 +3073,8 @@ export class AccountsStalenessApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessDeleteStaleness(options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessDeleteStaleness(options).then((request) => request(this.axios, this.basePath));
+    public apiStalenessDeleteStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiStalenessDeleteStaleness(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3027,30 +3084,31 @@ export class AccountsStalenessApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessGetStaleness(options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessGetStaleness(options).then((request) => request(this.axios, this.basePath));
+    public apiStalenessGetDefaultStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiStalenessGetDefaultStaleness(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Reset account staleness record. Required permissions: inventory:TODO:read
-     * @summary Reset account staleness
+     * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+     * @summary Read the entire list of account staleness
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessResetStaleness(options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessResetStaleness(options).then((request) => request(this.axios, this.basePath));
+    public apiStalenessGetStaleness(options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiStalenessGetStaleness(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Update account staleness record. Required permissions: inventory:TODO:write
+     * Update account staleness record. Required permissions: inventory:staleness:write
      * @summary Update account staleness record
+     * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountsStalenessApi
      */
-    public apiAccountStalenessUpdateStaleness(options?: any) {
-        return AccountsStalenessApiFp(this.configuration).apiAccountStalenessUpdateStaleness(options).then((request) => request(this.axios, this.basePath));
+    public apiStalenessUpdateStaleness(stalenessIn: StalenessIn, options?: any) {
+        return AccountsStalenessApiFp(this.configuration).apiStalenessUpdateStaleness(stalenessIn, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3124,12 +3182,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAssignmentRuleGetAssignmentRulesById: async (assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiAssignmentRuleGetAssignmentRulesById: async (assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'assignmentRuleIdList' is not null or undefined
             if (assignmentRuleIdList === null || assignmentRuleIdList === undefined) {
                 throw new RequiredError('assignmentRuleIdList','Required parameter assignmentRuleIdList was null or undefined when calling apiAssignmentRuleGetAssignmentRulesById.');
@@ -3188,12 +3246,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} [name] Filter by assignment-rule name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAssignmentRuleGetAssignmentRulesList: async (name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiAssignmentRuleGetAssignmentRulesList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/assignment-rules`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3246,8 +3304,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
+         * Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create a new group matching the provided name and list of hosts IDs
          * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3302,8 +3360,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete a list of groups [Not Implemented]
+         * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of groups
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3346,8 +3404,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Read the entire list of groups [Not Implemented]
+         * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3409,8 +3467,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Find groups by their IDs [Not Implemented]
+         * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find groups by their IDs
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3473,8 +3531,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Merge group information [Not Implemented]
+         * Merge group information. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Merge group information
          * @param {string} groupId Group ID.
          * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
@@ -3579,8 +3637,8 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
+         * Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group
          * @param {string} groupId Group ID.
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {*} [options] Override http request option.
@@ -3657,12 +3715,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
+        async apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3675,12 +3733,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {string} [name] Filter by assignment-rule name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
+        async apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AssignmentRuleQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3688,8 +3746,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
+         * Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create a new group matching the provided name and list of hosts IDs
          * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3702,8 +3760,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete a list of groups [Not Implemented]
+         * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of groups
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3716,8 +3774,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Read the entire list of groups [Not Implemented]
+         * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3734,8 +3792,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Find groups by their IDs [Not Implemented]
+         * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find groups by their IDs
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3752,8 +3810,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Merge group information [Not Implemented]
+         * Merge group information. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Merge group information
          * @param {string} groupId Group ID.
          * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
@@ -3782,8 +3840,8 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
+         * Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group
          * @param {string} groupId Group ID.
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {*} [options] Override http request option.
@@ -3821,12 +3879,12 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
+        apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
             return GroupsApiFp(configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3835,17 +3893,17 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {string} [name] Filter by assignment-rule name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+         * @param {'name' | 'group_id'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
+        apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<AssignmentRuleQueryOutput> {
             return GroupsApiFp(configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
-         * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
+         * Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Create a new group matching the provided name and list of hosts IDs
          * @param {GroupIn} groupIn Data required to create a record for a group.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3854,8 +3912,8 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiGroupCreateGroup(groupIn, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete a list of groups [Not Implemented]
+         * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of groups
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3864,8 +3922,8 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiGroupDeleteGroups(groupIdList, options).then((request) => request(axios, basePath));
         },
         /**
-         * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Read the entire list of groups [Not Implemented]
+         * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3878,8 +3936,8 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
-         * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-         * @summary Find groups by their IDs [Not Implemented]
+         * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
+         * @summary Find groups by their IDs
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
@@ -3892,8 +3950,8 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
-         * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Merge group information [Not Implemented]
+         * Merge group information. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Merge group information
          * @param {string} groupId Group ID.
          * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
          * @param {*} [options] Override http request option.
@@ -3914,8 +3972,8 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiHostGroupAddHostListToGroup(groupId, requestBody, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-         * @summary Delete one or more hosts from a group [Not Implemented]
+         * Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete one or more hosts from a group
          * @param {string} groupId Group ID.
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {*} [options] Override http request option.
@@ -3952,13 +4010,13 @@ export class GroupsApi extends BaseAPI {
      * @param {Array<string>} assignmentRuleIdList A comma-separated list of assignment-rule IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+     * @param {'name' | 'group_id'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiAssignmentRuleGetAssignmentRulesById(assignmentRuleIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3968,19 +4026,19 @@ export class GroupsApi extends BaseAPI {
      * @param {string} [name] Filter by assignment-rule name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'org_id' | 'account' | 'name' | 'group_id'} [orderBy] Ordering field name
+     * @param {'name' | 'group_id'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_ids
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'org_id' | 'account' | 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiAssignmentRuleGetAssignmentRulesList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'group_id', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiAssignmentRuleGetAssignmentRulesList(name, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Create a new group matching the provided name and list of hosts IDs [Not Implemented]
+     * Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Create a new group matching the provided name and list of hosts IDs
      * @param {GroupIn} groupIn Data required to create a record for a group.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3991,8 +4049,8 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
-     * Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Delete a list of groups [Not Implemented]
+     * Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Delete a list of groups
      * @param {Array<string>} groupIdList A comma-separated list of group IDs.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4003,8 +4061,8 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
-     * Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-     * @summary Read the entire list of groups [Not Implemented]
+     * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
+     * @summary Read the entire list of groups
      * @param {string} [name] Filter by group name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -4019,8 +4077,8 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
-     * Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
-     * @summary Find groups by their IDs [Not Implemented]
+     * Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
+     * @summary Find groups by their IDs
      * @param {Array<string>} groupIdList A comma-separated list of group IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
@@ -4035,8 +4093,8 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
-     * Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Merge group information [Not Implemented]
+     * Merge group information. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Merge group information
      * @param {string} groupId Group ID.
      * @param {GroupIn} groupIn A dictionary with new information to merge with the original group.
      * @param {*} [options] Override http request option.
@@ -4061,8 +4119,8 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
-     * Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
-     * @summary Delete one or more hosts from a group [Not Implemented]
+     * Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Delete one or more hosts from a group
      * @param {string} groupId Group ID.
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
      * @param {*} [options] Override http request option.
@@ -4288,13 +4346,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById: async (hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostById: async (hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostById.');
@@ -4370,7 +4428,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -4380,7 +4438,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostList: async (displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/hosts`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4498,14 +4556,14 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostSystemProfileById: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostSystemProfileById.');
@@ -4572,12 +4630,12 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostTagCount: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTagCount.');
@@ -4636,13 +4694,13 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): Promise<RequestArgs> => {
+        apiHostGetHostTags: async (hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'hostIdList' is not null or undefined
             if (hostIdList === null || hostIdList === undefined) {
                 throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiHostGetHostTags.');
@@ -5012,13 +5070,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5040,7 +5098,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -5050,7 +5108,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
+        async apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostQueryOutput>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5063,14 +5121,14 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
+        async apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemProfileByHostOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5083,12 +5141,12 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut>> {
+        async apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagCountOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5101,13 +5159,13 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut>> {
+        async apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TagsOut>> {
             const localVarAxiosArgs = await HostsApiAxiosParamCreator(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5237,13 +5295,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5261,7 +5319,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {string} [branchId] Filter by branch_id
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -5271,7 +5329,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
+        apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any): AxiosPromise<HostQueryOutput> {
             return HostsApiFp(configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5280,14 +5338,14 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
          * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileByHostOut> {
+        apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any): AxiosPromise<SystemProfileByHostOut> {
             return HostsApiFp(configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5296,12 +5354,12 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<TagCountOut> {
+        apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<TagCountOut> {
             return HostsApiFp(configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5310,13 +5368,13 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} hostIdList A comma-separated list of host IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+         * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
+        apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any): AxiosPromise<TagsOut> {
             return HostsApiFp(configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(axios, basePath));
         },
         /**
@@ -5433,14 +5491,14 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostById(hostIdList: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostById(hostIdList, branchId, perPage, page, orderBy, orderHow, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5459,7 +5517,7 @@ export class HostsApi extends BaseAPI {
      * @param {string} [branchId] Filter by branch_id
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
@@ -5470,7 +5528,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostList(displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, branchId?: string, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, tags?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostList(displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, filter, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5480,7 +5538,7 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {string} [branchId] Filter by branch_id
      * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
@@ -5488,7 +5546,7 @@ export class HostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any) {
+    public apiHostGetHostSystemProfileById(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', branchId?: string, fields?: { [key: string]: object; }, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostSystemProfileById(hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5498,13 +5556,13 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiHostGetHostTagCount(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostTagCount(hostIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5514,14 +5572,14 @@ export class HostsApi extends BaseAPI {
      * @param {Array<string>} hostIdList A comma-separated list of host IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'display_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
+     * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {string} [search] Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
      */
-    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
+    public apiHostGetHostTags(hostIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'display_name' | 'group_name' | 'updated' | 'operating_system', orderHow?: 'ASC' | 'DESC', search?: string, options?: any) {
         return HostsApiFp(this.configuration).apiHostGetHostTags(hostIdList, perPage, page, orderBy, orderHow, search, options).then((request) => request(this.axios, this.basePath));
     }
 

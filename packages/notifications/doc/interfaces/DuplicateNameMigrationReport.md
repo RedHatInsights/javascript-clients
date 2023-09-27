@@ -27,7 +27,7 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/notifications/types/index.ts:568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L568)
+[packages/notifications/types/index.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L579)
 
 ___
 
@@ -41,4 +41,4 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/notifications/types/index.ts:562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L562)
+[packages/notifications/types/index.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L573)

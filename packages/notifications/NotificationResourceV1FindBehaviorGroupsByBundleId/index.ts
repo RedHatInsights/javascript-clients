@@ -25,8 +25,8 @@ const isNotificationResourceV1FindBehaviorGroupsByBundleIdObjectParams = (params
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'bundleId')
 }
 /**
-*
-* @summary Retrieve the behavior groups of a bundle.
+* Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+* @summary List behavior groups in a bundle
 * @param {NotificationResourceV1FindBehaviorGroupsByBundleIdParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

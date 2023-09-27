@@ -115,8 +115,8 @@ const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEvent
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
-* Allowed `sort_by` fields are `bundle`, `application`, `event` and `created`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
-* @summary Retrieve the event log entries.
+* Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+* @summary Retrieve the event log entries
 * @param {EventResourceV1GetEventsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

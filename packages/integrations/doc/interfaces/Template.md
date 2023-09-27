@@ -31,7 +31,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1514)
+[packages/integrations/types/index.ts:1539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1539)
 
 ___
 
@@ -45,7 +45,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1544)
+[packages/integrations/types/index.ts:1569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1569)
 
 ___
 
@@ -59,7 +59,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1538)
+[packages/integrations/types/index.ts:1563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1563)
 
 ___
 
@@ -73,7 +73,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1526)
+[packages/integrations/types/index.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1551)
 
 ___
 
@@ -87,7 +87,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1532)
+[packages/integrations/types/index.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1557)
 
 ___
 
@@ -101,4 +101,4 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1520)
+[packages/integrations/types/index.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1545)

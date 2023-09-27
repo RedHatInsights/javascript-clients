@@ -120,4 +120,4 @@ StatusApi
 
 #### Defined in
 
-[api.ts:6120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6120)
+[api.ts:6128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6128)

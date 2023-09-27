@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Integrations
- * The API for Integrations
+ * The API for Integrations provides endpoints that you can use to create and manage integrations between third-party applications and the Red Hat Hybrid Cloud Console.
  *
  * The version of the OpenAPI document: v1.0
  *
@@ -220,25 +220,6 @@ export interface ApplicationSettingsValue {
 /**
  *
  * @export
- * @interface ApplicationSettingsValue1
- */
-export interface ApplicationSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: boolean; }}
-     * @memberof ApplicationSettingsValue1
-     */
-    'notifications'?: { [key: string]: boolean; };
-    /**
-     *
-     * @type {boolean}
-     * @memberof ApplicationSettingsValue1
-     */
-    'hasForcedEmail'?: boolean;
-}
-/**
- *
- * @export
  * @interface BasicAuthentication
  */
 export interface BasicAuthentication {
@@ -413,19 +394,6 @@ export interface BundleSettingsValue {
 /**
  *
  * @export
- * @interface BundleSettingsValue1
- */
-export interface BundleSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: ApplicationSettingsValue1; }}
-     * @memberof BundleSettingsValue1
-     */
-    'applications'?: { [key: string]: ApplicationSettingsValue1; };
-}
-/**
- *
- * @export
  * @interface CamelProperties
  */
 export interface CamelProperties {
@@ -576,6 +544,49 @@ export interface CurrentStatus {
 /**
  *
  * @export
+ * @interface DrawerEntryPayload
+ */
+export interface DrawerEntryPayload {
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'created'?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof DrawerEntryPayload
+     */
+    'read': boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'source'?: string;
+}
+/**
+ *
+ * @export
  * @interface DuplicateNameMigrationReport
  */
 export interface DuplicateNameMigrationReport {
@@ -599,7 +610,9 @@ export interface DuplicateNameMigrationReport {
  */
 
 export const EmailSubscriptionType = {
-    Daily: 'DAILY'
+    Instant: 'INSTANT',
+    Daily: 'DAILY',
+    Drawer: 'DRAWER'
 } as const;
 
 export type EmailSubscriptionType = typeof EmailSubscriptionType[keyof typeof EmailSubscriptionType];
@@ -863,10 +876,10 @@ export interface EventLogEntryAction {
     'endpoint_id'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof EventLogEntryAction
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
 }
 
 
@@ -1252,10 +1265,10 @@ export interface NotificationHistory {
     'endpointId'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof NotificationHistory
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
     /**
      *
      * @type {EndpointType}
@@ -1310,6 +1323,31 @@ export interface PageBehaviorGroup {
      *
      * @type {Meta}
      * @memberof PageBehaviorGroup
+     */
+    'meta': Meta;
+}
+/**
+ *
+ * @export
+ * @interface PageDrawerEntryPayload
+ */
+export interface PageDrawerEntryPayload {
+    /**
+     *
+     * @type {Array<DrawerEntryPayload>}
+     * @memberof PageDrawerEntryPayload
+     */
+    'data': Array<DrawerEntryPayload>;
+    /**
+     *
+     * @type {{ [key: string]: string; }}
+     * @memberof PageDrawerEntryPayload
+     */
+    'links': { [key: string]: string; };
+    /**
+     *
+     * @type {Meta}
+     * @memberof PageDrawerEntryPayload
      */
     'meta': Meta;
 }
@@ -1460,19 +1498,6 @@ export interface ServerInfo {
 }
 
 
-/**
- *
- * @export
- * @interface SettingsValues
- */
-export interface SettingsValues {
-    /**
-     *
-     * @type {{ [key: string]: BundleSettingsValue1; }}
-     * @memberof SettingsValues
-     */
-    'bundles'?: { [key: string]: BundleSettingsValue1; };
-}
 /**
  *
  * @export
@@ -1639,21 +1664,21 @@ export interface UpdateBehaviorGroupRequest {
 /**
  *
  * @export
- * @interface UserConfigPreferences
+ * @interface UpdateNotificationDrawerStatus
  */
-export interface UserConfigPreferences {
+export interface UpdateNotificationDrawerStatus {
+    /**
+     *
+     * @type {Set<string>}
+     * @memberof UpdateNotificationDrawerStatus
+     */
+    'notification_ids': Set<string>;
     /**
      *
      * @type {boolean}
-     * @memberof UserConfigPreferences
+     * @memberof UpdateNotificationDrawerStatus
      */
-    'instant_email'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof UserConfigPreferences
-     */
-    'daily_email'?: boolean;
+    'read_status': boolean;
 }
 /**
  *
@@ -1702,7 +1727,7 @@ export interface WebhookProperties {
 export const EndpointResourceV1CreateEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new endpoint from the passed data
+         * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
          * @summary Create a new endpoint
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -1748,7 +1773,7 @@ export const EndpointResourceV1CreateEndpointApiFp = function(configuration?: Co
     const localVarAxiosParamCreator = EndpointResourceV1CreateEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         * Create a new endpoint from the passed data
+         * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
          * @summary Create a new endpoint
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -1769,7 +1794,7 @@ export const EndpointResourceV1CreateEndpointApiFactory = function (configuratio
     const localVarFp = EndpointResourceV1CreateEndpointApiFp(configuration)
     return {
         /**
-         * Create a new endpoint from the passed data
+         * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
          * @summary Create a new endpoint
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -1789,7 +1814,7 @@ export const EndpointResourceV1CreateEndpointApiFactory = function (configuratio
  */
 export class EndpointResourceV1CreateEndpointApi extends BaseAPI {
     /**
-     * Create a new endpoint from the passed data
+     * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
      * @summary Create a new endpoint
      * @param {Endpoint} endpoint
      * @param {*} [options] Override http request option.
@@ -1810,7 +1835,8 @@ export class EndpointResourceV1CreateEndpointApi extends BaseAPI {
 export const EndpointResourceV1DeleteEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+         * @summary Delete an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1853,7 +1879,8 @@ export const EndpointResourceV1DeleteEndpointApiFp = function(configuration?: Co
     const localVarAxiosParamCreator = EndpointResourceV1DeleteEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+         * @summary Delete an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1873,7 +1900,8 @@ export const EndpointResourceV1DeleteEndpointApiFactory = function (configuratio
     const localVarFp = EndpointResourceV1DeleteEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+         * @summary Delete an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1892,7 +1920,8 @@ export const EndpointResourceV1DeleteEndpointApiFactory = function (configuratio
  */
 export class EndpointResourceV1DeleteEndpointApi extends BaseAPI {
     /**
-     *
+     * Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+     * @summary Delete an endpoint
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1912,7 +1941,8 @@ export class EndpointResourceV1DeleteEndpointApi extends BaseAPI {
 export const EndpointResourceV1DisableEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+         * @summary Disable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1955,7 +1985,8 @@ export const EndpointResourceV1DisableEndpointApiFp = function(configuration?: C
     const localVarAxiosParamCreator = EndpointResourceV1DisableEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+         * @summary Disable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1975,7 +2006,8 @@ export const EndpointResourceV1DisableEndpointApiFactory = function (configurati
     const localVarFp = EndpointResourceV1DisableEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+         * @summary Disable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1994,7 +2026,8 @@ export const EndpointResourceV1DisableEndpointApiFactory = function (configurati
  */
 export class EndpointResourceV1DisableEndpointApi extends BaseAPI {
     /**
-     *
+     * Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+     * @summary Disable an endpoint
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2014,7 +2047,8 @@ export class EndpointResourceV1DisableEndpointApi extends BaseAPI {
 export const EndpointResourceV1EnableEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+         * @summary Enable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2057,7 +2091,8 @@ export const EndpointResourceV1EnableEndpointApiFp = function(configuration?: Co
     const localVarAxiosParamCreator = EndpointResourceV1EnableEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+         * @summary Enable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2077,7 +2112,8 @@ export const EndpointResourceV1EnableEndpointApiFactory = function (configuratio
     const localVarFp = EndpointResourceV1EnableEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+         * @summary Enable an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2096,7 +2132,8 @@ export const EndpointResourceV1EnableEndpointApiFactory = function (configuratio
  */
 export class EndpointResourceV1EnableEndpointApi extends BaseAPI {
     /**
-     *
+     * Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+     * @summary Enable an endpoint
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2116,7 +2153,8 @@ export class EndpointResourceV1EnableEndpointApi extends BaseAPI {
 export const EndpointResourceV1GetDetailedEndpointHistoryApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+         * @summary Retrieve event notification details
          * @param {string} historyId
          * @param {string} id
          * @param {*} [options] Override http request option.
@@ -2163,7 +2201,8 @@ export const EndpointResourceV1GetDetailedEndpointHistoryApiFp = function(config
     const localVarAxiosParamCreator = EndpointResourceV1GetDetailedEndpointHistoryApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+         * @summary Retrieve event notification details
          * @param {string} historyId
          * @param {string} id
          * @param {*} [options] Override http request option.
@@ -2184,7 +2223,8 @@ export const EndpointResourceV1GetDetailedEndpointHistoryApiFactory = function (
     const localVarFp = EndpointResourceV1GetDetailedEndpointHistoryApiFp(configuration)
     return {
         /**
-         *
+         * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+         * @summary Retrieve event notification details
          * @param {string} historyId
          * @param {string} id
          * @param {*} [options] Override http request option.
@@ -2204,7 +2244,8 @@ export const EndpointResourceV1GetDetailedEndpointHistoryApiFactory = function (
  */
 export class EndpointResourceV1GetDetailedEndpointHistoryApi extends BaseAPI {
     /**
-     *
+     * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+     * @summary Retrieve event notification details
      * @param {string} historyId
      * @param {string} id
      * @param {*} [options] Override http request option.
@@ -2225,7 +2266,8 @@ export class EndpointResourceV1GetDetailedEndpointHistoryApi extends BaseAPI {
 export const EndpointResourceV1GetEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Retrieves the public information associated with an endpoint such as its description, name, and properties.
+         * @summary Retrieve an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2268,7 +2310,8 @@ export const EndpointResourceV1GetEndpointApiFp = function(configuration?: Confi
     const localVarAxiosParamCreator = EndpointResourceV1GetEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Retrieves the public information associated with an endpoint such as its description, name, and properties.
+         * @summary Retrieve an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2288,7 +2331,8 @@ export const EndpointResourceV1GetEndpointApiFactory = function (configuration?:
     const localVarFp = EndpointResourceV1GetEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Retrieves the public information associated with an endpoint such as its description, name, and properties.
+         * @summary Retrieve an endpoint
          * @param {string} id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2307,7 +2351,8 @@ export const EndpointResourceV1GetEndpointApiFactory = function (configuration?:
  */
 export class EndpointResourceV1GetEndpointApi extends BaseAPI {
     /**
-     *
+     * Retrieves the public information associated with an endpoint such as its description, name, and properties.
+     * @summary Retrieve an endpoint
      * @param {string} id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2481,7 +2526,7 @@ export class EndpointResourceV1GetEndpointHistoryApi extends BaseAPI {
 export const EndpointResourceV1GetEndpointsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Get a list of endpoints filtered down by the passed parameters.
+         * Provides a list of endpoints. Use this endpoint to find specific endpoints.
          * @summary List endpoints
          * @param {number} [limit] Number of items per page. If the value is 0, it will return all elements
          * @param {number} [pageNumber] Page number. Starts at first page (0), if not specified starts at first page.
@@ -2561,7 +2606,7 @@ export const EndpointResourceV1GetEndpointsApiFp = function(configuration?: Conf
     const localVarAxiosParamCreator = EndpointResourceV1GetEndpointsApiAxiosParamCreator(configuration)
     return {
         /**
-         * Get a list of endpoints filtered down by the passed parameters.
+         * Provides a list of endpoints. Use this endpoint to find specific endpoints.
          * @summary List endpoints
          * @param {number} [limit] Number of items per page. If the value is 0, it will return all elements
          * @param {number} [pageNumber] Page number. Starts at first page (0), if not specified starts at first page.
@@ -2589,7 +2634,7 @@ export const EndpointResourceV1GetEndpointsApiFactory = function (configuration?
     const localVarFp = EndpointResourceV1GetEndpointsApiFp(configuration)
     return {
         /**
-         * Get a list of endpoints filtered down by the passed parameters.
+         * Provides a list of endpoints. Use this endpoint to find specific endpoints.
          * @summary List endpoints
          * @param {number} [limit] Number of items per page. If the value is 0, it will return all elements
          * @param {number} [pageNumber] Page number. Starts at first page (0), if not specified starts at first page.
@@ -2616,7 +2661,7 @@ export const EndpointResourceV1GetEndpointsApiFactory = function (configuration?
  */
 export class EndpointResourceV1GetEndpointsApi extends BaseAPI {
     /**
-     * Get a list of endpoints filtered down by the passed parameters.
+     * Provides a list of endpoints. Use this endpoint to find specific endpoints.
      * @summary List endpoints
      * @param {number} [limit] Number of items per page. If the value is 0, it will return all elements
      * @param {number} [pageNumber] Page number. Starts at first page (0), if not specified starts at first page.
@@ -2644,7 +2689,8 @@ export class EndpointResourceV1GetEndpointsApi extends BaseAPI {
 export const EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+         * @summary Add a drawer endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2689,7 +2735,8 @@ export const EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiFp = func
     const localVarAxiosParamCreator = EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+         * @summary Add a drawer endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2709,7 +2756,8 @@ export const EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiFactory =
     const localVarFp = EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+         * @summary Add a drawer endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2728,7 +2776,8 @@ export const EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApiFactory =
  */
 export class EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApi extends BaseAPI {
     /**
-     *
+     * Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+     * @summary Add a drawer endpoint
      * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2748,7 +2797,8 @@ export class EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointApi extends 
 export const EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+         * @summary Create an email subscription endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2793,7 +2843,8 @@ export const EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiFp = funct
     const localVarAxiosParamCreator = EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+         * @summary Create an email subscription endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2813,7 +2864,8 @@ export const EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiFactory = 
     const localVarFp = EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+         * @summary Create an email subscription endpoint
          * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2832,7 +2884,8 @@ export const EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApiFactory = 
  */
 export class EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApi extends BaseAPI {
     /**
-     *
+     * Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+     * @summary Create an email subscription endpoint
      * @param {RequestSystemSubscriptionProperties} requestSystemSubscriptionProperties
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2846,133 +2899,14 @@ export class EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApi extends B
 
 
 /**
- * EndpointResourceV1SubscribeEmailApi - axios parameter creator
- * @export
- */
-export const EndpointResourceV1SubscribeEmailApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        endpointResourceV1SubscribeEmail: async (applicationName: string, bundleName: string, type: EmailSubscriptionType, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'applicationName' is not null or undefined
-            assertParamExists('endpointResourceV1SubscribeEmail', 'applicationName', applicationName)
-            // verify required parameter 'bundleName' is not null or undefined
-            assertParamExists('endpointResourceV1SubscribeEmail', 'bundleName', bundleName)
-            // verify required parameter 'type' is not null or undefined
-            assertParamExists('endpointResourceV1SubscribeEmail', 'type', type)
-            const localVarPath = `/endpoints/email/subscription/{bundleName}/{applicationName}/{type}`
-                .replace(`{${"applicationName"}}`, encodeURIComponent(String(applicationName)))
-                .replace(`{${"bundleName"}}`, encodeURIComponent(String(bundleName)))
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * EndpointResourceV1SubscribeEmailApi - functional programming interface
- * @export
- */
-export const EndpointResourceV1SubscribeEmailApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = EndpointResourceV1SubscribeEmailApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        async endpointResourceV1SubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<boolean>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1SubscribeEmail(applicationName, bundleName, type, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * EndpointResourceV1SubscribeEmailApi - factory interface
- * @export
- */
-export const EndpointResourceV1SubscribeEmailApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = EndpointResourceV1SubscribeEmailApiFp(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        endpointResourceV1SubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: any): AxiosPromise<boolean> {
-            return localVarFp.endpointResourceV1SubscribeEmail(applicationName, bundleName, type, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * EndpointResourceV1SubscribeEmailApi - object-oriented interface
- * @export
- * @class EndpointResourceV1SubscribeEmailApi
- * @extends {BaseAPI}
- */
-export class EndpointResourceV1SubscribeEmailApi extends BaseAPI {
-    /**
-     *
-     * @param {string} applicationName
-     * @param {string} bundleName
-     * @param {EmailSubscriptionType} type
-     * @param {*} [options] Override http request option.
-     * @deprecated
-     * @throws {RequiredError}
-     * @memberof EndpointResourceV1SubscribeEmailApi
-     */
-    public endpointResourceV1SubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: AxiosRequestConfig) {
-        return EndpointResourceV1SubscribeEmailApiFp(this.configuration).endpointResourceV1SubscribeEmail(applicationName, bundleName, type, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
  * EndpointResourceV1TestEndpointApi - axios parameter creator
  * @export
  */
 export const EndpointResourceV1TestEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+         * @summary Generate a test notification
          * @param {string} uuid The UUID of the endpoint to test
          * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
@@ -3019,7 +2953,8 @@ export const EndpointResourceV1TestEndpointApiFp = function(configuration?: Conf
     const localVarAxiosParamCreator = EndpointResourceV1TestEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+         * @summary Generate a test notification
          * @param {string} uuid The UUID of the endpoint to test
          * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
@@ -3040,7 +2975,8 @@ export const EndpointResourceV1TestEndpointApiFactory = function (configuration?
     const localVarFp = EndpointResourceV1TestEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+         * @summary Generate a test notification
          * @param {string} uuid The UUID of the endpoint to test
          * @param {EndpointTestRequest} [endpointTestRequest]
          * @param {*} [options] Override http request option.
@@ -3060,7 +2996,8 @@ export const EndpointResourceV1TestEndpointApiFactory = function (configuration?
  */
 export class EndpointResourceV1TestEndpointApi extends BaseAPI {
     /**
-     *
+     * Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+     * @summary Generate a test notification
      * @param {string} uuid The UUID of the endpoint to test
      * @param {EndpointTestRequest} [endpointTestRequest]
      * @param {*} [options] Override http request option.
@@ -3075,133 +3012,14 @@ export class EndpointResourceV1TestEndpointApi extends BaseAPI {
 
 
 /**
- * EndpointResourceV1UnsubscribeEmailApi - axios parameter creator
- * @export
- */
-export const EndpointResourceV1UnsubscribeEmailApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        endpointResourceV1UnsubscribeEmail: async (applicationName: string, bundleName: string, type: EmailSubscriptionType, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'applicationName' is not null or undefined
-            assertParamExists('endpointResourceV1UnsubscribeEmail', 'applicationName', applicationName)
-            // verify required parameter 'bundleName' is not null or undefined
-            assertParamExists('endpointResourceV1UnsubscribeEmail', 'bundleName', bundleName)
-            // verify required parameter 'type' is not null or undefined
-            assertParamExists('endpointResourceV1UnsubscribeEmail', 'type', type)
-            const localVarPath = `/endpoints/email/subscription/{bundleName}/{applicationName}/{type}`
-                .replace(`{${"applicationName"}}`, encodeURIComponent(String(applicationName)))
-                .replace(`{${"bundleName"}}`, encodeURIComponent(String(bundleName)))
-                .replace(`{${"type"}}`, encodeURIComponent(String(type)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * EndpointResourceV1UnsubscribeEmailApi - functional programming interface
- * @export
- */
-export const EndpointResourceV1UnsubscribeEmailApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = EndpointResourceV1UnsubscribeEmailApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        async endpointResourceV1UnsubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<boolean>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1UnsubscribeEmail(applicationName, bundleName, type, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * EndpointResourceV1UnsubscribeEmailApi - factory interface
- * @export
- */
-export const EndpointResourceV1UnsubscribeEmailApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = EndpointResourceV1UnsubscribeEmailApiFp(configuration)
-    return {
-        /**
-         *
-         * @param {string} applicationName
-         * @param {string} bundleName
-         * @param {EmailSubscriptionType} type
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        endpointResourceV1UnsubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: any): AxiosPromise<boolean> {
-            return localVarFp.endpointResourceV1UnsubscribeEmail(applicationName, bundleName, type, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * EndpointResourceV1UnsubscribeEmailApi - object-oriented interface
- * @export
- * @class EndpointResourceV1UnsubscribeEmailApi
- * @extends {BaseAPI}
- */
-export class EndpointResourceV1UnsubscribeEmailApi extends BaseAPI {
-    /**
-     *
-     * @param {string} applicationName
-     * @param {string} bundleName
-     * @param {EmailSubscriptionType} type
-     * @param {*} [options] Override http request option.
-     * @deprecated
-     * @throws {RequiredError}
-     * @memberof EndpointResourceV1UnsubscribeEmailApi
-     */
-    public endpointResourceV1UnsubscribeEmail(applicationName: string, bundleName: string, type: EmailSubscriptionType, options?: AxiosRequestConfig) {
-        return EndpointResourceV1UnsubscribeEmailApiFp(this.configuration).endpointResourceV1UnsubscribeEmail(applicationName, bundleName, type, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
  * EndpointResourceV1UpdateEndpointApi - axios parameter creator
  * @export
  */
 export const EndpointResourceV1UpdateEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+         * @summary Update an endpoint
          * @param {string} id
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -3250,7 +3068,8 @@ export const EndpointResourceV1UpdateEndpointApiFp = function(configuration?: Co
     const localVarAxiosParamCreator = EndpointResourceV1UpdateEndpointApiAxiosParamCreator(configuration)
     return {
         /**
-         *
+         * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+         * @summary Update an endpoint
          * @param {string} id
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -3271,7 +3090,8 @@ export const EndpointResourceV1UpdateEndpointApiFactory = function (configuratio
     const localVarFp = EndpointResourceV1UpdateEndpointApiFp(configuration)
     return {
         /**
-         *
+         * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+         * @summary Update an endpoint
          * @param {string} id
          * @param {Endpoint} endpoint
          * @param {*} [options] Override http request option.
@@ -3291,7 +3111,8 @@ export const EndpointResourceV1UpdateEndpointApiFactory = function (configuratio
  */
 export class EndpointResourceV1UpdateEndpointApi extends BaseAPI {
     /**
-     *
+     * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+     * @summary Update an endpoint
      * @param {string} id
      * @param {Endpoint} endpoint
      * @param {*} [options] Override http request option.

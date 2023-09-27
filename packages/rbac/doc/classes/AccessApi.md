@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getPrincipalAccess
 
-▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
+▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `status?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md)\>\>
 
 Access responses are sorted in ascending order by an ID internal to the database
 
@@ -117,6 +117,7 @@ AccessApi
 | `application` | `string` | The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications. |
 | `username?` | `string` | Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header). |
 | `orderBy?` | ``"application"`` \| ``"resource_type"`` \| ``"verb"`` | Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-application |
+| `status?` | ``"all"`` \| ``"disabled"`` \| ``"enabled"`` | Set the status of users to get back. |
 | `limit?` | `number` | Parameter for selecting the amount of data returned. |
 | `offset?` | `number` | Parameter for selecting the offset of data. |
 | `options?` | `any` | Override http request option. |
@@ -127,4 +128,4 @@ AccessApi
 
 #### Defined in
 
-[api.ts:2577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2577)
+[api.ts:2585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2585)

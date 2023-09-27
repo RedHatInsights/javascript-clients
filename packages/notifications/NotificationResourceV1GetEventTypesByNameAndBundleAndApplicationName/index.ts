@@ -37,8 +37,8 @@ const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObje
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'applicationName') && Object.prototype.hasOwnProperty.call(params, 'bundleName') && Object.prototype.hasOwnProperty.call(params, 'eventTypeName')
 }
 /**
-*
-* @summary Retrieve the event type by name of a given bundle name and application name
+* Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+* @summary Retrieve an event type by bundle, application and event type names
 * @param {NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Notifications
- * The API for Notifications
+ * The API for Notifications provides endpoints that you can use to create and manage event notifications between third-party applications and the Red Hat Hybrid Cloud Console.
  *
  * The version of the OpenAPI document: v1.0
  *

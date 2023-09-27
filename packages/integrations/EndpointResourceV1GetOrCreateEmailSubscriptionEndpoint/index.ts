@@ -25,7 +25,8 @@ const isEndpointResourceV1GetOrCreateEmailSubscriptionEndpointObjectParams = (pa
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
 }
 /**
-*
+* Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+* @summary Create an email subscription endpoint
 * @param {EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

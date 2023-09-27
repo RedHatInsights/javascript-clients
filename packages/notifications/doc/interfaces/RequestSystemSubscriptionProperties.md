@@ -27,7 +27,7 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1421)
+[packages/notifications/types/index.ts:1459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1459)
 
 ___
 
@@ -41,4 +41,4 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1415)
+[packages/notifications/types/index.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1453)

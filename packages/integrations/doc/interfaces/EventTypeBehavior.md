@@ -28,7 +28,7 @@ EventTypeBehavior
 
 #### Defined in
 
-[packages/integrations/types/index.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L925)
+[packages/integrations/types/index.ts:938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L938)
 
 ___
 
@@ -42,7 +42,7 @@ EventTypeBehavior
 
 #### Defined in
 
-[packages/integrations/types/index.ts:937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L937)
+[packages/integrations/types/index.ts:950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L950)
 
 ___
 
@@ -56,4 +56,4 @@ EventTypeBehavior
 
 #### Defined in
 
-[packages/integrations/types/index.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L931)
+[packages/integrations/types/index.ts:944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L944)

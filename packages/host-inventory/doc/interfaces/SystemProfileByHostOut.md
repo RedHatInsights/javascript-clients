@@ -34,7 +34,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:1981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1981)
+[api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1982)
 
 ___
 
@@ -50,7 +50,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1987)
+[api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1988)
 
 ___
 
@@ -66,7 +66,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:1993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1993)
+[api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1994)
 
 ___
 
@@ -82,7 +82,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2005)
+[api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2006)
 
 ___
 
@@ -98,4 +98,4 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:1999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1999)
+[api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2000)

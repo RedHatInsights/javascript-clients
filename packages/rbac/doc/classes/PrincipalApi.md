@@ -132,4 +132,4 @@ PrincipalApi
 
 #### Defined in
 
-[api.ts:5289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5289)
+[api.ts:5297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5297)

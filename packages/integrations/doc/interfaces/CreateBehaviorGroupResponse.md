@@ -31,7 +31,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L498)
+[packages/integrations/types/index.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L466)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L522)
+[packages/integrations/types/index.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L490)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L504)
+[packages/integrations/types/index.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L472)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L510)
+[packages/integrations/types/index.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L478)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L516)
+[packages/integrations/types/index.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L484)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L492)
+[packages/integrations/types/index.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L460)

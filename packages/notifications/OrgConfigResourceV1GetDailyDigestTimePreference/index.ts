@@ -19,7 +19,8 @@ const isOrgConfigResourceV1GetDailyDigestTimePreferenceObjectParams = (params: [
   return params.length === 1
 }
 /**
-*
+* Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+* @summary Retrieve the daily digest time
 * @param {OrgConfigResourceV1GetDailyDigestTimePreferenceParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

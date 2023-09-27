@@ -10,9 +10,7 @@ EndpointResourceV1GetEndpointHistory/index.ts
 EndpointResourceV1GetEndpoints/index.ts
 EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts
 EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts
-EndpointResourceV1SubscribeEmail/index.ts
 EndpointResourceV1TestEndpoint/index.ts
-EndpointResourceV1UnsubscribeEmail/index.ts
 EndpointResourceV1UpdateEndpoint/index.ts
 api.ts
 base.ts
