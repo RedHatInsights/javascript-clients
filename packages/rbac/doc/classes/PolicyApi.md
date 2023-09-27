@@ -125,7 +125,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5048)
+[api.ts:5056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5056)
 
 ___
 
@@ -156,7 +156,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5060)
+[api.ts:5068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5068)
 
 ___
 
@@ -187,7 +187,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5072)
+[api.ts:5080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5080)
 
 ___
 
@@ -226,7 +226,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5090)
+[api.ts:5098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5098)
 
 ___
 
@@ -258,4 +258,4 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5103](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5103)
+[api.ts:5111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5111)

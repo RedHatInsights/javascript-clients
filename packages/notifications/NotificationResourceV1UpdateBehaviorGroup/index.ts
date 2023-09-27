@@ -31,8 +31,8 @@ const isNotificationResourceV1UpdateBehaviorGroupObjectParams = (params: [Notifi
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'updateBehaviorGroupRequest')
 }
 /**
-*
-* @summary Update a behavior group.
+* Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+* @summary Update a behavior group
 * @param {NotificationResourceV1UpdateBehaviorGroupParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

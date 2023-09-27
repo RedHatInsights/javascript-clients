@@ -131,7 +131,7 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4593)
+[api.ts:4601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4601)
 
 ___
 
@@ -173,4 +173,4 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4614)
+[api.ts:4622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4622)

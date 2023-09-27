@@ -25,7 +25,8 @@ const isEndpointResourceV1EnableEndpointObjectParams = (params: [EndpointResourc
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
+* Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+* @summary Enable an endpoint
 * @param {EndpointResourceV1EnableEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

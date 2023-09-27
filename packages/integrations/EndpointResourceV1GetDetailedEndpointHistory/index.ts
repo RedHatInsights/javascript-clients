@@ -31,7 +31,8 @@ const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [End
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'historyId') && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
+* Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+* @summary Retrieve event notification details
 * @param {EndpointResourceV1GetDetailedEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

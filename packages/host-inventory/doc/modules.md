@@ -29,9 +29,6 @@
 
 ### Interfaces
 
-- [AccountStalenessIn](interfaces/AccountStalenessIn.md)
-- [AccountStalenessInAnyOf](interfaces/AccountStalenessInAnyOf.md)
-- [AccountStalenessOutput](interfaces/AccountStalenessOutput.md)
 - [ActiveTag](interfaces/ActiveTag.md)
 - [ActiveTags](interfaces/ActiveTags.md)
 - [ActiveTagsAllOf](interfaces/ActiveTagsAllOf.md)
@@ -74,6 +71,9 @@
 - [ResourceTypesPaginationOut](interfaces/ResourceTypesPaginationOut.md)
 - [ResourceTypesQueryOutput](interfaces/ResourceTypesQueryOutput.md)
 - [ResourceTypesQueryOutputAllOf](interfaces/ResourceTypesQueryOutputAllOf.md)
+- [StalenessIn](interfaces/StalenessIn.md)
+- [StalenessInAnyOf](interfaces/StalenessInAnyOf.md)
+- [StalenessOutput](interfaces/StalenessOutput.md)
 - [StructuredTag](interfaces/StructuredTag.md)
 - [SystemProfile](interfaces/SystemProfile.md)
 - [SystemProfileAnsible](interfaces/SystemProfileAnsible.md)
@@ -102,6 +102,10 @@
 - [UnleashToggleOut](interfaces/UnleashToggleOut.md)
 - [YumRepo](interfaces/YumRepo.md)
 
+### Type Aliases
+
+- [StalenessId](modules.md#stalenessid)
+
 ### Functions
 
 - [AccountsStalenessApiAxiosParamCreator](modules.md#accountsstalenessapiaxiosparamcreator)
@@ -126,6 +130,18 @@
 - [UnleashApiFactory](modules.md#unleashapifactory)
 - [UnleashApiFp](modules.md#unleashapifp)
 
+## Type Aliases
+
+### StalenessId
+
+Ƭ **StalenessId**: `string`
+
+**`Export`**
+
+#### Defined in
+
+[api.ts:1382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1382)
+
 ## Functions
 
 ### AccountsStalenessApiAxiosParamCreator
@@ -148,15 +164,15 @@ AccountsStalenessApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAccountStalenessDeleteStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiStalenessCreateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiStalenessDeleteStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiStalenessGetDefaultStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiStalenessGetStaleness` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiStalenessUpdateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
-[api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2659)
+[api.ts:2660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2660)
 
 ___
 
@@ -182,15 +198,15 @@ AccountsStalenessApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
-| `apiAccountStalenessDeleteStaleness` | (`options?`: `any`) => `AxiosPromise`<`void`\> |
-| `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
-| `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
-| `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\> |
+| `apiStalenessCreateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\> |
+| `apiStalenessDeleteStaleness` | (`options?`: `any`) => `AxiosPromise`<`void`\> |
+| `apiStalenessGetDefaultStaleness` | (`options?`: `any`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\> |
+| `apiStalenessGetStaleness` | (`options?`: `any`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\> |
+| `apiStalenessUpdateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\> |
 
 #### Defined in
 
-[api.ts:2942](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2942)
+[api.ts:2998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2998)
 
 ___
 
@@ -214,15 +230,15 @@ AccountsStalenessApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `apiAccountStalenessCreateStaleness` | (`accountStalenessIn`: [`AccountStalenessIn`](interfaces/AccountStalenessIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
-| `apiAccountStalenessDeleteStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `apiAccountStalenessGetStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
-| `apiAccountStalenessResetStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
-| `apiAccountStalenessUpdateStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AccountStalenessOutput`](interfaces/AccountStalenessOutput.md)\>\> |
+| `apiStalenessCreateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\>\> |
+| `apiStalenessDeleteStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `apiStalenessGetDefaultStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\>\> |
+| `apiStalenessGetStaleness` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\>\> |
+| `apiStalenessUpdateStaleness` | (`stalenessIn`: [`StalenessIn`](interfaces/StalenessIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`StalenessOutput`](interfaces/StalenessOutput.md)\>\> |
 
 #### Defined in
 
-[api.ts:2867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2867)
+[api.ts:2922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2922)
 
 ___
 
@@ -247,8 +263,8 @@ GroupsApi - axios parameter creator
 | Name | Type |
 | :------ | :------ |
 | `apiAssignmentRuleCreateAssignmentRule` | (`assignmentRuleIn`: [`AssignmentRuleIn`](interfaces/AssignmentRuleIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiGroupDeleteGroups` | (`groupIdList`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiGroupGetGroupList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_count"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -259,7 +275,7 @@ GroupsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3063)
+[api.ts:3121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3121)
 
 ___
 
@@ -286,8 +302,8 @@ GroupsApi - factory interface
 | Name | Type |
 | :------ | :------ |
 | `apiAssignmentRuleCreateAssignmentRule` | (`assignmentRuleIn`: [`AssignmentRuleIn`](interfaces/AssignmentRuleIn.md), `options?`: `any`) => `AxiosPromise`<[`AssignmentRuleOut`](interfaces/AssignmentRuleOut.md)\> |
-| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\> |
-| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\> |
+| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\> |
+| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\> |
 | `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\> |
 | `apiGroupDeleteGroups` | (`groupIdList`: `string`[], `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `apiGroupGetGroupList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_count"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\> |
@@ -298,7 +314,7 @@ GroupsApi - factory interface
 
 #### Defined in
 
-[api.ts:3806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3806)
+[api.ts:3864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3864)
 
 ___
 
@@ -323,8 +339,8 @@ GroupsApi - functional programming interface
 | Name | Type |
 | :------ | :------ |
 | `apiAssignmentRuleCreateAssignmentRule` | (`assignmentRuleIn`: [`AssignmentRuleIn`](interfaces/AssignmentRuleIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AssignmentRuleOut`](interfaces/AssignmentRuleOut.md)\>\> |
-| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\>\> |
-| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\>\> |
+| `apiAssignmentRuleGetAssignmentRulesById` | (`assignmentRuleIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\>\> |
+| `apiAssignmentRuleGetAssignmentRulesList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"group_id"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AssignmentRuleQueryOutput`](interfaces/AssignmentRuleQueryOutput.md)\>\> |
 | `apiGroupCreateGroup` | (`groupIn`: [`GroupIn`](interfaces/GroupIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupOutWithHostCount`](interfaces/GroupOutWithHostCount.md)\>\> |
 | `apiGroupDeleteGroups` | (`groupIdList`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `apiGroupGetGroupList` | (`name?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"name"`` \| ``"host_count"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`GroupQueryOutput`](interfaces/GroupQueryOutput.md)\>\> |
@@ -335,7 +351,7 @@ GroupsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3638)
+[api.ts:3696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3696)
 
 ___
 
@@ -362,11 +378,11 @@ HostsApi - axios parameter creator
 | `apiHostDeleteAllHosts` | (`confirmDeleteAll?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiHostDeleteHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiHostDeleteHostsByFilter` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `filter?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiHostHostCheckin` | (`createCheckIn`: [`CreateCheckIn`](interfaces/CreateCheckIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiHostMergeFacts` | (`hostIdList`: `string`[], `namespace`: `string`, `body`: `object`, `branchId?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `apiHostPatchHostById` | (`hostIdList`: `string`[], `patchHostIn`: [`PatchHostIn`](interfaces/PatchHostIn.md), `branchId?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -374,7 +390,7 @@ HostsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4083)
+[api.ts:4141](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4141)
 
 ___
 
@@ -403,11 +419,11 @@ HostsApi - factory interface
 | `apiHostDeleteAllHosts` | (`confirmDeleteAll?`: `boolean`, `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `apiHostDeleteHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `apiHostDeleteHostsByFilter` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `filter?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\> |
-| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\> |
-| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`SystemProfileByHostOut`](interfaces/SystemProfileByHostOut.md)\> |
-| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`TagCountOut`](interfaces/TagCountOut.md)\> |
-| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `AxiosPromise`<[`TagsOut`](interfaces/TagsOut.md)\> |
+| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\> |
+| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\> |
+| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `AxiosPromise`<[`SystemProfileByHostOut`](interfaces/SystemProfileByHostOut.md)\> |
+| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `AxiosPromise`<[`TagCountOut`](interfaces/TagCountOut.md)\> |
+| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `AxiosPromise`<[`TagsOut`](interfaces/TagsOut.md)\> |
 | `apiHostHostCheckin` | (`createCheckIn`: [`CreateCheckIn`](interfaces/CreateCheckIn.md), `options?`: `any`) => `AxiosPromise`<[`HostOut`](interfaces/HostOut.md)\> |
 | `apiHostMergeFacts` | (`hostIdList`: `string`[], `namespace`: `string`, `body`: `object`, `branchId?`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
 | `apiHostPatchHostById` | (`hostIdList`: `string`[], `patchHostIn`: [`PatchHostIn`](interfaces/PatchHostIn.md), `branchId?`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
@@ -415,7 +431,7 @@ HostsApi - factory interface
 
 #### Defined in
 
-[api.ts:5188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5188)
+[api.ts:5246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5246)
 
 ___
 
@@ -442,11 +458,11 @@ HostsApi - functional programming interface
 | `apiHostDeleteAllHosts` | (`confirmDeleteAll?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `apiHostDeleteHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `apiHostDeleteHostsByFilter` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `filter?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\>\> |
-| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\>\> |
-| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemProfileByHostOut`](interfaces/SystemProfileByHostOut.md)\>\> |
-| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`TagCountOut`](interfaces/TagCountOut.md)\>\> |
-| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`TagsOut`](interfaces/TagsOut.md)\>\> |
+| `apiHostGetHostById` | (`hostIdList`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\>\> |
+| `apiHostGetHostList` | (`displayName?`: `string`, `fqdn?`: `string`, `hostnameOrId?`: `string`, `insightsId?`: `string`, `providerId?`: `string`, `providerType?`: ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"``, `updatedStart?`: `string`, `updatedEnd?`: `string`, `groupName?`: `string`[], `branchId?`: `string`, `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `staleness?`: (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[], `tags?`: `string`[], `registeredWith?`: (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[], `filter?`: { `[key: string]`: `object`;  }, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HostQueryOutput`](interfaces/HostQueryOutput.md)\>\> |
+| `apiHostGetHostSystemProfileById` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `branchId?`: `string`, `fields?`: { `[key: string]`: `object`;  }, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemProfileByHostOut`](interfaces/SystemProfileByHostOut.md)\>\> |
+| `apiHostGetHostTagCount` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`TagCountOut`](interfaces/TagCountOut.md)\>\> |
+| `apiHostGetHostTags` | (`hostIdList`: `string`[], `perPage?`: `number`, `page?`: `number`, `orderBy?`: ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"``, `orderHow?`: ``"ASC"`` \| ``"DESC"``, `search?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`TagsOut`](interfaces/TagsOut.md)\>\> |
 | `apiHostHostCheckin` | (`createCheckIn`: [`CreateCheckIn`](interfaces/CreateCheckIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HostOut`](interfaces/HostOut.md)\>\> |
 | `apiHostMergeFacts` | (`hostIdList`: `string`[], `namespace`: `string`, `body`: `object`, `branchId?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 | `apiHostPatchHostById` | (`hostIdList`: `string`[], `patchHostIn`: [`PatchHostIn`](interfaces/PatchHostIn.md), `branchId?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
@@ -454,7 +470,7 @@ HostsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4951](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4951)
+[api.ts:5009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5009)
 
 ___
 
@@ -483,7 +499,7 @@ ResourceTypesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5591)
+[api.ts:5649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5649)
 
 ___
 
@@ -514,7 +530,7 @@ ResourceTypesApi - factory interface
 
 #### Defined in
 
-[api.ts:5741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5741)
+[api.ts:5799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5799)
 
 ___
 
@@ -543,7 +559,7 @@ ResourceTypesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5701)
+[api.ts:5759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5759)
 
 ___
 
@@ -574,7 +590,7 @@ SystemProfileApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5810)
+[api.ts:5868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5868)
 
 ___
 
@@ -607,7 +623,7 @@ SystemProfileApi - factory interface
 
 #### Defined in
 
-[api.ts:6174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6174)
+[api.ts:6232](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6232)
 
 ___
 
@@ -638,7 +654,7 @@ SystemProfileApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6090](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6090)
+[api.ts:6148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6148)
 
 ___
 
@@ -666,7 +682,7 @@ TagsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:6319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6319)
+[api.ts:6377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6377)
 
 ___
 
@@ -696,7 +712,7 @@ TagsApi - factory interface
 
 #### Defined in
 
-[api.ts:6500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6500)
+[api.ts:6558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6558)
 
 ___
 
@@ -724,7 +740,7 @@ TagsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6460)
+[api.ts:6518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6518)
 
 ___
 
@@ -752,7 +768,7 @@ UnleashApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:6575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6575)
+[api.ts:6633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6633)
 
 ___
 
@@ -782,7 +798,7 @@ UnleashApi - factory interface
 
 #### Defined in
 
-[api.ts:6644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6644)
+[api.ts:6702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6702)
 
 ___
 
@@ -810,4 +826,4 @@ UnleashApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6622)
+[api.ts:6680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6680)

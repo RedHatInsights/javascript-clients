@@ -1,5 +1,7 @@
 .gitignore
 .npmignore
+DrawerResourceV1GetDrawerEntries/index.ts
+DrawerResourceV1UpdateNotificationReadStatus/index.ts
 EventResourceV1GetEvents/index.ts
 NotificationResourceV1AppendBehaviorGroupToEventType/index.ts
 NotificationResourceV1CreateBehaviorGroup/index.ts
@@ -20,9 +22,6 @@ NotificationResourceV1UpdateBehaviorGroupActions/index.ts
 NotificationResourceV1UpdateEventTypeBehaviors/index.ts
 OrgConfigResourceV1GetDailyDigestTimePreference/index.ts
 OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts
-UserConfigResourceV1GetPreferences/index.ts
-UserConfigResourceV1GetSettingsSchema/index.ts
-UserConfigResourceV1SaveSettings/index.ts
 api.ts
 base.ts
 common.ts

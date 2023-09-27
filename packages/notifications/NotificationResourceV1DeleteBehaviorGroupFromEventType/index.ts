@@ -31,8 +31,8 @@ const isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams = (pa
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
 }
 /**
-*
-* @summary Delete a behavior group from the given event type.
+* Adds a behavior group to the specified event type.
+* @summary Add a behavior group to an event type
 * @param {NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

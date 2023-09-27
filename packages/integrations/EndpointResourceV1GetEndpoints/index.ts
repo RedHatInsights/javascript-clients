@@ -67,7 +67,7 @@ const isEndpointResourceV1GetEndpointsObjectParams = (params: [EndpointResourceV
   return params.length === 1 && true && true && true && true && true && true && true && true
 }
 /**
-* Get a list of endpoints filtered down by the passed parameters.
+* Provides a list of endpoints. Use this endpoint to find specific endpoints.
 * @summary List endpoints
 * @param {EndpointResourceV1GetEndpointsParams} config with all available params.
 * @param {*} [options] Override http request option.

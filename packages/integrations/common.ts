@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * Integrations
- * The API for Integrations
+ * The API for Integrations provides endpoints that you can use to create and manage integrations between third-party applications and the Red Hat Hybrid Cloud Console.
  *
  * The version of the OpenAPI document: v1.0
  *

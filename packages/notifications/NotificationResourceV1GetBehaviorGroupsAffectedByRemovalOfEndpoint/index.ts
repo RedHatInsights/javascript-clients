@@ -25,8 +25,8 @@ const isNotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointObject
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId')
 }
 /**
-*
-* @summary Retrieve the behavior groups affected by the removal of an endpoint.
+* Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+* @summary List the behavior groups affected by the removal of an endpoint
 * @param {NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

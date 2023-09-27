@@ -28,4 +28,4 @@ GroupQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)
+[api.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L708)

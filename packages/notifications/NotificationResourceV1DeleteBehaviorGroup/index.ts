@@ -25,8 +25,8 @@ const isNotificationResourceV1DeleteBehaviorGroupObjectParams = (params: [Notifi
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
-* @summary Delete a behavior group.
+* Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+* @summary Delete a behavior group
 * @param {NotificationResourceV1DeleteBehaviorGroupParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

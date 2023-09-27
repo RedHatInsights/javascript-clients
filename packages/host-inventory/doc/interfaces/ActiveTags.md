@@ -32,7 +32,7 @@ ActiveTags
 
 #### Defined in
 
-[api.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L175)
+[api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L52)
 
 ___
 
@@ -48,7 +48,7 @@ ActiveTags
 
 #### Defined in
 
-[api.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L181)
+[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L58)
 
 ___
 
@@ -64,7 +64,7 @@ ActiveTags
 
 #### Defined in
 
-[api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L187)
+[api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L64)
 
 ___
 
@@ -78,7 +78,7 @@ ActiveTags
 
 #### Defined in
 
-[api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L199)
+[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L76)
 
 ___
 
@@ -94,4 +94,4 @@ ActiveTags
 
 #### Defined in
 
-[api.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L193)
+[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L70)

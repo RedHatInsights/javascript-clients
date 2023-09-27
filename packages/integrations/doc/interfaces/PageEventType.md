@@ -28,7 +28,7 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1327)
+[packages/integrations/types/index.ts:1365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1365)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1333)
+[packages/integrations/types/index.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1371)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1339)
+[packages/integrations/types/index.ts:1377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1377)

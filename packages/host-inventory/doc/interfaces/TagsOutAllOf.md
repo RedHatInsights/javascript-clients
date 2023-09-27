@@ -32,4 +32,4 @@ TagsOutAllOf
 
 #### Defined in
 
-[api.ts:2590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2590)
+[api.ts:2591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2591)

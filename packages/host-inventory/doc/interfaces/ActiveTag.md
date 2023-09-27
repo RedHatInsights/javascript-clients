@@ -31,7 +31,7 @@ ActiveTag
 
 #### Defined in
 
-[api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L162)
+[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)
 
 ___
 
@@ -45,4 +45,4 @@ ActiveTag
 
 #### Defined in
 
-[api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L156)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L33)

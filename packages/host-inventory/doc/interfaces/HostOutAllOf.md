@@ -41,7 +41,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1001)
+[api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L878)
 
 ___
 
@@ -57,7 +57,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L995)
+[api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L872)
 
 ___
 
@@ -73,7 +73,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1019)
+[api.ts:896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L896)
 
 ___
 
@@ -89,7 +89,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1049)
+[api.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L926)
 
 ___
 
@@ -105,7 +105,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L989)
+[api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L866)
 
 ___
 
@@ -121,7 +121,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1031)
+[api.ts:908](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L908)
 
 ___
 
@@ -137,7 +137,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1067)
+[api.ts:944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L944)
 
 ___
 
@@ -153,7 +153,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1013)
+[api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L890)
 
 ___
 
@@ -169,7 +169,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1007)
+[api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L884)
 
 ___
 
@@ -189,7 +189,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1061)
+[api.ts:938](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L938)
 
 ___
 
@@ -205,7 +205,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1055)
+[api.ts:932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L932)
 
 ___
 
@@ -221,7 +221,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1037)
+[api.ts:914](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L914)
 
 ___
 
@@ -237,7 +237,7 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1043)
+[api.ts:920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L920)
 
 ___
 
@@ -253,4 +253,4 @@ HostOutAllOf
 
 #### Defined in
 
-[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1025)
+[api.ts:902](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L902)

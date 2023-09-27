@@ -132,7 +132,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3945](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3945)
+[api.ts:4003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4003)
 
 ___
 
@@ -159,7 +159,7 @@ GroupsApi
 | `assignmentRuleIdList` | `string`[] | A comma-separated list of assignment-rule IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"`` | Ordering field name |
+| `orderBy?` | ``"name"`` \| ``"group_id"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
 | `options?` | `any` | Override http request option. |
 
@@ -169,7 +169,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3961)
+[api.ts:4019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4019)
 
 ___
 
@@ -196,7 +196,7 @@ GroupsApi
 | `name?` | `string` | Filter by assignment-rule name |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"name"`` \| ``"org_id"`` \| ``"account"`` \| ``"group_id"`` | Ordering field name |
+| `orderBy?` | ``"name"`` \| ``"group_id"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for name, and to DESC for host_ids |
 | `options?` | `any` | Override http request option. |
 
@@ -206,7 +206,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3977)
+[api.ts:4035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4035)
 
 ___
 
@@ -214,11 +214,11 @@ ___
 
 ▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
-Creates a new group containing the hosts associated with the host IDs provided. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
 
 **`Summary`**
 
-Create a new group matching the provided name and list of hosts IDs [Not Implemented]
+Create a new group matching the provided name and list of hosts IDs
 
 **`Throws`**
 
@@ -239,7 +239,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:3989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3989)
+[api.ts:4047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4047)
 
 ___
 
@@ -247,11 +247,11 @@ ___
 
 ▸ **apiGroupDeleteGroups**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
-Delete a list of groups. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
 
 **`Summary`**
 
-Delete a list of groups [Not Implemented]
+Delete a list of groups
 
 **`Throws`**
 
@@ -272,7 +272,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4001)
+[api.ts:4059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4059)
 
 ___
 
@@ -280,11 +280,11 @@ ___
 
 ▸ **apiGroupGetGroupList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
-Read the entire list of all groups available to the account. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
+Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
 
 **`Summary`**
 
-Read the entire list of groups [Not Implemented]
+Read the entire list of groups
 
 **`Throws`**
 
@@ -309,7 +309,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4017)
+[api.ts:4075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4075)
 
 ___
 
@@ -317,11 +317,11 @@ ___
 
 ▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
 
-Find one or more groups by their IDs. [Not Implemented] <br /><br /> Required permissions: inventory:groups:read
+Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
 
 **`Summary`**
 
-Find groups by their IDs [Not Implemented]
+Find groups by their IDs
 
 **`Throws`**
 
@@ -346,7 +346,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4033)
+[api.ts:4091](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4091)
 
 ___
 
@@ -354,11 +354,11 @@ ___
 
 ▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
 
-Merge group information. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+Merge group information. <br /><br /> Required permissions: inventory:groups:write
 
 **`Summary`**
 
-Merge group information [Not Implemented]
+Merge group information
 
 **`Throws`**
 
@@ -380,7 +380,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4046)
+[api.ts:4104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4104)
 
 ___
 
@@ -414,7 +414,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4059)
+[api.ts:4117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4117)
 
 ___
 
@@ -422,11 +422,11 @@ ___
 
 ▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
-Delete one or more hosts from a group. [Not Implemented] <br /><br /> Required permissions: inventory:groups:write
+Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
 
 **`Summary`**
 
-Delete one or more hosts from a group [Not Implemented]
+Delete one or more hosts from a group
 
 **`Throws`**
 
@@ -448,4 +448,4 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4072)
+[api.ts:4130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4130)

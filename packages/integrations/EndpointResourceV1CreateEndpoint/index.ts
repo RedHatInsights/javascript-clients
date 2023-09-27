@@ -25,7 +25,7 @@ const isEndpointResourceV1CreateEndpointObjectParams = (params: [EndpointResourc
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpoint')
 }
 /**
-* Create a new endpoint from the passed data
+* Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
 * @summary Create a new endpoint
 * @param {EndpointResourceV1CreateEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.

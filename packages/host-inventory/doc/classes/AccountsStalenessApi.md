@@ -26,11 +26,11 @@ AccountsStalenessApi - object-oriented interface
 
 ### Methods
 
-- [apiAccountStalenessCreateStaleness](AccountsStalenessApi.md#apiaccountstalenesscreatestaleness)
-- [apiAccountStalenessDeleteStaleness](AccountsStalenessApi.md#apiaccountstalenessdeletestaleness)
-- [apiAccountStalenessGetStaleness](AccountsStalenessApi.md#apiaccountstalenessgetstaleness)
-- [apiAccountStalenessResetStaleness](AccountsStalenessApi.md#apiaccountstalenessresetstaleness)
-- [apiAccountStalenessUpdateStaleness](AccountsStalenessApi.md#apiaccountstalenessupdatestaleness)
+- [apiStalenessCreateStaleness](AccountsStalenessApi.md#apistalenesscreatestaleness)
+- [apiStalenessDeleteStaleness](AccountsStalenessApi.md#apistalenessdeletestaleness)
+- [apiStalenessGetDefaultStaleness](AccountsStalenessApi.md#apistalenessgetdefaultstaleness)
+- [apiStalenessGetStaleness](AccountsStalenessApi.md#apistalenessgetstaleness)
+- [apiStalenessUpdateStaleness](AccountsStalenessApi.md#apistalenessupdatestaleness)
 
 ## Constructors
 
@@ -98,9 +98,9 @@ BaseAPI.configuration
 
 ## Methods
 
-### apiAccountStalenessCreateStaleness
+### apiStalenessCreateStaleness
 
-▸ **apiAccountStalenessCreateStaleness**(`accountStalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+▸ **apiStalenessCreateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 Create account staleness record. Required permissions: inventory:TODO:write
 
@@ -118,22 +118,22 @@ AccountsStalenessApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `accountStalenessIn` | [`AccountStalenessIn`](../interfaces/AccountStalenessIn.md) | Data required to create a record for a account staleness. |
+| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to create a record for a account staleness. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3008)
+[api.ts:3065](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3065)
 
 ___
 
-### apiAccountStalenessDeleteStaleness
+### apiStalenessDeleteStaleness
 
-▸ **apiAccountStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
 
@@ -159,13 +159,13 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3019)
+[api.ts:3076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3076)
 
 ___
 
-### apiAccountStalenessGetStaleness
+### apiStalenessGetDefaultStaleness
 
-▸ **apiAccountStalenessGetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+▸ **apiStalenessGetDefaultStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
 
@@ -187,23 +187,23 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3030)
+[api.ts:3087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3087)
 
 ___
 
-### apiAccountStalenessResetStaleness
+### apiStalenessGetStaleness
 
-▸ **apiAccountStalenessResetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+▸ **apiStalenessGetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
-Reset account staleness record. Required permissions: inventory:TODO:read
+Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
 
 **`Summary`**
 
-Reset account staleness
+Read the entire list of account staleness
 
 **`Throws`**
 
@@ -219,19 +219,19 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3041)
+[api.ts:3098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3098)
 
 ___
 
-### apiAccountStalenessUpdateStaleness
+### apiStalenessUpdateStaleness
 
-▸ **apiAccountStalenessUpdateStaleness**(`options?`): `Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+▸ **apiStalenessUpdateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
-Update account staleness record. Required permissions: inventory:TODO:write
+Update account staleness record. Required permissions: inventory:staleness:write
 
 **`Summary`**
 
@@ -247,12 +247,13 @@ AccountsStalenessApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to update a record for a account staleness. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccountStalenessOutput`](../interfaces/AccountStalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:3052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3052)
+[api.ts:3110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3110)

@@ -25,8 +25,8 @@ const isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams = (params: 
   return params.length === 1 && true
 }
 /**
-*
-* @summary Save the daily digest UTC time preference. To cover all time zones conversion to UTC, the accepted minute values are 00, 15, 30 and 45.
+* Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+* @summary Set the daily digest time
 * @param {OrgConfigResourceV1SaveDailyDigestTimePreferenceParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

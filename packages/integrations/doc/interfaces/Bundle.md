@@ -30,7 +30,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L349)
+[packages/integrations/types/index.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L330)
 
 ___
 
@@ -44,7 +44,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L373)
+[packages/integrations/types/index.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L354)
 
 ___
 
@@ -58,7 +58,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L361)
+[packages/integrations/types/index.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L342)
 
 ___
 
@@ -72,7 +72,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L367)
+[packages/integrations/types/index.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L348)
 
 ___
 
@@ -86,4 +86,4 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L355)
+[packages/integrations/types/index.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L336)

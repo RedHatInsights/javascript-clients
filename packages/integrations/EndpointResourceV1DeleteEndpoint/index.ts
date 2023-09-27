@@ -25,7 +25,8 @@ const isEndpointResourceV1DeleteEndpointObjectParams = (params: [EndpointResourc
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
+* Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+* @summary Delete an endpoint
 * @param {EndpointResourceV1DeleteEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

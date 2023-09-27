@@ -139,7 +139,7 @@ ___
 
 ### subscription\_type
 
-• **subscription\_type**: ``"DAILY"``
+• **subscription\_type**: [`EmailSubscriptionType`](../enums/EmailSubscriptionType.md)
 
 **`Memberof`**
 

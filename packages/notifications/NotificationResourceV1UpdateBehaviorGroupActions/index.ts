@@ -31,8 +31,8 @@ const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: 
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId') && true
 }
 /**
-*
-* @summary Update the list of actions of a behavior group.
+* Updates the list of actions to be executed in that particular behavior group after an event is received.
+* @summary Update the list of behavior group actions
 * @param {NotificationResourceV1UpdateBehaviorGroupActionsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

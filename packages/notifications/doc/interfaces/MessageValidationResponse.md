@@ -30,4 +30,4 @@ MessageValidationResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1170)
+[packages/notifications/types/index.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1183)

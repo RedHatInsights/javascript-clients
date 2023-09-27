@@ -25,7 +25,8 @@ const isEndpointResourceV1DisableEndpointObjectParams = (params: [EndpointResour
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
-*
+* Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+* @summary Disable an endpoint
 * @param {EndpointResourceV1DisableEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

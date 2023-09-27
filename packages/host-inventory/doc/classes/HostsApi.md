@@ -134,7 +134,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5388)
+[api.ts:5446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5446)
 
 ___
 
@@ -168,7 +168,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5401)
+[api.ts:5459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5459)
 
 ___
 
@@ -213,7 +213,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5425)
+[api.ts:5483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5483)
 
 ___
 
@@ -241,7 +241,7 @@ HostsApi
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `fields?` | `Object` | Fetches only mentioned system_profile fields |
 | `options?` | `any` | Override http request option. |
@@ -252,7 +252,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5443)
+[api.ts:5501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5501)
 
 ___
 
@@ -288,7 +288,7 @@ HostsApi
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
@@ -303,7 +303,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5473)
+[api.ts:5531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5531)
 
 ___
 
@@ -330,7 +330,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `branchId?` | `string` | Filter by branch_id |
 | `fields?` | `Object` | Fetches only mentioned system_profile fields |
@@ -342,7 +342,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5491)
+[api.ts:5549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5549)
 
 ___
 
@@ -369,7 +369,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `options?` | `any` | Override http request option. |
 
@@ -379,7 +379,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5507)
+[api.ts:5565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5565)
 
 ___
 
@@ -406,7 +406,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `search?` | `string` | Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching. |
 | `options?` | `any` | Override http request option. |
@@ -417,7 +417,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5524)
+[api.ts:5582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5582)
 
 ___
 
@@ -450,7 +450,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5536)
+[api.ts:5594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5594)
 
 ___
 
@@ -486,7 +486,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5551)
+[api.ts:5609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5609)
 
 ___
 
@@ -521,7 +521,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5565)
+[api.ts:5623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5623)
 
 ___
 
@@ -557,4 +557,4 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5580)
+[api.ts:5638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5638)

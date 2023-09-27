@@ -195,25 +195,6 @@ export interface ApplicationSettingsValue {
 /**
  *
  * @export
- * @interface ApplicationSettingsValue1
- */
-export interface ApplicationSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: boolean; }}
-     * @memberof ApplicationSettingsValue1
-     */
-    'notifications'?: { [key: string]: boolean; };
-    /**
-     *
-     * @type {boolean}
-     * @memberof ApplicationSettingsValue1
-     */
-    'hasForcedEmail'?: boolean;
-}
-/**
- *
- * @export
  * @interface BasicAuthentication
  */
 export interface BasicAuthentication {
@@ -388,19 +369,6 @@ export interface BundleSettingsValue {
 /**
  *
  * @export
- * @interface BundleSettingsValue1
- */
-export interface BundleSettingsValue1 {
-    /**
-     *
-     * @type {{ [key: string]: ApplicationSettingsValue1; }}
-     * @memberof BundleSettingsValue1
-     */
-    'applications'?: { [key: string]: ApplicationSettingsValue1; };
-}
-/**
- *
- * @export
  * @interface CamelProperties
  */
 export interface CamelProperties {
@@ -551,6 +519,49 @@ export interface CurrentStatus {
 /**
  *
  * @export
+ * @interface DrawerEntryPayload
+ */
+export interface DrawerEntryPayload {
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'created'?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof DrawerEntryPayload
+     */
+    'read': boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'source'?: string;
+}
+/**
+ *
+ * @export
  * @interface DuplicateNameMigrationReport
  */
 export interface DuplicateNameMigrationReport {
@@ -574,7 +585,9 @@ export interface DuplicateNameMigrationReport {
  */
 
 export const EmailSubscriptionType = {
-    Daily: 'DAILY'
+    Instant: 'INSTANT',
+    Daily: 'DAILY',
+    Drawer: 'DRAWER'
 } as const;
 
 export type EmailSubscriptionType = typeof EmailSubscriptionType[keyof typeof EmailSubscriptionType];
@@ -838,10 +851,10 @@ export interface EventLogEntryAction {
     'endpoint_id'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof EventLogEntryAction
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
 }
 
 
@@ -1227,10 +1240,10 @@ export interface NotificationHistory {
     'endpointId'?: string;
     /**
      *
-     * @type {{ [key: string]: object; }}
+     * @type {{ [key: string]: any; }}
      * @memberof NotificationHistory
      */
-    'details'?: { [key: string]: object; };
+    'details'?: { [key: string]: any; };
     /**
      *
      * @type {EndpointType}
@@ -1285,6 +1298,31 @@ export interface PageBehaviorGroup {
      *
      * @type {Meta}
      * @memberof PageBehaviorGroup
+     */
+    'meta': Meta;
+}
+/**
+ *
+ * @export
+ * @interface PageDrawerEntryPayload
+ */
+export interface PageDrawerEntryPayload {
+    /**
+     *
+     * @type {Array<DrawerEntryPayload>}
+     * @memberof PageDrawerEntryPayload
+     */
+    'data': Array<DrawerEntryPayload>;
+    /**
+     *
+     * @type {{ [key: string]: string; }}
+     * @memberof PageDrawerEntryPayload
+     */
+    'links': { [key: string]: string; };
+    /**
+     *
+     * @type {Meta}
+     * @memberof PageDrawerEntryPayload
      */
     'meta': Meta;
 }
@@ -1435,19 +1473,6 @@ export interface ServerInfo {
 }
 
 
-/**
- *
- * @export
- * @interface SettingsValues
- */
-export interface SettingsValues {
-    /**
-     *
-     * @type {{ [key: string]: BundleSettingsValue1; }}
-     * @memberof SettingsValues
-     */
-    'bundles'?: { [key: string]: BundleSettingsValue1; };
-}
 /**
  *
  * @export
@@ -1614,21 +1639,21 @@ export interface UpdateBehaviorGroupRequest {
 /**
  *
  * @export
- * @interface UserConfigPreferences
+ * @interface UpdateNotificationDrawerStatus
  */
-export interface UserConfigPreferences {
+export interface UpdateNotificationDrawerStatus {
+    /**
+     *
+     * @type {Set<string>}
+     * @memberof UpdateNotificationDrawerStatus
+     */
+    'notification_ids': Set<string>;
     /**
      *
      * @type {boolean}
-     * @memberof UserConfigPreferences
+     * @memberof UpdateNotificationDrawerStatus
      */
-    'instant_email'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof UserConfigPreferences
-     */
-    'daily_email'?: boolean;
+    'read_status': boolean;
 }
 /**
  *

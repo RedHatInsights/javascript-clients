@@ -25,8 +25,8 @@ const isNotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupObjec
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId')
 }
 /**
-*
-* @summary Retrieve the event types affected by the removal of a behavior group.
+* Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+* @summary List the event types affected by the removal of a behavior group
 * @param {NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

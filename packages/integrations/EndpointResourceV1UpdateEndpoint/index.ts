@@ -31,7 +31,8 @@ const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourc
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
 }
 /**
-*
+* Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+* @summary Update an endpoint
 * @param {EndpointResourceV1UpdateEndpointParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

@@ -25,8 +25,8 @@ const isNotificationResourceV1GetBundleByNameObjectParams = (params: [Notificati
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'bundleName')
 }
 /**
-*
-* @summary Retrieve the bundle by name
+* Retrieves the details of a bundle by searching by its name.
+* @summary Retrieve a bundle by name
 * @param {NotificationResourceV1GetBundleByNameParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

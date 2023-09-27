@@ -31,8 +31,8 @@ const isNotificationResourceV1UpdateEventTypeBehaviorsObjectParams = (params: [N
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true
 }
 /**
-*
-* @summary Update the list of behavior groups of an event type.
+* Updates the list of behavior groups associated with an event type.
+* @summary Update the list of behavior groups for an event type
 * @param {NotificationResourceV1UpdateEventTypeBehaviorsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
