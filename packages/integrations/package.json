@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/integrations-client",
-    "version": "2.0.1",
+    "version": "2.0.3",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
