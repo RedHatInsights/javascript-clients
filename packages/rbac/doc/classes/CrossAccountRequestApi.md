@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### createCrossAccountRequests
 
-▸ **createCrossAccountRequests**(`crossAccountRequestIn`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestOut`](../interfaces/CrossAccountRequestOut.md), `any`\>\>
+▸ **createCrossAccountRequests**(`crossAccountRequestIn`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestOut`](../interfaces/CrossAccountRequestOut.md)\>\>
 
 **`Summary`**
 
@@ -121,7 +121,7 @@ CrossAccountRequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CrossAccountRequestOut`](../interfaces/CrossAccountRequestOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`CrossAccountRequestOut`](../interfaces/CrossAccountRequestOut.md)\>\>
 
 #### Defined in
 
@@ -131,7 +131,7 @@ ___
 
 ### getCrossAccountRequest
 
-▸ **getCrossAccountRequest**(`uuid`, `queryBy?`, `account?`, `approvedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+▸ **getCrossAccountRequest**(`uuid`, `queryBy?`, `account?`, `approvedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 **`Summary`**
 
@@ -155,7 +155,7 @@ CrossAccountRequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 #### Defined in
 
@@ -165,7 +165,7 @@ ___
 
 ### listCrossAccountRequests
 
-▸ **listCrossAccountRequests**(`limit?`, `offset?`, `queryBy?`, `account?`, `orgId?`, `approvedOnly?`, `status?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestPagination`](../interfaces/CrossAccountRequestPagination.md), `any`\>\>
+▸ **listCrossAccountRequests**(`limit?`, `offset?`, `queryBy?`, `account?`, `orgId?`, `approvedOnly?`, `status?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestPagination`](../interfaces/CrossAccountRequestPagination.md)\>\>
 
 By default, responses are sorted in ascending order by created_at
 
@@ -195,7 +195,7 @@ CrossAccountRequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CrossAccountRequestPagination`](../interfaces/CrossAccountRequestPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`CrossAccountRequestPagination`](../interfaces/CrossAccountRequestPagination.md)\>\>
 
 #### Defined in
 
@@ -205,7 +205,7 @@ ___
 
 ### patchCrossAccountRequest
 
-▸ **patchCrossAccountRequest**(`uuid`, `crossAccountRequestPatch`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+▸ **patchCrossAccountRequest**(`uuid`, `crossAccountRequestPatch`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
 
@@ -229,7 +229,7 @@ CrossAccountRequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 #### Defined in
 
@@ -239,7 +239,7 @@ ___
 
 ### putCrossAccountRequest
 
-▸ **putCrossAccountRequest**(`uuid`, `crossAccountRequestUpdateIn`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+▸ **putCrossAccountRequest**(`uuid`, `crossAccountRequestUpdateIn`, `options?`): `Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
 
@@ -263,7 +263,7 @@ CrossAccountRequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail), `any`\>\>
+`Promise`<`AxiosResponse`<[`CrossAccountRequestDetail`](../modules.md#crossaccountrequestdetail)\>\>
 
 #### Defined in
 

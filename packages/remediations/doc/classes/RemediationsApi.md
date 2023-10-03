@@ -115,7 +115,7 @@ BaseAPI.configuration
 
 ### cancelPlaybookRuns
 
-▸ **cancelPlaybookRuns**(`id`, `playbookRunId`, `options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **cancelPlaybookRuns**(`id`, `playbookRunId`, `options?`): `Promise`<`AxiosResponse`<`object`\>\>
 
 Cancel execution of the remediation
 
@@ -139,7 +139,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
+`Promise`<`AxiosResponse`<`object`\>\>
 
 #### Defined in
 
@@ -149,7 +149,7 @@ ___
 
 ### checkExecutable
 
-▸ **checkExecutable**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **checkExecutable**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Checks remediation for the existence of smart_managment flaged systems
 
@@ -172,7 +172,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -182,7 +182,7 @@ ___
 
 ### createRemediation
 
-▸ **createRemediation**(`remediationInput`, `options?`): `Promise`<`AxiosResponse`<[`RemediationCreated`](../interfaces/RemediationCreated.md), `any`\>\>
+▸ **createRemediation**(`remediationInput`, `options?`): `Promise`<`AxiosResponse`<[`RemediationCreated`](../interfaces/RemediationCreated.md)\>\>
 
 Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
 
@@ -205,7 +205,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RemediationCreated`](../interfaces/RemediationCreated.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RemediationCreated`](../interfaces/RemediationCreated.md)\>\>
 
 #### Defined in
 
@@ -215,7 +215,7 @@ ___
 
 ### deleteRemediation
 
-▸ **deleteRemediation**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteRemediation**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Removes the given Remediation, RBAC permission {remediations:remediation:write}
 
@@ -238,7 +238,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -248,7 +248,7 @@ ___
 
 ### deleteRemediationIssue
 
-▸ **deleteRemediationIssue**(`id`, `issue`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteRemediationIssue**(`id`, `issue`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
 
@@ -272,7 +272,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -282,7 +282,7 @@ ___
 
 ### deleteRemediationIssueSystem
 
-▸ **deleteRemediationIssueSystem**(`id`, `issue`, `system`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteRemediationIssueSystem**(`id`, `issue`, `system`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Removes the given System from the Issue Remediation, RBAC permission {remediations:remediation:write}
 
@@ -307,7 +307,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -317,7 +317,7 @@ ___
 
 ### deleteRemediations
 
-▸ **deleteRemediations**(`remediationsList`, `options?`): `Promise`<`AxiosResponse`<[`MultipleDelete`](../interfaces/MultipleDelete.md), `any`\>\>
+▸ **deleteRemediations**(`remediationsList`, `options?`): `Promise`<`AxiosResponse`<[`MultipleDelete`](../interfaces/MultipleDelete.md)\>\>
 
 Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
 
@@ -340,7 +340,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MultipleDelete`](../interfaces/MultipleDelete.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`MultipleDelete`](../interfaces/MultipleDelete.md)\>\>
 
 #### Defined in
 
@@ -350,7 +350,7 @@ ___
 
 ### downloadPlaybooks
 
-▸ **downloadPlaybooks**(`selectedRemediations?`, `options?`): `Promise`<`AxiosResponse`<`any`, `any`\>\>
+▸ **downloadPlaybooks**(`selectedRemediations?`, `options?`): `Promise`<`AxiosResponse`<`any`\>\>
 
 Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
 
@@ -373,7 +373,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`any`, `any`\>\>
+`Promise`<`AxiosResponse`<`any`\>\>
 
 #### Defined in
 
@@ -383,7 +383,7 @@ ___
 
 ### getPlaybookRunDetails
 
-▸ **getPlaybookRunDetails**(`id`, `playbookRunId`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunExecutorDetails`](../interfaces/PlaybookRunExecutorDetails.md), `any`\>\>
+▸ **getPlaybookRunDetails**(`id`, `playbookRunId`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunExecutorDetails`](../interfaces/PlaybookRunExecutorDetails.md)\>\>
 
 Get details on execution of the remediation
 
@@ -407,7 +407,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PlaybookRunExecutorDetails`](../interfaces/PlaybookRunExecutorDetails.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PlaybookRunExecutorDetails`](../interfaces/PlaybookRunExecutorDetails.md)\>\>
 
 #### Defined in
 
@@ -417,7 +417,7 @@ ___
 
 ### getPlaybookRunSystemDetails
 
-▸ **getPlaybookRunSystemDetails**(`id`, `playbookRunId`, `system`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunSystemDetails`](../interfaces/PlaybookRunSystemDetails.md), `any`\>\>
+▸ **getPlaybookRunSystemDetails**(`id`, `playbookRunId`, `system`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunSystemDetails`](../interfaces/PlaybookRunSystemDetails.md)\>\>
 
 Get details and updated log of system being executed on in specific playbook run
 
@@ -442,7 +442,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PlaybookRunSystemDetails`](../interfaces/PlaybookRunSystemDetails.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PlaybookRunSystemDetails`](../interfaces/PlaybookRunSystemDetails.md)\>\>
 
 #### Defined in
 
@@ -452,7 +452,7 @@ ___
 
 ### getPlaybookRunSystems
 
-▸ **getPlaybookRunSystems**(`id`, `playbookRunId`, `executor?`, `limit?`, `offset?`, `ansibleHost?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunSystemList`](../interfaces/PlaybookRunSystemList.md), `any`\>\>
+▸ **getPlaybookRunSystems**(`id`, `playbookRunId`, `executor?`, `limit?`, `offset?`, `ansibleHost?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunSystemList`](../interfaces/PlaybookRunSystemList.md)\>\>
 
 Get details on systems being executed on in specific playbook run
 
@@ -481,7 +481,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PlaybookRunSystemList`](../interfaces/PlaybookRunSystemList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PlaybookRunSystemList`](../interfaces/PlaybookRunSystemList.md)\>\>
 
 #### Defined in
 
@@ -491,7 +491,7 @@ ___
 
 ### getRemediation
 
-▸ **getRemediation**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RemediationDetails`](../interfaces/RemediationDetails.md), `any`\>\>
+▸ **getRemediation**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RemediationDetails`](../interfaces/RemediationDetails.md)\>\>
 
 Provides information about the given Remediation, RBAC permission {remediations:remediation:read}
 
@@ -514,7 +514,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RemediationDetails`](../interfaces/RemediationDetails.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RemediationDetails`](../interfaces/RemediationDetails.md)\>\>
 
 #### Defined in
 
@@ -524,7 +524,7 @@ ___
 
 ### getRemediationConnectionStatus
 
-▸ **getRemediationConnectionStatus**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RemediationConnectionStatus`](../interfaces/RemediationConnectionStatus.md), `any`\>\>
+▸ **getRemediationConnectionStatus**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RemediationConnectionStatus`](../interfaces/RemediationConnectionStatus.md)\>\>
 
 Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
 
@@ -547,7 +547,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RemediationConnectionStatus`](../interfaces/RemediationConnectionStatus.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RemediationConnectionStatus`](../interfaces/RemediationConnectionStatus.md)\>\>
 
 #### Defined in
 
@@ -557,7 +557,7 @@ ___
 
 ### getRemediationIssueSystems
 
-▸ **getRemediationIssueSystems**(`id`, `issue`, `limit?`, `offset?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`RemediationIssueSystemList`](../interfaces/RemediationIssueSystemList.md), `any`\>\>
+▸ **getRemediationIssueSystems**(`id`, `issue`, `limit?`, `offset?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`RemediationIssueSystemList`](../interfaces/RemediationIssueSystemList.md)\>\>
 
 Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
 
@@ -584,7 +584,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RemediationIssueSystemList`](../interfaces/RemediationIssueSystemList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RemediationIssueSystemList`](../interfaces/RemediationIssueSystemList.md)\>\>
 
 #### Defined in
 
@@ -594,7 +594,7 @@ ___
 
 ### getRemediationPlaybook
 
-▸ **getRemediationPlaybook**(`id`, `hosts?`, `satOrg?`, `localhost?`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
+▸ **getRemediationPlaybook**(`id`, `hosts?`, `satOrg?`, `localhost?`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
 
 Provides Ansible Playbook, RBAC permission {remediations:remediation:read}
 
@@ -620,7 +620,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`, `any`\>\>
+`Promise`<`AxiosResponse`<`string`\>\>
 
 #### Defined in
 
@@ -630,7 +630,7 @@ ___
 
 ### getRemediations
 
-▸ **getRemediations**(`sort?`, `filter?`, `limit?`, `offset?`, `system?`, `hideArchived?`, `fieldsData?`, `options?`): `Promise`<`AxiosResponse`<[`RemediationList`](../interfaces/RemediationList.md), `any`\>\>
+▸ **getRemediations**(`sort?`, `filter?`, `limit?`, `offset?`, `system?`, `hideArchived?`, `fieldsData?`, `options?`): `Promise`<`AxiosResponse`<[`RemediationList`](../interfaces/RemediationList.md)\>\>
 
 Provides information about Remediations, RBAC permission {remediations:remediation:read}
 
@@ -659,7 +659,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RemediationList`](../interfaces/RemediationList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RemediationList`](../interfaces/RemediationList.md)\>\>
 
 #### Defined in
 
@@ -669,7 +669,7 @@ ___
 
 ### listPlaybookRuns
 
-▸ **listPlaybookRuns**(`id`, `limit?`, `offset?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunsList`](../interfaces/PlaybookRunsList.md), `any`\>\>
+▸ **listPlaybookRuns**(`id`, `limit?`, `offset?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookRunsList`](../interfaces/PlaybookRunsList.md)\>\>
 
 List of executions of this remediation
 
@@ -695,7 +695,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PlaybookRunsList`](../interfaces/PlaybookRunsList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PlaybookRunsList`](../interfaces/PlaybookRunsList.md)\>\>
 
 #### Defined in
 
@@ -705,7 +705,7 @@ ___
 
 ### runRemediation
 
-▸ **runRemediation**(`id`, `playbookRunsInput?`, `options?`): `Promise`<`AxiosResponse`<[`ExecuteRemediation`](../interfaces/ExecuteRemediation.md), `any`\>\>
+▸ **runRemediation**(`id`, `playbookRunsInput?`, `options?`): `Promise`<`AxiosResponse`<[`ExecuteRemediation`](../interfaces/ExecuteRemediation.md)\>\>
 
 Execute remediation, RBAC permission {remediations:remediation:execute}
 
@@ -729,7 +729,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ExecuteRemediation`](../interfaces/ExecuteRemediation.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ExecuteRemediation`](../interfaces/ExecuteRemediation.md)\>\>
 
 #### Defined in
 
@@ -739,7 +739,7 @@ ___
 
 ### updateRemediation
 
-▸ **updateRemediation**(`id`, `remediationInput`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateRemediation**(`id`, `remediationInput`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates the given Remediation, RBAC permission {remediations:remediation:write}
 
@@ -763,7 +763,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -773,7 +773,7 @@ ___
 
 ### updateRemediationIssue
 
-▸ **updateRemediationIssue**(`id`, `issue`, `remediationIssueIn`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **updateRemediationIssue**(`id`, `issue`, `remediationIssueIn`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}
 
@@ -798,7 +798,7 @@ RemediationsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 

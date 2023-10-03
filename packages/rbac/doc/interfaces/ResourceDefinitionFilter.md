@@ -48,7 +48,7 @@ ___
 
 ### value
 
-• **value**: `string`
+• **value**: `string` \| `string`[]
 
 **`Memberof`**
 

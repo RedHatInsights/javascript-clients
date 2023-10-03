@@ -1782,10 +1782,10 @@ export interface ResourceDefinitionFilter {
     operation: ResourceDefinitionFilterOperationEnum;
     /**
      *
-     * @type {string}
+     * @type {string | Array<string>}
      * @memberof ResourceDefinitionFilter
      */
-    value: string;
+    value: string | Array<string>;
 }
 
 /**

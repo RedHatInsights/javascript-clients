@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### autosubexclusionCreate
 
-▸ **autosubexclusionCreate**(`subscriptionExcludedAccount`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md), `any`\>\>
+▸ **autosubexclusionCreate**(`subscriptionExcludedAccount`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
 
 Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
 
@@ -118,7 +118,7 @@ AutosubexclusionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
 
 #### Defined in
 
@@ -128,7 +128,7 @@ ___
 
 ### autosubexclusionDestroy
 
-▸ **autosubexclusionDestroy**(`orgId`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
+▸ **autosubexclusionDestroy**(`orgId`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
 
 Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
 
@@ -147,7 +147,7 @@ AutosubexclusionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`, `any`\>\>
+`Promise`<`AxiosResponse`<`string`\>\>
 
 #### Defined in
 
@@ -157,7 +157,7 @@ ___
 
 ### autosubexclusionList
 
-▸ **autosubexclusionList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md), `any`\>\>
+▸ **autosubexclusionList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md)\>\>
 
 Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
 
@@ -177,7 +177,7 @@ AutosubexclusionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedSubscriptionExcludedAccountList`](../interfaces/PaginatedSubscriptionExcludedAccountList.md)\>\>
 
 #### Defined in
 
@@ -187,7 +187,7 @@ ___
 
 ### autosubexclusionRetrieve
 
-▸ **autosubexclusionRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md), `any`\>\>
+▸ **autosubexclusionRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
 
 Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
 
@@ -206,7 +206,7 @@ AutosubexclusionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SubscriptionExcludedAccount`](../interfaces/SubscriptionExcludedAccount.md)\>\>
 
 #### Defined in
 

@@ -107,7 +107,7 @@ BaseAPI.configuration
 
 ### apiHostDeleteAllHosts
 
-▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
 
@@ -130,17 +130,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5446)
+[api.ts:5538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5538)
 
 ___
 
 ### apiHostDeleteHostById
 
-▸ **apiHostDeleteHostById**(`hostIdList`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostDeleteHostById**(`hostIdList`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
 
@@ -164,17 +164,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5459)
+[api.ts:5551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5551)
 
 ___
 
 ### apiHostDeleteHostsByFilter
 
-▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -209,17 +209,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5483)
+[api.ts:5575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5575)
 
 ___
 
 ### apiHostGetHostById
 
-▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
 
 Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -241,24 +241,24 @@ HostsApi
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `fields?` | `Object` | Fetches only mentioned system_profile fields |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:5501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5501)
+[api.ts:5593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5593)
 
 ___
 
 ### apiHostGetHostList
 
-▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
 
 Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
 
@@ -288,7 +288,7 @@ HostsApi
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
@@ -299,17 +299,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md)\>\>
 
 #### Defined in
 
-[api.ts:5531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5531)
+[api.ts:5623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5623)
 
 ___
 
 ### apiHostGetHostSystemProfileById
 
-▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
+▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md)\>\>
 
 Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
 
@@ -330,7 +330,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `branchId?` | `string` | Filter by branch_id |
 | `fields?` | `Object` | Fetches only mentioned system_profile fields |
@@ -338,17 +338,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5549)
+[api.ts:5641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5641)
 
 ___
 
 ### apiHostGetHostTagCount
 
-▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
+▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md)\>\>
 
 Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
 
@@ -369,23 +369,23 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5565](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5565)
+[api.ts:5657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5657)
 
 ___
 
 ### apiHostGetHostTags
 
-▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
+▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md)\>\>
 
 Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
@@ -406,24 +406,24 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"group_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `search?` | `string` | Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5582)
+[api.ts:5674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5674)
 
 ___
 
 ### apiHostHostCheckin
 
-▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
+▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md)\>\>
 
 Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -446,17 +446,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md)\>\>
 
 #### Defined in
 
-[api.ts:5594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5594)
+[api.ts:5686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5686)
 
 ___
 
 ### apiHostMergeFacts
 
-▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -482,17 +482,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5609)
+[api.ts:5701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5701)
 
 ___
 
 ### apiHostPatchHostById
 
-▸ **apiHostPatchHostById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostPatchHostById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Update hosts <br /><br /> Required permissions: inventory:hosts:write
 
@@ -517,17 +517,17 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5623)
+[api.ts:5715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5715)
 
 ___
 
 ### apiHostReplaceFacts
 
-▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
 
@@ -553,8 +553,8 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
-[api.ts:5638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5638)
+[api.ts:5730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5730)

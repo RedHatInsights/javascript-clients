@@ -98,7 +98,7 @@ BaseAPI.configuration
 
 ### accountHostsRetrieve
 
-▸ **accountHostsRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md), `any`\>\>
+▸ **accountHostsRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md)\>\>
 
 List details about the number of hosts in this account by org_id.  As well as the total number of hosts, we report on the number of hosts in various states of staleness:   * fresh: hosts that have updated in the last 26 hours   * stale: hosts not updated in the last 26 hours - we display the     results for these hosts but a warning is shown to say they are     not updating   * warn: hosts not updated in the last week - these are not shown     in any queries  This may have other aggregate data added in the future.
 
@@ -117,7 +117,7 @@ AccountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md)\>\>
 
 #### Defined in
 
@@ -127,7 +127,7 @@ ___
 
 ### accountList
 
-▸ **accountList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedOrgIdList`](../interfaces/PaginatedOrgIdList.md), `any`\>\>
+▸ **accountList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedOrgIdList`](../interfaces/PaginatedOrgIdList.md)\>\>
 
 List all accounts by org_id we know about (through the host table).  No other information about the accounts is provided in this view.
 
@@ -147,7 +147,7 @@ AccountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedOrgIdList`](../interfaces/PaginatedOrgIdList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedOrgIdList`](../interfaces/PaginatedOrgIdList.md)\>\>
 
 #### Defined in
 
@@ -157,7 +157,7 @@ ___
 
 ### accountRetrieve
 
-▸ **accountRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md), `any`\>\>
+▸ **accountRetrieve**(`orgId`, `options?`): `Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md)\>\>
 
 List information relating to other accounts.  This allows us to collect data that requires the user to specify an org_id number, such as number of systems currently registered to that org.  param: org_id: Org ID number of a Red Hat customer.
 
@@ -176,7 +176,7 @@ AccountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrgId`](../interfaces/OrgId.md)\>\>
 
 #### Defined in
 

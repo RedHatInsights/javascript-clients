@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### systemList
 
-▸ **systemList**(`displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hits?`, `incident?`, `limit?`, `offset?`, `pathway?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
+▸ **systemList**(`displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hits?`, `incident?`, `limit?`, `offset?`, `pathway?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md)\>\>
 
 Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
 
@@ -129,7 +129,7 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md)\>\>
 
 #### Defined in
 
@@ -139,7 +139,7 @@ ___
 
 ### systemRenderedReportsList
 
-▸ **systemRenderedReportsList**(`uuid`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `limit?`, `offset?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md), `any`\>\>
+▸ **systemRenderedReportsList**(`uuid`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `limit?`, `offset?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md)\>\>
 
 Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
 
@@ -163,7 +163,7 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedRenderedReportList`](../interfaces/PaginatedRenderedReportList.md)\>\>
 
 #### Defined in
 
@@ -173,7 +173,7 @@ ___
 
 ### systemReportsList
 
-▸ **systemReportsList**(`uuid`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `offset?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedReportList`](../interfaces/PaginatedReportList.md), `any`\>\>
+▸ **systemReportsList**(`uuid`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `offset?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedReportList`](../interfaces/PaginatedReportList.md)\>\>
 
 Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
 
@@ -198,7 +198,7 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedReportList`](../interfaces/PaginatedReportList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedReportList`](../interfaces/PaginatedReportList.md)\>\>
 
 #### Defined in
 
@@ -208,7 +208,7 @@ ___
 
 ### systemRetrieve
 
-▸ **systemRetrieve**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md), `any`\>\>
+▸ **systemRetrieve**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)\>\>
 
 Retrieve the reports for a single system by Insights Inventory UUID
 
@@ -231,7 +231,7 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)\>\>
 
 #### Defined in
 

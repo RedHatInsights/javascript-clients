@@ -106,7 +106,7 @@ BaseAPI.configuration
 
 ### addPrincipalToGroup
 
-▸ **addPrincipalToGroup**(`uuid`, `groupPrincipalIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
+▸ **addPrincipalToGroup**(`uuid`, `groupPrincipalIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
 
 **`Summary`**
 
@@ -128,7 +128,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
 
 #### Defined in
 
@@ -138,7 +138,7 @@ ___
 
 ### addRoleToGroup
 
-▸ **addRoleToGroup**(`uuid`, `groupRoleIn`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+▸ **addRoleToGroup**(`uuid`, `groupRoleIn`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
 
 **`Summary`**
 
@@ -160,7 +160,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
 
 #### Defined in
 
@@ -170,7 +170,7 @@ ___
 
 ### createGroup
 
-▸ **createGroup**(`group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **createGroup**(`group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
 
 **`Summary`**
 
@@ -191,7 +191,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
 
 #### Defined in
 
@@ -201,7 +201,7 @@ ___
 
 ### deleteGroup
 
-▸ **deleteGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -222,7 +222,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -232,7 +232,7 @@ ___
 
 ### deletePrincipalFromGroup
 
-▸ **deletePrincipalFromGroup**(`uuid`, `usernames`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deletePrincipalFromGroup**(`uuid`, `usernames`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -254,7 +254,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -264,7 +264,7 @@ ___
 
 ### deleteRoleFromGroup
 
-▸ **deleteRoleFromGroup**(`uuid`, `roles`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deleteRoleFromGroup**(`uuid`, `roles`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -286,7 +286,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -296,7 +296,7 @@ ___
 
 ### getGroup
 
-▸ **getGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
+▸ **getGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
 
 **`Summary`**
 
@@ -317,7 +317,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
 
 #### Defined in
 
@@ -327,7 +327,7 @@ ___
 
 ### getPrincipalsFromGroup
 
-▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `principalType?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `principalType?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -357,7 +357,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
 
 #### Defined in
 
@@ -367,7 +367,7 @@ ___
 
 ### listGroups
 
-▸ **listGroups**(`limit?`, `offset?`, `name?`, `nameMatch?`, `scope?`, `username?`, `excludeUsername?`, `uuid?`, `roleNames?`, `roleDiscriminator?`, `orderBy?`, `platformDefault?`, `adminDefault?`, `system?`, `options?`): `Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md), `any`\>\>
+▸ **listGroups**(`limit?`, `offset?`, `name?`, `nameMatch?`, `scope?`, `username?`, `excludeUsername?`, `uuid?`, `roleNames?`, `roleDiscriminator?`, `orderBy?`, `platformDefault?`, `adminDefault?`, `system?`, `options?`): `Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md)\>\>
 
 By default, responses are sorted in ascending order by group name
 
@@ -403,7 +403,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md)\>\>
 
 #### Defined in
 
@@ -413,7 +413,7 @@ ___
 
 ### listRolesForGroup
 
-▸ **listRolesForGroup**(`uuid`, `exclude?`, `roleName?`, `roleDisplayName?`, `roleDescription?`, `roleSystem?`, `roleExternalTenant?`, `limit?`, `offset?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md), `any`\>\>
+▸ **listRolesForGroup**(`uuid`, `exclude?`, `roleName?`, `roleDisplayName?`, `roleDescription?`, `roleSystem?`, `roleExternalTenant?`, `limit?`, `offset?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md)\>\>
 
 By default, responses are sorted in ascending order by role name
 
@@ -445,7 +445,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md)\>\>
 
 #### Defined in
 
@@ -455,7 +455,7 @@ ___
 
 ### updateGroup
 
-▸ **updateGroup**(`uuid`, `group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+▸ **updateGroup**(`uuid`, `group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
 
 **`Summary`**
 
@@ -477,7 +477,7 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
 
 #### Defined in
 

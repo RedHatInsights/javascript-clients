@@ -103,7 +103,7 @@ BaseAPI.configuration
 
 ### ruleAckHostsCreate
 
-▸ **ruleAckHostsCreate**(`ruleId`, `multiHostAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+▸ **ruleAckHostsCreate**(`ruleId`, `multiHostAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md)\>\>
 
 Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
@@ -123,7 +123,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md)\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### ruleJustificationsList
 
-▸ **ruleJustificationsList**(`ruleId`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
+▸ **ruleJustificationsList**(`ruleId`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md)\>\>
 
 List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
 
@@ -154,7 +154,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md)\>\>
 
 #### Defined in
 
@@ -164,7 +164,7 @@ ___
 
 ### ruleList
 
-▸ **ruleList**(`category?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
+▸ **ruleList**(`category?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md)\>\>
 
 List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -204,7 +204,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md)\>\>
 
 #### Defined in
 
@@ -214,7 +214,7 @@ ___
 
 ### ruleRetrieve
 
-▸ **ruleRetrieve**(`ruleId`, `groups?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
+▸ **ruleRetrieve**(`ruleId`, `groups?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md)\>\>
 
 Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
 
@@ -235,7 +235,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md)\>\>
 
 #### Defined in
 
@@ -245,7 +245,7 @@ ___
 
 ### ruleStatsRetrieve
 
-▸ **ruleStatsRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
+▸ **ruleStatsRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md)\>\>
 
 Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
 
@@ -264,7 +264,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md)\>\>
 
 #### Defined in
 
@@ -274,7 +274,7 @@ ___
 
 ### ruleSystemsDetailList
 
-▸ **ruleSystemsDetailList**(`ruleId`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
+▸ **ruleSystemsDetailList**(`ruleId`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md)\>\>
 
 List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
 
@@ -300,7 +300,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md)\>\>
 
 #### Defined in
 
@@ -310,7 +310,7 @@ ___
 
 ### ruleSystemsRetrieve
 
-▸ **ruleSystemsRetrieve**(`ruleId`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+▸ **ruleSystemsRetrieve**(`ruleId`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md)\>\>
 
 List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
@@ -335,7 +335,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md)\>\>
 
 #### Defined in
 
@@ -345,7 +345,7 @@ ___
 
 ### ruleUnackHostsCreate
 
-▸ **ruleUnackHostsCreate**(`ruleId`, `multiHostUnAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+▸ **ruleUnackHostsCreate**(`ruleId`, `multiHostUnAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md)\>\>
 
 Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
@@ -365,7 +365,7 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md)\>\>
 
 #### Defined in
 

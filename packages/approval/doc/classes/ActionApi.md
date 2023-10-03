@@ -98,7 +98,7 @@ BaseAPI.configuration
 
 ### createAction
 
-▸ **createAction**(`requestId`, `action`, `options?`): `Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md), `any`\>\>
+▸ **createAction**(`requestId`, `action`, `options?`): `Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md)\>\>
 
 Create an action under a request identified by its id. Admin can create approve, deny, memo, and cancel operations; approver can create approve, deny, and memo operations; while requester can create only cancel operation.
 
@@ -122,7 +122,7 @@ ActionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md)\>\>
 
 #### Defined in
 
@@ -132,7 +132,7 @@ ___
 
 ### listActionsByRequest
 
-▸ **listActionsByRequest**(`requestId`, `options?`): `Promise`<`AxiosResponse`<[`ActionCollection`](../interfaces/ActionCollection.md), `any`\>\>
+▸ **listActionsByRequest**(`requestId`, `options?`): `Promise`<`AxiosResponse`<[`ActionCollection`](../interfaces/ActionCollection.md)\>\>
 
 Find actions of a request identified by its id, available to everyone
 
@@ -155,7 +155,7 @@ ActionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ActionCollection`](../interfaces/ActionCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ActionCollection`](../interfaces/ActionCollection.md)\>\>
 
 #### Defined in
 
@@ -165,7 +165,7 @@ ___
 
 ### showAction
 
-▸ **showAction**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md), `any`\>\>
+▸ **showAction**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md)\>\>
 
 Find an action by its id, available to everyone
 
@@ -188,7 +188,7 @@ ActionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Action`](../interfaces/Action.md)\>\>
 
 #### Defined in
 

@@ -29,7 +29,7 @@ UnleashToggleOut
 
 #### Defined in
 
-[api.ts:2604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2604)
+[api.ts:2616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2616)
 
 ___
 
@@ -45,4 +45,4 @@ UnleashToggleOut
 
 #### Defined in
 
-[api.ts:2610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2610)
+[api.ts:2622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2622)

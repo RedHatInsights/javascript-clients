@@ -107,7 +107,7 @@ BaseAPI.configuration
 
 ### deletePoliciesById
 
-▸ **deletePoliciesById**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deletePoliciesById**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -124,11 +124,11 @@ PolicyCrudServiceApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | UUID of the policy |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -138,7 +138,7 @@ ___
 
 ### deletePoliciesIds
 
-▸ **deletePoliciesIds**(`requestBody?`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
+▸ **deletePoliciesIds**(`requestBody?`, `options?`): `Promise`<`AxiosResponse`<`string`[]\>\>
 
 **`Summary`**
 
@@ -155,11 +155,11 @@ PolicyCrudServiceApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `requestBody?` | `string`[] |  |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[], `any`\>\>
+`Promise`<`AxiosResponse`<`string`[]\>\>
 
 #### Defined in
 
@@ -169,7 +169,7 @@ ___
 
 ### getPolicies
 
-▸ **getPolicies**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md), `any`\>\>
+▸ **getPolicies**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md)\>\>
 
 **`Summary`**
 
@@ -194,11 +194,11 @@ PolicyCrudServiceApi
 | `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
 | `sortColumn?` | ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"`` | Column to sort the results by |
 | `sortDirection?` | ``"desc"`` \| ``"asc"`` | Sort direction used |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md)\>\>
 
 #### Defined in
 
@@ -208,7 +208,7 @@ ___
 
 ### getPoliciesById
 
-▸ **getPoliciesById**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md), `any`\>\>
+▸ **getPoliciesById**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md)\>\>
 
 **`Summary`**
 
@@ -225,11 +225,11 @@ PolicyCrudServiceApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | UUID of the policy |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md)\>\>
 
 #### Defined in
 
@@ -239,7 +239,7 @@ ___
 
 ### getPoliciesByIdHistoryTrigger
 
-▸ **getPoliciesByIdHistoryTrigger**(`id`, `filteropId?`, `filteropName?`, `filterId?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md), `any`\>\>
+▸ **getPoliciesByIdHistoryTrigger**(`id`, `filteropId?`, `filteropName?`, `filterId?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md)\>\>
 
 **`Summary`**
 
@@ -264,11 +264,11 @@ PolicyCrudServiceApi
 | `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
 | `sortColumn?` | ``"hostName"`` \| ``"ctime"`` | Column to sort the results by |
 | `sortDirection?` | ``"desc"`` \| ``"asc"`` | Sort direction used |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md)\>\>
 
 #### Defined in
 
@@ -278,7 +278,7 @@ ___
 
 ### getPoliciesIds
 
-▸ **getPoliciesIds**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
+▸ **getPoliciesIds**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `options?`): `Promise`<`AxiosResponse`<`string`[]\>\>
 
 **`Summary`**
 
@@ -299,11 +299,11 @@ PolicyCrudServiceApi
 | `filterDescription?` | `string` | Filtering policies by the description depending on the Filter operator used. |
 | `filterIsEnabled?` | ``"false"`` \| ``"true"`` | Filtering policies by the is_enabled field.Defaults to true if no operand is given. |
 | `filterName?` | `string` | Filtering policies by the name depending on the Filter operator used. |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[], `any`\>\>
+`Promise`<`AxiosResponse`<`string`[]\>\>
 
 #### Defined in
 
@@ -313,7 +313,7 @@ ___
 
 ### postPolicies
 
-▸ **postPolicies**(`alsoStore?`, `policy?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **postPolicies**(`alsoStore?`, `policy?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -331,11 +331,11 @@ PolicyCrudServiceApi
 | :------ | :------ | :------ |
 | `alsoStore?` | `boolean` | If passed and set to true, the passed policy is also persisted (if it is valid) |
 | `policy?` | [`Policy`](../interfaces/Policy.md) |  |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -345,7 +345,7 @@ ___
 
 ### postPoliciesByIdEnabled
 
-▸ **postPoliciesByIdEnabled**(`id`, `enabled?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **postPoliciesByIdEnabled**(`id`, `enabled?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 **`Summary`**
 
@@ -363,11 +363,11 @@ PolicyCrudServiceApi
 | :------ | :------ | :------ |
 | `id` | `string` | ID of the Policy |
 | `enabled?` | `boolean` | Should the policy be enabled (true) or disabled (false, default) |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -377,7 +377,7 @@ ___
 
 ### postPoliciesIdsEnabled
 
-▸ **postPoliciesIdsEnabled**(`enabled?`, `requestBody?`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
+▸ **postPoliciesIdsEnabled**(`enabled?`, `requestBody?`, `options?`): `Promise`<`AxiosResponse`<`string`[]\>\>
 
 **`Summary`**
 
@@ -395,11 +395,11 @@ PolicyCrudServiceApi
 | :------ | :------ | :------ |
 | `enabled?` | `boolean` |  |
 | `requestBody?` | `string`[] |  |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[], `any`\>\>
+`Promise`<`AxiosResponse`<`string`[]\>\>
 
 #### Defined in
 
@@ -409,7 +409,7 @@ ___
 
 ### postPoliciesValidate
 
-▸ **postPoliciesValidate**(`policy?`, `options?`): `Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md), `any`\>\>
+▸ **postPoliciesValidate**(`policy?`, `options?`): `Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md)\>\>
 
 **`Summary`**
 
@@ -426,11 +426,11 @@ PolicyCrudServiceApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `policy?` | [`Policy`](../interfaces/Policy.md) |  |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md)\>\>
 
 #### Defined in
 
@@ -440,7 +440,7 @@ ___
 
 ### postPoliciesValidateName
 
-▸ **postPoliciesValidateName**(`body`, `id?`, `options?`): `Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md), `any`\>\>
+▸ **postPoliciesValidateName**(`body`, `id?`, `options?`): `Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md)\>\>
 
 **`Summary`**
 
@@ -458,11 +458,11 @@ PolicyCrudServiceApi
 | :------ | :------ | :------ |
 | `body` | `string` |  |
 | `id?` | `string` | UUID of the policy |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Msg`](../interfaces/Msg.md)\>\>
 
 #### Defined in
 
@@ -472,7 +472,7 @@ ___
 
 ### putPoliciesByPolicyId
 
-▸ **putPoliciesByPolicyId**(`policyId`, `dry?`, `policy?`, `options?`): `Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md), `any`\>\>
+▸ **putPoliciesByPolicyId**(`policyId`, `dry?`, `policy?`, `options?`): `Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md)\>\>
 
 **`Summary`**
 
@@ -491,11 +491,11 @@ PolicyCrudServiceApi
 | `policyId` | `string` |  |
 | `dry?` | `boolean` |  |
 | `policy?` | [`Policy`](../interfaces/Policy.md) |  |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Policy`](../interfaces/Policy.md)\>\>
 
 #### Defined in
 

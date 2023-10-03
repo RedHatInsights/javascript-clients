@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### createRequest
 
-▸ **createRequest**(`requestIn`, `options?`): `Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md), `any`\>\>
+▸ **createRequest**(`requestIn`, `options?`): `Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md)\>\>
 
 Create an approval request using given parameters, available to everyone
 
@@ -123,7 +123,7 @@ RequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md)\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### listRequests
 
-▸ **listRequests**(`xRhPersona?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md), `any`\>\>
+▸ **listRequests**(`xRhPersona?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md)\>\>
 
 The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver). Program generated child requests are not included.
 
@@ -160,7 +160,7 @@ RequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md)\>\>
 
 #### Defined in
 
@@ -170,7 +170,7 @@ ___
 
 ### listRequestsByRequest
 
-▸ **listRequestsByRequest**(`requestId`, `xRhPersona?`, `options?`): `Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md), `any`\>\>
+▸ **listRequestsByRequest**(`requestId`, `xRhPersona?`, `options?`): `Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md)\>\>
 
 Find child requests based on the parent request id. The result depends on the x-rh-persona header (approval/admin, approval/requester, or approval/approver).
 
@@ -194,7 +194,7 @@ RequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RequestCollection`](../interfaces/RequestCollection.md)\>\>
 
 #### Defined in
 
@@ -204,7 +204,7 @@ ___
 
 ### showRequest
 
-▸ **showRequest**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md), `any`\>\>
+▸ **showRequest**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md)\>\>
 
 Find an approval request by its id, available to anyone who can access the request
 
@@ -227,7 +227,7 @@ RequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Request`](../interfaces/Request.md)\>\>
 
 #### Defined in
 
@@ -237,7 +237,7 @@ ___
 
 ### showRequestContent
 
-▸ **showRequestContent**(`requestId`, `options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **showRequestContent**(`requestId`, `options?`): `Promise`<`AxiosResponse`<`object`\>\>
 
 Find the request content based on a request id, available to everyone
 
@@ -260,7 +260,7 @@ RequestApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
+`Promise`<`AxiosResponse`<`object`\>\>
 
 #### Defined in
 

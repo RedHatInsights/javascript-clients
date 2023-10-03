@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### helptopicsGet
 
-▸ **helptopicsGet**(`bundle?`, `application?`, `name?`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md), `any`\>\>
+▸ **helptopicsGet**(`bundle?`, `application?`, `name?`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md)\>\>
 
 **`Summary`**
 
@@ -116,11 +116,11 @@ HelptopicApi
 | `bundle?` | `string` | If set, content is associated with a specific CRC bundle |
 | `application?` | `string` | If set, content is associated with a specific CRC application |
 | `name?` | `string` | Search content by name |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HelptopicsGet200Response`](../interfaces/HelptopicsGet200Response.md)\>\>
 
 #### Defined in
 
@@ -130,7 +130,7 @@ ___
 
 ### helptopicsNameGet
 
-▸ **helptopicsNameGet**(`name`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md), `any`\>\>
+▸ **helptopicsNameGet**(`name`, `options?`): `Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md)\>\>
 
 **`Summary`**
 
@@ -147,11 +147,11 @@ HelptopicApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `name` | `string` | identifier |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
+| `options?` | `AxiosRequestConfig` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HelptopicsNameGet200Response`](../interfaces/HelptopicsNameGet200Response.md)\>\>
 
 #### Defined in
 

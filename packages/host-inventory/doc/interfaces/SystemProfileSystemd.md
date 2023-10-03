@@ -15,6 +15,7 @@ SystemProfileSystemd
 ### Properties
 
 - [failed](SystemProfileSystemd.md#failed)
+- [failed\_services](SystemProfileSystemd.md#failed_services)
 - [jobs\_queued](SystemProfileSystemd.md#jobs_queued)
 - [state](SystemProfileSystemd.md#state)
 
@@ -32,7 +33,23 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2434)
+[api.ts:2440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2440)
+
+___
+
+### failed\_services
+
+• `Optional` **failed\_services**: `string`[]
+
+List of all failed jobs.
+
+**`Memberof`**
+
+SystemProfileSystemd
+
+#### Defined in
+
+[api.ts:2446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2446)
 
 ___
 
@@ -48,7 +65,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2428)
+[api.ts:2434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2434)
 
 ___
 
@@ -64,4 +81,4 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2422)
+[api.ts:2428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2428)

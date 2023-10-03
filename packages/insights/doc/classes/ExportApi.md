@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### exportHitsList
 
-▸ **exportHitsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `uuid?`, `options?`): `Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
+▸ **exportHitsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `uuid?`, `options?`): `Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[]\>\>
 
 Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
 
@@ -133,7 +133,7 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[]\>\>
 
 #### Defined in
 
@@ -143,7 +143,7 @@ ___
 
 ### exportReportsList
 
-▸ **exportReportsList**(`options?`): `Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
+▸ **exportReportsList**(`options?`): `Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[]\>\>
 
 List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
 
@@ -161,7 +161,7 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[]\>\>
 
 #### Defined in
 
@@ -171,7 +171,7 @@ ___
 
 ### exportRulesList
 
-▸ **exportRulesList**(`options?`): `Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
+▸ **exportRulesList**(`options?`): `Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[]\>\>
 
 List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
 
@@ -189,7 +189,7 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[]\>\>
 
 #### Defined in
 
@@ -199,7 +199,7 @@ ___
 
 ### exportSystemsList
 
-▸ **exportSystemsList**(`displayName?`, `format?`, `groups?`, `ruleId?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[], `any`\>\>
+▸ **exportSystemsList**(`displayName?`, `format?`, `groups?`, `ruleId?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[]\>\>
 
 List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
 
@@ -222,7 +222,7 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[]\>\>
 
 #### Defined in
 

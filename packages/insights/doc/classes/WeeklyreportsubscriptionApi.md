@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### weeklyreportsubscriptionCreate
 
-▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`, `options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
+▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`, `options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)\>\>
 
 Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
 
@@ -116,7 +116,7 @@ WeeklyreportsubscriptionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)\>\>
 
 #### Defined in
 
@@ -126,7 +126,7 @@ ___
 
 ### weeklyreportsubscriptionList
 
-▸ **weeklyreportsubscriptionList**(`options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
+▸ **weeklyreportsubscriptionList**(`options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[]\>\>
 
 Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
 
@@ -144,7 +144,7 @@ WeeklyreportsubscriptionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[]\>\>
 
 #### Defined in
 

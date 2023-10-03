@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### weeklyreportautosubscribeCreate
 
-▸ **weeklyreportautosubscribeCreate**(`autoSubscribeInput`, `options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
+▸ **weeklyreportautosubscribeCreate**(`autoSubscribeInput`, `options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)\>\>
 
 Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
 
@@ -116,7 +116,7 @@ WeeklyreportautosubscribeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)\>\>
 
 #### Defined in
 
@@ -126,7 +126,7 @@ ___
 
 ### weeklyreportautosubscribeList
 
-▸ **weeklyreportautosubscribeList**(`options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
+▸ **weeklyreportautosubscribeList**(`options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[]\>\>
 
 Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
 
@@ -144,7 +144,7 @@ WeeklyreportautosubscribeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[]\>\>
 
 #### Defined in
 
