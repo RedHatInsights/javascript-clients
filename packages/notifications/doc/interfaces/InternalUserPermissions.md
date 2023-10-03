@@ -28,7 +28,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1164)
+[packages/notifications/types/index.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1176)
 
 ___
 
@@ -42,7 +42,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1158)
+[packages/notifications/types/index.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1170)
 
 ___
 
@@ -56,4 +56,4 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1170)
+[packages/notifications/types/index.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1182)

@@ -28,7 +28,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L682)
+[packages/notifications/types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L694)
 
 ___
 
@@ -46,7 +46,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L688)
+[packages/notifications/types/index.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L700)
 
 ___
 
@@ -60,4 +60,4 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L694)
+[packages/notifications/types/index.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L706)

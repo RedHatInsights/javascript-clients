@@ -31,7 +31,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L982)
+[packages/integrations/types/index.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L994)
 
 ___
 
@@ -45,4 +45,4 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L988)
+[packages/integrations/types/index.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1000)

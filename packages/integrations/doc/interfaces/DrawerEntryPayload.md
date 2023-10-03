@@ -31,7 +31,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L548)
+[packages/integrations/types/index.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L560)
 
 ___
 
@@ -45,7 +45,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L536)
+[packages/integrations/types/index.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L548)
 
 ___
 
@@ -59,7 +59,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L530)
+[packages/integrations/types/index.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L542)
 
 ___
 
@@ -73,7 +73,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L554)
+[packages/integrations/types/index.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L566)
 
 ___
 
@@ -87,7 +87,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L560)
+[packages/integrations/types/index.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L572)
 
 ___
 
@@ -101,4 +101,4 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L542)
+[packages/integrations/types/index.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L554)

@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### createSetting
 
-▸ **createSetting**(`setting`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **createSetting**(`setting`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Create Tenant Setting
 
@@ -123,7 +123,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### destroySetting
 
-▸ **destroySetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **destroySetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete a Tenant Setting
 
@@ -156,7 +156,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -166,7 +166,7 @@ ___
 
 ### listSettings
 
-▸ **listSettings**(`options?`): `Promise`<`AxiosResponse`<[`TenantSettings`](../interfaces/TenantSettings.md)\>\>
+▸ **listSettings**(`options?`): `Promise`<`AxiosResponse`<[`TenantSettings`](../interfaces/TenantSettings.md), `any`\>\>
 
 List Tenant Settings
 
@@ -188,7 +188,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TenantSettings`](../interfaces/TenantSettings.md)\>\>
+`Promise`<`AxiosResponse`<[`TenantSettings`](../interfaces/TenantSettings.md), `any`\>\>
 
 #### Defined in
 
@@ -198,7 +198,7 @@ ___
 
 ### showSetting
 
-▸ **showSetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **showSetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Get a specific Tenant Setting
 
@@ -221,7 +221,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -231,7 +231,7 @@ ___
 
 ### updateSetting
 
-▸ **updateSetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **updateSetting**(`name`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Update a Tenant Setting
 
@@ -254,7 +254,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

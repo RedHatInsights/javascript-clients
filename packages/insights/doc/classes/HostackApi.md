@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### hostackCreate
 
-▸ **hostackCreate**(`hostAckInput`, `options?`): `Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md)\>\>
+▸ **hostackCreate**(`hostAckInput`, `options?`): `Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md), `any`\>\>
 
 Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
 
@@ -119,7 +119,7 @@ HostackApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md)\>\>
+`Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md), `any`\>\>
 
 #### Defined in
 
@@ -129,7 +129,7 @@ ___
 
 ### hostackDestroy
 
-▸ **hostackDestroy**(`id`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
+▸ **hostackDestroy**(`id`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
 
 Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
 
@@ -148,7 +148,7 @@ HostackApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`\>\>
+`Promise`<`AxiosResponse`<`string`, `any`\>\>
 
 #### Defined in
 
@@ -158,7 +158,7 @@ ___
 
 ### hostackList
 
-▸ **hostackList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `offset?`, `ruleId?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedHostAckList`](../interfaces/PaginatedHostAckList.md)\>\>
+▸ **hostackList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `offset?`, `ruleId?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedHostAckList`](../interfaces/PaginatedHostAckList.md), `any`\>\>
 
 List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
 
@@ -183,7 +183,7 @@ HostackApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedHostAckList`](../interfaces/PaginatedHostAckList.md)\>\>
+`Promise`<`AxiosResponse`<[`PaginatedHostAckList`](../interfaces/PaginatedHostAckList.md), `any`\>\>
 
 #### Defined in
 
@@ -193,7 +193,7 @@ ___
 
 ### hostackRetrieve
 
-▸ **hostackRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md)\>\>
+▸ **hostackRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md), `any`\>\>
 
 HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
 
@@ -212,7 +212,7 @@ HostackApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md)\>\>
+`Promise`<`AxiosResponse`<[`HostAck`](../interfaces/HostAck.md), `any`\>\>
 
 #### Defined in
 
@@ -222,7 +222,7 @@ ___
 
 ### hostackUpdate
 
-▸ **hostackUpdate**(`id`, `hostAckJustification?`, `options?`): `Promise`<`AxiosResponse`<[`HostAckJustification`](../interfaces/HostAckJustification.md)\>\>
+▸ **hostackUpdate**(`id`, `hostAckJustification?`, `options?`): `Promise`<`AxiosResponse`<[`HostAckJustification`](../interfaces/HostAckJustification.md), `any`\>\>
 
 Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
 
@@ -242,7 +242,7 @@ HostackApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostAckJustification`](../interfaces/HostAckJustification.md)\>\>
+`Promise`<`AxiosResponse`<[`HostAckJustification`](../interfaces/HostAckJustification.md), `any`\>\>
 
 #### Defined in
 

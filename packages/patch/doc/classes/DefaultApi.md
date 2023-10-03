@@ -123,7 +123,7 @@ BaseAPI.configuration
 
 ### baselineDelete
 
-▸ **baselineDelete**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md)\>\>
+▸ **baselineDelete**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
 
 Delete a baseline
 
@@ -146,7 +146,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -156,7 +156,7 @@ ___
 
 ### createBaseline
 
-▸ **createBaseline**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md)\>\>
+▸ **createBaseline**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
 
 Create a baseline for my set of systems
 
@@ -179,7 +179,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -189,7 +189,7 @@ ___
 
 ### deletesystem
 
-▸ **deletesystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deletesystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete system by inventory id
 
@@ -212,7 +212,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -222,7 +222,7 @@ ___
 
 ### detailAdvisory
 
-▸ **detailAdvisory**(`advisoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md)\>\>
+▸ **detailAdvisory**(`advisoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
 
 Show me details an advisory by given advisory name
 
@@ -245,7 +245,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
 
 #### Defined in
 
@@ -255,7 +255,7 @@ ___
 
 ### detailBaseline
 
-▸ **detailBaseline**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md)\>\>
+▸ **detailBaseline**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
 
 Show baseline detail by given baseline ID
 
@@ -278,7 +278,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -288,7 +288,7 @@ ___
 
 ### detailSystem
 
-▸ **detailSystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md)\>\>
+▸ **detailSystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
 
 Show me details about a system by given inventory id
 
@@ -311,7 +311,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -321,7 +321,7 @@ ___
 
 ### exportAdvisories
 
-▸ **exportAdvisories**(`search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[]\>\>
+▸ **exportAdvisories**(`search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
 
 Export applicable advisories for all my systems
 
@@ -352,7 +352,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
 
 #### Defined in
 
@@ -362,7 +362,7 @@ ___
 
 ### exportAdvisorySystems
 
-▸ **exportAdvisorySystems**(`advisoryId`, `search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[]\>\>
+▸ **exportAdvisorySystems**(`advisoryId`, `search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 Export systems for my account
 
@@ -408,7 +408,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 #### Defined in
 
@@ -418,7 +418,7 @@ ___
 
 ### exportPackageSystems
 
-▸ **exportPackageSystems**(`packageName`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[]\>\>
+▸ **exportPackageSystems**(`packageName`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
 
 Show me all my systems which have a package installed
 
@@ -448,7 +448,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
 
 #### Defined in
 
@@ -458,7 +458,7 @@ ___
 
 ### exportPackages
 
-▸ **exportPackages**(`sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[]\>\>
+▸ **exportPackages**(`sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
 
 Show me all installed packages across my systems
 
@@ -486,7 +486,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
 
 #### Defined in
 
@@ -496,7 +496,7 @@ ___
 
 ### exportSystemAdvisories
 
-▸ **exportSystemAdvisories**(`inventoryId`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[]\>\>
+▸ **exportSystemAdvisories**(`inventoryId`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
 
 Export applicable advisories for all my systems
 
@@ -527,7 +527,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
 
 #### Defined in
 
@@ -537,7 +537,7 @@ ___
 
 ### exportSystemPackages
 
-▸ **exportSystemPackages**(`inventoryId`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[]\>\>
+▸ **exportSystemPackages**(`inventoryId`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
 
 Show me details about a system packages by given inventory id
 
@@ -566,7 +566,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
 
 #### Defined in
 
@@ -576,7 +576,7 @@ ___
 
 ### exportSystems
 
-▸ **exportSystems**(`search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[]\>\>
+▸ **exportSystems**(`search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 Export systems for my account
 
@@ -622,7 +622,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[]\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 #### Defined in
 
@@ -632,7 +632,7 @@ ___
 
 ### latestPackage
 
-▸ **latestPackage**(`packageName`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md)\>\>
+▸ **latestPackage**(`packageName`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
 
 Show me metadata of selected package
 
@@ -655,7 +655,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -665,7 +665,7 @@ ___
 
 ### listAdvisories
 
-▸ **listAdvisories**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md)\>\>
+▸ **listAdvisories**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
 
 Show me all applicable advisories for all my systems
 
@@ -706,7 +706,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -716,7 +716,7 @@ ___
 
 ### listAdvisorySystems
 
-▸ **listAdvisorySystems**(`advisoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterInsightsId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md)\>\>
+▸ **listAdvisorySystems**(`advisoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterInsightsId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
 
 Show me systems on which the given advisory is applicable
 
@@ -768,7 +768,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -778,7 +778,7 @@ ___
 
 ### listBaseline
 
-▸ **listBaseline**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterName?`, `filterSystems?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md)\>\>
+▸ **listBaseline**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterName?`, `filterSystems?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
 
 Show me all baselines for all my systems
 
@@ -808,7 +808,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -818,7 +818,7 @@ ___
 
 ### listBaselineSystems
 
-▸ **listBaselineSystems**(`baselineId`, `limit?`, `offset?`, `sort?`, `search?`, `filterDisplayName?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md)\>\>
+▸ **listBaselineSystems**(`baselineId`, `limit?`, `offset?`, `sort?`, `search?`, `filterDisplayName?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
 
 Show me all systems applicable to a baseline
 
@@ -847,7 +847,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -857,7 +857,7 @@ ___
 
 ### listPackages
 
-▸ **listPackages**(`limit?`, `offset?`, `sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md)\>\>
+▸ **listPackages**(`limit?`, `offset?`, `sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
 
 Show me all installed packages across my systems
 
@@ -894,7 +894,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -904,7 +904,7 @@ ___
 
 ### listSystemAdvisories
 
-▸ **listSystemAdvisories**(`inventoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md)\>\>
+▸ **listSystemAdvisories**(`inventoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
 
 Show me advisories for a system by given inventory id
 
@@ -938,7 +938,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -948,7 +948,7 @@ ___
 
 ### listSystems
 
-▸ **listSystems**(`limit?`, `offset?`, `sort?`, `search?`, `filterInsightsId?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md)\>\>
+▸ **listSystems**(`limit?`, `offset?`, `sort?`, `search?`, `filterInsightsId?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
 
 Show me all my systems
 
@@ -1002,7 +1002,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1012,7 +1012,7 @@ ___
 
 ### packageSystems
 
-▸ **packageSystems**(`packageName`, `limit?`, `offset?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md)\>\>
+▸ **packageSystems**(`packageName`, `limit?`, `offset?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
 
 Show me all my systems which have a package installed
 
@@ -1044,7 +1044,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1054,7 +1054,7 @@ ___
 
 ### packageVersions
 
-▸ **packageVersions**(`packageName`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md)\>\>
+▸ **packageVersions**(`packageName`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
 
 Show me all package versions installed on some system
 
@@ -1079,7 +1079,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1089,7 +1089,7 @@ ___
 
 ### removeBaselineSystems
 
-▸ **removeBaselineSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **removeBaselineSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Remove systems from baseline
 
@@ -1112,7 +1112,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -1122,7 +1122,7 @@ ___
 
 ### systemPackages
 
-▸ **systemPackages**(`inventoryId`, `limit?`, `offset?`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md)\>\>
+▸ **systemPackages**(`inventoryId`, `limit?`, `offset?`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
 
 Show me details about a system packages by given inventory id
 
@@ -1153,7 +1153,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1163,7 +1163,7 @@ ___
 
 ### updateBaseline
 
-▸ **updateBaseline**(`baselineId`, `body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md)\>\>
+▸ **updateBaseline**(`baselineId`, `body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
 
 Update a baseline for my set of systems
 
@@ -1187,7 +1187,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1197,7 +1197,7 @@ ___
 
 ### viewAdvisoriesSystems
 
-▸ **viewAdvisoriesSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md)\>\>
+▸ **viewAdvisoriesSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
 
 View advisory-system pairs for selected systems and advisories
 
@@ -1220,7 +1220,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
 
 #### Defined in
 
@@ -1230,7 +1230,7 @@ ___
 
 ### viewSystemsAdvisories
 
-▸ **viewSystemsAdvisories**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md)\>\>
+▸ **viewSystemsAdvisories**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
 
 View system-advisory pairs for selected systems and advisories
 
@@ -1253,7 +1253,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
 
 #### Defined in
 

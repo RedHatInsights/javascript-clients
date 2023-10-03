@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### listPermissionOptions
 
-▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md)\>\>
+▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
 
 By default, options of application is returned. And could be resource_type or verb on demand.
 
@@ -127,17 +127,17 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4601)
+[api.ts:4609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4609)
 
 ___
 
 ### listPermissions
 
-▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md)\>\>
+▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by permission application.
 
@@ -169,8 +169,8 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4622)
+[api.ts:4630](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4630)

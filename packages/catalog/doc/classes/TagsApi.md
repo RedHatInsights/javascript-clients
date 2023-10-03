@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### listTags
 
-▸ **listTags**(`options?`): `Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md)\>\>
+▸ **listTags**(`options?`): `Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md), `any`\>\>
 
 List Tags
 
@@ -118,7 +118,7 @@ TagsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md)\>\>
+`Promise`<`AxiosResponse`<[`TagsCollection`](../interfaces/TagsCollection.md), `any`\>\>
 
 #### Defined in
 

@@ -13,6 +13,7 @@ WebhookProperties
 ### Properties
 
 - [basic\_authentication](WebhookProperties.md#basic_authentication)
+- [bearer\_authentication](WebhookProperties.md#bearer_authentication)
 - [disable\_ssl\_verification](WebhookProperties.md#disable_ssl_verification)
 - [method](WebhookProperties.md#method)
 - [secret\_token](WebhookProperties.md#secret_token)
@@ -30,7 +31,21 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1693)
+[packages/integrations/types/index.ts:1705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1705)
+
+___
+
+### bearer\_authentication
+
+• `Optional` **bearer\_authentication**: `string`
+
+**`Memberof`**
+
+WebhookProperties
+
+#### Defined in
+
+[packages/integrations/types/index.ts:1711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1711)
 
 ___
 
@@ -44,7 +59,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1681)
+[packages/integrations/types/index.ts:1693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1693)
 
 ___
 
@@ -58,7 +73,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1675)
+[packages/integrations/types/index.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1687)
 
 ___
 
@@ -72,7 +87,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1687)
+[packages/integrations/types/index.ts:1699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1699)
 
 ___
 
@@ -86,4 +101,4 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1669)
+[packages/integrations/types/index.ts:1681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1681)

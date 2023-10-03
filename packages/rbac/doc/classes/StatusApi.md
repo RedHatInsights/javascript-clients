@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### getStatus
 
-▸ **getStatus**(`options?`): `Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md)\>\>
+▸ **getStatus**(`options?`): `Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
 
 **`Summary`**
 
@@ -116,8 +116,8 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md)\>\>
+`Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:6128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6128)
+[api.ts:6144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6144)

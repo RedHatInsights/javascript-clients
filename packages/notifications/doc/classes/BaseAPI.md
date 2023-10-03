@@ -96,7 +96,7 @@ ___
 
 ### sendRequest
 
-▸ **sendRequest**<`T`\>(`request`, `axios?`, `basePath?`): `Promise`<`AxiosResponse`<`T`\>\>
+▸ **sendRequest**<`T`\>(`request`, `axios?`, `basePath?`): `Promise`<`AxiosResponse`<`T`, `any`\>\>
 
 Send axios request
 
@@ -116,7 +116,7 @@ Send axios request
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`T`\>\>
+`Promise`<`AxiosResponse`<`T`, `any`\>\>
 
 promisable axios response.
 

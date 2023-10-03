@@ -27,7 +27,7 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/integrations/types/index.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L579)
+[packages/integrations/types/index.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L591)
 
 ___
 
@@ -41,4 +41,4 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/integrations/types/index.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L573)
+[packages/integrations/types/index.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L585)

@@ -28,7 +28,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1526)
+[packages/integrations/types/index.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1538)
 
 ___
 
@@ -42,7 +42,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1520)
+[packages/integrations/types/index.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1532)
 
 ___
 
@@ -56,4 +56,4 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1514)
+[packages/integrations/types/index.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1526)

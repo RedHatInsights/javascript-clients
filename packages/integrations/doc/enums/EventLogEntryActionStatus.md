@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/integrations/types/index.ts:871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L871)
+[packages/integrations/types/index.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L883)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L870)
+[packages/integrations/types/index.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L882)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L868)
+[packages/integrations/types/index.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L880)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L869)
+[packages/integrations/types/index.ts:881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L881)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L872)
+[packages/integrations/types/index.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L884)

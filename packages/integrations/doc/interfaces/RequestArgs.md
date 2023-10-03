@@ -31,7 +31,7 @@ ___
 
 ### options
 
-• **options**: `AxiosRequestConfig`
+• **options**: `AxiosRequestConfig`<`any`\>
 
 #### Defined in
 

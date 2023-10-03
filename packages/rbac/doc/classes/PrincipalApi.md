@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### listPrincipals
 
-▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `type?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -124,12 +124,13 @@ PrincipalApi
 | `adminOnly?` | ``"false"`` \| ``"true"`` | Get only admin users within an account. Setting this would ignore the parameters: usernames, email |
 | `orderBy?` | ``"username"`` | Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username |
 | `usernameOnly?` | `boolean` | Parameter for optionally returning only usernames for principals, bypassing a call to IT. |
+| `type?` | ``"user"`` \| ``"service-account"`` | Parameter for selecting the type of principal to be returned. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5297)
+[api.ts:5313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5313)
