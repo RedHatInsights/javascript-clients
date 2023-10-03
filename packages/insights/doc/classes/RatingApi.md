@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### ratingAllRatingsList
 
-▸ **ratingAllRatingsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md)\>\>
+▸ **ratingAllRatingsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
 
 Show all ratings.  Available only to internal users.
 
@@ -120,7 +120,7 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md)\>\>
+`Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
 
 #### Defined in
 
@@ -130,7 +130,7 @@ ___
 
 ### ratingCreate
 
-▸ **ratingCreate**(`ruleRating`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md)\>\>
+▸ **ratingCreate**(`ruleRating`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
 
@@ -149,7 +149,7 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md)\>\>
+`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 #### Defined in
 
@@ -159,7 +159,7 @@ ___
 
 ### ratingList
 
-▸ **ratingList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md)\>\>
+▸ **ratingList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
 
 List all rules rated by the current user  Only the current user\'s ratings are listed here.
 
@@ -179,7 +179,7 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md)\>\>
+`Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
 
 #### Defined in
 
@@ -189,7 +189,7 @@ ___
 
 ### ratingRetrieve
 
-▸ **ratingRetrieve**(`rule`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md)\>\>
+▸ **ratingRetrieve**(`rule`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 Retrieve the ratings for a single rule, by Insights Rule ID
 
@@ -212,7 +212,7 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md)\>\>
+`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 #### Defined in
 
@@ -222,7 +222,7 @@ ___
 
 ### ratingStatsList
 
-▸ **ratingStatsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md)\>\>
+▸ **ratingStatsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
 
 Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
 
@@ -242,7 +242,7 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md)\>\>
+`Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
 
 #### Defined in
 

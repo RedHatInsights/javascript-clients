@@ -302,7 +302,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`\> |
+| `R` | `AxiosResponse`<`T`, `any`\> |
 
 ##### Parameters
 
@@ -337,7 +337,7 @@ Create a new endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -365,7 +365,7 @@ Delete an endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -393,7 +393,7 @@ Disable an endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -421,7 +421,7 @@ Enable an endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -449,7 +449,7 @@ Retrieve event notification details
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -471,7 +471,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -499,7 +499,7 @@ Retrieve an endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
+| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -527,7 +527,7 @@ List endpoints
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -555,7 +555,7 @@ Add a drawer endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -583,7 +583,7 @@ Create an email subscription endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
+| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
 
 #### Returns
 
@@ -611,7 +611,7 @@ Generate a test notification
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1TestEndpointParams`] \| [`string`, [`EndpointTestRequest`](interfaces/EndpointTestRequest.md), `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1TestEndpointParams`] \| [`string`, [`EndpointTestRequest`](interfaces/EndpointTestRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -639,7 +639,7 @@ Update an endpoint
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`] | with all available params. |
+| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
 
 #### Returns
 

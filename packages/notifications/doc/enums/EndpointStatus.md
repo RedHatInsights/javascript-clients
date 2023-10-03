@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/notifications/types/index.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L707)
+[packages/notifications/types/index.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L719)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L708)
+[packages/notifications/types/index.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L720)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L705)
+[packages/notifications/types/index.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L717)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L706)
+[packages/notifications/types/index.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L718)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L703)
+[packages/notifications/types/index.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L715)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L704)
+[packages/notifications/types/index.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L716)

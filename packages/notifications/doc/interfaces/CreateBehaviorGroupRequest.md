@@ -31,7 +31,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L417)
+[packages/notifications/types/index.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L429)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L423)
+[packages/notifications/types/index.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L435)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L447)
+[packages/notifications/types/index.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L459)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L429)
+[packages/notifications/types/index.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L441)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L435)
+[packages/notifications/types/index.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L447)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L441)
+[packages/notifications/types/index.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L453)

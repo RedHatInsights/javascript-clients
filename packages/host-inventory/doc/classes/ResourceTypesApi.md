@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### apiResourceTypeGetResourceTypeGroupsList
 
-▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
+▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
 
@@ -122,7 +122,7 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -132,7 +132,7 @@ ___
 
 ### apiResourceTypeGetResourceTypeList
 
-▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
+▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
 
 Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
 
@@ -156,7 +156,7 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
 
 #### Defined in
 

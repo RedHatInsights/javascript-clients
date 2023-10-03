@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
+▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -136,7 +136,7 @@ TagsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
+`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
 
 #### Defined in
 

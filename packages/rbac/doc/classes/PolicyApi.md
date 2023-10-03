@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### createPolicies
 
-▸ **createPolicies**(`policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **createPolicies**(`policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -121,17 +121,17 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5056)
+[api.ts:5064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5064)
 
 ___
 
 ### deletePolicy
 
-▸ **deletePolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deletePolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -152,17 +152,17 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
-[api.ts:5068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5068)
+[api.ts:5076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5076)
 
 ___
 
 ### getPolicy
 
-▸ **getPolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **getPolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -183,17 +183,17 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5080)
+[api.ts:5088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5088)
 
 ___
 
 ### listPolicies
 
-▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md)\>\>
+▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by policy name
 
@@ -222,17 +222,17 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5098)
+[api.ts:5106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5106)
 
 ___
 
 ### updatePolicy
 
-▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -254,8 +254,8 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:5111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5111)
+[api.ts:5119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5119)

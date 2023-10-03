@@ -107,7 +107,7 @@ BaseAPI.configuration
 
 ### addOrderProcessAfterItem
 
-▸ **addOrderProcessAfterItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **addOrderProcessAfterItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Defines the product that will be executed after ordering when using this Order Process
 
@@ -131,7 +131,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -141,7 +141,7 @@ ___
 
 ### addOrderProcessBeforeItem
 
-▸ **addOrderProcessBeforeItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **addOrderProcessBeforeItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Defines the product that will be executed before ordering when using this Order Process
 
@@ -165,7 +165,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -175,7 +175,7 @@ ___
 
 ### addOrderProcessReturnItem
 
-▸ **addOrderProcessReturnItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **addOrderProcessReturnItem**(`id`, `orderProcessPortfolioItemId`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Defines the product that will be executed on return when using this Order Process
 
@@ -199,7 +199,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -209,7 +209,7 @@ ___
 
 ### createOrderProcess
 
-▸ **createOrderProcess**(`orderProcess`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **createOrderProcess**(`orderProcess`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Adds an order process.
 
@@ -232,7 +232,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -242,7 +242,7 @@ ___
 
 ### destroyOrderProcess
 
-▸ **destroyOrderProcess**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **destroyOrderProcess**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Deletes the order process specified by the ID.
 
@@ -265,7 +265,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -275,7 +275,7 @@ ___
 
 ### linkTagToOrderProcess
 
-▸ **linkTagToOrderProcess**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **linkTagToOrderProcess**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Links a tag to an order process
 
@@ -299,7 +299,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -309,7 +309,7 @@ ___
 
 ### listOrderProcesses
 
-▸ **listOrderProcesses**(`appName?`, `objectId?`, `objectType?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcessCollection`](../interfaces/OrderProcessCollection.md)\>\>
+▸ **listOrderProcesses**(`appName?`, `objectId?`, `objectType?`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcessCollection`](../interfaces/OrderProcessCollection.md), `any`\>\>
 
 Gets a list of order processes. Optionally select order processes linked to a resource object whose app_name, object_type and object_id are specified by query parameters.
 
@@ -338,7 +338,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcessCollection`](../interfaces/OrderProcessCollection.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcessCollection`](../interfaces/OrderProcessCollection.md), `any`\>\>
 
 #### Defined in
 
@@ -348,7 +348,7 @@ ___
 
 ### removeOrderProcessAssociation
 
-▸ **removeOrderProcessAssociation**(`id`, `orderProcessAssociationsToRemove`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **removeOrderProcessAssociation**(`id`, `orderProcessAssociationsToRemove`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Removes the association to the product(s) defined in the \'before\' and/or \'after\' that would be executed when using this Order Process
 
@@ -372,7 +372,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -382,7 +382,7 @@ ___
 
 ### reposition
 
-▸ **reposition**(`id`, `reposition`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **reposition**(`id`, `reposition`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Adjust the position of an order process related to others by an offset number
 
@@ -406,7 +406,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -416,7 +416,7 @@ ___
 
 ### showOrderProcess
 
-▸ **showOrderProcess**(`id`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **showOrderProcess**(`id`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Gets the order process specified by the order process ID.
 
@@ -439,7 +439,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 
@@ -449,7 +449,7 @@ ___
 
 ### unlinkTagFromOrderProcess
 
-▸ **unlinkTagFromOrderProcess**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **unlinkTagFromOrderProcess**(`id`, `resourceObject`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Unlinks a tag from an order process
 
@@ -473,7 +473,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -483,7 +483,7 @@ ___
 
 ### updateOrderProcess
 
-▸ **updateOrderProcess**(`id`, `orderProcess`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+▸ **updateOrderProcess**(`id`, `orderProcess`, `options?`): `Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 Returns the edited order process.
 
@@ -507,7 +507,7 @@ OrderProcessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md)\>\>
+`Promise`<`AxiosResponse`<[`OrderProcess`](../interfaces/OrderProcess.md), `any`\>\>
 
 #### Defined in
 

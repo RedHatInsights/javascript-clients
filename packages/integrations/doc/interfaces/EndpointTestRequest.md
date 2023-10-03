@@ -26,4 +26,4 @@ EndpointTestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L725)
+[packages/integrations/types/index.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L737)

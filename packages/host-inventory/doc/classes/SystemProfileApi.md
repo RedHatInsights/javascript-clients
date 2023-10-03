@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### apiSystemProfileGetOperatingSystem
 
-▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
+▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -127,7 +127,7 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 #### Defined in
 
@@ -137,7 +137,7 @@ ___
 
 ### apiSystemProfileGetSapSids
 
-▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -166,7 +166,7 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 #### Defined in
 
@@ -176,7 +176,7 @@ ___
 
 ### apiSystemProfileGetSapSystem
 
-▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -204,7 +204,7 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md)\>\>
+`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 #### Defined in
 
@@ -214,7 +214,7 @@ ___
 
 ### apiSystemProfileValidateSchema
 
-▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 
@@ -240,7 +240,7 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

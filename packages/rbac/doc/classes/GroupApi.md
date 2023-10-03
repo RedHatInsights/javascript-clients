@@ -106,7 +106,7 @@ BaseAPI.configuration
 
 ### addPrincipalToGroup
 
-▸ **addPrincipalToGroup**(`uuid`, `groupPrincipalIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
+▸ **addPrincipalToGroup**(`uuid`, `groupPrincipalIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
 
 **`Summary`**
 
@@ -128,17 +128,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4147](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4147)
+[api.ts:4154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4154)
 
 ___
 
 ### addRoleToGroup
 
-▸ **addRoleToGroup**(`uuid`, `groupRoleIn`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
+▸ **addRoleToGroup**(`uuid`, `groupRoleIn`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 **`Summary`**
 
@@ -160,17 +160,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
+`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4160)
+[api.ts:4167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4167)
 
 ___
 
 ### createGroup
 
-▸ **createGroup**(`group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
+▸ **createGroup**(`group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
 
 **`Summary`**
 
@@ -191,17 +191,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4172)
+[api.ts:4179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4179)
 
 ___
 
 ### deleteGroup
 
-▸ **deleteGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deleteGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -222,17 +222,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
-[api.ts:4184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4184)
+[api.ts:4191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4191)
 
 ___
 
 ### deletePrincipalFromGroup
 
-▸ **deletePrincipalFromGroup**(`uuid`, `usernames`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deletePrincipalFromGroup**(`uuid`, `usernames`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -254,17 +254,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
-[api.ts:4197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4197)
+[api.ts:4204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4204)
 
 ___
 
 ### deleteRoleFromGroup
 
-▸ **deleteRoleFromGroup**(`uuid`, `roles`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deleteRoleFromGroup**(`uuid`, `roles`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -286,17 +286,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
-[api.ts:4210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4210)
+[api.ts:4217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4217)
 
 ___
 
 ### getGroup
 
-▸ **getGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
+▸ **getGroup**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
 
 **`Summary`**
 
@@ -317,17 +317,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupWithPrincipalsAndRoles`](../interfaces/GroupWithPrincipalsAndRoles.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4222)
+[api.ts:4229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4229)
 
 ___
 
 ### getPrincipalsFromGroup
 
-▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `principalType?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -352,21 +352,22 @@ GroupApi
 | `offset?` | `number` | Parameter for selecting the offset of data. |
 | `orderBy?` | ``"username"`` | Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username |
 | `usernameOnly?` | `boolean` | Parameter for optionally returning only usernames for principals, bypassing a call to IT. |
+| `principalType?` | ``"user"`` \| ``"service-account"`` | Parameter for selecting the type of principal to be returned. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4240)
+[api.ts:4248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4248)
 
 ___
 
 ### listGroups
 
-▸ **listGroups**(`limit?`, `offset?`, `name?`, `nameMatch?`, `scope?`, `username?`, `excludeUsername?`, `uuid?`, `roleNames?`, `roleDiscriminator?`, `orderBy?`, `platformDefault?`, `adminDefault?`, `system?`, `options?`): `Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md)\>\>
+▸ **listGroups**(`limit?`, `offset?`, `name?`, `nameMatch?`, `scope?`, `username?`, `excludeUsername?`, `uuid?`, `roleNames?`, `roleDiscriminator?`, `orderBy?`, `platformDefault?`, `adminDefault?`, `system?`, `options?`): `Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by group name
 
@@ -402,17 +403,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupPagination`](../interfaces/GroupPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4265)
+[api.ts:4273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4273)
 
 ___
 
 ### listRolesForGroup
 
-▸ **listRolesForGroup**(`uuid`, `exclude?`, `roleName?`, `roleDisplayName?`, `roleDescription?`, `roleSystem?`, `roleExternalTenant?`, `limit?`, `offset?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md)\>\>
+▸ **listRolesForGroup**(`uuid`, `exclude?`, `roleName?`, `roleDisplayName?`, `roleDescription?`, `roleSystem?`, `roleExternalTenant?`, `limit?`, `offset?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by role name
 
@@ -444,17 +445,17 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupRolesPagination`](../interfaces/GroupRolesPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4286)
+[api.ts:4294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4294)
 
 ___
 
 ### updateGroup
 
-▸ **updateGroup**(`uuid`, `group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
+▸ **updateGroup**(`uuid`, `group`, `options?`): `Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
 
 **`Summary`**
 
@@ -476,8 +477,8 @@ GroupApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupOut`](../interfaces/GroupOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4299)
+[api.ts:4307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4307)

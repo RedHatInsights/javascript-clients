@@ -13,6 +13,8 @@ CamelProperties
 ### Properties
 
 - [basic\_authentication](CamelProperties.md#basic_authentication)
+- [bearer\_authentication](CamelProperties.md#bearer_authentication)
+- [bearer\_authentication\_sources\_id](CamelProperties.md#bearer_authentication_sources_id)
 - [disable\_ssl\_verification](CamelProperties.md#disable_ssl_verification)
 - [extras](CamelProperties.md#extras)
 - [secret\_token](CamelProperties.md#secret_token)
@@ -31,6 +33,34 @@ CamelProperties
 #### Defined in
 
 [packages/integrations/types/index.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L398)
+
+___
+
+### bearer\_authentication
+
+• `Optional` **bearer\_authentication**: `string`
+
+**`Memberof`**
+
+CamelProperties
+
+#### Defined in
+
+[packages/integrations/types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L416)
+
+___
+
+### bearer\_authentication\_sources\_id
+
+• `Optional` **bearer\_authentication\_sources\_id**: `number`
+
+**`Memberof`**
+
+CamelProperties
+
+#### Defined in
+
+[packages/integrations/types/index.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L410)
 
 ___
 

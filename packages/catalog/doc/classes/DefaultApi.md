@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### getDocumentation
 
-▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`\>\>
+▸ **getDocumentation**(`options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
 
 **`Summary`**
 
@@ -117,7 +117,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`\>\>
+`Promise`<`AxiosResponse`<`object`, `any`\>\>
 
 #### Defined in
 
@@ -127,7 +127,7 @@ ___
 
 ### postGraphQL
 
-▸ **postGraphQL**(`graphQLRequest`, `options?`): `Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md)\>\>
+▸ **postGraphQL**(`graphQLRequest`, `options?`): `Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md), `any`\>\>
 
 Performs a GraphQL Query
 
@@ -150,7 +150,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md)\>\>
+`Promise`<`AxiosResponse`<[`GraphQLResponse`](../interfaces/GraphQLResponse.md), `any`\>\>
 
 #### Defined in
 

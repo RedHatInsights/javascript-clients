@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### ackcountList
 
-▸ **ackcountList**(`options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[]\>\>
+▸ **ackcountList**(`options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
 
 Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
 
@@ -115,7 +115,7 @@ AckcountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[]\>\>
+`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### ackcountRetrieve
 
-▸ **ackcountRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)\>\>
+▸ **ackcountRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
 
 Get the ack count for the given rule_id  Returns the rule_id and its ack count
 
@@ -144,7 +144,7 @@ AckcountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)\>\>
+`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
 
 #### Defined in
 

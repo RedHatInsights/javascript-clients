@@ -427,6 +427,18 @@ export interface CamelProperties {
      * @memberof CamelProperties
      */
     'extras'?: { [key: string]: string; };
+    /**
+     *
+     * @type {number}
+     * @memberof CamelProperties
+     */
+    'bearer_authentication_sources_id'?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof CamelProperties
+     */
+    'bearer_authentication'?: string;
 }
 /**
  *
@@ -1716,6 +1728,12 @@ export interface WebhookProperties {
      * @memberof WebhookProperties
      */
     'basic_authentication'?: BasicAuthentication;
+    /**
+     *
+     * @type {string}
+     * @memberof WebhookProperties
+     */
+    'bearer_authentication'?: string;
 }
 
 
