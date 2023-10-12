@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/remediations-client",
-    "version": "1.2.10",
+    "version": "1.2.11",
     "description": "TypeScript client for Insights Remediations using Axios",
     "publishConfig": {
         "access": "public"
