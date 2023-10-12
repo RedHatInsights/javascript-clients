@@ -103,7 +103,7 @@ BaseAPI.configuration
 
 ### topicCreate
 
-▸ **topicCreate**(`topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+▸ **topicCreate**(`topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 Create a new rule topic, along with its association to a rule tag
 
@@ -126,7 +126,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 #### Defined in
 
@@ -136,7 +136,7 @@ ___
 
 ### topicDestroy
 
-▸ **topicDestroy**(`slug`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **topicDestroy**(`slug`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
 
@@ -159,7 +159,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 
@@ -169,7 +169,7 @@ ___
 
 ### topicList
 
-▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
+▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[]\>\>
 
 List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
 
@@ -192,7 +192,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[]\>\>
 
 #### Defined in
 
@@ -202,7 +202,7 @@ ___
 
 ### topicPartialUpdate
 
-▸ **topicPartialUpdate**(`slug`, `patchedTopicEdit?`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+▸ **topicPartialUpdate**(`slug`, `patchedTopicEdit?`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 Update an existing rule topic.  Only the fields being changed need to be supplied
 
@@ -226,7 +226,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 #### Defined in
 
@@ -236,7 +236,7 @@ ___
 
 ### topicRetrieve
 
-▸ **topicRetrieve**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md), `any`\>\>
+▸ **topicRetrieve**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)\>\>
 
 Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
 
@@ -255,7 +255,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)\>\>
 
 #### Defined in
 
@@ -265,7 +265,7 @@ ___
 
 ### topicRulesWithTagList
 
-▸ **topicRulesWithTagList**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
+▸ **topicRulesWithTagList**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[]\>\>
 
 Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
 
@@ -284,7 +284,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[]\>\>
 
 #### Defined in
 
@@ -294,7 +294,7 @@ ___
 
 ### topicSystemsRetrieve
 
-▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md)\>\>
 
 List all systems affected by this rule topic.  Systems are just listed by their UUID.
 
@@ -318,7 +318,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md)\>\>
 
 #### Defined in
 
@@ -328,7 +328,7 @@ ___
 
 ### topicUpdate
 
-▸ **topicUpdate**(`slug`, `topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+▸ **topicUpdate**(`slug`, `topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 Update an existing rule topic.  All fields need to be supplied
 
@@ -352,7 +352,7 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md)\>\>
 
 #### Defined in
 

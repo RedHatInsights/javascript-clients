@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 ### destroyOrderItem
 
-▸ **destroyOrderItem**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+▸ **destroyOrderItem**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 Deletes the order item  based on order item ID passed
 
@@ -124,7 +124,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 #### Defined in
 
@@ -134,7 +134,7 @@ ___
 
 ### listApprovalRequests
 
-▸ **listApprovalRequests**(`orderItemId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApprovalRequestsCollection`](../interfaces/ApprovalRequestsCollection.md), `any`\>\>
+▸ **listApprovalRequests**(`orderItemId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ApprovalRequestsCollection`](../interfaces/ApprovalRequestsCollection.md)\>\>
 
 Gets a list of approval request associated with an order item. As the item is being approved one can check the status of the approvals.
 
@@ -161,7 +161,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ApprovalRequestsCollection`](../interfaces/ApprovalRequestsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ApprovalRequestsCollection`](../interfaces/ApprovalRequestsCollection.md)\>\>
 
 #### Defined in
 
@@ -171,7 +171,7 @@ ___
 
 ### listOrderItemProgressMessages
 
-▸ **listOrderItemProgressMessages**(`orderItemId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md), `any`\>\>
+▸ **listOrderItemProgressMessages**(`orderItemId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md)\>\>
 
 Gets a list of progress messages associated with an order item. As the item is being processed the provider can update the progress messages.
 
@@ -198,7 +198,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md)\>\>
 
 #### Defined in
 
@@ -208,7 +208,7 @@ ___
 
 ### listOrderItems
 
-▸ **listOrderItems**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md), `any`\>\>
+▸ **listOrderItems**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md)\>\>
 
 Gets a list of order items.
 
@@ -234,7 +234,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md)\>\>
 
 #### Defined in
 
@@ -244,7 +244,7 @@ ___
 
 ### restoreOrderItem
 
-▸ **restoreOrderItem**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+▸ **restoreOrderItem**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 Restores the order item specified by the order item ID.
 
@@ -268,7 +268,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 #### Defined in
 
@@ -278,7 +278,7 @@ ___
 
 ### showOrderItem
 
-▸ **showOrderItem**(`id`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+▸ **showOrderItem**(`id`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 Gets a specific order item based on the order item ID passed
 
@@ -301,7 +301,7 @@ OrderItemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 #### Defined in
 

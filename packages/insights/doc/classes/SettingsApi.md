@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### settingsList
 
-▸ **settingsList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+▸ **settingsList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[]\>\>
 
 Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
 
@@ -114,7 +114,7 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[]\>\>
 
 #### Defined in
 

@@ -99,7 +99,7 @@ BaseAPI.configuration
 
 ### createProfile
 
-▸ **createProfile**(`inlineObject`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+▸ **createProfile**(`inlineObject`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md)\>\>
 
 Create and optionally activate a new profile.
 
@@ -122,7 +122,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md)\>\>
 
 #### Defined in
 
@@ -132,7 +132,7 @@ ___
 
 ### getPlaybook
 
-▸ **getPlaybook**(`profileId`, `options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **getPlaybook**(`profileId`, `options?`): `Promise`<`AxiosResponse`<`object`\>\>
 
 Constructs and returns a Ansible playbook suitable to configure a host for the requested profile.
 
@@ -155,7 +155,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
+`Promise`<`AxiosResponse`<`object`\>\>
 
 #### Defined in
 
@@ -165,7 +165,7 @@ ___
 
 ### getProfile
 
-▸ **getProfile**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+▸ **getProfile**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md)\>\>
 
 Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.
 
@@ -188,7 +188,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md)\>\>
 
 #### Defined in
 
@@ -198,7 +198,7 @@ ___
 
 ### getProfiles
 
-▸ **getProfiles**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+▸ **getProfiles**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
 
 Retrieve a paginated array of profiles for the identified account. The URL query parameters \'limit\' and \'offset\' can be used to paginate the results. The default value of \'limit\' is 50. The default value of \'offset\' is 0.
 
@@ -222,7 +222,7 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md)\>\>
 
 #### Defined in
 

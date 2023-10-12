@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
 
 Required permissions: inventory:hosts:read
 
@@ -136,8 +136,8 @@ TagsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md)\>\>
 
 #### Defined in
 
-[api.ts:6622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6622)
+[api.ts:6714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6714)

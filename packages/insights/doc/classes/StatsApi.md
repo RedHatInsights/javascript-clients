@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### statsList
 
-▸ **statsList**(`options?`): `Promise`<`AxiosResponse`<`string`[][], `any`\>\>
+▸ **statsList**(`options?`): `Promise`<`AxiosResponse`<`string`[][]\>\>
 
 Provide a simple list of URLs contained here.  A list of statistics views.
 
@@ -118,7 +118,7 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[][], `any`\>\>
+`Promise`<`AxiosResponse`<`string`[][]\>\>
 
 #### Defined in
 
@@ -128,7 +128,7 @@ ___
 
 ### statsOverviewRetrieve
 
-▸ **statsOverviewRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsOverviewRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
 
@@ -150,7 +150,7 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 #### Defined in
 
@@ -160,7 +160,7 @@ ___
 
 ### statsReportsRetrieve
 
-▸ **statsReportsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsReportsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 Show statistics of reports impacting across categories and risks.  Only current reports are considered.
 
@@ -182,7 +182,7 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 #### Defined in
 
@@ -192,7 +192,7 @@ ___
 
 ### statsRulesRetrieve
 
-▸ **statsRulesRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsRulesRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 Show statistics of rule usage across categories and risks.  Only current reports are considered.
 
@@ -214,7 +214,7 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 #### Defined in
 
@@ -224,7 +224,7 @@ ___
 
 ### statsSystemsRetrieve
 
-▸ **statsSystemsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsSystemsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
 
@@ -246,7 +246,7 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md)\>\>
 
 #### Defined in
 

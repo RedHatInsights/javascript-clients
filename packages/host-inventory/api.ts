@@ -1572,6 +1572,12 @@ export interface SystemProfile {
      */
     cores_per_socket?: number;
     /**
+     * Number of CPU threads per CPU core. Typical values: 1, 2, 4
+     * @type {number}
+     * @memberof SystemProfile
+     */
+    threads_per_core?: number;
+    /**
      *
      * @type {number}
      * @memberof SystemProfile
@@ -2432,6 +2438,12 @@ export interface SystemProfileSystemd {
      * @memberof SystemProfileSystemd
      */
     failed: number;
+    /**
+     * List of all failed jobs.
+     * @type {Array<string>}
+     * @memberof SystemProfileSystemd
+     */
+    failed_services?: Array<string>;
 }
 
 /**
@@ -3404,17 +3416,61 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
+         * Delete a list of hosts from the groups they are in. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of hosts from the groups they are in
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiGroupDeleteHostsFromDifferentGroups: async (hostIdList: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'hostIdList' is not null or undefined
+            if (hostIdList === null || hostIdList === undefined) {
+                throw new RequiredError('hostIdList','Required parameter hostIdList was null or undefined when calling apiGroupDeleteHostsFromDifferentGroups.');
+            }
+            const localVarPath = `/groups/hosts/{host_id_list}`
+                .replace(`{${"host_id_list"}}`, encodeURIComponent(String(hostIdList)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication ApiKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
          * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupList: async (name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/groups`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3472,12 +3528,12 @@ export const GroupsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById: async (groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
+        apiGroupGetGroupsById: async (groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupIdList' is not null or undefined
             if (groupIdList === null || groupIdList === undefined) {
                 throw new RequiredError('groupIdList','Required parameter groupIdList was null or undefined when calling apiGroupGetGroupsById.');
@@ -3774,17 +3830,31 @@ export const GroupsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * Delete a list of hosts from the groups they are in. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of hosts from the groups they are in
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiGroupDeleteHostsFromDifferentGroups(hostIdList: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupDeleteHostsFromDifferentGroups(hostIdList, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
          * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+        async apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3797,12 +3867,12 @@ export const GroupsApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
+        async apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupQueryOutput>> {
             const localVarAxiosArgs = await GroupsApiAxiosParamCreator(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3922,17 +3992,27 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
             return GroupsApiFp(configuration).apiGroupDeleteGroups(groupIdList, options).then((request) => request(axios, basePath));
         },
         /**
+         * Delete a list of hosts from the groups they are in. <br /><br /> Required permissions: inventory:groups:write
+         * @summary Delete a list of hosts from the groups they are in
+         * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiGroupDeleteHostsFromDifferentGroups(hostIdList: Array<string>, options?: any): AxiosPromise<void> {
+            return GroupsApiFp(configuration).apiGroupDeleteHostsFromDifferentGroups(hostIdList, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
          * @summary Read the entire list of groups
          * @param {string} [name] Filter by group name
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+        apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
             return GroupsApiFp(configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3941,12 +4021,12 @@ export const GroupsApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} groupIdList A comma-separated list of group IDs.
          * @param {number} [perPage] A number of items to return per page.
          * @param {number} [page] A page number of the items to return.
-         * @param {'name' | 'host_count'} [orderBy] Ordering field name
+         * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
+        apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any): AxiosPromise<GroupQueryOutput> {
             return GroupsApiFp(configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4061,18 +4141,30 @@ export class GroupsApi extends BaseAPI {
     }
 
     /**
+     * Delete a list of hosts from the groups they are in. <br /><br /> Required permissions: inventory:groups:write
+     * @summary Delete a list of hosts from the groups they are in
+     * @param {Array<string>} hostIdList A comma-separated list of host IDs.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GroupsApi
+     */
+    public apiGroupDeleteHostsFromDifferentGroups(hostIdList: Array<string>, options?: any) {
+        return GroupsApiFp(this.configuration).apiGroupDeleteHostsFromDifferentGroups(hostIdList, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
      * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
      * @summary Read the entire list of groups
      * @param {string} [name] Filter by group name
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'name' | 'host_count'} [orderBy] Ordering field name
+     * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiGroupGetGroupList(name?: string, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiGroupGetGroupList(name, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4082,13 +4174,13 @@ export class GroupsApi extends BaseAPI {
      * @param {Array<string>} groupIdList A comma-separated list of group IDs.
      * @param {number} [perPage] A number of items to return per page.
      * @param {number} [page] A page number of the items to return.
-     * @param {'name' | 'host_count'} [orderBy] Ordering field name
+     * @param {'name' | 'host_count' | 'updated'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for name, and to DESC for host_count
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupsApi
      */
-    public apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count', orderHow?: 'ASC' | 'DESC', options?: any) {
+    public apiGroupGetGroupsById(groupIdList: Array<string>, perPage?: number, page?: number, orderBy?: 'name' | 'host_count' | 'updated', orderHow?: 'ASC' | 'DESC', options?: any) {
         return GroupsApiFp(this.configuration).apiGroupGetGroupsById(groupIdList, perPage, page, orderBy, orderHow, options).then((request) => request(this.axios, this.basePath));
     }
 

@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### createIcon
 
-▸ **createIcon**(`content?`, `portfolioId?`, `portfolioItemId?`, `options?`): `Promise`<`AxiosResponse`<[`Icon`](../interfaces/Icon.md), `any`\>\>
+▸ **createIcon**(`content?`, `portfolioId?`, `portfolioItemId?`, `options?`): `Promise`<`AxiosResponse`<[`Icon`](../interfaces/Icon.md)\>\>
 
 Creates an Icon from the specified parameters
 
@@ -122,7 +122,7 @@ IconApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Icon`](../interfaces/Icon.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Icon`](../interfaces/Icon.md)\>\>
 
 #### Defined in
 
@@ -132,7 +132,7 @@ ___
 
 ### destroyIcon
 
-▸ **destroyIcon**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **destroyIcon**(`id`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
 
 Deletes the icon based on the icon ID passed
 
@@ -155,7 +155,7 @@ IconApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`<`AxiosResponse`<`void`\>\>
 
 #### Defined in
 

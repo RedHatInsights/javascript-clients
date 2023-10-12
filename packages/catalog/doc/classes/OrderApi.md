@@ -106,7 +106,7 @@ BaseAPI.configuration
 
 ### addToOrder
 
-▸ **addToOrder**(`orderId`, `orderItem`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+▸ **addToOrder**(`orderId`, `orderItem`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 Adds an order item to an order in pending state
 
@@ -130,7 +130,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 #### Defined in
 
@@ -140,7 +140,7 @@ ___
 
 ### cancelOrder
 
-▸ **cancelOrder**(`orderId`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+▸ **cancelOrder**(`orderId`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 Returns an updated order.
 
@@ -163,7 +163,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 #### Defined in
 
@@ -173,7 +173,7 @@ ___
 
 ### createOrder
 
-▸ **createOrder**(`options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+▸ **createOrder**(`options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 Creates a new order.
 
@@ -195,7 +195,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 #### Defined in
 
@@ -205,7 +205,7 @@ ___
 
 ### destroyOrder
 
-▸ **destroyOrder**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+▸ **destroyOrder**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 Deletes the Order based on order ID passed
 
@@ -228,7 +228,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`RestoreKey`](../interfaces/RestoreKey.md)\>\>
 
 #### Defined in
 
@@ -238,7 +238,7 @@ ___
 
 ### listOrderItemsFromOrder
 
-▸ **listOrderItemsFromOrder**(`orderId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md), `any`\>\>
+▸ **listOrderItemsFromOrder**(`orderId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md)\>\>
 
 Gets a list of items associated with an order.
 
@@ -265,7 +265,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItemsCollection`](../interfaces/OrderItemsCollection.md)\>\>
 
 #### Defined in
 
@@ -275,7 +275,7 @@ ___
 
 ### listOrderProgressMessages
 
-▸ **listOrderProgressMessages**(`orderId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md), `any`\>\>
+▸ **listOrderProgressMessages**(`orderId`, `limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md)\>\>
 
 Gets a list of progress messages associated with an order. As the order is being processed the provider can update the progress messages.
 
@@ -302,7 +302,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`ProgressMessagesCollection`](../interfaces/ProgressMessagesCollection.md)\>\>
 
 #### Defined in
 
@@ -312,7 +312,7 @@ ___
 
 ### listOrders
 
-▸ **listOrders**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrdersCollection`](../interfaces/OrdersCollection.md), `any`\>\>
+▸ **listOrders**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`OrdersCollection`](../interfaces/OrdersCollection.md)\>\>
 
 Gets a list of orders associated with the logged in user.
 
@@ -338,7 +338,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrdersCollection`](../interfaces/OrdersCollection.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrdersCollection`](../interfaces/OrdersCollection.md)\>\>
 
 #### Defined in
 
@@ -348,7 +348,7 @@ ___
 
 ### restoreOrder
 
-▸ **restoreOrder**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+▸ **restoreOrder**(`id`, `restoreKey`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 Restores the order specified by the order ID.
 
@@ -372,7 +372,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 #### Defined in
 
@@ -382,7 +382,7 @@ ___
 
 ### showOrder
 
-▸ **showOrder**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+▸ **showOrder**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 Get a specific order based on the order ID
 
@@ -405,7 +405,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 #### Defined in
 
@@ -415,7 +415,7 @@ ___
 
 ### showOrderItemFromOrder
 
-▸ **showOrderItemFromOrder**(`orderId`, `id`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+▸ **showOrderItemFromOrder**(`orderId`, `id`, `options?`): `Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 Gets an order item associated with an order.
 
@@ -439,7 +439,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`OrderItem`](../interfaces/OrderItem.md)\>\>
 
 #### Defined in
 
@@ -449,7 +449,7 @@ ___
 
 ### submitOrder
 
-▸ **submitOrder**(`orderId`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+▸ **submitOrder**(`orderId`, `options?`): `Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 Returns an updated order.
 
@@ -472,7 +472,7 @@ OrderApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`Order`](../interfaces/Order.md)\>\>
 
 #### Defined in
 
