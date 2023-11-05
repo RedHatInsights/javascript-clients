@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### createPolicies
 
-▸ **createPolicies**(`policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **createPolicies**(`policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -121,7 +121,7 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 
@@ -131,7 +131,7 @@ ___
 
 ### deletePolicy
 
-▸ **deletePolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **deletePolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -152,7 +152,7 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -162,7 +162,7 @@ ___
 
 ### getPolicy
 
-▸ **getPolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **getPolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -183,7 +183,7 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 
@@ -193,7 +193,7 @@ ___
 
 ### listPolicies
 
-▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md)\>\>
+▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by policy name
 
@@ -222,7 +222,7 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 #### Defined in
 
@@ -232,7 +232,7 @@ ___
 
 ### updatePolicy
 
-▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -254,7 +254,7 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md)\>\>
+`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Defined in
 

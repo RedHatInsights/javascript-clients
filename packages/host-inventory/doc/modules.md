@@ -25,7 +25,6 @@
 - [ResourceTypesApi](classes/ResourceTypesApi.md)
 - [SystemProfileApi](classes/SystemProfileApi.md)
 - [TagsApi](classes/TagsApi.md)
-- [UnleashApi](classes/UnleashApi.md)
 
 ### Interfaces
 
@@ -126,9 +125,6 @@
 - [TagsApiAxiosParamCreator](modules.md#tagsapiaxiosparamcreator)
 - [TagsApiFactory](modules.md#tagsapifactory)
 - [TagsApiFp](modules.md#tagsapifp)
-- [UnleashApiAxiosParamCreator](modules.md#unleashapiaxiosparamcreator)
-- [UnleashApiFactory](modules.md#unleashapifactory)
-- [UnleashApiFp](modules.md#unleashapifp)
 
 ## Type Aliases
 
@@ -744,89 +740,3 @@ TagsApi - functional programming interface
 #### Defined in
 
 [api.ts:6610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6610)
-
-___
-
-### UnleashApiAxiosParamCreator
-
-▸ **UnleashApiAxiosParamCreator**(`configuration?`): `Object`
-
-UnleashApi - axios parameter creator
-
-**`Export`**
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `apiUnleashGetInventoryGroupsToggle` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
-
-#### Defined in
-
-[api.ts:6725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6725)
-
-___
-
-### UnleashApiFactory
-
-▸ **UnleashApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-UnleashApi - factory interface
-
-**`Export`**
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `apiUnleashGetInventoryGroupsToggle` | (`options?`: `any`) => `AxiosPromise`<[`UnleashToggleOut`](interfaces/UnleashToggleOut.md)\> |
-
-#### Defined in
-
-[api.ts:6794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6794)
-
-___
-
-### UnleashApiFp
-
-▸ **UnleashApiFp**(`configuration?`): `Object`
-
-UnleashApi - functional programming interface
-
-**`Export`**
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `apiUnleashGetInventoryGroupsToggle` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`UnleashToggleOut`](interfaces/UnleashToggleOut.md)\>\> |
-
-#### Defined in
-
-[api.ts:6772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6772)

@@ -4339,7 +4339,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4440,7 +4440,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4525,8 +4525,8 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4651,7 +4651,7 @@ export const HostsApiAxiosParamCreator = function (configuration?: Configuration
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5144,7 +5144,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5164,7 +5164,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5195,8 +5195,8 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5216,7 +5216,7 @@ export const HostsApiFp = function(configuration?: Configuration) {
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5373,7 +5373,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5389,7 +5389,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {number} [page] A page number of the items to return.
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5416,8 +5416,8 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5433,7 +5433,7 @@ export const HostsApiFactory = function (configuration?: Configuration, basePath
          * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
          * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
          * @param {string} [branchId] Filter by branch_id
-         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+         * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5567,7 +5567,7 @@ export class HostsApi extends BaseAPI {
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts.
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -5585,7 +5585,7 @@ export class HostsApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -5614,8 +5614,8 @@ export class HostsApi extends BaseAPI {
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<string>} [tags] filters out hosts not tagged by the given tags
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
-     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
+     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -5633,7 +5633,7 @@ export class HostsApi extends BaseAPI {
      * @param {'display_name' | 'group_name' | 'updated' | 'operating_system'} [orderBy] Ordering field name
      * @param {'ASC' | 'DESC'} [orderHow] Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
      * @param {string} [branchId] Filter by branch_id
-     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields
+     * @param {{ [key: string]: object; }} [fields] Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof HostsApi
@@ -5967,7 +5967,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6036,7 +6036,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6108,7 +6108,7 @@ export const SystemProfileApiAxiosParamCreator = function (configuration?: Confi
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6247,7 +6247,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6267,7 +6267,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6286,7 +6286,7 @@ export const SystemProfileApiFp = function(configuration?: Configuration) {
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6331,7 +6331,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6347,7 +6347,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6362,7 +6362,7 @@ export const SystemProfileApiFactory = function (configuration?: Configuration, 
          * @param {number} [page] A page number of the items to return.
          * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6400,7 +6400,7 @@ export class SystemProfileApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemProfileApi
@@ -6418,7 +6418,7 @@ export class SystemProfileApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemProfileApi
@@ -6435,7 +6435,7 @@ export class SystemProfileApi extends BaseAPI {
      * @param {number} [page] A page number of the items to return.
      * @param {Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>} [staleness] Culling states of the hosts. Default: fresh,stale,unknown
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemProfileApi
@@ -6488,7 +6488,7 @@ export const TagsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
          * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6629,7 +6629,7 @@ export const TagsApiFp = function(configuration?: Configuration) {
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
          * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6669,7 +6669,7 @@ export const TagsApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [updatedEnd] Only show hosts last modified before the given date
          * @param {Array<string>} [groupName] Filter by group name
          * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+         * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6706,121 +6706,13 @@ export class TagsApi extends BaseAPI {
      * @param {string} [updatedEnd] Only show hosts last modified before the given date
      * @param {Array<string>} [groupName] Filter by group name
      * @param {Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>} [registeredWith] Filters out any host not registered by the specified reporters
-     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields
+     * @param {{ [key: string]: object; }} [filter] Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TagsApi
      */
     public apiTagGetTags(tags?: Array<string>, orderBy?: 'tag' | 'count', orderHow?: 'ASC' | 'DESC', perPage?: number, page?: number, staleness?: Array<'fresh' | 'stale' | 'stale_warning' | 'unknown'>, search?: string, displayName?: string, fqdn?: string, hostnameOrId?: string, insightsId?: string, providerId?: string, providerType?: 'alibaba' | 'aws' | 'azure' | 'gcp' | 'ibm', updatedStart?: string, updatedEnd?: string, groupName?: Array<string>, registeredWith?: Array<'insights' | 'yupana' | 'puptoo' | 'rhsm-conduit' | 'cloud-connector' | '!yupana' | '!puptoo' | '!rhsm-conduit' | '!cloud-connector'>, filter?: { [key: string]: object; }, options?: any) {
         return TagsApiFp(this.configuration).apiTagGetTags(tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-}
-
-
-/**
- * UnleashApi - axios parameter creator
- * @export
- */
-export const UnleashApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Returns the value of the hbi.api.inventory-groups toggle, if able to be retrieved.
-         * @summary Check whether the Groups feature is enabled
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiUnleashGetInventoryGroupsToggle: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/unleash/inventory_groups_toggle`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication ApiKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * UnleashApi - functional programming interface
- * @export
- */
-export const UnleashApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Returns the value of the hbi.api.inventory-groups toggle, if able to be retrieved.
-         * @summary Check whether the Groups feature is enabled
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiUnleashGetInventoryGroupsToggle(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UnleashToggleOut>> {
-            const localVarAxiosArgs = await UnleashApiAxiosParamCreator(configuration).apiUnleashGetInventoryGroupsToggle(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * UnleashApi - factory interface
- * @export
- */
-export const UnleashApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * Returns the value of the hbi.api.inventory-groups toggle, if able to be retrieved.
-         * @summary Check whether the Groups feature is enabled
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiUnleashGetInventoryGroupsToggle(options?: any): AxiosPromise<UnleashToggleOut> {
-            return UnleashApiFp(configuration).apiUnleashGetInventoryGroupsToggle(options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * UnleashApi - object-oriented interface
- * @export
- * @class UnleashApi
- * @extends {BaseAPI}
- */
-export class UnleashApi extends BaseAPI {
-    /**
-     * Returns the value of the hbi.api.inventory-groups toggle, if able to be retrieved.
-     * @summary Check whether the Groups feature is enabled
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UnleashApi
-     */
-    public apiUnleashGetInventoryGroupsToggle(options?: any) {
-        return UnleashApiFp(this.configuration).apiUnleashGetInventoryGroupsToggle(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

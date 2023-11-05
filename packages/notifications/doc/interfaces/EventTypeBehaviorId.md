@@ -27,7 +27,7 @@ EventTypeBehaviorId
 
 #### Defined in
 
-[packages/notifications/types/index.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L981)
+[packages/notifications/types/index.ts:979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L979)
 
 ___
 
@@ -41,4 +41,4 @@ EventTypeBehaviorId
 
 #### Defined in
 
-[packages/notifications/types/index.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L975)
+[packages/notifications/types/index.ts:973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L973)

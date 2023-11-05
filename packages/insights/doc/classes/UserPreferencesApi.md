@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### userPreferencesCreate
 
-▸ **userPreferencesCreate**(`preferencesInput`, `options?`): `Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md)\>\>
+▸ **userPreferencesCreate**(`preferencesInput`, `options?`): `Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
 
 Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
 
@@ -116,7 +116,7 @@ UserPreferencesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md)\>\>
+`Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
 
 #### Defined in
 
@@ -126,7 +126,7 @@ ___
 
 ### userPreferencesList
 
-▸ **userPreferencesList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[]\>\>
+▸ **userPreferencesList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
 
 Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
 
@@ -144,7 +144,7 @@ UserPreferencesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[]\>\>
+`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
 
 #### Defined in
 

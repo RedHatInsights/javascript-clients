@@ -26,4 +26,4 @@ EndpointTestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L737)
+[packages/notifications/types/index.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L735)

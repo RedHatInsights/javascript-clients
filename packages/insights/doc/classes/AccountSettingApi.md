@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### accountSettingCreate
 
-▸ **accountSettingCreate**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **accountSettingCreate**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
 
@@ -115,7 +115,7 @@ AccountSettingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### accountSettingRetrieve
 
-▸ **accountSettingRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **accountSettingRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
 
@@ -143,7 +143,7 @@ AccountSettingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

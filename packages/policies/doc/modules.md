@@ -61,7 +61,7 @@ BasePathFillerServiceApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
+| `get` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
@@ -119,7 +119,7 @@ BasePathFillerServiceApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `get` | (`options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `get` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
 
 #### Defined in
 
@@ -147,7 +147,7 @@ FactServiceApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `getFacts` | (`options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
+| `getFacts` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
@@ -205,7 +205,7 @@ FactServiceApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `getFacts` | (`options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Fact`](interfaces/Fact.md)[]\>\> |
+| `getFacts` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Fact`](interfaces/Fact.md)[]\>\> |
 
 #### Defined in
 
@@ -233,18 +233,18 @@ PolicyCrudServiceApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `getPolicies` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `getPoliciesIds` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
-| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<`RequestArgs`\> |
+| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `getPolicies` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `getPoliciesIds` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
@@ -313,18 +313,18 @@ PolicyCrudServiceApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
-| `getPolicies` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PagedResponseOfPolicy`](interfaces/PagedResponseOfPolicy.md)\>\> |
-| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Policy`](interfaces/Policy.md)\>\> |
-| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PagedResponseOfHistoryItem`](interfaces/PagedResponseOfHistoryItem.md)\>\> |
-| `getPoliciesIds` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
-| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
-| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Msg`](interfaces/Msg.md)\>\> |
-| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Msg`](interfaces/Msg.md)\>\> |
-| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Policy`](interfaces/Policy.md)\>\> |
+| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
+| `getPolicies` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PagedResponseOfPolicy`](interfaces/PagedResponseOfPolicy.md)\>\> |
+| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Policy`](interfaces/Policy.md)\>\> |
+| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filterName?`: `string`, `limit?`: `number`, `offset?`: `number`, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"desc"`` \| ``"asc"``, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PagedResponseOfHistoryItem`](interfaces/PagedResponseOfHistoryItem.md)\>\> |
+| `getPoliciesIds` | (`filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filterIsEnabled?`: ``"false"`` \| ``"true"``, `filterName?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
+| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`[]\>\> |
+| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Msg`](interfaces/Msg.md)\>\> |
+| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Msg`](interfaces/Msg.md)\>\> |
+| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Policy`](interfaces/Policy.md)\>\> |
 
 #### Defined in
 

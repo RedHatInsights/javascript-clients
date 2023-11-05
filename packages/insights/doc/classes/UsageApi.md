@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### usageList
 
-▸ **usageList**(`account?`, `end?`, `orgId?`, `start?`, `options?`): `Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md)\>\>
+▸ **usageList**(`account?`, `end?`, `orgId?`, `start?`, `options?`): `Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md), `any`\>\>
 
 List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
 
@@ -118,7 +118,7 @@ UsageApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md)\>\>
+`Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md), `any`\>\>
 
 #### Defined in
 
