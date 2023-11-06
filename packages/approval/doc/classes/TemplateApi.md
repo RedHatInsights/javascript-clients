@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 ### listTemplates
 
-▸ **listTemplates**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`TemplateCollection`](../interfaces/TemplateCollection.md)\>\>
+▸ **listTemplates**(`limit?`, `offset?`, `filter?`, `sortBy?`, `options?`): `Promise`<`AxiosResponse`<[`TemplateCollection`](../interfaces/TemplateCollection.md), `any`\>\>
 
 Find all templates, available to admin only
 
@@ -123,7 +123,7 @@ TemplateApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TemplateCollection`](../interfaces/TemplateCollection.md)\>\>
+`Promise`<`AxiosResponse`<[`TemplateCollection`](../interfaces/TemplateCollection.md), `any`\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### showTemplate
 
-▸ **showTemplate**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Template`](../interfaces/Template.md)\>\>
+▸ **showTemplate**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Template`](../interfaces/Template.md), `any`\>\>
 
 Find a template by its id, available to admin only
 
@@ -156,7 +156,7 @@ TemplateApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Template`](../interfaces/Template.md)\>\>
+`Promise`<`AxiosResponse`<[`Template`](../interfaces/Template.md), `any`\>\>
 
 #### Defined in
 

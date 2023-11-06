@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 ### apiStalenessCreateStaleness
 
-▸ **apiStalenessCreateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+▸ **apiStalenessCreateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Create account staleness record. Required permissions: inventory:TODO:write
 
@@ -123,7 +123,7 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -133,7 +133,7 @@ ___
 
 ### apiStalenessDeleteStaleness
 
-▸ **apiStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
 
@@ -155,7 +155,7 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -165,7 +165,7 @@ ___
 
 ### apiStalenessGetDefaultStaleness
 
-▸ **apiStalenessGetDefaultStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+▸ **apiStalenessGetDefaultStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
 
@@ -187,7 +187,7 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -197,7 +197,7 @@ ___
 
 ### apiStalenessGetStaleness
 
-▸ **apiStalenessGetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+▸ **apiStalenessGetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
 
@@ -219,7 +219,7 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -229,7 +229,7 @@ ___
 
 ### apiStalenessUpdateStaleness
 
-▸ **apiStalenessUpdateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+▸ **apiStalenessUpdateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Update account staleness record. Required permissions: inventory:staleness:write
 
@@ -252,7 +252,7 @@ AccountsStalenessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 #### Defined in
 

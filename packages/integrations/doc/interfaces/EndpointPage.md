@@ -28,7 +28,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L694)
+[packages/integrations/types/index.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L692)
 
 ___
 
@@ -46,7 +46,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L700)
+[packages/integrations/types/index.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L698)
 
 ___
 
@@ -60,4 +60,4 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L706)
+[packages/integrations/types/index.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L704)

@@ -28,7 +28,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1327)
+[packages/notifications/types/index.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1325)
 
 ___
 
@@ -46,7 +46,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1333)
+[packages/notifications/types/index.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1331)
 
 ___
 
@@ -60,4 +60,4 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1339)
+[packages/notifications/types/index.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1337)

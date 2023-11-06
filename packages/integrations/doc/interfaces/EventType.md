@@ -32,7 +32,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:937](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L937)
+[packages/integrations/types/index.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L935)
 
 ___
 
@@ -46,7 +46,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L931)
+[packages/integrations/types/index.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L929)
 
 ___
 
@@ -60,7 +60,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L919)
+[packages/integrations/types/index.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L917)
 
 ___
 
@@ -74,7 +74,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L913)
+[packages/integrations/types/index.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L911)
 
 ___
 
@@ -88,7 +88,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L925)
+[packages/integrations/types/index.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L923)
 
 ___
 
@@ -102,7 +102,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L901)
+[packages/integrations/types/index.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L899)
 
 ___
 
@@ -116,4 +116,4 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L907)
+[packages/integrations/types/index.ts:905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L905)

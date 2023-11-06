@@ -28,7 +28,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1302)
+[packages/integrations/types/index.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1300)
 
 ___
 
@@ -46,7 +46,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1308)
+[packages/integrations/types/index.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1306)
 
 ___
 
@@ -60,4 +60,4 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1314)
+[packages/integrations/types/index.ts:1312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1312)

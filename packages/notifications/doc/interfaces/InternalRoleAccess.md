@@ -28,7 +28,7 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1157)
+[packages/notifications/types/index.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1155)
 
 ___
 
@@ -42,7 +42,7 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1145)
+[packages/notifications/types/index.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1143)
 
 ___
 
@@ -56,4 +56,4 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1151)
+[packages/notifications/types/index.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1149)

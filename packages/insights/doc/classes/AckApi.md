@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 ### ackAllList
 
-▸ **ackAllList**(`options?`): `Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[]\>\>
+▸ **ackAllList**(`options?`): `Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
 
 List acks from all accounts, with org_id.  Has no pagination.
 
@@ -119,7 +119,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[]\>\>
+`Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
 
 #### Defined in
 
@@ -129,7 +129,7 @@ ___
 
 ### ackCreate
 
-▸ **ackCreate**(`ackInput`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+▸ **ackCreate**(`ackInput`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
 
@@ -148,7 +148,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 #### Defined in
 
@@ -158,7 +158,7 @@ ___
 
 ### ackDestroy
 
-▸ **ackDestroy**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<`string`\>\>
+▸ **ackDestroy**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
 
 Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
 
@@ -177,7 +177,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`\>\>
+`Promise`<`AxiosResponse`<`string`, `any`\>\>
 
 #### Defined in
 
@@ -187,7 +187,7 @@ ___
 
 ### ackList
 
-▸ **ackList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md)\>\>
+▸ **ackList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
 
 List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
 
@@ -207,7 +207,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md)\>\>
+`Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
 
 #### Defined in
 
@@ -217,7 +217,7 @@ ___
 
 ### ackRetrieve
 
-▸ **ackRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+▸ **ackRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
 
@@ -236,7 +236,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 #### Defined in
 
@@ -246,7 +246,7 @@ ___
 
 ### ackUpdate
 
-▸ **ackUpdate**(`ruleId`, `ackJustification?`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+▸ **ackUpdate**(`ruleId`, `ackJustification?`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
 
@@ -266,7 +266,7 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md)\>\>
+`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 #### Defined in
 

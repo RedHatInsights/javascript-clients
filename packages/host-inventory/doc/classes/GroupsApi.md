@@ -106,7 +106,7 @@ BaseAPI.configuration
 
 ### apiAssignmentRuleCreateAssignmentRule
 
-▸ **apiAssignmentRuleCreateAssignmentRule**(`assignmentRuleIn`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md)\>\>
+▸ **apiAssignmentRuleCreateAssignmentRule**(`assignmentRuleIn`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md), `any`\>\>
 
 Create Assignment Rule object using post request <br /><br /> Required permissions: inventory:groups:write
 
@@ -129,7 +129,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md)\>\>
+`Promise`<`AxiosResponse`<[`AssignmentRuleOut`](../interfaces/AssignmentRuleOut.md), `any`\>\>
 
 #### Defined in
 
@@ -139,7 +139,7 @@ ___
 
 ### apiAssignmentRuleGetAssignmentRulesById
 
-▸ **apiAssignmentRuleGetAssignmentRulesById**(`assignmentRuleIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+▸ **apiAssignmentRuleGetAssignmentRulesById**(`assignmentRuleIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md), `any`\>\>
 
 Find one or more assignment rules by their IDs. <br /><br /> Required permissions: inventory:groups:read
 
@@ -166,7 +166,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -176,7 +176,7 @@ ___
 
 ### apiAssignmentRuleGetAssignmentRulesList
 
-▸ **apiAssignmentRuleGetAssignmentRulesList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+▸ **apiAssignmentRuleGetAssignmentRulesList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md), `any`\>\>
 
 Read the entire list of all assignment-rules available to the account. [Not Implemented] Required permissions: inventory:groups:read
 
@@ -203,7 +203,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`AssignmentRuleQueryOutput`](../interfaces/AssignmentRuleQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -213,7 +213,7 @@ ___
 
 ### apiGroupCreateGroup
 
-▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+▸ **apiGroupCreateGroup**(`groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Creates a new group containing the hosts associated with the host IDs provided. <br /><br /> Required permissions: inventory:groups:write
 
@@ -236,7 +236,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
@@ -246,7 +246,7 @@ ___
 
 ### apiGroupDeleteGroups
 
-▸ **apiGroupDeleteGroups**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiGroupDeleteGroups**(`groupIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete a list of groups. <br /><br /> Required permissions: inventory:groups:write
 
@@ -269,7 +269,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -279,7 +279,7 @@ ___
 
 ### apiGroupDeleteHostsFromDifferentGroups
 
-▸ **apiGroupDeleteHostsFromDifferentGroups**(`hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiGroupDeleteHostsFromDifferentGroups**(`hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete a list of hosts from the groups they are in. <br /><br /> Required permissions: inventory:groups:write
 
@@ -302,7 +302,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 
@@ -312,7 +312,7 @@ ___
 
 ### apiGroupGetGroupList
 
-▸ **apiGroupGetGroupList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
+▸ **apiGroupGetGroupList**(`name?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
 
 Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
 
@@ -339,7 +339,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -349,7 +349,7 @@ ___
 
 ### apiGroupGetGroupsById
 
-▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
+▸ **apiGroupGetGroupsById**(`groupIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
 
 Find one or more groups by their IDs. <br /><br /> Required permissions: inventory:groups:read
 
@@ -376,7 +376,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupQueryOutput`](../interfaces/GroupQueryOutput.md), `any`\>\>
 
 #### Defined in
 
@@ -386,7 +386,7 @@ ___
 
 ### apiGroupPatchGroupById
 
-▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+▸ **apiGroupPatchGroupById**(`groupId`, `groupIn`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Merge group information. <br /><br /> Required permissions: inventory:groups:write
 
@@ -410,7 +410,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
@@ -420,7 +420,7 @@ ___
 
 ### apiHostGroupAddHostListToGroup
 
-▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+▸ **apiHostGroupAddHostListToGroup**(`groupId`, `requestBody`, `options?`): `Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write
 
@@ -444,7 +444,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md)\>\>
+`Promise`<`AxiosResponse`<[`GroupOutWithHostCount`](../interfaces/GroupOutWithHostCount.md), `any`\>\>
 
 #### Defined in
 
@@ -454,7 +454,7 @@ ___
 
 ### apiHostGroupDeleteHostsFromGroup
 
-▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **apiHostGroupDeleteHostsFromGroup**(`groupId`, `hostIdList`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write
 
@@ -478,7 +478,7 @@ GroupsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

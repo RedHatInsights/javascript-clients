@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 ### get
 
-▸ **get**(`options?`): `Promise`<`AxiosResponse`<`void`\>\>
+▸ **get**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -112,11 +112,11 @@ BasePathFillerServiceApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | `AxiosRequestConfig` | Override http request option. |
+| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`\>\>
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 #### Defined in
 

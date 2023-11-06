@@ -622,9 +622,7 @@ export interface DuplicateNameMigrationReport {
  */
 
 export const EmailSubscriptionType = {
-    Instant: 'INSTANT',
-    Daily: 'DAILY',
-    Drawer: 'DRAWER'
+    Daily: 'DAILY'
 } as const;
 
 export type EmailSubscriptionType = typeof EmailSubscriptionType[keyof typeof EmailSubscriptionType];

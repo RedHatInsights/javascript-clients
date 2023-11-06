@@ -30,4 +30,4 @@ MessageValidationResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1195)
+[packages/integrations/types/index.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1193)
