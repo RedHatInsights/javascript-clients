@@ -1,6 +1,6 @@
 {
     "name": "@redhat-cloud-services/sources-client",
-    "version": "1.2.12",
+    "version": "1.2.13",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
