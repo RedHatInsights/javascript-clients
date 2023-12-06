@@ -51,7 +51,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +65,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -79,7 +79,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -93,7 +93,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -137,7 +137,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4298)
+[api.ts:4248](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4248)
 
 ___
 
@@ -165,7 +165,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4308)
+[api.ts:4258](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4258)
 
 ___
 
@@ -193,7 +193,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4318)
+[api.ts:4268](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4268)
 
 ___
 
@@ -226,4 +226,4 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4333)
+[api.ts:4283](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4283)

@@ -29,7 +29,7 @@ SharePolicy
 
 #### Defined in
 
-[api.ts:1218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1218)
+[api.ts:1218](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1218)
 
 ___
 
@@ -45,4 +45,4 @@ SharePolicy
 
 #### Defined in
 
-[api.ts:1212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1212)
+[api.ts:1212](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1212)

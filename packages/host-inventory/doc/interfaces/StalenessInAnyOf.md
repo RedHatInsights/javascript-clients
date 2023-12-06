@@ -31,7 +31,7 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1414)
+[api.ts:1414](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1414)
 
 ___
 
@@ -45,7 +45,7 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1408)
+[api.ts:1408](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1408)
 
 ___
 
@@ -59,7 +59,7 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1402)
+[api.ts:1402](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1402)
 
 ___
 
@@ -73,7 +73,7 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1432)
+[api.ts:1432](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1432)
 
 ___
 
@@ -87,7 +87,7 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1426)
+[api.ts:1426](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1426)
 
 ___
 
@@ -101,4 +101,4 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1420)
+[api.ts:1420](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1420)

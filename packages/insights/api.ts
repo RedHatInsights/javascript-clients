@@ -725,56 +725,6 @@ export interface PaginatedPathwayList {
 /**
  *
  * @export
- * @interface PaginatedRenderedReportList
- */
-export interface PaginatedRenderedReportList {
-    /**
-     *
-     * @type {PaginatedAckListMeta}
-     * @memberof PaginatedRenderedReportList
-     */
-    meta?: PaginatedAckListMeta;
-    /**
-     *
-     * @type {PaginatedAckListLinks}
-     * @memberof PaginatedRenderedReportList
-     */
-    links?: PaginatedAckListLinks;
-    /**
-     *
-     * @type {Array<RenderedReport>}
-     * @memberof PaginatedRenderedReportList
-     */
-    data?: Array<RenderedReport>;
-}
-/**
- *
- * @export
- * @interface PaginatedReportList
- */
-export interface PaginatedReportList {
-    /**
-     *
-     * @type {PaginatedAckListMeta}
-     * @memberof PaginatedReportList
-     */
-    meta?: PaginatedAckListMeta;
-    /**
-     *
-     * @type {PaginatedAckListLinks}
-     * @memberof PaginatedReportList
-     */
-    links?: PaginatedAckListLinks;
-    /**
-     *
-     * @type {Array<Report>}
-     * @memberof PaginatedReportList
-     */
-    data?: Array<Report>;
-}
-/**
- *
- * @export
  * @interface PaginatedRuleForAccountList
  */
 export interface PaginatedRuleForAccountList {
@@ -6689,13 +6639,13 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsDetailList: async (ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        ruleSystemsDetailList: async (ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsDetailList.');
@@ -6766,13 +6716,13 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsRetrieve: async (ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        ruleSystemsRetrieve: async (ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsRetrieve.');
@@ -6992,13 +6942,13 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemsDetailList>> {
+        async ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemsDetailList>> {
             const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -7011,13 +6961,13 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
+        async ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
             const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -7125,13 +7075,13 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemsDetailList> {
+        ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemsDetailList> {
             return RuleApiFp(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7140,13 +7090,13 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
+        ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
             return RuleApiFp(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7257,14 +7207,14 @@ export class RuleApi extends BaseAPI {
      * @param {number} [limit] Number of results to return per page.
      * @param {string} [name] Search for systems that include this in their display name
      * @param {number} [offset] The initial index from which to return the results.
-     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
      * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
+    public ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
         return RuleApiFp(this.configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7274,14 +7224,14 @@ export class RuleApi extends BaseAPI {
      * @param {'csv' | 'json'} [format]
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {string} [name] Search for systems that include this in their display name
-     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
      * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
+    public ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
         return RuleApiFp(this.configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -8299,13 +8249,13 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {string} [pathway] Display systems with rule hits for this Pathway
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList: async (displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemList: async (displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/system/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -8390,13 +8340,11 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemRenderedReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemRenderedReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemRenderedReportsList.');
@@ -8428,14 +8376,6 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
             }
 
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
             }
@@ -8459,13 +8399,11 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemReportsList.');
@@ -8499,14 +8437,6 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (groups) {
                 localVarQueryParameter['groups'] = groups;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
             }
 
             if (tags) {
@@ -8590,13 +8520,13 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {string} [pathway] Display systems with rule hits for this Pathway
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
+        async systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
             const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -8608,14 +8538,12 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRenderedReportList>> {
-            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options);
+        async systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RenderedReport>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8627,14 +8555,12 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedReportList>> {
-            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, options);
+        async systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Report>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8674,13 +8600,13 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
          * @param {string} [pathway] Display systems with rule hits for this Pathway
-         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemList> {
+        systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemList> {
             return SystemApiFp(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
         },
         /**
@@ -8688,14 +8614,12 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
          * @param {string} uuid A UUID string identifying this inventory host.
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any): AxiosPromise<PaginatedRenderedReportList> {
-            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options).then((request) => request(axios, basePath));
+        systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): AxiosPromise<Array<RenderedReport>> {
+            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
@@ -8703,14 +8627,12 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
-         * @param {number} [limit] Number of results to return per page.
-         * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, options?: any): AxiosPromise<PaginatedReportList> {
-            return SystemApiFp(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, options).then((request) => request(axios, basePath));
+        systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): AxiosPromise<Array<Report>> {
+            return SystemApiFp(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve the reports for a single system by Insights Inventory UUID
@@ -8743,14 +8665,14 @@ export class SystemApi extends BaseAPI {
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
      * @param {string} [pathway] Display systems with rule hits for this Pathway
-     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
      * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
+    public systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
         return SystemApiFp(this.configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -8759,15 +8681,13 @@ export class SystemApi extends BaseAPI {
      * @param {string} uuid A UUID string identifying this inventory host.
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
-     * @param {number} [limit] Number of results to return per page.
-     * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, limit?: number, offset?: number, tags?: Array<string>, options?: any) {
-        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, limit, offset, tags, options).then((request) => request(this.axios, this.basePath));
+    public systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8776,15 +8696,13 @@ export class SystemApi extends BaseAPI {
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
-     * @param {number} [limit] Number of results to return per page.
-     * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, options?: any) {
-        return SystemApiFp(this.configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, options).then((request) => request(this.axios, this.basePath));
+    public systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

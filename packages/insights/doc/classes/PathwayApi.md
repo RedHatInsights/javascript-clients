@@ -55,7 +55,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -126,7 +126,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5771)
+[api.ts:5721](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5721)
 
 ___
 
@@ -155,7 +155,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5782)
+[api.ts:5732](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5732)
 
 ___
 
@@ -191,7 +191,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5800)
+[api.ts:5750](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5750)
 
 ___
 
@@ -225,7 +225,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5816)
+[api.ts:5766](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5766)
 
 ___
 
@@ -260,7 +260,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5833)
+[api.ts:5783](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5783)
 
 ___
 
@@ -293,7 +293,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5848)
+[api.ts:5798](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5798)
 
 ___
 
@@ -330,7 +330,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5867)
+[api.ts:5817](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5817)
 
 ___
 
@@ -360,4 +360,4 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5879)
+[api.ts:5829](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5829)

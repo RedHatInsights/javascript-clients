@@ -51,7 +51,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +65,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -79,7 +79,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -93,7 +93,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -122,7 +122,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3826)
+[api.ts:3776](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3776)
 
 ___
 
@@ -151,7 +151,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3837)
+[api.ts:3787](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3787)
 
 ___
 
@@ -181,7 +181,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3849)
+[api.ts:3799](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3799)
 
 ___
 
@@ -210,4 +210,4 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3860)
+[api.ts:3810](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3810)

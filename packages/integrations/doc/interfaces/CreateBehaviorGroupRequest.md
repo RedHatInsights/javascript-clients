@@ -31,7 +31,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L429)
+[packages/integrations/types/index.ts:472](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L472)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L435)
+[packages/integrations/types/index.ts:478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L478)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L459)
+[packages/integrations/types/index.ts:502](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L502)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L441)
+[packages/integrations/types/index.ts:484](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L484)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L447)
+[packages/integrations/types/index.ts:490](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L490)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L453)
+[packages/integrations/types/index.ts:496](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L496)

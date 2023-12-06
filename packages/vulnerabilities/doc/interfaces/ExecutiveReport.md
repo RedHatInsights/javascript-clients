@@ -19,6 +19,7 @@ ExecutiveReport
 - [rules\_by\_severity](ExecutiveReport.md#rules_by_severity)
 - [rules\_total](ExecutiveReport.md#rules_total)
 - [system\_count](ExecutiveReport.md#system_count)
+- [system\_count\_per\_type](ExecutiveReport.md#system_count_per_type)
 - [top\_cves](ExecutiveReport.md#top_cves)
 - [top\_rules](ExecutiveReport.md#top_rules)
 
@@ -34,7 +35,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L810)
+[api.ts:785](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L785)
 
 ___
 
@@ -50,7 +51,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L816)
+[api.ts:791](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L791)
 
 ___
 
@@ -64,7 +65,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L822)
+[api.ts:797](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L797)
 
 ___
 
@@ -78,7 +79,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L828)
+[api.ts:803](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L803)
 
 ___
 
@@ -92,7 +93,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L834)
+[api.ts:809](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L809)
 
 ___
 
@@ -108,7 +109,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L840)
+[api.ts:815](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L815)
 
 ___
 
@@ -124,7 +125,21 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L846)
+[api.ts:821](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L821)
+
+___
+
+### system\_count\_per\_type
+
+• `Optional` **system\_count\_per\_type**: [`ExecutiveReportSystemCountPerType`](ExecutiveReportSystemCountPerType.md)
+
+**`Memberof`**
+
+ExecutiveReport
+
+#### Defined in
+
+[api.ts:827](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L827)
 
 ___
 
@@ -138,7 +153,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L852)
+[api.ts:833](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L833)
 
 ___
 
@@ -152,4 +167,4 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L858)
+[api.ts:839](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L839)

@@ -37,7 +37,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L298)
+[api.ts:298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L298)
 
 ___
 
@@ -53,7 +53,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L304)
+[api.ts:304](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L304)
 
 ___
 
@@ -67,7 +67,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L310)
+[api.ts:310](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L310)
 
 ___
 
@@ -81,7 +81,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L316)
+[api.ts:316](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L316)
 
 ___
 
@@ -95,7 +95,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L322)
+[api.ts:322](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L322)
 
 ___
 
@@ -109,7 +109,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L328)
+[api.ts:328](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L328)
 
 ___
 
@@ -123,7 +123,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L334)
+[api.ts:334](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L334)
 
 ___
 
@@ -137,7 +137,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L340)
+[api.ts:340](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L340)
 
 ___
 
@@ -151,7 +151,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L346)
+[api.ts:346](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L346)
 
 ___
 
@@ -165,4 +165,4 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L352)
+[api.ts:352](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L352)

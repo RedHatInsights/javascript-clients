@@ -26,4 +26,4 @@ OrderProcessAssociationsToRemove
 
 #### Defined in
 
-[api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L633)
+[api.ts:633](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L633)

@@ -45,7 +45,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L518)
+[api.ts:518](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L518)
 
 ___
 
@@ -59,7 +59,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L476)
+[api.ts:476](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L476)
 
 ___
 
@@ -73,7 +73,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L428)
+[api.ts:428](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L428)
 
 ___
 
@@ -87,7 +87,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L464)
+[api.ts:464](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L464)
 
 ___
 
@@ -103,7 +103,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L494)
+[api.ts:494](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L494)
 
 ___
 
@@ -117,7 +117,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L416)
+[api.ts:416](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L416)
 
 ___
 
@@ -133,7 +133,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L500)
+[api.ts:500](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L500)
 
 ___
 
@@ -149,7 +149,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L422)
+[api.ts:422](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L422)
 
 ___
 
@@ -165,7 +165,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L458)
+[api.ts:458](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L458)
 
 ___
 
@@ -181,7 +181,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L470)
+[api.ts:470](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L470)
 
 ___
 
@@ -195,7 +195,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L488)
+[api.ts:488](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L488)
 
 ___
 
@@ -211,7 +211,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L446)
+[api.ts:446](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L446)
 
 ___
 
@@ -227,7 +227,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L512)
+[api.ts:512](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L512)
 
 ___
 
@@ -243,7 +243,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L506)
+[api.ts:506](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L506)
 
 ___
 
@@ -259,7 +259,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L440)
+[api.ts:440](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L440)
 
 ___
 
@@ -273,7 +273,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L434)
+[api.ts:434](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L434)
 
 ___
 
@@ -289,7 +289,7 @@ OrderItem
 
 #### Defined in
 
-[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L452)
+[api.ts:452](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L452)
 
 ___
 
@@ -303,4 +303,4 @@ OrderItem
 
 #### Defined in
 
-[api.ts:482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L482)
+[api.ts:482](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L482)

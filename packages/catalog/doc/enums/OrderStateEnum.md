@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[api.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L398)
+[api.ts:398](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L398)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L402)
+[api.ts:402](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L402)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L401)
+[api.ts:401](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L401)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L397)
+[api.ts:397](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L397)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[api.ts:400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L400)
+[api.ts:400](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L400)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[api.ts:399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L399)
+[api.ts:399](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L399)

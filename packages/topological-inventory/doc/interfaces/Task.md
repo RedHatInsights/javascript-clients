@@ -33,7 +33,7 @@ Task
 
 #### Defined in
 
-[api.ts:3570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3570)
+[api.ts:3570](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3570)
 
 ___
 
@@ -47,7 +47,7 @@ Task
 
 #### Defined in
 
-[api.ts:3576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3576)
+[api.ts:3576](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3576)
 
 ___
 
@@ -61,7 +61,7 @@ Task
 
 #### Defined in
 
-[api.ts:3582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3582)
+[api.ts:3582](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3582)
 
 ___
 
@@ -77,7 +77,7 @@ Task
 
 #### Defined in
 
-[api.ts:3588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3588)
+[api.ts:3588](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3588)
 
 ___
 
@@ -91,7 +91,7 @@ Task
 
 #### Defined in
 
-[api.ts:3594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3594)
+[api.ts:3594](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3594)
 
 ___
 
@@ -105,7 +105,7 @@ Task
 
 #### Defined in
 
-[api.ts:3600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3600)
+[api.ts:3600](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3600)
 
 ___
 
@@ -119,7 +119,7 @@ Task
 
 #### Defined in
 
-[api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3606)
+[api.ts:3606](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3606)
 
 ___
 
@@ -133,4 +133,4 @@ Task
 
 #### Defined in
 
-[api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3612)
+[api.ts:3612](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3612)

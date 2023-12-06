@@ -36,7 +36,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L867)
+[packages/integrations/types/index.ts:897](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L897)
 
 ___
 
@@ -50,7 +50,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L861)
+[packages/integrations/types/index.ts:891](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L891)
 
 ___
 
@@ -64,7 +64,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L842)
+[packages/integrations/types/index.ts:872](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L872)
 
 ___
 
@@ -78,7 +78,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L836)
+[packages/integrations/types/index.ts:866](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L866)
 
 ___
 
@@ -92,7 +92,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L830)
+[packages/integrations/types/index.ts:860](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L860)
 
 ___
 
@@ -108,7 +108,7 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L849)
+[packages/integrations/types/index.ts:879](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L879)
 
 ___
 
@@ -122,4 +122,4 @@ EventLogEntryAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L855)
+[packages/integrations/types/index.ts:885](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L885)

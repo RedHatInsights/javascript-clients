@@ -27,7 +27,7 @@ ErrorErrors
 
 #### Defined in
 
-[api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L825)
+[api.ts:825](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L825)
 
 ___
 
@@ -41,4 +41,4 @@ ErrorErrors
 
 #### Defined in
 
-[api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L831)
+[api.ts:831](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L831)

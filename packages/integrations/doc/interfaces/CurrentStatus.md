@@ -28,7 +28,7 @@ CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L527)
+[packages/integrations/types/index.ts:570](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L570)
 
 ___
 
@@ -42,7 +42,7 @@ CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L521)
+[packages/integrations/types/index.ts:564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L564)
 
 ___
 
@@ -56,4 +56,4 @@ CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L515)
+[packages/integrations/types/index.ts:558](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L558)

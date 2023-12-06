@@ -52,7 +52,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1500)
+[api.ts:1450](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1450)
 
 ___
 
@@ -66,7 +66,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1506)
+[api.ts:1456](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1456)
 
 ___
 
@@ -80,7 +80,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1476)
+[api.ts:1426](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1426)
 
 ___
 
@@ -94,7 +94,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1488)
+[api.ts:1438](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1438)
 
 ___
 
@@ -108,7 +108,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1494)
+[api.ts:1444](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1444)
 
 ___
 
@@ -122,7 +122,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1560)
+[api.ts:1510](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1510)
 
 ___
 
@@ -136,7 +136,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1602)
+[api.ts:1552](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1552)
 
 ___
 
@@ -150,7 +150,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1512)
+[api.ts:1462](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1462)
 
 ___
 
@@ -164,7 +164,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1578)
+[api.ts:1528](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1528)
 
 ___
 
@@ -178,7 +178,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1518)
+[api.ts:1468](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1468)
 
 ___
 
@@ -192,7 +192,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1572)
+[api.ts:1522](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1522)
 
 ___
 
@@ -208,7 +208,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1524)
+[api.ts:1474](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1474)
 
 ___
 
@@ -222,7 +222,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1536)
+[api.ts:1486](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1486)
 
 ___
 
@@ -236,7 +236,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1548)
+[api.ts:1498](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1498)
 
 ___
 
@@ -250,7 +250,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1608)
+[api.ts:1558](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1558)
 
 ___
 
@@ -264,7 +264,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1566)
+[api.ts:1516](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1516)
 
 ___
 
@@ -278,7 +278,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1542)
+[api.ts:1492](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1492)
 
 ___
 
@@ -292,7 +292,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1614)
+[api.ts:1564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1564)
 
 ___
 
@@ -306,7 +306,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1590)
+[api.ts:1540](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1540)
 
 ___
 
@@ -322,7 +322,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1470)
+[api.ts:1420](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1420)
 
 ___
 
@@ -336,7 +336,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1584)
+[api.ts:1534](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1534)
 
 ___
 
@@ -350,7 +350,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1554)
+[api.ts:1504](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1504)
 
 ___
 
@@ -364,7 +364,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1530)
+[api.ts:1480](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1480)
 
 ___
 
@@ -378,7 +378,7 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1596)
+[api.ts:1546](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1546)
 
 ___
 
@@ -392,4 +392,4 @@ RuleExport
 
 #### Defined in
 
-[api.ts:1482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1482)
+[api.ts:1432](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1432)

@@ -28,7 +28,7 @@ ActionCollection
 
 #### Defined in
 
-[api.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L104)
+[api.ts:104](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L104)
 
 ___
 
@@ -42,7 +42,7 @@ ActionCollection
 
 #### Defined in
 
-[api.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L98)
+[api.ts:98](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L98)
 
 ___
 
@@ -56,4 +56,4 @@ ActionCollection
 
 #### Defined in
 
-[api.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L92)
+[api.ts:92](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L92)

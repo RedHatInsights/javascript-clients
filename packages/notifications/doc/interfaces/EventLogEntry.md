@@ -32,7 +32,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L817)
+[packages/notifications/types/index.ts:847](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L847)
 
 ___
 
@@ -46,7 +46,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L799)
+[packages/notifications/types/index.ts:829](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L829)
 
 ___
 
@@ -60,7 +60,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L793)
+[packages/notifications/types/index.ts:823](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L823)
 
 ___
 
@@ -74,7 +74,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L787)
+[packages/notifications/types/index.ts:817](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L817)
 
 ___
 
@@ -88,7 +88,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L805)
+[packages/notifications/types/index.ts:835](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L835)
 
 ___
 
@@ -102,7 +102,7 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L781)
+[packages/notifications/types/index.ts:811](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L811)
 
 ___
 
@@ -116,4 +116,4 @@ EventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L811)
+[packages/notifications/types/index.ts:841](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L841)

@@ -29,7 +29,7 @@ AckCount
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L76)
+[api.ts:76](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L76)
 
 ___
 
@@ -43,4 +43,4 @@ AckCount
 
 #### Defined in
 
-[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L70)
+[api.ts:70](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L70)

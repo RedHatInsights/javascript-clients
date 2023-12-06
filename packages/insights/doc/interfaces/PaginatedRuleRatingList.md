@@ -28,7 +28,7 @@ PaginatedRuleRatingList
 
 #### Defined in
 
-[api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L848)
+[api.ts:798](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L798)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedRuleRatingList
 
 #### Defined in
 
-[api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L842)
+[api.ts:792](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L792)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedRuleRatingList
 
 #### Defined in
 
-[api.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L836)
+[api.ts:786](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L786)

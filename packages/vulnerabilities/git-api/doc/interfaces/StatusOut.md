@@ -27,7 +27,7 @@ StatusOut
 
 #### Defined in
 
-[api.ts:2397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2397)
+[api.ts:2385](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2385)
 
 ___
 
@@ -43,4 +43,4 @@ StatusOut
 
 #### Defined in
 
-[api.ts:2403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2403)
+[api.ts:2391](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2391)

@@ -29,7 +29,7 @@ MultiAckResponse
 
 #### Defined in
 
-[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L478)
+[api.ts:478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L478)
 
 ___
 
@@ -43,4 +43,4 @@ MultiAckResponse
 
 #### Defined in
 
-[api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L484)
+[api.ts:484](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L484)

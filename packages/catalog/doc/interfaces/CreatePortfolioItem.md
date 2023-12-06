@@ -29,7 +29,7 @@ CreatePortfolioItem
 
 #### Defined in
 
-[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L234)
+[api.ts:234](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L234)
 
 ___
 
@@ -45,4 +45,4 @@ CreatePortfolioItem
 
 #### Defined in
 
-[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L240)
+[api.ts:240](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L240)

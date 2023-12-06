@@ -26,4 +26,4 @@ GroupPaginationAllOf
 
 #### Defined in
 
-[api.ts:1030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1030)
+[api.ts:1030](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1030)

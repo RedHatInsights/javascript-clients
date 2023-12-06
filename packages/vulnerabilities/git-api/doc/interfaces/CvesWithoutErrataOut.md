@@ -27,7 +27,7 @@ CvesWithoutErrataOut
 
 #### Defined in
 
-[api.ts:436](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L436)
+[api.ts:442](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L442)
 
 ___
 
@@ -41,4 +41,4 @@ CvesWithoutErrataOut
 
 #### Defined in
 
-[api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L442)
+[api.ts:448](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L448)

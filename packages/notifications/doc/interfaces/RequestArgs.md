@@ -25,7 +25,7 @@ RequestArgs
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L33)
+[packages/notifications/utils/base.ts:33](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/utils/base.ts#L33)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L32)
+[packages/notifications/utils/base.ts:32](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/utils/base.ts#L32)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L37)
+[packages/notifications/utils/base.ts:37](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/utils/base.ts#L37)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L31)
+[packages/notifications/utils/base.ts:31](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/utils/base.ts#L31)

@@ -31,7 +31,7 @@ HttpApiError
 
 #### Defined in
 
-[api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L242)
+[api.ts:242](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L242)
 
 ___
 
@@ -47,4 +47,4 @@ HttpApiError
 
 #### Defined in
 
-[api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L236)
+[api.ts:236](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L236)

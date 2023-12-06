@@ -30,7 +30,7 @@ ShareInfo
 
 #### Defined in
 
-[api.ts:1181](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1181)
+[api.ts:1181](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1181)
 
 ___
 
@@ -46,7 +46,7 @@ ShareInfo
 
 #### Defined in
 
-[api.ts:1175](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1175)
+[api.ts:1175](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1175)
 
 ___
 
@@ -62,4 +62,4 @@ ShareInfo
 
 #### Defined in
 
-[api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1187)
+[api.ts:1187](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1187)

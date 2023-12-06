@@ -111,10 +111,10 @@ export interface AggregationEmailTemplate {
     'application_id'?: string;
     /**
      *
-     * @type {EmailSubscriptionType}
+     * @type {SubscriptionType}
      * @memberof AggregationEmailTemplate
      */
-    'subscription_type': EmailSubscriptionType;
+    'subscription_type': SubscriptionType;
     /**
      *
      * @type {Template}
@@ -203,6 +203,49 @@ export interface Application1 {
      * @memberof Application1
      */
     'display_name': string;
+}
+/**
+ *
+ * @export
+ * @interface ApplicationDTO
+ */
+export interface ApplicationDTO {
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'bundle_id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'owner_role'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO
+     */
+    'created'?: string;
 }
 /**
  *
@@ -618,19 +661,6 @@ export interface DuplicateNameMigrationReport {
 /**
  *
  * @export
- * @enum {string}
- */
-
-export const EmailSubscriptionType = {
-    Daily: 'DAILY'
-} as const;
-
-export type EmailSubscriptionType = typeof EmailSubscriptionType[keyof typeof EmailSubscriptionType];
-
-
-/**
- *
- * @export
  * @interface Endpoint
  */
 export interface Endpoint {
@@ -958,6 +988,12 @@ export interface EventType {
      * @memberof EventType
      */
     'application'?: Application;
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventType
+     */
+    'subscribed_by_default'?: boolean;
 }
 /**
  *
@@ -1538,6 +1574,21 @@ export type Status = typeof Status[keyof typeof Status];
 /**
  *
  * @export
+ * @enum {string}
+ */
+
+export const SubscriptionType = {
+    Instant: 'INSTANT',
+    Daily: 'DAILY',
+    Drawer: 'DRAWER'
+} as const;
+
+export type SubscriptionType = typeof SubscriptionType[keyof typeof SubscriptionType];
+
+
+/**
+ *
+ * @export
  * @interface SystemSubscriptionProperties
  */
 export interface SystemSubscriptionProperties {
@@ -1643,6 +1694,31 @@ export interface TriggerDailyDigestRequest {
 /**
  *
  * @export
+ * @interface UpdateApplicationRequest
+ */
+export interface UpdateApplicationRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof UpdateApplicationRequest
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UpdateApplicationRequest
+     */
+    'display_name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UpdateApplicationRequest
+     */
+    'owner_role'?: string;
+}
+/**
+ *
+ * @export
  * @interface UpdateBehaviorGroupRequest
  */
 export interface UpdateBehaviorGroupRequest {
@@ -1735,6 +1811,43 @@ export interface WebhookProperties {
 }
 
 
+/**
+ *
+ * @export
+ * @interface X509Certificate
+ */
+export interface X509Certificate {
+    /**
+     *
+     * @type {string}
+     * @memberof X509Certificate
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof X509Certificate
+     */
+    'subject_dn': string;
+    /**
+     *
+     * @type {string}
+     * @memberof X509Certificate
+     */
+    'source_environment': string;
+    /**
+     *
+     * @type {string}
+     * @memberof X509Certificate
+     */
+    'bundle': string;
+    /**
+     *
+     * @type {string}
+     * @memberof X509Certificate
+     */
+    'application': string;
+}
 
 /**
  * EndpointResourceV1CreateEndpointApi - axios parameter creator

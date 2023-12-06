@@ -27,7 +27,7 @@ RemediationIssueSystemList
 
 #### Defined in
 
-[api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L884)
+[api.ts:884](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L884)
 
 ___
 
@@ -41,4 +41,4 @@ RemediationIssueSystemList
 
 #### Defined in
 
-[api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L890)
+[api.ts:890](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L890)

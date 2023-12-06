@@ -30,7 +30,7 @@ CreateIcon
 
 #### Defined in
 
-[api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L209)
+[api.ts:209](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L209)
 
 ___
 
@@ -46,7 +46,7 @@ CreateIcon
 
 #### Defined in
 
-[api.ts:215](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L215)
+[api.ts:215](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L215)
 
 ___
 
@@ -62,4 +62,4 @@ CreateIcon
 
 #### Defined in
 
-[api.ts:221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L221)
+[api.ts:221](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L221)

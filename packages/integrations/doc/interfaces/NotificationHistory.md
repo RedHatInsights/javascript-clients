@@ -34,7 +34,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1219)
+[packages/integrations/types/index.ts:1255](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1255)
 
 ___
 
@@ -52,7 +52,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1256)
+[packages/integrations/types/index.ts:1292](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1292)
 
 ___
 
@@ -66,7 +66,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1250](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1250)
+[packages/integrations/types/index.ts:1286](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1286)
 
 ___
 
@@ -80,7 +80,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1268)
+[packages/integrations/types/index.ts:1304](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1304)
 
 ___
 
@@ -94,7 +94,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1262)
+[packages/integrations/types/index.ts:1298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1298)
 
 ___
 
@@ -108,7 +108,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1225)
+[packages/integrations/types/index.ts:1261](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1261)
 
 ___
 
@@ -124,7 +124,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1238)
+[packages/integrations/types/index.ts:1274](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1274)
 
 ___
 
@@ -138,7 +138,7 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1231)
+[packages/integrations/types/index.ts:1267](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1267)
 
 ___
 
@@ -152,4 +152,4 @@ NotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1244)
+[packages/integrations/types/index.ts:1280](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1280)

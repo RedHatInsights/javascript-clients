@@ -29,7 +29,7 @@ CopyPortfolioItem
 
 #### Defined in
 
-[api.ts:190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L190)
+[api.ts:190](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L190)
 
 ___
 
@@ -45,4 +45,4 @@ CopyPortfolioItem
 
 #### Defined in
 
-[api.ts:196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L196)
+[api.ts:196](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L196)

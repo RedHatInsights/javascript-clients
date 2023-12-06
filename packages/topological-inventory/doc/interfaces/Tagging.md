@@ -28,7 +28,7 @@ Tagging
 
 #### Defined in
 
-[api.ts:3526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3526)
+[api.ts:3526](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3526)
 
 ___
 
@@ -44,7 +44,7 @@ Tagging
 
 #### Defined in
 
-[api.ts:3520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3520)
+[api.ts:3520](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3520)
 
 ___
 
@@ -58,4 +58,4 @@ Tagging
 
 #### Defined in
 
-[api.ts:3532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3532)
+[api.ts:3532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3532)

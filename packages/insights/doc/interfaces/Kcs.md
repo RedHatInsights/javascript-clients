@@ -31,7 +31,7 @@ Kcs
 
 #### Defined in
 
-[api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L465)
+[api.ts:465](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L465)
 
 ___
 
@@ -47,4 +47,4 @@ Kcs
 
 #### Defined in
 
-[api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L459)
+[api.ts:459](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L459)

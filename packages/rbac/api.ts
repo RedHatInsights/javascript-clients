@@ -3321,18 +3321,15 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          *
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
-         * @param {string} usernames A comma separated list of usernames for principals to remove from the group
+         * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePrincipalFromGroup: async (uuid: string, usernames: string, options: any = {}): Promise<RequestArgs> => {
+        deletePrincipalFromGroup: async (uuid: string, usernames?: string, serviceAccounts?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling deletePrincipalFromGroup.');
-            }
-            // verify required parameter 'usernames' is not null or undefined
-            if (usernames === null || usernames === undefined) {
-                throw new RequiredError('usernames','Required parameter usernames was null or undefined when calling deletePrincipalFromGroup.');
             }
             const localVarPath = `/groups/{uuid}/principals/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
@@ -3353,6 +3350,10 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (usernames !== undefined) {
                 localVarQueryParameter['usernames'] = usernames;
+            }
+
+            if (serviceAccounts !== undefined) {
+                localVarQueryParameter['service-accounts'] = serviceAccounts;
             }
 
 
@@ -3853,12 +3854,13 @@ export const GroupApiFp = function(configuration?: Configuration) {
          *
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
-         * @param {string} usernames A comma separated list of usernames for principals to remove from the group
+         * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async deletePrincipalFromGroup(uuid: string, usernames: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).deletePrincipalFromGroup(uuid, usernames, options);
+        async deletePrincipalFromGroup(uuid: string, usernames?: string, serviceAccounts?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).deletePrincipalFromGroup(uuid, usernames, serviceAccounts, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4034,12 +4036,13 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          *
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
-         * @param {string} usernames A comma separated list of usernames for principals to remove from the group
+         * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletePrincipalFromGroup(uuid: string, usernames: string, options?: any): AxiosPromise<void> {
-            return GroupApiFp(configuration).deletePrincipalFromGroup(uuid, usernames, options).then((request) => request(axios, basePath));
+        deletePrincipalFromGroup(uuid: string, usernames?: string, serviceAccounts?: string, options?: any): AxiosPromise<void> {
+            return GroupApiFp(configuration).deletePrincipalFromGroup(uuid, usernames, serviceAccounts, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -4196,13 +4199,14 @@ export class GroupApi extends BaseAPI {
      *
      * @summary Remove a principal from a group in the tenant
      * @param {string} uuid ID of group to update
-     * @param {string} usernames A comma separated list of usernames for principals to remove from the group
+     * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
+     * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public deletePrincipalFromGroup(uuid: string, usernames: string, options?: any) {
-        return GroupApiFp(this.configuration).deletePrincipalFromGroup(uuid, usernames, options).then((request) => request(this.axios, this.basePath));
+    public deletePrincipalFromGroup(uuid: string, usernames?: string, serviceAccounts?: string, options?: any) {
+        return GroupApiFp(this.configuration).deletePrincipalFromGroup(uuid, usernames, serviceAccounts, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

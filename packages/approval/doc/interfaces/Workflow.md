@@ -35,7 +35,7 @@ Workflow
 
 #### Defined in
 
-[api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L625)
+[api.ts:625](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L625)
 
 ___
 
@@ -51,7 +51,7 @@ Workflow
 
 #### Defined in
 
-[api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L631)
+[api.ts:631](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L631)
 
 ___
 
@@ -67,7 +67,7 @@ Workflow
 
 #### Defined in
 
-[api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L607)
+[api.ts:607](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L607)
 
 ___
 
@@ -83,7 +83,7 @@ Workflow
 
 #### Defined in
 
-[api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L637)
+[api.ts:637](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L637)
 
 ___
 
@@ -99,7 +99,7 @@ Workflow
 
 #### Defined in
 
-[api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L619)
+[api.ts:619](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L619)
 
 ___
 
@@ -115,4 +115,4 @@ Workflow
 
 #### Defined in
 
-[api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L613)
+[api.ts:613](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L613)

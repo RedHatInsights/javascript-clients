@@ -108,7 +108,7 @@ DiagnosisApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1233)
+[api.ts:1233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1233)
 
 ___
 
@@ -138,7 +138,7 @@ DiagnosisApi - factory interface
 
 #### Defined in
 
-[api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1313)
+[api.ts:1313](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1313)
 
 ___
 
@@ -166,7 +166,7 @@ DiagnosisApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1288)
+[api.ts:1288](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1288)
 
 ___
 
@@ -194,7 +194,7 @@ GeneratorApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1358](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1358)
+[api.ts:1358](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1358)
 
 ___
 
@@ -224,7 +224,7 @@ GeneratorApi - factory interface
 
 #### Defined in
 
-[api.ts:1429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1429)
+[api.ts:1429](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1429)
 
 ___
 
@@ -252,7 +252,7 @@ GeneratorApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1406)
+[api.ts:1406](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1406)
 
 ___
 
@@ -299,7 +299,7 @@ RemediationsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1470](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1470)
+[api.ts:1470](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1470)
 
 ___
 
@@ -348,7 +348,7 @@ RemediationsApi - factory interface
 
 #### Defined in
 
-[api.ts:2708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2708)
+[api.ts:2708](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2708)
 
 ___
 
@@ -395,7 +395,7 @@ RemediationsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2386)
+[api.ts:2386](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2386)
 
 ___
 
@@ -424,7 +424,7 @@ ResolutionsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3233)
+[api.ts:3233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3233)
 
 ___
 
@@ -455,7 +455,7 @@ ResolutionsApi - factory interface
 
 #### Defined in
 
-[api.ts:3354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3354)
+[api.ts:3354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3354)
 
 ___
 
@@ -484,7 +484,7 @@ ResolutionsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3317)
+[api.ts:3317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3317)
 
 ___
 
@@ -512,7 +512,7 @@ VersionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3417)
+[api.ts:3417](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3417)
 
 ___
 
@@ -542,7 +542,7 @@ VersionApi - factory interface
 
 #### Defined in
 
-[api.ts:3478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3478)
+[api.ts:3478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3478)
 
 ___
 
@@ -570,4 +570,4 @@ VersionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3456)
+[api.ts:3456](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3456)

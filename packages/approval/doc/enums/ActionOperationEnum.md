@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L71)
+[api.ts:71](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L71)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[api.ts:72](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L72)
+[api.ts:72](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L72)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[api.ts:73](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L73)
+[api.ts:73](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L73)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L74)
+[api.ts:74](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L74)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L76)
+[api.ts:76](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L76)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L75)
+[api.ts:75](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L75)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L77)
+[api.ts:77](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L77)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[api.ts:78](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L78)
+[api.ts:78](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L78)

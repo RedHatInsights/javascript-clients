@@ -34,7 +34,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3146)
+[api.ts:3146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3146)
 
 ___
 
@@ -48,7 +48,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3152)
+[api.ts:3152](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3152)
 
 ___
 
@@ -62,7 +62,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3158)
+[api.ts:3158](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3158)
 
 ___
 
@@ -78,7 +78,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3164)
+[api.ts:3164](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3164)
 
 ___
 
@@ -92,7 +92,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3170)
+[api.ts:3170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3170)
 
 ___
 
@@ -106,7 +106,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3176)
+[api.ts:3176](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3176)
 
 ___
 
@@ -122,7 +122,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3182)
+[api.ts:3182](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3182)
 
 ___
 
@@ -136,7 +136,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3188)
+[api.ts:3188](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3188)
 
 ___
 
@@ -150,4 +150,4 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3194)
+[api.ts:3194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3194)

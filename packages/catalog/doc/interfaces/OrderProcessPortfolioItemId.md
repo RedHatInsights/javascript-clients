@@ -26,4 +26,4 @@ OrderProcessPortfolioItemId
 
 #### Defined in
 
-[api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L682)
+[api.ts:682](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L682)

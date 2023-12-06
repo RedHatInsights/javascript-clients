@@ -28,4 +28,4 @@ ControllersUpdateBaselineResponse
 
 #### Defined in
 
-[api.ts:1764](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1764)
+[api.ts:1764](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1764)

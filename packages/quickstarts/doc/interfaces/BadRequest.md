@@ -26,4 +26,4 @@ BadRequest
 
 #### Defined in
 
-[api.ts:35](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L35)
+[api.ts:35](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L35)

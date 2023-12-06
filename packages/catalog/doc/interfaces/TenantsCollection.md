@@ -28,7 +28,7 @@ TenantsCollection
 
 #### Defined in
 
-[api.ts:1375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1375)
+[api.ts:1375](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1375)
 
 ___
 
@@ -42,7 +42,7 @@ TenantsCollection
 
 #### Defined in
 
-[api.ts:1369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1369)
+[api.ts:1369](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1369)
 
 ___
 
@@ -56,4 +56,4 @@ TenantsCollection
 
 #### Defined in
 
-[api.ts:1363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1363)
+[api.ts:1363](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1363)

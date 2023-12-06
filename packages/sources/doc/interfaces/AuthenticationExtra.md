@@ -26,4 +26,4 @@ AuthenticationExtra
 
 #### Defined in
 
-[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L278)
+[api.ts:278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L278)

@@ -39,7 +39,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1973)
+[api.ts:1973](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1973)
 
 ___
 
@@ -53,7 +53,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1979)
+[api.ts:1979](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1979)
 
 ___
 
@@ -69,7 +69,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1985)
+[api.ts:1985](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1985)
 
 ___
 
@@ -85,7 +85,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1991)
+[api.ts:1991](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1991)
 
 ___
 
@@ -99,7 +99,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1997)
+[api.ts:1997](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1997)
 
 ___
 
@@ -113,7 +113,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2003)
+[api.ts:2003](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2003)
 
 ___
 
@@ -129,7 +129,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2009)
+[api.ts:2009](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2009)
 
 ___
 
@@ -143,7 +143,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2015)
+[api.ts:2015](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2015)
 
 ___
 
@@ -157,7 +157,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2021)
+[api.ts:2021](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2021)
 
 ___
 
@@ -173,7 +173,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2027)
+[api.ts:2027](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2027)
 
 ___
 
@@ -187,7 +187,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2033)
+[api.ts:2033](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2033)
 
 ___
 
@@ -203,7 +203,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2039)
+[api.ts:2039](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2039)
 
 ___
 
@@ -219,7 +219,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2045)
+[api.ts:2045](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2045)
 
 ___
 
@@ -233,4 +233,4 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2051)
+[api.ts:2051](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2051)

@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -119,7 +119,7 @@ AccountSettingApi
 
 #### Defined in
 
-[api.ts:2817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2817)
+[api.ts:2767](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2767)
 
 ___
 
@@ -147,4 +147,4 @@ AccountSettingApi
 
 #### Defined in
 
-[api.ts:2827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2827)
+[api.ts:2777](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2777)

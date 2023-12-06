@@ -36,7 +36,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1249)
+[api.ts:1249](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1249)
 
 ___
 
@@ -52,7 +52,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1225)
+[api.ts:1225](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1225)
 
 ___
 
@@ -68,7 +68,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)
+[api.ts:1219](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)
 
 ___
 
@@ -84,7 +84,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1231)
+[api.ts:1231](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1231)
 
 ___
 
@@ -100,7 +100,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1237)
+[api.ts:1237](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1237)
 
 ___
 
@@ -116,7 +116,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1255)
+[api.ts:1255](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1255)
 
 ___
 
@@ -132,4 +132,4 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1243)
+[api.ts:1243](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1243)

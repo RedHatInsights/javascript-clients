@@ -54,7 +54,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -68,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -82,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -96,7 +96,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5949)
+[api.ts:5953](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5953)
 
 ___
 
@@ -158,7 +158,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5961)
+[api.ts:5965](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5965)
 
 ___
 
@@ -190,7 +190,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5974)
+[api.ts:5978](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5978)
 
 ___
 
@@ -223,7 +223,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5988)
+[api.ts:5992](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5992)
 
 ___
 
@@ -268,7 +268,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:6012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6012)
+[api.ts:6016](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6016)
 
 ___
 
@@ -300,7 +300,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:6025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6025)
+[api.ts:6029](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6029)
 
 ___
 
@@ -332,4 +332,4 @@ RoleApi
 
 #### Defined in
 
-[api.ts:6038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6038)
+[api.ts:6042](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6042)

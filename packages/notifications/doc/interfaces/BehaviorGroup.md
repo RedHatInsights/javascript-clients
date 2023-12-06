@@ -34,7 +34,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L261)
+[packages/notifications/types/index.ts:304](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L304)
 
 ___
 
@@ -48,7 +48,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L267)
+[packages/notifications/types/index.ts:310](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L310)
 
 ___
 
@@ -62,7 +62,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L255)
+[packages/notifications/types/index.ts:298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L298)
 
 ___
 
@@ -76,7 +76,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L249)
+[packages/notifications/types/index.ts:292](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L292)
 
 ___
 
@@ -90,7 +90,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L225)
+[packages/notifications/types/index.ts:268](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L268)
 
 ___
 
@@ -104,7 +104,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L273)
+[packages/notifications/types/index.ts:316](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L316)
 
 ___
 
@@ -118,7 +118,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L243)
+[packages/notifications/types/index.ts:286](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L286)
 
 ___
 
@@ -132,7 +132,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L237)
+[packages/notifications/types/index.ts:280](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L280)
 
 ___
 
@@ -146,4 +146,4 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L231)
+[packages/notifications/types/index.ts:274](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L274)

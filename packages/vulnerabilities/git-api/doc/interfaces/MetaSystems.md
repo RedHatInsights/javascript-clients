@@ -39,7 +39,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1880)
+[api.ts:1855](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1855)
 
 ___
 
@@ -55,7 +55,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1940)
+[api.ts:1915](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1915)
 
 ___
 
@@ -71,7 +71,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1886)
+[api.ts:1861](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1861)
 
 ___
 
@@ -87,7 +87,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1892)
+[api.ts:1867](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1867)
 
 ___
 
@@ -103,7 +103,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1898)
+[api.ts:1873](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1873)
 
 ___
 
@@ -119,7 +119,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1904)
+[api.ts:1879](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1879)
 
 ___
 
@@ -135,7 +135,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1910)
+[api.ts:1885](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1885)
 
 ___
 
@@ -151,7 +151,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1916)
+[api.ts:1891](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1891)
 
 ___
 
@@ -167,7 +167,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1934)
+[api.ts:1909](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1909)
 
 ___
 
@@ -183,7 +183,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1946)
+[api.ts:1921](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1921)
 
 ___
 
@@ -199,7 +199,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1922)
+[api.ts:1897](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1897)
 
 ___
 
@@ -215,4 +215,4 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1928)
+[api.ts:1903](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1903)

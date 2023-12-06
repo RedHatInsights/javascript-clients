@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -80,7 +80,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -123,7 +123,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4757)
+[api.ts:4707](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4707)
 
 ___
 
@@ -152,7 +152,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4768)
+[api.ts:4718](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4718)
 
 ___
 
@@ -187,7 +187,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4785)
+[api.ts:4735](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4735)
 
 ___
 
@@ -216,7 +216,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4796)
+[api.ts:4746](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4746)
 
 ___
 
@@ -246,4 +246,4 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4808)
+[api.ts:4758](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4758)

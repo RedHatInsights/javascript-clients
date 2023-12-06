@@ -32,7 +32,7 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L698)
+[api.ts:673](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L673)
 
 ___
 
@@ -48,7 +48,7 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L704)
+[api.ts:679](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L679)
 
 ___
 
@@ -64,4 +64,4 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L710)
+[api.ts:685](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L685)

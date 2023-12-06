@@ -26,4 +26,4 @@ GroupWithPrincipalsAllOf
 
 #### Defined in
 
-[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1137)
+[api.ts:1137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1137)

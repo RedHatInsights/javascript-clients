@@ -27,7 +27,7 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1469)
+[packages/integrations/types/index.ts:1505](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1505)
 
 ___
 
@@ -41,4 +41,4 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1463)
+[packages/integrations/types/index.ts:1499](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1499)

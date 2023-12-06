@@ -43,7 +43,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L884)
+[api.ts:884](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L884)
 
 ___
 
@@ -57,7 +57,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L812)
+[api.ts:812](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L812)
 
 ___
 
@@ -71,7 +71,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L836)
+[api.ts:836](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L836)
 
 ___
 
@@ -85,7 +85,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L842)
+[api.ts:842](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L842)
 
 ___
 
@@ -99,7 +99,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L800)
+[api.ts:800](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L800)
 
 ___
 
@@ -115,7 +115,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L878)
+[api.ts:878](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L878)
 
 ___
 
@@ -129,7 +129,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L794)
+[api.ts:794](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L794)
 
 ___
 
@@ -143,7 +143,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L830)
+[api.ts:830](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L830)
 
 ___
 
@@ -159,7 +159,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:896](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L896)
+[api.ts:896](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L896)
 
 ___
 
@@ -173,7 +173,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L806)
+[api.ts:806](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L806)
 
 ___
 
@@ -187,7 +187,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L818)
+[api.ts:818](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L818)
 
 ___
 
@@ -201,7 +201,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L854)
+[api.ts:854](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L854)
 
 ___
 
@@ -217,7 +217,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L872)
+[api.ts:872](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L872)
 
 ___
 
@@ -233,7 +233,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L860)
+[api.ts:860](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L860)
 
 ___
 
@@ -249,7 +249,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L866)
+[api.ts:866](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L866)
 
 ___
 
@@ -263,7 +263,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:824](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L824)
+[api.ts:824](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L824)
 
 ___
 
@@ -277,7 +277,7 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L848)
+[api.ts:848](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L848)
 
 ___
 
@@ -291,4 +291,4 @@ PortfolioItem
 
 #### Defined in
 
-[api.ts:890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L890)
+[api.ts:890](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L890)

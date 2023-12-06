@@ -28,7 +28,7 @@ PortfolioItemsCollection
 
 #### Defined in
 
-[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L934)
+[api.ts:934](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L934)
 
 ___
 
@@ -42,7 +42,7 @@ PortfolioItemsCollection
 
 #### Defined in
 
-[api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L928)
+[api.ts:928](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L928)
 
 ___
 
@@ -56,4 +56,4 @@ PortfolioItemsCollection
 
 #### Defined in
 
-[api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L922)
+[api.ts:922](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L922)

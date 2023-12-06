@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L49)
 
 ## Methods
 
@@ -121,7 +121,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:1577](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1577)
+[api.ts:1577](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1577)
 
 ___
 
@@ -154,4 +154,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1589)
+[api.ts:1589](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1589)

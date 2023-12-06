@@ -34,7 +34,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1099)
+[packages/integrations/types/index.ts:1135](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1135)
 
 ___
 
@@ -48,7 +48,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1105)
+[packages/integrations/types/index.ts:1141](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1141)
 
 ___
 
@@ -62,7 +62,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1057)
+[packages/integrations/types/index.ts:1093](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1093)
 
 ___
 
@@ -76,7 +76,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1075)
+[packages/integrations/types/index.ts:1111](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1111)
 
 ___
 
@@ -90,7 +90,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1081)
+[packages/integrations/types/index.ts:1117](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1117)
 
 ___
 
@@ -104,7 +104,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1069)
+[packages/integrations/types/index.ts:1105](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1105)
 
 ___
 
@@ -118,7 +118,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1087)
+[packages/integrations/types/index.ts:1123](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1123)
 
 ___
 
@@ -132,7 +132,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1093)
+[packages/integrations/types/index.ts:1129](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1129)
 
 ___
 
@@ -146,4 +146,4 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1063)
+[packages/integrations/types/index.ts:1099](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1099)

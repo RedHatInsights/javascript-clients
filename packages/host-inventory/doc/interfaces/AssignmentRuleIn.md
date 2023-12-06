@@ -32,7 +32,7 @@ AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L108)
+[api.ts:108](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L108)
 
 ___
 
@@ -46,7 +46,7 @@ AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L126)
+[api.ts:126](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L126)
 
 ___
 
@@ -60,7 +60,7 @@ AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L120)
+[api.ts:120](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L120)
 
 ___
 
@@ -74,7 +74,7 @@ AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L114)
+[api.ts:114](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L114)
 
 ___
 
@@ -88,4 +88,4 @@ AssignmentRuleIn
 
 #### Defined in
 
-[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L102)
+[api.ts:102](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L102)

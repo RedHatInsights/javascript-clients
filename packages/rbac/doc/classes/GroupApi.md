@@ -58,7 +58,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -72,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -86,7 +86,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -132,7 +132,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4154)
+[api.ts:4157](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4157)
 
 ___
 
@@ -164,7 +164,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4167)
+[api.ts:4170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4170)
 
 ___
 
@@ -195,7 +195,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4179)
+[api.ts:4182](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4182)
 
 ___
 
@@ -226,13 +226,13 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4191)
+[api.ts:4194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4194)
 
 ___
 
 ### deletePrincipalFromGroup
 
-▸ **deletePrincipalFromGroup**(`uuid`, `usernames`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deletePrincipalFromGroup**(`uuid`, `usernames?`, `serviceAccounts?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -249,7 +249,8 @@ GroupApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | ID of group to update |
-| `usernames` | `string` | A comma separated list of usernames for principals to remove from the group |
+| `usernames?` | `string` | A comma separated list of usernames for principals to remove from the group |
+| `serviceAccounts?` | `string` | A comma separated list of usernames for service accounts to remove from the group |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -258,7 +259,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4204)
+[api.ts:4208](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4208)
 
 ___
 
@@ -290,7 +291,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4217)
+[api.ts:4221](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4221)
 
 ___
 
@@ -321,7 +322,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4229)
+[api.ts:4233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4233)
 
 ___
 
@@ -361,7 +362,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4248)
+[api.ts:4252](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4252)
 
 ___
 
@@ -407,7 +408,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4273)
+[api.ts:4277](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4277)
 
 ___
 
@@ -449,7 +450,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4294)
+[api.ts:4298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4298)
 
 ___
 
@@ -481,4 +482,4 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4307)
+[api.ts:4311](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4311)

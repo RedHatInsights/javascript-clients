@@ -26,4 +26,4 @@ Errors
 
 #### Defined in
 
-[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L778)
+[api.ts:753](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L753)

@@ -31,7 +31,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1549)
+[packages/notifications/types/index.ts:1600](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1600)
 
 ___
 
@@ -45,7 +45,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1579)
+[packages/notifications/types/index.ts:1630](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1630)
 
 ___
 
@@ -59,7 +59,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1573)
+[packages/notifications/types/index.ts:1624](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1624)
 
 ___
 
@@ -73,7 +73,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1561)
+[packages/notifications/types/index.ts:1612](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1612)
 
 ___
 
@@ -87,7 +87,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1567)
+[packages/notifications/types/index.ts:1618](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1618)
 
 ___
 
@@ -101,4 +101,4 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1555)
+[packages/notifications/types/index.ts:1606](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1606)

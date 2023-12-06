@@ -34,7 +34,6 @@
 - [DashboardCvesBySeverity0to39](interfaces/DashboardCvesBySeverity0to39.md)
 - [DashboardCvesBySeverity4to79](interfaces/DashboardCvesBySeverity4to79.md)
 - [DashboardCvesBySeverity8to10](interfaces/DashboardCvesBySeverity8to10.md)
-- [DashboardCvesBySeverityNa](interfaces/DashboardCvesBySeverityNa.md)
 - [DashboardRecentCves](interfaces/DashboardRecentCves.md)
 - [DashboardRecentRules](interfaces/DashboardRecentRules.md)
 - [Errors](interfaces/Errors.md)
@@ -44,9 +43,9 @@
 - [ExecutiveReportCvesBySeverity0to39](interfaces/ExecutiveReportCvesBySeverity0to39.md)
 - [ExecutiveReportCvesBySeverity4to79](interfaces/ExecutiveReportCvesBySeverity4to79.md)
 - [ExecutiveReportCvesBySeverity8to10](interfaces/ExecutiveReportCvesBySeverity8to10.md)
-- [ExecutiveReportCvesBySeverityNa](interfaces/ExecutiveReportCvesBySeverityNa.md)
 - [ExecutiveReportRulesBySeverity](interfaces/ExecutiveReportRulesBySeverity.md)
 - [ExecutiveReportRulesBySeverity1](interfaces/ExecutiveReportRulesBySeverity1.md)
+- [ExecutiveReportSystemCountPerType](interfaces/ExecutiveReportSystemCountPerType.md)
 - [ExecutiveReportTopCves](interfaces/ExecutiveReportTopCves.md)
 - [ExecutiveReportTopRules](interfaces/ExecutiveReportTopRules.md)
 - [InsightsRule](interfaces/InsightsRule.md)
@@ -65,6 +64,7 @@
 - [MetaVulnerabilitiesOutAllOf](interfaces/MetaVulnerabilitiesOutAllOf.md)
 - [MitigatedSystemsIdsOut](interfaces/MitigatedSystemsIdsOut.md)
 - [MitigatedSystemsOut](interfaces/MitigatedSystemsOut.md)
+- [NotificationsOut](interfaces/NotificationsOut.md)
 - [OptOutIn](interfaces/OptOutIn.md)
 - [PlaybookTemplate](interfaces/PlaybookTemplate.md)
 - [PlaybookTemplateData](interfaces/PlaybookTemplateData.md)
@@ -110,7 +110,7 @@
 
 #### Defined in
 
-[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L360)
+[api.ts:366](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L366)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1192)
+[api.ts:1167](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1167)
 
 ## Functions
 
@@ -146,6 +146,7 @@ DefaultApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
+| `deleteNotifications` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getAffectedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `report?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getAffectedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getAnnouncement` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -174,7 +175,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2785)
+[api.ts:2773](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2773)
 
 ___
 
@@ -200,6 +201,7 @@ DefaultApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
+| `deleteNotifications` | (`options?`: `any`) => `AxiosPromise`<[`NotificationsOut`](interfaces/NotificationsOut.md)\> |
 | `getAffectedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `report?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `AxiosPromise`<[`AffectedSystemsOut`](interfaces/AffectedSystemsOut.md)\> |
 | `getAffectedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `AxiosPromise`<[`AffectedSystemsIdsOut`](interfaces/AffectedSystemsIdsOut.md)\> |
 | `getAnnouncement` | (`options?`: `any`) => `AxiosPromise`<[`AnnouncementOut`](interfaces/AnnouncementOut.md)\> |
@@ -228,7 +230,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:5549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5549)
+[api.ts:5594](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5594)
 
 ___
 
@@ -252,6 +254,7 @@ DefaultApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
+| `deleteNotifications` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`NotificationsOut`](interfaces/NotificationsOut.md)\>\> |
 | `getAffectedSystemsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `report?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AffectedSystemsOut`](interfaces/AffectedSystemsOut.md)\>\> |
 | `getAffectedSystemsIdsByCve` | (`cveId`: `string`, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `page?`: `number`, `pageSize?`: `number`, `sort?`: `string`, `statusId?`: `string`, `dataFormat?`: `string`, `uuid?`: `string`, `ruleKey?`: `string`[], `rulePresence?`: `boolean`[], `rule?`: `string`[], `tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `showAdvisories?`: `boolean`, `advisory?`: `string`, `rhelVersion?`: `string`, `firstReportedFrom?`: `string`, `firstReportedTo?`: `string`, `advisoryAvailable?`: `boolean`[], `remediation?`: `string`, `ansible?`: `boolean`, `mssql?`: `boolean`, `groupNames?`: `string`[], `groupIds?`: `string`[], `hostType?`: (``"rpmdnf"`` \| ``"edge"``)[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AffectedSystemsIdsOut`](interfaces/AffectedSystemsIdsOut.md)\>\> |
 | `getAnnouncement` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`AnnouncementOut`](interfaces/AnnouncementOut.md)\>\> |
@@ -280,4 +283,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L4993)
+[api.ts:5025](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L5025)

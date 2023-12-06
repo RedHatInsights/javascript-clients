@@ -94,7 +94,7 @@ ActionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L669)
+[api.ts:669](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L669)
 
 ___
 
@@ -126,7 +126,7 @@ ActionApi - factory interface
 
 #### Defined in
 
-[api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L847)
+[api.ts:847](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L847)
 
 ___
 
@@ -156,7 +156,7 @@ ActionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L795)
+[api.ts:795](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L795)
 
 ___
 
@@ -184,7 +184,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L934)
+[api.ts:934](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L934)
 
 ___
 
@@ -214,7 +214,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L995)
+[api.ts:995](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L995)
 
 ___
 
@@ -242,7 +242,7 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L973)
+[api.ts:973](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L973)
 
 ___
 
@@ -270,7 +270,7 @@ GraphqlApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1034)
+[api.ts:1034](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1034)
 
 ___
 
@@ -300,7 +300,7 @@ GraphqlApi - factory interface
 
 #### Defined in
 
-[api.ts:1105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1105)
+[api.ts:1105](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1105)
 
 ___
 
@@ -328,7 +328,7 @@ GraphqlApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1082)
+[api.ts:1082](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1082)
 
 ___
 
@@ -360,7 +360,7 @@ RequestApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1146)
+[api.ts:1146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1146)
 
 ___
 
@@ -394,7 +394,7 @@ RequestApi - factory interface
 
 #### Defined in
 
-[api.ts:1446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1446)
+[api.ts:1446](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1446)
 
 ___
 
@@ -426,7 +426,7 @@ RequestApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1362)
+[api.ts:1362](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1362)
 
 ___
 
@@ -455,7 +455,7 @@ TemplateApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1585)
+[api.ts:1585](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1585)
 
 ___
 
@@ -486,7 +486,7 @@ TemplateApi - factory interface
 
 #### Defined in
 
-[api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1720)
+[api.ts:1720](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1720)
 
 ___
 
@@ -515,7 +515,7 @@ TemplateApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1680)
+[api.ts:1680](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1680)
 
 ___
 
@@ -551,7 +551,7 @@ WorkflowApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1789)
+[api.ts:1789](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1789)
 
 ___
 
@@ -589,7 +589,7 @@ WorkflowApi - factory interface
 
 #### Defined in
 
-[api.ts:2366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2366)
+[api.ts:2366](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2366)
 
 ___
 
@@ -625,4 +625,4 @@ WorkflowApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2216)
+[api.ts:2216](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2216)

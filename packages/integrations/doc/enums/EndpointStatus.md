@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/integrations/types/index.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L717)
+[packages/integrations/types/index.ts:747](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L747)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L718)
+[packages/integrations/types/index.ts:748](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L748)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L715)
+[packages/integrations/types/index.ts:745](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L745)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L716)
+[packages/integrations/types/index.ts:746](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L746)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L713)
+[packages/integrations/types/index.ts:743](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L743)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L714)
+[packages/integrations/types/index.ts:744](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L744)

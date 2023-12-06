@@ -55,7 +55,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7180)
+[api.ts:7130](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7130)
 
 ___
 
@@ -158,7 +158,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7193)
+[api.ts:7143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7143)
 
 ___
 
@@ -208,7 +208,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7225)
+[api.ts:7175](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7175)
 
 ___
 
@@ -239,7 +239,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7238)
+[api.ts:7188](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7188)
 
 ___
 
@@ -268,7 +268,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7249)
+[api.ts:7199](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7199)
 
 ___
 
@@ -293,7 +293,7 @@ RuleApi
 | `limit?` | `number` | Number of results to return per page. |
 | `name?` | `string` | Search for systems that include this in their display name |
 | `offset?` | `number` | The initial index from which to return the results. |
-| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[] | Display only systems with these versions of RHEL |
+| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"`` | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `options?` | `any` | Override http request option. |
@@ -304,7 +304,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7267)
+[api.ts:7217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7217)
 
 ___
 
@@ -328,7 +328,7 @@ RuleApi
 | `format?` | ``"json"`` \| ``"csv"`` |  |
 | `groups?` | `string`[] | List of Inventory host group names |
 | `name?` | `string` | Search for systems that include this in their display name |
-| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[] | Display only systems with these versions of RHEL |
+| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[] | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `options?` | `any` | Override http request option. |
@@ -339,7 +339,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7284)
+[api.ts:7234](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7234)
 
 ___
 
@@ -369,4 +369,4 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7296)
+[api.ts:7246](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7246)

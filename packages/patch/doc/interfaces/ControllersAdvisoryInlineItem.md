@@ -38,7 +38,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L200)
+[api.ts:200](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L200)
 
 ___
 
@@ -54,7 +54,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L206)
+[api.ts:206](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L206)
 
 ___
 
@@ -68,7 +68,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L212)
+[api.ts:212](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L212)
 
 ___
 
@@ -82,7 +82,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L218)
+[api.ts:218](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L218)
 
 ___
 
@@ -96,7 +96,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L224)
+[api.ts:224](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L224)
 
 ___
 
@@ -110,7 +110,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L230)
+[api.ts:230](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L230)
 
 ___
 
@@ -124,7 +124,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L236)
+[api.ts:236](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L236)
 
 ___
 
@@ -138,7 +138,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L242)
+[api.ts:242](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L242)
 
 ___
 
@@ -152,7 +152,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L248)
+[api.ts:248](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L248)
 
 ___
 
@@ -166,7 +166,7 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L254)
+[api.ts:254](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L254)
 
 ___
 
@@ -180,4 +180,4 @@ ControllersAdvisoryInlineItem
 
 #### Defined in
 
-[api.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L260)
+[api.ts:260](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L260)

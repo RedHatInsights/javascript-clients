@@ -59,7 +59,7 @@ HelptopicApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L266)
+[api.ts:266](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L266)
 
 ___
 
@@ -90,7 +90,7 @@ HelptopicApi - factory interface
 
 #### Defined in
 
-[api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L388)
+[api.ts:388](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L388)
 
 ___
 
@@ -119,7 +119,7 @@ HelptopicApi - functional programming interface
 
 #### Defined in
 
-[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L354)
+[api.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L354)
 
 ___
 
@@ -148,7 +148,7 @@ QuickstartApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L455)
+[api.ts:455](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L455)
 
 ___
 
@@ -179,7 +179,7 @@ QuickstartApi - factory interface
 
 #### Defined in
 
-[api.ts:583](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L583)
+[api.ts:583](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L583)
 
 ___
 
@@ -208,4 +208,4 @@ QuickstartApi - functional programming interface
 
 #### Defined in
 
-[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L548)
+[api.ts:548](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L548)

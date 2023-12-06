@@ -31,7 +31,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L992)
+[packages/notifications/types/index.ts:1028](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1028)
 
 ___
 
@@ -45,4 +45,4 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L998)
+[packages/notifications/types/index.ts:1034](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1034)

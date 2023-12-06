@@ -36,7 +36,7 @@ Application
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L33)
+[api.ts:33](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L33)
 
 ___
 
@@ -50,7 +50,7 @@ Application
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L39)
+[api.ts:39](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L39)
 
 ___
 
@@ -64,7 +64,7 @@ Application
 
 #### Defined in
 
-[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L45)
+[api.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L45)
 
 ___
 
@@ -78,7 +78,7 @@ Application
 
 #### Defined in
 
-[api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L51)
+[api.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L51)
 
 ___
 
@@ -92,7 +92,7 @@ Application
 
 #### Defined in
 
-[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L57)
+[api.ts:57](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L57)
 
 ___
 
@@ -108,7 +108,7 @@ Application
 
 #### Defined in
 
-[api.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L63)
+[api.ts:63](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L63)
 
 ___
 
@@ -124,7 +124,7 @@ Application
 
 #### Defined in
 
-[api.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L69)
+[api.ts:69](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L69)
 
 ___
 
@@ -138,7 +138,7 @@ Application
 
 #### Defined in
 
-[api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L75)
+[api.ts:75](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L75)
 
 ___
 
@@ -152,4 +152,4 @@ Application
 
 #### Defined in
 
-[api.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L81)
+[api.ts:81](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L81)

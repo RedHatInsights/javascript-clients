@@ -59,7 +59,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -73,7 +73,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -87,7 +87,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
@@ -134,7 +134,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5538)
+[api.ts:5544](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5544)
 
 ___
 
@@ -168,7 +168,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5551)
+[api.ts:5557](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5557)
 
 ___
 
@@ -202,7 +202,7 @@ HostsApi
 | `updatedEnd?` | `string` | Only show hosts last modified before the given date |
 | `groupName?` | `string`[] | Filter by group name |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
 | `options?` | `any` | Override http request option. |
@@ -213,7 +213,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5575)
+[api.ts:5581](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5581)
 
 ___
 
@@ -252,7 +252,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5593](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5593)
+[api.ts:5599](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5599)
 
 ___
 
@@ -290,7 +290,7 @@ HostsApi
 | `page?` | `number` | A page number of the items to return. |
 | `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh, stale and stale_warning |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
 | `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
@@ -303,7 +303,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5623)
+[api.ts:5629](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5629)
 
 ___
 
@@ -342,7 +342,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5641)
+[api.ts:5647](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5647)
 
 ___
 
@@ -379,7 +379,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5657)
+[api.ts:5663](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5663)
 
 ___
 
@@ -417,7 +417,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5674)
+[api.ts:5680](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5680)
 
 ___
 
@@ -450,7 +450,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5686)
+[api.ts:5692](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5692)
 
 ___
 
@@ -486,7 +486,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5701)
+[api.ts:5707](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5707)
 
 ___
 
@@ -521,7 +521,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5715](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5715)
+[api.ts:5721](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5721)
 
 ___
 
@@ -557,4 +557,4 @@ HostsApi
 
 #### Defined in
 
-[api.ts:5730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5730)
+[api.ts:5736](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5736)
