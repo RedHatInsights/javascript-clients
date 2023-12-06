@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/notifications/types/index.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L747)
+[packages/notifications/types/index.ts:777](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L777)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L746)
+[packages/notifications/types/index.ts:776](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L776)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L748)
+[packages/notifications/types/index.ts:778](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L778)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L745)
+[packages/notifications/types/index.ts:775](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L775)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L744)
+[packages/notifications/types/index.ts:774](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L774)

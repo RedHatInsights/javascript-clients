@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L527)
+[api.ts:527](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L527)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[api.ts:531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L531)
+[api.ts:531](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L531)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[api.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L533)
+[api.ts:533](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L533)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[api.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L530)
+[api.ts:530](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L530)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L526)
+[api.ts:526](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L526)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L532)
+[api.ts:532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L532)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L529)
+[api.ts:529](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L529)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[api.ts:528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L528)
+[api.ts:528](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L528)

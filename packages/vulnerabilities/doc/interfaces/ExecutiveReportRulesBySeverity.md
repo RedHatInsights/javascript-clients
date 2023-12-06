@@ -31,7 +31,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L978)
+[api.ts:934](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L934)
 
 ___
 
@@ -45,7 +45,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L984)
+[api.ts:940](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L940)
 
 ___
 
@@ -59,7 +59,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L990)
+[api.ts:946](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L946)
 
 ___
 
@@ -73,4 +73,4 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L996)
+[api.ts:952](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L952)

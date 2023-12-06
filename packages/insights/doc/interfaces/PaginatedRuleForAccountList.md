@@ -28,7 +28,7 @@ PaginatedRuleForAccountList
 
 #### Defined in
 
-[api.ts:798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L798)
+[api.ts:748](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L748)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedRuleForAccountList
 
 #### Defined in
 
-[api.ts:792](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L792)
+[api.ts:742](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L742)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedRuleForAccountList
 
 #### Defined in
 
-[api.ts:786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L786)
+[api.ts:736](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L736)

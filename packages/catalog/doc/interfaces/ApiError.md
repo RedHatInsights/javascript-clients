@@ -31,7 +31,7 @@ ApiError
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L39)
+[api.ts:39](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L39)
 
 ___
 
@@ -47,4 +47,4 @@ ApiError
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L33)
+[api.ts:33](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L33)

@@ -75,7 +75,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/base.ts#L51)
 
 ## Properties
 
@@ -89,7 +89,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/base.ts#L51)
 
 ___
 
@@ -103,7 +103,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/base.ts#L51)
 
 ___
 
@@ -117,7 +117,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/base.ts#L49)
 
 ## Methods
 
@@ -150,7 +150,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5266)
+[api.ts:5266](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5266)
 
 ___
 
@@ -183,7 +183,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5278)
+[api.ts:5278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5278)
 
 ___
 
@@ -216,7 +216,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5290)
+[api.ts:5290](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5290)
 
 ___
 
@@ -249,7 +249,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5302)
+[api.ts:5302](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5302)
 
 ___
 
@@ -282,7 +282,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5314)
+[api.ts:5314](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5314)
 
 ___
 
@@ -315,7 +315,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5326)
+[api.ts:5326](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5326)
 
 ___
 
@@ -356,7 +356,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5346)
+[api.ts:5346](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5346)
 
 ___
 
@@ -412,7 +412,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5381)
+[api.ts:5381](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5381)
 
 ___
 
@@ -452,7 +452,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5400)
+[api.ts:5400](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5400)
 
 ___
 
@@ -490,7 +490,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5417)
+[api.ts:5417](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5417)
 
 ___
 
@@ -531,7 +531,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5437)
+[api.ts:5437](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5437)
 
 ___
 
@@ -570,7 +570,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5455)
+[api.ts:5455](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5455)
 
 ___
 
@@ -626,7 +626,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5490)
+[api.ts:5490](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5490)
 
 ___
 
@@ -659,7 +659,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5502)
+[api.ts:5502](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5502)
 
 ___
 
@@ -710,7 +710,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5532)
+[api.ts:5532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5532)
 
 ___
 
@@ -772,7 +772,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5573)
+[api.ts:5573](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5573)
 
 ___
 
@@ -812,7 +812,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5592)
+[api.ts:5592](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5592)
 
 ___
 
@@ -851,7 +851,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5610)
+[api.ts:5610](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5610)
 
 ___
 
@@ -898,7 +898,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5636)
+[api.ts:5636](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5636)
 
 ___
 
@@ -942,7 +942,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5659)
+[api.ts:5659](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5659)
 
 ___
 
@@ -1006,7 +1006,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5702)
+[api.ts:5702](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5702)
 
 ___
 
@@ -1048,7 +1048,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5723)
+[api.ts:5723](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5723)
 
 ___
 
@@ -1083,7 +1083,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5737)
+[api.ts:5737](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5737)
 
 ___
 
@@ -1116,7 +1116,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5749)
+[api.ts:5749](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5749)
 
 ___
 
@@ -1157,7 +1157,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5769)
+[api.ts:5769](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5769)
 
 ___
 
@@ -1191,7 +1191,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5782)
+[api.ts:5782](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5782)
 
 ___
 
@@ -1224,7 +1224,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5794)
+[api.ts:5794](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5794)
 
 ___
 
@@ -1257,4 +1257,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:5806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5806)
+[api.ts:5806](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L5806)

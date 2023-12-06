@@ -67,7 +67,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -81,7 +81,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ___
 
@@ -95,7 +95,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ___
 
@@ -109,7 +109,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L49)
 
 ## Methods
 
@@ -143,7 +143,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2962)
+[api.ts:2962](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2962)
 
 ___
 
@@ -176,7 +176,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2974)
+[api.ts:2974](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2974)
 
 ___
 
@@ -209,7 +209,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2986)
+[api.ts:2986](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2986)
 
 ___
 
@@ -242,7 +242,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2998](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2998)
+[api.ts:2998](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2998)
 
 ___
 
@@ -276,7 +276,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3011)
+[api.ts:3011](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3011)
 
 ___
 
@@ -311,7 +311,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3025)
+[api.ts:3025](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3025)
 
 ___
 
@@ -344,7 +344,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3037)
+[api.ts:3037](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3037)
 
 ___
 
@@ -377,7 +377,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3049)
+[api.ts:3049](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3049)
 
 ___
 
@@ -411,7 +411,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3062)
+[api.ts:3062](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3062)
 
 ___
 
@@ -446,7 +446,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3076)
+[api.ts:3076](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3076)
 
 ___
 
@@ -485,7 +485,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3094)
+[api.ts:3094](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3094)
 
 ___
 
@@ -518,7 +518,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3106)
+[api.ts:3106](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3106)
 
 ___
 
@@ -551,7 +551,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3118)
+[api.ts:3118](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3118)
 
 ___
 
@@ -588,7 +588,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3134)
+[api.ts:3134](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3134)
 
 ___
 
@@ -624,7 +624,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3149)
+[api.ts:3149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3149)
 
 ___
 
@@ -663,7 +663,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3167)
+[api.ts:3167](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3167)
 
 ___
 
@@ -699,7 +699,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3182)
+[api.ts:3182](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3182)
 
 ___
 
@@ -733,7 +733,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3195)
+[api.ts:3195](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3195)
 
 ___
 
@@ -767,7 +767,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3208)
+[api.ts:3208](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3208)
 
 ___
 
@@ -802,4 +802,4 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3222)
+[api.ts:3222](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3222)

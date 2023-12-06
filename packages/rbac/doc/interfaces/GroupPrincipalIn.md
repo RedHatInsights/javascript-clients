@@ -26,4 +26,4 @@ GroupPrincipalIn
 
 #### Defined in
 
-[api.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1043)
+[api.ts:1043](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1043)

@@ -27,7 +27,7 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L114)
+[api.ts:114](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L114)
 
 ___
 
@@ -41,4 +41,4 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L108)
+[api.ts:108](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L108)

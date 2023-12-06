@@ -55,7 +55,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -130,7 +130,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9634)
+[api.ts:9552](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9552)
 
 ___
 
@@ -163,7 +163,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9646)
+[api.ts:9564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9564)
 
 ___
 
@@ -196,7 +196,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9661)
+[api.ts:9579](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9579)
 
 ___
 
@@ -230,7 +230,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9674)
+[api.ts:9592](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9592)
 
 ___
 
@@ -259,7 +259,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9685)
+[api.ts:9603](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9603)
 
 ___
 
@@ -288,7 +288,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9696](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9696)
+[api.ts:9614](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9614)
 
 ___
 
@@ -322,7 +322,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9712)
+[api.ts:9630](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9630)
 
 ___
 
@@ -356,4 +356,4 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9725](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9725)
+[api.ts:9643](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9643)

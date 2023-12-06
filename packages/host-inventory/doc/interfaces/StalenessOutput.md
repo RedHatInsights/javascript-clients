@@ -37,7 +37,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1469)
+[api.ts:1469](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1469)
 
 ___
 
@@ -51,7 +51,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)
+[api.ts:1463](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)
 
 ___
 
@@ -65,7 +65,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1457)
+[api.ts:1457](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1457)
 
 ___
 
@@ -81,7 +81,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1493)
+[api.ts:1493](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1493)
 
 ___
 
@@ -95,7 +95,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1445)
+[api.ts:1445](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1445)
 
 ___
 
@@ -109,7 +109,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1487](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1487)
+[api.ts:1487](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1487)
 
 ___
 
@@ -123,7 +123,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1481](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1481)
+[api.ts:1481](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1481)
 
 ___
 
@@ -137,7 +137,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1475)
+[api.ts:1475](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1475)
 
 ___
 
@@ -153,7 +153,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1451)
+[api.ts:1451](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1451)
 
 ___
 
@@ -169,4 +169,4 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1499)
+[api.ts:1499](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1499)

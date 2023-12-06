@@ -26,4 +26,4 @@ PaginatedAckListMeta
 
 #### Defined in
 
-[api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L598)
+[api.ts:598](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L598)

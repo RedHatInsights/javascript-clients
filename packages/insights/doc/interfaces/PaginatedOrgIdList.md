@@ -28,7 +28,7 @@ PaginatedOrgIdList
 
 #### Defined in
 
-[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L698)
+[api.ts:698](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L698)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedOrgIdList
 
 #### Defined in
 
-[api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L692)
+[api.ts:692](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L692)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedOrgIdList
 
 #### Defined in
 
-[api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L686)
+[api.ts:686](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L686)

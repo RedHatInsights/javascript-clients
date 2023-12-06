@@ -30,7 +30,7 @@ GraphqlIn
 
 #### Defined in
 
-[api.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L179)
+[api.ts:179](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L179)
 
 ___
 
@@ -46,7 +46,7 @@ GraphqlIn
 
 #### Defined in
 
-[api.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L173)
+[api.ts:173](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L173)
 
 ___
 
@@ -62,4 +62,4 @@ GraphqlIn
 
 #### Defined in
 
-[api.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L185)
+[api.ts:185](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L185)

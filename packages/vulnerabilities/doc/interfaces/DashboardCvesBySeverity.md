@@ -17,7 +17,6 @@ DashboardCvesBySeverity
 - [\_0to3\_9](DashboardCvesBySeverity.md#_0to3_9)
 - [\_4to7\_9](DashboardCvesBySeverity.md#_4to7_9)
 - [\_8to10](DashboardCvesBySeverity.md#_8to10)
-- [na](DashboardCvesBySeverity.md#na)
 
 ## Properties
 
@@ -31,7 +30,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L567)
+[api.ts:573](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L573)
 
 ___
 
@@ -45,7 +44,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L573)
+[api.ts:579](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L579)
 
 ___
 
@@ -59,18 +58,4 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L579)
-
-___
-
-### na
-
-• **na**: [`DashboardCvesBySeverityNa`](DashboardCvesBySeverityNa.md)
-
-**`Memberof`**
-
-DashboardCvesBySeverity
-
-#### Defined in
-
-[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L585)
+[api.ts:585](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L585)

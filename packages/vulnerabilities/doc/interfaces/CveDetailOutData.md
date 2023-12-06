@@ -28,7 +28,7 @@ CveDetailOutData
 
 #### Defined in
 
-[api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L191)
+[api.ts:191](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L191)
 
 ___
 
@@ -44,7 +44,7 @@ CveDetailOutData
 
 #### Defined in
 
-[api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L197)
+[api.ts:197](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L197)
 
 ___
 
@@ -60,4 +60,4 @@ CveDetailOutData
 
 #### Defined in
 
-[api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L203)
+[api.ts:203](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L203)

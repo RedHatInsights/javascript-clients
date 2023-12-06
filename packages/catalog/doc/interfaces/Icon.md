@@ -33,7 +33,7 @@ Icon
 
 #### Defined in
 
-[api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L297)
+[api.ts:297](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L297)
 
 ___
 
@@ -49,7 +49,7 @@ Icon
 
 #### Defined in
 
-[api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L303)
+[api.ts:303](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L303)
 
 ___
 
@@ -65,7 +65,7 @@ Icon
 
 #### Defined in
 
-[api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L321)
+[api.ts:321](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L321)
 
 ___
 
@@ -81,7 +81,7 @@ Icon
 
 #### Defined in
 
-[api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L327)
+[api.ts:327](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L327)
 
 ___
 
@@ -97,7 +97,7 @@ Icon
 
 #### Defined in
 
-[api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L315)
+[api.ts:315](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L315)
 
 ___
 
@@ -113,4 +113,4 @@ Icon
 
 #### Defined in
 
-[api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L309)
+[api.ts:309](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L309)

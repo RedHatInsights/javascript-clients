@@ -30,4 +30,4 @@ ControllersSystemsAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1695)
+[api.ts:1695](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1695)

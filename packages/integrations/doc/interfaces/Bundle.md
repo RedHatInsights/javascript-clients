@@ -30,7 +30,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L330)
+[packages/integrations/types/index.ts:373](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L373)
 
 ___
 
@@ -44,7 +44,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L354)
+[packages/integrations/types/index.ts:397](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L397)
 
 ___
 
@@ -58,7 +58,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L342)
+[packages/integrations/types/index.ts:385](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L385)
 
 ___
 
@@ -72,7 +72,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L348)
+[packages/integrations/types/index.ts:391](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L391)
 
 ___
 
@@ -86,4 +86,4 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L336)
+[packages/integrations/types/index.ts:379](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L379)

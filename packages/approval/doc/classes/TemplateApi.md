@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ TemplateApi
 
 #### Defined in
 
-[api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1766)
+[api.ts:1766](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1766)
 
 ___
 
@@ -160,4 +160,4 @@ TemplateApi
 
 #### Defined in
 
-[api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L1778)
+[api.ts:1778](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L1778)

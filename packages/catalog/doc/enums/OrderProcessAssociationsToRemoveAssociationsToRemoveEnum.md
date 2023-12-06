@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L642)
+[api.ts:642](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L642)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api.ts:641](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L641)
+[api.ts:641](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L641)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L643)
+[api.ts:643](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L643)

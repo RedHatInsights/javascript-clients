@@ -26,4 +26,4 @@ RolePaginationDynamicAllOf
 
 #### Defined in
 
-[api.ts:2258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2258)
+[api.ts:2258](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2258)

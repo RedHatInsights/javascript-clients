@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
@@ -126,7 +126,7 @@ ResourceTypesApi
 
 #### Defined in
 
-[api.ts:5936](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5936)
+[api.ts:5942](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5942)
 
 ___
 
@@ -160,4 +160,4 @@ ResourceTypesApi
 
 #### Defined in
 
-[api.ts:5949](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5949)
+[api.ts:5955](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5955)

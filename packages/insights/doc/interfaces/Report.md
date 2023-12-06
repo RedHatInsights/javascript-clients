@@ -33,7 +33,7 @@ Report
 
 #### Defined in
 
-[api.ts:1212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1212)
+[api.ts:1162](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1162)
 
 ___
 
@@ -47,7 +47,7 @@ Report
 
 #### Defined in
 
-[api.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1224)
+[api.ts:1174](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1174)
 
 ___
 
@@ -61,7 +61,7 @@ Report
 
 #### Defined in
 
-[api.ts:1218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1218)
+[api.ts:1168](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1168)
 
 ___
 
@@ -75,4 +75,4 @@ Report
 
 #### Defined in
 
-[api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1206)
+[api.ts:1156](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1156)

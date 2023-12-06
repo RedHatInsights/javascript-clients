@@ -64,8 +64,6 @@
 - [PaginatedJustificationCountList](interfaces/PaginatedJustificationCountList.md)
 - [PaginatedOrgIdList](interfaces/PaginatedOrgIdList.md)
 - [PaginatedPathwayList](interfaces/PaginatedPathwayList.md)
-- [PaginatedRenderedReportList](interfaces/PaginatedRenderedReportList.md)
-- [PaginatedReportList](interfaces/PaginatedReportList.md)
 - [PaginatedRuleForAccountList](interfaces/PaginatedRuleForAccountList.md)
 - [PaginatedRuleList](interfaces/PaginatedRuleList.md)
 - [PaginatedRuleRatingList](interfaces/PaginatedRuleRatingList.md)
@@ -202,7 +200,7 @@ AccountApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2395)
+[api.ts:2345](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2345)
 
 ___
 
@@ -234,7 +232,7 @@ AccountApi - factory interface
 
 #### Defined in
 
-[api.ts:2586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2586)
+[api.ts:2536](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2536)
 
 ___
 
@@ -264,7 +262,7 @@ AccountApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2537)
+[api.ts:2487](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2487)
 
 ___
 
@@ -293,7 +291,7 @@ AccountSettingApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2667)
+[api.ts:2617](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2617)
 
 ___
 
@@ -324,7 +322,7 @@ AccountSettingApi - factory interface
 
 #### Defined in
 
-[api.ts:2783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2783)
+[api.ts:2733](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2733)
 
 ___
 
@@ -353,7 +351,7 @@ AccountSettingApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2750)
+[api.ts:2700](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2700)
 
 ___
 
@@ -386,7 +384,7 @@ AckApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2838)
+[api.ts:2788](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2788)
 
 ___
 
@@ -421,7 +419,7 @@ AckApi - factory interface
 
 #### Defined in
 
-[api.ts:3199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3199)
+[api.ts:3149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3149)
 
 ___
 
@@ -454,7 +452,7 @@ AckApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3111)
+[api.ts:3061](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3061)
 
 ___
 
@@ -483,7 +481,7 @@ AckcountApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3340)
+[api.ts:3290](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3290)
 
 ___
 
@@ -514,7 +512,7 @@ AckcountApi - factory interface
 
 #### Defined in
 
-[api.ts:3463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3463)
+[api.ts:3413](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3413)
 
 ___
 
@@ -543,7 +541,7 @@ AckcountApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3429)
+[api.ts:3379](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3379)
 
 ___
 
@@ -574,7 +572,7 @@ AutosubexclusionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3520)
+[api.ts:3470](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3470)
 
 ___
 
@@ -607,7 +605,7 @@ AutosubexclusionApi - factory interface
 
 #### Defined in
 
-[api.ts:3770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3770)
+[api.ts:3720](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3720)
 
 ___
 
@@ -638,7 +636,7 @@ AutosubexclusionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3708](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3708)
+[api.ts:3658](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3658)
 
 ___
 
@@ -669,7 +667,7 @@ ExportApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3871)
+[api.ts:3821](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3821)
 
 ___
 
@@ -702,7 +700,7 @@ ExportApi - factory interface
 
 #### Defined in
 
-[api.ts:4211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4211)
+[api.ts:4161](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4161)
 
 ___
 
@@ -733,7 +731,7 @@ ExportApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4133)
+[api.ts:4083](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4083)
 
 ___
 
@@ -765,7 +763,7 @@ HostackApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4344)
+[api.ts:4294](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4294)
 
 ___
 
@@ -799,7 +797,7 @@ HostackApi - factory interface
 
 #### Defined in
 
-[api.ts:4686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4686)
+[api.ts:4636](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4636)
 
 ___
 
@@ -831,7 +829,7 @@ HostackApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4605](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4605)
+[api.ts:4555](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4555)
 
 ___
 
@@ -860,7 +858,7 @@ KcsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4819)
+[api.ts:4769](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4769)
 
 ___
 
@@ -891,7 +889,7 @@ KcsApi - factory interface
 
 #### Defined in
 
-[api.ts:4932](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4932)
+[api.ts:4882](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4882)
 
 ___
 
@@ -920,7 +918,7 @@ KcsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4897)
+[api.ts:4847](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4847)
 
 ___
 
@@ -955,7 +953,7 @@ PathwayApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4991)
+[api.ts:4941](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L4941)
 
 ___
 
@@ -992,7 +990,7 @@ PathwayApi - factory interface
 
 #### Defined in
 
-[api.ts:5649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5649)
+[api.ts:5599](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5599)
 
 ___
 
@@ -1027,7 +1025,7 @@ PathwayApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5505)
+[api.ts:5455](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5455)
 
 ___
 
@@ -1059,7 +1057,7 @@ RatingApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5890](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5890)
+[api.ts:5840](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L5840)
 
 ___
 
@@ -1093,7 +1091,7 @@ RatingApi - factory interface
 
 #### Defined in
 
-[api.ts:6208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6208)
+[api.ts:6158](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6158)
 
 ___
 
@@ -1125,7 +1123,7 @@ RatingApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6130)
+[api.ts:6080](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6080)
 
 ___
 
@@ -1154,13 +1152,13 @@ RuleApi - axios parameter creator
 | `ruleList` | (`category?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hasPlaybook?`: `boolean`, `hasTag?`: `string`[], `impact?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `impacting?`: `boolean`, `incident?`: `boolean`, `likelihood?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `reboot?`: `boolean`, `reportsShown?`: `boolean`, `resRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `ruleStatus?`: ``"all"`` \| ``"disabled"`` \| ``"enabled"`` \| ``"rhdisabled"``, `sort?`: (``"description"`` \| ``"-category"`` \| ``"-description"`` \| ``"-impact"`` \| ``"-impacted_count"`` \| ``"-likelihood"`` \| ``"-playbook_count"`` \| ``"-publish_date"`` \| ``"-resolution_risk"`` \| ``"-rule_id"`` \| ``"-total_risk"`` \| ``"category"`` \| ``"impact"`` \| ``"impacted_count"`` \| ``"likelihood"`` \| ``"playbook_count"`` \| ``"publish_date"`` \| ``"resolution_risk"`` \| ``"rule_id"`` \| ``"total_risk"``)[], `tags?`: `string`[], `text?`: `string`, `topic?`: `string`, `totalRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `ruleRetrieve` | (`ruleId`: `string`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `ruleStatsRetrieve` | (`ruleId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `ruleUnackHostsCreate` | (`ruleId`: `string`, `multiHostUnAck`: [`MultiHostUnAck`](interfaces/MultiHostUnAck.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
-[api.ts:6335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6335)
+[api.ts:6285](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6285)
 
 ___
 
@@ -1191,13 +1189,13 @@ RuleApi - factory interface
 | `ruleList` | (`category?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hasPlaybook?`: `boolean`, `hasTag?`: `string`[], `impact?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `impacting?`: `boolean`, `incident?`: `boolean`, `likelihood?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `reboot?`: `boolean`, `reportsShown?`: `boolean`, `resRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `ruleStatus?`: ``"all"`` \| ``"disabled"`` \| ``"enabled"`` \| ``"rhdisabled"``, `sort?`: (``"description"`` \| ``"-category"`` \| ``"-description"`` \| ``"-impact"`` \| ``"-impacted_count"`` \| ``"-likelihood"`` \| ``"-playbook_count"`` \| ``"-publish_date"`` \| ``"-resolution_risk"`` \| ``"-rule_id"`` \| ``"-total_risk"`` \| ``"category"`` \| ``"impact"`` \| ``"impacted_count"`` \| ``"likelihood"`` \| ``"playbook_count"`` \| ``"publish_date"`` \| ``"resolution_risk"`` \| ``"rule_id"`` \| ``"total_risk"``)[], `tags?`: `string`[], `text?`: `string`, `topic?`: `string`, `totalRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `options?`: `any`) => `AxiosPromise`<[`PaginatedRuleForAccountList`](interfaces/PaginatedRuleForAccountList.md)\> |
 | `ruleRetrieve` | (`ruleId`: `string`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`RuleForAccount`](interfaces/RuleForAccount.md)\> |
 | `ruleStatsRetrieve` | (`ruleId`: `string`, `options?`: `any`) => `AxiosPromise`<[`RuleUsageStats`](interfaces/RuleUsageStats.md)\> |
-| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedSystemsDetailList`](interfaces/PaginatedSystemsDetailList.md)\> |
-| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`SystemsForRule`](interfaces/SystemsForRule.md)\> |
+| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedSystemsDetailList`](interfaces/PaginatedSystemsDetailList.md)\> |
+| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`SystemsForRule`](interfaces/SystemsForRule.md)\> |
 | `ruleUnackHostsCreate` | (`ruleId`: `string`, `multiHostUnAck`: [`MultiHostUnAck`](interfaces/MultiHostUnAck.md), `options?`: `any`) => `AxiosPromise`<[`MultiAckResponse`](interfaces/MultiAckResponse.md)\> |
 
 #### Defined in
 
-[api.ts:7048](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7048)
+[api.ts:6998](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6998)
 
 ___
 
@@ -1226,13 +1224,13 @@ RuleApi - functional programming interface
 | `ruleList` | (`category?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hasPlaybook?`: `boolean`, `hasTag?`: `string`[], `impact?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `impacting?`: `boolean`, `incident?`: `boolean`, `likelihood?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `reboot?`: `boolean`, `reportsShown?`: `boolean`, `resRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `ruleStatus?`: ``"all"`` \| ``"disabled"`` \| ``"enabled"`` \| ``"rhdisabled"``, `sort?`: (``"description"`` \| ``"-category"`` \| ``"-description"`` \| ``"-impact"`` \| ``"-impacted_count"`` \| ``"-likelihood"`` \| ``"-playbook_count"`` \| ``"-publish_date"`` \| ``"-resolution_risk"`` \| ``"-rule_id"`` \| ``"-total_risk"`` \| ``"category"`` \| ``"impact"`` \| ``"impacted_count"`` \| ``"likelihood"`` \| ``"playbook_count"`` \| ``"publish_date"`` \| ``"resolution_risk"`` \| ``"rule_id"`` \| ``"total_risk"``)[], `tags?`: `string`[], `text?`: `string`, `topic?`: `string`, `totalRisk?`: (``2`` \| ``1`` \| ``3`` \| ``4``)[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedRuleForAccountList`](interfaces/PaginatedRuleForAccountList.md)\>\> |
 | `ruleRetrieve` | (`ruleId`: `string`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RuleForAccount`](interfaces/RuleForAccount.md)\>\> |
 | `ruleStatsRetrieve` | (`ruleId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RuleUsageStats`](interfaces/RuleUsageStats.md)\>\> |
-| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedSystemsDetailList`](interfaces/PaginatedSystemsDetailList.md)\>\> |
-| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemsForRule`](interfaces/SystemsForRule.md)\>\> |
+| `ruleSystemsDetailList` | (`ruleId`: `string`, `groups?`: `string`[], `limit?`: `number`, `name?`: `string`, `offset?`: `number`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedSystemsDetailList`](interfaces/PaginatedSystemsDetailList.md)\>\> |
+| `ruleSystemsRetrieve` | (`ruleId`: `string`, `format?`: ``"json"`` \| ``"csv"``, `groups?`: `string`[], `name?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[], `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`SystemsForRule`](interfaces/SystemsForRule.md)\>\> |
 | `ruleUnackHostsCreate` | (`ruleId`: `string`, `multiHostUnAck`: [`MultiHostUnAck`](interfaces/MultiHostUnAck.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`MultiAckResponse`](interfaces/MultiAckResponse.md)\>\> |
 
 #### Defined in
 
-[api.ts:6895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6895)
+[api.ts:6845](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6845)
 
 ___
 
@@ -1261,7 +1259,7 @@ RulecategoryApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:7307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7307)
+[api.ts:7257](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7257)
 
 ___
 
@@ -1292,7 +1290,7 @@ RulecategoryApi - factory interface
 
 #### Defined in
 
-[api.ts:7414](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7414)
+[api.ts:7364](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7364)
 
 ___
 
@@ -1321,7 +1319,7 @@ RulecategoryApi - functional programming interface
 
 #### Defined in
 
-[api.ts:7380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7380)
+[api.ts:7330](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7330)
 
 ___
 
@@ -1349,7 +1347,7 @@ SettingsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:7471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7471)
+[api.ts:7421](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7421)
 
 ___
 
@@ -1379,7 +1377,7 @@ SettingsApi - factory interface
 
 #### Defined in
 
-[api.ts:7538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7538)
+[api.ts:7488](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7488)
 
 ___
 
@@ -1407,7 +1405,7 @@ SettingsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:7517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7517)
+[api.ts:7467](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7467)
 
 ___
 
@@ -1439,7 +1437,7 @@ StatsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:7575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7575)
+[api.ts:7525](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7525)
 
 ___
 
@@ -1473,7 +1471,7 @@ StatsApi - factory interface
 
 #### Defined in
 
-[api.ts:7934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7934)
+[api.ts:7884](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7884)
 
 ___
 
@@ -1505,7 +1503,7 @@ StatsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:7849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7849)
+[api.ts:7799](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7799)
 
 ___
 
@@ -1535,7 +1533,7 @@ StatusApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:8075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8075)
+[api.ts:8025](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8025)
 
 ___
 
@@ -1567,7 +1565,7 @@ StatusApi - factory interface
 
 #### Defined in
 
-[api.ts:8216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8216)
+[api.ts:8166](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8166)
 
 ___
 
@@ -1597,7 +1595,7 @@ StatusApi - functional programming interface
 
 #### Defined in
 
-[api.ts:8171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8171)
+[api.ts:8121](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8121)
 
 ___
 
@@ -1621,14 +1619,14 @@ SystemApi - axios parameter creator
 
 | Name | Type |
 | :------ | :------ |
-| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `systemRetrieve` | (`uuid`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 
 #### Defined in
 
-[api.ts:8289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8289)
+[api.ts:8239](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8239)
 
 ___
 
@@ -1654,14 +1652,14 @@ SystemApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedSystemList`](interfaces/PaginatedSystemList.md)\> |
-| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedRenderedReportList`](interfaces/PaginatedRenderedReportList.md)\> |
-| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedReportList`](interfaces/PaginatedReportList.md)\> |
+| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`PaginatedSystemList`](interfaces/PaginatedSystemList.md)\> |
+| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`RenderedReport`](interfaces/RenderedReport.md)[]\> |
+| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `AxiosPromise`<[`Report`](interfaces/Report.md)[]\> |
 | `systemRetrieve` | (`uuid`: `string`, `options?`: `any`) => `AxiosPromise`<[`System`](interfaces/System.md)\> |
 
 #### Defined in
 
-[api.ts:8664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8664)
+[api.ts:8590](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8590)
 
 ___
 
@@ -1685,14 +1683,14 @@ SystemApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedSystemList`](interfaces/PaginatedSystemList.md)\>\> |
-| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedRenderedReportList`](interfaces/PaginatedRenderedReportList.md)\>\> |
-| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `limit?`: `number`, `offset?`: `number`, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedReportList`](interfaces/PaginatedReportList.md)\>\> |
+| `systemList` | (`displayName?`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `hits?`: (``"all"`` \| ``"1"`` \| ``"2"`` \| ``"3"`` \| ``"4"`` \| ``"no"`` \| ``"yes"``)[], `incident?`: `boolean`, `limit?`: `number`, `offset?`: `number`, `pathway?`: `string`, `rhelVersion?`: (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[], `sort?`: ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"``, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PaginatedSystemList`](interfaces/PaginatedSystemList.md)\>\> |
+| `systemRenderedReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RenderedReport`](interfaces/RenderedReport.md)[]\>\> |
+| `systemReportsList` | (`uuid`: `string`, `filterSystemProfileSapSidsContains?`: `string`[], `filterSystemProfileSapSystem?`: `boolean`, `groups?`: `string`[], `tags?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Report`](interfaces/Report.md)[]\>\> |
 | `systemRetrieve` | (`uuid`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`System`](interfaces/System.md)\>\> |
 
 #### Defined in
 
-[api.ts:8580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8580)
+[api.ts:8510](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8510)
 
 ___
 
@@ -1721,7 +1719,7 @@ SystemtypeApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:8809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8809)
+[api.ts:8727](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8727)
 
 ___
 
@@ -1752,7 +1750,7 @@ SystemtypeApi - factory interface
 
 #### Defined in
 
-[api.ts:8920](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8920)
+[api.ts:8838](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8838)
 
 ___
 
@@ -1781,7 +1779,7 @@ SystemtypeApi - functional programming interface
 
 #### Defined in
 
-[api.ts:8884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8884)
+[api.ts:8802](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8802)
 
 ___
 
@@ -1816,7 +1814,7 @@ TopicApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:8981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8981)
+[api.ts:8899](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8899)
 
 ___
 
@@ -1853,7 +1851,7 @@ TopicApi - factory interface
 
 #### Defined in
 
-[api.ts:9527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9527)
+[api.ts:9445](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9445)
 
 ___
 
@@ -1888,7 +1886,7 @@ TopicApi - functional programming interface
 
 #### Defined in
 
-[api.ts:9399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9399)
+[api.ts:9317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9317)
 
 ___
 
@@ -1916,7 +1914,7 @@ UsageApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:9736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9736)
+[api.ts:9654](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9654)
 
 ___
 
@@ -1946,7 +1944,7 @@ UsageApi - factory interface
 
 #### Defined in
 
-[api.ts:9831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9831)
+[api.ts:9749](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9749)
 
 ___
 
@@ -1974,7 +1972,7 @@ UsageApi - functional programming interface
 
 #### Defined in
 
-[api.ts:9806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9806)
+[api.ts:9724](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9724)
 
 ___
 
@@ -2003,7 +2001,7 @@ UserPreferencesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:9876](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9876)
+[api.ts:9794](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9794)
 
 ___
 
@@ -2034,7 +2032,7 @@ UserPreferencesApi - factory interface
 
 #### Defined in
 
-[api.ts:10002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10002)
+[api.ts:9920](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9920)
 
 ___
 
@@ -2063,7 +2061,7 @@ UserPreferencesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:9968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9968)
+[api.ts:9886](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9886)
 
 ___
 
@@ -2092,7 +2090,7 @@ WeeklyreportautosubscribeApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:10059](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10059)
+[api.ts:9977](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9977)
 
 ___
 
@@ -2123,7 +2121,7 @@ WeeklyreportautosubscribeApi - factory interface
 
 #### Defined in
 
-[api.ts:10185](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10185)
+[api.ts:10103](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L10103)
 
 ___
 
@@ -2152,7 +2150,7 @@ WeeklyreportautosubscribeApi - functional programming interface
 
 #### Defined in
 
-[api.ts:10151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10151)
+[api.ts:10069](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L10069)
 
 ___
 
@@ -2181,7 +2179,7 @@ WeeklyreportsubscriptionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:10242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10242)
+[api.ts:10160](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L10160)
 
 ___
 
@@ -2212,7 +2210,7 @@ WeeklyreportsubscriptionApi - factory interface
 
 #### Defined in
 
-[api.ts:10368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10368)
+[api.ts:10286](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L10286)
 
 ___
 
@@ -2241,4 +2239,4 @@ WeeklyreportsubscriptionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:10334](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10334)
+[api.ts:10252](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L10252)

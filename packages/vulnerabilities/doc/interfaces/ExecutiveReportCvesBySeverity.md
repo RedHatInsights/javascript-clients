@@ -17,7 +17,6 @@ ExecutiveReportCvesBySeverity
 - [\_0to3\_9](ExecutiveReportCvesBySeverity.md#_0to3_9)
 - [\_4to7\_9](ExecutiveReportCvesBySeverity.md#_4to7_9)
 - [\_8to10](ExecutiveReportCvesBySeverity.md#_8to10)
-- [na](ExecutiveReportCvesBySeverity.md#na)
 
 ## Properties
 
@@ -31,7 +30,7 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:871](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L871)
+[api.ts:852](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L852)
 
 ___
 
@@ -45,7 +44,7 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L877)
+[api.ts:858](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L858)
 
 ___
 
@@ -59,18 +58,4 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L883)
-
-___
-
-### na
-
-• **na**: [`ExecutiveReportCvesBySeverityNa`](ExecutiveReportCvesBySeverityNa.md)
-
-**`Memberof`**
-
-ExecutiveReportCvesBySeverity
-
-#### Defined in
-
-[api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L889)
+[api.ts:864](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L864)

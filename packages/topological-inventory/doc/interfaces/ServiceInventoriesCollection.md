@@ -28,7 +28,7 @@ ServiceInventoriesCollection
 
 #### Defined in
 
-[api.ts:2529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2529)
+[api.ts:2529](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2529)
 
 ___
 
@@ -42,7 +42,7 @@ ServiceInventoriesCollection
 
 #### Defined in
 
-[api.ts:2523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2523)
+[api.ts:2523](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2523)
 
 ___
 
@@ -56,4 +56,4 @@ ServiceInventoriesCollection
 
 #### Defined in
 
-[api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2517)
+[api.ts:2517](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2517)

@@ -31,7 +31,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1703)
+[packages/notifications/types/index.ts:1779](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1779)
 
 ___
 
@@ -45,7 +45,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1709)
+[packages/notifications/types/index.ts:1785](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1785)
 
 ___
 
@@ -59,7 +59,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1691)
+[packages/notifications/types/index.ts:1767](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1767)
 
 ___
 
@@ -73,7 +73,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1685)
+[packages/notifications/types/index.ts:1761](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1761)
 
 ___
 
@@ -87,7 +87,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1697)
+[packages/notifications/types/index.ts:1773](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1773)
 
 ___
 
@@ -101,4 +101,4 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1679)
+[packages/notifications/types/index.ts:1755](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1755)

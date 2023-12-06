@@ -46,7 +46,7 @@ Request
 
 #### Defined in
 
-[api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L327)
+[api.ts:327](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L327)
 
 ___
 
@@ -62,7 +62,7 @@ Request
 
 #### Defined in
 
-[api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L309)
+[api.ts:309](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L309)
 
 ___
 
@@ -78,7 +78,7 @@ Request
 
 #### Defined in
 
-[api.ts:375](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L375)
+[api.ts:375](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L375)
 
 ___
 
@@ -94,7 +94,7 @@ Request
 
 #### Defined in
 
-[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L339)
+[api.ts:339](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L339)
 
 ___
 
@@ -110,7 +110,7 @@ Request
 
 #### Defined in
 
-[api.ts:381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L381)
+[api.ts:381](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L381)
 
 ___
 
@@ -126,7 +126,7 @@ Request
 
 #### Defined in
 
-[api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L297)
+[api.ts:297](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L297)
 
 ___
 
@@ -142,7 +142,7 @@ Request
 
 #### Defined in
 
-[api.ts:393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L393)
+[api.ts:393](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L393)
 
 ___
 
@@ -158,7 +158,7 @@ Request
 
 #### Defined in
 
-[api.ts:369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L369)
+[api.ts:369](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L369)
 
 ___
 
@@ -174,7 +174,7 @@ Request
 
 #### Defined in
 
-[api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L333)
+[api.ts:333](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L333)
 
 ___
 
@@ -190,7 +190,7 @@ Request
 
 #### Defined in
 
-[api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L345)
+[api.ts:345](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L345)
 
 ___
 
@@ -206,7 +206,7 @@ Request
 
 #### Defined in
 
-[api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L351)
+[api.ts:351](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L351)
 
 ___
 
@@ -222,7 +222,7 @@ Request
 
 #### Defined in
 
-[api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L357)
+[api.ts:357](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L357)
 
 ___
 
@@ -238,7 +238,7 @@ Request
 
 #### Defined in
 
-[api.ts:387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L387)
+[api.ts:387](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L387)
 
 ___
 
@@ -254,7 +254,7 @@ Request
 
 #### Defined in
 
-[api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L315)
+[api.ts:315](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L315)
 
 ___
 
@@ -270,7 +270,7 @@ Request
 
 #### Defined in
 
-[api.ts:363](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L363)
+[api.ts:363](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L363)
 
 ___
 
@@ -286,7 +286,7 @@ Request
 
 #### Defined in
 
-[api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L303)
+[api.ts:303](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L303)
 
 ___
 
@@ -302,4 +302,4 @@ Request
 
 #### Defined in
 
-[api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L321)
+[api.ts:321](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L321)

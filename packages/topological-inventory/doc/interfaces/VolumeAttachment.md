@@ -31,7 +31,7 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3960)
+[api.ts:3960](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3960)
 
 ___
 
@@ -47,7 +47,7 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3966)
+[api.ts:3966](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3966)
 
 ___
 
@@ -61,7 +61,7 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3972)
+[api.ts:3972](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3972)
 
 ___
 
@@ -75,7 +75,7 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3978)
+[api.ts:3978](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3978)
 
 ___
 
@@ -91,7 +91,7 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3984)
+[api.ts:3984](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3984)
 
 ___
 
@@ -107,4 +107,4 @@ VolumeAttachment
 
 #### Defined in
 
-[api.ts:3990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3990)
+[api.ts:3990](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3990)

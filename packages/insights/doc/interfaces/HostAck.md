@@ -35,7 +35,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L371)
+[api.ts:371](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L371)
 
 ___
 
@@ -51,7 +51,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L365)
+[api.ts:365](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L365)
 
 ___
 
@@ -65,7 +65,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L383)
+[api.ts:383](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L383)
 
 ___
 
@@ -79,7 +79,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L341)
+[api.ts:341](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L341)
 
 ___
 
@@ -93,7 +93,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L359)
+[api.ts:359](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L359)
 
 ___
 
@@ -107,7 +107,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L347)
+[api.ts:347](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L347)
 
 ___
 
@@ -121,7 +121,7 @@ HostAck
 
 #### Defined in
 
-[api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L353)
+[api.ts:353](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L353)
 
 ___
 
@@ -135,4 +135,4 @@ HostAck
 
 #### Defined in
 
-[api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L377)
+[api.ts:377](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L377)

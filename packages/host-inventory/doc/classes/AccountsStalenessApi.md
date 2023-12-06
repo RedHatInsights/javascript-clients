@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -80,7 +80,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3077)
+[api.ts:3083](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L3083)
 
 ___
 
@@ -159,7 +159,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3088)
+[api.ts:3094](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L3094)
 
 ___
 
@@ -191,7 +191,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3099)
+[api.ts:3105](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L3105)
 
 ___
 
@@ -223,7 +223,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3110)
+[api.ts:3116](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L3116)
 
 ___
 
@@ -256,4 +256,4 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3122)
+[api.ts:3128](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L3128)

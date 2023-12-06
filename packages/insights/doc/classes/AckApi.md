@@ -53,7 +53,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -67,7 +67,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -81,7 +81,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -95,7 +95,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -123,7 +123,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3272)
+[api.ts:3222](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3222)
 
 ___
 
@@ -152,7 +152,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3283)
+[api.ts:3233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3233)
 
 ___
 
@@ -181,7 +181,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3294)
+[api.ts:3244](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3244)
 
 ___
 
@@ -211,7 +211,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3306)
+[api.ts:3256](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3256)
 
 ___
 
@@ -240,7 +240,7 @@ AckApi
 
 #### Defined in
 
-[api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3317)
+[api.ts:3267](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3267)
 
 ___
 
@@ -270,4 +270,4 @@ AckApi
 
 #### Defined in
 
-[api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3329)
+[api.ts:3279](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L3279)

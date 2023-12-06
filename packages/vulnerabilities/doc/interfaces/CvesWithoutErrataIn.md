@@ -28,4 +28,4 @@ CvesWithoutErrataIn
 
 #### Defined in
 
-[api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L423)
+[api.ts:429](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L429)

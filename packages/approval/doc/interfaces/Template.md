@@ -33,7 +33,7 @@ Template
 
 #### Defined in
 
-[api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L563)
+[api.ts:563](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L563)
 
 ___
 
@@ -49,7 +49,7 @@ Template
 
 #### Defined in
 
-[api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L551)
+[api.ts:551](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L551)
 
 ___
 
@@ -65,7 +65,7 @@ Template
 
 #### Defined in
 
-[api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L569)
+[api.ts:569](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L569)
 
 ___
 
@@ -81,4 +81,4 @@ Template
 
 #### Defined in
 
-[api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L557)
+[api.ts:557](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L557)

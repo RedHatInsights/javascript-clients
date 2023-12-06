@@ -32,7 +32,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L139)
+[api.ts:139](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L139)
 
 ___
 
@@ -46,7 +46,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L151)
+[api.ts:151](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L151)
 
 ___
 
@@ -60,7 +60,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L115)
+[api.ts:115](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L115)
 
 ___
 
@@ -74,7 +74,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L145)
+[api.ts:145](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L145)
 
 ___
 
@@ -88,7 +88,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L133)
+[api.ts:133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L133)
 
 ___
 
@@ -102,7 +102,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L121)
+[api.ts:121](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L121)
 
 ___
 
@@ -116,4 +116,4 @@ CrossAccountRequest
 
 #### Defined in
 
-[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L127)
+[api.ts:127](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L127)

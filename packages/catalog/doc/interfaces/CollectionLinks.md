@@ -31,7 +31,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L146)
+[api.ts:146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L146)
 
 ___
 
@@ -47,7 +47,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L152)
+[api.ts:152](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L152)
 
 ___
 
@@ -63,7 +63,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L164)
+[api.ts:164](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L164)
 
 ___
 
@@ -79,4 +79,4 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L158)
+[api.ts:158](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L158)

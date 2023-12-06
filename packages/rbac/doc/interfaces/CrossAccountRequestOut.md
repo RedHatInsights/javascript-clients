@@ -34,7 +34,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:575](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L575)
+[api.ts:575](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L575)
 
 ___
 
@@ -48,7 +48,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L563)
+[api.ts:563](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L563)
 
 ___
 
@@ -62,7 +62,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L539)
+[api.ts:539](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L539)
 
 ___
 
@@ -76,7 +76,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:581](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L581)
+[api.ts:581](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L581)
 
 ___
 
@@ -90,7 +90,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L557)
+[api.ts:557](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L557)
 
 ___
 
@@ -104,7 +104,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:569](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L569)
+[api.ts:569](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L569)
 
 ___
 
@@ -118,7 +118,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L545)
+[api.ts:545](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L545)
 
 ___
 
@@ -132,7 +132,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L551)
+[api.ts:551](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L551)
 
 ___
 
@@ -146,4 +146,4 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[api.ts:587](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L587)
+[api.ts:587](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L587)

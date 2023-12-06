@@ -28,7 +28,7 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L247)
+[api.ts:247](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L247)
 
 ___
 
@@ -42,7 +42,7 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L253)
+[api.ts:253](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L253)
 
 ___
 
@@ -56,4 +56,4 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L259)
+[api.ts:259](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L259)

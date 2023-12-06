@@ -28,4 +28,4 @@ ImportServicePlan
 
 #### Defined in
 
-[api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L340)
+[api.ts:340](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L340)

@@ -26,4 +26,4 @@ RequestError
 
 #### Defined in
 
-[api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1051)
+[api.ts:1051](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1051)

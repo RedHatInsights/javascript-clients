@@ -28,7 +28,7 @@ ServiceInstanceNodesCollection
 
 #### Defined in
 
-[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2479)
+[api.ts:2479](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2479)
 
 ___
 
@@ -42,7 +42,7 @@ ServiceInstanceNodesCollection
 
 #### Defined in
 
-[api.ts:2473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2473)
+[api.ts:2473](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2473)
 
 ___
 
@@ -56,4 +56,4 @@ ServiceInstanceNodesCollection
 
 #### Defined in
 
-[api.ts:2467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2467)
+[api.ts:2467](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2467)

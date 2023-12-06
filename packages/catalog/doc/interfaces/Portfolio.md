@@ -34,7 +34,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L769)
+[api.ts:769](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L769)
 
 ___
 
@@ -48,7 +48,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L745)
+[api.ts:745](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L745)
 
 ___
 
@@ -62,7 +62,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L751)
+[api.ts:751](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L751)
 
 ___
 
@@ -78,7 +78,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L763)
+[api.ts:763](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L763)
 
 ___
 
@@ -92,7 +92,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L733)
+[api.ts:733](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L733)
 
 ___
 
@@ -108,7 +108,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L781)
+[api.ts:781](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L781)
 
 ___
 
@@ -122,7 +122,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L739)
+[api.ts:739](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L739)
 
 ___
 
@@ -136,7 +136,7 @@ Portfolio
 
 #### Defined in
 
-[api.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L757)
+[api.ts:757](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L757)
 
 ___
 
@@ -150,4 +150,4 @@ Portfolio
 
 #### Defined in
 
-[api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L775)
+[api.ts:775](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L775)

@@ -31,7 +31,7 @@ GroupRef
 
 #### Defined in
 
-[api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L217)
+[api.ts:217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L217)
 
 ___
 
@@ -47,4 +47,4 @@ GroupRef
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L223)
+[api.ts:223](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L223)

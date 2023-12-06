@@ -56,7 +56,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ## Properties
 
@@ -70,7 +70,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
@@ -84,7 +84,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
@@ -98,7 +98,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L49)
 
 ## Methods
 
@@ -132,7 +132,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2492)
+[api.ts:2492](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2492)
 
 ___
 
@@ -165,7 +165,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2504)
+[api.ts:2504](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2504)
 
 ___
 
@@ -199,7 +199,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2517)
+[api.ts:2517](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2517)
 
 ___
 
@@ -238,7 +238,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2535)
+[api.ts:2535](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2535)
 
 ___
 
@@ -275,7 +275,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2551)
+[api.ts:2551](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2551)
 
 ___
 
@@ -309,7 +309,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2564)
+[api.ts:2564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2564)
 
 ___
 
@@ -342,7 +342,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2576)
+[api.ts:2576](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2576)
 
 ___
 
@@ -376,7 +376,7 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2589)
+[api.ts:2589](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2589)
 
 ___
 
@@ -410,4 +410,4 @@ WorkflowApi
 
 #### Defined in
 
-[api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L2602)
+[api.ts:2602](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L2602)

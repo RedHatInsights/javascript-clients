@@ -30,4 +30,4 @@ BundleSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L367)
+[packages/notifications/types/index.ts:410](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L410)

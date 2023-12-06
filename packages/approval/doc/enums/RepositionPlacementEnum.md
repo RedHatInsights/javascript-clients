@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L282)
+[api.ts:282](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L282)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L283)
+[api.ts:283](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L283)

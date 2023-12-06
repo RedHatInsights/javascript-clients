@@ -31,7 +31,7 @@ Links
 
 #### Defined in
 
-[api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1205)
+[api.ts:1180](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1180)
 
 ___
 
@@ -47,7 +47,7 @@ Links
 
 #### Defined in
 
-[api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1211)
+[api.ts:1186](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1186)
 
 ___
 
@@ -63,7 +63,7 @@ Links
 
 #### Defined in
 
-[api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1217)
+[api.ts:1192](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1192)
 
 ___
 
@@ -79,4 +79,4 @@ Links
 
 #### Defined in
 
-[api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1223)
+[api.ts:1198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1198)

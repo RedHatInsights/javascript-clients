@@ -28,7 +28,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1350)
+[packages/integrations/types/index.ts:1386](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1386)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1356)
+[packages/integrations/types/index.ts:1392](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1392)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1362)
+[packages/integrations/types/index.ts:1398](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1398)

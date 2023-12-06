@@ -35,7 +35,7 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L553)
+[api.ts:553](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L553)
 
 ___
 
@@ -51,4 +51,4 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L547)
+[api.ts:547](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L547)

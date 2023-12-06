@@ -32,7 +32,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:398](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L398)
+[packages/notifications/types/index.ts:441](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L441)
 
 ___
 
@@ -46,7 +46,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L416)
+[packages/notifications/types/index.ts:459](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L459)
 
 ___
 
@@ -60,7 +60,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L410)
+[packages/notifications/types/index.ts:453](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L453)
 
 ___
 
@@ -74,7 +74,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L386)
+[packages/notifications/types/index.ts:429](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L429)
 
 ___
 
@@ -92,7 +92,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L404)
+[packages/notifications/types/index.ts:447](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L447)
 
 ___
 
@@ -106,7 +106,7 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L392)
+[packages/notifications/types/index.ts:435](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L435)
 
 ___
 
@@ -120,4 +120,4 @@ CamelProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L380)
+[packages/notifications/types/index.ts:423](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L423)

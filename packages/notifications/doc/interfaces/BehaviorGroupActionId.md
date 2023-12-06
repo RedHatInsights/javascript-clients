@@ -27,7 +27,7 @@ BehaviorGroupActionId
 
 #### Defined in
 
-[packages/notifications/types/index.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L311)
+[packages/notifications/types/index.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L354)
 
 ___
 
@@ -41,4 +41,4 @@ BehaviorGroupActionId
 
 #### Defined in
 
-[packages/notifications/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L317)
+[packages/notifications/types/index.ts:360](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L360)

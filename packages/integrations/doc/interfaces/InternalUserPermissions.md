@@ -28,7 +28,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1174)
+[packages/integrations/types/index.ts:1210](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1210)
 
 ___
 
@@ -42,7 +42,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1168)
+[packages/integrations/types/index.ts:1204](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1204)
 
 ___
 
@@ -56,4 +56,4 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1180)
+[packages/integrations/types/index.ts:1216](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1216)

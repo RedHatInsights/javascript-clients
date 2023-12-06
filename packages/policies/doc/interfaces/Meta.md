@@ -26,4 +26,4 @@ Meta
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L101)
+[api.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L101)

@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -119,7 +119,7 @@ RulecategoryApi
 
 #### Defined in
 
-[api.ts:7449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7449)
+[api.ts:7399](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7399)
 
 ___
 
@@ -148,4 +148,4 @@ RulecategoryApi
 
 #### Defined in
 
-[api.ts:7460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7460)
+[api.ts:7410](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7410)

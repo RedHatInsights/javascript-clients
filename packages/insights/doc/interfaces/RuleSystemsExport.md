@@ -32,4 +32,4 @@ RuleSystemsExport
 
 #### Defined in
 
-[api.ts:1895](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1895)
+[api.ts:1845](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1845)

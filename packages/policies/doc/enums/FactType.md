@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L57)
+[api.ts:57](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L57)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[api.ts:59](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L59)
+[api.ts:59](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L59)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L58)
+[api.ts:58](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L58)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[api.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L56)
+[api.ts:56](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L56)

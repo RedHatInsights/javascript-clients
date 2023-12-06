@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -80,7 +80,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -124,7 +124,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6277)
+[api.ts:6227](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6227)
 
 ___
 
@@ -153,7 +153,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6288)
+[api.ts:6238](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6238)
 
 ___
 
@@ -183,7 +183,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6300)
+[api.ts:6250](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6250)
 
 ___
 
@@ -216,7 +216,7 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6312)
+[api.ts:6262](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6262)
 
 ___
 
@@ -246,4 +246,4 @@ RatingApi
 
 #### Defined in
 
-[api.ts:6324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6324)
+[api.ts:6274](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L6274)

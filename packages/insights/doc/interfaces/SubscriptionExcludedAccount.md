@@ -27,7 +27,7 @@ SubscriptionExcludedAccount
 
 #### Defined in
 
-[api.ts:2056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2056)
+[api.ts:2006](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2006)
 
 ___
 
@@ -41,4 +41,4 @@ SubscriptionExcludedAccount
 
 #### Defined in
 
-[api.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2050)
+[api.ts:2000](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L2000)

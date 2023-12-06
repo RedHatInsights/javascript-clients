@@ -29,7 +29,7 @@ BusinessRiskListOutData
 
 #### Defined in
 
-[api.ts:140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L140)
+[api.ts:140](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L140)
 
 ___
 
@@ -45,4 +45,4 @@ BusinessRiskListOutData
 
 #### Defined in
 
-[api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L146)
+[api.ts:146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L146)

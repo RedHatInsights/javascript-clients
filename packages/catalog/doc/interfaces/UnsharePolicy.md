@@ -29,7 +29,7 @@ UnsharePolicy
 
 #### Defined in
 
-[api.ts:1394](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1394)
+[api.ts:1394](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1394)
 
 ___
 
@@ -45,4 +45,4 @@ UnsharePolicy
 
 #### Defined in
 
-[api.ts:1388](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1388)
+[api.ts:1388](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1388)

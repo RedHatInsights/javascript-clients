@@ -33,7 +33,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:973](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L973)
+[api.ts:923](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L923)
 
 ___
 
@@ -47,7 +47,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L991)
+[api.ts:941](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L941)
 
 ___
 
@@ -61,7 +61,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:985](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L985)
+[api.ts:935](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L935)
 
 ___
 
@@ -75,7 +75,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L961)
+[api.ts:911](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L911)
 
 ___
 
@@ -91,7 +91,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:967](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L967)
+[api.ts:917](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L917)
 
 ___
 
@@ -105,4 +105,4 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:979](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L979)
+[api.ts:929](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L929)

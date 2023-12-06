@@ -6,7 +6,6 @@
 
 ### Enumerations
 
-- [EmailSubscriptionType](enums/EmailSubscriptionType.md)
 - [EndpointStatus](enums/EndpointStatus.md)
 - [EndpointType](enums/EndpointType.md)
 - [Environment](enums/Environment.md)
@@ -14,6 +13,7 @@
 - [HttpType](enums/HttpType.md)
 - [NotificationStatus](enums/NotificationStatus.md)
 - [Status](enums/Status.md)
+- [SubscriptionType](enums/SubscriptionType.md)
 
 ### Classes
 
@@ -29,6 +29,7 @@
 - [ApiConfig](interfaces/ApiConfig.md)
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
+- [ApplicationDTO](interfaces/ApplicationDTO.md)
 - [ApplicationSettingsValue](interfaces/ApplicationSettingsValue.md)
 - [BasicAuthentication](interfaces/BasicAuthentication.md)
 - [BehaviorGroup](interfaces/BehaviorGroup.md)
@@ -74,9 +75,11 @@
 - [SystemSubscriptionProperties](interfaces/SystemSubscriptionProperties.md)
 - [Template](interfaces/Template.md)
 - [TriggerDailyDigestRequest](interfaces/TriggerDailyDigestRequest.md)
+- [UpdateApplicationRequest](interfaces/UpdateApplicationRequest.md)
 - [UpdateBehaviorGroupRequest](interfaces/UpdateBehaviorGroupRequest.md)
 - [UpdateNotificationDrawerStatus](interfaces/UpdateNotificationDrawerStatus.md)
 - [WebhookProperties](interfaces/WebhookProperties.md)
+- [X509Certificate](interfaces/X509Certificate.md)
 
 ### Type Aliases
 
@@ -137,7 +140,7 @@
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L55)
+[packages/integrations/utils/base.ts:55](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L55)
 
 ___
 
@@ -147,9 +150,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
 
 ## Variables
 
@@ -169,9 +172,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
 
 ___
 
@@ -181,7 +184,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L12)
+[packages/integrations/utils/base.ts:12](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L12)
 
 ___
 
@@ -202,7 +205,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L18)
+[packages/integrations/utils/base.ts:18](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L18)
 
 ___
 
@@ -214,7 +217,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L13)
+[packages/integrations/utils/common.ts:13](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L13)
 
 ## Functions
 
@@ -246,7 +249,7 @@ created base API.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L145)
+[packages/integrations/utils/base.ts:145](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L145)
 
 ___
 
@@ -272,7 +275,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L20)
+[packages/integrations/utils/common.ts:20](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L20)
 
 ___
 
@@ -317,7 +320,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L133)
+[packages/integrations/utils/common.ts:133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L133)
 
 ___
 
@@ -345,7 +348,7 @@ Create a new endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
 
 ___
 
@@ -373,7 +376,7 @@ Delete an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
 
 ___
 
@@ -401,7 +404,7 @@ Disable an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
 
 ___
 
@@ -429,7 +432,7 @@ Enable an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
 
 ___
 
@@ -457,7 +460,7 @@ Retrieve event notification details
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
+[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
 
 ___
 
@@ -479,7 +482,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
+[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
 
 ___
 
@@ -507,7 +510,7 @@ Retrieve an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
 
 ___
 
@@ -535,7 +538,7 @@ List endpoints
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
+[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
 
 ___
 
@@ -563,7 +566,7 @@ Add a drawer endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
 
 ___
 
@@ -591,7 +594,7 @@ Create an email subscription endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
 
 ___
 
@@ -619,7 +622,7 @@ Generate a test notification
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
 
 ___
 
@@ -647,7 +650,7 @@ Update an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
 
 ___
 
@@ -671,7 +674,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L111)
+[packages/integrations/utils/common.ts:111](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L111)
 
 ___
 
@@ -695,7 +698,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L30)
+[packages/integrations/utils/common.ts:30](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L30)
 
 ___
 
@@ -718,7 +721,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L43)
+[packages/integrations/utils/common.ts:43](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L43)
 
 ___
 
@@ -741,7 +744,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L53)
+[packages/integrations/utils/common.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L53)
 
 ___
 
@@ -766,7 +769,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L66)
+[packages/integrations/utils/common.ts:66](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L66)
 
 ___
 
@@ -789,7 +792,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L101)
+[packages/integrations/utils/common.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L101)
 
 ___
 
@@ -811,4 +814,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L125)
+[packages/integrations/utils/common.ts:125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L125)

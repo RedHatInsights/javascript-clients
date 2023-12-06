@@ -28,4 +28,4 @@ PatchModifiedServicePlan
 
 #### Defined in
 
-[api.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L720)
+[api.ts:720](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L720)

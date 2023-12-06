@@ -28,7 +28,7 @@ OrderProcessCollection
 
 #### Defined in
 
-[api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L669)
+[api.ts:669](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L669)
 
 ___
 
@@ -42,7 +42,7 @@ OrderProcessCollection
 
 #### Defined in
 
-[api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L663)
+[api.ts:663](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L663)
 
 ___
 
@@ -56,4 +56,4 @@ OrderProcessCollection
 
 #### Defined in
 
-[api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L657)
+[api.ts:657](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L657)

@@ -28,4 +28,4 @@ OrgId
 
 #### Defined in
 
-[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)
+[api.ts:529](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L529)
