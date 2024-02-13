@@ -1,19 +1,18 @@
 {
-    "compilerOptions": {
-        "declaration": true,
-        "target": "es5",
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "outDir": "dist",
-        "rootDir": ".",
-        "skipLibCheck": true,
-        "lib": [
-            "es6",
-            "dom"
-        ]
-    },
-    "exclude": [
-        "dist",
-        "node_modules"
-    ]
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+      "module": "commonjs",
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitOverride": false,
+      "noPropertyAccessFromIndexSignature": false,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+  },
+  "files": [],
+  "references": [
+      {
+          "path": "./tsconfig.esm.json"
+      }
+  ]
 }

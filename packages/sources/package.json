@@ -1,29 +1,30 @@
 {
-    "name": "@redhat-cloud-services/sources-client",
-    "version": "1.2.13",
-    "description": "",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
-    },
-    "author": "",
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/RedHatInsights/javascript-clients/issues"
-    },
-    "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/sources#readme",
-    "scripts": {
-        "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
-        "build": "tsc",
-        "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-        "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/sources-api/master/public/doc/openapi-3-v1.0.json' npm run generate"
-    },
-    "dependencies": {
-        "axios": "^0.27.2"
-    }
+  "name": "@redhat-cloud-services/sources-client",
+  "version": "1.2.13",
+  "description": "",
+  "main": "./index.js",
+  "module": "./esm/index.js",
+  "typings": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/sources#readme",
+  "scripts": {
+    "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/sources-api/master/public/doc/openapi-3-v1.0.json' npm run generate"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "tslib": "^2.6.2"
+  }
 }

@@ -54,6 +54,14 @@ const actionAPI = new ActionApi(undefined, BASE_PATH, instance);
 export actionAPI;
 ```
 
+## Building
+
+Run `nx build entitlements-client` to build the library.
+
+## Running unit tests
+
+Run `nx test entitlements-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)
