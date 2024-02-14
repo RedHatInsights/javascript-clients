@@ -1,0 +1,6 @@
+node_modules
+**/base.ts
+**/api.ts
+**/configuration.ts
+**/index.ts
+**/*.d.ts

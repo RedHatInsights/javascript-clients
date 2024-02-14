@@ -53,8 +53,14 @@ instance.interceptors.response.use(null, (error) => {
 const adminsApi = new AdminsApi(undefined, BASE_PATH, instance);
 export adminsApi;
 ```
+## Building
+
+Run `nx build catalog-client` to build the library.
+
+## Running unit tests
+
+Run `nx test catalog-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
 * [README](doc/README.md)
-
