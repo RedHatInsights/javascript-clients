@@ -31,7 +31,7 @@ runs:
         git config user.email "${{ inputs.gh_email }}"
     - name: Build
       shell: bash
-      run: npx nx run-many -t build
+      run: npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
     - name: Set publish config
       env:
         NPM_TOKEN: ${{ inputs.npm_token }}
@@ -42,7 +42,7 @@ runs:
       env:
         GH_TOKEN: ${{ inputs.gh_token }}
         GITHUB_TOKEN: ${{ inputs.gh_token }}
-      run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=syncDependencies,build,npm,github --trackDeps
+      run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=syncDependencies,build,npm,github --trackDeps --exclude=@redhat-cloud-services/CLIENTNAME-client
     - name: Tag last-release
       shell: bash
       run: |

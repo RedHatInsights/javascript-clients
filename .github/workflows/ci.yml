@@ -48,7 +48,7 @@ jobs:
       - name: Install deps
         run: npm i
       - name: Build affected
-        run: npx nx affected -t build
+        run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:
     runs-on: ubuntu-latest
     needs: [install, lint, test, build]
