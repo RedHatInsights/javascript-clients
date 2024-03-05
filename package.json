@@ -11,6 +11,7 @@
   "scripts": {
     "install": "mvn install -q -DskipTests",
     "build:generator": "mvn clean package -q -DskipTests",
+    "create-client": "utils/create-client.sh",
     "generate": "npm run generate:prod --workspaces && npm run doc --workspaces && npm run build --workspaces",
     "doc": "npm run doc --workspaces",
     "generate:prod": "npm run generate:prod --workspaces",
@@ -18,13 +19,13 @@
     "nx": "nx",
     "prepare": "husky install",
     "dev": "nx run test-app:serve",
-    "test:unit": "nx run-many -t test",
-    "test:unit:affected": "nx affected -t test",
-    "test": "npm-run-all --parallel test:*",
-    "build": "nx run-many -t build",
-    "lint": "nx run-many -t lint",
-    "lint:fix": "nx run-many -t lint --fix",
-    "version": "nx run-many -t version"
+    "test:unit": "nx run-many -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "test:unit:affected": "nx affected -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "test": "npm-run-all --parallel test:* --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "build": "nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "lint": "nx run-many -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "version": "nx run-many -t version --exclude=@redhat-cloud-services/CLIENTNAME-client"
   },
   "workspaces": [
     "packages/*"
