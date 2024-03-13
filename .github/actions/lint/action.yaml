@@ -10,4 +10,4 @@ runs:
       run: npm i
     - name: Lint affected
       shell: bash
-      run: npx nx affected -t lint
+      run: npx nx affected -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client

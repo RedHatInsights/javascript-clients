@@ -56,11 +56,11 @@ export baseApi;
 
 ## Building
 
-Run `nx build approval-client` to build the library.
+Run `nx build sources-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test approval-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test sources-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
