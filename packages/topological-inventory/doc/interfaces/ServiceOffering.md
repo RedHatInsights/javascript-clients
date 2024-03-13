@@ -46,7 +46,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2621)
+[api.ts:2621](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2621)
 
 ___
 
@@ -60,7 +60,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2627)
+[api.ts:2627](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2627)
 
 ___
 
@@ -74,7 +74,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2633)
+[api.ts:2633](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2633)
 
 ___
 
@@ -88,7 +88,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2639)
+[api.ts:2639](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2639)
 
 ___
 
@@ -102,7 +102,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2645)
+[api.ts:2645](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2645)
 
 ___
 
@@ -116,7 +116,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2651)
+[api.ts:2651](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2651)
 
 ___
 
@@ -132,7 +132,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2657)
+[api.ts:2657](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2657)
 
 ___
 
@@ -148,7 +148,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2663)
+[api.ts:2663](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2663)
 
 ___
 
@@ -162,7 +162,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2669)
+[api.ts:2669](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2669)
 
 ___
 
@@ -176,7 +176,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2675)
+[api.ts:2675](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2675)
 
 ___
 
@@ -190,7 +190,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2681)
+[api.ts:2681](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2681)
 
 ___
 
@@ -206,7 +206,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2687)
+[api.ts:2687](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2687)
 
 ___
 
@@ -222,7 +222,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2693)
+[api.ts:2693](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2693)
 
 ___
 
@@ -236,7 +236,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2699)
+[api.ts:2699](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2699)
 
 ___
 
@@ -250,7 +250,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2705)
+[api.ts:2705](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2705)
 
 ___
 
@@ -266,7 +266,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2711)
+[api.ts:2711](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2711)
 
 ___
 
@@ -282,7 +282,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2717)
+[api.ts:2717](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2717)
 
 ___
 
@@ -298,7 +298,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2723)
+[api.ts:2723](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2723)
 
 ___
 
@@ -314,7 +314,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2729)
+[api.ts:2729](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2729)
 
 ___
 
@@ -328,7 +328,7 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2735)
+[api.ts:2735](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2735)
 
 ___
 
@@ -342,4 +342,4 @@ ServiceOffering
 
 #### Defined in
 
-[api.ts:2741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2741)
+[api.ts:2741](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2741)

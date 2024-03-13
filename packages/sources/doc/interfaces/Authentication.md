@@ -37,7 +37,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L199)
+[api.ts:199](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L199)
 
 ___
 
@@ -51,7 +51,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L205)
+[api.ts:205](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L205)
 
 ___
 
@@ -65,7 +65,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L211)
+[api.ts:211](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L211)
 
 ___
 
@@ -79,7 +79,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L217)
+[api.ts:217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L217)
 
 ___
 
@@ -95,7 +95,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L223)
+[api.ts:223](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L223)
 
 ___
 
@@ -109,7 +109,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L229)
+[api.ts:229](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L229)
 
 ___
 
@@ -123,7 +123,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L235)
+[api.ts:235](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L235)
 
 ___
 
@@ -139,7 +139,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L241)
+[api.ts:241](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L241)
 
 ___
 
@@ -153,7 +153,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L247)
+[api.ts:247](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L247)
 
 ___
 
@@ -169,7 +169,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L253)
+[api.ts:253](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L253)
 
 ___
 
@@ -183,7 +183,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L259)
+[api.ts:259](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L259)
 
 ___
 
@@ -197,4 +197,4 @@ Authentication
 
 #### Defined in
 
-[api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L265)
+[api.ts:265](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L265)

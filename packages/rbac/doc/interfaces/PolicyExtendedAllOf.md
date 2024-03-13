@@ -27,7 +27,7 @@ PolicyExtendedAllOf
 
 #### Defined in
 
-[api.ts:1488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1488)
+[api.ts:1488](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1488)
 
 ___
 
@@ -41,4 +41,4 @@ PolicyExtendedAllOf
 
 #### Defined in
 
-[api.ts:1494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1494)
+[api.ts:1494](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1494)

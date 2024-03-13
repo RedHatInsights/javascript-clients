@@ -9,6 +9,7 @@
 ### Enumeration Members
 
 - [CentOS](SystemProfileOperatingSystemNameEnum.md#centos)
+- [CentOSLinux](SystemProfileOperatingSystemNameEnum.md#centoslinux)
 - [RHEL](SystemProfileOperatingSystemNameEnum.md#rhel)
 
 ## Enumeration Members
@@ -19,7 +20,17 @@
 
 #### Defined in
 
-[api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1820)
+[api.ts:2208](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2208)
+
+___
+
+### CentOSLinux
+
+• **CentOSLinux** = ``"CentOS Linux"``
+
+#### Defined in
+
+[api.ts:2209](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2209)
 
 ___
 
@@ -29,4 +40,4 @@ ___
 
 #### Defined in
 
-[api.ts:1819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1819)
+[api.ts:2207](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2207)

@@ -13,6 +13,7 @@ Principal
 ### Properties
 
 - [email](Principal.md#email)
+- [external\_source\_id](Principal.md#external_source_id)
 - [first\_name](Principal.md#first_name)
 - [is\_active](Principal.md#is_active)
 - [is\_org\_admin](Principal.md#is_org_admin)
@@ -31,7 +32,21 @@ Principal
 
 #### Defined in
 
-[api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1601)
+[api.ts:1601](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1601)
+
+___
+
+### external\_source\_id
+
+• `Optional` **external\_source\_id**: `string` \| `number`
+
+**`Memberof`**
+
+Principal
+
+#### Defined in
+
+[api.ts:1631](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1631)
 
 ___
 
@@ -45,7 +60,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1607)
+[api.ts:1607](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1607)
 
 ___
 
@@ -59,7 +74,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1619)
+[api.ts:1619](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1619)
 
 ___
 
@@ -73,7 +88,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1625)
+[api.ts:1625](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1625)
 
 ___
 
@@ -87,7 +102,7 @@ Principal
 
 #### Defined in
 
-[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1613)
+[api.ts:1613](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1613)
 
 ___
 
@@ -101,4 +116,4 @@ Principal
 
 #### Defined in
 
-[api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1595)
+[api.ts:1595](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1595)

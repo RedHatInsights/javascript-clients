@@ -26,7 +26,7 @@ RoleApi - object-oriented interface
 
 ### Methods
 
-- [createRoles](RoleApi.md#createroles)
+- [createRole](RoleApi.md#createrole)
 - [deleteRole](RoleApi.md#deleterole)
 - [getRole](RoleApi.md#getrole)
 - [getRoleAccess](RoleApi.md#getroleaccess)
@@ -54,7 +54,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -68,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -82,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -96,17 +96,17 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
-### createRoles
+### createRole
 
-▸ **createRoles**(`roleIn`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
+▸ **createRole**(`roleIn`, `options?`): `Promise`<`AxiosResponse`<[`RoleWithAccess`](../interfaces/RoleWithAccess.md), `any`\>\>
 
 **`Summary`**
 
-Create a roles for a tenant
+Create a role for a tenant
 
 **`Throws`**
 
@@ -127,7 +127,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5905)
+[api.ts:5953](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5953)
 
 ___
 
@@ -158,7 +158,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5917)
+[api.ts:5965](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5965)
 
 ___
 
@@ -190,7 +190,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5930](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5930)
+[api.ts:5978](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5978)
 
 ___
 
@@ -223,7 +223,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5944)
+[api.ts:5992](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5992)
 
 ___
 
@@ -257,7 +257,7 @@ RoleApi
 | `orderBy?` | ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"`` | Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
 | `addFields?` | (``"groups_in"`` \| ``"groups_in_count"`` \| ``"access"``)[] | Parameter for add list of fields to display for roles. |
 | `username?` | `string` | Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header). |
-| `application?` | `string` | The application name(s) to filter roles by, from permissions. This is an exact match. You may also use a comma-separated list to match on multiple applications. |
+| `application?` | `string` | The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications. |
 | `permission?` | `string` | The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions. |
 | `externalTenant?` | `string` | Parameter for filtering roles by external tenant name using string search. |
 | `options?` | `any` | Override http request option. |
@@ -268,7 +268,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5968)
+[api.ts:6016](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6016)
 
 ___
 
@@ -278,7 +278,7 @@ ___
 
 **`Summary`**
 
-Patch a Role in the tenant
+Patch a role in the tenant
 
 **`Throws`**
 
@@ -291,7 +291,7 @@ RoleApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | ID of role to update |
-| `rolePatch?` | [`RolePatch`](../interfaces/RolePatch.md) | Patch to a Role |
+| `rolePatch?` | [`RolePatch`](../interfaces/RolePatch.md) | Patch to a role |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -300,7 +300,7 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5981)
+[api.ts:6029](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6029)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 **`Summary`**
 
-Update a Role in the tenant
+Update a role in the tenant
 
 **`Throws`**
 
@@ -323,7 +323,7 @@ RoleApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | ID of role to update |
-| `roleWithAccess` | [`RoleWithAccess`](../interfaces/RoleWithAccess.md) | Update to a Role |
+| `roleWithAccess` | [`RoleWithAccess`](../interfaces/RoleWithAccess.md) | Update to a role |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -332,4 +332,4 @@ RoleApi
 
 #### Defined in
 
-[api.ts:5994](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5994)
+[api.ts:6042](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L6042)

@@ -26,4 +26,4 @@ PrincipalIn
 
 #### Defined in
 
-[api.ts:1638](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1638)
+[api.ts:1644](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1644)

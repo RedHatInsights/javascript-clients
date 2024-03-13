@@ -15,6 +15,7 @@ PlaybookTemplateData
 - [description](PlaybookTemplateData.md#description)
 - [play](PlaybookTemplateData.md#play)
 - [reboot\_required](PlaybookTemplateData.md#reboot_required)
+- [resolution\_type](PlaybookTemplateData.md#resolution_type)
 - [version](PlaybookTemplateData.md#version)
 
 ## Properties
@@ -31,7 +32,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2136)
+[api.ts:2266](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2266)
 
 ___
 
@@ -47,7 +48,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2142)
+[api.ts:2272](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2272)
 
 ___
 
@@ -63,7 +64,23 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2148)
+[api.ts:2278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2278)
+
+___
+
+### resolution\_type
+
+• **resolution\_type**: `string`
+
+Type of the resolution provided by playbook.
+
+**`Memberof`**
+
+PlaybookTemplateData
+
+#### Defined in
+
+[api.ts:2284](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2284)
 
 ___
 
@@ -79,4 +96,4 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2154)
+[api.ts:2290](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2290)

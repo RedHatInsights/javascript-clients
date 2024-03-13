@@ -28,7 +28,7 @@ VmsCollection
 
 #### Defined in
 
-[api.ts:3838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3838)
+[api.ts:3838](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3838)
 
 ___
 
@@ -42,7 +42,7 @@ VmsCollection
 
 #### Defined in
 
-[api.ts:3832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3832)
+[api.ts:3832](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3832)
 
 ___
 
@@ -56,4 +56,4 @@ VmsCollection
 
 #### Defined in
 
-[api.ts:3826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3826)
+[api.ts:3826](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3826)

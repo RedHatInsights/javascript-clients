@@ -26,4 +26,4 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1570)
+[api.ts:1570](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1570)

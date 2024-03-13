@@ -59,7 +59,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -73,7 +73,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -87,7 +87,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
@@ -134,7 +134,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4306)
+[api.ts:5544](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5544)
 
 ___
 
@@ -168,7 +168,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4319)
+[api.ts:5557](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5557)
 
 ___
 
@@ -200,11 +200,11 @@ HostsApi
 | `providerType?` | ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"`` | Filter by provider_type |
 | `updatedStart?` | `string` | Only show hosts last modified after the given date |
 | `updatedEnd?` | `string` | Only show hosts last modified before the given date |
-| `groupName?` | `string` | Filter by group name |
+| `groupName?` | `string`[] | Filter by group name |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
-| `filter?` | `Object` | Filters hosts based on system_profile fields |
+| `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -213,7 +213,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4343)
+[api.ts:5581](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5581)
 
 ___
 
@@ -241,9 +241,9 @@ HostsApi
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
-| `fields?` | `Object` | Fetches only mentioned system_profile fields |
+| `fields?` | `Object` | Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -252,7 +252,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4361)
+[api.ts:5599](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5599)
 
 ___
 
@@ -284,17 +284,17 @@ HostsApi
 | `providerType?` | ``"alibaba"`` \| ``"aws"`` \| ``"azure"`` \| ``"gcp"`` \| ``"ibm"`` | Filter by provider_type |
 | `updatedStart?` | `string` | Only show hosts last modified after the given date |
 | `updatedEnd?` | `string` | Only show hosts last modified before the given date |
-| `groupName?` | `string` | Filter by group name |
+| `groupName?` | `string`[] | Filter by group name |
 | `branchId?` | `string` | Filter by branch_id |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh, stale and stale_warning |
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `filter?` | `Object` | Filters hosts based on system_profile fields |
-| `fields?` | `Object` | Fetches only mentioned system_profile fields |
+| `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
+| `fields?` | `Object` | Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -303,7 +303,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4391)
+[api.ts:5629](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5629)
 
 ___
 
@@ -330,10 +330,10 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `branchId?` | `string` | Filter by branch_id |
-| `fields?` | `Object` | Fetches only mentioned system_profile fields |
+| `fields?` | `Object` | Fetches only mentioned system_profile fields. For example, &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: [\&quot;arch\&quot;, \&quot;host_type\&quot;]} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?fields[system_profile]&#x3D;arch,host_type\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -342,7 +342,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4409)
+[api.ts:5647](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5647)
 
 ___
 
@@ -369,7 +369,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `options?` | `any` | Override http request option. |
 
@@ -379,7 +379,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4425)
+[api.ts:5663](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5663)
 
 ___
 
@@ -406,7 +406,7 @@ HostsApi
 | `hostIdList` | `string`[] | A comma-separated list of host IDs. |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `orderBy?` | ``"display_name"`` \| ``"updated"`` \| ``"operating_system"`` | Ordering field name |
+| `orderBy?` | ``"updated"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"operating_system"`` | Ordering field name |
 | `orderHow?` | ``"ASC"`` \| ``"DESC"`` | Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system |
 | `search?` | `string` | Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\&#39;s namespace, key, and/or value is used for matching. |
 | `options?` | `any` | Override http request option. |
@@ -417,13 +417,13 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4442)
+[api.ts:5680](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5680)
 
 ___
 
 ### apiHostHostCheckin
 
-▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md), `any`\>\>
+▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
 
 Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
 
@@ -446,11 +446,11 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`CreateHostOut`](../interfaces/CreateHostOut.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4454)
+[api.ts:5692](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5692)
 
 ___
 
@@ -486,7 +486,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4469)
+[api.ts:5707](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5707)
 
 ___
 
@@ -521,7 +521,7 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4483)
+[api.ts:5721](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5721)
 
 ___
 
@@ -557,4 +557,4 @@ HostsApi
 
 #### Defined in
 
-[api.ts:4498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4498)
+[api.ts:5736](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L5736)

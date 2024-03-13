@@ -29,7 +29,7 @@ AnnouncementOut
 
 #### Defined in
 
-[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)
+[api.ts:83](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L83)
 
 ___
 
@@ -45,4 +45,4 @@ AnnouncementOut
 
 #### Defined in
 
-[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)
+[api.ts:89](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L89)

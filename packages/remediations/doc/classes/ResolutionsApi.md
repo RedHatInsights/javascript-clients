@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/base.ts#L49)
 
 ## Methods
 
@@ -124,7 +124,7 @@ ResolutionsApi
 
 #### Defined in
 
-[api.ts:3380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3380)
+[api.ts:3394](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3394)
 
 ___
 
@@ -157,4 +157,4 @@ ResolutionsApi
 
 #### Defined in
 
-[api.ts:3392](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3392)
+[api.ts:3406](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3406)

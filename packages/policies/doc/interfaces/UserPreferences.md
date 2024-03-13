@@ -27,7 +27,7 @@ UserPreferences
 
 #### Defined in
 
-[api.ts:244](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L244)
+[api.ts:244](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L244)
 
 ___
 
@@ -41,4 +41,4 @@ UserPreferences
 
 #### Defined in
 
-[api.ts:238](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L238)
+[api.ts:238](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L238)

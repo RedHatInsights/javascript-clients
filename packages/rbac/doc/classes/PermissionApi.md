@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -131,7 +131,7 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4573)
+[api.ts:4613](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4613)
 
 ___
 
@@ -173,4 +173,4 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4594)
+[api.ts:4634](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4634)

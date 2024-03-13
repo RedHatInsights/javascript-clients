@@ -34,7 +34,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L981)
+[api.ts:1095](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1095)
 
 ___
 
@@ -48,7 +48,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L987)
+[api.ts:1101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1101)
 
 ___
 
@@ -64,7 +64,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L999)
+[api.ts:1113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1113)
 
 ___
 
@@ -80,7 +80,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L993)
+[api.ts:1107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1107)
 
 ___
 
@@ -96,7 +96,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1005)
+[api.ts:1119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1119)
 
 ___
 
@@ -112,7 +112,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1011)
+[api.ts:1125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1125)
 
 ___
 
@@ -128,4 +128,4 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1017)
+[api.ts:1131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1131)

@@ -38,7 +38,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1062)
+[api.ts:1101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1101)
 
 ___
 
@@ -54,7 +54,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1068)
+[api.ts:1107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1107)
 
 ___
 
@@ -70,7 +70,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1074)
+[api.ts:1113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1113)
 
 ___
 
@@ -86,7 +86,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1080)
+[api.ts:1119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1119)
 
 ___
 
@@ -102,7 +102,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1086](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1086)
+[api.ts:1125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1125)
 
 ___
 
@@ -118,7 +118,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1092](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1092)
+[api.ts:1131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1131)
 
 ___
 
@@ -134,7 +134,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1098)
+[api.ts:1137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1137)
 
 ___
 
@@ -150,7 +150,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1104)
+[api.ts:1143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1143)
 
 ___
 
@@ -166,7 +166,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1110)
+[api.ts:1149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1149)
 
 ___
 
@@ -182,7 +182,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1116)
+[api.ts:1155](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1155)
 
 ___
 
@@ -198,4 +198,4 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1122)
+[api.ts:1161](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1161)

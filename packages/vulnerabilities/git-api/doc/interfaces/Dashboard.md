@@ -32,7 +32,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L454)
+[api.ts:524](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L524)
 
 ___
 
@@ -48,7 +48,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L460)
+[api.ts:530](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L530)
 
 ___
 
@@ -64,7 +64,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L466)
+[api.ts:536](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L536)
 
 ___
 
@@ -78,7 +78,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L472)
+[api.ts:542](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L542)
 
 ___
 
@@ -94,7 +94,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L478)
+[api.ts:548](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L548)
 
 ___
 
@@ -110,7 +110,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L484)
+[api.ts:554](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L554)
 
 ___
 
@@ -126,4 +126,4 @@ Dashboard
 
 #### Defined in
 
-[api.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L490)
+[api.ts:560](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L560)

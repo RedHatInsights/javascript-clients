@@ -48,7 +48,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +62,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -76,7 +76,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -90,13 +90,13 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### listPrincipals
 
-▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `type?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -124,6 +124,7 @@ PrincipalApi
 | `adminOnly?` | ``"false"`` \| ``"true"`` | Get only admin users within an account. Setting this would ignore the parameters: usernames, email |
 | `orderBy?` | ``"username"`` | Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username |
 | `usernameOnly?` | `boolean` | Parameter for optionally returning only usernames for principals, bypassing a call to IT. |
+| `type?` | ``"user"`` \| ``"service-account"`` | Parameter for selecting the type of principal to be returned. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -132,4 +133,4 @@ PrincipalApi
 
 #### Defined in
 
-[api.ts:5269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5269)
+[api.ts:5317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5317)

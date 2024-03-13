@@ -26,4 +26,4 @@ QuickstartsGet200Response
 
 #### Defined in
 
-[api.ts:87](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L87)
+[api.ts:87](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L87)

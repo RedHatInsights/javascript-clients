@@ -28,7 +28,7 @@ AccessPagination
 
 #### Defined in
 
-[api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L64)
+[api.ts:64](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L64)
 
 ___
 
@@ -42,7 +42,7 @@ AccessPagination
 
 #### Defined in
 
-[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L58)
+[api.ts:58](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L58)
 
 ___
 
@@ -56,4 +56,4 @@ AccessPagination
 
 #### Defined in
 
-[api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L52)
+[api.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L52)

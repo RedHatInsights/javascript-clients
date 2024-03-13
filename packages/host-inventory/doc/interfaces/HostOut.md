@@ -2,7 +2,7 @@
 
 # Interface: HostOut
 
-A database entry representing a single host with its Inventory metadata.
+Data of a single host belonging to an account. Represents the hosts without its Inventory metadata.
 
 **`Export`**
 
@@ -22,6 +22,7 @@ HostOut
 - [display\_name](HostOut.md#display_name)
 - [facts](HostOut.md#facts)
 - [fqdn](HostOut.md#fqdn)
+- [groups](HostOut.md#groups)
 - [id](HostOut.md#id)
 - [insights\_id](HostOut.md#insights_id)
 - [ip\_addresses](HostOut.md#ip_addresses)
@@ -51,7 +52,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L801)
+[api.ts:787](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L787)
 
 ___
 
@@ -67,7 +68,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L795)
+[api.ts:781](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L781)
 
 ___
 
@@ -83,7 +84,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L753)
+[api.ts:739](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L739)
 
 ___
 
@@ -99,7 +100,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L819)
+[api.ts:805](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L805)
 
 ___
 
@@ -115,7 +116,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L849)
+[api.ts:835](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)
 
 ___
 
@@ -131,7 +132,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L789)
+[api.ts:775](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L775)
 
 ___
 
@@ -147,7 +148,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L831)
+[api.ts:817](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L817)
 
 ___
 
@@ -163,7 +164,23 @@ HostOut
 
 #### Defined in
 
-[api.ts:765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L765)
+[api.ts:751](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L751)
+
+___
+
+### groups
+
+• `Optional` **groups**: [`GroupOut`](GroupOut.md)[]
+
+The groups that the host belongs to, if any.
+
+**`Memberof`**
+
+HostOut
+
+#### Defined in
+
+[api.ts:853](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L853)
 
 ___
 
@@ -179,7 +196,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L813)
+[api.ts:799](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L799)
 
 ___
 
@@ -195,7 +212,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L735)
+[api.ts:721](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L721)
 
 ___
 
@@ -211,7 +228,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L759)
+[api.ts:745](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L745)
 
 ___
 
@@ -227,7 +244,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L771)
+[api.ts:757](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L757)
 
 ___
 
@@ -243,7 +260,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L807)
+[api.ts:793](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L793)
 
 ___
 
@@ -263,7 +280,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L861)
+[api.ts:847](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L847)
 
 ___
 
@@ -279,7 +296,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L777)
+[api.ts:763](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L763)
 
 ___
 
@@ -295,7 +312,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L783)
+[api.ts:769](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L769)
 
 ___
 
@@ -311,7 +328,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L855)
+[api.ts:841](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L841)
 
 ___
 
@@ -327,7 +344,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L747)
+[api.ts:733](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L733)
 
 ___
 
@@ -343,7 +360,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L837)
+[api.ts:823](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L823)
 
 ___
 
@@ -359,7 +376,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L843)
+[api.ts:829](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L829)
 
 ___
 
@@ -375,7 +392,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L741)
+[api.ts:727](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L727)
 
 ___
 
@@ -391,4 +408,4 @@ HostOut
 
 #### Defined in
 
-[api.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L825)
+[api.ts:811](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L811)

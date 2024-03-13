@@ -29,7 +29,7 @@ DashbarOut
 
 #### Defined in
 
-[api.ts:423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L423)
+[api.ts:493](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L493)
 
 ___
 
@@ -43,7 +43,7 @@ DashbarOut
 
 #### Defined in
 
-[api.ts:429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L429)
+[api.ts:499](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L499)
 
 ___
 
@@ -57,7 +57,7 @@ DashbarOut
 
 #### Defined in
 
-[api.ts:435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L435)
+[api.ts:505](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L505)
 
 ___
 
@@ -71,4 +71,4 @@ DashbarOut
 
 #### Defined in
 
-[api.ts:441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L441)
+[api.ts:511](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L511)

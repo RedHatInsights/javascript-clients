@@ -26,4 +26,4 @@ ControllersSystemDetailResponse
 
 #### Defined in
 
-[api.ts:1194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1194)
+[api.ts:1194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1194)

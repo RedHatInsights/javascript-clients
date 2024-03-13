@@ -28,7 +28,7 @@ ClustersCollection
 
 #### Defined in
 
-[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L229)
+[api.ts:229](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L229)
 
 ___
 
@@ -42,7 +42,7 @@ ClustersCollection
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L223)
+[api.ts:223](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L223)
 
 ___
 
@@ -56,4 +56,4 @@ ClustersCollection
 
 #### Defined in
 
-[api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L217)
+[api.ts:217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L217)

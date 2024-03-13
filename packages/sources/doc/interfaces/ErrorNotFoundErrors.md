@@ -27,7 +27,7 @@ ErrorNotFoundErrors
 
 #### Defined in
 
-[api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L532)
+[api.ts:532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L532)
 
 ___
 
@@ -41,4 +41,4 @@ ErrorNotFoundErrors
 
 #### Defined in
 
-[api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L526)
+[api.ts:526](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L526)

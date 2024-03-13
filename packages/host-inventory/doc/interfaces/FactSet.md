@@ -31,7 +31,7 @@ FactSet
 
 #### Defined in
 
-[api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L597)
+[api.ts:527](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L527)
 
 ___
 
@@ -47,4 +47,4 @@ FactSet
 
 #### Defined in
 
-[api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L591)
+[api.ts:521](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L521)

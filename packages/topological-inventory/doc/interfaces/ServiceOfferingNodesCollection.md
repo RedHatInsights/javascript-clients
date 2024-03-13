@@ -28,7 +28,7 @@ ServiceOfferingNodesCollection
 
 #### Defined in
 
-[api.ts:2931](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2931)
+[api.ts:2931](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2931)
 
 ___
 
@@ -42,7 +42,7 @@ ServiceOfferingNodesCollection
 
 #### Defined in
 
-[api.ts:2925](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2925)
+[api.ts:2925](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2925)
 
 ___
 
@@ -56,4 +56,4 @@ ServiceOfferingNodesCollection
 
 #### Defined in
 
-[api.ts:2919](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2919)
+[api.ts:2919](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2919)

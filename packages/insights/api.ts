@@ -20,6 +20,432 @@ import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
+ *
+ * @export
+ * @interface Ack
+ */
+export interface Ack {
+    /**
+     *
+     * @type {string}
+     * @memberof Ack
+     */
+    rule: string;
+    /**
+     * The reason the rule was acked
+     * @type {string}
+     * @memberof Ack
+     */
+    justification?: string;
+    /**
+     * The user who created the ack
+     * @type {string}
+     * @memberof Ack
+     */
+    created_by?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Ack
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Ack
+     */
+    updated_at: string;
+}
+/**
+ * A rule_id and the number of acks on it
+ * @export
+ * @interface AckCount
+ */
+export interface AckCount {
+    /**
+     *
+     * @type {string}
+     * @memberof AckCount
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {number}
+     * @memberof AckCount
+     */
+    ack_count: number;
+}
+/**
+ *
+ * @export
+ * @interface AckInput
+ */
+export interface AckInput {
+    /**
+     *
+     * @type {string}
+     * @memberof AckInput
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AckInput
+     */
+    justification?: string;
+}
+/**
+ *
+ * @export
+ * @interface AckJustification
+ */
+export interface AckJustification {
+    /**
+     * The reason the rule was acked
+     * @type {string}
+     * @memberof AckJustification
+     */
+    justification?: string;
+}
+/**
+ *
+ * @export
+ * @interface AllAck
+ */
+export interface AllAck {
+    /**
+     *
+     * @type {string}
+     * @memberof AllAck
+     */
+    account: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllAck
+     */
+    org_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllAck
+     */
+    rule: string;
+    /**
+     * The reason the rule was acked
+     * @type {string}
+     * @memberof AllAck
+     */
+    justification?: string;
+    /**
+     * The user who created the ack
+     * @type {string}
+     * @memberof AllAck
+     */
+    created_by?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllAck
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllAck
+     */
+    updated_at: string;
+}
+/**
+ * This is only available to internal users and lists ratings from all users.
+ * @export
+ * @interface AllRuleRatings
+ */
+export interface AllRuleRatings {
+    /**
+     *
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    rule: string;
+    /**
+     *
+     * @type {number}
+     * @memberof AllRuleRatings
+     */
+    rating: AllRuleRatingsRatingEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    updated_at: string;
+    /**
+     * The username that rated this rule
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    rated_by?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    account?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AllRuleRatings
+     */
+    org_id: string;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum AllRuleRatingsRatingEnum {
+    NUMBER_MINUS_1 = -1,
+    NUMBER_0 = 0,
+    NUMBER_1 = 1
+}
+
+/**
+ * Serializer specifically for listing all Pathways currently in the system
+ * @export
+ * @interface AutoSubscribe
+ */
+export interface AutoSubscribe {
+    /**
+     *
+     * @type {string}
+     * @memberof AutoSubscribe
+     */
+    org_id: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AutoSubscribe
+     */
+    is_auto_subscribed: boolean;
+}
+/**
+ * Serializer specifically for handling CREATE and UPDATE views for AutoSubscribe
+ * @export
+ * @interface AutoSubscribeInput
+ */
+export interface AutoSubscribeInput {
+    /**
+     *
+     * @type {string}
+     * @memberof AutoSubscribeInput
+     */
+    org_id: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AutoSubscribeInput
+     */
+    is_auto_subscribed: boolean;
+}
+/**
+ * The basic report information for each system affected by a rule.  Only lists basic details of the host and rule, and links to more information.
+ * @export
+ * @interface ExportHits
+ */
+export interface ExportHits {
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    hostname: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    rhel_version: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    uuid: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    last_seen: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    title: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    solution_url: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ExportHits
+     */
+    total_risk: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ExportHits
+     */
+    likelihood: number;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    publish_date: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    stale_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExportHits
+     */
+    results_url: string;
+}
+/**
+ * Ignore reports of this rule on this system for this account.
+ * @export
+ * @interface HostAck
+ */
+export interface HostAck {
+    /**
+     *
+     * @type {number}
+     * @memberof HostAck
+     */
+    id: number;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    rule: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    system_uuid: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    justification?: string;
+    /**
+     * The username that created this acknowledgement
+     * @type {string}
+     * @memberof HostAck
+     */
+    created_by: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    updated_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAck
+     */
+    display_name: string;
+}
+/**
+ * Ignore reports of this rule on this system for this account.  Use this when creating a new HostAck.
+ * @export
+ * @interface HostAckInput
+ */
+export interface HostAckInput {
+    /**
+     *
+     * @type {string}
+     * @memberof HostAckInput
+     */
+    rule: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAckInput
+     */
+    system_uuid: string;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAckInput
+     */
+    justification?: string;
+}
+/**
+ * Just modify the justification on a Host Ack.
+ * @export
+ * @interface HostAckJustification
+ */
+export interface HostAckJustification {
+    /**
+     *
+     * @type {number}
+     * @memberof HostAckJustification
+     */
+    id: number;
+    /**
+     *
+     * @type {string}
+     * @memberof HostAckJustification
+     */
+    justification?: string;
+}
+/**
+ *
+ * @export
+ * @interface JustificationCount
+ */
+export interface JustificationCount {
+    /**
+     *
+     * @type {string}
+     * @memberof JustificationCount
+     */
+    justification: string;
+    /**
+     *
+     * @type {number}
+     * @memberof JustificationCount
+     */
+    count: number;
+}
+/**
  * Pairings of C.R.C rule URL and its KCS solution number (node_id)
  * @export
  * @interface Kcs
@@ -39,6 +465,929 @@ export interface Kcs {
     node_id: string;
 }
 /**
+ * The response from adding or deleting multiple acks on a rule.  For backward compatibility we include the count, and then list the impacted systems.
+ * @export
+ * @interface MultiAckResponse
+ */
+export interface MultiAckResponse {
+    /**
+     *
+     * @type {number}
+     * @memberof MultiAckResponse
+     */
+    count: number;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiAckResponse
+     */
+    host_ids: Array<string>;
+}
+/**
+ * Add acks to multiple hosts for a single rule.
+ * @export
+ * @interface MultiHostAck
+ */
+export interface MultiHostAck {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiHostAck
+     */
+    systems: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof MultiHostAck
+     */
+    justification: string;
+}
+/**
+ * Delete acks from multiple hosts for a single rule.
+ * @export
+ * @interface MultiHostUnAck
+ */
+export interface MultiHostUnAck {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MultiHostUnAck
+     */
+    systems: Array<string>;
+}
+/**
+ * A specific org id for a Red Hat customer.
+ * @export
+ * @interface OrgId
+ */
+export interface OrgId {
+    /**
+     *
+     * @type {string}
+     * @memberof OrgId
+     */
+    org_id: string;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAckList
+ */
+export interface PaginatedAckList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedAckList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedAckList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<Ack>}
+     * @memberof PaginatedAckList
+     */
+    data?: Array<Ack>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAckListLinks
+ */
+export interface PaginatedAckListLinks {
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckListLinks
+     */
+    first?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckListLinks
+     */
+    previous?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckListLinks
+     */
+    next?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof PaginatedAckListLinks
+     */
+    last?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAckListMeta
+ */
+export interface PaginatedAckListMeta {
+    /**
+     *
+     * @type {number}
+     * @memberof PaginatedAckListMeta
+     */
+    count: number;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedAllRuleRatingsList
+ */
+export interface PaginatedAllRuleRatingsList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedAllRuleRatingsList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedAllRuleRatingsList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<AllRuleRatings>}
+     * @memberof PaginatedAllRuleRatingsList
+     */
+    data?: Array<AllRuleRatings>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedHostAckList
+ */
+export interface PaginatedHostAckList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedHostAckList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedHostAckList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<HostAck>}
+     * @memberof PaginatedHostAckList
+     */
+    data?: Array<HostAck>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedJustificationCountList
+ */
+export interface PaginatedJustificationCountList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedJustificationCountList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedJustificationCountList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<JustificationCount>}
+     * @memberof PaginatedJustificationCountList
+     */
+    data?: Array<JustificationCount>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedOrgIdList
+ */
+export interface PaginatedOrgIdList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedOrgIdList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedOrgIdList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<OrgId>}
+     * @memberof PaginatedOrgIdList
+     */
+    data?: Array<OrgId>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedPathwayList
+ */
+export interface PaginatedPathwayList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedPathwayList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedPathwayList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<Pathway>}
+     * @memberof PaginatedPathwayList
+     */
+    data?: Array<Pathway>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedRuleForAccountList
+ */
+export interface PaginatedRuleForAccountList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedRuleForAccountList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedRuleForAccountList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<RuleForAccount>}
+     * @memberof PaginatedRuleForAccountList
+     */
+    data?: Array<RuleForAccount>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedRuleList
+ */
+export interface PaginatedRuleList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedRuleList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedRuleList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<Rule>}
+     * @memberof PaginatedRuleList
+     */
+    data?: Array<Rule>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedRuleRatingList
+ */
+export interface PaginatedRuleRatingList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedRuleRatingList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedRuleRatingList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<RuleRating>}
+     * @memberof PaginatedRuleRatingList
+     */
+    data?: Array<RuleRating>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedRuleRatingStatsList
+ */
+export interface PaginatedRuleRatingStatsList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedRuleRatingStatsList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedRuleRatingStatsList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<RuleRatingStats>}
+     * @memberof PaginatedRuleRatingStatsList
+     */
+    data?: Array<RuleRatingStats>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedSubscriptionExcludedAccountList
+ */
+export interface PaginatedSubscriptionExcludedAccountList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedSubscriptionExcludedAccountList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedSubscriptionExcludedAccountList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<SubscriptionExcludedAccount>}
+     * @memberof PaginatedSubscriptionExcludedAccountList
+     */
+    data?: Array<SubscriptionExcludedAccount>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedSystemList
+ */
+export interface PaginatedSystemList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedSystemList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedSystemList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<System>}
+     * @memberof PaginatedSystemList
+     */
+    data?: Array<System>;
+}
+/**
+ *
+ * @export
+ * @interface PaginatedSystemsDetailList
+ */
+export interface PaginatedSystemsDetailList {
+    /**
+     *
+     * @type {PaginatedAckListMeta}
+     * @memberof PaginatedSystemsDetailList
+     */
+    meta?: PaginatedAckListMeta;
+    /**
+     *
+     * @type {PaginatedAckListLinks}
+     * @memberof PaginatedSystemsDetailList
+     */
+    links?: PaginatedAckListLinks;
+    /**
+     *
+     * @type {Array<SystemsDetail>}
+     * @memberof PaginatedSystemsDetailList
+     */
+    data?: Array<SystemsDetail>;
+}
+/**
+ * Create or edit topics.
+ * @export
+ * @interface PatchedTopicEdit
+ */
+export interface PatchedTopicEdit {
+    /**
+     *
+     * @type {string}
+     * @memberof PatchedTopicEdit
+     */
+    name?: string;
+    /**
+     * Rule topic slug
+     * @type {string}
+     * @memberof PatchedTopicEdit
+     */
+    slug?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PatchedTopicEdit
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PatchedTopicEdit
+     */
+    tag?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof PatchedTopicEdit
+     */
+    featured?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof PatchedTopicEdit
+     */
+    enabled?: boolean;
+}
+/**
+ * Serializer specifically for listing all Pathways currently in the system
+ * @export
+ * @interface Pathway
+ */
+export interface Pathway {
+    /**
+     *
+     * @type {string}
+     * @memberof Pathway
+     */
+    slug: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Pathway
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Pathway
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Pathway
+     */
+    component: string;
+    /**
+     *
+     * @type {ResolutionRisk}
+     * @memberof Pathway
+     */
+    resolution_risk: ResolutionRisk;
+    /**
+     *
+     * @type {string}
+     * @memberof Pathway
+     */
+    publish_date: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Pathway
+     */
+    has_playbook: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    impacted_systems_count: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Pathway
+     */
+    reboot_required: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Pathway
+     */
+    has_incident: boolean;
+    /**
+     *
+     * @type {Array<RuleCategory>}
+     * @memberof Pathway
+     */
+    categories: Array<RuleCategory>;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    recommendation_level: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    incident_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    critical_risk_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    high_risk_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    medium_risk_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof Pathway
+     */
+    low_risk_count: number;
+}
+/**
+ * Serializer specifically for handling CREATE and UPDATE views for Pathways
+ * @export
+ * @interface PathwayInput
+ */
+export interface PathwayInput {
+    /**
+     *
+     * @type {string}
+     * @memberof PathwayInput
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PathwayInput
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PathwayInput
+     */
+    component: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PathwayInput
+     */
+    resolution_risk: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PathwayInput
+     */
+    publish_date: string;
+}
+/**
+ * User preferences - separated from account settings.
+ * @export
+ * @interface PreferencesInput
+ */
+export interface PreferencesInput {
+    /**
+     *
+     * @type {boolean}
+     * @memberof PreferencesInput
+     */
+    is_subscribed: boolean;
+}
+/**
+ * The actual rule fields with the report data for a particular system rendered into them, in a flat structure that\'s easier to use.
+ * @export
+ * @interface RenderedReport
+ */
+export interface RenderedReport {
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    more_info?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RenderedReport
+     */
+    resolution: string;
+}
+/**
+ *
+ * @export
+ * @interface Report
+ */
+export interface Report {
+    /**
+     *
+     * @type {Rule}
+     * @memberof Report
+     */
+    rule: Rule;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof Report
+     */
+    details: { [key: string]: any; };
+    /**
+     *
+     * @type {Resolution}
+     * @memberof Report
+     */
+    resolution: Resolution;
+    /**
+     *
+     * @type {string}
+     * @memberof Report
+     */
+    impacted_date: string;
+}
+/**
+ * Report information for export.  Based on CurrentReport with fields from Rule and Host pulled through for convenience.
+ * @export
+ * @interface ReportExport
+ */
+export interface ReportExport {
+    /**
+     *
+     * @type {string}
+     * @memberof ReportExport
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportExport
+     */
+    host_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportExport
+     */
+    reports_url: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ReportExport
+     */
+    report_time: string;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof ReportExport
+     */
+    details: { [key: string]: any; };
+    /**
+     *
+     * @type {string}
+     * @memberof ReportExport
+     */
+    impacted_date: string | null;
+}
+/**
+ *
+ * @export
+ * @interface Resolution
+ */
+export interface Resolution {
+    /**
+     *
+     * @type {number}
+     * @memberof Resolution
+     */
+    system_type: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Resolution
+     */
+    resolution: string;
+    /**
+     *
+     * @type {ResolutionRisk}
+     * @memberof Resolution
+     */
+    resolution_risk: ResolutionRisk;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Resolution
+     */
+    has_playbook: boolean;
+}
+/**
+ *
+ * @export
+ * @interface ResolutionRisk
+ */
+export interface ResolutionRisk {
+    /**
+     *
+     * @type {string}
+     * @memberof ResolutionRisk
+     */
+    name?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ResolutionRisk
+     */
+    risk?: number;
+}
+/**
+ * The standard rule information.  Used for models and relations that don\'t know the account and therefore can\'t know the acks or impacted systems.
+ * @export
+ * @interface Rule
+ */
+export interface Rule {
+    /**
+     * Rule ID from Insights
+     * @type {string}
+     * @memberof Rule
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    updated_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    deleted_at?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    description: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Rule
+     */
+    active?: boolean;
+    /**
+     *
+     * @type {RuleCategory}
+     * @memberof Rule
+     */
+    category: RuleCategory;
+    /**
+     *
+     * @type {RuleImpact}
+     * @memberof Rule
+     */
+    impact: RuleImpact;
+    /**
+     *
+     * @type {number}
+     * @memberof Rule
+     */
+    likelihood?: number;
+    /**
+     * KCS solution number
+     * @type {string}
+     * @memberof Rule
+     */
+    node_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    tags: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Rule
+     */
+    reboot_required?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    publish_date?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Rule
+     */
+    more_info?: string;
+    /**
+     *
+     * @type {Array<Resolution>}
+     * @memberof Rule
+     */
+    resolution_set: Array<Resolution>;
+    /**
+     *
+     * @type {number}
+     * @memberof Rule
+     */
+    total_risk?: number;
+}
+/**
  *
  * @export
  * @interface RuleCategory
@@ -56,6 +1405,690 @@ export interface RuleCategory {
      * @memberof RuleCategory
      */
     name: string;
+}
+/**
+ * Rule information for export.
+ * @export
+ * @interface RuleExport
+ */
+export interface RuleExport {
+    /**
+     * Rule ID from Insights
+     * @type {string}
+     * @memberof RuleExport
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    updated_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    deleted_at: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    description: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleExport
+     */
+    active?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    category: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    impact: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    likelihood?: number;
+    /**
+     * KCS solution number
+     * @type {string}
+     * @memberof RuleExport
+     */
+    node_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    tags: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    playbook_count: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleExport
+     */
+    reboot_required?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    publish_date?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    more_info?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    impacted_systems_count: number;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleExport
+     */
+    rule_status: string;
+    /**
+     *
+     * @type {Array<Resolution>}
+     * @memberof RuleExport
+     */
+    resolution_set: Array<Resolution>;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    total_risk?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    hosts_acked_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleExport
+     */
+    rating: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleExport
+     */
+    reports_shown: boolean;
+}
+/**
+ * Rule information when we know the account, and therefore can calculate the number of impacted systems and the reports_shown/rule_status flags. We have to declare those explicitly here because they\'re not part of the model.
+ * @export
+ * @interface RuleForAccount
+ */
+export interface RuleForAccount {
+    /**
+     * Rule ID from Insights
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    created_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    updated_at: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    deleted_at?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    description: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleForAccount
+     */
+    active?: boolean;
+    /**
+     *
+     * @type {RuleCategory}
+     * @memberof RuleForAccount
+     */
+    category: RuleCategory;
+    /**
+     *
+     * @type {RuleImpact}
+     * @memberof RuleForAccount
+     */
+    impact: RuleImpact;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    likelihood?: number;
+    /**
+     * KCS solution number
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    node_id?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    tags: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    playbook_count: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleForAccount
+     */
+    reboot_required?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    publish_date?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    summary: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    generic: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    reason: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    more_info?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    impacted_systems_count: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleForAccount
+     */
+    reports_shown: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleForAccount
+     */
+    rule_status: string;
+    /**
+     *
+     * @type {Array<Resolution>}
+     * @memberof RuleForAccount
+     */
+    resolution_set: Array<Resolution>;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    total_risk?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    hosts_acked_count: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleForAccount
+     */
+    rating: number;
+    /**
+     *
+     * @type {RulePathway}
+     * @memberof RuleForAccount
+     */
+    pathway?: RulePathway;
+}
+/**
+ *
+ * @export
+ * @interface RuleImpact
+ */
+export interface RuleImpact {
+    /**
+     *
+     * @type {string}
+     * @memberof RuleImpact
+     */
+    name?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleImpact
+     */
+    impact?: number;
+}
+/**
+ *
+ * @export
+ * @interface RulePathway
+ */
+export interface RulePathway {
+    /**
+     *
+     * @type {string}
+     * @memberof RulePathway
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RulePathway
+     */
+    component: string;
+    /**
+     *
+     * @type {ResolutionRisk}
+     * @memberof RulePathway
+     */
+    resolution_risk: ResolutionRisk;
+}
+/**
+ * Rule ratings list the rating (-1, 0 or +1) for one or more rules.  The rule is listed by its Insights Rule ID.
+ * @export
+ * @interface RuleRating
+ */
+export interface RuleRating {
+    /**
+     *
+     * @type {string}
+     * @memberof RuleRating
+     */
+    rule: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleRating
+     */
+    rating: RuleRatingRatingEnum;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum RuleRatingRatingEnum {
+    NUMBER_MINUS_1 = -1,
+    NUMBER_0 = 0,
+    NUMBER_1 = 1
+}
+
+/**
+ * Output of statistics view of rule ratings - rule ID and totals of ratings.
+ * @export
+ * @interface RuleRatingStats
+ */
+export interface RuleRatingStats {
+    /**
+     *
+     * @type {string}
+     * @memberof RuleRatingStats
+     */
+    rule: string;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleRatingStats
+     */
+    total_ratings: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleRatingStats
+     */
+    total_positive: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleRatingStats
+     */
+    total_negative: number;
+}
+/**
+ * List of systems with current reports for each rule.
+ * @export
+ * @interface RuleSystemsExport
+ */
+export interface RuleSystemsExport {
+    /**
+     *
+     * @type {{ [key: string]: Array<string>; }}
+     * @memberof RuleSystemsExport
+     */
+    rules: { [key: string]: Array<string>; };
+}
+/**
+ * Rule usage statistics for rule developers.
+ * @export
+ * @interface RuleUsageStats
+ */
+export interface RuleUsageStats {
+    /**
+     *
+     * @type {string}
+     * @memberof RuleUsageStats
+     */
+    rule_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RuleUsageStats
+     */
+    description: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof RuleUsageStats
+     */
+    active: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleUsageStats
+     */
+    systems_hit: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleUsageStats
+     */
+    accounts_hit: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RuleUsageStats
+     */
+    accounts_acked: number;
+}
+/**
+ * Outputs the description of the settings in a Data-Driven Forms format.
+ * @export
+ * @interface SettingDDF
+ */
+export interface SettingDDF {
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    label?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    title?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    helperText?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SettingDDF
+     */
+    component: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    isRequired: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    initialValue: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SettingDDF
+     */
+    isDisabled: boolean;
+}
+/**
+ * Combining the DDF fields into one \'fields\' object.
+ * @export
+ * @interface SettingsDDF
+ */
+export interface SettingsDDF {
+    /**
+     *
+     * @type {Array<SettingDDF>}
+     * @memberof SettingsDDF
+     */
+    fields: Array<SettingDDF>;
+}
+/**
+ * Advisor rule or report frequency statisics.
+ * @export
+ * @interface Stats
+ */
+export interface Stats {
+    /**
+     *
+     * @type {number}
+     * @memberof Stats
+     */
+    total: number;
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    total_risk: { [key: string]: number; };
+    /**
+     *
+     * @type {{ [key: string]: number; }}
+     * @memberof Stats
+     */
+    category: { [key: string]: number; };
+}
+/**
+ *
+ * @export
+ * @interface SubscriptionExcludedAccount
+ */
+export interface SubscriptionExcludedAccount {
+    /**
+     *
+     * @type {string}
+     * @memberof SubscriptionExcludedAccount
+     */
+    org_id: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SubscriptionExcludedAccount
+     */
+    account?: string;
+}
+/**
+ *
+ * @export
+ * @interface System
+ */
+export interface System {
+    /**
+     *
+     * @type {string}
+     * @memberof System
+     */
+    system_uuid: string;
+    /**
+     *
+     * @type {string}
+     * @memberof System
+     */
+    display_name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof System
+     */
+    last_seen: string;
+    /**
+     *
+     * @type {string}
+     * @memberof System
+     */
+    stale_at: string;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    critical_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    important_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    moderate_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    low_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    incident_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    all_pathway_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof System
+     */
+    pathway_filter_hits: number;
+    /**
+     *
+     * @type {string}
+     * @memberof System
+     */
+    rhel_version: string;
 }
 /**
  * RHN-based system types classified by role and product code.
@@ -82,6 +2115,2652 @@ export interface SystemType {
      */
     product_code: string;
 }
+/**
+ *
+ * @export
+ * @interface SystemsDetail
+ */
+export interface SystemsDetail {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    system_uuid: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    display_name: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    last_seen: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    stale_at: string;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    critical_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    important_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    moderate_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    low_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    incident_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    all_pathway_hits: number;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemsDetail
+     */
+    pathway_filter_hits: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    rhel_version: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemsDetail
+     */
+    impacted_date: string;
+}
+/**
+ * The list of Inventory Host IDs that are (currently) affected by a given rule.
+ * @export
+ * @interface SystemsForRule
+ */
+export interface SystemsForRule {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemsForRule
+     */
+    host_ids: Array<string>;
+}
+/**
+ * Topics group rules by a tag shared by all the rules.
+ * @export
+ * @interface Topic
+ */
+export interface Topic {
+    /**
+     *
+     * @type {string}
+     * @memberof Topic
+     */
+    name: string;
+    /**
+     * Rule topic slug
+     * @type {string}
+     * @memberof Topic
+     */
+    slug: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Topic
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof Topic
+     */
+    tag: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Topic
+     */
+    featured?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Topic
+     */
+    enabled?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof Topic
+     */
+    impacted_systems_count: number;
+}
+/**
+ * Create or edit topics.
+ * @export
+ * @interface TopicEdit
+ */
+export interface TopicEdit {
+    /**
+     *
+     * @type {string}
+     * @memberof TopicEdit
+     */
+    name: string;
+    /**
+     * Rule topic slug
+     * @type {string}
+     * @memberof TopicEdit
+     */
+    slug: string;
+    /**
+     *
+     * @type {string}
+     * @memberof TopicEdit
+     */
+    description: string;
+    /**
+     *
+     * @type {string}
+     * @memberof TopicEdit
+     */
+    tag: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof TopicEdit
+     */
+    featured?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof TopicEdit
+     */
+    enabled?: boolean;
+}
+/**
+ * An approximation of the number of unique hits per day.
+ * @export
+ * @interface Usage
+ */
+export interface Usage {
+    /**
+     *
+     * @type {number}
+     * @memberof Usage
+     */
+    unique_hits: number;
+}
+/**
+ *
+ * @export
+ * @interface WeeklyReportSubscription
+ */
+export interface WeeklyReportSubscription {
+    /**
+     *
+     * @type {boolean}
+     * @memberof WeeklyReportSubscription
+     */
+    is_subscribed: boolean;
+}
+
+/**
+ * AccountApi - axios parameter creator
+ * @export
+ */
+export const AccountApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List details about the number of hosts in this account by org_id.  As well as the total number of hosts, we report on the number of hosts in various states of staleness:   * fresh: hosts that have updated in the last 26 hours   * stale: hosts not updated in the last 26 hours - we display the     results for these hosts but a warning is shown to say they are     not updating   * warn: hosts not updated in the last week - these are not shown     in any queries  This may have other aggregate data added in the future.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountHostsRetrieve: async (orgId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'orgId' is not null or undefined
+            if (orgId === null || orgId === undefined) {
+                throw new RequiredError('orgId','Required parameter orgId was null or undefined when calling accountHostsRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/account/{org_id}/hosts/`
+                .replace(`{${"org_id"}}`, encodeURIComponent(String(orgId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all accounts by org_id we know about (through the host table).  No other information about the accounts is provided in this view.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/account/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List information relating to other accounts.  This allows us to collect data that requires the user to specify an org_id number, such as number of systems currently registered to that org.  param: org_id: Org ID number of a Red Hat customer.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountRetrieve: async (orgId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'orgId' is not null or undefined
+            if (orgId === null || orgId === undefined) {
+                throw new RequiredError('orgId','Required parameter orgId was null or undefined when calling accountRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/account/{org_id}/`
+                .replace(`{${"org_id"}}`, encodeURIComponent(String(orgId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AccountApi - functional programming interface
+ * @export
+ */
+export const AccountApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * List details about the number of hosts in this account by org_id.  As well as the total number of hosts, we report on the number of hosts in various states of staleness:   * fresh: hosts that have updated in the last 26 hours   * stale: hosts not updated in the last 26 hours - we display the     results for these hosts but a warning is shown to say they are     not updating   * warn: hosts not updated in the last week - these are not shown     in any queries  This may have other aggregate data added in the future.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountHostsRetrieve(orgId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrgId>> {
+            const localVarAxiosArgs = await AccountApiAxiosParamCreator(configuration).accountHostsRetrieve(orgId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all accounts by org_id we know about (through the host table).  No other information about the accounts is provided in this view.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedOrgIdList>> {
+            const localVarAxiosArgs = await AccountApiAxiosParamCreator(configuration).accountList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List information relating to other accounts.  This allows us to collect data that requires the user to specify an org_id number, such as number of systems currently registered to that org.  param: org_id: Org ID number of a Red Hat customer.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountRetrieve(orgId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrgId>> {
+            const localVarAxiosArgs = await AccountApiAxiosParamCreator(configuration).accountRetrieve(orgId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AccountApi - factory interface
+ * @export
+ */
+export const AccountApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * List details about the number of hosts in this account by org_id.  As well as the total number of hosts, we report on the number of hosts in various states of staleness:   * fresh: hosts that have updated in the last 26 hours   * stale: hosts not updated in the last 26 hours - we display the     results for these hosts but a warning is shown to say they are     not updating   * warn: hosts not updated in the last week - these are not shown     in any queries  This may have other aggregate data added in the future.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountHostsRetrieve(orgId: string, options?: any): AxiosPromise<OrgId> {
+            return AccountApiFp(configuration).accountHostsRetrieve(orgId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all accounts by org_id we know about (through the host table).  No other information about the accounts is provided in this view.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedOrgIdList> {
+            return AccountApiFp(configuration).accountList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List information relating to other accounts.  This allows us to collect data that requires the user to specify an org_id number, such as number of systems currently registered to that org.  param: org_id: Org ID number of a Red Hat customer.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountRetrieve(orgId: string, options?: any): AxiosPromise<OrgId> {
+            return AccountApiFp(configuration).accountRetrieve(orgId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AccountApi - object-oriented interface
+ * @export
+ * @class AccountApi
+ * @extends {BaseAPI}
+ */
+export class AccountApi extends BaseAPI {
+    /**
+     * List details about the number of hosts in this account by org_id.  As well as the total number of hosts, we report on the number of hosts in various states of staleness:   * fresh: hosts that have updated in the last 26 hours   * stale: hosts not updated in the last 26 hours - we display the     results for these hosts but a warning is shown to say they are     not updating   * warn: hosts not updated in the last week - these are not shown     in any queries  This may have other aggregate data added in the future.
+     * @param {string} orgId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountApi
+     */
+    public accountHostsRetrieve(orgId: string, options?: any) {
+        return AccountApiFp(this.configuration).accountHostsRetrieve(orgId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all accounts by org_id we know about (through the host table).  No other information about the accounts is provided in this view.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountApi
+     */
+    public accountList(limit?: number, offset?: number, options?: any) {
+        return AccountApiFp(this.configuration).accountList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List information relating to other accounts.  This allows us to collect data that requires the user to specify an org_id number, such as number of systems currently registered to that org.  param: org_id: Org ID number of a Red Hat customer.
+     * @param {string} orgId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountApi
+     */
+    public accountRetrieve(orgId: string, options?: any) {
+        return AccountApiFp(this.configuration).accountRetrieve(orgId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * AccountSettingApi - axios parameter creator
+ * @export
+ */
+export const AccountSettingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingCreate: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/account_setting/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingRetrieve: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/account_setting/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - functional programming interface
+ * @export
+ */
+export const AccountSettingApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountSettingCreate(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await AccountSettingApiAxiosParamCreator(configuration).accountSettingCreate(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountSettingRetrieve(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await AccountSettingApiAxiosParamCreator(configuration).accountSettingRetrieve(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AccountSettingApi - factory interface
+ * @export
+ */
+export const AccountSettingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingCreate(options?: any): AxiosPromise<void> {
+            return AccountSettingApiFp(configuration).accountSettingCreate(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountSettingRetrieve(options?: any): AxiosPromise<void> {
+            return AccountSettingApiFp(configuration).accountSettingRetrieve(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AccountSettingApi - object-oriented interface
+ * @export
+ * @class AccountSettingApi
+ * @extends {BaseAPI}
+ */
+export class AccountSettingApi extends BaseAPI {
+    /**
+     * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountSettingApi
+     */
+    public accountSettingCreate(options?: any) {
+        return AccountSettingApiFp(this.configuration).accountSettingCreate(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountSettingApi
+     */
+    public accountSettingRetrieve(options?: any) {
+        return AccountSettingApiFp(this.configuration).accountSettingRetrieve(options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * AckApi - axios parameter creator
+ * @export
+ */
+export const AckApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List acks from all accounts, with org_id.  Has no pagination.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackAllList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/ack/all/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
+         * @param {AckInput} ackInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackCreate: async (ackInput: AckInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ackInput' is not null or undefined
+            if (ackInput === null || ackInput === undefined) {
+                throw new RequiredError('ackInput','Required parameter ackInput was null or undefined when calling ackCreate.');
+            }
+            const localVarPath = `/api/insights/v1/ack/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof ackInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(ackInput !== undefined ? ackInput : {}) : (ackInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackDestroy: async (ruleId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ackDestroy.');
+            }
+            const localVarPath = `/api/insights/v1/ack/{rule_id}/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/ack/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackRetrieve: async (ruleId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ackRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/ack/{rule_id}/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @param {string} ruleId
+         * @param {AckJustification} [ackJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackUpdate: async (ruleId: string, ackJustification?: AckJustification, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ackUpdate.');
+            }
+            const localVarPath = `/api/insights/v1/ack/{rule_id}/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof ackJustification !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(ackJustification !== undefined ? ackJustification : {}) : (ackJustification || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AckApi - functional programming interface
+ * @export
+ */
+export const AckApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * List acks from all accounts, with org_id.  Has no pagination.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackAllList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AllAck>>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackAllList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
+         * @param {AckInput} ackInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackCreate(ackInput: AckInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ack>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackCreate(ackInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackDestroy(ruleId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackDestroy(ruleId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAckList>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackRetrieve(ruleId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ack>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackRetrieve(ruleId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @param {string} ruleId
+         * @param {AckJustification} [ackJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackUpdate(ruleId: string, ackJustification?: AckJustification, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ack>> {
+            const localVarAxiosArgs = await AckApiAxiosParamCreator(configuration).ackUpdate(ruleId, ackJustification, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AckApi - factory interface
+ * @export
+ */
+export const AckApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * List acks from all accounts, with org_id.  Has no pagination.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackAllList(options?: any): AxiosPromise<Array<AllAck>> {
+            return AckApiFp(configuration).ackAllList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
+         * @param {AckInput} ackInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackCreate(ackInput: AckInput, options?: any): AxiosPromise<Ack> {
+            return AckApiFp(configuration).ackCreate(ackInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackDestroy(ruleId: string, options?: any): AxiosPromise<string> {
+            return AckApiFp(configuration).ackDestroy(ruleId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedAckList> {
+            return AckApiFp(configuration).ackList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackRetrieve(ruleId: string, options?: any): AxiosPromise<Ack> {
+            return AckApiFp(configuration).ackRetrieve(ruleId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+         * @param {string} ruleId
+         * @param {AckJustification} [ackJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackUpdate(ruleId: string, ackJustification?: AckJustification, options?: any): AxiosPromise<Ack> {
+            return AckApiFp(configuration).ackUpdate(ruleId, ackJustification, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AckApi - object-oriented interface
+ * @export
+ * @class AckApi
+ * @extends {BaseAPI}
+ */
+export class AckApi extends BaseAPI {
+    /**
+     * List acks from all accounts, with org_id.  Has no pagination.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackAllList(options?: any) {
+        return AckApiFp(this.configuration).ackAllList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
+     * @param {AckInput} ackInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackCreate(ackInput: AckInput, options?: any) {
+        return AckApiFp(this.configuration).ackCreate(ackInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+     * @param {string} ruleId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackDestroy(ruleId: string, options?: any) {
+        return AckApiFp(this.configuration).ackDestroy(ruleId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackList(limit?: number, offset?: number, options?: any) {
+        return AckApiFp(this.configuration).ackList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+     * @param {string} ruleId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackRetrieve(ruleId: string, options?: any) {
+        return AckApiFp(this.configuration).ackRetrieve(ruleId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+     * @param {string} ruleId
+     * @param {AckJustification} [ackJustification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckApi
+     */
+    public ackUpdate(ruleId: string, ackJustification?: AckJustification, options?: any) {
+        return AckApiFp(this.configuration).ackUpdate(ruleId, ackJustification, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * AckcountApi - axios parameter creator
+ * @export
+ */
+export const AckcountApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackcountList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/ackcount/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get the ack count for the given rule_id  Returns the rule_id and its ack count
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackcountRetrieve: async (ruleId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ackcountRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/ackcount/{rule_id}/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AckcountApi - functional programming interface
+ * @export
+ */
+export const AckcountApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackcountList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AckCount>>> {
+            const localVarAxiosArgs = await AckcountApiAxiosParamCreator(configuration).ackcountList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get the ack count for the given rule_id  Returns the rule_id and its ack count
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ackcountRetrieve(ruleId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AckCount>> {
+            const localVarAxiosArgs = await AckcountApiAxiosParamCreator(configuration).ackcountRetrieve(ruleId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AckcountApi - factory interface
+ * @export
+ */
+export const AckcountApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackcountList(options?: any): AxiosPromise<Array<AckCount>> {
+            return AckcountApiFp(configuration).ackcountList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get the ack count for the given rule_id  Returns the rule_id and its ack count
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ackcountRetrieve(ruleId: string, options?: any): AxiosPromise<AckCount> {
+            return AckcountApiFp(configuration).ackcountRetrieve(ruleId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AckcountApi - object-oriented interface
+ * @export
+ * @class AckcountApi
+ * @extends {BaseAPI}
+ */
+export class AckcountApi extends BaseAPI {
+    /**
+     * Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckcountApi
+     */
+    public ackcountList(options?: any) {
+        return AckcountApiFp(this.configuration).ackcountList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get the ack count for the given rule_id  Returns the rule_id and its ack count
+     * @param {string} ruleId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AckcountApi
+     */
+    public ackcountRetrieve(ruleId: string, options?: any) {
+        return AckcountApiFp(this.configuration).ackcountRetrieve(ruleId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * AutosubexclusionApi - axios parameter creator
+ * @export
+ */
+export const AutosubexclusionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
+         * @param {SubscriptionExcludedAccount} subscriptionExcludedAccount
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionCreate: async (subscriptionExcludedAccount: SubscriptionExcludedAccount, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'subscriptionExcludedAccount' is not null or undefined
+            if (subscriptionExcludedAccount === null || subscriptionExcludedAccount === undefined) {
+                throw new RequiredError('subscriptionExcludedAccount','Required parameter subscriptionExcludedAccount was null or undefined when calling autosubexclusionCreate.');
+            }
+            const localVarPath = `/api/insights/v1/autosubexclusion/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof subscriptionExcludedAccount !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(subscriptionExcludedAccount !== undefined ? subscriptionExcludedAccount : {}) : (subscriptionExcludedAccount || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionDestroy: async (orgId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'orgId' is not null or undefined
+            if (orgId === null || orgId === undefined) {
+                throw new RequiredError('orgId','Required parameter orgId was null or undefined when calling autosubexclusionDestroy.');
+            }
+            const localVarPath = `/api/insights/v1/autosubexclusion/{org_id}/`
+                .replace(`{${"org_id"}}`, encodeURIComponent(String(orgId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/autosubexclusion/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionRetrieve: async (orgId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'orgId' is not null or undefined
+            if (orgId === null || orgId === undefined) {
+                throw new RequiredError('orgId','Required parameter orgId was null or undefined when calling autosubexclusionRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/autosubexclusion/{org_id}/`
+                .replace(`{${"org_id"}}`, encodeURIComponent(String(orgId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AutosubexclusionApi - functional programming interface
+ * @export
+ */
+export const AutosubexclusionApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
+         * @param {SubscriptionExcludedAccount} subscriptionExcludedAccount
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async autosubexclusionCreate(subscriptionExcludedAccount: SubscriptionExcludedAccount, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionExcludedAccount>> {
+            const localVarAxiosArgs = await AutosubexclusionApiAxiosParamCreator(configuration).autosubexclusionCreate(subscriptionExcludedAccount, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async autosubexclusionDestroy(orgId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await AutosubexclusionApiAxiosParamCreator(configuration).autosubexclusionDestroy(orgId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async autosubexclusionList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSubscriptionExcludedAccountList>> {
+            const localVarAxiosArgs = await AutosubexclusionApiAxiosParamCreator(configuration).autosubexclusionList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async autosubexclusionRetrieve(orgId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SubscriptionExcludedAccount>> {
+            const localVarAxiosArgs = await AutosubexclusionApiAxiosParamCreator(configuration).autosubexclusionRetrieve(orgId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * AutosubexclusionApi - factory interface
+ * @export
+ */
+export const AutosubexclusionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
+         * @param {SubscriptionExcludedAccount} subscriptionExcludedAccount
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionCreate(subscriptionExcludedAccount: SubscriptionExcludedAccount, options?: any): AxiosPromise<SubscriptionExcludedAccount> {
+            return AutosubexclusionApiFp(configuration).autosubexclusionCreate(subscriptionExcludedAccount, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionDestroy(orgId: string, options?: any): AxiosPromise<string> {
+            return AutosubexclusionApiFp(configuration).autosubexclusionDestroy(orgId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedSubscriptionExcludedAccountList> {
+            return AutosubexclusionApiFp(configuration).autosubexclusionList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
+         * @param {string} orgId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        autosubexclusionRetrieve(orgId: string, options?: any): AxiosPromise<SubscriptionExcludedAccount> {
+            return AutosubexclusionApiFp(configuration).autosubexclusionRetrieve(orgId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AutosubexclusionApi - object-oriented interface
+ * @export
+ * @class AutosubexclusionApi
+ * @extends {BaseAPI}
+ */
+export class AutosubexclusionApi extends BaseAPI {
+    /**
+     * Create a new subscription exclusion for an account.  This creates a new subscription exclusion for an account. This should contain an org_id and account. Only org_id is required. Account is optional.
+     * @param {SubscriptionExcludedAccount} subscriptionExcludedAccount
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AutosubexclusionApi
+     */
+    public autosubexclusionCreate(subscriptionExcludedAccount: SubscriptionExcludedAccount, options?: any) {
+        return AutosubexclusionApiFp(this.configuration).autosubexclusionCreate(subscriptionExcludedAccount, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.
+     * @param {string} orgId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AutosubexclusionApi
+     */
+    public autosubexclusionDestroy(orgId: string, options?: any) {
+        return AutosubexclusionApiFp(this.configuration).autosubexclusionDestroy(orgId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns all subscription exclusions for accounts  This returns a list of all subscription exclusions. This contains exclusions and their account and org_id. These are all accounts that are excluded from the autosub subscription path for weekly report subscriptions.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AutosubexclusionApi
+     */
+    public autosubexclusionList(limit?: number, offset?: number, options?: any) {
+        return AutosubexclusionApiFp(this.configuration).autosubexclusionList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.
+     * @param {string} orgId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AutosubexclusionApi
+     */
+    public autosubexclusionRetrieve(orgId: string, options?: any) {
+        return AutosubexclusionApiFp(this.configuration).autosubexclusionRetrieve(orgId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * ExportApi - axios parameter creator
+ * @export
+ */
+export const ExportApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {string} [uuid] Display a system with this uuid
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportHitsList: async (category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/export/hits/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hasPlaybook !== undefined) {
+                localVarQueryParameter['has_playbook'] = hasPlaybook;
+            }
+
+            if (impact) {
+                localVarQueryParameter['impact'] = impact;
+            }
+
+            if (incident !== undefined) {
+                localVarQueryParameter['incident'] = incident;
+            }
+
+            if (likelihood) {
+                localVarQueryParameter['likelihood'] = likelihood;
+            }
+
+            if (reboot !== undefined) {
+                localVarQueryParameter['reboot'] = reboot;
+            }
+
+            if (resRisk) {
+                localVarQueryParameter['res_risk'] = resRisk;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+            if (totalRisk) {
+                localVarQueryParameter['total_risk'] = totalRisk;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportReportsList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/export/reports/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportRulesList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/export/rules/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [ruleId] Display systems with this text in their rule_id
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemsList: async (displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/export/systems/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (ruleId !== undefined) {
+                localVarQueryParameter['rule_id'] = ruleId;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ExportApi - functional programming interface
+ * @export
+ */
+export const ExportApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {string} [uuid] Display a system with this uuid
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ExportHits>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportReportsList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportExport>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportReportsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportRulesList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleExport>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportRulesList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [ruleId] Display systems with this text in their rule_id
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<System>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * ExportApi - factory interface
+ * @export
+ */
+export const ExportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {string} [uuid] Display a system with this uuid
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any): AxiosPromise<Array<ExportHits>> {
+            return ExportApiFp(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportReportsList(options?: any): AxiosPromise<Array<ReportExport>> {
+            return ExportApiFp(configuration).exportReportsList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportRulesList(options?: any): AxiosPromise<Array<RuleExport>> {
+            return ExportApiFp(configuration).exportRulesList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [ruleId] Display systems with this text in their rule_id
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any): AxiosPromise<Array<System>> {
+            return ExportApiFp(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportApi - object-oriented interface
+ * @export
+ * @class ExportApi
+ * @extends {BaseAPI}
+ */
+export class ExportApi extends BaseAPI {
+    /**
+     * Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
+     * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {'csv' | 'json'} [format]
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [hasPlaybook] Display rules that have a playbook
+     * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+     * @param {boolean} [incident] Display only rules that cause an incident
+     * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+     * @param {boolean} [reboot] Display rules that require a reboot to fix
+     * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Display rules with this text in their text fields
+     * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {string} [uuid] Display a system with this uuid
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any) {
+        return ExportApiFp(this.configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportReportsList(options?: any) {
+        return ExportApiFp(this.configuration).exportReportsList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportRulesList(options?: any) {
+        return ExportApiFp(this.configuration).exportRulesList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {'csv' | 'json'} [format]
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {string} [ruleId] Display systems with this text in their rule_id
+     * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportApi
+     */
+    public exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any) {
+        return ExportApiFp(this.configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * HostackApi - axios parameter creator
+ * @export
+ */
+export const HostackApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
+         * @param {HostAckInput} hostAckInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackCreate: async (hostAckInput: HostAckInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'hostAckInput' is not null or undefined
+            if (hostAckInput === null || hostAckInput === undefined) {
+                throw new RequiredError('hostAckInput','Required parameter hostAckInput was null or undefined when calling hostackCreate.');
+            }
+            const localVarPath = `/api/insights/v1/hostack/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof hostAckInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAckInput !== undefined ? hostAckInput : {}) : (hostAckInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackDestroy: async (id: number, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling hostackDestroy.');
+            }
+            const localVarPath = `/api/insights/v1/hostack/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackList: async (filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/hostack/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (ruleId) {
+                localVarQueryParameter['rule_id'] = ruleId;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackRetrieve: async (id: number, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling hostackRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/hostack/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {HostAckJustification} [hostAckJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackUpdate: async (id: number, hostAckJustification?: HostAckJustification, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling hostackUpdate.');
+            }
+            const localVarPath = `/api/insights/v1/hostack/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof hostAckJustification !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(hostAckJustification !== undefined ? hostAckJustification : {}) : (hostAckJustification || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * HostackApi - functional programming interface
+ * @export
+ */
+export const HostackApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
+         * @param {HostAckInput} hostAckInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async hostackCreate(hostAckInput: HostAckInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck>> {
+            const localVarAxiosArgs = await HostackApiAxiosParamCreator(configuration).hostackCreate(hostAckInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async hostackDestroy(id: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await HostackApiAxiosParamCreator(configuration).hostackDestroy(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async hostackList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedHostAckList>> {
+            const localVarAxiosArgs = await HostackApiAxiosParamCreator(configuration).hostackList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, ruleId, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async hostackRetrieve(id: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAck>> {
+            const localVarAxiosArgs = await HostackApiAxiosParamCreator(configuration).hostackRetrieve(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {HostAckJustification} [hostAckJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async hostackUpdate(id: number, hostAckJustification?: HostAckJustification, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HostAckJustification>> {
+            const localVarAxiosArgs = await HostackApiAxiosParamCreator(configuration).hostackUpdate(id, hostAckJustification, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * HostackApi - factory interface
+ * @export
+ */
+export const HostackApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
+         * @param {HostAckInput} hostAckInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackCreate(hostAckInput: HostAckInput, options?: any): AxiosPromise<HostAck> {
+            return HostackApiFp(configuration).hostackCreate(hostAckInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackDestroy(id: number, options?: any): AxiosPromise<string> {
+            return HostackApiFp(configuration).hostackDestroy(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any): AxiosPromise<PaginatedHostAckList> {
+            return HostackApiFp(configuration).hostackList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, ruleId, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackRetrieve(id: number, options?: any): AxiosPromise<HostAck> {
+            return HostackApiFp(configuration).hostackRetrieve(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
+         * @param {number} id A unique integer value identifying this host ack.
+         * @param {HostAckJustification} [hostAckJustification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        hostackUpdate(id: number, hostAckJustification?: HostAckJustification, options?: any): AxiosPromise<HostAckJustification> {
+            return HostackApiFp(configuration).hostackUpdate(id, hostAckJustification, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * HostackApi - object-oriented interface
+ * @export
+ * @class HostackApi
+ * @extends {BaseAPI}
+ */
+export class HostackApi extends BaseAPI {
+    /**
+     * Add an acknowledgement for a rule, by rule ID, system, and account.  Return the new hostack.  If there\'s already an acknowledgement of this rule by this account for a system, then return that.  This does not take an \'id\' number.
+     * @param {HostAckInput} hostAckInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostackApi
+     */
+    public hostackCreate(hostAckInput: HostAckInput, options?: any) {
+        return HostackApiFp(this.configuration).hostackCreate(hostAckInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.
+     * @param {number} id A unique integer value identifying this host ack.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostackApi
+     */
+    public hostackDestroy(id: number, options?: any) {
+        return HostackApiFp(this.configuration).hostackDestroy(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List host acks from this account for a system where the rule is active.  Hostacks are retrieved, edited and deleted by the \'id\' field.
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [ruleId] Display host acknowledgement of this/these rules
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostackApi
+     */
+    public hostackList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, ruleId?: Array<string>, tags?: Array<string>, options?: any) {
+        return HostackApiFp(this.configuration).hostackList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, ruleId, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * HostAcks acknowledge (and therefore hide) a rule from view in an account for a specific system.  This view handles listing, retrieving, creating and deleting hostacks.
+     * @param {number} id A unique integer value identifying this host ack.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostackApi
+     */
+    public hostackRetrieve(id: number, options?: any) {
+        return HostackApiFp(this.configuration).hostackRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.
+     * @param {number} id A unique integer value identifying this host ack.
+     * @param {HostAckJustification} [hostAckJustification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HostackApi
+     */
+    public hostackUpdate(id: number, hostAckJustification?: HostAckJustification, options?: any) {
+        return HostackApiFp(this.configuration).hostackUpdate(id, hostAckJustification, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
 
 /**
  * KcsApi - axios parameter creator
@@ -256,6 +4935,2322 @@ export class KcsApi extends BaseAPI {
 
 
 /**
+ * PathwayApi - axios parameter creator
+ * @export
+ */
+export const PathwayApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayCreate: async (pathwayInput: PathwayInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'pathwayInput' is not null or undefined
+            if (pathwayInput === null || pathwayInput === undefined) {
+                throw new RequiredError('pathwayInput','Required parameter pathwayInput was null or undefined when calling pathwayCreate.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof pathwayInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(pathwayInput !== undefined ? pathwayInput : {}) : (pathwayInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayDestroy: async (slug: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayDestroy.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/pathway/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
+         * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayReportsRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayReportsRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/reports/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hostId) {
+                localVarQueryParameter['host_id'] = hostId;
+            }
+
+            if (ruleId) {
+                localVarQueryParameter['rule_id'] = ruleId;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayRulesList: async (slug: string, category?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, text?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayRulesList.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/rules/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwaySystemsList: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwaySystemsList.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/systems/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @param {string} slug
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayUpdate: async (slug: string, pathwayInput: PathwayInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayUpdate.');
+            }
+            // verify required parameter 'pathwayInput' is not null or undefined
+            if (pathwayInput === null || pathwayInput === undefined) {
+                throw new RequiredError('pathwayInput','Required parameter pathwayInput was null or undefined when calling pathwayUpdate.');
+            }
+            const localVarPath = `/api/insights/v1/pathway/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof pathwayInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(pathwayInput !== undefined ? pathwayInput : {}) : (pathwayInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PathwayApi - functional programming interface
+ * @export
+ */
+export const PathwayApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayCreate(pathwayInput: PathwayInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PathwayInput>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayCreate(pathwayInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayDestroy(slug: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayDestroy(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPathwayList>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
+         * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleSystemsExport>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pathway>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayRulesList(slug: string, category?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleList>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayRulesList(slug, category, limit, offset, text, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @param {string} slug
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async pathwayUpdate(slug: string, pathwayInput: PathwayInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PathwayInput>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayUpdate(slug, pathwayInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * PathwayApi - factory interface
+ * @export
+ */
+export const PathwayApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayCreate(pathwayInput: PathwayInput, options?: any): AxiosPromise<PathwayInput> {
+            return PathwayApiFp(configuration).pathwayCreate(pathwayInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayDestroy(slug: string, options?: any): AxiosPromise<string> {
+            return PathwayApiFp(configuration).pathwayDestroy(slug, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): AxiosPromise<PaginatedPathwayList> {
+            return PathwayApiFp(configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
+         * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any): AxiosPromise<RuleSystemsExport> {
+            return PathwayApiFp(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): AxiosPromise<Pathway> {
+            return PathwayApiFp(configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayRulesList(slug: string, category?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, text?: string, options?: any): AxiosPromise<PaginatedRuleList> {
+            return PathwayApiFp(configuration).pathwayRulesList(slug, category, limit, offset, text, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @param {string} slug
+         * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): AxiosPromise<PaginatedSystemList> {
+            return PathwayApiFp(configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @param {string} slug
+         * @param {PathwayInput} pathwayInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        pathwayUpdate(slug: string, pathwayInput: PathwayInput, options?: any): AxiosPromise<PathwayInput> {
+            return PathwayApiFp(configuration).pathwayUpdate(slug, pathwayInput, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PathwayApi - object-oriented interface
+ * @export
+ * @class PathwayApi
+ * @extends {BaseAPI}
+ */
+export class PathwayApi extends BaseAPI {
+    /**
+     * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+     * @param {PathwayInput} pathwayInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayCreate(pathwayInput: PathwayInput, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayCreate(pathwayInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+     * @param {string} slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayDestroy(slug: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayDestroy(slug, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+     * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+     * @param {string} slug
+     * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
+     * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
+     * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+     * @param {string} slug
+     * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+     * @param {string} slug
+     * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayRulesList(slug: string, category?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayRulesList(slug, category, limit, offset, text, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+     * @param {string} slug
+     * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+     * @param {string} slug
+     * @param {PathwayInput} pathwayInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PathwayApi
+     */
+    public pathwayUpdate(slug: string, pathwayInput: PathwayInput, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayUpdate(slug, pathwayInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * RatingApi - axios parameter creator
+ * @export
+ */
+export const RatingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show all ratings.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingAllRatingsList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/rating/all_ratings/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingCreate: async (ruleRating: RuleRating, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleRating' is not null or undefined
+            if (ruleRating === null || ruleRating === undefined) {
+                throw new RequiredError('ruleRating','Required parameter ruleRating was null or undefined when calling ratingCreate.');
+            }
+            const localVarPath = `/api/insights/v1/rating/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof ruleRating !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(ruleRating !== undefined ? ruleRating : {}) : (ruleRating || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all rules rated by the current user  Only the current user\'s ratings are listed here.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/rating/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
+         * @param {string} rule
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingRetrieve: async (rule: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'rule' is not null or undefined
+            if (rule === null || rule === undefined) {
+                throw new RequiredError('rule','Required parameter rule was null or undefined when calling ratingRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/rating/{rule}/`
+                .replace(`{${"rule"}}`, encodeURIComponent(String(rule)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingStatsList: async (limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/rating/stats/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RatingApi - functional programming interface
+ * @export
+ */
+export const RatingApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Show all ratings.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ratingAllRatingsList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedAllRuleRatingsList>> {
+            const localVarAxiosArgs = await RatingApiAxiosParamCreator(configuration).ratingAllRatingsList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ratingCreate(ruleRating: RuleRating, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleRating>> {
+            const localVarAxiosArgs = await RatingApiAxiosParamCreator(configuration).ratingCreate(ruleRating, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all rules rated by the current user  Only the current user\'s ratings are listed here.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ratingList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleRatingList>> {
+            const localVarAxiosArgs = await RatingApiAxiosParamCreator(configuration).ratingList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
+         * @param {string} rule
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ratingRetrieve(rule: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleRating>> {
+            const localVarAxiosArgs = await RatingApiAxiosParamCreator(configuration).ratingRetrieve(rule, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ratingStatsList(limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleRatingStatsList>> {
+            const localVarAxiosArgs = await RatingApiAxiosParamCreator(configuration).ratingStatsList(limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * RatingApi - factory interface
+ * @export
+ */
+export const RatingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Show all ratings.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingAllRatingsList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedAllRuleRatingsList> {
+            return RatingApiFp(configuration).ratingAllRatingsList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+         * @param {RuleRating} ruleRating
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingCreate(ruleRating: RuleRating, options?: any): AxiosPromise<RuleRating> {
+            return RatingApiFp(configuration).ratingCreate(ruleRating, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all rules rated by the current user  Only the current user\'s ratings are listed here.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedRuleRatingList> {
+            return RatingApiFp(configuration).ratingList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve the ratings for a single rule, by Insights Rule ID
+         * @summary Retrieve the ratings for a single rule
+         * @param {string} rule
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingRetrieve(rule: string, options?: any): AxiosPromise<RuleRating> {
+            return RatingApiFp(configuration).ratingRetrieve(rule, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ratingStatsList(limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedRuleRatingStatsList> {
+            return RatingApiFp(configuration).ratingStatsList(limit, offset, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * RatingApi - object-oriented interface
+ * @export
+ * @class RatingApi
+ * @extends {BaseAPI}
+ */
+export class RatingApi extends BaseAPI {
+    /**
+     * Show all ratings.  Available only to internal users.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingAllRatingsList(limit?: number, offset?: number, options?: any) {
+        return RatingApiFp(this.configuration).ratingAllRatingsList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+     * @param {RuleRating} ruleRating
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingCreate(ruleRating: RuleRating, options?: any) {
+        return RatingApiFp(this.configuration).ratingCreate(ruleRating, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all rules rated by the current user  Only the current user\'s ratings are listed here.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingList(limit?: number, offset?: number, options?: any) {
+        return RatingApiFp(this.configuration).ratingList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve the ratings for a single rule, by Insights Rule ID
+     * @summary Retrieve the ratings for a single rule
+     * @param {string} rule
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingRetrieve(rule: string, options?: any) {
+        return RatingApiFp(this.configuration).ratingRetrieve(rule, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RatingApi
+     */
+    public ratingStatsList(limit?: number, offset?: number, options?: any) {
+        return RatingApiFp(this.configuration).ratingStatsList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * RuleApi - axios parameter creator
+ * @export
+ */
+export const RuleApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleAckHostsCreate: async (ruleId: string, multiHostAck: MultiHostAck, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleAckHostsCreate.');
+            }
+            // verify required parameter 'multiHostAck' is not null or undefined
+            if (multiHostAck === null || multiHostAck === undefined) {
+                throw new RequiredError('multiHostAck','Required parameter multiHostAck was null or undefined when calling ruleAckHostsCreate.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/ack_hosts/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof multiHostAck !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(multiHostAck !== undefined ? multiHostAck : {}) : (multiHostAck || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
+         * @param {string} ruleId
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleJustificationsList: async (ruleId: string, limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleJustificationsList.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/justifications/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [impacting] Display only rules that are impacting systems currently
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display rules of this Pathway
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {boolean} [reportsShown] Display rules where reports are shown or not
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {'all' | 'disabled' | 'enabled' | 'rhdisabled'} [ruleStatus] Display rules which are enabled, disabled (acked) by user, or disabled (acked) by Red Hat
+         * @param {Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {string} [topic] Display rules in this topic (slug)
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/rule/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hasPlaybook !== undefined) {
+                localVarQueryParameter['has_playbook'] = hasPlaybook;
+            }
+
+            if (hasTag) {
+                localVarQueryParameter['has_tag'] = hasTag;
+            }
+
+            if (impact) {
+                localVarQueryParameter['impact'] = impact;
+            }
+
+            if (impacting !== undefined) {
+                localVarQueryParameter['impacting'] = impacting;
+            }
+
+            if (incident !== undefined) {
+                localVarQueryParameter['incident'] = incident;
+            }
+
+            if (likelihood) {
+                localVarQueryParameter['likelihood'] = likelihood;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (pathway !== undefined) {
+                localVarQueryParameter['pathway'] = pathway;
+            }
+
+            if (reboot !== undefined) {
+                localVarQueryParameter['reboot'] = reboot;
+            }
+
+            if (reportsShown !== undefined) {
+                localVarQueryParameter['reports_shown'] = reportsShown;
+            }
+
+            if (resRisk) {
+                localVarQueryParameter['res_risk'] = resRisk;
+            }
+
+            if (ruleStatus !== undefined) {
+                localVarQueryParameter['rule_status'] = ruleStatus;
+            }
+
+            if (sort) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+            if (topic !== undefined) {
+                localVarQueryParameter['topic'] = topic;
+            }
+
+            if (totalRisk) {
+                localVarQueryParameter['total_risk'] = totalRisk;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleRetrieve: async (ruleId: string, groups?: Array<string>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleStatsRetrieve: async (ruleId: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleStatsRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/stats/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleSystemsDetailList: async (ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsDetailList.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/systems_detail/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (rhelVersion) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
+         * @param {string} ruleId
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleSystemsRetrieve: async (ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/systems/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (format !== undefined) {
+                localVarQueryParameter['format'] = format;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (name !== undefined) {
+                localVarQueryParameter['name'] = name;
+            }
+
+            if (rhelVersion) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
+            if (sort) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleUnackHostsCreate: async (ruleId: string, multiHostUnAck: MultiHostUnAck, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'ruleId' is not null or undefined
+            if (ruleId === null || ruleId === undefined) {
+                throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleUnackHostsCreate.');
+            }
+            // verify required parameter 'multiHostUnAck' is not null or undefined
+            if (multiHostUnAck === null || multiHostUnAck === undefined) {
+                throw new RequiredError('multiHostUnAck','Required parameter multiHostUnAck was null or undefined when calling ruleUnackHostsCreate.');
+            }
+            const localVarPath = `/api/insights/v1/rule/{rule_id}/unack_hosts/`
+                .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof multiHostUnAck !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(multiHostUnAck !== undefined ? multiHostUnAck : {}) : (multiHostUnAck || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RuleApi - functional programming interface
+ * @export
+ */
+export const RuleApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleAckHostsCreate(ruleId: string, multiHostAck: MultiHostAck, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MultiAckResponse>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleAckHostsCreate(ruleId, multiHostAck, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
+         * @param {string} ruleId
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleJustificationsList(ruleId: string, limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedJustificationCountList>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleJustificationsList(ruleId, limit, offset, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [impacting] Display only rules that are impacting systems currently
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display rules of this Pathway
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {boolean} [reportsShown] Display rules where reports are shown or not
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {'all' | 'disabled' | 'enabled' | 'rhdisabled'} [ruleStatus] Display rules which are enabled, disabled (acked) by user, or disabled (acked) by Red Hat
+         * @param {Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {string} [topic] Display rules in this topic (slug)
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleForAccountList>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleRetrieve(ruleId: string, groups?: Array<string>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleForAccount>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleRetrieve(ruleId, groups, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleStatsRetrieve(ruleId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleUsageStats>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleStatsRetrieve(ruleId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemsDetailList>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
+         * @param {string} ruleId
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleUnackHostsCreate(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MultiAckResponse>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleUnackHostsCreate(ruleId, multiHostUnAck, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * RuleApi - factory interface
+ * @export
+ */
+export const RuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostAck} multiHostAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleAckHostsCreate(ruleId: string, multiHostAck: MultiHostAck, options?: any): AxiosPromise<MultiAckResponse> {
+            return RuleApiFp(configuration).ruleAckHostsCreate(ruleId, multiHostAck, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
+         * @param {string} ruleId
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleJustificationsList(ruleId: string, limit?: number, offset?: number, options?: any): AxiosPromise<PaginatedJustificationCountList> {
+            return RuleApiFp(configuration).ruleJustificationsList(ruleId, limit, offset, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [impacting] Display only rules that are impacting systems currently
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display rules of this Pathway
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {boolean} [reportsShown] Display rules where reports are shown or not
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {'all' | 'disabled' | 'enabled' | 'rhdisabled'} [ruleStatus] Display rules which are enabled, disabled (acked) by user, or disabled (acked) by Red Hat
+         * @param {Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {string} [topic] Display rules in this topic (slug)
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): AxiosPromise<PaginatedRuleForAccountList> {
+            return RuleApiFp(configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleRetrieve(ruleId: string, groups?: Array<string>, tags?: Array<string>, options?: any): AxiosPromise<RuleForAccount> {
+            return RuleApiFp(configuration).ruleRetrieve(ruleId, groups, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
+         * @param {string} ruleId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleStatsRetrieve(ruleId: string, options?: any): AxiosPromise<RuleUsageStats> {
+            return RuleApiFp(configuration).ruleStatsRetrieve(ruleId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
+         * @param {string} ruleId
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {number} [limit] Number of results to return per page.
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemsDetailList> {
+            return RuleApiFp(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
+         * @param {string} ruleId
+         * @param {'csv' | 'json'} [format]
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {string} [name] Search for systems that include this in their display name
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
+            return RuleApiFp(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+         * @param {string} ruleId
+         * @param {MultiHostUnAck} multiHostUnAck
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleUnackHostsCreate(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any): AxiosPromise<MultiAckResponse> {
+            return RuleApiFp(configuration).ruleUnackHostsCreate(ruleId, multiHostUnAck, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * RuleApi - object-oriented interface
+ * @export
+ * @class RuleApi
+ * @extends {BaseAPI}
+ */
+export class RuleApi extends BaseAPI {
+    /**
+     * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+     * @param {string} ruleId
+     * @param {MultiHostAck} multiHostAck
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleAckHostsCreate(ruleId: string, multiHostAck: MultiHostAck, options?: any) {
+        return RuleApiFp(this.configuration).ruleAckHostsCreate(ruleId, multiHostAck, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
+     * @param {string} ruleId
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleJustificationsList(ruleId: string, limit?: number, offset?: number, options?: any) {
+        return RuleApiFp(this.configuration).ruleJustificationsList(ruleId, limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+     * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [hasPlaybook] Display rules that have a playbook
+     * @param {Array<string>} [hasTag] Display rules that have (one or more) tags
+     * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+     * @param {boolean} [impacting] Display only rules that are impacting systems currently
+     * @param {boolean} [incident] Display only rules that cause an incident
+     * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {string} [pathway] Display rules of this Pathway
+     * @param {boolean} [reboot] Display rules that require a reboot to fix
+     * @param {boolean} [reportsShown] Display rules where reports are shown or not
+     * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+     * @param {'all' | 'disabled' | 'enabled' | 'rhdisabled'} [ruleStatus] Display rules which are enabled, disabled (acked) by user, or disabled (acked) by Red Hat
+     * @param {Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>} [sort] Order by this field
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Display rules with this text in their text fields
+     * @param {string} [topic] Display rules in this topic (slug)
+     * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
+        return RuleApiFp(this.configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+     * @param {string} ruleId
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleRetrieve(ruleId: string, groups?: Array<string>, tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleRetrieve(ruleId, groups, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
+     * @param {string} ruleId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleStatsRetrieve(ruleId: string, options?: any) {
+        return RuleApiFp(this.configuration).ruleStatsRetrieve(ruleId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
+     * @param {string} ruleId
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {number} [limit] Number of results to return per page.
+     * @param {string} [name] Search for systems that include this in their display name
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
+     * @param {string} ruleId
+     * @param {'csv' | 'json'} [format]
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {string} [name] Search for systems that include this in their display name
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+     * @param {string} ruleId
+     * @param {MultiHostUnAck} multiHostUnAck
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public ruleUnackHostsCreate(ruleId: string, multiHostUnAck: MultiHostUnAck, options?: any) {
+        return RuleApiFp(this.configuration).ruleUnackHostsCreate(ruleId, multiHostUnAck, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
  * RulecategoryApi - axios parameter creator
  * @export
  */
@@ -414,6 +7409,610 @@ export class RulecategoryApi extends BaseAPI {
      */
     public rulecategoryRetrieve(id: number, options?: any) {
         return RulecategoryApiFp(this.configuration).rulecategoryRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * SettingsApi - axios parameter creator
+ * @export
+ */
+export const SettingsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/settings/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - functional programming interface
+ * @export
+ */
+export const SettingsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async settingsList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>>> {
+            const localVarAxiosArgs = await SettingsApiAxiosParamCreator(configuration).settingsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SettingsApi - factory interface
+ * @export
+ */
+export const SettingsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        settingsList(options?: any): AxiosPromise<Array<SettingsDDF>> {
+            return SettingsApiFp(configuration).settingsList(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * SettingsApi - object-oriented interface
+ * @export
+ * @class SettingsApi
+ * @extends {BaseAPI}
+ */
+export class SettingsApi extends BaseAPI {
+    /**
+     * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SettingsApi
+     */
+    public settingsList(options?: any) {
+        return SettingsApiFp(this.configuration).settingsList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * StatsApi - axios parameter creator
+ * @export
+ */
+export const StatsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Provide a simple list of URLs contained here.  A list of statistics views.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/stats/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsOverviewRetrieve: async (tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/stats/overview/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show statistics of reports impacting across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsReportsRetrieve: async (tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/stats/reports/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show statistics of rule usage across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsRulesRetrieve: async (tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/stats/rules/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsSystemsRetrieve: async (tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/stats/systems/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * StatsApi - functional programming interface
+ * @export
+ */
+export const StatsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Provide a simple list of URLs contained here.  A list of statistics views.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async statsList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Array<string>>>> {
+            const localVarAxiosArgs = await StatsApiAxiosParamCreator(configuration).statsList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async statsOverviewRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats>> {
+            const localVarAxiosArgs = await StatsApiAxiosParamCreator(configuration).statsOverviewRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show statistics of reports impacting across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async statsReportsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats>> {
+            const localVarAxiosArgs = await StatsApiAxiosParamCreator(configuration).statsReportsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show statistics of rule usage across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async statsRulesRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats>> {
+            const localVarAxiosArgs = await StatsApiAxiosParamCreator(configuration).statsRulesRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async statsSystemsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Stats>> {
+            const localVarAxiosArgs = await StatsApiAxiosParamCreator(configuration).statsSystemsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * StatsApi - factory interface
+ * @export
+ */
+export const StatsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Provide a simple list of URLs contained here.  A list of statistics views.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsList(options?: any): AxiosPromise<Array<Array<string>>> {
+            return StatsApiFp(configuration).statsList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsOverviewRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): AxiosPromise<Stats> {
+            return StatsApiFp(configuration).statsOverviewRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show statistics of reports impacting across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsReportsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): AxiosPromise<Stats> {
+            return StatsApiFp(configuration).statsReportsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show statistics of rule usage across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsRulesRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): AxiosPromise<Stats> {
+            return StatsApiFp(configuration).statsRulesRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        statsSystemsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any): AxiosPromise<Stats> {
+            return StatsApiFp(configuration).statsSystemsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * StatsApi - object-oriented interface
+ * @export
+ * @class StatsApi
+ * @extends {BaseAPI}
+ */
+export class StatsApi extends BaseAPI {
+    /**
+     * Provide a simple list of URLs contained here.  A list of statistics views.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsList(options?: any) {
+        return StatsApiFp(this.configuration).statsList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsOverviewRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsOverviewRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show statistics of reports impacting across categories and risks.  Only current reports are considered.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsReportsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsReportsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show statistics of rule usage across categories and risks.  Only current reports are considered.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsRulesRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsRulesRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StatsApi
+     */
+    public statsSystemsRetrieve(tags?: Array<string>, groups?: Array<string>, filterSystemProfileSapSystem?: boolean, filterSystemProfileSapSidsContains?: Array<string>, options?: any) {
+        return StatsApiFp(this.configuration).statsSystemsRetrieve(tags, groups, filterSystemProfileSapSystem, filterSystemProfileSapSidsContains, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -634,6 +8233,494 @@ export class StatusApi extends BaseAPI {
 
 
 /**
+ * SystemApi - axios parameter creator
+ * @export
+ */
+export const SystemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>} [hits] Display systems with hits of the given total_risk value (1..4), or 0 to display all systems
+         * @param {boolean} [incident] Display only systems reporting an incident
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display systems with rule hits for this Pathway
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemList: async (displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/system/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hits) {
+                localVarQueryParameter['hits'] = hits;
+            }
+
+            if (incident !== undefined) {
+                localVarQueryParameter['incident'] = incident;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (pathway !== undefined) {
+                localVarQueryParameter['pathway'] = pathway;
+            }
+
+            if (rhelVersion) {
+                localVarQueryParameter['rhel_version'] = rhelVersion;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRenderedReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemRenderedReportsList.');
+            }
+            const localVarPath = `/api/insights/v1/system/{uuid}/rendered_reports/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemReportsList.');
+            }
+            const localVarPath = `/api/insights/v1/system/{uuid}/reports/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRetrieve: async (uuid: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'uuid' is not null or undefined
+            if (uuid === null || uuid === undefined) {
+                throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/system/{uuid}/`
+                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SystemApi - functional programming interface
+ * @export
+ */
+export const SystemApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>} [hits] Display systems with hits of the given total_risk value (1..4), or 0 to display all systems
+         * @param {boolean} [incident] Display only systems reporting an incident
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display systems with rule hits for this Pathway
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RenderedReport>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Report>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemRetrieve(uuid: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRetrieve(uuid, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * SystemApi - factory interface
+ * @export
+ */
+export const SystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>} [hits] Display systems with hits of the given total_risk value (1..4), or 0 to display all systems
+         * @param {boolean} [incident] Display only systems reporting an incident
+         * @param {number} [limit] Number of results to return per page.
+         * @param {number} [offset] The initial index from which to return the results.
+         * @param {string} [pathway] Display systems with rule hits for this Pathway
+         * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemList> {
+            return SystemApiFp(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): AxiosPromise<Array<RenderedReport>> {
+            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): AxiosPromise<Array<Report>> {
+            return SystemApiFp(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve the reports for a single system by Insights Inventory UUID
+         * @summary Retrieve the reports for a single system
+         * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemRetrieve(uuid: string, options?: any): AxiosPromise<System> {
+            return SystemApiFp(configuration).systemRetrieve(uuid, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * SystemApi - object-oriented interface
+ * @export
+ * @class SystemApi
+ * @extends {BaseAPI}
+ */
+export class SystemApi extends BaseAPI {
+    /**
+     * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>} [hits] Display systems with hits of the given total_risk value (1..4), or 0 to display all systems
+     * @param {boolean} [incident] Display only systems reporting an incident
+     * @param {number} [limit] Number of results to return per page.
+     * @param {number} [offset] The initial index from which to return the results.
+     * @param {string} [pathway] Display systems with rule hits for this Pathway
+     * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
+     * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+     * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+     * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any) {
+        return SystemApiFp(this.configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve the reports for a single system by Insights Inventory UUID
+     * @summary Retrieve the reports for a single system
+     * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public systemRetrieve(uuid: string, options?: any) {
+        return SystemApiFp(this.configuration).systemRetrieve(uuid, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
  * SystemtypeApi - axios parameter creator
  * @export
  */
@@ -800,6 +8887,1450 @@ export class SystemtypeApi extends BaseAPI {
      */
     public systemtypeRetrieve(id: number, options?: any) {
         return SystemtypeApiFp(this.configuration).systemtypeRetrieve(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * TopicApi - axios parameter creator
+ * @export
+ */
+export const TopicApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a new rule topic, along with its association to a rule tag
+         * @summary Create a new rule topic
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicCreate: async (topicEdit: TopicEdit, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'topicEdit' is not null or undefined
+            if (topicEdit === null || topicEdit === undefined) {
+                throw new RequiredError('topicEdit','Required parameter topicEdit was null or undefined when calling topicCreate.');
+            }
+            const localVarPath = `/api/insights/v1/topic/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof topicEdit !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(topicEdit !== undefined ? topicEdit : {}) : (topicEdit || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
+         * @summary Delete a rule topic
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicDestroy: async (slug: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicDestroy.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicList: async (filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/topic/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (showDisabled !== undefined) {
+                localVarQueryParameter['show_disabled'] = showDisabled;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update an existing rule topic.  Only the fields being changed need to be supplied
+         * @summary Partially update a rule topic
+         * @param {string} slug
+         * @param {PatchedTopicEdit} [patchedTopicEdit]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicPartialUpdate: async (slug: string, patchedTopicEdit?: PatchedTopicEdit, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicPartialUpdate.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof patchedTopicEdit !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(patchedTopicEdit !== undefined ? patchedTopicEdit : {}) : (patchedTopicEdit || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRetrieve: async (slug: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesWithTagList: async (slug: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicRulesWithTagList.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/rules_with_tag/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all systems affected by this rule topic.  Systems are just listed by their UUID.
+         * @param {string} slug
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicSystemsRetrieve: async (slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicSystemsRetrieve.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/systems/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (sort) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update an existing rule topic.  All fields need to be supplied
+         * @summary Update a rule topic
+         * @param {string} slug
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicUpdate: async (slug: string, topicEdit: TopicEdit, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'slug' is not null or undefined
+            if (slug === null || slug === undefined) {
+                throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicUpdate.');
+            }
+            // verify required parameter 'topicEdit' is not null or undefined
+            if (topicEdit === null || topicEdit === undefined) {
+                throw new RequiredError('topicEdit','Required parameter topicEdit was null or undefined when calling topicUpdate.');
+            }
+            const localVarPath = `/api/insights/v1/topic/{slug}/`
+                .replace(`{${"slug"}}`, encodeURIComponent(String(slug)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof topicEdit !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(topicEdit !== undefined ? topicEdit : {}) : (topicEdit || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TopicApi - functional programming interface
+ * @export
+ */
+export const TopicApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Create a new rule topic, along with its association to a rule tag
+         * @summary Create a new rule topic
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicCreate(topicEdit: TopicEdit, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicEdit>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicCreate(topicEdit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
+         * @summary Delete a rule topic
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicDestroy(slug: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicDestroy(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update an existing rule topic.  Only the fields being changed need to be supplied
+         * @summary Partially update a rule topic
+         * @param {string} slug
+         * @param {PatchedTopicEdit} [patchedTopicEdit]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicPartialUpdate(slug: string, patchedTopicEdit?: PatchedTopicEdit, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicEdit>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicPartialUpdate(slug, patchedTopicEdit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicRetrieve(slug: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Topic>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicRetrieve(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicRulesWithTagList(slug: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Rule>>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicRulesWithTagList(slug, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * List all systems affected by this rule topic.  Systems are just listed by their UUID.
+         * @param {string} slug
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Update an existing rule topic.  All fields need to be supplied
+         * @summary Update a rule topic
+         * @param {string} slug
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async topicUpdate(slug: string, topicEdit: TopicEdit, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TopicEdit>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicUpdate(slug, topicEdit, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * TopicApi - factory interface
+ * @export
+ */
+export const TopicApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Create a new rule topic, along with its association to a rule tag
+         * @summary Create a new rule topic
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicCreate(topicEdit: TopicEdit, options?: any): AxiosPromise<TopicEdit> {
+            return TopicApiFp(configuration).topicCreate(topicEdit, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
+         * @summary Delete a rule topic
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicDestroy(slug: string, options?: any): AxiosPromise<void> {
+            return TopicApiFp(configuration).topicDestroy(slug, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any): AxiosPromise<Array<Topic>> {
+            return TopicApiFp(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update an existing rule topic.  Only the fields being changed need to be supplied
+         * @summary Partially update a rule topic
+         * @param {string} slug
+         * @param {PatchedTopicEdit} [patchedTopicEdit]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicPartialUpdate(slug: string, patchedTopicEdit?: PatchedTopicEdit, options?: any): AxiosPromise<TopicEdit> {
+            return TopicApiFp(configuration).topicPartialUpdate(slug, patchedTopicEdit, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRetrieve(slug: string, options?: any): AxiosPromise<Topic> {
+            return TopicApiFp(configuration).topicRetrieve(slug, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
+         * @param {string} slug
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicRulesWithTagList(slug: string, options?: any): AxiosPromise<Array<Rule>> {
+            return TopicApiFp(configuration).topicRulesWithTagList(slug, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all systems affected by this rule topic.  Systems are just listed by their UUID.
+         * @param {string} slug
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
+            return TopicApiFp(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update an existing rule topic.  All fields need to be supplied
+         * @summary Update a rule topic
+         * @param {string} slug
+         * @param {TopicEdit} topicEdit
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        topicUpdate(slug: string, topicEdit: TopicEdit, options?: any): AxiosPromise<TopicEdit> {
+            return TopicApiFp(configuration).topicUpdate(slug, topicEdit, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * TopicApi - object-oriented interface
+ * @export
+ * @class TopicApi
+ * @extends {BaseAPI}
+ */
+export class TopicApi extends BaseAPI {
+    /**
+     * Create a new rule topic, along with its association to a rule tag
+     * @summary Create a new rule topic
+     * @param {TopicEdit} topicEdit
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicCreate(topicEdit: TopicEdit, options?: any) {
+        return TopicApiFp(this.configuration).topicCreate(topicEdit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
+     * @summary Delete a rule topic
+     * @param {string} slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicDestroy(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicDestroy(slug, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any) {
+        return TopicApiFp(this.configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update an existing rule topic.  Only the fields being changed need to be supplied
+     * @summary Partially update a rule topic
+     * @param {string} slug
+     * @param {PatchedTopicEdit} [patchedTopicEdit]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicPartialUpdate(slug: string, patchedTopicEdit?: PatchedTopicEdit, options?: any) {
+        return TopicApiFp(this.configuration).topicPartialUpdate(slug, patchedTopicEdit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
+     * @param {string} slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicRetrieve(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRetrieve(slug, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
+     * @param {string} slug
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicRulesWithTagList(slug: string, options?: any) {
+        return TopicApiFp(this.configuration).topicRulesWithTagList(slug, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all systems affected by this rule topic.  Systems are just listed by their UUID.
+     * @param {string} slug
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
+        return TopicApiFp(this.configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update an existing rule topic.  All fields need to be supplied
+     * @summary Update a rule topic
+     * @param {string} slug
+     * @param {TopicEdit} topicEdit
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TopicApi
+     */
+    public topicUpdate(slug: string, topicEdit: TopicEdit, options?: any) {
+        return TopicApiFp(this.configuration).topicUpdate(slug, topicEdit, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * UsageApi - axios parameter creator
+ * @export
+ */
+export const UsageApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @param {Array<string>} [account] Allow &#x60;hydrauser&#x60; to view any account
+         * @param {string} [end] End date for statistics range
+         * @param {string} [orgId] Allow &#x60;hydrauser&#x60; to view any org_id
+         * @param {string} [start] Start date for statistics range
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        usageList: async (account?: Array<string>, end?: string, orgId?: string, start?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/usage/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (account) {
+                localVarQueryParameter['account'] = account;
+            }
+
+            if (end !== undefined) {
+                localVarQueryParameter['end'] = (end as any instanceof Date) ?
+                    (end as any).toISOString().substr(0,10) :
+                    end;
+            }
+
+            if (orgId !== undefined) {
+                localVarQueryParameter['org_id'] = orgId;
+            }
+
+            if (start !== undefined) {
+                localVarQueryParameter['start'] = (start as any instanceof Date) ?
+                    (start as any).toISOString().substr(0,10) :
+                    start;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UsageApi - functional programming interface
+ * @export
+ */
+export const UsageApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @param {Array<string>} [account] Allow &#x60;hydrauser&#x60; to view any account
+         * @param {string} [end] End date for statistics range
+         * @param {string} [orgId] Allow &#x60;hydrauser&#x60; to view any org_id
+         * @param {string} [start] Start date for statistics range
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async usageList(account?: Array<string>, end?: string, orgId?: string, start?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Usage>> {
+            const localVarAxiosArgs = await UsageApiAxiosParamCreator(configuration).usageList(account, end, orgId, start, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * UsageApi - factory interface
+ * @export
+ */
+export const UsageApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+         * @param {Array<string>} [account] Allow &#x60;hydrauser&#x60; to view any account
+         * @param {string} [end] End date for statistics range
+         * @param {string} [orgId] Allow &#x60;hydrauser&#x60; to view any org_id
+         * @param {string} [start] Start date for statistics range
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        usageList(account?: Array<string>, end?: string, orgId?: string, start?: string, options?: any): AxiosPromise<Usage> {
+            return UsageApiFp(configuration).usageList(account, end, orgId, start, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * UsageApi - object-oriented interface
+ * @export
+ * @class UsageApi
+ * @extends {BaseAPI}
+ */
+export class UsageApi extends BaseAPI {
+    /**
+     * List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
+     * @param {Array<string>} [account] Allow &#x60;hydrauser&#x60; to view any account
+     * @param {string} [end] End date for statistics range
+     * @param {string} [orgId] Allow &#x60;hydrauser&#x60; to view any org_id
+     * @param {string} [start] Start date for statistics range
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UsageApi
+     */
+    public usageList(account?: Array<string>, end?: string, orgId?: string, start?: string, options?: any) {
+        return UsageApiFp(this.configuration).usageList(account, end, orgId, start, options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * UserPreferencesApi - axios parameter creator
+ * @export
+ */
+export const UserPreferencesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesCreate: async (preferencesInput: PreferencesInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'preferencesInput' is not null or undefined
+            if (preferencesInput === null || preferencesInput === undefined) {
+                throw new RequiredError('preferencesInput','Required parameter preferencesInput was null or undefined when calling userPreferencesCreate.');
+            }
+            const localVarPath = `/api/insights/v1/user-preferences/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof preferencesInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(preferencesInput !== undefined ? preferencesInput : {}) : (preferencesInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/user-preferences/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UserPreferencesApi - functional programming interface
+ * @export
+ */
+export const UserPreferencesApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async userPreferencesCreate(preferencesInput: PreferencesInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PreferencesInput>> {
+            const localVarAxiosArgs = await UserPreferencesApiAxiosParamCreator(configuration).userPreferencesCreate(preferencesInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async userPreferencesList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SettingsDDF>>> {
+            const localVarAxiosArgs = await UserPreferencesApiAxiosParamCreator(configuration).userPreferencesList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * UserPreferencesApi - factory interface
+ * @export
+ */
+export const UserPreferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
+         * @param {PreferencesInput} preferencesInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesCreate(preferencesInput: PreferencesInput, options?: any): AxiosPromise<PreferencesInput> {
+            return UserPreferencesApiFp(configuration).userPreferencesCreate(preferencesInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userPreferencesList(options?: any): AxiosPromise<Array<SettingsDDF>> {
+            return UserPreferencesApiFp(configuration).userPreferencesList(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * UserPreferencesApi - object-oriented interface
+ * @export
+ * @class UserPreferencesApi
+ * @extends {BaseAPI}
+ */
+export class UserPreferencesApi extends BaseAPI {
+    /**
+     * Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
+     * @param {PreferencesInput} preferencesInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserPreferencesApi
+     */
+    public userPreferencesCreate(preferencesInput: PreferencesInput, options?: any) {
+        return UserPreferencesApiFp(this.configuration).userPreferencesCreate(preferencesInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UserPreferencesApi
+     */
+    public userPreferencesList(options?: any) {
+        return UserPreferencesApiFp(this.configuration).userPreferencesList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * WeeklyreportautosubscribeApi - axios parameter creator
+ * @export
+ */
+export const WeeklyreportautosubscribeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
+         * @param {AutoSubscribeInput} autoSubscribeInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportautosubscribeCreate: async (autoSubscribeInput: AutoSubscribeInput, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'autoSubscribeInput' is not null or undefined
+            if (autoSubscribeInput === null || autoSubscribeInput === undefined) {
+                throw new RequiredError('autoSubscribeInput','Required parameter autoSubscribeInput was null or undefined when calling weeklyreportautosubscribeCreate.');
+            }
+            const localVarPath = `/api/insights/v1/weeklyreportautosubscribe/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof autoSubscribeInput !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(autoSubscribeInput !== undefined ? autoSubscribeInput : {}) : (autoSubscribeInput || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportautosubscribeList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/weeklyreportautosubscribe/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportautosubscribeApi - functional programming interface
+ * @export
+ */
+export const WeeklyreportautosubscribeApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
+         * @param {AutoSubscribeInput} autoSubscribeInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async weeklyreportautosubscribeCreate(autoSubscribeInput: AutoSubscribeInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AutoSubscribe>> {
+            const localVarAxiosArgs = await WeeklyreportautosubscribeApiAxiosParamCreator(configuration).weeklyreportautosubscribeCreate(autoSubscribeInput, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async weeklyreportautosubscribeList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AutoSubscribe>>> {
+            const localVarAxiosArgs = await WeeklyreportautosubscribeApiAxiosParamCreator(configuration).weeklyreportautosubscribeList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportautosubscribeApi - factory interface
+ * @export
+ */
+export const WeeklyreportautosubscribeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
+         * @param {AutoSubscribeInput} autoSubscribeInput
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportautosubscribeCreate(autoSubscribeInput: AutoSubscribeInput, options?: any): AxiosPromise<AutoSubscribe> {
+            return WeeklyreportautosubscribeApiFp(configuration).weeklyreportautosubscribeCreate(autoSubscribeInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportautosubscribeList(options?: any): AxiosPromise<Array<AutoSubscribe>> {
+            return WeeklyreportautosubscribeApiFp(configuration).weeklyreportautosubscribeList(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * WeeklyreportautosubscribeApi - object-oriented interface
+ * @export
+ * @class WeeklyreportautosubscribeApi
+ * @extends {BaseAPI}
+ */
+export class WeeklyreportautosubscribeApi extends BaseAPI {
+    /**
+     * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
+     * @param {AutoSubscribeInput} autoSubscribeInput
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportautosubscribeApi
+     */
+    public weeklyreportautosubscribeCreate(autoSubscribeInput: AutoSubscribeInput, options?: any) {
+        return WeeklyreportautosubscribeApiFp(this.configuration).weeklyreportautosubscribeCreate(autoSubscribeInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportautosubscribeApi
+     */
+    public weeklyreportautosubscribeList(options?: any) {
+        return WeeklyreportautosubscribeApiFp(this.configuration).weeklyreportautosubscribeList(options).then((request) => request(this.axios, this.basePath));
+    }
+
+}
+
+
+/**
+ * WeeklyreportsubscriptionApi - axios parameter creator
+ * @export
+ */
+export const WeeklyreportsubscriptionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate: async (weeklyReportSubscription: WeeklyReportSubscription, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'weeklyReportSubscription' is not null or undefined
+            if (weeklyReportSubscription === null || weeklyReportSubscription === undefined) {
+                throw new RequiredError('weeklyReportSubscription','Required parameter weeklyReportSubscription was null or undefined when calling weeklyreportsubscriptionCreate.');
+            }
+            const localVarPath = `/api/insights/v1/weeklyreportsubscription/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof weeklyReportSubscription !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(weeklyReportSubscription !== undefined ? weeklyReportSubscription : {}) : (weeklyReportSubscription || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/insights/v1/weeklyreportsubscription/`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication x-rh-identity required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-rh-identity")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - functional programming interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WeeklyReportSubscription>> {
+            const localVarAxiosArgs = await WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async weeklyreportsubscriptionList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WeeklyReportSubscription>>> {
+            const localVarAxiosArgs = await WeeklyreportsubscriptionApiAxiosParamCreator(configuration).weeklyreportsubscriptionList(options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * WeeklyreportsubscriptionApi - factory interface
+ * @export
+ */
+export const WeeklyreportsubscriptionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
+         * @param {WeeklyReportSubscription} weeklyReportSubscription
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any): AxiosPromise<WeeklyReportSubscription> {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        weeklyreportsubscriptionList(options?: any): AxiosPromise<Array<WeeklyReportSubscription>> {
+            return WeeklyreportsubscriptionApiFp(configuration).weeklyreportsubscriptionList(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * WeeklyreportsubscriptionApi - object-oriented interface
+ * @export
+ * @class WeeklyreportsubscriptionApi
+ * @extends {BaseAPI}
+ */
+export class WeeklyreportsubscriptionApi extends BaseAPI {
+    /**
+     * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
+     * @param {WeeklyReportSubscription} weeklyReportSubscription
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionCreate(weeklyReportSubscription: WeeklyReportSubscription, options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionCreate(weeklyReportSubscription, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WeeklyreportsubscriptionApi
+     */
+    public weeklyreportsubscriptionList(options?: any) {
+        return WeeklyreportsubscriptionApiFp(this.configuration).weeklyreportsubscriptionList(options).then((request) => request(this.axios, this.basePath));
     }
 
 }

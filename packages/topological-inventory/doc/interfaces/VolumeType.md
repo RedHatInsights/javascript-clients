@@ -35,7 +35,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4028)
+[api.ts:4028](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4028)
 
 ___
 
@@ -49,7 +49,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4034)
+[api.ts:4034](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4034)
 
 ___
 
@@ -63,7 +63,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4040)
+[api.ts:4040](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4040)
 
 ___
 
@@ -77,7 +77,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4046)
+[api.ts:4046](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4046)
 
 ___
 
@@ -93,7 +93,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4052)
+[api.ts:4052](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4052)
 
 ___
 
@@ -107,7 +107,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4058)
+[api.ts:4058](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4058)
 
 ___
 
@@ -121,7 +121,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4064)
+[api.ts:4064](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4064)
 
 ___
 
@@ -137,7 +137,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4070)
+[api.ts:4070](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4070)
 
 ___
 
@@ -151,7 +151,7 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4076)
+[api.ts:4076](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4076)
 
 ___
 
@@ -165,4 +165,4 @@ VolumeType
 
 #### Defined in
 
-[api.ts:4082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4082)
+[api.ts:4082](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4082)

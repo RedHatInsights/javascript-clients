@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L296)
+[api.ts:296](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L296)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[api.ts:297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L297)
+[api.ts:297](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L297)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L298)
+[api.ts:298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L298)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[api.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L299)
+[api.ts:299](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L299)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L301)
+[api.ts:301](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L301)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[api.ts:303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L303)
+[api.ts:303](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L303)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L302)
+[api.ts:302](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L302)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L300)
+[api.ts:300](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L300)

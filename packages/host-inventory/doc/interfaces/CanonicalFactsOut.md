@@ -36,7 +36,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L188)
+[api.ts:342](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L342)
 
 ___
 
@@ -52,7 +52,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L200)
+[api.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L354)
 
 ___
 
@@ -68,7 +68,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L170)
+[api.ts:324](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L324)
 
 ___
 
@@ -84,7 +84,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L194)
+[api.ts:348](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L348)
 
 ___
 
@@ -100,7 +100,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L206)
+[api.ts:360](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L360)
 
 ___
 
@@ -116,7 +116,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L212)
+[api.ts:366](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L366)
 
 ___
 
@@ -132,7 +132,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L218)
+[api.ts:372](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L372)
 
 ___
 
@@ -148,7 +148,7 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L182)
+[api.ts:336](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L336)
 
 ___
 
@@ -164,4 +164,4 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L176)
+[api.ts:330](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)

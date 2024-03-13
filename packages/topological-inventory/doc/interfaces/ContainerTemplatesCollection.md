@@ -28,7 +28,7 @@ ContainerTemplatesCollection
 
 #### Defined in
 
-[api.ts:1078](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1078)
+[api.ts:1078](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1078)
 
 ___
 
@@ -42,7 +42,7 @@ ContainerTemplatesCollection
 
 #### Defined in
 
-[api.ts:1072](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1072)
+[api.ts:1072](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1072)
 
 ___
 
@@ -56,4 +56,4 @@ ContainerTemplatesCollection
 
 #### Defined in
 
-[api.ts:1066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1066)
+[api.ts:1066](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1066)

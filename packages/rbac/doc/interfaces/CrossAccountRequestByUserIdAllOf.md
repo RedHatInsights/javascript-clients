@@ -26,4 +26,4 @@ CrossAccountRequestByUserIdAllOf
 
 #### Defined in
 
-[api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L311)
+[api.ts:311](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L311)

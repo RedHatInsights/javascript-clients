@@ -34,7 +34,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1750)
+[api.ts:2138](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2138)
 
 ___
 
@@ -48,7 +48,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1756](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1756)
+[api.ts:2144](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2144)
 
 ___
 
@@ -64,7 +64,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1768)
+[api.ts:2156](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2156)
 
 ___
 
@@ -80,7 +80,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1762)
+[api.ts:2150](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2150)
 
 ___
 
@@ -96,7 +96,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1774)
+[api.ts:2162](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2162)
 
 ___
 
@@ -112,7 +112,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1780](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1780)
+[api.ts:2168](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2168)
 
 ___
 
@@ -128,4 +128,4 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:1786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1786)
+[api.ts:2174](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2174)

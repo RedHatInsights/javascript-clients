@@ -1,0 +1,17 @@
+// This is a sample supporting file mustache template.
+
+export * from './utils/base';
+export * from './utils/common';
+export * from './utils/configuration';
+export * from './types'
+
+{{#apiInfo.apis}}
+{{#operations}}
+{{#operation}}
+export { default as {{nickname}}ParamCreator } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
+
+{{/operation}}
+
+// end of operations block
+{{/operations}}
+{{/apiInfo.apis}}

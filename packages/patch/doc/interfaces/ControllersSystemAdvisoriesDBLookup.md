@@ -37,7 +37,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1016)
+[api.ts:1016](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1016)
 
 ___
 
@@ -53,7 +53,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1022)
+[api.ts:1022](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1022)
 
 ___
 
@@ -67,7 +67,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1028)
+[api.ts:1028](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1028)
 
 ___
 
@@ -81,7 +81,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1034)
+[api.ts:1034](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1034)
 
 ___
 
@@ -95,7 +95,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1040](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1040)
+[api.ts:1040](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1040)
 
 ___
 
@@ -109,7 +109,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1046)
+[api.ts:1046](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1046)
 
 ___
 
@@ -123,7 +123,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1052](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1052)
+[api.ts:1052](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1052)
 
 ___
 
@@ -137,7 +137,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1058)
+[api.ts:1058](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1058)
 
 ___
 
@@ -151,7 +151,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1064)
+[api.ts:1064](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1064)
 
 ___
 
@@ -165,4 +165,4 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1070)
+[api.ts:1070](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1070)

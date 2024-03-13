@@ -38,7 +38,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L718)
+[api.ts:718](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L718)
 
 ___
 
@@ -54,7 +54,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L724)
+[api.ts:724](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L724)
 
 ___
 
@@ -70,7 +70,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L730)
+[api.ts:730](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L730)
 
 ___
 
@@ -86,7 +86,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L736)
+[api.ts:736](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L736)
 
 ___
 
@@ -102,7 +102,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L742)
+[api.ts:742](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L742)
 
 ___
 
@@ -122,7 +122,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L748)
+[api.ts:748](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L748)
 
 ___
 
@@ -138,4 +138,4 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L754)
+[api.ts:754](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L754)

@@ -1,0 +1,237 @@
+// @ts-ignore
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
+// @ts-ignore
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
+import type { RequestArgs } from '../utils/base';
+// @ts-ignore
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
+import { Configuration } from '../utils/configuration';
+
+// @ts-ignore
+import type { {{#imports}}{{classname}}{{^-last}}, {{/-last}}{{/imports}} } from '../types';
+
+{{#models}}
+{{#model}}{{#isEnum}}{{>modelEnum}}{{/isEnum}}{{#oneOf}}{{#-first}}{{>modelOneOf}}{{/-first}}{{/oneOf}}{{^isEnum}}{{^oneOf}}{{>modelGeneric}}{{/oneOf}}{{/isEnum}}{{/model}}
+{{/models}}
+
+{{^listParam}}
+{{#operations}}
+{{#operation}}
+export type {{operationIdCamelCase}}Params = {
+  {{#allParams}}
+  /**
+  * {{{description}}}
+  * @type {{=<% %>=}}{ <%={{ }}=%>{{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}{{=<% %>=}} }<%={{ }}=%>
+  * @memberof {{classname}}
+{{#deprecated}}
+  * @deprecated
+{{/deprecated}}
+  */
+  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, 
+  {{/allParams}}
+  options?: AxiosRequestConfig
+}
+{{#allParams}}
+{{#isEnum}}
+/**
+  * @export
+  * @enum {string}
+  */
+export const {{operationIdCamelCase}}{{enumName}} = {
+{{#allowableValues}}
+    {{#enumVars}}
+    {{#lambda.prependNot}}{{{name}}}~{{{value}}}{{/lambda.prependNot}}: {{{value}}}{{^-last}},{{/-last}}
+    {{/enumVars}}
+{{/allowableValues}}
+} as const;
+export type {{operationIdCamelCase}}{{enumName}} = typeof {{operationIdCamelCase}}{{enumName}}[keyof typeof {{operationIdCamelCase}}{{enumName}}];
+{{/isEnum}}
+{{/allParams}}
+{{/operation}}
+{{/operations}}
+{{/listParam}}
+
+{{#operations}}
+{{#operation}}
+const is{{operationIdCamelCase}}ObjectParams = (params: [{{operationIdCamelCase}}Params] | unknown[]): params is [{{operationIdCamelCase}}Params] => {
+  return params.length === 1{{#allParams}} && {{^required}}true{{/required}}{{#required}}Object.prototype.hasOwnProperty.call(params, '{{paramName}}'){{/required}}{{/allParams}}
+}
+/**
+* {{&notes}}
+{{#summary}}
+* @summary {{&summary}}
+{{/summary}}
+* @param {{=<% %>=}}{<%operationIdCamelCase%>Params}<%={{ }}=%> config with all available params.
+* @param {*} [options] Override http request option.{{#isDeprecated}}
+* @deprecated{{/isDeprecated}}
+* @throws {RequiredError}
+*/
+export const {{nickname}}ParamCreator = async (...config: ([{{operationIdCamelCase}}Params] | [{{#allParams}}{{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, {{/allParams}}AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = is{{operationIdCamelCase}}ObjectParams(config) ? config[0] : [{{#allParams}}'{{paramName}}', {{/allParams}}'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as {{operationIdCamelCase}}Params;
+    const { {{#allParams}}{{paramName}}, {{/allParams}}options = {} } = params;
+{{#allParams}}
+{{/allParams}}
+    const localVarPath = `{{{path}}}`{{#pathParams}}
+        .replace(`{${"{{baseName}}"}}`, encodeURIComponent(String({{paramName}}))){{/pathParams}};
+    // use dummy base URL string because the URL constructor only accepts absolute URLs.
+    const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+    const localVarRequestOptions = { method: '{{httpMethod}}' as Method, ...options};
+    const localVarHeaderParameter = {} as any;
+    const localVarQueryParameter = {} as any;{{#vendorExtensions}}{{#hasFormParams}}
+    const localVarFormParams = new {{^multipartFormData}}URLSearchParams(){{/multipartFormData}}{{#multipartFormData}}((configuration && configuration.formDataCtor) || FormData)(){{/multipartFormData}};{{/hasFormParams}}{{/vendorExtensions}}
+
+{{#queryParams}}
+    {{#isArray}}
+    if ({{paramName}}) {
+    {{#isCollectionFormatMulti}}
+        {{#uniqueItems}}
+        localVarQueryParameter['{{baseName}}'] = Array.from({{paramName}});
+        {{/uniqueItems}}
+        {{^uniqueItems}}
+        localVarQueryParameter['{{baseName}}'] = {{paramName}};
+        {{/uniqueItems}}
+    {{/isCollectionFormatMulti}}
+    {{^isCollectionFormatMulti}}
+        {{#uniqueItems}}
+        localVarQueryParameter['{{baseName}}'] = Array.from({{paramName}}).join(COLLECTION_FORMATS.{{collectionFormat}});
+        {{/uniqueItems}}
+        {{^uniqueItems}}
+        localVarQueryParameter['{{baseName}}'] = {{paramName}}.join(COLLECTION_FORMATS.{{collectionFormat}});
+        {{/uniqueItems}}
+    {{/isCollectionFormatMulti}}
+    }
+    {{/isArray}}
+    {{^isArray}}
+    if ({{paramName}} !== undefined) {
+        {{#isDateTime}}
+        localVarQueryParameter['{{baseName}}'] = ({{paramName}} as any instanceof Date) ?
+            ({{paramName}} as any).toISOString() :
+            {{paramName}};
+        {{/isDateTime}}
+        {{^isDateTime}}
+        {{#isDate}}
+        localVarQueryParameter['{{baseName}}'] = ({{paramName}} as any instanceof Date) ?
+            ({{paramName}} as any).toISOString().substr(0,10) :
+            {{paramName}};
+        {{/isDate}}
+        {{^isDate}}
+        localVarQueryParameter['{{baseName}}'] = {{paramName}};
+        {{/isDate}}
+        {{/isDateTime}}
+    }
+    {{/isArray}}
+
+{{/queryParams}}
+{{#headerParams}}
+    {{#isArray}}
+    if ({{paramName}}) {
+        {{#uniqueItems}}
+        let mapped = Array.from({{paramName}}).map(value => (<any>"{{{dataType}}}" !== "Set<string>") ? JSON.stringify(value) : (value || ""));
+        {{/uniqueItems}}
+        {{^uniqueItems}}
+        let mapped = {{paramName}}.map(value => (<any>"{{{dataType}}}" !== "Array<string>") ? JSON.stringify(value) : (value || ""));
+        {{/uniqueItems}}
+        localVarHeaderParameter['{{baseName}}'] = mapped.join(COLLECTION_FORMATS["{{collectionFormat}}"]);
+    }
+    {{/isArray}}
+    {{^isArray}}
+    {{! `val == null` covers for both `null` and `undefined`}}
+    if ({{paramName}} != null) {
+        {{#isString}}
+        localVarHeaderParameter['{{baseName}}'] = String({{paramName}});
+        {{/isString}}
+        {{^isString}}
+        {{! isString is falsy also for $ref that defines a string or enum type}}
+        localVarHeaderParameter['{{baseName}}'] = typeof {{paramName}} === 'string' 
+            ? {{paramName}} 
+            : JSON.stringify({{paramName}});
+        {{/isString}}
+    }
+    {{/isArray}}
+
+{{/headerParams}}
+{{#vendorExtensions}}
+{{#formParams}}
+    {{#isArray}}
+    if ({{paramName}}) {
+    {{#isCollectionFormatMulti}}
+        {{paramName}}.forEach((element) => {
+            localVarFormParams.{{#multipartFormData}}append{{/multipartFormData}}{{^multipartFormData}}set{{/multipartFormData}}('{{baseName}}', element as any);
+        })
+    {{/isCollectionFormatMulti}}
+    {{^isCollectionFormatMulti}}
+        localVarFormParams.{{#multipartFormData}}append{{/multipartFormData}}{{^multipartFormData}}set{{/multipartFormData}}('{{baseName}}', {{paramName}}.join(COLLECTION_FORMATS.{{collectionFormat}}));
+    {{/isCollectionFormatMulti}}
+    }{{/isArray}}
+    {{^isArray}}
+    if ({{paramName}} !== undefined) { {{^multipartFormData}}
+        localVarFormParams.set('{{baseName}}', {{paramName}} as any);{{/multipartFormData}}{{#multipartFormData}}{{#isPrimitiveType}}
+        localVarFormParams.append('{{baseName}}', {{paramName}} as any);{{/isPrimitiveType}}{{^isPrimitiveType}}
+        localVarFormParams.append('{{baseName}}', new Blob([JSON.stringify({{paramName}})], { type: "application/json", }));{{/isPrimitiveType}}{{/multipartFormData}}
+    }{{/isArray}}
+{{/formParams}}{{/vendorExtensions}}
+{{#vendorExtensions}}{{#hasFormParams}}{{^multipartFormData}}
+    localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';{{/multipartFormData}}{{#multipartFormData}}
+    localVarHeaderParameter['Content-Type'] = 'multipart/form-data';{{/multipartFormData}}
+{{/hasFormParams}}{{/vendorExtensions}}
+{{#bodyParam}}
+    {{^consumes}}
+    localVarHeaderParameter['Content-Type'] = 'application/json';
+    {{/consumes}}
+    {{#consumes.0}}
+    localVarHeaderParameter['Content-Type'] = '{{{mediaType}}}';
+    {{/consumes.0}}
+
+{{/bodyParam}}
+    setSearchParams(localVarUrlObj, localVarQueryParameter);
+    localVarRequestOptions.headers = {...localVarHeaderParameter,{{#hasFormParams}}{{#multipartFormData}} ...(localVarFormParams as any).getHeaders?.(),{{/multipartFormData}}{{/hasFormParams}} ...options.headers};
+{{#hasFormParams}}
+    localVarRequestOptions.data = localVarFormParams{{#vendorExtensions}}{{^multipartFormData}}.toString(){{/multipartFormData}}{{/vendorExtensions}};
+{{/hasFormParams}}
+
+    return {
+        urlObj: localVarUrlObj,
+        options: localVarRequestOptions,
+        {{#bodyParam}}
+        serializeData: {{paramName}},
+        {{/bodyParam}}
+        {{#authMethods.0}}
+        auth:[
+        {{#authMethods}}
+        {
+        // authentication {{name}} required
+        {{#isApiKey}}
+        {{#isKeyInHeader}}
+        // in header with key required
+        authType: AuthTypeEnum.InHeader,
+        authKey: "{{keyParamName}}"
+        {{/isKeyInHeader}}
+        {{#isKeyInQuery}}
+        // in query with key auth required
+        authType: AuthTypeEnum.InQuery,
+        authKey: "{{keyParamName}}"
+        {{/isKeyInQuery}}
+        {{/isApiKey}}
+        {{#isBasicBasic}}
+        // http basic authentication required
+        authType: AuthTypeEnum.Basic,
+        {{/isBasicBasic}}
+        {{#isBasicBearer}}
+        // bearer auth required
+        authType: AuthTypeEnum.Bearer,
+        {{/isBasicBearer}}
+        {{#isOAuth}}
+        // oauth required
+        authType: AuthTypeEnum.Oauth,
+        authKey: ["{{name}}", [{{#scopes}}"{{{scope}}}"{{^-last}}, {{/-last}}{{/scopes}}]]
+        {{/isOAuth}}
+        }{{^-last}}, {{/-last}}
+        {{/authMethods}}
+        ]
+        {{/authMethods.0}}
+    };
+}
+
+export default {{nickname}}ParamCreator;
+{{/operation}}
+{{/operations}}

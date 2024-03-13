@@ -19,6 +19,7 @@ RemediationListItem
 - [issue\_count](RemediationListItem.md#issue_count)
 - [name](RemediationListItem.md#name)
 - [needs\_reboot](RemediationListItem.md#needs_reboot)
+- [playbook\_runs](RemediationListItem.md#playbook_runs)
 - [resolved\_count](RemediationListItem.md#resolved_count)
 - [system\_count](RemediationListItem.md#system_count)
 - [updated\_at](RemediationListItem.md#updated_at)
@@ -38,7 +39,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L988)
+[api.ts:988](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L988)
 
 ___
 
@@ -52,7 +53,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L946)
+[api.ts:946](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L946)
 
 ___
 
@@ -66,7 +67,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L940)
+[api.ts:940](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L940)
 
 ___
 
@@ -80,7 +81,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L928)
+[api.ts:928](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L928)
 
 ___
 
@@ -94,7 +95,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L964)
+[api.ts:964](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L964)
 
 ___
 
@@ -108,7 +109,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L934)
+[api.ts:934](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L934)
 
 ___
 
@@ -124,7 +125,21 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L982)
+[api.ts:982](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L982)
+
+___
+
+### playbook\_runs
+
+• `Optional` **playbook\_runs**: [`PlaybookRunDetails`](PlaybookRunDetails.md)[]
+
+**`Memberof`**
+
+RemediationListItem
+
+#### Defined in
+
+[api.ts:994](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L994)
 
 ___
 
@@ -138,7 +153,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L976)
+[api.ts:976](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L976)
 
 ___
 
@@ -152,7 +167,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:970](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L970)
+[api.ts:970](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L970)
 
 ___
 
@@ -166,7 +181,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L958)
+[api.ts:958](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L958)
 
 ___
 
@@ -180,4 +195,4 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L952)
+[api.ts:952](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L952)

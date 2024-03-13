@@ -36,7 +36,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1172)
+[api.ts:1211](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1211)
 
 ___
 
@@ -52,7 +52,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1178)
+[api.ts:1217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1217)
 
 ___
 
@@ -68,7 +68,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1184)
+[api.ts:1223](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1223)
 
 ___
 
@@ -84,7 +84,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1190)
+[api.ts:1229](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1229)
 
 ___
 
@@ -100,7 +100,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1196)
+[api.ts:1235](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1235)
 
 ___
 
@@ -116,7 +116,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1202)
+[api.ts:1241](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1241)
 
 ___
 
@@ -132,7 +132,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1208)
+[api.ts:1247](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1247)
 
 ___
 
@@ -148,7 +148,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1214)
+[api.ts:1253](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1253)
 
 ___
 
@@ -164,4 +164,4 @@ Meta
 
 #### Defined in
 
-[api.ts:1220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1220)
+[api.ts:1259](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1259)

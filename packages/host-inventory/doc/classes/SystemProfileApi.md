@@ -29,6 +29,7 @@ SystemProfileApi - object-oriented interface
 - [apiSystemProfileGetOperatingSystem](SystemProfileApi.md#apisystemprofilegetoperatingsystem)
 - [apiSystemProfileGetSapSids](SystemProfileApi.md#apisystemprofilegetsapsids)
 - [apiSystemProfileGetSapSystem](SystemProfileApi.md#apisystemprofilegetsapsystem)
+- [apiSystemProfileValidateSchema](SystemProfileApi.md#apisystemprofilevalidateschema)
 
 ## Constructors
 
@@ -50,7 +51,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -64,7 +65,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -78,7 +79,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -92,7 +93,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
@@ -119,9 +120,9 @@ SystemProfileApi
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh, stale and stale_warning |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `filter?` | `Object` | Filters hosts based on system_profile fields |
+| `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -130,7 +131,7 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:4865](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4865)
+[api.ts:6414](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L6414)
 
 ___
 
@@ -158,9 +159,9 @@ SystemProfileApi
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh, stale and stale_warning |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `filter?` | `Object` | Filters hosts based on system_profile fields |
+| `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -169,7 +170,7 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:4883](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4883)
+[api.ts:6432](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L6432)
 
 ___
 
@@ -196,9 +197,9 @@ SystemProfileApi
 | `tags?` | `string`[] | filters out hosts not tagged by the given tags |
 | `perPage?` | `number` | A number of items to return per page. |
 | `page?` | `number` | A page number of the items to return. |
-| `staleness?` | (``"unknown"`` \| ``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh,stale,unknown |
+| `staleness?` | (``"fresh"`` \| ``"stale"`` \| ``"stale_warning"``)[] | Culling states of the hosts. Default: fresh, stale and stale_warning |
 | `registeredWith?` | (``"insights"`` \| ``"yupana"`` \| ``"puptoo"`` \| ``"rhsm-conduit"`` \| ``"cloud-connector"`` \| ``"!yupana"`` \| ``"!puptoo"`` \| ``"!rhsm-conduit"`` \| ``"!cloud-connector"``)[] | Filters out any host not registered by the specified reporters |
-| `filter?` | `Object` | Filters hosts based on system_profile fields |
+| `filter?` | `Object` | Filters hosts based on system_profile fields. For example: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{\&quot;system_profile\&quot;: {\&quot;host_type\&quot;: {\&quot;eq\&quot;: \&quot;edge\&quot;}}} &lt;br /&gt;&lt;br /&gt; which equates to the URL param: &lt;br /&gt;&lt;br /&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\&quot;?filter[system_profile][host_type][eq]&#x3D;edge\&quot; |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -207,4 +208,40 @@ SystemProfileApi
 
 #### Defined in
 
-[api.ts:4900](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L4900)
+[api.ts:6449](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L6449)
+
+___
+
+### apiSystemProfileValidateSchema
+
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+
+Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+
+**`Summary`**
+
+validate system profile schema
+
+**`Throws`**
+
+**`Memberof`**
+
+SystemProfileApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `repoBranch` | `string` | The branch of the inventory-schemas repo to use |
+| `repoFork?` | `string` | The fork of the inventory-schemas repo to use |
+| `days?` | `number` | How many days worth of data to validate |
+| `maxMessages?` | `number` | Stops polling when this number of messages has been collected |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`void`, `any`\>\>
+
+#### Defined in
+
+[api.ts:6464](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L6464)

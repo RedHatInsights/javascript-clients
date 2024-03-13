@@ -26,4 +26,4 @@ PaginationMeta
 
 #### Defined in
 
-[api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1294)
+[api.ts:1294](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1294)

@@ -28,7 +28,7 @@ ControllersBaselineSystemsResponse
 
 #### Defined in
 
-[api.ts:561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L561)
+[api.ts:561](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L561)
 
 ___
 
@@ -42,7 +42,7 @@ ControllersBaselineSystemsResponse
 
 #### Defined in
 
-[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L567)
+[api.ts:567](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L567)
 
 ___
 
@@ -56,4 +56,4 @@ ControllersBaselineSystemsResponse
 
 #### Defined in
 
-[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L573)
+[api.ts:573](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L573)

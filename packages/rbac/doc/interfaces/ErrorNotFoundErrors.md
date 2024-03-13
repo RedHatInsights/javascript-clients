@@ -30,7 +30,7 @@ ErrorNotFoundErrors
 
 #### Defined in
 
-[api.ts:857](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L857)
+[api.ts:857](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L857)
 
 ___
 
@@ -46,7 +46,7 @@ ErrorNotFoundErrors
 
 #### Defined in
 
-[api.ts:869](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L869)
+[api.ts:869](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L869)
 
 ___
 
@@ -62,4 +62,4 @@ ErrorNotFoundErrors
 
 #### Defined in
 
-[api.ts:863](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L863)
+[api.ts:863](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L863)

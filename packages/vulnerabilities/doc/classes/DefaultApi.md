@@ -26,6 +26,7 @@ DefaultApi - object-oriented interface
 
 ### Methods
 
+- [deleteNotifications](DefaultApi.md#deletenotifications)
 - [getAffectedSystemsByCve](DefaultApi.md#getaffectedsystemsbycve)
 - [getAffectedSystemsIdsByCve](DefaultApi.md#getaffectedsystemsidsbycve)
 - [getAnnouncement](DefaultApi.md#getannouncement)
@@ -40,8 +41,6 @@ DefaultApi - object-oriented interface
 - [getDashbar](DefaultApi.md#getdashbar)
 - [getDashboard](DefaultApi.md#getdashboard)
 - [getExecutiveReport](DefaultApi.md#getexecutivereport)
-- [getMitigatedSystemsByCve](DefaultApi.md#getmitigatedsystemsbycve)
-- [getMitigatedSystemsIdsByCve](DefaultApi.md#getmitigatedsystemsidsbycve)
 - [getPlaybookTemplate](DefaultApi.md#getplaybooktemplate)
 - [getStatusList](DefaultApi.md#getstatuslist)
 - [getSystemDetails](DefaultApi.md#getsystemdetails)
@@ -50,6 +49,7 @@ DefaultApi - object-oriented interface
 - [getVersion](DefaultApi.md#getversion)
 - [setCveBusinessRisk](DefaultApi.md#setcvebusinessrisk)
 - [setCveStatus](DefaultApi.md#setcvestatus)
+- [setCvesWithoutErrata](DefaultApi.md#setcveswithouterrata)
 - [setStatus](DefaultApi.md#setstatus)
 - [setSystemsOptOut](DefaultApi.md#setsystemsoptout)
 
@@ -73,7 +73,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
 
 ## Properties
 
@@ -87,7 +87,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
 
 ___
 
@@ -101,7 +101,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
+[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L51)
 
 ___
 
@@ -115,19 +115,51 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)
+[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/base.ts#L49)
 
 ## Methods
 
-### getAffectedSystemsByCve
+### deleteNotifications
 
-▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md), `any`\>\>
+▸ **deleteNotifications**(`options?`): `Promise`<`AxiosResponse`<[`NotificationsOut`](../interfaces/NotificationsOut.md), `any`\>\>
 
-Report of affected systems for a given CVE.
+Use this endpoint for restarting your already obtained notifications for CVEs.
 
 **`Summary`**
 
-Affected systems for a given CVE.
+Delete already sent notifications for CVEs
+
+**`Throws`**
+
+**`Memberof`**
+
+DefaultApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`NotificationsOut`](../interfaces/NotificationsOut.md), `any`\>\>
+
+#### Defined in
+
+[api.ts:6069](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6069)
+
+___
+
+### getAffectedSystemsByCve
+
+▸ **getAffectedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `hostType?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsOut`](../interfaces/AffectedSystemsOut.md), `any`\>\>
+
+This is a report of affected systems for a given CVE. Use this request to obtain server identification numbers of all affected servers along with last check-in, system name and more.
+
+**`Summary`**
+
+Determine affected systems for a given CVE
 
 **`Throws`**
 
@@ -156,7 +188,7 @@ DefaultApi
 | `sapSids?` | `string`[] | List of SAP IDs to filter with |
 | `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
 | `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
+| `advisory?` | `string` | Filter by advisory name, works only with show_advisories&#x3D;true |
 | `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
 | `firstReportedFrom?` | `string` | Filter for CVEs/Systems where the vulnerability appeared after given date. |
 | `firstReportedTo?` | `string` | Filter for CVEs/Systems where the vulnerability appeared before given date. |
@@ -165,6 +197,9 @@ DefaultApi
 | `report?` | `boolean` | Needs to be used when endpoint data is used for report generation, checks RBAC permission for report and export feature. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
+| `hostType?` | (``"rpmdnf"`` \| ``"edge"``)[] | For filtering out the systems based on their type. Value \&quot;rpmdnf\&quot; for RPMDNF systems, \&quot;edge\&quot; for OSTree systems. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -173,19 +208,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6160)
+[api.ts:6109](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6109)
 
 ___
 
 ### getAffectedSystemsIdsByCve
 
-▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md), `any`\>\>
+▸ **getAffectedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `hostType?`, `options?`): `Promise`<`AxiosResponse`<[`AffectedSystemsIdsOut`](../interfaces/AffectedSystemsIdsOut.md), `any`\>\>
 
-Report of IDs of affected systems for a given CVE.
+This is a report of identification numbers of affected systems for a given CVE. Use this request to obtain server identification numbers of all affected systems.
 
 **`Summary`**
 
-IDs of affected systems for a given CVE.
+Get identification numbers of affected systems for a given CVE
 
 **`Throws`**
 
@@ -214,7 +249,7 @@ DefaultApi
 | `sapSids?` | `string`[] | List of SAP IDs to filter with |
 | `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
 | `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
+| `advisory?` | `string` | Filter by advisory name, works only with show_advisories&#x3D;true |
 | `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
 | `firstReportedFrom?` | `string` | Filter for CVEs/Systems where the vulnerability appeared after given date. |
 | `firstReportedTo?` | `string` | Filter for CVEs/Systems where the vulnerability appeared before given date. |
@@ -222,6 +257,9 @@ DefaultApi
 | `remediation?` | `string` | Filer based on available remediation type id. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
+| `hostType?` | (``"rpmdnf"`` \| ``"edge"``)[] | For filtering out the systems based on their type. Value \&quot;rpmdnf\&quot; for RPMDNF systems, \&quot;edge\&quot; for OSTree systems. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -230,7 +268,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6196)
+[api.ts:6148](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6148)
 
 ___
 
@@ -238,11 +276,11 @@ ___
 
 ▸ **getAnnouncement**(`options?`): `Promise`<`AxiosResponse`<[`AnnouncementOut`](../interfaces/AnnouncementOut.md), `any`\>\>
 
-Get announcement shown above CVEs list.
+This endpoint provides vulnerability service announcements. Remain informed about important alerts for the vulnerability service. Announcements are issued by Insights Product Managers and other subject matter experts.
 
 **`Summary`**
 
-Announcement.
+Announce important updates
 
 **`Throws`**
 
@@ -262,7 +300,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6207)
+[api.ts:6159](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6159)
 
 ___
 
@@ -274,7 +312,7 @@ Checks database availability and API response threshold time.
 
 **`Summary`**
 
-Health status of application
+Determine the health of the application
 
 **`Throws`**
 
@@ -294,7 +332,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6218](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6218)
+[api.ts:6170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6170)
 
 ___
 
@@ -302,11 +340,11 @@ ___
 
 ▸ **getBusinessRiskList**(`options?`): `Promise`<`AxiosResponse`<[`BusinessRiskListOut`](../interfaces/BusinessRiskListOut.md), `any`\>\>
 
-Returns available business risk and business_risk_id pairs where business_risk_id is internal ID of the business risk.
+This endpoint helps you determine the numeric business risk for a given CVE. A business risk is a label you can set for a given CVE. Choose one of five business risk options ranging from 0-4, where 0 is not defined and 4 indicates a critical risk. You must call this endpoint to choose a numerical value before calling the *PATCH/cves/business_risk* endpoint.
 
 **`Summary`**
 
-Available business risk/business_risk_id pairs.
+Access business risk values
 
 **`Throws`**
 
@@ -326,19 +364,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6229)
+[api.ts:6181](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6181)
 
 ___
 
 ### getCveDetails
 
-▸ **getCveDetails**(`cveId`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md), `any`\>\>
+▸ **getCveDetails**(`cveId`, `advisoryAvailable?`, `options?`): `Promise`<`AxiosResponse`<[`CveDetailOut`](../interfaces/CveDetailOut.md), `any`\>\>
 
-Show all information about given CVE.
+This endpoint returns the CVE identification number, description, scores and other metadata. The metadata includes the description, CVSS 2/3 Score, CVSS 2/3 attack vector, severity, public date, modified date, business risk, status, a URL to Red Hat web pages, a list of advisories remediating the CVE, and information regarding known exploits for the CVE.
 
 **`Summary`**
 
-Details of a CVE.
+Get CVE details
 
 **`Throws`**
 
@@ -351,6 +389,7 @@ DefaultApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `cveId` | `string` | CVE id. |
+| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -359,7 +398,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6241)
+[api.ts:6194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6194)
 
 ___
 
@@ -367,11 +406,11 @@ ___
 
 ▸ **getCveIdsBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesIdsOut`](../interfaces/SystemCvesIdsOut.md), `any`\>\>
 
-Shows IDs of all CVEs the system is exposed to.
+This endpoint displays identification numbers of all CVEs for which a system is exposed. Use this endpoint to learn which CVEs are affecting a given system.
 
 **`Summary`**
 
-CVE IDs report for a system.
+Get a CVE identification number report for a system
 
 **`Throws`**
 
@@ -400,7 +439,7 @@ DefaultApi
 | `businessRiskId?` | `string` | Filter based on business risk IDs. |
 | `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
 | `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
+| `advisory?` | `string` | Filter by advisory name, works only with show_advisories&#x3D;true |
 | `ruleKey?` | `string`[] | Filters security rules by its error key. |
 | `knownExploit?` | `boolean`[] | String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits. |
 | `firstReportedFrom?` | `string` | Filter for CVEs/Systems where the vulnerability appeared after given date. |
@@ -415,19 +454,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6276)
+[api.ts:6229](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6229)
 
 ___
 
 ### getCveIdsList
 
-▸ **getCveIdsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md), `any`\>\>
+▸ **getCveIdsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `ansible?`, `mssql?`, `advisoryAvailable?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesIdsOut`](../interfaces/VulnerabilitiesIdsOut.md), `any`\>\>
 
-Overview of vulnerabilities IDs across whole host inventory.
+This is an overview of vulnerabilities identification numbers across your entire system inventory. Use this endpoint to get an overview of which CVEs are affecting your account.
 
 **`Summary`**
 
-Vulnerabilities IDs overview.
+Get an overview of Vulnerabilities\' identification numbers
 
 **`Throws`**
 
@@ -462,6 +501,7 @@ DefaultApi
 | `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -470,19 +510,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6310)
+[api.ts:6264](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6264)
 
 ___
 
 ### getCveList
 
-▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md), `any`\>\>
+▸ **getCveList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `dataFormat?`, `businessRiskId?`, `statusId?`, `rulePresence?`, `tags?`, `sapSids?`, `sapSystem?`, `knownExploit?`, `affecting?`, `rhelVersion?`, `report?`, `advancedReport?`, `ansible?`, `mssql?`, `advisoryAvailable?`, `groupNames?`, `groupIds?`, `affectingHostType?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesOut`](../interfaces/VulnerabilitiesOut.md), `any`\>\>
 
-Overview of vulnerabilities across whole host inventory.
+This provides an overview of vulnerabilities across your entire system inventory. Use this endpoint to get an overview of which CVEs are affecting your account, including some CVE metadata, how many systems are affected by each CVE, and more.
 
 **`Summary`**
 
-Vulnerabilities overview.
+Get a vulnerabilities overview
 
 **`Throws`**
 
@@ -519,6 +559,10 @@ DefaultApi
 | `advancedReport?` | `boolean` | Needs to be used when endpoint data is used for Report by CVEs feature, checks RBAC permission for advanced report. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
+| `affectingHostType?` | (``"none"`` \| ``"rpmdnf"`` \| ``"edge"``)[] | Controls, whenever CVE has 1 or more affecting systems. Value \&quot;edge\&quot; returns CVEs with one or more vulnerable immutable systems, value \&quot;rpmdnf\&quot; returns CVEs with one or more vulnerable conventional systems. Value \&quot;none\&quot; returns CVEs not affecting systems of any kind. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -527,7 +571,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6346)
+[api.ts:6304](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6304)
 
 ___
 
@@ -535,11 +579,11 @@ ___
 
 ▸ **getCveListBySystem**(`inventoryId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `cvssFrom?`, `cvssTo?`, `publicFrom?`, `publicTo?`, `impact?`, `statusId?`, `dataFormat?`, `businessRiskId?`, `rulePresence?`, `showAdvisories?`, `advisory?`, `ruleKey?`, `knownExploit?`, `firstReportedFrom?`, `firstReportedTo?`, `advisoryAvailable?`, `remediation?`, `report?`, `options?`): `Promise`<`AxiosResponse`<[`SystemCvesOut`](../interfaces/SystemCvesOut.md), `any`\>\>
 
-Shows detailed information about all CVEs the system is exposed to.
+This endpoint displays detailed information about all CVEs for which a system is exposed. Use this endpoint to discover which CVEs are affecting a given system. CVE metadata is included.
 
 **`Summary`**
 
-CVE report for a system.
+Get a CVE report for a system
 
 **`Throws`**
 
@@ -568,7 +612,7 @@ DefaultApi
 | `businessRiskId?` | `string` | Filter based on business risk IDs. |
 | `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
 | `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
+| `advisory?` | `string` | Filter by advisory name, works only with show_advisories&#x3D;true |
 | `ruleKey?` | `string`[] | Filters security rules by its error key. |
 | `knownExploit?` | `boolean`[] | String of booleans (array of booleans), where true shows CVEs with known exploits, false shows CVEs without known exploits. |
 | `firstReportedFrom?` | `string` | Filter for CVEs/Systems where the vulnerability appeared after given date. |
@@ -584,7 +628,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6382)
+[api.ts:6340](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6340)
 
 ___
 
@@ -592,11 +636,11 @@ ___
 
 ▸ **getCveList_1**(`vulnerabilitiesPostIn`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `options?`): `Promise`<`AxiosResponse`<[`VulnerabilitiesPostOut`](../interfaces/VulnerabilitiesPostOut.md), `any`\>\>
 
-Overview of vulnerabilities for specific CVEs provided in the body.
+This is an overview of vulnerabilities for specific CVEs provided in the body. Use this endpoint to get a CVSS score, and learn the severity for a list of CVEs provided in the request.
 
 **`Summary`**
 
-Vulnerabilities overview.
+Send a vulnerabilities overview
 
 **`Throws`**
 
@@ -623,7 +667,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6400)
+[api.ts:6358](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6358)
 
 ___
 
@@ -631,11 +675,11 @@ ___
 
 ▸ **getDashbar**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`DashbarOut`](../interfaces/DashbarOut.md), `any`\>\>
 
-Overview of CVE aggregations used for Dashbar.
+These are aggregations summarizing your account such as number of unique CVEs, list of security rules, CVEs by severity and more. Use this endpoint to obtain a snapshot of all the CVES and details about their prevalence, severity and other details.
 
 **`Summary`**
 
-Aggregations for Dashbar.
+Get aggregations for the dashbar
 
 **`Throws`**
 
@@ -660,7 +704,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6416)
+[api.ts:6374](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6374)
 
 ___
 
@@ -668,11 +712,11 @@ ___
 
 ▸ **getDashboard**(`tags?`, `sapSids?`, `sapSystem?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`Dashboard`](../interfaces/Dashboard.md), `any`\>\>
 
-Returns top level overview of vulnerabilities affecting given account.
+These are aggregations summarizing your account such as number of unique CVEs, list of security rules, CVEs by severity, and more. Use this endpoint to obtain a snapshot of all the CVES and details about their prevalence and severity.
 
 **`Summary`**
 
-Top level overview of vulnerabilities.
+Get a macro level overview of aggregated vulnerabilities
 
 **`Throws`**
 
@@ -697,7 +741,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6432)
+[api.ts:6390](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6390)
 
 ___
 
@@ -705,11 +749,11 @@ ___
 
 ▸ **getExecutiveReport**(`options?`): `Promise`<`AxiosResponse`<[`ExecutiveReport`](../interfaces/ExecutiveReport.md), `any`\>\>
 
-Returns top level overview of vulnerabilities affecting given account.
+This returns an overview of vulnerabilities affecting a given account. Use this request when you need to download a high-level, executive report summarizing the security exposure of your infrastructure. These reports are designed for an executive audience and include data such as the number of RHEL systems analyzed, the number of security rules in your infrastructure, percentage of CVEs with a certain severity and more.
 
 **`Summary`**
 
-Top level overview of vulnerabilities.
+Generate an executive report
 
 **`Throws`**
 
@@ -729,117 +773,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6443)
-
-___
-
-### getMitigatedSystemsByCve
-
-▸ **getMitigatedSystemsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
-
-Report of mitigated system IDs for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
-
-**`Summary`**
-
-IDs of mitigated systems for a given CVE which has a security rule.
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cveId` | `string` | CVE id. |
-| `filter?` | `string` | Full text filter for the display name of system. |
-| `limit?` | `number` | Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination. |
-| `offset?` | `number` | Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `page?` | `number` | Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `pageSize?` | `number` | Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `sort?` | `string` | Sorting used for response. |
-| `statusId?` | `string` | Filer based on CVE status ID. |
-| `dataFormat?` | `string` | Format of the output data, either JSON (default) or CSV. |
-| `uuid?` | `string` | Filter based on UUID of inventory. |
-| `ruleKey?` | `string`[] | Filters security rules by its error key. |
-| `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
-| `rule?` | `string`[] | Filters CVEs or systems by security rule, has two functionalities. If value is false, shows results without security rules, every other value is taken as rule error key. |
-| `tags?` | `string`[] | Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding. |
-| `sapSids?` | `string`[] | List of SAP IDs to filter with |
-| `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
-| `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
-| `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
-| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
-| `remediation?` | `string` | Filer based on available remediation type id. |
-| `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
-| `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`MitigatedSystemsIdsOut`](../interfaces/MitigatedSystemsIdsOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6477)
-
-___
-
-### getMitigatedSystemsIdsByCve
-
-▸ **getMitigatedSystemsIdsByCve**(`cveId`, `filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `statusId?`, `dataFormat?`, `uuid?`, `ruleKey?`, `rulePresence?`, `rule?`, `tags?`, `sapSids?`, `sapSystem?`, `showAdvisories?`, `advisory?`, `rhelVersion?`, `advisoryAvailable?`, `remediation?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
-
-Report of mitigated systems for a given CVE with a security rule. Returns empty list if CVE does not have a security rule.
-
-**`Summary`**
-
-Mitigated systems for a given CVE which has a security rule.
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cveId` | `string` | CVE id. |
-| `filter?` | `string` | Full text filter for the display name of system. |
-| `limit?` | `number` | Maximum number of records per page. Limit/Offset pagination wins over page/page_size pagination. |
-| `offset?` | `number` | Offset of first record of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `page?` | `number` | Page number of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `pageSize?` | `number` | Page size of paginated response. Limit/Offset pagination wins over page/page_size pagination. |
-| `sort?` | `string` | Sorting used for response. |
-| `statusId?` | `string` | Filer based on CVE status ID. |
-| `dataFormat?` | `string` | Format of the output data, either JSON (default) or CSV. |
-| `uuid?` | `string` | Filter based on UUID of inventory. |
-| `ruleKey?` | `string`[] | Filters security rules by its error key. |
-| `rulePresence?` | `boolean`[] | Comma seprated string with bools. If true shows only CVEs with security rule associated, if false shows CVEs without rules. true, false shows all. |
-| `rule?` | `string`[] | Filters CVEs or systems by security rule, has two functionalities. If value is false, shows results without security rules, every other value is taken as rule error key. |
-| `tags?` | `string`[] | Filter based on hosts tags. Tags needs to be in query format, that means &lt;namespace&gt;/&lt;key&gt;&#x3D;&lt;value&gt; or &lt;namespace&gt;/&lt;key&gt; if value is null. Characters \&#39;/\&#39;, \&#39;&#x3D;\&#39; in tag values needs to be escaped by url encoding. |
-| `sapSids?` | `string`[] | List of SAP IDs to filter with |
-| `sapSystem?` | `boolean` | Boolean value which shows systems managed by SAP. |
-| `showAdvisories?` | `boolean` | If true shows advisories list |
-| `advisory?` | `string` | filter by advisory name, works only with show_advisories&#x3D;true |
-| `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
-| `advisoryAvailable?` | `boolean`[] | String of booleans (array of booleans), where true shows CVE-system pairs with available advisory, false shows CVE-system pairs without available advisory. |
-| `remediation?` | `string` | Filer based on available remediation type id. |
-| `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
-| `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`MitigatedSystemsOut`](../interfaces/MitigatedSystemsOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6511)
+[api.ts:6401](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6401)
 
 ___
 
@@ -847,11 +781,11 @@ ___
 
 ▸ **getPlaybookTemplate**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`PlaybookTemplate`](../interfaces/PlaybookTemplate.md), `any`\>\>
 
-Return Ansible playbook template for given rule id.
+This returns an Ansible playbook template for a given rule identification number. Use this endpoint to return an Ansible playbook template for a given rule error key. The template is used to remediate issues on your system.
 
 **`Summary`**
 
-Playbook template for CVEs with security rules.
+Get an Ansible Playbook template for CVEs with security rules
 
 **`Throws`**
 
@@ -872,7 +806,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6523)
+[api.ts:6413](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6413)
 
 ___
 
@@ -880,11 +814,11 @@ ___
 
 ▸ **getStatusList**(`options?`): `Promise`<`AxiosResponse`<[`StatusListOut`](../interfaces/StatusListOut.md), `any`\>\>
 
-Returns available status and status_id pairs where status_id is internal ID of the status.
+This endpoint returns a list of possible values for setting status for a CVE or system-CVE pair. Call this api when you want to know which values are available for setting a status. A list of numbers will be returned. You must call this endpoint before calling the *PATCH/cves/status* endpoint.
 
 **`Summary`**
 
-Available status/status_id pairs.
+Access available status values
 
 **`Throws`**
 
@@ -904,7 +838,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6534)
+[api.ts:6424](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6424)
 
 ___
 
@@ -912,11 +846,11 @@ ___
 
 ▸ **getSystemDetails**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`SystemDetailsOut`](../interfaces/SystemDetailsOut.md), `any`\>\>
 
-Provides details of a system, e.g. it\'s opt out status.
+This allows you to get information about systems related to an inventory identification number. This includes details such as operating system, inventory tags, last update, opt-out status, and more.
 
 **`Summary`**
 
-System details.
+Get system details
 
 **`Throws`**
 
@@ -937,19 +871,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6546)
+[api.ts:6436](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6436)
 
 ___
 
 ### getSystemsIds
 
-▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md), `any`\>\>
+▸ **getSystemsIds**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`SystemIdsOut`](../interfaces/SystemIdsOut.md), `any`\>\>
 
-List systems IDs visible to logged in account.
+This lists systems including those that have opted out of the current query. Use this when you do not want to see a registered system or systems in your reports.
 
 **`Summary`**
 
-List systems IDs along with additional info about opt out state of the system.
+List systems identification numbers along with opt out state
 
 **`Throws`**
 
@@ -977,6 +911,8 @@ DefaultApi
 | `rhelVersion?` | `string` | Filters results by RHEL OS version. Automatically flters out systems which are not RHEL or have uknown OS. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -985,19 +921,19 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6573)
+[api.ts:6465](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6465)
 
 ___
 
 ### getSystemsList
 
-▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md), `any`\>\>
+▸ **getSystemsList**(`filter?`, `limit?`, `offset?`, `page?`, `pageSize?`, `sort?`, `dataFormat?`, `stale?`, `uuid?`, `tags?`, `sapSids?`, `sapSystem?`, `excluded?`, `rhelVersion?`, `report?`, `ansible?`, `mssql?`, `groupNames?`, `groupIds?`, `options?`): `Promise`<`AxiosResponse`<[`SystemListOut`](../interfaces/SystemListOut.md), `any`\>\>
 
-List systems visible to logged in account with basic information related to vulnerabilities.
+List systems that are accessible when you are logged into your account. Use this endpoint to view basic system attributes such as display name and system type.
 
 **`Summary`**
 
-List systems.
+List systems
 
 **`Throws`**
 
@@ -1026,6 +962,8 @@ DefaultApi
 | `report?` | `boolean` | Needs to be used when endpoint data is used for report generation, checks RBAC permission for report and export feature. |
 | `ansible?` | `boolean` | Boolean value which shows systems managed by Ansible Automation Platform. |
 | `mssql?` | `boolean` | Boolean value which shows systems managed by MSSQL. |
+| `groupNames?` | `string`[] | Names of the inventory groups. |
+| `groupIds?` | `string`[] | IDs of the inventory groups. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -1034,7 +972,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6601)
+[api.ts:6495](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6495)
 
 ___
 
@@ -1042,11 +980,11 @@ ___
 
 ▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`VersionOut`](../interfaces/VersionOut.md), `any`\>\>
 
-Get application version.
+This endpoint will provide you with the application version. Use this endpoint to track application changes.
 
 **`Summary`**
 
-Application version
+Get application version
 
 **`Throws`**
 
@@ -1066,7 +1004,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6612)
+[api.ts:6506](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6506)
 
 ___
 
@@ -1074,11 +1012,11 @@ ___
 
 ▸ **setCveBusinessRisk**(`cveRiskIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
-Sets business risk for a CVE.
+This sets a business risk for a specific CVE. Set a value of low, medium, high or critical for a given CVE. These values are obtained by the business risk path *GET/business_risk*. To set a business risk, you must call the GET/business_risk endpoint first, followed by the *PATCH/cves/business_risk* path.
 
 **`Summary`**
 
-Set business risk for a CVE.
+Set business risk for a CVE
 
 **`Throws`**
 
@@ -1099,7 +1037,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6624)
+[api.ts:6518](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6518)
 
 ___
 
@@ -1107,11 +1045,11 @@ ___
 
 ▸ **setCveStatus**(`cveStatusIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
-Sets status for a CVE.
+This sets the status for a specific CVE. Set a status value for a given CVE (e.g. in-review, on-hold, scheduled for a patch, or resolved). These values are obtained by sending a *GET/status* request. To set a status, you must call the *GET/business_risk* first, followed by the *PATCH/cves/status* path.
 
 **`Summary`**
 
-Set status for a CVE.
+Set status for a CVE
 
 **`Throws`**
 
@@ -1132,7 +1070,40 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6636)
+[api.ts:6530](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6530)
+
+___
+
+### setCvesWithoutErrata
+
+▸ **setCvesWithoutErrata**(`cvesWithoutErrataIn`, `options?`): `Promise`<`AxiosResponse`<[`CvesWithoutErrataOut`](../interfaces/CvesWithoutErrataOut.md), `any`\>\>
+
+Use this endpoint to enable/disable reporting CVEs that do not have advisories (errata) for your customer account. If the feature is disabled, CVEs without advisories will be hidden in outputs of all endpoints.
+
+**`Summary`**
+
+Set a feature flag for CVEs without errata
+
+**`Throws`**
+
+**`Memberof`**
+
+DefaultApi
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `cvesWithoutErrataIn` | [`CvesWithoutErrataIn`](../interfaces/CvesWithoutErrataIn.md) | Values to be set. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<[`CvesWithoutErrataOut`](../interfaces/CvesWithoutErrataOut.md), `any`\>\>
+
+#### Defined in
+
+[api.ts:6542](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6542)
 
 ___
 
@@ -1140,11 +1111,11 @@ ___
 
 ▸ **setStatus**(`statusIn`, `options?`): `Promise`<`AxiosResponse`<[`StatusOut`](../interfaces/StatusOut.md), `any`\>\>
 
-Sets status for given hosts and CVEs.
+This endpoint sets status for given systems and CVEs. Use this endpoint when you need to set a status value for system-CVE pairs.
 
 **`Summary`**
 
-Set status for system vulnerabilities.
+Set status for system vulnerabilities
 
 **`Throws`**
 
@@ -1165,7 +1136,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6648)
+[api.ts:6554](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6554)
 
 ___
 
@@ -1173,11 +1144,11 @@ ___
 
 ▸ **setSystemsOptOut**(`optOutIn`, `options?`): `Promise`<`AxiosResponse`<[`BulkChangeOut`](../interfaces/BulkChangeOut.md), `any`\>\>
 
-Opts in/out a systems. Opted out system is not shown and manageable by the vulnerability application.
+Opt a specific system in or out of vulnerability analysis. Use this when you want to use other Insights services but do not want to see specific systems in vulnerability reports. This allows you to hide select systems.
 
 **`Summary`**
 
-Opt in/out a system to/from vulnerability application.
+Opt a system in or out of the vulnerability service
 
 **`Throws`**
 
@@ -1198,4 +1169,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6660](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6660)
+[api.ts:6566](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L6566)

@@ -33,7 +33,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L662)
+[api.ts:662](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L662)
 
 ___
 
@@ -47,7 +47,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L668)
+[api.ts:668](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L668)
 
 ___
 
@@ -63,7 +63,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L674)
+[api.ts:674](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L674)
 
 ___
 
@@ -77,7 +77,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L680)
+[api.ts:680](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L680)
 
 ___
 
@@ -91,7 +91,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L686)
+[api.ts:686](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L686)
 
 ___
 
@@ -105,7 +105,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L692)
+[api.ts:692](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L692)
 
 ___
 
@@ -119,7 +119,7 @@ SourceType
 
 #### Defined in
 
-[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L698)
+[api.ts:698](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L698)
 
 ___
 
@@ -133,4 +133,4 @@ SourceType
 
 #### Defined in
 
-[api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L704)
+[api.ts:704](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L704)

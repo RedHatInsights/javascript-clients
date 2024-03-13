@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
+[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
+[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
 
 ___
 
@@ -77,7 +77,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
+[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/base.ts#L52)
 
 ___
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/base.ts#L50)
+[base.ts:50](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/base.ts#L50)
 
 ## Methods
 
@@ -124,7 +124,7 @@ HelptopicApi
 
 #### Defined in
 
-[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L433)
+[api.ts:433](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L433)
 
 ___
 
@@ -155,4 +155,4 @@ HelptopicApi
 
 #### Defined in
 
-[api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L445)
+[api.ts:445](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L445)

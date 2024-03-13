@@ -28,7 +28,7 @@ CrossAccountRequestPagination
 
 #### Defined in
 
-[api.ts:612](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L612)
+[api.ts:612](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L612)
 
 ___
 
@@ -42,7 +42,7 @@ CrossAccountRequestPagination
 
 #### Defined in
 
-[api.ts:606](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L606)
+[api.ts:606](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L606)
 
 ___
 
@@ -56,4 +56,4 @@ CrossAccountRequestPagination
 
 #### Defined in
 
-[api.ts:600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L600)
+[api.ts:600](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L600)

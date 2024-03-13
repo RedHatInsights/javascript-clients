@@ -28,7 +28,7 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L403)
+[api.ts:403](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L403)
 
 ___
 
@@ -42,7 +42,7 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L409)
+[api.ts:409](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L409)
 
 ___
 
@@ -58,4 +58,4 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L415)
+[api.ts:415](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L415)

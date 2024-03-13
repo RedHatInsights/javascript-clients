@@ -40,7 +40,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2368)
+[api.ts:2380](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2380)
 
 ___
 
@@ -54,7 +54,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2326)
+[api.ts:2338](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2338)
 
 ___
 
@@ -68,7 +68,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2350)
+[api.ts:2362](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2362)
 
 ___
 
@@ -82,7 +82,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2332)
+[api.ts:2344](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2344)
 
 ___
 
@@ -96,7 +96,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2308)
+[api.ts:2320](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2320)
 
 ___
 
@@ -110,7 +110,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2296)
+[api.ts:2308](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2308)
 
 ___
 
@@ -124,7 +124,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2290)
+[api.ts:2302](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2302)
 
 ___
 
@@ -138,7 +138,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2356)
+[api.ts:2368](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2368)
 
 ___
 
@@ -152,7 +152,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2362)
+[api.ts:2374](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2374)
 
 ___
 
@@ -166,7 +166,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2314)
+[api.ts:2326](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2326)
 
 ___
 
@@ -180,7 +180,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2284)
+[api.ts:2296](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2296)
 
 ___
 
@@ -194,7 +194,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2344)
+[api.ts:2356](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2356)
 
 ___
 
@@ -208,7 +208,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2320)
+[api.ts:2332](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2332)
 
 ___
 
@@ -222,7 +222,7 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2338)
+[api.ts:2350](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2350)
 
 ___
 
@@ -236,4 +236,4 @@ RoleWithAccess
 
 #### Defined in
 
-[api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2302)
+[api.ts:2314](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2314)
