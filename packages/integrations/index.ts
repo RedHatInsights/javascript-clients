@@ -5,51 +5,51 @@ export * from './utils/common';
 export * from './utils/configuration';
 export * from './types'
 
-export { default as endpointResourceV1CreateEndpointParamCreator } from './EndpointResourceV1CreateEndpoint'
+export { default as endpointResourceV1CreateEndpoint } from './EndpointResourceV1CreateEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1DeleteEndpointParamCreator } from './EndpointResourceV1DeleteEndpoint'
+export { default as endpointResourceV1DeleteEndpoint } from './EndpointResourceV1DeleteEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1DisableEndpointParamCreator } from './EndpointResourceV1DisableEndpoint'
+export { default as endpointResourceV1DisableEndpoint } from './EndpointResourceV1DisableEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1EnableEndpointParamCreator } from './EndpointResourceV1EnableEndpoint'
+export { default as endpointResourceV1EnableEndpoint } from './EndpointResourceV1EnableEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1GetDetailedEndpointHistoryParamCreator } from './EndpointResourceV1GetDetailedEndpointHistory'
+export { default as endpointResourceV1GetDetailedEndpointHistory } from './EndpointResourceV1GetDetailedEndpointHistory'
 
 
 // end of operations block
-export { default as endpointResourceV1GetEndpointParamCreator } from './EndpointResourceV1GetEndpoint'
+export { default as endpointResourceV1GetEndpoint } from './EndpointResourceV1GetEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1GetEndpointHistoryParamCreator } from './EndpointResourceV1GetEndpointHistory'
+export { default as endpointResourceV1GetEndpointHistory } from './EndpointResourceV1GetEndpointHistory'
 
 
 // end of operations block
-export { default as endpointResourceV1GetEndpointsParamCreator } from './EndpointResourceV1GetEndpoints'
+export { default as endpointResourceV1GetEndpoints } from './EndpointResourceV1GetEndpoints'
 
 
 // end of operations block
-export { default as endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator } from './EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint'
+export { default as endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint } from './EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator } from './EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint'
+export { default as endpointResourceV1GetOrCreateEmailSubscriptionEndpoint } from './EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1TestEndpointParamCreator } from './EndpointResourceV1TestEndpoint'
+export { default as endpointResourceV1TestEndpoint } from './EndpointResourceV1TestEndpoint'
 
 
 // end of operations block
-export { default as endpointResourceV1UpdateEndpointParamCreator } from './EndpointResourceV1UpdateEndpoint'
+export { default as endpointResourceV1UpdateEndpoint } from './EndpointResourceV1UpdateEndpoint'
 
 
 // end of operations block

@@ -8,7 +8,7 @@ export * from './types'
 {{#apiInfo.apis}}
 {{#operations}}
 {{#operation}}
-export { default as {{nickname}}ParamCreator } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
+export { default as {{nickname}} } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
 
 {{/operation}}
 

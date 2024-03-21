@@ -5,91 +5,91 @@ export * from './utils/common';
 export * from './utils/configuration';
 export * from './types'
 
-export { default as drawerResourceV1GetDrawerEntriesParamCreator } from './DrawerResourceV1GetDrawerEntries'
+export { default as drawerResourceV1GetDrawerEntries } from './DrawerResourceV1GetDrawerEntries'
 
 
 // end of operations block
-export { default as drawerResourceV1UpdateNotificationReadStatusParamCreator } from './DrawerResourceV1UpdateNotificationReadStatus'
+export { default as drawerResourceV1UpdateNotificationReadStatus } from './DrawerResourceV1UpdateNotificationReadStatus'
 
 
 // end of operations block
-export { default as eventResourceV1GetEventsParamCreator } from './EventResourceV1GetEvents'
+export { default as eventResourceV1GetEvents } from './EventResourceV1GetEvents'
 
 
 // end of operations block
-export { default as notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator } from './NotificationResourceV1AppendBehaviorGroupToEventType'
+export { default as notificationResourceV1AppendBehaviorGroupToEventType } from './NotificationResourceV1AppendBehaviorGroupToEventType'
 
 
 // end of operations block
-export { default as notificationResourceV1CreateBehaviorGroupParamCreator } from './NotificationResourceV1CreateBehaviorGroup'
+export { default as notificationResourceV1CreateBehaviorGroup } from './NotificationResourceV1CreateBehaviorGroup'
 
 
 // end of operations block
-export { default as notificationResourceV1DeleteBehaviorGroupParamCreator } from './NotificationResourceV1DeleteBehaviorGroup'
+export { default as notificationResourceV1DeleteBehaviorGroup } from './NotificationResourceV1DeleteBehaviorGroup'
 
 
 // end of operations block
-export { default as notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator } from './NotificationResourceV1DeleteBehaviorGroupFromEventType'
+export { default as notificationResourceV1DeleteBehaviorGroupFromEventType } from './NotificationResourceV1DeleteBehaviorGroupFromEventType'
 
 
 // end of operations block
-export { default as notificationResourceV1FindBehaviorGroupsByBundleIdParamCreator } from './NotificationResourceV1FindBehaviorGroupsByBundleId'
+export { default as notificationResourceV1FindBehaviorGroupsByBundleId } from './NotificationResourceV1FindBehaviorGroupsByBundleId'
 
 
 // end of operations block
-export { default as notificationResourceV1GetApplicationByNameAndBundleNameParamCreator } from './NotificationResourceV1GetApplicationByNameAndBundleName'
+export { default as notificationResourceV1GetApplicationByNameAndBundleName } from './NotificationResourceV1GetApplicationByNameAndBundleName'
 
 
 // end of operations block
-export { default as notificationResourceV1GetApplicationsFacetsParamCreator } from './NotificationResourceV1GetApplicationsFacets'
+export { default as notificationResourceV1GetApplicationsFacets } from './NotificationResourceV1GetApplicationsFacets'
 
 
 // end of operations block
-export { default as notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator } from './NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint'
+export { default as notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint } from './NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint'
 
 
 // end of operations block
-export { default as notificationResourceV1GetBundleByNameParamCreator } from './NotificationResourceV1GetBundleByName'
+export { default as notificationResourceV1GetBundleByName } from './NotificationResourceV1GetBundleByName'
 
 
 // end of operations block
-export { default as notificationResourceV1GetBundleFacetsParamCreator } from './NotificationResourceV1GetBundleFacets'
+export { default as notificationResourceV1GetBundleFacets } from './NotificationResourceV1GetBundleFacets'
 
 
 // end of operations block
-export { default as notificationResourceV1GetEventTypesParamCreator } from './NotificationResourceV1GetEventTypes'
+export { default as notificationResourceV1GetEventTypes } from './NotificationResourceV1GetEventTypes'
 
 
 // end of operations block
-export { default as notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator } from './NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup'
+export { default as notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup } from './NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup'
 
 
 // end of operations block
-export { default as notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator } from './NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName'
+export { default as notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName } from './NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName'
 
 
 // end of operations block
-export { default as notificationResourceV1GetLinkedBehaviorGroupsParamCreator } from './NotificationResourceV1GetLinkedBehaviorGroups'
+export { default as notificationResourceV1GetLinkedBehaviorGroups } from './NotificationResourceV1GetLinkedBehaviorGroups'
 
 
 // end of operations block
-export { default as notificationResourceV1UpdateBehaviorGroupParamCreator } from './NotificationResourceV1UpdateBehaviorGroup'
+export { default as notificationResourceV1UpdateBehaviorGroup } from './NotificationResourceV1UpdateBehaviorGroup'
 
 
 // end of operations block
-export { default as notificationResourceV1UpdateBehaviorGroupActionsParamCreator } from './NotificationResourceV1UpdateBehaviorGroupActions'
+export { default as notificationResourceV1UpdateBehaviorGroupActions } from './NotificationResourceV1UpdateBehaviorGroupActions'
 
 
 // end of operations block
-export { default as notificationResourceV1UpdateEventTypeBehaviorsParamCreator } from './NotificationResourceV1UpdateEventTypeBehaviors'
+export { default as notificationResourceV1UpdateEventTypeBehaviors } from './NotificationResourceV1UpdateEventTypeBehaviors'
 
 
 // end of operations block
-export { default as orgConfigResourceV1GetDailyDigestTimePreferenceParamCreator } from './OrgConfigResourceV1GetDailyDigestTimePreference'
+export { default as orgConfigResourceV1GetDailyDigestTimePreference } from './OrgConfigResourceV1GetDailyDigestTimePreference'
 
 
 // end of operations block
-export { default as orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
+export { default as orgConfigResourceV1SaveDailyDigestTimePreference } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
 
 
 // end of operations block
