@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.1.0...@redhat-cloud-services/notifications-client-2.2.0) (2024-03-21)
+
+
+### Features
+
+* update endpoint export template names and regenerate index files for notifications and integrations ([ee82411](https://github.com/RedHatInsights/javascript-clients/commit/ee82411a2f7f0dd3758ad9b387912338ca786e47))
+
 ## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.0.6...@redhat-cloud-services/notifications-client-2.1.0) (2024-02-16)
 
 
