@@ -2,9 +2,53 @@
 /* eslint-disable */
 
 import type { Configuration } from "./configuration";
-import type { RequestArgs } from "./base";
-import type { AxiosInstance, AxiosResponse } from 'axios';
-import { RequiredError } from "./base";
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+
+export const AuthTypeEnum = {
+  Basic: 'basic',
+  Bearer: 'bearer',
+  Oauth: 'oath',
+  InHeader: 'inHeader',
+  InQuery: 'inQuery'
+} as const;
+
+export type AuthTypeEnum = typeof AuthTypeEnum[keyof typeof AuthTypeEnum];
+
+/**
+ *
+ * @export
+ * @class RequiredError
+ * @extends {Error}
+ */
+export class RequiredError extends Error {
+  constructor(public field: string, msg?: string) {
+      super(msg);
+      this.name = "RequiredError"
+  }
+}
+
+/**
+ *
+ * @export
+ * @interface RequestArgs
+ */
+export interface RequestArgs {
+  urlObj: URL;
+  options: AxiosRequestConfig;
+  auth?: {
+    authType: AuthTypeEnum;
+    authKey?: string | [ string, string[] ];
+  }[],
+  serializeData?: unknown
+}
+
+
+export type ActionType = (...config: any) => Promise<RequestArgs>;
+
+export interface ApiConfig {
+  axios: AxiosInstance;
+  configuration?: Configuration;
+}
 
 /**
  *
@@ -77,17 +121,17 @@ function setFlattenedQueryParams(urlSearchParams: URLSearchParams, parameter: an
     if (typeof parameter === "object") {
         if (Array.isArray(parameter)) {
             (parameter as any[]).forEach(item => setFlattenedQueryParams(urlSearchParams, item, key));
-        } 
+        }
         else {
-            Object.keys(parameter).forEach(currentKey => 
+            Object.keys(parameter).forEach(currentKey =>
                 setFlattenedQueryParams(urlSearchParams, parameter[currentKey], `${key}${key !== '' ? '.' : ''}${currentKey}`)
             );
         }
-    } 
+    }
     else {
         if (urlSearchParams.has(key)) {
             urlSearchParams.append(key, parameter);
-        } 
+        }
         else {
             urlSearchParams.set(key, parameter);
         }
