@@ -48,7 +48,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ## Properties
 
@@ -62,7 +62,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ___
 
@@ -76,13 +76,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -90,7 +90,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:50](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L50)
+[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L50)
 
 ## Methods
 
@@ -120,4 +120,4 @@ BasePathFillerServiceApi
 
 #### Defined in
 
-[api.ts:339](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L339)
+[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L339)

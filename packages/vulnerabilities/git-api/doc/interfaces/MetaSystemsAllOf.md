@@ -19,7 +19,7 @@ MetaSystemsAllOf
 
 ### excluded
 
-• **excluded**: `string`
+• **excluded**: ``null`` \| `string`
 
 Display setting of opted out systems.
 
@@ -29,13 +29,13 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1934](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1934)
+[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1934)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -45,4 +45,4 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1940](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1940)
+[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1940)

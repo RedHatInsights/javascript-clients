@@ -35,7 +35,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:80](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L80)
+[packages/integrations/types/index.ts:80](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L80)
 
 ___
 
@@ -49,13 +49,13 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:86](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L86)
+[packages/integrations/types/index.ts:86](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L86)
 
 ___
 
 ### body\_template
 
-• `Optional` **body\_template**: [`Template`](Template.md)
+• `Optional` **body\_template**: [`AggregationEmailTemplateSubjectTemplate`](AggregationEmailTemplateSubjectTemplate.md)
 
 **`Memberof`**
 
@@ -63,7 +63,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:110](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L110)
+[packages/integrations/types/index.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L110)
 
 ___
 
@@ -77,7 +77,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:116](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L116)
+[packages/integrations/types/index.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L116)
 
 ___
 
@@ -91,7 +91,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:62](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L62)
+[packages/integrations/types/index.ts:62](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L62)
 
 ___
 
@@ -105,13 +105,13 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:74](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L74)
+[packages/integrations/types/index.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L74)
 
 ___
 
 ### subject\_template
 
-• `Optional` **subject\_template**: [`Template`](Template.md)
+• `Optional` **subject\_template**: [`AggregationEmailTemplateSubjectTemplate`](AggregationEmailTemplateSubjectTemplate.md)
 
 **`Memberof`**
 
@@ -119,7 +119,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:98](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L98)
+[packages/integrations/types/index.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L98)
 
 ___
 
@@ -133,7 +133,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:104](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L104)
+[packages/integrations/types/index.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L104)
 
 ___
 
@@ -147,7 +147,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:92](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L92)
+[packages/integrations/types/index.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L92)
 
 ___
 
@@ -161,4 +161,4 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:68](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L68)
+[packages/integrations/types/index.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L68)

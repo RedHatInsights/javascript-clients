@@ -30,4 +30,4 @@ ApplicationSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:236](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L236)
+[packages/notifications/types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L279)

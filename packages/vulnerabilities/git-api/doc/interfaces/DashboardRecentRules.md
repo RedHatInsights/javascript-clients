@@ -37,7 +37,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:698](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L698)
+[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L698)
 
 ___
 
@@ -53,7 +53,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:704](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L704)
+[api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L704)
 
 ___
 
@@ -69,7 +69,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:710](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L710)
+[api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L710)
 
 ___
 
@@ -85,13 +85,13 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:716](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L716)
+[api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L716)
 
 ___
 
 ### node\_id
 
-• `Optional` **node\_id**: `number`
+• `Optional` **node\_id**: ``null`` \| `number`
 
 Node id of access.redhat.com/node/_* article.
 
@@ -101,13 +101,13 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:722](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L722)
+[api.ts:722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L722)
 
 ___
 
 ### public\_date
 
-• `Optional` **public\_date**: `string`
+• `Optional` **public\_date**: ``null`` \| `string`
 
 String representation of ISO-8601 formatted date of release of the security rule.
 
@@ -117,7 +117,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:728](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L728)
+[api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L728)
 
 ___
 
@@ -133,7 +133,7 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:734](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L734)
+[api.ts:734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L734)
 
 ___
 
@@ -149,4 +149,4 @@ DashboardRecentRules
 
 #### Defined in
 
-[api.ts:740](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L740)
+[api.ts:740](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L740)

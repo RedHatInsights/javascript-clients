@@ -27,7 +27,7 @@ ControllersSystemsAdvisoriesRequest
 
 #### Defined in
 
-[api.ts:1676](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1676)
+[api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1676)
 
 ___
 
@@ -41,4 +41,4 @@ ControllersSystemsAdvisoriesRequest
 
 #### Defined in
 
-[api.ts:1682](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1682)
+[api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1682)

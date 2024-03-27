@@ -14,6 +14,7 @@ EventTypeSettingsValue
 
 - [emailSubscriptionTypes](EventTypeSettingsValue.md#emailsubscriptiontypes)
 - [hasForcedEmail](EventTypeSettingsValue.md#hasforcedemail)
+- [subscriptionLocked](EventTypeSettingsValue.md#subscriptionlocked)
 
 ## Properties
 
@@ -31,7 +32,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1028](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1028)
+[packages/integrations/types/index.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1089)
 
 ___
 
@@ -45,4 +46,18 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1034](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1034)
+[packages/integrations/types/index.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1095)
+
+___
+
+### subscriptionLocked
+
+• `Optional` **subscriptionLocked**: `boolean`
+
+**`Memberof`**
+
+EventTypeSettingsValue
+
+#### Defined in
+
+[packages/integrations/types/index.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1101)

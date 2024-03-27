@@ -33,7 +33,7 @@ Links
 
 #### Defined in
 
-[api.ts:1051](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1051)
+[api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1076)
 
 ___
 
@@ -49,13 +49,13 @@ Links
 
 #### Defined in
 
-[api.ts:1069](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1069)
+[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1094)
 
 ___
 
 ### next
 
-• **next**: `string`
+• **next**: ``null`` \| `string`
 
 The URI path for the next page in the pagination
 
@@ -65,13 +65,13 @@ Links
 
 #### Defined in
 
-[api.ts:1063](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1063)
+[api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1088)
 
 ___
 
 ### previous
 
-• **previous**: `string`
+• **previous**: ``null`` \| `string`
 
 The URI path for the previous page in the pagination
 
@@ -81,4 +81,4 @@ Links
 
 #### Defined in
 
-[api.ts:1057](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1057)
+[api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1082)

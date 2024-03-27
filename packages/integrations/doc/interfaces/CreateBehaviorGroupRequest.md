@@ -31,7 +31,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:472](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L472)
+[packages/integrations/types/index.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L515)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L478)
+[packages/integrations/types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L521)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:502](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L502)
+[packages/integrations/types/index.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L545)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:484](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L484)
+[packages/integrations/types/index.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L527)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:490](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L490)
+[packages/integrations/types/index.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L533)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:496](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L496)
+[packages/integrations/types/index.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L539)

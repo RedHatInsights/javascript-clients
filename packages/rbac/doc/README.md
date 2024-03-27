@@ -56,6 +56,14 @@ const groupApi = new HostsApi(undefined, BASE_PATH, instance);
 export groupApi;
 ```
 
+## Building
+
+Run `nx build rbac-client` to build the library.
+
+## Running unit tests
+
+Run `nx test rbac-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)

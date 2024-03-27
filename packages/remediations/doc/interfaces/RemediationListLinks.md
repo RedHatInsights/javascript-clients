@@ -31,7 +31,7 @@ RemediationListLinks
 
 #### Defined in
 
-[api.ts:1007](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1007)
+[api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1020)
 
 ___
 
@@ -47,13 +47,13 @@ RemediationListLinks
 
 #### Defined in
 
-[api.ts:1013](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1013)
+[api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1026)
 
 ___
 
 ### next
 
-• **next**: `string`
+• **next**: ``null`` \| `string`
 
 relative link to the next page of the query results (or null if this is the last page)
 
@@ -63,13 +63,13 @@ RemediationListLinks
 
 #### Defined in
 
-[api.ts:1019](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1019)
+[api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1032)
 
 ___
 
 ### previous
 
-• **previous**: `string`
+• **previous**: ``null`` \| `string`
 
 relative link to the previous page of the query results (or null if this is the first page)
 
@@ -79,4 +79,4 @@ RemediationListLinks
 
 #### Defined in
 
-[api.ts:1025](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1025)
+[api.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1038)

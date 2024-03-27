@@ -301,7 +301,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4139](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4139)
+[api.ts:4139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4139)
 
 ___
 
@@ -507,7 +507,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:17162](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L17162)
+[api.ts:17162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L17162)
 
 ___
 
@@ -711,4 +711,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:14157](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L14157)
+[api.ts:14157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L14157)

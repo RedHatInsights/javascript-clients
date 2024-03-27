@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -80,13 +80,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -125,7 +125,7 @@ CrossAccountRequestApi
 
 #### Defined in
 
-[api.ts:3058](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L3058)
+[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3207)
 
 ___
 
@@ -159,7 +159,7 @@ CrossAccountRequestApi
 
 #### Defined in
 
-[api.ts:3073](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L3073)
+[api.ts:3222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3222)
 
 ___
 
@@ -189,8 +189,8 @@ CrossAccountRequestApi
 | `account?` | `string` | Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by account number. |
 | `orgId?` | `string` | Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by&#x3D;user_id to further filter a user\&#39;s requests by org id. |
 | `approvedOnly?` | ``"true"`` | Parameter for filtering resource which have been approved. |
-| `status?` | ``"pending"`` \| ``"expired"`` \| ``"denied"`` \| ``"approved"`` \| ``"cancelled"`` | Parameter for filtering resource based on status. |
-| `orderBy?` | ``"status"`` \| ``"request_id"`` \| ``"start_date"`` \| ``"end_date"`` \| ``"created"`` \| ``"modified"`` | Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date. |
+| `status?` | ``"pending"`` \| ``"approved"`` \| ``"denied"`` \| ``"cancelled"`` \| ``"expired"`` | Parameter for filtering resource based on status. |
+| `orderBy?` | ``"request_id"`` \| ``"start_date"`` \| ``"end_date"`` \| ``"created"`` \| ``"modified"`` \| ``"status"`` | Parameter for ordering by field. For inverse ordering, use \&#39;-\&#39;, e.g. ?order_by&#x3D;-start_date. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -199,7 +199,7 @@ CrossAccountRequestApi
 
 #### Defined in
 
-[api.ts:3092](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L3092)
+[api.ts:3241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3241)
 
 ___
 
@@ -233,7 +233,7 @@ CrossAccountRequestApi
 
 #### Defined in
 
-[api.ts:3105](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L3105)
+[api.ts:3254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3254)
 
 ___
 
@@ -267,4 +267,4 @@ CrossAccountRequestApi
 
 #### Defined in
 
-[api.ts:3118](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L3118)
+[api.ts:3267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L3267)

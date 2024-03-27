@@ -33,7 +33,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:497](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L497)
+[api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L510)
 
 ___
 
@@ -47,7 +47,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:503](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L503)
+[api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L516)
 
 ___
 
@@ -61,7 +61,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:491](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L491)
+[api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L504)
 
 ___
 
@@ -75,7 +75,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:479](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L479)
+[api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L492)
 
 ___
 
@@ -89,7 +89,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:485](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L485)
+[api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L498)
 
 ___
 
@@ -103,4 +103,4 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:509](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L509)
+[api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L522)

@@ -12,18 +12,18 @@ StalenessInAnyOf
 
 ### Properties
 
-- [conventional\_culling\_delta](StalenessInAnyOf.md#conventional_culling_delta)
-- [conventional\_stale\_warning\_delta](StalenessInAnyOf.md#conventional_stale_warning_delta)
-- [conventional\_staleness\_delta](StalenessInAnyOf.md#conventional_staleness_delta)
-- [immutable\_culling\_delta](StalenessInAnyOf.md#immutable_culling_delta)
-- [immutable\_stale\_warning\_delta](StalenessInAnyOf.md#immutable_stale_warning_delta)
-- [immutable\_staleness\_delta](StalenessInAnyOf.md#immutable_staleness_delta)
+- [conventional\_time\_to\_delete](StalenessInAnyOf.md#conventional_time_to_delete)
+- [conventional\_time\_to\_stale](StalenessInAnyOf.md#conventional_time_to_stale)
+- [conventional\_time\_to\_stale\_warning](StalenessInAnyOf.md#conventional_time_to_stale_warning)
+- [immutable\_time\_to\_delete](StalenessInAnyOf.md#immutable_time_to_delete)
+- [immutable\_time\_to\_stale](StalenessInAnyOf.md#immutable_time_to_stale)
+- [immutable\_time\_to\_stale\_warning](StalenessInAnyOf.md#immutable_time_to_stale_warning)
 
 ## Properties
 
-### conventional\_culling\_delta
+### conventional\_time\_to\_delete
 
-• `Optional` **conventional\_culling\_delta**: `number`
+• `Optional` **conventional\_time\_to\_delete**: `number`
 
 **`Memberof`**
 
@@ -31,13 +31,13 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1414](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1414)
+[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1451)
 
 ___
 
-### conventional\_stale\_warning\_delta
+### conventional\_time\_to\_stale
 
-• `Optional` **conventional\_stale\_warning\_delta**: `number`
+• `Optional` **conventional\_time\_to\_stale**: `number`
 
 **`Memberof`**
 
@@ -45,13 +45,13 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1408](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1408)
+[api.ts:1439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1439)
 
 ___
 
-### conventional\_staleness\_delta
+### conventional\_time\_to\_stale\_warning
 
-• `Optional` **conventional\_staleness\_delta**: `number`
+• `Optional` **conventional\_time\_to\_stale\_warning**: `number`
 
 **`Memberof`**
 
@@ -59,13 +59,13 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1402](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1402)
+[api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1445)
 
 ___
 
-### immutable\_culling\_delta
+### immutable\_time\_to\_delete
 
-• `Optional` **immutable\_culling\_delta**: `number`
+• `Optional` **immutable\_time\_to\_delete**: `number`
 
 **`Memberof`**
 
@@ -73,13 +73,13 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1432](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1432)
+[api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1469)
 
 ___
 
-### immutable\_stale\_warning\_delta
+### immutable\_time\_to\_stale
 
-• `Optional` **immutable\_stale\_warning\_delta**: `number`
+• `Optional` **immutable\_time\_to\_stale**: `number`
 
 **`Memberof`**
 
@@ -87,13 +87,13 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1426](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1426)
+[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1457)
 
 ___
 
-### immutable\_staleness\_delta
+### immutable\_time\_to\_stale\_warning
 
-• `Optional` **immutable\_staleness\_delta**: `number`
+• `Optional` **immutable\_time\_to\_stale\_warning**: `number`
 
 **`Memberof`**
 
@@ -101,4 +101,4 @@ StalenessInAnyOf
 
 #### Defined in
 
-[api.ts:1420](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1420)
+[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)

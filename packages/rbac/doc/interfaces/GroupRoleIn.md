@@ -26,4 +26,4 @@ GroupRoleIn
 
 #### Defined in
 
-[api.ts:1056](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1056)
+[api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1056)

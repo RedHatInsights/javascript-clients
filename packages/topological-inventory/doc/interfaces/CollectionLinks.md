@@ -29,7 +29,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:242](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L242)
+[api.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L242)
 
 ___
 
@@ -43,7 +43,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:248](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L248)
+[api.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L248)
 
 ___
 
@@ -57,7 +57,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:254](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L254)
+[api.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L254)
 
 ___
 
@@ -71,4 +71,4 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:260](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L260)
+[api.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L260)

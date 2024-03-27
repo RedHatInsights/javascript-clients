@@ -163,13 +163,13 @@ export interface AllAck {
  */
 export interface AllRuleRatings {
     /**
-     *
+     * Rule ID from Insights
      * @type {string}
      * @memberof AllRuleRatings
      */
     rule: string;
     /**
-     *
+     * * `-1` - Dislike * `0` - Neutral * `1` - Like
      * @type {number}
      * @memberof AllRuleRatings
      */
@@ -340,7 +340,7 @@ export interface HostAck {
      */
     id: number;
     /**
-     *
+     * Rule ID from Insights
      * @type {string}
      * @memberof HostAck
      */
@@ -389,7 +389,7 @@ export interface HostAck {
  */
 export interface HostAckInput {
     /**
-     *
+     * Rule ID from Insights
      * @type {string}
      * @memberof HostAckInput
      */
@@ -1156,10 +1156,10 @@ export interface Report {
     rule: Rule;
     /**
      *
-     * @type {{ [key: string]: any; }}
+     * @type {any}
      * @memberof Report
      */
-    details: { [key: string]: any; };
+    details: any;
     /**
      *
      * @type {Resolution}
@@ -1205,10 +1205,10 @@ export interface ReportExport {
     report_time: string;
     /**
      *
-     * @type {{ [key: string]: any; }}
+     * @type {any}
      * @memberof ReportExport
      */
-    details: { [key: string]: any; };
+    details: any;
     /**
      *
      * @type {string}
@@ -1777,13 +1777,13 @@ export interface RulePathway {
  */
 export interface RuleRating {
     /**
-     *
+     * Rule ID from Insights
      * @type {string}
      * @memberof RuleRating
      */
     rule: string;
     /**
-     *
+     * * `-1` - Dislike * `0` - Neutral * `1` - Like
      * @type {number}
      * @memberof RuleRating
      */
@@ -2605,177 +2605,6 @@ export class AccountApi extends BaseAPI {
      */
     public accountRetrieve(orgId: string, options?: any) {
         return AccountApiFp(this.configuration).accountRetrieve(orgId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-}
-
-
-/**
- * AccountSettingApi - axios parameter creator
- * @export
- */
-export const AccountSettingApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountSettingCreate: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/insights/v1/account_setting/`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication x-rh-identity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountSettingRetrieve: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/insights/v1/account_setting/`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication x-rh-identity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * AccountSettingApi - functional programming interface
- * @export
- */
-export const AccountSettingApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async accountSettingCreate(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await AccountSettingApiAxiosParamCreator(configuration).accountSettingCreate(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async accountSettingRetrieve(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await AccountSettingApiAxiosParamCreator(configuration).accountSettingRetrieve(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * AccountSettingApi - factory interface
- * @export
- */
-export const AccountSettingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountSettingCreate(options?: any): AxiosPromise<void> {
-            return AccountSettingApiFp(configuration).accountSettingCreate(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountSettingRetrieve(options?: any): AxiosPromise<void> {
-            return AccountSettingApiFp(configuration).accountSettingRetrieve(options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * AccountSettingApi - object-oriented interface
- * @export
- * @class AccountSettingApi
- * @extends {BaseAPI}
- */
-export class AccountSettingApi extends BaseAPI {
-    /**
-     * Update this account\'s settings, and return the updated settings.  A new object will be created, even if the default settings are supplied.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountSettingApi
-     */
-    public accountSettingCreate(options?: any) {
-        return AccountSettingApiFp(this.configuration).accountSettingCreate(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show this account\'s settings, or the defaults.  This will not create a new account settings object if none exists.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountSettingApi
-     */
-    public accountSettingRetrieve(options?: any) {
-        return AccountSettingApiFp(this.configuration).accountSettingRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -3837,11 +3666,12 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportHitsList: async (category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options: any = {}): Promise<RequestArgs> => {
+        exportHitsList: async (category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/export/hits/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3920,6 +3750,10 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['total_risk'] = totalRisk;
             }
 
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
             if (uuid !== undefined) {
                 localVarQueryParameter['uuid'] = uuid;
             }
@@ -3939,10 +3773,26 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportReportsList: async (options: any = {}): Promise<RequestArgs> => {
+        exportReportsList: async (category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/export/reports/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3961,6 +3811,70 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hasPlaybook !== undefined) {
+                localVarQueryParameter['has_playbook'] = hasPlaybook;
+            }
+
+            if (impact) {
+                localVarQueryParameter['impact'] = impact;
+            }
+
+            if (incident !== undefined) {
+                localVarQueryParameter['incident'] = incident;
+            }
+
+            if (likelihood) {
+                localVarQueryParameter['likelihood'] = likelihood;
+            }
+
+            if (reboot !== undefined) {
+                localVarQueryParameter['reboot'] = reboot;
+            }
+
+            if (resRisk) {
+                localVarQueryParameter['res_risk'] = resRisk;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+            if (totalRisk) {
+                localVarQueryParameter['total_risk'] = totalRisk;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3976,10 +3890,26 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportRulesList: async (options: any = {}): Promise<RequestArgs> => {
+        exportRulesList: async (category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/export/rules/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -3996,6 +3926,70 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
                     ? await configuration.apiKey("x-rh-identity")
                     : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (category) {
+                localVarQueryParameter['category'] = category;
+            }
+
+            if (displayName !== undefined) {
+                localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (groups) {
+                localVarQueryParameter['groups'] = groups;
+            }
+
+            if (hasPlaybook !== undefined) {
+                localVarQueryParameter['has_playbook'] = hasPlaybook;
+            }
+
+            if (impact) {
+                localVarQueryParameter['impact'] = impact;
+            }
+
+            if (incident !== undefined) {
+                localVarQueryParameter['incident'] = incident;
+            }
+
+            if (likelihood) {
+                localVarQueryParameter['likelihood'] = likelihood;
+            }
+
+            if (reboot !== undefined) {
+                localVarQueryParameter['reboot'] = reboot;
+            }
+
+            if (resRisk) {
+                localVarQueryParameter['res_risk'] = resRisk;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (text !== undefined) {
+                localVarQueryParameter['text'] = text;
+            }
+
+            if (totalRisk) {
+                localVarQueryParameter['total_risk'] = totalRisk;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
+            if (uuid !== undefined) {
+                localVarQueryParameter['uuid'] = uuid;
             }
 
 
@@ -4018,10 +4012,11 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [ruleId] Display systems with this text in their rule_id
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystemsList: async (displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options: any = {}): Promise<RequestArgs> => {
+        exportSystemsList: async (displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/export/systems/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -4058,6 +4053,10 @@ export const ExportApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (sort !== undefined) {
                 localVarQueryParameter['sort'] = sort;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -4099,12 +4098,13 @@ export const ExportApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ExportHits>>> {
-            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options);
+        async exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ExportHits>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4112,11 +4112,27 @@ export const ExportApiFp = function(configuration?: Configuration) {
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async exportReportsList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportExport>>> {
-            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportReportsList(options);
+        async exportReportsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReportExport>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportReportsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4124,11 +4140,27 @@ export const ExportApiFp = function(configuration?: Configuration) {
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async exportRulesList(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleExport>>> {
-            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportRulesList(options);
+        async exportRulesList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RuleExport>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportRulesList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4141,11 +4173,12 @@ export const ExportApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [ruleId] Display systems with this text in their rule_id
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<System>>> {
-            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options);
+        async exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<System>>> {
+            const localVarAxiosArgs = await ExportApiAxiosParamCreator(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4177,28 +4210,61 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Display rules with this text in their text fields
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any): AxiosPromise<Array<ExportHits>> {
-            return ExportApiFp(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options).then((request) => request(axios, basePath));
+        exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): AxiosPromise<Array<ExportHits>> {
+            return ExportApiFp(configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportReportsList(options?: any): AxiosPromise<Array<ReportExport>> {
-            return ExportApiFp(configuration).exportReportsList(options).then((request) => request(axios, basePath));
+        exportReportsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): AxiosPromise<Array<ReportExport>> {
+            return ExportApiFp(configuration).exportReportsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+         * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+         * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasPlaybook] Display rules that have a playbook
+         * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+         * @param {boolean} [incident] Display only rules that cause an incident
+         * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+         * @param {boolean} [reboot] Display rules that require a reboot to fix
+         * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+         * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {string} [text] Display rules with this text in their text fields
+         * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+         * @param {string} [uuid] Display a system with this uuid
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportRulesList(options?: any): AxiosPromise<Array<RuleExport>> {
-            return ExportApiFp(configuration).exportRulesList(options).then((request) => request(axios, basePath));
+        exportRulesList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any): AxiosPromise<Array<RuleExport>> {
+            return ExportApiFp(configuration).exportRulesList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(axios, basePath));
         },
         /**
          * List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
@@ -4207,11 +4273,12 @@ export const ExportApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [ruleId] Display systems with this text in their rule_id
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any): AxiosPromise<Array<System>> {
-            return ExportApiFp(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options).then((request) => request(axios, basePath));
+        exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<Array<System>> {
+            return ExportApiFp(configuration).exportSystemsList(displayName, format, groups, ruleId, sort, updateMethod, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4240,33 +4307,66 @@ export class ExportApi extends BaseAPI {
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {string} [text] Display rules with this text in their text fields
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {string} [uuid] Display a system with this uuid
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, uuid?: string, options?: any) {
-        return ExportApiFp(this.configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, uuid, options).then((request) => request(this.axios, this.basePath));
+    public exportHitsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any) {
+        return ExportApiFp(this.configuration).exportHitsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+     * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [hasPlaybook] Display rules that have a playbook
+     * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+     * @param {boolean} [incident] Display only rules that cause an incident
+     * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+     * @param {boolean} [reboot] Display rules that require a reboot to fix
+     * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Display rules with this text in their text fields
+     * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+     * @param {string} [uuid] Display a system with this uuid
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportReportsList(options?: any) {
-        return ExportApiFp(this.configuration).exportReportsList(options).then((request) => request(this.axios, this.basePath));
+    public exportReportsList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any) {
+        return ExportApiFp(this.configuration).exportReportsList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
+     * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+     * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
+     * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [hasPlaybook] Display rules that have a playbook
+     * @param {Array<1 | 2 | 3 | 4>} [impact] Display rules of this impact level (1..4)
+     * @param {boolean} [incident] Display only rules that cause an incident
+     * @param {Array<1 | 2 | 3 | 4>} [likelihood] Display only rules of this likelihood level (1..4)
+     * @param {boolean} [reboot] Display rules that require a reboot to fix
+     * @param {Array<1 | 2 | 3 | 4>} [resRisk] Display rules with this resolution risk level (1..4)
+     * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {string} [text] Display rules with this text in their text fields
+     * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
+     * @param {string} [uuid] Display a system with this uuid
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportRulesList(options?: any) {
-        return ExportApiFp(this.configuration).exportRulesList(options).then((request) => request(this.axios, this.basePath));
+    public exportRulesList(category?: Array<1 | 2 | 3 | 4>, displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, impact?: Array<1 | 2 | 3 | 4>, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, reboot?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, tags?: Array<string>, text?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, uuid?: string, options?: any) {
+        return ExportApiFp(this.configuration).exportRulesList(category, displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, impact, incident, likelihood, reboot, resRisk, tags, text, totalRisk, updateMethod, uuid, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4276,12 +4376,13 @@ export class ExportApi extends BaseAPI {
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {string} [ruleId] Display systems with this text in their rule_id
      * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExportApi
      */
-    public exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', options?: any) {
-        return ExportApiFp(this.configuration).exportSystemsList(displayName, format, groups, ruleId, sort, options).then((request) => request(this.axios, this.basePath));
+    public exportSystemsList(displayName?: string, format?: 'csv' | 'json', groups?: Array<string>, ruleId?: string, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return ExportApiFp(this.configuration).exportSystemsList(displayName, format, groups, ruleId, sort, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
 }
@@ -4941,7 +5042,8 @@ export class KcsApi extends BaseAPI {
 export const PathwayApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @summary Create a new Pathway in the system
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4987,7 +5089,8 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @summary Destroy an existing Pathway in the system
          * @param {string} slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5030,19 +5133,26 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @summary Return all pathways
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasIncident] Display only pathways where there are incidents.
+         * @param {boolean} [impacting] Display pathways even if they aren\&#39;t impacting systems currently
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {boolean} [rebootRequired] Display only pathways where reboot is required.
+         * @param {'-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+        pathwayList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasIncident?: boolean, impacting?: boolean, limit?: number, offset?: number, rebootRequired?: boolean, sort?: '-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level', tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/pathway/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5065,6 +5175,14 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['category'] = category;
             }
 
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
             if (filterSystemProfileSapSidsContains) {
                 localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
             }
@@ -5077,12 +5195,28 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['groups'] = groups;
             }
 
+            if (hasIncident !== undefined) {
+                localVarQueryParameter['has_incident'] = hasIncident;
+            }
+
+            if (impacting !== undefined) {
+                localVarQueryParameter['impacting'] = impacting;
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (rebootRequired !== undefined) {
+                localVarQueryParameter['reboot_required'] = rebootRequired;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
             }
 
             if (tags) {
@@ -5107,17 +5241,19 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @summary Get the list of systems for each rule in this pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
          * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayReportsRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+        pathwayReportsRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayReportsRetrieve.');
@@ -5161,6 +5297,10 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['text'] = text;
             }
 
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5175,9 +5315,12 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @summary Returns an individual Pathway based on slug
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5186,7 +5329,7 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+        pathwayRetrieve: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwayRetrieve.');
@@ -5212,6 +5355,14 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
 
             if (category) {
                 localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
             }
 
             if (filterSystemProfileSapSidsContains) {
@@ -5248,7 +5399,8 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @summary Get all rules in a Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {number} [limit] Number of results to return per page.
@@ -5311,9 +5463,12 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @summary Get all impacted systems for an account for a specific Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5321,10 +5476,11 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwaySystemsList: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options: any = {}): Promise<RequestArgs> => {
+        pathwaySystemsList: async (slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling pathwaySystemsList.');
@@ -5350,6 +5506,14 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
 
             if (category) {
                 localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
             }
 
             if (filterSystemProfileSapSidsContains) {
@@ -5380,6 +5544,10 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['text'] = text;
             }
 
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5394,7 +5562,8 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @summary Update an existing Pathway in the system
          * @param {string} slug
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
@@ -5455,7 +5624,8 @@ export const PathwayApiAxiosParamCreator = function (configuration?: Configurati
 export const PathwayApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @summary Create a new Pathway in the system
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5468,7 +5638,8 @@ export const PathwayApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @summary Destroy an existing Pathway in the system
          * @param {string} slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5481,47 +5652,59 @@ export const PathwayApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @summary Return all pathways
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasIncident] Display only pathways where there are incidents.
+         * @param {boolean} [impacting] Display pathways even if they aren\&#39;t impacting systems currently
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {boolean} [rebootRequired] Display only pathways where reboot is required.
+         * @param {'-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPathwayList>> {
-            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options);
+        async pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasIncident?: boolean, impacting?: boolean, limit?: number, offset?: number, rebootRequired?: boolean, sort?: '-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level', tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedPathwayList>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasIncident, impacting, limit, offset, rebootRequired, sort, tags, text, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @summary Get the list of systems for each rule in this pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
          * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleSystemsExport>> {
-            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options);
+        async pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleSystemsExport>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @summary Returns an individual Pathway based on slug
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5530,15 +5713,16 @@ export const PathwayApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pathway>> {
-            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options);
+        async pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Pathway>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwayRetrieve(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @summary Get all rules in a Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {number} [limit] Number of results to return per page.
@@ -5555,9 +5739,12 @@ export const PathwayApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @summary Get all impacted systems for an account for a specific Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5565,18 +5752,20 @@ export const PathwayApiFp = function(configuration?: Configuration) {
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
-            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options);
+        async pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
+            const localVarAxiosArgs = await PathwayApiAxiosParamCreator(configuration).pathwaySystemsList(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @summary Update an existing Pathway in the system
          * @param {string} slug
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
@@ -5599,7 +5788,8 @@ export const PathwayApiFp = function(configuration?: Configuration) {
 export const PathwayApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+         * @summary Create a new Pathway in the system
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5608,7 +5798,8 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
             return PathwayApiFp(configuration).pathwayCreate(pathwayInput, options).then((request) => request(axios, basePath));
         },
         /**
-         * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+         * @summary Destroy an existing Pathway in the system
          * @param {string} slug
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -5617,39 +5808,51 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
             return PathwayApiFp(configuration).pathwayDestroy(slug, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+         * @summary Return all pathways
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
+         * @param {boolean} [hasIncident] Display only pathways where there are incidents.
+         * @param {boolean} [impacting] Display pathways even if they aren\&#39;t impacting systems currently
          * @param {number} [limit] Number of results to return per page.
          * @param {number} [offset] The initial index from which to return the results.
+         * @param {boolean} [rebootRequired] Display only pathways where reboot is required.
+         * @param {'-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): AxiosPromise<PaginatedPathwayList> {
-            return PathwayApiFp(configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(axios, basePath));
+        pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasIncident?: boolean, impacting?: boolean, limit?: number, offset?: number, rebootRequired?: boolean, sort?: '-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level', tags?: Array<string>, text?: string, options?: any): AxiosPromise<PaginatedPathwayList> {
+            return PathwayApiFp(configuration).pathwayList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasIncident, impacting, limit, offset, rebootRequired, sort, tags, text, options).then((request) => request(axios, basePath));
         },
         /**
-         * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+         * @summary Get the list of systems for each rule in this pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
          * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any): AxiosPromise<RuleSystemsExport> {
-            return PathwayApiFp(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options).then((request) => request(axios, basePath));
+        pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<RuleSystemsExport> {
+            return PathwayApiFp(configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+         * @summary Returns an individual Pathway based on slug
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5658,11 +5861,12 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): AxiosPromise<Pathway> {
-            return PathwayApiFp(configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(axios, basePath));
+        pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any): AxiosPromise<Pathway> {
+            return PathwayApiFp(configuration).pathwayRetrieve(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(axios, basePath));
         },
         /**
-         * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+         * @summary Get all rules in a Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
          * @param {number} [limit] Number of results to return per page.
@@ -5675,9 +5879,12 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
             return PathwayApiFp(configuration).pathwayRulesList(slug, category, limit, offset, text, options).then((request) => request(axios, basePath));
         },
         /**
-         * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+         * @summary Get all impacted systems for an account for a specific Pathway
          * @param {string} slug
          * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -5685,14 +5892,16 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any): AxiosPromise<PaginatedSystemList> {
-            return PathwayApiFp(configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(axios, basePath));
+        pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<PaginatedSystemList> {
+            return PathwayApiFp(configuration).pathwaySystemsList(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+         * @summary Update an existing Pathway in the system
          * @param {string} slug
          * @param {PathwayInput} pathwayInput
          * @param {*} [options] Override http request option.
@@ -5712,7 +5921,8 @@ export const PathwayApiFactory = function (configuration?: Configuration, basePa
  */
 export class PathwayApi extends BaseAPI {
     /**
-     * Create a new Pathway in the system.  This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+     * This creates a new Pathway in the system. Required fields are \"name,\" \"description,\" \"component,\" \"resolution_risk,\" and \"publish_date.\" \"name\" is a slug field and used to identify and retrieve Pathways for detailed analysis. The slug for a Pathway is auto-generated by converting the \"name\" to lowercase and replacing all spaces with dashes. \"resolution_risk\" should be the \"name\" of the ResolutionRisk to associate with this Pathway, not the risk value.
+     * @summary Create a new Pathway in the system
      * @param {PathwayInput} pathwayInput
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5723,7 +5933,8 @@ export class PathwayApi extends BaseAPI {
     }
 
     /**
-     * Destroy an existing Pathway in the system.  This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+     * This will DELETE an existing Pathway in the system. Existing pathways are identified and deleted by the \"slug\" field.
+     * @summary Destroy an existing Pathway in the system
      * @param {string} slug
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5734,43 +5945,55 @@ export class PathwayApi extends BaseAPI {
     }
 
     /**
-     * Returns all Pathways  This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+     * This returns a list of all Pathways. Will display the same information as is provided in the retrieve view, but has all Pathways listed.
+     * @summary Return all pathways
      * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
+     * @param {boolean} [hasIncident] Display only pathways where there are incidents.
+     * @param {boolean} [impacting] Display pathways even if they aren\&#39;t impacting systems currently
      * @param {number} [limit] Number of results to return per page.
      * @param {number} [offset] The initial index from which to return the results.
+     * @param {boolean} [rebootRequired] Display only pathways where reboot is required.
+     * @param {'-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level'} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PathwayApi
      */
-    public pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any) {
-        return PathwayApiFp(this.configuration).pathwayList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(this.axios, this.basePath));
+    public pathwayList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasIncident?: boolean, impacting?: boolean, limit?: number, offset?: number, rebootRequired?: boolean, sort?: '-impacted_systems_count' | '-name' | '-recommendation_level' | 'impacted_systems_count' | 'name' | 'recommendation_level', tags?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasIncident, impacting, limit, offset, rebootRequired, sort, tags, text, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Get the list of systems for each rule in this pathway.  Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+     * Each rule is listed once, with the systems currently reporting an incidence of that rule in a list.
+     * @summary Get the list of systems for each rule in this pathway
      * @param {string} slug
      * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {Array<string>} [hostId] Display Pathway Reports of this/these systems
      * @param {Array<string>} [ruleId] Display Pathway Reports of this/these rules
      * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PathwayApi
      */
-    public pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, options?: any) {
-        return PathwayApiFp(this.configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, options).then((request) => request(this.axios, this.basePath));
+    public pathwayReportsRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, groups?: Array<string>, hostId?: Array<string>, ruleId?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayReportsRetrieve(slug, category, groups, hostId, ruleId, text, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Returns an individual Pathway based on slug.  This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+     * This returns an individual pathway based on slug. Will display the same information as is provided in the list view.
+     * @summary Returns an individual Pathway based on slug
      * @param {string} slug
      * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
@@ -5780,12 +6003,13 @@ export class PathwayApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PathwayApi
      */
-    public pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any) {
-        return PathwayApiFp(this.configuration).pathwayRetrieve(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(this.axios, this.basePath));
+    public pathwayRetrieve(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, text?: string, options?: any) {
+        return PathwayApiFp(this.configuration).pathwayRetrieve(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, text, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Get all rules in a Pathway  This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+     * This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
+     * @summary Get all rules in a Pathway
      * @param {string} slug
      * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
      * @param {number} [limit] Number of results to return per page.
@@ -5800,9 +6024,12 @@ export class PathwayApi extends BaseAPI {
     }
 
     /**
-     * Get all impacted systems for an account, for a specific Pathway  This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+     * This view will retrieve/list in paginated format, all impacted systems for an account, for a specific Pathway. The specific Pathway is requested by its slug.
+     * @summary Get all impacted systems for an account for a specific Pathway
      * @param {string} slug
      * @param {Array<1 | 2 | 3 | 4>} [category] Filter rules of this category (number)
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
@@ -5810,16 +6037,18 @@ export class PathwayApi extends BaseAPI {
      * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {string} [text] Filter pathway names with this text. If viewing details for a pathway for rules, reports and systems, additional filter on their text fields
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PathwayApi
      */
-    public pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, options?: any) {
-        return PathwayApiFp(this.configuration).pathwaySystemsList(slug, category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, options).then((request) => request(this.axios, this.basePath));
+    public pathwaySystemsList(slug: string, category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, offset?: number, tags?: Array<string>, text?: string, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return PathwayApiFp(this.configuration).pathwaySystemsList(slug, category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, offset, tags, text, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * Update an existing Pathway in the system.  This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+     * This updates an existing Pathway already defined in the system. All fields that are required to define a Pathway initially may be updated here as well. Pathways are idenfitied and updated by the \"slug\" field.
+     * @summary Update an existing Pathway in the system
      * @param {string} slug
      * @param {PathwayInput} pathwayInput
      * @param {*} [options] Override http request option.
@@ -6392,6 +6621,8 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -6413,10 +6644,11 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options: any = {}): Promise<RequestArgs> => {
+        ruleList: async (category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/rule/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -6437,6 +6669,14 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (category) {
                 localVarQueryParameter['category'] = category;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
             }
 
             if (filterSystemProfileSapSidsContains) {
@@ -6521,6 +6761,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (totalRisk) {
                 localVarQueryParameter['total_risk'] = totalRisk;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -6635,17 +6879,21 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
-         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsDetailList: async (ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        ruleSystemsDetailList: async (ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsDetailList.');
@@ -6667,6 +6915,22 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
                     ? await configuration.apiKey("x-rh-identity")
                     : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
             }
 
             if (groups) {
@@ -6713,16 +6977,21 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsRetrieve: async (ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        ruleSystemsRetrieve: async (ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'ruleId' is not null or undefined
             if (ruleId === null || ruleId === undefined) {
                 throw new RequiredError('ruleId','Required parameter ruleId was null or undefined when calling ruleSystemsRetrieve.');
@@ -6744,6 +7013,22 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
                     ? await configuration.apiKey("x-rh-identity")
                     : await configuration.apiKey;
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
+            if (filterSystemProfileSapSidsContains) {
+                localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
             }
 
             if (format !== undefined) {
@@ -6768,6 +7053,10 @@ export const RuleApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -6876,6 +7165,8 @@ export const RuleApiFp = function(configuration?: Configuration) {
         /**
          * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -6897,11 +7188,12 @@ export const RuleApiFp = function(configuration?: Configuration) {
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleForAccountList>> {
-            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options);
+        async ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedRuleForAccountList>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6938,18 +7230,22 @@ export const RuleApiFp = function(configuration?: Configuration) {
         /**
          * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
-         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemsDetailList>> {
-            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options);
+        async ruleSystemsDetailList(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemsDetailList>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsDetailList(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, name, offset, rhelVersion, sort, tags, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6958,17 +7254,22 @@ export const RuleApiFp = function(configuration?: Configuration) {
         /**
          * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
-            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options);
+        async ruleSystemsRetrieve(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
+            const localVarAxiosArgs = await RuleApiAxiosParamCreator(configuration).ruleSystemsRetrieve(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, name, rhelVersion, sort, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7021,6 +7322,8 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
         /**
          * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
          * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -7042,11 +7345,12 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} [text] Display rules with this text in their text fields
          * @param {string} [topic] Display rules in this topic (slug)
          * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any): AxiosPromise<PaginatedRuleForAccountList> {
-            return RuleApiFp(configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options).then((request) => request(axios, basePath));
+        ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<PaginatedRuleForAccountList> {
+            return RuleApiFp(configuration).ruleList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
@@ -7071,33 +7375,42 @@ export const RuleApiFactory = function (configuration?: Configuration, basePath?
         /**
          * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {number} [limit] Number of results to return per page.
          * @param {string} [name] Search for systems that include this in their display name
          * @param {number} [offset] The initial index from which to return the results.
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
-         * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+         * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemsDetailList> {
-            return RuleApiFp(configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        ruleSystemsDetailList(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemsDetailList> {
+            return RuleApiFp(configuration).ruleSystemsDetailList(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
         },
         /**
          * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
          * @param {string} ruleId
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+         * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+         * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {'csv' | 'json'} [format]
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {string} [name] Search for systems that include this in their display name
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
-            return RuleApiFp(configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        ruleSystemsRetrieve(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<SystemsForRule> {
+            return RuleApiFp(configuration).ruleSystemsRetrieve(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, name, rhelVersion, sort, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
@@ -7147,6 +7460,8 @@ export class RuleApi extends BaseAPI {
     /**
      * List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
      * @param {Array<1 | 2 | 3 | 4>} [category] Display rules of this category (number)
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
@@ -7168,12 +7483,13 @@ export class RuleApi extends BaseAPI {
      * @param {string} [text] Display rules with this text in their text fields
      * @param {string} [topic] Display rules in this topic (slug)
      * @param {Array<1 | 2 | 3 | 4>} [totalRisk] Display rules with this total risk level (1..4)
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, options?: any) {
-        return RuleApiFp(this.configuration).ruleList(category, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, options).then((request) => request(this.axios, this.basePath));
+    public ruleList(category?: Array<1 | 2 | 3 | 4>, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hasPlaybook?: boolean, hasTag?: Array<string>, impact?: Array<1 | 2 | 3 | 4>, impacting?: boolean, incident?: boolean, likelihood?: Array<1 | 2 | 3 | 4>, limit?: number, offset?: number, pathway?: string, reboot?: boolean, reportsShown?: boolean, resRisk?: Array<1 | 2 | 3 | 4>, ruleStatus?: 'all' | 'disabled' | 'enabled' | 'rhdisabled', sort?: Array<'-category' | '-description' | '-impact' | '-impacted_count' | '-likelihood' | '-playbook_count' | '-publish_date' | '-resolution_risk' | '-rule_id' | '-total_risk' | 'category' | 'description' | 'impact' | 'impacted_count' | 'likelihood' | 'playbook_count' | 'publish_date' | 'resolution_risk' | 'rule_id' | 'total_risk'>, tags?: Array<string>, text?: string, topic?: string, totalRisk?: Array<1 | 2 | 3 | 4>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return RuleApiFp(this.configuration).ruleList(category, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hasPlaybook, hasTag, impact, impacting, incident, likelihood, limit, offset, pathway, reboot, reportsShown, resRisk, ruleStatus, sort, tags, text, topic, totalRisk, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -7203,36 +7519,45 @@ export class RuleApi extends BaseAPI {
     /**
      * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
      * @param {string} ruleId
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {number} [limit] Number of results to return per page.
      * @param {string} [name] Search for systems that include this in their display name
      * @param {number} [offset] The initial index from which to return the results.
      * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
-     * @param {'-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
+     * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystemsDetailList(ruleId: string, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
-        return RuleApiFp(this.configuration).ruleSystemsDetailList(ruleId, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    public ruleSystemsDetailList(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, limit?: number, name?: string, offset?: number, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-impacted_date' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'impacted_date' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystemsDetailList(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, limit, name, offset, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
      * @param {string} ruleId
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
+     * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
+     * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {'csv' | 'json'} [format]
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {string} [name] Search for systems that include this in their display name
      * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
      * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleApi
      */
-    public ruleSystemsRetrieve(ruleId: string, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
-        return RuleApiFp(this.configuration).ruleSystemsRetrieve(ruleId, format, groups, name, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    public ruleSystemsRetrieve(ruleId: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, format?: 'csv' | 'json', groups?: Array<string>, name?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return RuleApiFp(this.configuration).ruleSystemsRetrieve(ruleId, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, format, groups, name, rhelVersion, sort, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8241,6 +8566,8 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -8252,10 +8579,11 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList: async (displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemList: async (displayName?: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/system/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -8276,6 +8604,14 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (displayName !== undefined) {
                 localVarQueryParameter['display_name'] = displayName;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
             }
 
             if (filterSystemProfileSapSidsContains) {
@@ -8322,6 +8658,10 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['tags'] = tags;
             }
 
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
+            }
+
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -8338,13 +8678,16 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemRenderedReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemRenderedReportsList: async (uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemRenderedReportsList.');
@@ -8368,6 +8711,14 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
             if (filterSystemProfileSapSidsContains) {
                 localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
             }
@@ -8378,6 +8729,10 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -8396,14 +8751,17 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReportsList: async (uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        systemReportsList: async (uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling systemReportsList.');
@@ -8427,6 +8785,14 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
             }
 
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
             if (filterSystemProfileSapSidsContains) {
                 localVarQueryParameter['filter[system_profile][sap_sids][contains]'] = filterSystemProfileSapSidsContains;
             }
@@ -8441,6 +8807,10 @@ export const SystemApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -8512,6 +8882,8 @@ export const SystemApiFp = function(configuration?: Configuration) {
         /**
          * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -8523,11 +8895,12 @@ export const SystemApiFp = function(configuration?: Configuration) {
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
-            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options);
+        async systemList(displayName?: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PaginatedSystemList>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemList(displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8536,14 +8909,17 @@ export const SystemApiFp = function(configuration?: Configuration) {
         /**
          * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RenderedReport>>> {
-            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options);
+        async systemRenderedReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RenderedReport>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemRenderedReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8552,15 +8928,18 @@ export const SystemApiFp = function(configuration?: Configuration) {
         /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Report>>> {
-            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options);
+        async systemReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Report>>> {
+            const localVarAxiosArgs = await SystemApiAxiosParamCreator(configuration).systemReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8592,6 +8971,8 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
         /**
          * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
          * @param {string} [displayName] Display systems with this text in their display_name
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
@@ -8603,36 +8984,43 @@ export const SystemApiFactory = function (configuration?: Configuration, basePat
          * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
          * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any): AxiosPromise<PaginatedSystemList> {
-            return SystemApiFp(configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(axios, basePath));
+        systemList(displayName?: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<PaginatedSystemList> {
+            return SystemApiFp(configuration).systemList(displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any): AxiosPromise<Array<RenderedReport>> {
-            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(axios, basePath));
+        systemRenderedReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<Array<RenderedReport>> {
+            return SystemApiFp(configuration).systemRenderedReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
          * @param {string} uuid A UUID string identifying this inventory host.
+         * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+         * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
          * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
          * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any): AxiosPromise<Array<Report>> {
-            return SystemApiFp(configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(axios, basePath));
+        systemReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<Array<Report>> {
+            return SystemApiFp(configuration).systemReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve the reports for a single system by Insights Inventory UUID
@@ -8657,6 +9045,8 @@ export class SystemApi extends BaseAPI {
     /**
      * Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
      * @param {string} [displayName] Display systems with this text in their display_name
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
@@ -8668,41 +9058,48 @@ export class SystemApi extends BaseAPI {
      * @param {Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>} [rhelVersion] Display only systems with these versions of RHEL
      * @param {'-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version'} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemList(displayName?: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, options?: any) {
-        return SystemApiFp(this.configuration).systemList(displayName, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    public systemList(displayName?: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, hits?: Array<'1' | '2' | '3' | '4' | 'all' | 'no' | 'yes'>, incident?: boolean, limit?: number, offset?: number, pathway?: string, rhelVersion?: Array<'6.0' | '6.1' | '6.10' | '6.2' | '6.3' | '6.4' | '6.5' | '6.6' | '6.7' | '6.8' | '6.9' | '7.0' | '7.1' | '7.10' | '7.2' | '7.3' | '7.4' | '7.5' | '7.6' | '7.7' | '7.8' | '7.9' | '8.0' | '8.1' | '8.10' | '8.2' | '8.3' | '8.4' | '8.5' | '8.6' | '8.7' | '8.8' | '8.9' | '9.0' | '9.1' | '9.2' | '9.3' | '9.4'>, sort?: '-critical_hits' | '-display_name' | '-group_name' | '-hits' | '-important_hits' | '-last_seen' | '-low_hits' | '-moderate_hits' | '-rhel_version' | 'critical_hits' | 'display_name' | 'group_name' | 'hits' | 'important_hits' | 'last_seen' | 'low_hits' | 'moderate_hits' | 'rhel_version', tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return SystemApiFp(this.configuration).systemList(displayName, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, hits, incident, limit, offset, pathway, rhelVersion, sort, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
      * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemRenderedReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, options?: any) {
-        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, options).then((request) => request(this.axios, this.basePath));
+    public systemRenderedReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return SystemApiFp(this.configuration).systemRenderedReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
      * @param {string} uuid A UUID string identifying this inventory host.
+     * @param {boolean} [filterSystemProfileAnsible] Is this an Ansible system?
+     * @param {boolean} [filterSystemProfileMssql] Is this a Microsoft SQL system?
      * @param {Array<string>} [filterSystemProfileSapSidsContains] Are there systems which contain these SAP SIDs?
      * @param {boolean} [filterSystemProfileSapSystem] Is this a SAP system?
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemApi
      */
-    public systemReportsList(uuid: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, options?: any) {
-        return SystemApiFp(this.configuration).systemReportsList(uuid, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, options).then((request) => request(this.axios, this.basePath));
+    public systemReportsList(uuid: string, filterSystemProfileAnsible?: boolean, filterSystemProfileMssql?: boolean, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return SystemApiFp(this.configuration).systemReportsList(uuid, filterSystemProfileAnsible, filterSystemProfileMssql, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -8996,10 +9393,11 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList: async (filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        topicList: async (filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/insights/v1/topic/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -9036,6 +9434,10 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -9194,10 +9596,11 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystemsRetrieve: async (slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        topicSystemsRetrieve: async (slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'slug' is not null or undefined
             if (slug === null || slug === undefined) {
                 throw new RequiredError('slug','Required parameter slug was null or undefined when calling topicSystemsRetrieve.');
@@ -9239,6 +9642,10 @@ export const TopicApiAxiosParamCreator = function (configuration?: Configuration
 
             if (tags) {
                 localVarQueryParameter['tags'] = tags;
+            }
+
+            if (updateMethod) {
+                localVarQueryParameter['update_method'] = updateMethod;
             }
 
 
@@ -9351,11 +9758,12 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>>> {
-            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options);
+        async topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Topic>>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -9410,11 +9818,12 @@ export const TopicApiFp = function(configuration?: Configuration) {
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
-            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options);
+        async topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SystemsForRule>> {
+            const localVarAxiosArgs = await TopicApiAxiosParamCreator(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, updateMethod, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -9471,11 +9880,12 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any): AxiosPromise<Array<Topic>> {
-            return TopicApiFp(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options).then((request) => request(axios, basePath));
+        topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<Array<Topic>> {
+            return TopicApiFp(configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Update an existing rule topic.  Only the fields being changed need to be supplied
@@ -9514,11 +9924,12 @@ export const TopicApiFactory = function (configuration?: Configuration, basePath
          * @param {Array<string>} [groups] List of Inventory host group names
          * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
          * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+         * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any): AxiosPromise<SystemsForRule> {
-            return TopicApiFp(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options).then((request) => request(axios, basePath));
+        topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any): AxiosPromise<SystemsForRule> {
+            return TopicApiFp(configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, updateMethod, options).then((request) => request(axios, basePath));
         },
         /**
          * Update an existing rule topic.  All fields need to be supplied
@@ -9572,12 +9983,13 @@ export class TopicApi extends BaseAPI {
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {boolean} [showDisabled] Display topics that are disabled as well as enabled
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, options?: any) {
-        return TopicApiFp(this.configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, options).then((request) => request(this.axios, this.basePath));
+    public topicList(filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, showDisabled?: boolean, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return TopicApiFp(this.configuration).topicList(filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, showDisabled, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9623,12 +10035,13 @@ export class TopicApi extends BaseAPI {
      * @param {Array<string>} [groups] List of Inventory host group names
      * @param {Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>} [sort] Order by this field
      * @param {Array<string>} [tags] Tags have a namespace, key and value in the form namespace/key&#x3D;value
+     * @param {Array<'dnfyum' | 'ostree'>} [updateMethod] Search for systems with this updater type
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TopicApi
      */
-    public topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, options?: any) {
-        return TopicApiFp(this.configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, options).then((request) => request(this.axios, this.basePath));
+    public topicSystemsRetrieve(slug: string, filterSystemProfileSapSidsContains?: Array<string>, filterSystemProfileSapSystem?: boolean, groups?: Array<string>, sort?: Array<'-display_name' | '-last_seen' | '-stale_at' | '-system_uuid' | '-updated' | 'display_name' | 'last_seen' | 'stale_at' | 'system_uuid' | 'updated'>, tags?: Array<string>, updateMethod?: Array<'dnfyum' | 'ostree'>, options?: any) {
+        return TopicApiFp(this.configuration).topicSystemsRetrieve(slug, filterSystemProfileSapSidsContains, filterSystemProfileSapSystem, groups, sort, tags, updateMethod, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

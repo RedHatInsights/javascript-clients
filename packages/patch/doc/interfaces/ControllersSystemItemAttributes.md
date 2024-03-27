@@ -49,7 +49,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1389](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1389)
+[api.ts:1389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1389)
 
 ___
 
@@ -63,7 +63,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1395](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1395)
+[api.ts:1395](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1395)
 
 ___
 
@@ -77,7 +77,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1401](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1401)
+[api.ts:1401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1401)
 
 ___
 
@@ -91,7 +91,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1407](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1407)
+[api.ts:1407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1407)
 
 ___
 
@@ -105,7 +105,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1413](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1413)
+[api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1413)
 
 ___
 
@@ -119,7 +119,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1419](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1419)
+[api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1419)
 
 ___
 
@@ -133,7 +133,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1425](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1425)
+[api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1425)
 
 ___
 
@@ -147,7 +147,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1431](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1431)
+[api.ts:1431](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1431)
 
 ___
 
@@ -161,7 +161,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1437](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1437)
+[api.ts:1437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1437)
 
 ___
 
@@ -175,7 +175,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1443](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1443)
+[api.ts:1443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1443)
 
 ___
 
@@ -189,7 +189,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1449](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1449)
+[api.ts:1449](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1449)
 
 ___
 
@@ -203,7 +203,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1455](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1455)
+[api.ts:1455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1455)
 
 ___
 
@@ -217,7 +217,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1461](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1461)
+[api.ts:1461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1461)
 
 ___
 
@@ -231,7 +231,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1467](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1467)
+[api.ts:1467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1467)
 
 ___
 
@@ -245,7 +245,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1473](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1473)
+[api.ts:1473](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1473)
 
 ___
 
@@ -259,7 +259,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1479](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1479)
+[api.ts:1479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1479)
 
 ___
 
@@ -273,7 +273,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1485](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1485)
+[api.ts:1485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1485)
 
 ___
 
@@ -287,7 +287,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1491](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1491)
+[api.ts:1491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1491)
 
 ___
 
@@ -301,7 +301,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1497](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1497)
+[api.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1497)
 
 ___
 
@@ -315,7 +315,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1503](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1503)
+[api.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1503)
 
 ___
 
@@ -329,7 +329,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1509](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1509)
+[api.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1509)
 
 ___
 
@@ -343,7 +343,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1515](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1515)
+[api.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1515)
 
 ___
 
@@ -357,7 +357,7 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1521](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1521)
+[api.ts:1521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1521)
 
 ___
 
@@ -371,4 +371,4 @@ ControllersSystemItemAttributes
 
 #### Defined in
 
-[api.ts:1527](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1527)
+[api.ts:1527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1527)

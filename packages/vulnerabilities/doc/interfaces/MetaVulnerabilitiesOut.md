@@ -33,13 +33,14 @@ MetaVulnerabilitiesOut
 - [rule\_presence](MetaVulnerabilitiesOut.md#rule_presence)
 - [sort](MetaVulnerabilitiesOut.md#sort)
 - [system\_count](MetaVulnerabilitiesOut.md#system_count)
+- [system\_count\_per\_type](MetaVulnerabilitiesOut.md#system_count_per_type)
 - [total\_items](MetaVulnerabilitiesOut.md#total_items)
 
 ## Properties
 
 ### advisory\_available
 
-• **advisory\_available**: `string`
+• **advisory\_available**: ``null`` \| `string`
 
 Shows whether a CVE has available advisory or not
 
@@ -49,13 +50,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2013](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2013)
+[api.ts:2013](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2013)
 
 ___
 
 ### affecting
 
-• **affecting**: `string`
+• **affecting**: ``null`` \| `string`
 
 Description of CVE showing preferences
 
@@ -65,13 +66,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2019](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2019)
+[api.ts:2019](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2019)
 
 ___
 
 ### business\_risk\_id
 
-• **business\_risk\_id**: `string`
+• **business\_risk\_id**: ``null`` \| `string`
 
 Filter based on business risk IDs.
 
@@ -81,13 +82,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2025](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2025)
+[api.ts:2025](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2025)
 
 ___
 
 ### cves\_without\_errata
 
-• **cves\_without\_errata**: `boolean`
+• **cves\_without\_errata**: ``null`` \| `boolean`
 
 CVEs without Errata feature flag
 
@@ -97,13 +98,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2031](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2031)
+[api.ts:2031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2031)
 
 ___
 
 ### cvss\_from
 
-• **cvss\_from**: `number`
+• **cvss\_from**: ``null`` \| `number`
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -113,13 +114,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2037](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2037)
+[api.ts:2037](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2037)
 
 ___
 
 ### cvss\_to
 
-• **cvss\_to**: `number`
+• **cvss\_to**: ``null`` \| `number`
 
 Filter based on cvss score, up to the value.
 
@@ -129,7 +130,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2043](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2043)
+[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2043)
 
 ___
 
@@ -145,13 +146,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1953](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1953)
+[api.ts:1953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1953)
 
 ___
 
 ### filter
 
-• **filter**: `string`
+• **filter**: ``null`` \| `string`
 
 Full text filter
 
@@ -161,13 +162,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1959](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1959)
+[api.ts:1959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1959)
 
 ___
 
 ### impact
 
-• **impact**: `string`
+• **impact**: ``null`` \| `string`
 
 Filter based on impact IDs.
 
@@ -177,7 +178,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2049](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2049)
+[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2049)
 
 ___
 
@@ -193,7 +194,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1965](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1965)
+[api.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1965)
 
 ___
 
@@ -209,7 +210,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1971](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1971)
+[api.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1971)
 
 ___
 
@@ -225,7 +226,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1977](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1977)
+[api.ts:1977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1977)
 
 ___
 
@@ -241,7 +242,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1983](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1983)
+[api.ts:1983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1983)
 
 ___
 
@@ -257,7 +258,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1989](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1989)
+[api.ts:1989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1989)
 
 ___
 
@@ -273,13 +274,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2007](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2007)
+[api.ts:2007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2007)
 
 ___
 
 ### public\_from
 
-• **public\_from**: `string`
+• **public\_from**: ``null`` \| `string`
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -289,13 +290,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2055](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2055)
+[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2055)
 
 ___
 
 ### public\_to
 
-• **public\_to**: `string`
+• **public\_to**: ``null`` \| `string`
 
 Filter CVEs based on their published date, up to the date.
 
@@ -305,13 +306,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2061](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2061)
+[api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2061)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -321,13 +322,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2067](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2067)
+[api.ts:2067](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2067)
 
 ___
 
 ### rule\_presence
 
-• **rule\_presence**: `string`
+• **rule\_presence**: ``null`` \| `string`
 
 Filter based on presence of security rule
 
@@ -337,13 +338,13 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2073](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2073)
+[api.ts:2073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2073)
 
 ___
 
 ### sort
 
-• **sort**: `string`
+• **sort**: ``null`` \| `string`
 
 Sorting filter.
 
@@ -353,7 +354,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1995](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1995)
+[api.ts:1995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1995)
 
 ___
 
@@ -369,7 +370,21 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2079](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2079)
+[api.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2079)
+
+___
+
+### system\_count\_per\_type
+
+• `Optional` **system\_count\_per\_type**: [`ExecutiveReportSystemCountPerType`](ExecutiveReportSystemCountPerType.md)
+
+**`Memberof`**
+
+MetaVulnerabilitiesOut
+
+#### Defined in
+
+[api.ts:2085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2085)
 
 ___
 
@@ -385,4 +400,4 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2001](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2001)
+[api.ts:2001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2001)

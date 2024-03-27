@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[api.ts:665](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L665)
+[api.ts:665](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L665)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api.ts:667](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L667)
+[api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L667)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api.ts:668](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L668)
+[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L668)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api.ts:666](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L666)
+[api.ts:666](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L666)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[api.ts:664](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L664)
+[api.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L664)

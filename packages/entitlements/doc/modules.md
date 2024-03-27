@@ -46,7 +46,7 @@ ServicesApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/entitlements/api.ts#L40)
+[api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L40)
 
 ___
 
@@ -76,7 +76,7 @@ ServicesApi - factory interface
 
 #### Defined in
 
-[api.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/entitlements/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L101)
 
 ___
 
@@ -104,4 +104,4 @@ ServicesApi - functional programming interface
 
 #### Defined in
 
-[api.ts:79](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/entitlements/api.ts#L79)
+[api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L79)

@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1557](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1557)
+[packages/notifications/types/index.ts:1624](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1624)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1558](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1558)
+[packages/notifications/types/index.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1625)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1556](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1556)
+[packages/notifications/types/index.ts:1623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1623)

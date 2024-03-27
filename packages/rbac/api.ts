@@ -1037,10 +1037,10 @@ export interface GroupPaginationAllOf {
 export interface GroupPrincipalIn {
     /**
      *
-     * @type {Array<PrincipalIn>}
+     * @type {Array<PrincipalIn | ServiceAccountIn>}
      * @memberof GroupPrincipalIn
      */
-    principals: Array<PrincipalIn>;
+    principals: Array<PrincipalIn | ServiceAccountIn>;
 }
 /**
  *
@@ -2382,6 +2382,155 @@ export interface RoleWithAccess {
 /**
  *
  * @export
+ * @interface ServiceAccount
+ */
+export interface ServiceAccount {
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    username: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    type: ServiceAccountTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    clientID: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    name?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccount
+     */
+    owner?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ServiceAccount
+     */
+    time_created?: number;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ServiceAccountTypeEnum {
+    ServiceAccount = 'service-account'
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceAccountIn
+ */
+export interface ServiceAccountIn {
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccountIn
+     */
+    type: ServiceAccountInTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof ServiceAccountIn
+     */
+    clientID: string;
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ServiceAccountInTypeEnum {
+    ServiceAccount = 'service-account'
+}
+
+/**
+ *
+ * @export
+ * @interface ServiceAccountInGroupResponse
+ */
+export interface ServiceAccountInGroupResponse {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof ServiceAccountInGroupResponse
+     */
+    meta?: PaginationMeta;
+    /**
+     * The links object for this particular response will be empty, since there is no pagination available for the query parameter
+     * @type {object}
+     * @memberof ServiceAccountInGroupResponse
+     */
+    links?: object;
+    /**
+     * Object which indicates whether the given service account UUIDs in the query parameter are present in the specified group or not
+     * @type {{ [key: string]: boolean; }}
+     * @memberof ServiceAccountInGroupResponse
+     */
+    data?: { [key: string]: boolean; };
+}
+/**
+ *
+ * @export
+ * @interface ServiceAccountPagination
+ */
+export interface ServiceAccountPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof ServiceAccountPagination
+     */
+    meta?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof ServiceAccountPagination
+     */
+    links?: PaginationLinks;
+    /**
+     *
+     * @type {Array<ServiceAccount>}
+     * @memberof ServiceAccountPagination
+     */
+    data: Array<ServiceAccount>;
+}
+/**
+ *
+ * @export
+ * @interface ServiceAccountPaginationAllOf
+ */
+export interface ServiceAccountPaginationAllOf {
+    /**
+     *
+     * @type {Array<ServiceAccount>}
+     * @memberof ServiceAccountPaginationAllOf
+     */
+    data: Array<ServiceAccount>;
+}
+/**
+ *
+ * @export
  * @interface Status
  */
 export interface Status {
@@ -3466,17 +3615,20 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
+         * @param {boolean} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [principalType] Parameter for selecting the type of principal to be returned.
+         * @param {string} [serviceAccountClientIds] By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\&#39;s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter.
+         * @param {string} [serviceAccountDescription] Parameter for filtering the service accounts by their description.
+         * @param {string} [serviceAccountName] Parameter for filtering the service accounts by their name.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup: async (uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', options: any = {}): Promise<RequestArgs> => {
+        getPrincipalsFromGroup: async (uuid: string, adminOnly?: boolean, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', serviceAccountClientIds?: string, serviceAccountDescription?: string, serviceAccountName?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             if (uuid === null || uuid === undefined) {
                 throw new RequiredError('uuid','Required parameter uuid was null or undefined when calling getPrincipalsFromGroup.');
@@ -3524,6 +3676,18 @@ export const GroupApiAxiosParamCreator = function (configuration?: Configuration
 
             if (principalType !== undefined) {
                 localVarQueryParameter['principal_type'] = principalType;
+            }
+
+            if (serviceAccountClientIds !== undefined) {
+                localVarQueryParameter['service_account_client_ids'] = serviceAccountClientIds;
+            }
+
+            if (serviceAccountDescription !== undefined) {
+                localVarQueryParameter['service_account_description'] = serviceAccountDescription;
+            }
+
+            if (serviceAccountName !== undefined) {
+                localVarQueryParameter['service_account_name'] = serviceAccountName;
             }
 
 
@@ -3899,18 +4063,21 @@ export const GroupApiFp = function(configuration?: Configuration) {
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
+         * @param {boolean} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [principalType] Parameter for selecting the type of principal to be returned.
+         * @param {string} [serviceAccountClientIds] By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\&#39;s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter.
+         * @param {string} [serviceAccountDescription] Parameter for filtering the service accounts by their description.
+         * @param {string} [serviceAccountName] Parameter for filtering the service accounts by their name.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
-            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, options);
+        async getPrincipalsFromGroup(uuid: string, adminOnly?: boolean, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', serviceAccountClientIds?: string, serviceAccountDescription?: string, serviceAccountName?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination | ServiceAccountPagination | ServiceAccountInGroupResponse>> {
+            const localVarAxiosArgs = await GroupApiAxiosParamCreator(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, serviceAccountClientIds, serviceAccountDescription, serviceAccountName, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4069,18 +4236,21 @@ export const GroupApiFactory = function (configuration?: Configuration, basePath
          * By default, responses are sorted in ascending order by username
          * @summary Get a list of principals from a group in the tenant
          * @param {string} uuid ID of group from which to get principals
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
+         * @param {boolean} [adminOnly] Get only admin users within an account.
          * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
          * @param {number} [limit] Parameter for selecting the amount of data returned.
          * @param {number} [offset] Parameter for selecting the offset of data.
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [principalType] Parameter for selecting the type of principal to be returned.
+         * @param {string} [serviceAccountClientIds] By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\&#39;s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter.
+         * @param {string} [serviceAccountDescription] Parameter for filtering the service accounts by their description.
+         * @param {string} [serviceAccountName] Parameter for filtering the service accounts by their name.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', options?: any): AxiosPromise<PrincipalPagination> {
-            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, options).then((request) => request(axios, basePath));
+        getPrincipalsFromGroup(uuid: string, adminOnly?: boolean, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', serviceAccountClientIds?: string, serviceAccountDescription?: string, serviceAccountName?: string, options?: any): AxiosPromise<PrincipalPagination | ServiceAccountPagination | ServiceAccountInGroupResponse> {
+            return GroupApiFp(configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, serviceAccountClientIds, serviceAccountDescription, serviceAccountName, options).then((request) => request(axios, basePath));
         },
         /**
          * By default, responses are sorted in ascending order by group name
@@ -4238,19 +4408,22 @@ export class GroupApi extends BaseAPI {
      * By default, responses are sorted in ascending order by username
      * @summary Get a list of principals from a group in the tenant
      * @param {string} uuid ID of group from which to get principals
-     * @param {'true' | 'false'} [adminOnly] Get only admin users within an account.
+     * @param {boolean} [adminOnly] Get only admin users within an account.
      * @param {string} [principalUsername] Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search.
      * @param {number} [limit] Parameter for selecting the amount of data returned.
      * @param {number} [offset] Parameter for selecting the offset of data.
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
      * @param {'service-account' | 'user'} [principalType] Parameter for selecting the type of principal to be returned.
+     * @param {string} [serviceAccountClientIds] By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\&#39;s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter.
+     * @param {string} [serviceAccountDescription] Parameter for filtering the service accounts by their description.
+     * @param {string} [serviceAccountName] Parameter for filtering the service accounts by their name.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupApi
      */
-    public getPrincipalsFromGroup(uuid: string, adminOnly?: 'true' | 'false', principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', options?: any) {
-        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, options).then((request) => request(this.axios, this.basePath));
+    public getPrincipalsFromGroup(uuid: string, adminOnly?: boolean, principalUsername?: string, limit?: number, offset?: number, orderBy?: 'username', usernameOnly?: boolean, principalType?: 'service-account' | 'user', serviceAccountClientIds?: string, serviceAccountDescription?: string, serviceAccountName?: string, options?: any) {
+        return GroupApiFp(this.configuration).getPrincipalsFromGroup(uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, serviceAccountClientIds, serviceAccountDescription, serviceAccountName, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5143,14 +5316,14 @@ export const PrincipalApiAxiosParamCreator = function (configuration?: Configura
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {boolean} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [type] Parameter for selecting the type of principal to be returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals: async (limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options: any = {}): Promise<RequestArgs> => {
+        listPrincipals: async (limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: boolean, orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/principals/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -5243,14 +5416,14 @@ export const PrincipalApiFp = function(configuration?: Configuration) {
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {boolean} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [type] Parameter for selecting the type of principal to be returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination>> {
+        async listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: boolean, orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrincipalPagination | ServiceAccountPagination>> {
             const localVarAxiosArgs = await PrincipalApiAxiosParamCreator(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5276,14 +5449,14 @@ export const PrincipalApiFactory = function (configuration?: Configuration, base
          * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
          * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
          * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
-         * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+         * @param {boolean} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
          * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
          * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
          * @param {'service-account' | 'user'} [type] Parameter for selecting the type of principal to be returned.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any): AxiosPromise<PrincipalPagination> {
+        listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: boolean, orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any): AxiosPromise<PrincipalPagination | ServiceAccountPagination> {
             return PrincipalApiFp(configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, options).then((request) => request(axios, basePath));
         },
     };
@@ -5306,7 +5479,7 @@ export class PrincipalApi extends BaseAPI {
      * @param {'asc' | 'desc'} [sortOrder] The sort order of the query, either ascending or descending. Defaults to ascending.
      * @param {string} [email] E-mail address of principal to search for. Could be combined with match_criteria for searching.
      * @param {'enabled' | 'disabled' | 'all'} [status] Set the status of users to get back.
-     * @param {'true' | 'false'} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
+     * @param {boolean} [adminOnly] Get only admin users within an account. Setting this would ignore the parameters: usernames, email
      * @param {'username'} [orderBy] Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username
      * @param {boolean} [usernameOnly] Parameter for optionally returning only usernames for principals, bypassing a call to IT.
      * @param {'service-account' | 'user'} [type] Parameter for selecting the type of principal to be returned.
@@ -5314,7 +5487,7 @@ export class PrincipalApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PrincipalApi
      */
-    public listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: 'true' | 'false', orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any) {
+    public listPrincipals(limit?: number, offset?: number, matchCriteria?: 'partial' | 'exact', usernames?: string, sortOrder?: 'asc' | 'desc', email?: string, status?: 'enabled' | 'disabled' | 'all', adminOnly?: boolean, orderBy?: 'username', usernameOnly?: boolean, type?: 'service-account' | 'user', options?: any) {
         return PrincipalApiFp(this.configuration).listPrincipals(limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, options).then((request) => request(this.axios, this.basePath));
     }
 

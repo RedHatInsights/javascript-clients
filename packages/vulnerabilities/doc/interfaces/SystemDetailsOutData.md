@@ -25,7 +25,7 @@ SystemDetailsOutData
 
 ### last\_evaluation
 
-• **last\_evaluation**: `string`
+• **last\_evaluation**: ``null`` \| `string`
 
 Date of last evaluation.
 
@@ -35,13 +35,13 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2492](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2492)
+[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2504)
 
 ___
 
 ### last\_upload
 
-• **last\_upload**: `string`
+• **last\_upload**: ``null`` \| `string`
 
 Date of the latest upload of archive.
 
@@ -51,7 +51,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2498](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2498)
+[api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2510)
 
 ___
 
@@ -67,7 +67,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2504](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2504)
+[api.ts:2516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2516)
 
 ___
 
@@ -83,13 +83,13 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2510](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2510)
+[api.ts:2522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2522)
 
 ___
 
 ### rules\_evaluation
 
-• **rules\_evaluation**: `string`
+• **rules\_evaluation**: ``null`` \| `string`
 
 Date of last security rules evaluation.
 
@@ -99,7 +99,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2516](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2516)
+[api.ts:2528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2528)
 
 ___
 
@@ -115,7 +115,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2522](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2522)
+[api.ts:2534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2534)
 
 ___
 
@@ -129,13 +129,13 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2528](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2528)
+[api.ts:2540](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2540)
 
 ___
 
 ### updated
 
-• `Optional` **updated**: `string`
+• `Optional` **updated**: ``null`` \| `string`
 
 Date of the lastest upload of archive taken from Inventory syndicated data.
 
@@ -145,4 +145,4 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2534](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2534)
+[api.ts:2546](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2546)

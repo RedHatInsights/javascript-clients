@@ -28,4 +28,4 @@ AckJustification
 
 #### Defined in
 
-[api.ts:108](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L108)
+[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L108)

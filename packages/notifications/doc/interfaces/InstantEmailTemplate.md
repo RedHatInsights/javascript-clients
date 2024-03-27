@@ -26,7 +26,7 @@ InstantEmailTemplate
 
 ### body\_template
 
-• `Optional` **body\_template**: [`Template`](Template.md)
+• `Optional` **body\_template**: [`AggregationEmailTemplateSubjectTemplate`](AggregationEmailTemplateSubjectTemplate.md)
 
 **`Memberof`**
 
@@ -34,7 +34,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1135](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1135)
+[packages/notifications/types/index.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1202)
 
 ___
 
@@ -48,7 +48,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1141](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1141)
+[packages/notifications/types/index.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1208)
 
 ___
 
@@ -62,7 +62,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1093](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1093)
+[packages/notifications/types/index.ts:1160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1160)
 
 ___
 
@@ -76,7 +76,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1111](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1111)
+[packages/notifications/types/index.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1178)
 
 ___
 
@@ -90,7 +90,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1117](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1117)
+[packages/notifications/types/index.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1184)
 
 ___
 
@@ -104,13 +104,13 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1105](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1105)
+[packages/notifications/types/index.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1172)
 
 ___
 
 ### subject\_template
 
-• `Optional` **subject\_template**: [`Template`](Template.md)
+• `Optional` **subject\_template**: [`AggregationEmailTemplateSubjectTemplate`](AggregationEmailTemplateSubjectTemplate.md)
 
 **`Memberof`**
 
@@ -118,7 +118,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1123](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1123)
+[packages/notifications/types/index.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1190)
 
 ___
 
@@ -132,7 +132,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1129](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1129)
+[packages/notifications/types/index.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1196)
 
 ___
 
@@ -146,4 +146,4 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1099](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1099)
+[packages/notifications/types/index.ts:1166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1166)

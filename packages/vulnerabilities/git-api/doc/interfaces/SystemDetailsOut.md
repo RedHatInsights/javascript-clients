@@ -27,7 +27,7 @@ SystemDetailsOut
 
 #### Defined in
 
-[api.ts:2473](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2473)
+[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2485)
 
 ___
 
@@ -41,4 +41,4 @@ SystemDetailsOut
 
 #### Defined in
 
-[api.ts:2479](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2479)
+[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2491)

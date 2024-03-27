@@ -28,4 +28,4 @@ NotificationsOut
 
 #### Defined in
 
-[api.ts:2221](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2221)
+[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2233)

@@ -26,4 +26,4 @@ ServiceDetails
 
 #### Defined in
 
-[api.ts:33](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/entitlements/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L33)

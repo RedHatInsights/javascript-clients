@@ -59,7 +59,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ## Properties
 
@@ -73,7 +73,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ___
 
@@ -87,13 +87,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:52](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -101,7 +101,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:50](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/base.ts#L50)
+[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L50)
 
 ## Methods
 
@@ -132,7 +132,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1332](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1332)
+[api.ts:1332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1332)
 
 ___
 
@@ -163,13 +163,13 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1344](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1344)
+[api.ts:1344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1344)
 
 ___
 
 ### getPolicies
 
-▸ **getPolicies**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md), `any`\>\>
+▸ **getPolicies**(`offset?`, `limit?`, `sortColumn?`, `sortDirection?`, `filterName?`, `filteropName?`, `filterDescription?`, `filteropDescription?`, `filterIsEnabled?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfPolicy`](../interfaces/PagedResponseOfPolicy.md), `any`\>\>
 
 **`Summary`**
 
@@ -185,15 +185,15 @@ PolicyCrudServiceApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `filteropDescription?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
+| `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
+| `limit?` | `number` | Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset |
+| `sortColumn?` | ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"`` | Column to sort the results by |
+| `sortDirection?` | ``"asc"`` \| ``"desc"`` | Sort direction used |
+| `filterName?` | `string` | Filtering policies by the name depending on the Filter operator used. |
 | `filteropName?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
 | `filterDescription?` | `string` | Filtering policies by the description depending on the Filter operator used. |
-| `filterIsEnabled?` | ``"false"`` \| ``"true"`` | Filtering policies by the is_enabled field.Defaults to true if no operand is given. |
-| `filterName?` | `string` | Filtering policies by the name depending on the Filter operator used. |
-| `limit?` | `number` | Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset |
-| `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
-| `sortColumn?` | ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"`` | Column to sort the results by |
-| `sortDirection?` | ``"desc"`` \| ``"asc"`` | Sort direction used |
+| `filteropDescription?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
+| `filterIsEnabled?` | ``"true"`` \| ``"false"`` | Filtering policies by the is_enabled field.Defaults to true if no operand is given. |
 | `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
@@ -202,7 +202,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1364](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1364)
+[api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1364)
 
 ___
 
@@ -233,13 +233,13 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1376](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1376)
+[api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1376)
 
 ___
 
 ### getPoliciesByIdHistoryTrigger
 
-▸ **getPoliciesByIdHistoryTrigger**(`id`, `filteropId?`, `filteropName?`, `filterId?`, `filterName?`, `limit?`, `offset?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md), `any`\>\>
+▸ **getPoliciesByIdHistoryTrigger**(`id`, `offset?`, `limit?`, `filterName?`, `filteropName?`, `filterId?`, `filteropId?`, `sortColumn?`, `sortDirection?`, `options?`): `Promise`<`AxiosResponse`<[`PagedResponseOfHistoryItem`](../interfaces/PagedResponseOfHistoryItem.md), `any`\>\>
 
 **`Summary`**
 
@@ -256,14 +256,14 @@ PolicyCrudServiceApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | UUID of the policy |
-| `filteropId?` | ``"equal"`` \| ``"like"`` \| ``"not_equal"`` | Operations used with the name filter |
+| `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
+| `limit?` | `number` | Number of items per page, if not specified uses 50. Maximum value is 200. |
+| `filterName?` | `string` | Filtering history entries by the host name depending on the Filter operator used. |
 | `filteropName?` | ``"equal"`` \| ``"like"`` \| ``"not_equal"`` | Operations used with the name filter |
 | `filterId?` | `string` | Filtering history entries by the id depending on the Filter operator used. |
-| `filterName?` | `string` | Filtering history entries by the host name depending on the Filter operator used. |
-| `limit?` | `number` | Number of items per page, if not specified uses 50. Maximum value is 200. |
-| `offset?` | `number` | Page number, starts 0, if not specified uses 0. |
+| `filteropId?` | ``"equal"`` \| ``"like"`` \| ``"not_equal"`` | Operations used with the name filter |
 | `sortColumn?` | ``"hostName"`` \| ``"ctime"`` | Column to sort the results by |
-| `sortDirection?` | ``"desc"`` \| ``"asc"`` | Sort direction used |
+| `sortDirection?` | ``"asc"`` \| ``"desc"`` | Sort direction used |
 | `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
@@ -272,13 +272,13 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1396](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1396)
+[api.ts:1396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1396)
 
 ___
 
 ### getPoliciesIds
 
-▸ **getPoliciesIds**(`filteropDescription?`, `filteropName?`, `filterDescription?`, `filterIsEnabled?`, `filterName?`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
+▸ **getPoliciesIds**(`filterName?`, `filteropName?`, `filterDescription?`, `filteropDescription?`, `filterIsEnabled?`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
 
 **`Summary`**
 
@@ -294,11 +294,11 @@ PolicyCrudServiceApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `filteropDescription?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
+| `filterName?` | `string` | Filtering policies by the name depending on the Filter operator used. |
 | `filteropName?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
 | `filterDescription?` | `string` | Filtering policies by the description depending on the Filter operator used. |
-| `filterIsEnabled?` | ``"false"`` \| ``"true"`` | Filtering policies by the is_enabled field.Defaults to true if no operand is given. |
-| `filterName?` | `string` | Filtering policies by the name depending on the Filter operator used. |
+| `filteropDescription?` | ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"`` | Operations used with the filter |
+| `filterIsEnabled?` | ``"true"`` \| ``"false"`` | Filtering policies by the is_enabled field.Defaults to true if no operand is given. |
 | `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
 
 #### Returns
@@ -307,7 +307,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1412](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1412)
+[api.ts:1412](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1412)
 
 ___
 
@@ -339,7 +339,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1425](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1425)
+[api.ts:1425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1425)
 
 ___
 
@@ -371,7 +371,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1438](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1438)
+[api.ts:1438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1438)
 
 ___
 
@@ -403,7 +403,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1451](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1451)
+[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1451)
 
 ___
 
@@ -434,7 +434,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1463](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1463)
+[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1463)
 
 ___
 
@@ -466,7 +466,7 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1476](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1476)
+[api.ts:1476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1476)
 
 ___
 
@@ -499,4 +499,4 @@ PolicyCrudServiceApi
 
 #### Defined in
 
-[api.ts:1490](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L1490)
+[api.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L1490)

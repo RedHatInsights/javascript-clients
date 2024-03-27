@@ -28,7 +28,7 @@ DatastoresCollection
 
 #### Defined in
 
-[api.ts:1231](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1231)
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1231)
 
 ___
 
@@ -42,7 +42,7 @@ DatastoresCollection
 
 #### Defined in
 
-[api.ts:1225](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1225)
+[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1225)
 
 ___
 
@@ -56,4 +56,4 @@ DatastoresCollection
 
 #### Defined in
 
-[api.ts:1219](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1219)
+[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1219)

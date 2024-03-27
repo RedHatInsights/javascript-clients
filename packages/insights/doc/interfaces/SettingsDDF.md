@@ -28,4 +28,4 @@ SettingsDDF
 
 #### Defined in
 
-[api.ts:1962](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1962)
+[api.ts:1962](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1962)

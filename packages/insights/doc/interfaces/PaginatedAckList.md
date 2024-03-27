@@ -28,7 +28,7 @@ PaginatedAckList
 
 #### Defined in
 
-[api.ts:554](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L554)
+[api.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L554)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedAckList
 
 #### Defined in
 
-[api.ts:548](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L548)
+[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L548)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedAckList
 
 #### Defined in
 
-[api.ts:542](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L542)
+[api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L542)

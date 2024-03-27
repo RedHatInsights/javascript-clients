@@ -27,7 +27,7 @@ BehaviorGroupActionId
 
 #### Defined in
 
-[packages/integrations/types/index.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L354)
+[packages/integrations/types/index.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L397)
 
 ___
 
@@ -41,4 +41,4 @@ BehaviorGroupActionId
 
 #### Defined in
 
-[packages/integrations/types/index.ts:360](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L360)
+[packages/integrations/types/index.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L403)

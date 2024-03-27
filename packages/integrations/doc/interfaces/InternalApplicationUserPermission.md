@@ -28,7 +28,7 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1160](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1160)
+[packages/integrations/types/index.ts:1227](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1227)
 
 ___
 
@@ -42,7 +42,7 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1154](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1154)
+[packages/integrations/types/index.ts:1221](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1221)
 
 ___
 
@@ -56,4 +56,4 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1166](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1166)
+[packages/integrations/types/index.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1233)

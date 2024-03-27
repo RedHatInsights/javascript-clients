@@ -28,7 +28,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1587](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1587)
+[packages/notifications/types/index.ts:1654](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1654)
 
 ___
 
@@ -42,7 +42,7 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1581](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1581)
+[packages/notifications/types/index.ts:1648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1648)
 
 ___
 
@@ -56,4 +56,4 @@ SystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1575](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1575)
+[packages/notifications/types/index.ts:1642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1642)

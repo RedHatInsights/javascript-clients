@@ -28,7 +28,7 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1436](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1436)
+[packages/integrations/types/index.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1503)
 
 ___
 
@@ -46,7 +46,7 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1442](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1442)
+[packages/integrations/types/index.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1509)
 
 ___
 
@@ -60,4 +60,4 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1448](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1448)
+[packages/integrations/types/index.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1515)

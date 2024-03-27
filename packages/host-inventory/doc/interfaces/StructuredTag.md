@@ -28,13 +28,13 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1518](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1518)
+[api.ts:1555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1555)
 
 ___
 
 ### namespace
 
-• `Optional` **namespace**: `string`
+• `Optional` **namespace**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -42,13 +42,13 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1512](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1512)
+[api.ts:1549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1549)
 
 ___
 
 ### value
 
-• `Optional` **value**: `string`
+• `Optional` **value**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -56,4 +56,4 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1524](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1524)
+[api.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1561)

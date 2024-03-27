@@ -31,7 +31,7 @@ Links
 
 #### Defined in
 
-[api.ts:1180](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1180)
+[api.ts:1180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1180)
 
 ___
 
@@ -47,13 +47,13 @@ Links
 
 #### Defined in
 
-[api.ts:1186](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1186)
+[api.ts:1186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1186)
 
 ___
 
 ### next
 
-• **next**: `string`
+• **next**: ``null`` \| `string`
 
 Link to next page.
 
@@ -63,13 +63,13 @@ Links
 
 #### Defined in
 
-[api.ts:1192](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1192)
+[api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1192)
 
 ___
 
 ### previous
 
-• **previous**: `string`
+• **previous**: ``null`` \| `string`
 
 Link to next page.
 
@@ -79,4 +79,4 @@ Links
 
 #### Defined in
 
-[api.ts:1198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1198)
+[api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1198)

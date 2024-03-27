@@ -30,7 +30,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:573](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L573)
+[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L573)
 
 ___
 
@@ -44,7 +44,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:579](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L579)
+[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L579)
 
 ___
 
@@ -58,4 +58,4 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:585](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L585)
+[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L585)

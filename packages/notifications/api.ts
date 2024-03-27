@@ -117,10 +117,10 @@ export interface AggregationEmailTemplate {
     'subscription_type': SubscriptionType;
     /**
      *
-     * @type {Template}
+     * @type {AggregationEmailTemplateSubjectTemplate}
      * @memberof AggregationEmailTemplate
      */
-    'subject_template'?: Template;
+    'subject_template'?: AggregationEmailTemplateSubjectTemplate;
     /**
      *
      * @type {string}
@@ -129,10 +129,10 @@ export interface AggregationEmailTemplate {
     'subject_template_id': string;
     /**
      *
-     * @type {Template}
+     * @type {AggregationEmailTemplateSubjectTemplate}
      * @memberof AggregationEmailTemplate
      */
-    'body_template'?: Template;
+    'body_template'?: AggregationEmailTemplateSubjectTemplate;
     /**
      *
      * @type {string}
@@ -142,6 +142,49 @@ export interface AggregationEmailTemplate {
 }
 
 
+/**
+ *
+ * @export
+ * @interface AggregationEmailTemplateSubjectTemplate
+ */
+export interface AggregationEmailTemplateSubjectTemplate {
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'created'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'updated'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'description': string;
+    /**
+     *
+     * @type {string}
+     * @memberof AggregationEmailTemplateSubjectTemplate
+     */
+    'data': string;
+}
 /**
  *
  * @export
@@ -638,6 +681,12 @@ export interface DrawerEntryPayload {
      * @memberof DrawerEntryPayload
      */
     'source'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DrawerEntryPayload
+     */
+    'bundle'?: string;
 }
 /**
  *
@@ -994,6 +1043,18 @@ export interface EventType {
      * @memberof EventType
      */
     'subscribed_by_default'?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventType
+     */
+    'subscription_locked'?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventType
+     */
+    'not_subscription_locked_or_subscribed_by_default'?: boolean;
 }
 /**
  *
@@ -1057,6 +1118,12 @@ export interface EventTypeSettingsValue {
      * @memberof EventTypeSettingsValue
      */
     'hasForcedEmail'?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof EventTypeSettingsValue
+     */
+    'subscriptionLocked'?: boolean;
 }
 /**
  *
@@ -1142,10 +1209,10 @@ export interface InstantEmailTemplate {
     'event_type_id'?: string;
     /**
      *
-     * @type {Template}
+     * @type {AggregationEmailTemplateSubjectTemplate}
      * @memberof InstantEmailTemplate
      */
-    'subject_template'?: Template;
+    'subject_template'?: AggregationEmailTemplateSubjectTemplate;
     /**
      *
      * @type {string}
@@ -1154,10 +1221,10 @@ export interface InstantEmailTemplate {
     'subject_template_id': string;
     /**
      *
-     * @type {Template}
+     * @type {AggregationEmailTemplateSubjectTemplate}
      * @memberof InstantEmailTemplate
      */
-    'body_template'?: Template;
+    'body_template'?: AggregationEmailTemplateSubjectTemplate;
     /**
      *
      * @type {string}
@@ -3884,10 +3951,6 @@ export const NotificationResourceV1GetLinkedBehaviorGroupsApiAxiosParamCreator =
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            // authentication SecurityScheme required
-            // http basic authentication required
-            setBasicAuthToObject(localVarRequestOptions, configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;

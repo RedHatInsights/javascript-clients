@@ -29,7 +29,7 @@ StatusIn
 
 #### Defined in
 
-[api.ts:2303](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2303)
+[api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2315)
 
 ___
 
@@ -43,7 +43,7 @@ StatusIn
 
 #### Defined in
 
-[api.ts:2309](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2309)
+[api.ts:2321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2321)
 
 ___
 
@@ -59,13 +59,13 @@ StatusIn
 
 #### Defined in
 
-[api.ts:2315](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2315)
+[api.ts:2327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2327)
 
 ___
 
 ### status\_text
 
-• `Optional` **status\_text**: `string`
+• `Optional` **status\_text**: ``null`` \| `string`
 
 Complementary text to the status.
 
@@ -75,4 +75,4 @@ StatusIn
 
 #### Defined in
 
-[api.ts:2321](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2321)
+[api.ts:2333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2333)

@@ -21,19 +21,15 @@ Report
 
 ### details
 
-• **details**: `Object`
+• **details**: `any`
 
 **`Memberof`**
 
 Report
 
-#### Index signature
-
-▪ [key: `string`]: `any`
-
 #### Defined in
 
-[api.ts:1162](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1162)
+[api.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1162)
 
 ___
 
@@ -47,7 +43,7 @@ Report
 
 #### Defined in
 
-[api.ts:1174](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1174)
+[api.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1174)
 
 ___
 
@@ -61,7 +57,7 @@ Report
 
 #### Defined in
 
-[api.ts:1168](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1168)
+[api.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1168)
 
 ___
 
@@ -75,4 +71,4 @@ Report
 
 #### Defined in
 
-[api.ts:1156](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1156)
+[api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1156)

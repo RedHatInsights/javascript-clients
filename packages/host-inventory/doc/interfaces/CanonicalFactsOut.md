@@ -26,7 +26,7 @@ CanonicalFactsOut
 
 ### bios\_uuid
 
-• `Optional` **bios\_uuid**: `string`
+• `Optional` **bios\_uuid**: ``null`` \| `string`
 
 A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
 
@@ -36,13 +36,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:342](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L342)
+[api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L342)
 
 ___
 
 ### fqdn
 
-• `Optional` **fqdn**: `string`
+• `Optional` **fqdn**: ``null`` \| `string`
 
 A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
 
@@ -52,13 +52,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L354)
+[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L354)
 
 ___
 
 ### insights\_id
 
-• `Optional` **insights\_id**: `string`
+• `Optional` **insights\_id**: ``null`` \| `string`
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
@@ -68,13 +68,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:324](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L324)
+[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L324)
 
 ___
 
 ### ip\_addresses
 
-• `Optional` **ip\_addresses**: `string`[]
+• `Optional` **ip\_addresses**: ``null`` \| `string`[]
 
 Host’s network IP addresses.  This field is considered to be a canonical fact.
 
@@ -84,13 +84,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:348](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L348)
+[api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L348)
 
 ___
 
 ### mac\_addresses
 
-• `Optional` **mac\_addresses**: `string`[]
+• `Optional` **mac\_addresses**: ``null`` \| `string`[]
 
 Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
 
@@ -100,13 +100,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:360](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L360)
+[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L360)
 
 ___
 
 ### provider\_id
 
-• `Optional` **provider\_id**: `string`
+• `Optional` **provider\_id**: ``null`` \| `string`
 
 Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
 
@@ -116,13 +116,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:366](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L366)
+[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L366)
 
 ___
 
 ### provider\_type
 
-• `Optional` **provider\_type**: `string`
+• `Optional` **provider\_type**: ``null`` \| `string`
 
 Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
 
@@ -132,13 +132,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:372](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L372)
+[api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L372)
 
 ___
 
 ### satellite\_id
 
-• `Optional` **satellite\_id**: `string`
+• `Optional` **satellite\_id**: ``null`` \| `string`
 
 A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -148,13 +148,13 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:336](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L336)
+[api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L336)
 
 ___
 
 ### subscription\_manager\_id
 
-• `Optional` **subscription\_manager\_id**: `string`
+• `Optional` **subscription\_manager\_id**: ``null`` \| `string`
 
 A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -164,4 +164,4 @@ CanonicalFactsOut
 
 #### Defined in
 
-[api.ts:330](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)
+[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L330)

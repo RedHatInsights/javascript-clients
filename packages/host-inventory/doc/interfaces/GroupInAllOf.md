@@ -25,7 +25,7 @@ GroupInAllOf
 
 ### host\_ids
 
-• `Optional` **host\_ids**: `string`[]
+• `Optional` **host\_ids**: ``null`` \| `string`[]
 
 A comma-separated list of host IDs that belong to the group.
 
@@ -35,7 +35,7 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:553](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L553)
+[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L553)
 
 ___
 
@@ -51,4 +51,4 @@ GroupInAllOf
 
 #### Defined in
 
-[api.ts:547](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L547)
+[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L547)

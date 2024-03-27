@@ -19,7 +19,9 @@ EventType
 - [fully\_qualified\_name](EventType.md#fully_qualified_name)
 - [id](EventType.md#id)
 - [name](EventType.md#name)
+- [not\_subscription\_locked\_or\_subscribed\_by\_default](EventType.md#not_subscription_locked_or_subscribed_by_default)
 - [subscribed\_by\_default](EventType.md#subscribed_by_default)
+- [subscription\_locked](EventType.md#subscription_locked)
 
 ## Properties
 
@@ -33,7 +35,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:965](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L965)
+[packages/integrations/types/index.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1014)
 
 ___
 
@@ -47,7 +49,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:959](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L959)
+[packages/integrations/types/index.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1008)
 
 ___
 
@@ -61,7 +63,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:947](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L947)
+[packages/integrations/types/index.ts:996](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L996)
 
 ___
 
@@ -75,7 +77,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:941](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L941)
+[packages/integrations/types/index.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L990)
 
 ___
 
@@ -89,7 +91,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:953](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L953)
+[packages/integrations/types/index.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1002)
 
 ___
 
@@ -103,7 +105,7 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:929](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L929)
+[packages/integrations/types/index.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L978)
 
 ___
 
@@ -117,7 +119,21 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:935](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L935)
+[packages/integrations/types/index.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L984)
+
+___
+
+### not\_subscription\_locked\_or\_subscribed\_by\_default
+
+• `Optional` **not\_subscription\_locked\_or\_subscribed\_by\_default**: `boolean`
+
+**`Memberof`**
+
+EventType
+
+#### Defined in
+
+[packages/integrations/types/index.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1032)
 
 ___
 
@@ -131,4 +147,18 @@ EventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:971](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L971)
+[packages/integrations/types/index.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1020)
+
+___
+
+### subscription\_locked
+
+• `Optional` **subscription\_locked**: `boolean`
+
+**`Memberof`**
+
+EventType
+
+#### Defined in
+
+[packages/integrations/types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1026)

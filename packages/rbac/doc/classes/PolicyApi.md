@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -80,13 +80,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -125,7 +125,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5068](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5068)
+[api.ts:5241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5241)
 
 ___
 
@@ -156,7 +156,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5080](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5080)
+[api.ts:5253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5253)
 
 ___
 
@@ -187,7 +187,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5092](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5092)
+[api.ts:5265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5265)
 
 ___
 
@@ -217,7 +217,7 @@ PolicyApi
 | `scope?` | ``"account"`` \| ``"principal"`` | Parameter for filtering resource by scope. |
 | `groupName?` | `string` | Parameter for filtering resource by group name using string contains search. |
 | `groupUuid?` | `string` | Parameter for filtering resource by group uuid using UUID exact match. |
-| `orderBy?` | ``"name"`` \| ``"modified"`` | Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
+| `orderBy?` | ``"modified"`` \| ``"name"`` | Parameter for ordering policies by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -226,7 +226,7 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5110](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5110)
+[api.ts:5283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5283)
 
 ___
 
@@ -258,4 +258,4 @@ PolicyApi
 
 #### Defined in
 
-[api.ts:5123](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L5123)
+[api.ts:5296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5296)

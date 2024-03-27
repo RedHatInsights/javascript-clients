@@ -25,19 +25,15 @@ ReportExport
 
 ### details
 
-• **details**: `Object`
+• **details**: `any`
 
 **`Memberof`**
 
 ReportExport
 
-#### Index signature
-
-▪ [key: `string`]: `any`
-
 #### Defined in
 
-[api.ts:1211](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1211)
+[api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1211)
 
 ___
 
@@ -51,13 +47,13 @@ ReportExport
 
 #### Defined in
 
-[api.ts:1193](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1193)
+[api.ts:1193](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1193)
 
 ___
 
 ### impacted\_date
 
-• **impacted\_date**: `string`
+• **impacted\_date**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -65,7 +61,7 @@ ReportExport
 
 #### Defined in
 
-[api.ts:1217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1217)
+[api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1217)
 
 ___
 
@@ -79,7 +75,7 @@ ReportExport
 
 #### Defined in
 
-[api.ts:1205](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1205)
+[api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1205)
 
 ___
 
@@ -93,7 +89,7 @@ ReportExport
 
 #### Defined in
 
-[api.ts:1199](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1199)
+[api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1199)
 
 ___
 
@@ -107,4 +103,4 @@ ReportExport
 
 #### Defined in
 
-[api.ts:1187](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1187)
+[api.ts:1187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1187)

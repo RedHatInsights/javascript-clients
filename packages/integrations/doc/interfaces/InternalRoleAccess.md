@@ -28,7 +28,7 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1191](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1191)
+[packages/integrations/types/index.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1258)
 
 ___
 
@@ -42,7 +42,7 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1179](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1179)
+[packages/integrations/types/index.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1246)
 
 ___
 
@@ -56,4 +56,4 @@ InternalRoleAccess
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1185](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1185)
+[packages/integrations/types/index.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1252)

@@ -27,7 +27,7 @@ RemediationInputAdd
 
 #### Defined in
 
-[api.ts:759](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L759)
+[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L772)
 
 ___
 
@@ -41,4 +41,4 @@ RemediationInputAdd
 
 #### Defined in
 
-[api.ts:765](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L765)
+[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L778)

@@ -30,7 +30,7 @@ Source
 
 #### Defined in
 
-[api.ts:3109](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3109)
+[api.ts:3109](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3109)
 
 ___
 
@@ -46,7 +46,7 @@ Source
 
 #### Defined in
 
-[api.ts:3115](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3115)
+[api.ts:3115](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3115)
 
 ___
 
@@ -60,7 +60,7 @@ Source
 
 #### Defined in
 
-[api.ts:3121](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3121)
+[api.ts:3121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3121)
 
 ___
 
@@ -74,7 +74,7 @@ Source
 
 #### Defined in
 
-[api.ts:3127](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3127)
+[api.ts:3127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3127)
 
 ___
 
@@ -88,4 +88,4 @@ Source
 
 #### Defined in
 
-[api.ts:3133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3133)
+[api.ts:3133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3133)

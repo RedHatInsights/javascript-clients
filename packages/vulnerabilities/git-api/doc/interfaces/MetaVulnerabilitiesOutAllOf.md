@@ -24,12 +24,13 @@ MetaVulnerabilitiesOutAllOf
 - [rhel\_version](MetaVulnerabilitiesOutAllOf.md#rhel_version)
 - [rule\_presence](MetaVulnerabilitiesOutAllOf.md#rule_presence)
 - [system\_count](MetaVulnerabilitiesOutAllOf.md#system_count)
+- [system\_count\_per\_type](MetaVulnerabilitiesOutAllOf.md#system_count_per_type)
 
 ## Properties
 
 ### advisory\_available
 
-• **advisory\_available**: `string`
+• **advisory\_available**: ``null`` \| `string`
 
 Shows whether a CVE has available advisory or not
 
@@ -39,13 +40,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2092](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2092)
+[api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2098)
 
 ___
 
 ### affecting
 
-• **affecting**: `string`
+• **affecting**: ``null`` \| `string`
 
 Description of CVE showing preferences
 
@@ -55,13 +56,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2098](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2098)
+[api.ts:2104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2104)
 
 ___
 
 ### business\_risk\_id
 
-• **business\_risk\_id**: `string`
+• **business\_risk\_id**: ``null`` \| `string`
 
 Filter based on business risk IDs.
 
@@ -71,13 +72,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2104](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2104)
+[api.ts:2110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2110)
 
 ___
 
 ### cves\_without\_errata
 
-• **cves\_without\_errata**: `boolean`
+• **cves\_without\_errata**: ``null`` \| `boolean`
 
 CVEs without Errata feature flag
 
@@ -87,13 +88,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2110](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2110)
+[api.ts:2116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2116)
 
 ___
 
 ### cvss\_from
 
-• **cvss\_from**: `number`
+• **cvss\_from**: ``null`` \| `number`
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -103,13 +104,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2116](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2116)
+[api.ts:2122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2122)
 
 ___
 
 ### cvss\_to
 
-• **cvss\_to**: `number`
+• **cvss\_to**: ``null`` \| `number`
 
 Filter based on cvss score, up to the value.
 
@@ -119,13 +120,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2122](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2122)
+[api.ts:2128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2128)
 
 ___
 
 ### impact
 
-• **impact**: `string`
+• **impact**: ``null`` \| `string`
 
 Filter based on impact IDs.
 
@@ -135,13 +136,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2128](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2128)
+[api.ts:2134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2134)
 
 ___
 
 ### public\_from
 
-• **public\_from**: `string`
+• **public\_from**: ``null`` \| `string`
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -151,13 +152,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2134](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2134)
+[api.ts:2140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2140)
 
 ___
 
 ### public\_to
 
-• **public\_to**: `string`
+• **public\_to**: ``null`` \| `string`
 
 Filter CVEs based on their published date, up to the date.
 
@@ -167,13 +168,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2140](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2140)
+[api.ts:2146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2146)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -183,13 +184,13 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2146)
+[api.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2152)
 
 ___
 
 ### rule\_presence
 
-• **rule\_presence**: `string`
+• **rule\_presence**: ``null`` \| `string`
 
 Filter based on presence of security rule
 
@@ -199,7 +200,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2152](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2152)
+[api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2158)
 
 ___
 
@@ -215,4 +216,18 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2158](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2158)
+[api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2164)
+
+___
+
+### system\_count\_per\_type
+
+• `Optional` **system\_count\_per\_type**: [`ExecutiveReportSystemCountPerType`](ExecutiveReportSystemCountPerType.md)
+
+**`Memberof`**
+
+MetaVulnerabilitiesOutAllOf
+
+#### Defined in
+
+[api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2170)
