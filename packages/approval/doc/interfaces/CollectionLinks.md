@@ -31,7 +31,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:117](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L117)
+[api.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L117)
 
 ___
 
@@ -47,7 +47,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:123](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L123)
+[api.ts:123](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L123)
 
 ___
 
@@ -63,7 +63,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:135](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L135)
+[api.ts:135](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L135)
 
 ___
 
@@ -79,4 +79,4 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:129](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L129)
+[api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L129)

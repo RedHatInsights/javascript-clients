@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[api.ts:1197](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1197)
+[api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1197)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[api.ts:1198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1198)
+[api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1198)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[api.ts:1195](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1195)
+[api.ts:1195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1195)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[api.ts:1196](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1196)
+[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1196)

@@ -26,4 +26,4 @@ RestoreKey
 
 #### Defined in
 
-[api.ts:1094](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1094)
+[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1094)

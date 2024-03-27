@@ -33,7 +33,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1676](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1676)
+[api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1676)
 
 ___
 
@@ -47,7 +47,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1706](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1706)
+[api.ts:1706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1706)
 
 ___
 
@@ -61,7 +61,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1682](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1682)
+[api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1682)
 
 ___
 
@@ -75,7 +75,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1694](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1694)
+[api.ts:1694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1694)
 
 ___
 
@@ -89,7 +89,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1700](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1700)
+[api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1700)
 
 ___
 
@@ -103,7 +103,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1688](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1688)
+[api.ts:1688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1688)
 
 ___
 
@@ -117,7 +117,7 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1670](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1670)
+[api.ts:1670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1670)
 
 ___
 
@@ -131,4 +131,4 @@ PrincipalOut
 
 #### Defined in
 
-[api.ts:1712](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1712)
+[api.ts:1712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1712)

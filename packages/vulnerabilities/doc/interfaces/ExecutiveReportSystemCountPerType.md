@@ -21,7 +21,7 @@ ExecutiveReportSystemCountPerType
 
 ### edge
 
-• `Optional` **edge**: `number`
+• `Optional` **edge**: ``null`` \| `number`
 
 Number of immutable systems.
 
@@ -31,7 +31,7 @@ ExecutiveReportSystemCountPerType
 
 #### Defined in
 
-[api.ts:984](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L984)
+[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L984)
 
 ___
 
@@ -47,4 +47,4 @@ ExecutiveReportSystemCountPerType
 
 #### Defined in
 
-[api.ts:990](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L990)
+[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L990)

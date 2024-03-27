@@ -28,7 +28,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1686](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1686)
+[packages/integrations/types/index.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1753)
 
 ___
 
@@ -42,7 +42,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1680](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1680)
+[packages/integrations/types/index.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1747)
 
 ___
 
@@ -56,4 +56,4 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1692](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1692)
+[packages/integrations/types/index.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1759)

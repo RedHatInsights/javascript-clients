@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[api.ts:448](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L448)
+[api.ts:461](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L461)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[api.ts:452](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L452)
+[api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L465)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[api.ts:451](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L451)
+[api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L464)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[api.ts:447](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L447)
+[api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L460)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[api.ts:449](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L449)
+[api.ts:462](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L462)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[api.ts:450](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L450)
+[api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L463)

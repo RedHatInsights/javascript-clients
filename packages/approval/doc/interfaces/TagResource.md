@@ -32,7 +32,7 @@ TagResource
 
 #### Defined in
 
-[api.ts:526](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L526)
+[api.ts:526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L526)
 
 ___
 
@@ -48,7 +48,7 @@ TagResource
 
 #### Defined in
 
-[api.ts:532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L532)
+[api.ts:532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L532)
 
 ___
 
@@ -64,4 +64,4 @@ TagResource
 
 #### Defined in
 
-[api.ts:538](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L538)
+[api.ts:538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L538)

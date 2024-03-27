@@ -33,7 +33,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:94](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L94)
+[api.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L94)
 
 ___
 
@@ -47,7 +47,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:100](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L100)
+[api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L100)
 
 ___
 
@@ -61,7 +61,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:106](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L106)
+[api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L106)
 
 ___
 
@@ -77,7 +77,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:112](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L112)
+[api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L112)
 
 ___
 
@@ -91,7 +91,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:118](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L118)
+[api.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L118)
 
 ___
 
@@ -105,7 +105,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:124](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L124)
+[api.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L124)
 
 ___
 
@@ -119,7 +119,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:130](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L130)
+[api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L130)
 
 ___
 
@@ -133,4 +133,4 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:136](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L136)
+[api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L136)

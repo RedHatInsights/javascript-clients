@@ -30,7 +30,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:259](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L259)
+[api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L259)
 
 ___
 
@@ -46,13 +46,13 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:253](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L253)
+[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L253)
 
 ___
 
 ### variables
 
-• `Optional` **variables**: `object`
+• `Optional` **variables**: ``null`` \| `object`
 
 Optional Query variables
 
@@ -62,4 +62,4 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:265](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L265)
+[api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L265)

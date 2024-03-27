@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -80,13 +80,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:7974](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7974)
+[api.ts:7974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7974)
 
 ___
 
@@ -160,7 +160,7 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:7986](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7986)
+[api.ts:7986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7986)
 
 ___
 
@@ -192,7 +192,7 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:7997](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7997)
+[api.ts:7997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7997)
 
 ___
 
@@ -225,7 +225,7 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:8009](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8009)
+[api.ts:8009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8009)
 
 ___
 
@@ -258,4 +258,4 @@ SettingsApi
 
 #### Defined in
 
-[api.ts:8021](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8021)
+[api.ts:8021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8021)

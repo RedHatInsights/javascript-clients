@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[api.ts:1054](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1054)
+[api.ts:1054](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1054)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[api.ts:1055](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1055)
+[api.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1055)

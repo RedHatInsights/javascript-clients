@@ -27,7 +27,7 @@ UpdateNotificationDrawerStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1736](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1736)
+[packages/integrations/types/index.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1803)
 
 ___
 
@@ -41,4 +41,4 @@ UpdateNotificationDrawerStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1742](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1742)
+[packages/integrations/types/index.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1809)

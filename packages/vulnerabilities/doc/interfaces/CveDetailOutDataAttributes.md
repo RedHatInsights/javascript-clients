@@ -42,7 +42,7 @@ CveDetailOutDataAttributes
 
 ### advisories\_list
 
-• **advisories\_list**: (`string` \| `object`)[]
+• **advisories\_list**: ``null`` \| (`string` \| `object`)[]
 
 List of advisory names or detailed advisory information
 
@@ -52,13 +52,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:216](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L216)
+[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L216)
 
 ___
 
 ### affected\_but\_not\_vulnerable
 
-• **affected\_but\_not\_vulnerable**: `number`
+• **affected\_but\_not\_vulnerable**: ``null`` \| `number`
 
 Number of systems that are affected by given CVE but are not vulnerable.
 
@@ -68,13 +68,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:222](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L222)
+[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L222)
 
 ___
 
 ### affected\_systems
 
-• `Optional` **affected\_systems**: `number`
+• `Optional` **affected\_systems**: ``null`` \| `number`
 
 Number of systems that are overall affected by given CVE
 
@@ -84,7 +84,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:228](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L228)
+[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L228)
 
 ___
 
@@ -100,7 +100,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:234](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L234)
+[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L234)
 
 ___
 
@@ -116,13 +116,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:240](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L240)
+[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L240)
 
 ___
 
 ### business\_risk\_text
 
-• **business\_risk\_text**: `string`
+• **business\_risk\_text**: ``null`` \| `string`
 
 Complementary text to the business risk.
 
@@ -132,13 +132,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:246](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L246)
+[api.ts:246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L246)
 
 ___
 
 ### celebrity\_name
 
-• **celebrity\_name**: `string`
+• **celebrity\_name**: ``null`` \| `string`
 
 \"Celebrity\" name of the CVE.
 
@@ -148,13 +148,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:252](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L252)
+[api.ts:252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L252)
 
 ___
 
 ### cvss2\_metrics
 
-• **cvss2\_metrics**: `string`
+• **cvss2\_metrics**: ``null`` \| `string`
 
 cvss2 metrics of the CVE.
 
@@ -164,13 +164,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:258](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L258)
+[api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L258)
 
 ___
 
 ### cvss2\_score
 
-• **cvss2\_score**: `string`
+• **cvss2\_score**: ``null`` \| `string`
 
 String representation of cvss2 score of the CVE.
 
@@ -180,13 +180,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:264](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L264)
+[api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L264)
 
 ___
 
 ### cvss3\_metrics
 
-• **cvss3\_metrics**: `string`
+• **cvss3\_metrics**: ``null`` \| `string`
 
 cvss3 metrics of the CVE.
 
@@ -196,13 +196,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:270](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L270)
+[api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L270)
 
 ___
 
 ### cvss3\_score
 
-• **cvss3\_score**: `string`
+• **cvss3\_score**: ``null`` \| `string`
 
 String representation of cvss3 score of the CVE.
 
@@ -212,7 +212,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:276](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L276)
+[api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L276)
 
 ___
 
@@ -228,7 +228,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:282](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L282)
+[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L282)
 
 ___
 
@@ -244,7 +244,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:288](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L288)
+[api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L288)
 
 ___
 
@@ -260,13 +260,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:294](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L294)
+[api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L294)
 
 ___
 
 ### modified\_date
 
-• **modified\_date**: `string`
+• **modified\_date**: ``null`` \| `string`
 
 String representation of ISO-8601 formatted date of last modification of the CVE.
 
@@ -276,13 +276,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:300](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L300)
+[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L300)
 
 ___
 
 ### public\_date
 
-• **public\_date**: `string`
+• **public\_date**: ``null`` \| `string`
 
 String representation of ISO-8601 formatted date of first public disclosure of the CVE.
 
@@ -292,13 +292,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:306](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L306)
+[api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L306)
 
 ___
 
 ### redhat\_url
 
-• **redhat\_url**: `string`
+• **redhat\_url**: ``null`` \| `string`
 
 Additional resource about the CVE, provided by Red Hat.
 
@@ -308,7 +308,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:312](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L312)
+[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L312)
 
 ___
 
@@ -322,13 +322,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:318](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L318)
+[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L318)
 
 ___
 
 ### secondary\_url
 
-• **secondary\_url**: `string`
+• **secondary\_url**: ``null`` \| `string`
 
 Additional resources about the CVE.
 
@@ -338,7 +338,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:324](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L324)
+[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L324)
 
 ___
 
@@ -354,7 +354,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:330](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L330)
+[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L330)
 
 ___
 
@@ -370,13 +370,13 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:336](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L336)
+[api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L336)
 
 ___
 
 ### status\_text
 
-• **status\_text**: `string`
+• **status\_text**: ``null`` \| `string`
 
 Complementary text to the status.
 
@@ -386,7 +386,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:342](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L342)
+[api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L342)
 
 ___
 
@@ -402,7 +402,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:348](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L348)
+[api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L348)
 
 ___
 
@@ -418,7 +418,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L354)
+[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L354)
 
 ___
 
@@ -434,4 +434,4 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:360](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L360)
+[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L360)

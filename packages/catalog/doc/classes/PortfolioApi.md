@@ -62,7 +62,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ## Properties
 
@@ -76,7 +76,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -90,13 +90,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -104,7 +104,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L49)
 
 ## Methods
 
@@ -138,7 +138,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5722](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5722)
+[api.ts:5722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5722)
 
 ___
 
@@ -171,7 +171,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5734](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5734)
+[api.ts:5734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5734)
 
 ___
 
@@ -204,7 +204,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5746](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5746)
+[api.ts:5746](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5746)
 
 ___
 
@@ -241,7 +241,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5762](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5762)
+[api.ts:5762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5762)
 
 ___
 
@@ -278,7 +278,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5778](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5778)
+[api.ts:5778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5778)
 
 ___
 
@@ -314,7 +314,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5793](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5793)
+[api.ts:5793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5793)
 
 ___
 
@@ -347,7 +347,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5805](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5805)
+[api.ts:5805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5805)
 
 ___
 
@@ -381,7 +381,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5818](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5818)
+[api.ts:5818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5818)
 
 ___
 
@@ -414,7 +414,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5830](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5830)
+[api.ts:5830](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5830)
 
 ___
 
@@ -448,7 +448,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5843](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5843)
+[api.ts:5843](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5843)
 
 ___
 
@@ -481,7 +481,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5855](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5855)
+[api.ts:5855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5855)
 
 ___
 
@@ -515,7 +515,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5868](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5868)
+[api.ts:5868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5868)
 
 ___
 
@@ -549,7 +549,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5881](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5881)
+[api.ts:5881](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5881)
 
 ___
 
@@ -583,7 +583,7 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5894](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5894)
+[api.ts:5894](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5894)
 
 ___
 
@@ -617,4 +617,4 @@ PortfolioApi
 
 #### Defined in
 
-[api.ts:5907](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5907)
+[api.ts:5907](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5907)

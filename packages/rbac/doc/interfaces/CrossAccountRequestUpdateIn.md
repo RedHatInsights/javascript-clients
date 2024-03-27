@@ -28,7 +28,7 @@ CrossAccountRequestUpdateIn
 
 #### Defined in
 
-[api.ts:688](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L688)
+[api.ts:688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L688)
 
 ___
 
@@ -42,7 +42,7 @@ CrossAccountRequestUpdateIn
 
 #### Defined in
 
-[api.ts:694](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L694)
+[api.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L694)
 
 ___
 
@@ -56,4 +56,4 @@ CrossAccountRequestUpdateIn
 
 #### Defined in
 
-[api.ts:682](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L682)
+[api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L682)

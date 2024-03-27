@@ -28,7 +28,7 @@ ControllersBaselineDetailItem
 
 #### Defined in
 
-[api.ts:428](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L428)
+[api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L428)
 
 ___
 
@@ -44,7 +44,7 @@ ControllersBaselineDetailItem
 
 #### Defined in
 
-[api.ts:434](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L434)
+[api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L434)
 
 ___
 
@@ -60,4 +60,4 @@ ControllersBaselineDetailItem
 
 #### Defined in
 
-[api.ts:440](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L440)
+[api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L440)

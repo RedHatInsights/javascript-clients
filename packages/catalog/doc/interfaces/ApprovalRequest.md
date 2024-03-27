@@ -33,7 +33,7 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:71](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L71)
+[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L71)
 
 ___
 
@@ -49,7 +49,7 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:65](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L65)
+[api.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L65)
 
 ___
 
@@ -65,7 +65,7 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:77](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L77)
+[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L77)
 
 ___
 
@@ -81,7 +81,7 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:83](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L83)
+[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L83)
 
 ___
 
@@ -95,7 +95,7 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:89](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L89)
+[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L89)
 
 ___
 
@@ -111,4 +111,4 @@ ApprovalRequest
 
 #### Defined in
 
-[api.ts:95](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L95)
+[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L95)

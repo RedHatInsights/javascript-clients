@@ -36,7 +36,7 @@ Source
 
 #### Defined in
 
-[api.ts:589](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L589)
+[api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L589)
 
 ___
 
@@ -50,7 +50,7 @@ Source
 
 #### Defined in
 
-[api.ts:595](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L595)
+[api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L595)
 
 ___
 
@@ -66,7 +66,7 @@ Source
 
 #### Defined in
 
-[api.ts:601](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L601)
+[api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L601)
 
 ___
 
@@ -80,7 +80,7 @@ Source
 
 #### Defined in
 
-[api.ts:607](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L607)
+[api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L607)
 
 ___
 
@@ -94,7 +94,7 @@ Source
 
 #### Defined in
 
-[api.ts:613](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L613)
+[api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L613)
 
 ___
 
@@ -108,7 +108,7 @@ Source
 
 #### Defined in
 
-[api.ts:619](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L619)
+[api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L619)
 
 ___
 
@@ -124,7 +124,7 @@ Source
 
 #### Defined in
 
-[api.ts:625](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L625)
+[api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L625)
 
 ___
 
@@ -138,7 +138,7 @@ Source
 
 #### Defined in
 
-[api.ts:631](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L631)
+[api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L631)
 
 ___
 
@@ -152,7 +152,7 @@ Source
 
 #### Defined in
 
-[api.ts:637](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L637)
+[api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L637)
 
 ___
 
@@ -166,7 +166,7 @@ Source
 
 #### Defined in
 
-[api.ts:643](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L643)
+[api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L643)
 
 ___
 
@@ -180,4 +180,4 @@ Source
 
 #### Defined in
 
-[api.ts:649](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L649)
+[api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L649)

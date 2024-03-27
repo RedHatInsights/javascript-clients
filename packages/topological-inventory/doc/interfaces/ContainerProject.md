@@ -38,7 +38,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:761](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L761)
+[api.ts:761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L761)
 
 ___
 
@@ -52,7 +52,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:767](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L767)
+[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L767)
 
 ___
 
@@ -66,7 +66,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:773](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L773)
+[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L773)
 
 ___
 
@@ -82,7 +82,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:779](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L779)
+[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L779)
 
 ___
 
@@ -96,7 +96,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:785](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L785)
+[api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L785)
 
 ___
 
@@ -110,7 +110,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:791](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L791)
+[api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L791)
 
 ___
 
@@ -124,7 +124,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:797](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L797)
+[api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L797)
 
 ___
 
@@ -138,7 +138,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:803](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L803)
+[api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L803)
 
 ___
 
@@ -152,7 +152,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:809](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L809)
+[api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L809)
 
 ___
 
@@ -168,7 +168,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:815](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L815)
+[api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L815)
 
 ___
 
@@ -182,7 +182,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:821](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L821)
+[api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L821)
 
 ___
 
@@ -196,7 +196,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:827](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L827)
+[api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L827)
 
 ___
 
@@ -210,4 +210,4 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:833](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L833)
+[api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L833)

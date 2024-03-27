@@ -30,4 +30,4 @@ HttpApiErrorCollection
 
 #### Defined in
 
-[api.ts:255](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L255)
+[api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L255)

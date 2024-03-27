@@ -12,6 +12,7 @@ DrawerEntryPayload
 
 ### Properties
 
+- [bundle](DrawerEntryPayload.md#bundle)
 - [created](DrawerEntryPayload.md#created)
 - [description](DrawerEntryPayload.md#description)
 - [id](DrawerEntryPayload.md#id)
@@ -20,6 +21,20 @@ DrawerEntryPayload
 - [title](DrawerEntryPayload.md#title)
 
 ## Properties
+
+### bundle
+
+• `Optional` **bundle**: `string`
+
+**`Memberof`**
+
+DrawerEntryPayload
+
+#### Defined in
+
+[packages/notifications/types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L664)
+
+___
 
 ### created
 
@@ -31,7 +46,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:603](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L603)
+[packages/notifications/types/index.ts:646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L646)
 
 ___
 
@@ -45,7 +60,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:591](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L591)
+[packages/notifications/types/index.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L634)
 
 ___
 
@@ -59,7 +74,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:585](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L585)
+[packages/notifications/types/index.ts:628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L628)
 
 ___
 
@@ -73,7 +88,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:609](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L609)
+[packages/notifications/types/index.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L652)
 
 ___
 
@@ -87,7 +102,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:615](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L615)
+[packages/notifications/types/index.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L658)
 
 ___
 
@@ -101,4 +116,4 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/notifications/types/index.ts:597](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L597)
+[packages/notifications/types/index.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L640)

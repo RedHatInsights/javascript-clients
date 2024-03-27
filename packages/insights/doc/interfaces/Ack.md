@@ -30,7 +30,7 @@ Ack
 
 #### Defined in
 
-[api.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L51)
+[api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L51)
 
 ___
 
@@ -46,7 +46,7 @@ Ack
 
 #### Defined in
 
-[api.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L45)
+[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L45)
 
 ___
 
@@ -62,7 +62,7 @@ Ack
 
 #### Defined in
 
-[api.ts:39](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L39)
+[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L39)
 
 ___
 
@@ -76,7 +76,7 @@ Ack
 
 #### Defined in
 
-[api.ts:33](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L33)
 
 ___
 
@@ -90,4 +90,4 @@ Ack
 
 #### Defined in
 
-[api.ts:57](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L57)
+[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L57)

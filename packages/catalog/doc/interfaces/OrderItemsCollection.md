@@ -28,7 +28,7 @@ OrderItemsCollection
 
 #### Defined in
 
-[api.ts:559](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L559)
+[api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L559)
 
 ___
 
@@ -42,7 +42,7 @@ OrderItemsCollection
 
 #### Defined in
 
-[api.ts:553](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L553)
+[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L553)
 
 ___
 
@@ -56,4 +56,4 @@ OrderItemsCollection
 
 #### Defined in
 
-[api.ts:547](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L547)
+[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L547)

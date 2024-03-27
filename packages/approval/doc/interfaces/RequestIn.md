@@ -33,7 +33,7 @@ RequestIn
 
 #### Defined in
 
-[api.ts:469](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L469)
+[api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L469)
 
 ___
 
@@ -49,7 +49,7 @@ RequestIn
 
 #### Defined in
 
-[api.ts:463](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L463)
+[api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L463)
 
 ___
 
@@ -65,7 +65,7 @@ RequestIn
 
 #### Defined in
 
-[api.ts:457](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L457)
+[api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L457)
 
 ___
 
@@ -81,4 +81,4 @@ RequestIn
 
 #### Defined in
 
-[api.ts:475](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L475)
+[api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L475)

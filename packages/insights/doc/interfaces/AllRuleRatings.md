@@ -26,7 +26,7 @@ AllRuleRatings
 
 ### account
 
-• `Optional` **account**: `string`
+• `Optional` **account**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -34,7 +34,7 @@ AllRuleRatings
 
 #### Defined in
 
-[api.ts:200](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L200)
+[api.ts:200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L200)
 
 ___
 
@@ -48,7 +48,7 @@ AllRuleRatings
 
 #### Defined in
 
-[api.ts:182](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L182)
+[api.ts:182](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L182)
 
 ___
 
@@ -62,7 +62,7 @@ AllRuleRatings
 
 #### Defined in
 
-[api.ts:206](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L206)
+[api.ts:206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L206)
 
 ___
 
@@ -78,7 +78,7 @@ AllRuleRatings
 
 #### Defined in
 
-[api.ts:194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L194)
+[api.ts:194](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L194)
 
 ___
 
@@ -86,13 +86,15 @@ ___
 
 • **rating**: [`AllRuleRatingsRatingEnum`](../enums/AllRuleRatingsRatingEnum.md)
 
+* `-1` - Dislike * `0` - Neutral * `1` - Like
+
 **`Memberof`**
 
 AllRuleRatings
 
 #### Defined in
 
-[api.ts:176](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L176)
+[api.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L176)
 
 ___
 
@@ -100,13 +102,15 @@ ___
 
 • **rule**: `string`
 
+Rule ID from Insights
+
 **`Memberof`**
 
 AllRuleRatings
 
 #### Defined in
 
-[api.ts:170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L170)
+[api.ts:170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L170)
 
 ___
 
@@ -120,4 +124,4 @@ AllRuleRatings
 
 #### Defined in
 
-[api.ts:188](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L188)
+[api.ts:188](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L188)

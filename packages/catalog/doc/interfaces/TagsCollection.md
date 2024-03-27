@@ -28,7 +28,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:1306](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1306)
+[api.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1306)
 
 ___
 
@@ -42,7 +42,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:1300](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1300)
+[api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1300)
 
 ___
 
@@ -56,4 +56,4 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:1294](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1294)
+[api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1294)

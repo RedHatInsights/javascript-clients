@@ -28,7 +28,7 @@ ApprovalRequestsCollection
 
 #### Defined in
 
-[api.ts:133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L133)
+[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L133)
 
 ___
 
@@ -42,7 +42,7 @@ ApprovalRequestsCollection
 
 #### Defined in
 
-[api.ts:127](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L127)
+[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L127)
 
 ___
 
@@ -56,4 +56,4 @@ ApprovalRequestsCollection
 
 #### Defined in
 
-[api.ts:121](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L121)
+[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L121)

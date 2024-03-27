@@ -28,7 +28,7 @@ VolumeTypesCollection
 
 #### Defined in
 
-[api.ts:4107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4107)
+[api.ts:4107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4107)
 
 ___
 
@@ -42,7 +42,7 @@ VolumeTypesCollection
 
 #### Defined in
 
-[api.ts:4101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4101)
+[api.ts:4101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4101)
 
 ___
 
@@ -56,4 +56,4 @@ VolumeTypesCollection
 
 #### Defined in
 
-[api.ts:4095](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4095)
+[api.ts:4095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L4095)

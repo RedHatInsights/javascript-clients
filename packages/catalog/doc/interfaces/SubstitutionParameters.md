@@ -28,4 +28,4 @@ SubstitutionParameters
 
 #### Defined in
 
-[api.ts:1243](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1243)
+[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1243)

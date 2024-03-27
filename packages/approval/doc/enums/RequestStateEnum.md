@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[api.ts:401](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L401)
+[api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L401)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api.ts:402](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L402)
+[api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L402)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api.ts:403](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L403)
+[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L403)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api.ts:404](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L404)
+[api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L404)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[api.ts:405](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L405)
+[api.ts:405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L405)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[api.ts:406](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L406)
+[api.ts:406](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L406)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[api.ts:407](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L407)
+[api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L407)

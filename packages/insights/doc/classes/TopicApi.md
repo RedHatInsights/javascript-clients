@@ -55,7 +55,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,13 +83,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -130,7 +130,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9552](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9552)
+[api.ts:9963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9963)
 
 ___
 
@@ -163,13 +163,13 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9564)
+[api.ts:9975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9975)
 
 ___
 
 ### topicList
 
-▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
+▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
 
 List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
 
@@ -188,6 +188,7 @@ TopicApi
 | `groups?` | `string`[] | List of Inventory host group names |
 | `showDisabled?` | `boolean` | Display topics that are disabled as well as enabled |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
+| `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -196,7 +197,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9579](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9579)
+[api.ts:9991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9991)
 
 ___
 
@@ -230,7 +231,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9592](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9592)
+[api.ts:10004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10004)
 
 ___
 
@@ -259,7 +260,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9603](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9603)
+[api.ts:10015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10015)
 
 ___
 
@@ -288,13 +289,13 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9614](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9614)
+[api.ts:10026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10026)
 
 ___
 
 ### topicSystemsRetrieve
 
-▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
 
 List all systems affected by this rule topic.  Systems are just listed by their UUID.
 
@@ -314,6 +315,7 @@ TopicApi
 | `groups?` | `string`[] | List of Inventory host group names |
 | `sort?` | (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[] | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
+| `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -322,7 +324,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9630](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9630)
+[api.ts:10043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10043)
 
 ___
 
@@ -356,4 +358,4 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9643](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L9643)
+[api.ts:10056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10056)

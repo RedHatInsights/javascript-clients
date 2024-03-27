@@ -38,7 +38,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:673](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L673)
+[api.ts:686](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L686)
 
 ___
 
@@ -54,7 +54,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:679](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L679)
+[api.ts:692](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L692)
 
 ___
 
@@ -68,7 +68,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:691](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L691)
+[api.ts:704](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L704)
 
 ___
 
@@ -82,7 +82,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:685](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L685)
+[api.ts:698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L698)
 
 ___
 
@@ -96,7 +96,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:655](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L655)
+[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L668)
 
 ___
 
@@ -110,13 +110,13 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:715](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L715)
+[api.ts:728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L728)
 
 ___
 
 ### name
 
-• **name**: `string`
+• **name**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -124,7 +124,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:661](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L661)
+[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L674)
 
 ___
 
@@ -140,7 +140,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:667](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L667)
+[api.ts:680](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L680)
 
 ___
 
@@ -154,7 +154,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:709](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L709)
+[api.ts:722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L722)
 
 ___
 
@@ -168,7 +168,7 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:703](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L703)
+[api.ts:716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L716)
 
 ___
 
@@ -182,4 +182,4 @@ RemediationDetails
 
 #### Defined in
 
-[api.ts:697](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L697)
+[api.ts:710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L710)

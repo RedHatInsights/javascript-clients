@@ -28,7 +28,7 @@ TemplateCollection
 
 #### Defined in
 
-[api.ts:594](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L594)
+[api.ts:594](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L594)
 
 ___
 
@@ -42,7 +42,7 @@ TemplateCollection
 
 #### Defined in
 
-[api.ts:588](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L588)
+[api.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L588)
 
 ___
 
@@ -56,4 +56,4 @@ TemplateCollection
 
 #### Defined in
 
-[api.ts:582](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L582)
+[api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L582)

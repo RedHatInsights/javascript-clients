@@ -142,7 +142,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1413](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1413)
+[api.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1413)
 
 ___
 
@@ -173,7 +173,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:1539](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1539)
+[api.ts:1539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1539)
 
 ___
 
@@ -202,7 +202,7 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1503](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1503)
+[api.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1503)
 
 ___
 
@@ -231,7 +231,7 @@ IconApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1600](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1600)
+[api.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1600)
 
 ___
 
@@ -262,7 +262,7 @@ IconApi - factory interface
 
 #### Defined in
 
-[api.ts:1745](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1745)
+[api.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1745)
 
 ___
 
@@ -291,7 +291,7 @@ IconApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1706](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1706)
+[api.ts:1706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1706)
 
 ___
 
@@ -329,7 +329,7 @@ OrderApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1812](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1812)
+[api.ts:1812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1812)
 
 ___
 
@@ -369,7 +369,7 @@ OrderApi - factory interface
 
 #### Defined in
 
-[api.ts:2531](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2531)
+[api.ts:2531](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2531)
 
 ___
 
@@ -407,7 +407,7 @@ OrderApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2355](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2355)
+[api.ts:2355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2355)
 
 ___
 
@@ -440,7 +440,7 @@ OrderItemApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2818](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2818)
+[api.ts:2818](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2818)
 
 ___
 
@@ -475,7 +475,7 @@ OrderItemApi - factory interface
 
 #### Defined in
 
-[api.ts:3247](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L3247)
+[api.ts:3247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3247)
 
 ___
 
@@ -508,7 +508,7 @@ OrderItemApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3142](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L3142)
+[api.ts:3142](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3142)
 
 ___
 
@@ -547,7 +547,7 @@ OrderProcessApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3422](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L3422)
+[api.ts:3422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L3422)
 
 ___
 
@@ -588,7 +588,7 @@ OrderProcessApi - factory interface
 
 #### Defined in
 
-[api.ts:4230](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L4230)
+[api.ts:4230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4230)
 
 ___
 
@@ -627,7 +627,7 @@ OrderProcessApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4039](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L4039)
+[api.ts:4039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4039)
 
 ___
 
@@ -669,7 +669,7 @@ PortfolioApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:4541](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L4541)
+[api.ts:4541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L4541)
 
 ___
 
@@ -713,7 +713,7 @@ PortfolioApi - factory interface
 
 #### Defined in
 
-[api.ts:5533](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5533)
+[api.ts:5533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5533)
 
 ___
 
@@ -755,7 +755,7 @@ PortfolioApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5296](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5296)
+[api.ts:5296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5296)
 
 ___
 
@@ -795,7 +795,7 @@ PortfolioItemApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:5918](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L5918)
+[api.ts:5918](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L5918)
 
 ___
 
@@ -837,7 +837,7 @@ PortfolioItemApi - factory interface
 
 #### Defined in
 
-[api.ts:6766](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L6766)
+[api.ts:6766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6766)
 
 ___
 
@@ -877,7 +877,7 @@ PortfolioItemApi - functional programming interface
 
 #### Defined in
 
-[api.ts:6561](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L6561)
+[api.ts:6561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L6561)
 
 ___
 
@@ -910,7 +910,7 @@ ServicePlansApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:7099](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7099)
+[api.ts:7099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7099)
 
 ___
 
@@ -945,7 +945,7 @@ ServicePlansApi - factory interface
 
 #### Defined in
 
-[api.ts:7458](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7458)
+[api.ts:7458](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7458)
 
 ___
 
@@ -978,7 +978,7 @@ ServicePlansApi - functional programming interface
 
 #### Defined in
 
-[api.ts:7364](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7364)
+[api.ts:7364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7364)
 
 ___
 
@@ -1010,7 +1010,7 @@ SettingsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:7611](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7611)
+[api.ts:7611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7611)
 
 ___
 
@@ -1044,7 +1044,7 @@ SettingsApi - factory interface
 
 #### Defined in
 
-[api.ts:7905](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7905)
+[api.ts:7905](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7905)
 
 ___
 
@@ -1076,7 +1076,7 @@ SettingsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:7827](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7827)
+[api.ts:7827](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7827)
 
 ___
 
@@ -1104,7 +1104,7 @@ TagsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:8032](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8032)
+[api.ts:8032](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8032)
 
 ___
 
@@ -1134,7 +1134,7 @@ TagsApi - factory interface
 
 #### Defined in
 
-[api.ts:8099](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8099)
+[api.ts:8099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8099)
 
 ___
 
@@ -1162,7 +1162,7 @@ TagsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:8077](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8077)
+[api.ts:8077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8077)
 
 ___
 
@@ -1192,7 +1192,7 @@ TenantApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:8138](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8138)
+[api.ts:8138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8138)
 
 ___
 
@@ -1224,7 +1224,7 @@ TenantApi - factory interface
 
 #### Defined in
 
-[api.ts:8317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8317)
+[api.ts:8317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8317)
 
 ___
 
@@ -1254,4 +1254,4 @@ TenantApi - functional programming interface
 
 #### Defined in
 
-[api.ts:8267](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L8267)
+[api.ts:8267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L8267)

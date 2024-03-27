@@ -28,7 +28,7 @@ PaginatedJustificationCountList
 
 #### Defined in
 
-[api.ts:673](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L673)
+[api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L673)
 
 ___
 
@@ -42,7 +42,7 @@ PaginatedJustificationCountList
 
 #### Defined in
 
-[api.ts:667](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L667)
+[api.ts:667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L667)
 
 ___
 
@@ -56,4 +56,4 @@ PaginatedJustificationCountList
 
 #### Defined in
 
-[api.ts:661](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L661)
+[api.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L661)

@@ -14,22 +14,22 @@ StalenessOutput
 
 ### Properties
 
-- [conventional\_culling\_delta](StalenessOutput.md#conventional_culling_delta)
-- [conventional\_stale\_warning\_delta](StalenessOutput.md#conventional_stale_warning_delta)
-- [conventional\_staleness\_delta](StalenessOutput.md#conventional_staleness_delta)
+- [conventional\_time\_to\_delete](StalenessOutput.md#conventional_time_to_delete)
+- [conventional\_time\_to\_stale](StalenessOutput.md#conventional_time_to_stale)
+- [conventional\_time\_to\_stale\_warning](StalenessOutput.md#conventional_time_to_stale_warning)
 - [created\_at](StalenessOutput.md#created_at)
 - [id](StalenessOutput.md#id)
-- [immutable\_culling\_delta](StalenessOutput.md#immutable_culling_delta)
-- [immutable\_stale\_warning\_delta](StalenessOutput.md#immutable_stale_warning_delta)
-- [immutable\_staleness\_delta](StalenessOutput.md#immutable_staleness_delta)
+- [immutable\_time\_to\_delete](StalenessOutput.md#immutable_time_to_delete)
+- [immutable\_time\_to\_stale](StalenessOutput.md#immutable_time_to_stale)
+- [immutable\_time\_to\_stale\_warning](StalenessOutput.md#immutable_time_to_stale_warning)
 - [org\_id](StalenessOutput.md#org_id)
 - [updated\_at](StalenessOutput.md#updated_at)
 
 ## Properties
 
-### conventional\_culling\_delta
+### conventional\_time\_to\_delete
 
-• `Optional` **conventional\_culling\_delta**: `number`
+• `Optional` **conventional\_time\_to\_delete**: `number`
 
 **`Memberof`**
 
@@ -37,13 +37,13 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1469](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1469)
+[api.ts:1506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1506)
 
 ___
 
-### conventional\_stale\_warning\_delta
+### conventional\_time\_to\_stale
 
-• `Optional` **conventional\_stale\_warning\_delta**: `number`
+• `Optional` **conventional\_time\_to\_stale**: `number`
 
 **`Memberof`**
 
@@ -51,13 +51,13 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1463](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1463)
+[api.ts:1494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1494)
 
 ___
 
-### conventional\_staleness\_delta
+### conventional\_time\_to\_stale\_warning
 
-• `Optional` **conventional\_staleness\_delta**: `number`
+• `Optional` **conventional\_time\_to\_stale\_warning**: `number`
 
 **`Memberof`**
 
@@ -65,7 +65,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1457](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1457)
+[api.ts:1500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1500)
 
 ___
 
@@ -81,7 +81,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1493](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1493)
+[api.ts:1530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1530)
 
 ___
 
@@ -95,13 +95,13 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1445](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1445)
+[api.ts:1482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1482)
 
 ___
 
-### immutable\_culling\_delta
+### immutable\_time\_to\_delete
 
-• `Optional` **immutable\_culling\_delta**: `number`
+• `Optional` **immutable\_time\_to\_delete**: `number`
 
 **`Memberof`**
 
@@ -109,13 +109,13 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1487](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1487)
+[api.ts:1524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1524)
 
 ___
 
-### immutable\_stale\_warning\_delta
+### immutable\_time\_to\_stale
 
-• `Optional` **immutable\_stale\_warning\_delta**: `number`
+• `Optional` **immutable\_time\_to\_stale**: `number`
 
 **`Memberof`**
 
@@ -123,13 +123,13 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1481](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1481)
+[api.ts:1512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1512)
 
 ___
 
-### immutable\_staleness\_delta
+### immutable\_time\_to\_stale\_warning
 
-• `Optional` **immutable\_staleness\_delta**: `number`
+• `Optional` **immutable\_time\_to\_stale\_warning**: `number`
 
 **`Memberof`**
 
@@ -137,7 +137,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1475](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1475)
+[api.ts:1518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1518)
 
 ___
 
@@ -153,7 +153,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1451](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1451)
+[api.ts:1488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1488)
 
 ___
 
@@ -169,4 +169,4 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1499](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1499)
+[api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1536)

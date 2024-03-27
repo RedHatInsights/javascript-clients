@@ -31,7 +31,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1112](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1112)
+[api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1112)
 
 ___
 
@@ -45,7 +45,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1100](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1100)
+[api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1100)
 
 ___
 
@@ -59,7 +59,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1118](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1118)
+[api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1118)
 
 ___
 
@@ -73,7 +73,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1094](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1094)
+[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1094)
 
 ___
 
@@ -87,7 +87,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1124](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1124)
+[api.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1124)
 
 ___
 
@@ -101,4 +101,4 @@ GroupWithPrincipals
 
 #### Defined in
 
-[api.ts:1106](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1106)
+[api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1106)

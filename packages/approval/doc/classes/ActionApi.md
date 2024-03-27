@@ -50,7 +50,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ## Properties
 
@@ -64,7 +64,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
@@ -78,13 +78,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -92,7 +92,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/base.ts#L49)
 
 ## Methods
 
@@ -126,7 +126,7 @@ ActionApi
 
 #### Defined in
 
-[api.ts:899](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L899)
+[api.ts:899](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L899)
 
 ___
 
@@ -159,7 +159,7 @@ ActionApi
 
 #### Defined in
 
-[api.ts:911](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L911)
+[api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L911)
 
 ___
 
@@ -192,4 +192,4 @@ ActionApi
 
 #### Defined in
 
-[api.ts:923](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L923)
+[api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L923)

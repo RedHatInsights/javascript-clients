@@ -31,7 +31,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:211](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L211)
+[packages/notifications/types/index.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L254)
 
 ___
 
@@ -45,7 +45,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:223](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L223)
+[packages/notifications/types/index.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L266)
 
 ___
 
@@ -59,7 +59,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:205](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L205)
+[packages/notifications/types/index.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L248)
 
 ___
 
@@ -73,7 +73,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:193](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L193)
+[packages/notifications/types/index.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L236)
 
 ___
 
@@ -87,7 +87,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:199](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L199)
+[packages/notifications/types/index.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L242)
 
 ___
 
@@ -101,4 +101,4 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L217)
+[packages/notifications/types/index.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L260)

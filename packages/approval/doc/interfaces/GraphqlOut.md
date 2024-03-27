@@ -29,7 +29,7 @@ GraphqlOut
 
 #### Defined in
 
-[api.ts:198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L198)
+[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L198)
 
 ___
 
@@ -45,4 +45,4 @@ GraphqlOut
 
 #### Defined in
 
-[api.ts:204](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L204)
+[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L204)

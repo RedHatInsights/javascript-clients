@@ -55,7 +55,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,13 +83,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -97,7 +97,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -127,7 +127,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7130](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7130)
+[api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7443)
 
 ___
 
@@ -158,13 +158,13 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7143)
+[api.ts:7456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7456)
 
 ___
 
 ### ruleList
 
-▸ **ruleList**(`category?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
+▸ **ruleList**(`category?`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
 
 List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
@@ -178,28 +178,31 @@ RuleApi
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `category?` | (``2`` \| ``1`` \| ``3`` \| ``4``)[] | Display rules of this category (number) |
+| `category?` | (``1`` \| ``2`` \| ``3`` \| ``4``)[] | Display rules of this category (number) |
+| `filterSystemProfileAnsible?` | `boolean` | Is this an Ansible system? |
+| `filterSystemProfileMssql?` | `boolean` | Is this a Microsoft SQL system? |
 | `filterSystemProfileSapSidsContains?` | `string`[] | Are there systems which contain these SAP SIDs? |
 | `filterSystemProfileSapSystem?` | `boolean` | Is this a SAP system? |
 | `groups?` | `string`[] | List of Inventory host group names |
 | `hasPlaybook?` | `boolean` | Display rules that have a playbook |
 | `hasTag?` | `string`[] | Display rules that have (one or more) tags |
-| `impact?` | (``2`` \| ``1`` \| ``3`` \| ``4``)[] | Display rules of this impact level (1..4) |
+| `impact?` | (``1`` \| ``2`` \| ``3`` \| ``4``)[] | Display rules of this impact level (1..4) |
 | `impacting?` | `boolean` | Display only rules that are impacting systems currently |
 | `incident?` | `boolean` | Display only rules that cause an incident |
-| `likelihood?` | (``2`` \| ``1`` \| ``3`` \| ``4``)[] | Display only rules of this likelihood level (1..4) |
+| `likelihood?` | (``1`` \| ``2`` \| ``3`` \| ``4``)[] | Display only rules of this likelihood level (1..4) |
 | `limit?` | `number` | Number of results to return per page. |
 | `offset?` | `number` | The initial index from which to return the results. |
 | `pathway?` | `string` | Display rules of this Pathway |
 | `reboot?` | `boolean` | Display rules that require a reboot to fix |
 | `reportsShown?` | `boolean` | Display rules where reports are shown or not |
-| `resRisk?` | (``2`` \| ``1`` \| ``3`` \| ``4``)[] | Display rules with this resolution risk level (1..4) |
+| `resRisk?` | (``1`` \| ``2`` \| ``3`` \| ``4``)[] | Display rules with this resolution risk level (1..4) |
 | `ruleStatus?` | ``"all"`` \| ``"disabled"`` \| ``"enabled"`` \| ``"rhdisabled"`` | Display rules which are enabled, disabled (acked) by user, or disabled (acked) by Red Hat |
-| `sort?` | (``"description"`` \| ``"-category"`` \| ``"-description"`` \| ``"-impact"`` \| ``"-impacted_count"`` \| ``"-likelihood"`` \| ``"-playbook_count"`` \| ``"-publish_date"`` \| ``"-resolution_risk"`` \| ``"-rule_id"`` \| ``"-total_risk"`` \| ``"category"`` \| ``"impact"`` \| ``"impacted_count"`` \| ``"likelihood"`` \| ``"playbook_count"`` \| ``"publish_date"`` \| ``"resolution_risk"`` \| ``"rule_id"`` \| ``"total_risk"``)[] | Order by this field |
+| `sort?` | (``"-category"`` \| ``"-description"`` \| ``"-impact"`` \| ``"-impacted_count"`` \| ``"-likelihood"`` \| ``"-playbook_count"`` \| ``"-publish_date"`` \| ``"-resolution_risk"`` \| ``"-rule_id"`` \| ``"-total_risk"`` \| ``"category"`` \| ``"description"`` \| ``"impact"`` \| ``"impacted_count"`` \| ``"likelihood"`` \| ``"playbook_count"`` \| ``"publish_date"`` \| ``"resolution_risk"`` \| ``"rule_id"`` \| ``"total_risk"``)[] | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `text?` | `string` | Display rules with this text in their text fields |
 | `topic?` | `string` | Display rules in this topic (slug) |
-| `totalRisk?` | (``2`` \| ``1`` \| ``3`` \| ``4``)[] | Display rules with this total risk level (1..4) |
+| `totalRisk?` | (``1`` \| ``2`` \| ``3`` \| ``4``)[] | Display rules with this total risk level (1..4) |
+| `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -208,7 +211,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7175](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7175)
+[api.ts:7491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7491)
 
 ___
 
@@ -239,7 +242,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7188](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7188)
+[api.ts:7504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7504)
 
 ___
 
@@ -268,13 +271,13 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7199](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7199)
+[api.ts:7515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7515)
 
 ___
 
 ### ruleSystemsDetailList
 
-▸ **ruleSystemsDetailList**(`ruleId`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
+▸ **ruleSystemsDetailList**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
 
 List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
 
@@ -289,12 +292,16 @@ RuleApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `ruleId` | `string` |  |
+| `filterSystemProfileAnsible?` | `boolean` | Is this an Ansible system? |
+| `filterSystemProfileMssql?` | `boolean` | Is this a Microsoft SQL system? |
+| `filterSystemProfileSapSidsContains?` | `string`[] | Are there systems which contain these SAP SIDs? |
+| `filterSystemProfileSapSystem?` | `boolean` | Is this a SAP system? |
 | `groups?` | `string`[] | List of Inventory host group names |
 | `limit?` | `number` | Number of results to return per page. |
 | `name?` | `string` | Search for systems that include this in their display name |
 | `offset?` | `number` | The initial index from which to return the results. |
 | `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
-| `sort?` | ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"`` | Order by this field |
+| `sort?` | ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"`` | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `options?` | `any` | Override http request option. |
 
@@ -304,13 +311,13 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7217](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7217)
+[api.ts:7537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7537)
 
 ___
 
 ### ruleSystemsRetrieve
 
-▸ **ruleSystemsRetrieve**(`ruleId`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+▸ **ruleSystemsRetrieve**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
 
 List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
@@ -325,12 +332,17 @@ RuleApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `ruleId` | `string` |  |
-| `format?` | ``"json"`` \| ``"csv"`` |  |
+| `filterSystemProfileAnsible?` | `boolean` | Is this an Ansible system? |
+| `filterSystemProfileMssql?` | `boolean` | Is this a Microsoft SQL system? |
+| `filterSystemProfileSapSidsContains?` | `string`[] | Are there systems which contain these SAP SIDs? |
+| `filterSystemProfileSapSystem?` | `boolean` | Is this a SAP system? |
+| `format?` | ``"csv"`` \| ``"json"`` |  |
 | `groups?` | `string`[] | List of Inventory host group names |
 | `name?` | `string` | Search for systems that include this in their display name |
 | `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[] | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
+| `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -339,7 +351,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7234](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7234)
+[api.ts:7559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7559)
 
 ___
 
@@ -369,4 +381,4 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7246](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7246)
+[api.ts:7571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7571)

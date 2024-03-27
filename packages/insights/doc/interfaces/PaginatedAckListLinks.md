@@ -21,7 +21,7 @@ PaginatedAckListLinks
 
 ### first
 
-• `Optional` **first**: `string`
+• `Optional` **first**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -29,13 +29,13 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:567](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L567)
+[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L567)
 
 ___
 
 ### last
 
-• `Optional` **last**: `string`
+• `Optional` **last**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -43,13 +43,13 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:585](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L585)
+[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L585)
 
 ___
 
 ### next
 
-• `Optional` **next**: `string`
+• `Optional` **next**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -57,13 +57,13 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:579](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L579)
+[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L579)
 
 ___
 
 ### previous
 
-• `Optional` **previous**: `string`
+• `Optional` **previous**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -71,4 +71,4 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:573](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L573)
+[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L573)

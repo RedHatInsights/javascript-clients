@@ -58,7 +58,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -72,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -86,13 +86,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -132,7 +132,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4157](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4157)
+[api.ts:4327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4327)
 
 ___
 
@@ -164,7 +164,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4170)
+[api.ts:4340](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4340)
 
 ___
 
@@ -195,7 +195,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4182](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4182)
+[api.ts:4352](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4352)
 
 ___
 
@@ -226,7 +226,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4194)
+[api.ts:4364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4364)
 
 ___
 
@@ -259,7 +259,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4208](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4208)
+[api.ts:4378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4378)
 
 ___
 
@@ -291,7 +291,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4221](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4221)
+[api.ts:4391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4391)
 
 ___
 
@@ -322,13 +322,13 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4233)
+[api.ts:4403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4403)
 
 ___
 
 ### getPrincipalsFromGroup
 
-▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `principalType?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+▸ **getPrincipalsFromGroup**(`uuid`, `adminOnly?`, `principalUsername?`, `limit?`, `offset?`, `orderBy?`, `usernameOnly?`, `principalType?`, `serviceAccountClientIds?`, `serviceAccountDescription?`, `serviceAccountName?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountInGroupResponse`](../interfaces/ServiceAccountInGroupResponse.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
 
@@ -347,22 +347,25 @@ GroupApi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | ID of group from which to get principals |
-| `adminOnly?` | ``"false"`` \| ``"true"`` | Get only admin users within an account. |
+| `adminOnly?` | `boolean` | Get only admin users within an account. |
 | `principalUsername?` | `string` | Parameter for filtering group principals by principal &#x60;username&#x60; using string contains search. |
 | `limit?` | `number` | Parameter for selecting the amount of data returned. |
 | `offset?` | `number` | Parameter for selecting the offset of data. |
 | `orderBy?` | ``"username"`` | Parameter for ordering principals by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-username |
 | `usernameOnly?` | `boolean` | Parameter for optionally returning only usernames for principals, bypassing a call to IT. |
-| `principalType?` | ``"user"`` \| ``"service-account"`` | Parameter for selecting the type of principal to be returned. |
+| `principalType?` | ``"service-account"`` \| ``"user"`` | Parameter for selecting the type of principal to be returned. |
+| `serviceAccountClientIds?` | `string` | By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\&#39;s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter. |
+| `serviceAccountDescription?` | `string` | Parameter for filtering the service accounts by their description. |
+| `serviceAccountName?` | `string` | Parameter for filtering the service accounts by their name. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md), `any`\>\>
+`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountInGroupResponse`](../interfaces/ServiceAccountInGroupResponse.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
 
 #### Defined in
 
-[api.ts:4252](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4252)
+[api.ts:4425](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4425)
 
 ___
 
@@ -389,14 +392,14 @@ GroupApi
 | `limit?` | `number` | Parameter for selecting the amount of data returned. |
 | `offset?` | `number` | Parameter for selecting the offset of data. |
 | `name?` | `string` | Parameter for filtering resource by name using string contains search. |
-| `nameMatch?` | ``"exact"`` \| ``"partial"`` | Parameter for specifying the matching criteria for an object\&#39;s name or display_name. |
+| `nameMatch?` | ``"partial"`` \| ``"exact"`` | Parameter for specifying the matching criteria for an object\&#39;s name or display_name. |
 | `scope?` | ``"account"`` \| ``"principal"`` | Parameter for filtering resource by scope. |
 | `username?` | `string` | A username for a principal to filter for groups |
 | `excludeUsername?` | `string` | A username for a principal to filter for groups where principal is not a member and can be added manually |
 | `uuid?` | `string`[] | A list of UUIDs to filter listed groups. |
 | `roleNames?` | `string`[] | List of role name to filter for groups. It is exact match but case-insensitive |
 | `roleDiscriminator?` | ``"all"`` \| ``"any"`` | Discriminator that works with role_names to indicate matching all/any of the role names |
-| `orderBy?` | ``"name"`` \| ``"modified"`` \| ``"principalCount"`` \| ``"policyCount"`` | Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
+| `orderBy?` | ``"modified"`` \| ``"name"`` \| ``"principalCount"`` \| ``"policyCount"`` | Parameter for ordering groups by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
 | `platformDefault?` | `boolean` | An optional flag to return either platform default or non-platform default groups. |
 | `adminDefault?` | `boolean` | An optional flag to return either admin default or non-admin default groups. |
 | `system?` | `boolean` | An optional flag to return either system or non-system groups. |
@@ -408,7 +411,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4277](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4277)
+[api.ts:4450](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4450)
 
 ___
 
@@ -441,7 +444,7 @@ GroupApi
 | `roleExternalTenant?` | `string` | Parameter for filtering group roles by role &#x60;external_tenant&#x60; using string search. |
 | `limit?` | `number` | Parameter for selecting the amount of data returned. |
 | `offset?` | `number` | Parameter for selecting the offset of data. |
-| `orderBy?` | ``"name"`` \| ``"modified"`` \| ``"policyCount"`` \| ``"display_name"`` | Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
+| `orderBy?` | ``"modified"`` \| ``"name"`` \| ``"policyCount"`` \| ``"display_name"`` | Parameter for ordering roles by value. For inverse ordering, supply \&#39;-\&#39; before the param value, such as: ?order_by&#x3D;-name |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -450,7 +453,7 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4298](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4298)
+[api.ts:4471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4471)
 
 ___
 
@@ -482,4 +485,4 @@ GroupApi
 
 #### Defined in
 
-[api.ts:4311](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4311)
+[api.ts:4484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4484)

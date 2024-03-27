@@ -30,7 +30,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:1319](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1319)
+[api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1319)
 
 ___
 
@@ -46,7 +46,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:1325](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1325)
+[api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1325)
 
 ___
 
@@ -62,4 +62,4 @@ Tenant
 
 #### Defined in
 
-[api.ts:1331](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1331)
+[api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1331)

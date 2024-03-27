@@ -32,7 +32,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2266](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2266)
+[api.ts:2278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2278)
 
 ___
 
@@ -48,13 +48,13 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2272](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2272)
+[api.ts:2284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2284)
 
 ___
 
 ### reboot\_required
 
-• `Optional` **reboot\_required**: `boolean`
+• `Optional` **reboot\_required**: ``null`` \| `boolean`
 
 Indicator whter reboot is required to mitigate vulnerability.
 
@@ -64,7 +64,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2278)
+[api.ts:2290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2290)
 
 ___
 
@@ -80,7 +80,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2284](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2284)
+[api.ts:2296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2296)
 
 ___
 
@@ -96,4 +96,4 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2290](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2290)
+[api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2302)

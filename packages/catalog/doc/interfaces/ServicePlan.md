@@ -34,7 +34,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1119)
+[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1119)
 
 ___
 
@@ -50,7 +50,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1113)
+[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1113)
 
 ___
 
@@ -66,7 +66,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1131)
+[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1131)
 
 ___
 
@@ -82,7 +82,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1137)
+[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1137)
 
 ___
 
@@ -98,7 +98,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1143)
+[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1143)
 
 ___
 
@@ -114,7 +114,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1107)
+[api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1107)
 
 ___
 
@@ -130,4 +130,4 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:1125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1125)
+[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1125)

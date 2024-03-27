@@ -28,7 +28,7 @@ ControllersPackagesResponse
 
 #### Defined in
 
-[api.ts:991](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L991)
+[api.ts:991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L991)
 
 ___
 
@@ -42,7 +42,7 @@ ControllersPackagesResponse
 
 #### Defined in
 
-[api.ts:997](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L997)
+[api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L997)
 
 ___
 
@@ -56,4 +56,4 @@ ControllersPackagesResponse
 
 #### Defined in
 
-[api.ts:1003](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1003)
+[api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1003)

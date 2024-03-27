@@ -28,7 +28,7 @@ CrossAccountRequestWithRolesRoles
 
 #### Defined in
 
-[api.ts:768](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L768)
+[api.ts:768](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L768)
 
 ___
 
@@ -42,7 +42,7 @@ CrossAccountRequestWithRolesRoles
 
 #### Defined in
 
-[api.ts:762](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L762)
+[api.ts:762](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L762)
 
 ___
 
@@ -56,4 +56,4 @@ CrossAccountRequestWithRolesRoles
 
 #### Defined in
 
-[api.ts:774](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L774)
+[api.ts:774](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L774)

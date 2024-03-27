@@ -21,7 +21,7 @@ Reposition
 
 ### increment
 
-• `Optional` **increment**: `number`
+• `Optional` **increment**: ``null`` \| `number`
 
 Move the record up (negative) or down (positive) in the list. Do not set it if placement is used
 
@@ -31,7 +31,7 @@ Reposition
 
 #### Defined in
 
-[api.ts:268](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L268)
+[api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L268)
 
 ___
 
@@ -47,4 +47,4 @@ Reposition
 
 #### Defined in
 
-[api.ts:274](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L274)
+[api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L274)

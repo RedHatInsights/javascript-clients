@@ -42,7 +42,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3257](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3257)
+[api.ts:3257](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3257)
 
 ___
 
@@ -56,7 +56,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3263](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3263)
+[api.ts:3263](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3263)
 
 ___
 
@@ -70,7 +70,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3269](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3269)
+[api.ts:3269](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3269)
 
 ___
 
@@ -84,7 +84,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3275](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3275)
+[api.ts:3275](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3275)
 
 ___
 
@@ -100,7 +100,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3281](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3281)
+[api.ts:3281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3281)
 
 ___
 
@@ -114,7 +114,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3287](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3287)
+[api.ts:3287](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3287)
 
 ___
 
@@ -128,7 +128,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3293](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3293)
+[api.ts:3293](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3293)
 
 ___
 
@@ -144,7 +144,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3299](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3299)
+[api.ts:3299](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3299)
 
 ___
 
@@ -160,7 +160,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3305](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3305)
+[api.ts:3305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3305)
 
 ___
 
@@ -174,7 +174,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3311](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3311)
+[api.ts:3311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3311)
 
 ___
 
@@ -188,7 +188,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3317)
+[api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3317)
 
 ___
 
@@ -204,7 +204,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3323](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3323)
+[api.ts:3323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3323)
 
 ___
 
@@ -218,7 +218,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3329](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3329)
+[api.ts:3329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3329)
 
 ___
 
@@ -234,7 +234,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3335](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3335)
+[api.ts:3335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3335)
 
 ___
 
@@ -248,7 +248,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3341](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3341)
+[api.ts:3341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3341)
 
 ___
 
@@ -264,7 +264,7 @@ Subnet
 
 #### Defined in
 
-[api.ts:3347](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3347)
+[api.ts:3347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3347)
 
 ___
 
@@ -278,4 +278,4 @@ Subnet
 
 #### Defined in
 
-[api.ts:3353](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3353)
+[api.ts:3353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3353)

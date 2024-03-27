@@ -28,7 +28,7 @@ ControllersBaselineSystemItem
 
 #### Defined in
 
-[api.ts:523](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L523)
+[api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L523)
 
 ___
 
@@ -44,7 +44,7 @@ ControllersBaselineSystemItem
 
 #### Defined in
 
-[api.ts:529](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L529)
+[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L529)
 
 ___
 
@@ -60,4 +60,4 @@ ControllersBaselineSystemItem
 
 #### Defined in
 
-[api.ts:535](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L535)
+[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L535)

@@ -36,7 +36,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:608](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L608)
+[api.ts:608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L608)
 
 ___
 
@@ -52,7 +52,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:602](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L602)
+[api.ts:602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L602)
 
 ___
 
@@ -66,13 +66,13 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:590](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L590)
+[api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L590)
 
 ___
 
 ### description
 
-• `Optional` **description**: `string`
+• `Optional` **description**: ``null`` \| `string`
 
 The order process description.
 
@@ -82,7 +82,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:584](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L584)
+[api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L584)
 
 ___
 
@@ -96,7 +96,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:572](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L572)
+[api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L572)
 
 ___
 
@@ -112,7 +112,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:620](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L620)
+[api.ts:620](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L620)
 
 ___
 
@@ -128,7 +128,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:578](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L578)
+[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L578)
 
 ___
 
@@ -144,7 +144,7 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:614](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L614)
+[api.ts:614](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L614)
 
 ___
 
@@ -158,4 +158,4 @@ OrderProcess
 
 #### Defined in
 
-[api.ts:596](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L596)
+[api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L596)

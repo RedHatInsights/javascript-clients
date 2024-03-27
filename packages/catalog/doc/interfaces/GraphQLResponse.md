@@ -29,7 +29,7 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L278)
+[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L278)
 
 ___
 
@@ -45,4 +45,4 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:284](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L284)
+[api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L284)

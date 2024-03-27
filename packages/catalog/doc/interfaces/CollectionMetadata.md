@@ -28,4 +28,4 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:177](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L177)
+[api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L177)

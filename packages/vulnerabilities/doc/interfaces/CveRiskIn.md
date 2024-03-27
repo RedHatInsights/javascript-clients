@@ -30,13 +30,13 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:379](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)
+[api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L379)
 
 ___
 
 ### business\_risk\_text
 
-• `Optional` **business\_risk\_text**: `string`
+• `Optional` **business\_risk\_text**: ``null`` \| `string`
 
 Complementary text to the business risk.
 
@@ -46,7 +46,7 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:385](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)
+[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L385)
 
 ___
 
@@ -60,4 +60,4 @@ CveRiskIn
 
 #### Defined in
 
-[api.ts:391](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L391)
+[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L391)

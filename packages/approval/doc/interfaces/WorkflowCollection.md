@@ -28,7 +28,7 @@ WorkflowCollection
 
 #### Defined in
 
-[api.ts:662](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L662)
+[api.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L662)
 
 ___
 
@@ -42,7 +42,7 @@ WorkflowCollection
 
 #### Defined in
 
-[api.ts:656](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L656)
+[api.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L656)
 
 ___
 
@@ -56,4 +56,4 @@ WorkflowCollection
 
 #### Defined in
 
-[api.ts:650](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L650)
+[api.ts:650](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L650)

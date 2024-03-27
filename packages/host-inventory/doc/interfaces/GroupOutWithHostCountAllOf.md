@@ -28,4 +28,4 @@ GroupOutWithHostCountAllOf
 
 #### Defined in
 
-[api.ts:658](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L658)
+[api.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L658)

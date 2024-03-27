@@ -58,7 +58,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ## Properties
 
@@ -72,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -86,13 +86,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L49)
 
 ## Methods
 
@@ -134,7 +134,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2675](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2675)
+[api.ts:2675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2675)
 
 ___
 
@@ -167,7 +167,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2687](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2687)
+[api.ts:2687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2687)
 
 ___
 
@@ -199,7 +199,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2698](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2698)
+[api.ts:2698](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2698)
 
 ___
 
@@ -232,7 +232,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2710](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2710)
+[api.ts:2710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2710)
 
 ___
 
@@ -269,7 +269,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2726](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2726)
+[api.ts:2726](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2726)
 
 ___
 
@@ -306,7 +306,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2742](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2742)
+[api.ts:2742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2742)
 
 ___
 
@@ -342,7 +342,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2757](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2757)
+[api.ts:2757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2757)
 
 ___
 
@@ -376,7 +376,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2770](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2770)
+[api.ts:2770](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2770)
 
 ___
 
@@ -409,7 +409,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2782](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2782)
+[api.ts:2782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2782)
 
 ___
 
@@ -443,7 +443,7 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2795](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2795)
+[api.ts:2795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2795)
 
 ___
 
@@ -476,4 +476,4 @@ OrderApi
 
 #### Defined in
 
-[api.ts:2807](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L2807)
+[api.ts:2807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L2807)

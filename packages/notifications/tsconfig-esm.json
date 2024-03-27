@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "target": "es2021",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "declaration": true,
+      "declarationMap": true,
+      "noImplicitAny": true,
+      "outDir": "esm",
+      "rootDir": ".",
+      "lib": [
+          "es2017",
+          "dom"
+      ]
+  },
+  "exclude": [
+      "dist",
+      "node_modules",
+      "*.d.ts"
+  ]
+}

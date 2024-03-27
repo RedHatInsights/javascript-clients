@@ -28,7 +28,7 @@ RequestCollection
 
 #### Defined in
 
-[api.ts:444](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L444)
+[api.ts:444](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L444)
 
 ___
 
@@ -42,7 +42,7 @@ RequestCollection
 
 #### Defined in
 
-[api.ts:438](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L438)
+[api.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L438)
 
 ___
 
@@ -56,4 +56,4 @@ RequestCollection
 
 #### Defined in
 
-[api.ts:432](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L432)
+[api.ts:432](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L432)

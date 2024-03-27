@@ -38,13 +38,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1101)
+[api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1101)
 
 ___
 
 ### change\_risk
 
-• **change\_risk**: `number`
+• **change\_risk**: ``null`` \| `number`
 
 Indicates how likely remediation can change environment on the remediatied system.
 
@@ -54,13 +54,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1107)
+[api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1107)
 
 ___
 
 ### description
 
-• **description**: `string`
+• **description**: ``null`` \| `string`
 
 Description of the rule.
 
@@ -70,13 +70,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1113)
+[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1113)
 
 ___
 
 ### kbase\_node\_id
 
-• **kbase\_node\_id**: `number`
+• **kbase\_node\_id**: ``null`` \| `number`
 
 ID of associated Red Hat knowledgebase article.
 
@@ -86,13 +86,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1119)
+[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1119)
 
 ___
 
 ### playbook\_count
 
-• **playbook\_count**: `number`
+• **playbook\_count**: ``null`` \| `number`
 
 Number of available Ansible playbooks for remediation/mitigation.
 
@@ -102,13 +102,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1125)
+[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1125)
 
 ___
 
 ### publish\_date
 
-• **publish\_date**: `string`
+• **publish\_date**: ``null`` \| `string`
 
 Date when the rule was published.
 
@@ -118,13 +118,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1131)
+[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1131)
 
 ___
 
 ### reboot\_required
 
-• **reboot\_required**: `boolean`
+• **reboot\_required**: ``null`` \| `boolean`
 
 Indicator whter reboot is required to mitigate vulnerability.
 
@@ -134,7 +134,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1137)
+[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1137)
 
 ___
 
@@ -150,13 +150,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1143)
+[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1143)
 
 ___
 
 ### rule\_impact
 
-• **rule\_impact**: `number`
+• **rule\_impact**: ``null`` \| `number`
 
 Shows rules impact number from 1 to 4
 
@@ -166,13 +166,13 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1149)
+[api.ts:1149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1149)
 
 ___
 
 ### summary
 
-• **summary**: `string`
+• **summary**: ``null`` \| `string`
 
 Summary of the rule.
 
@@ -182,7 +182,7 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1155](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1155)
+[api.ts:1155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1155)
 
 ___
 
@@ -198,4 +198,4 @@ InsightsRule
 
 #### Defined in
 
-[api.ts:1161](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1161)
+[api.ts:1161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1161)

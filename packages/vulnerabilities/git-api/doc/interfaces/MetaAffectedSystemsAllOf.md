@@ -27,7 +27,7 @@ MetaAffectedSystemsAllOf
 
 ### cves\_without\_errata
 
-• **cves\_without\_errata**: `boolean`
+• **cves\_without\_errata**: ``null`` \| `boolean`
 
 CVEs without Errata feature flag
 
@@ -37,13 +37,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1399](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1399)
+[api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1399)
 
 ___
 
 ### first\_reported\_from
 
-• **first\_reported\_from**: `string`
+• **first\_reported\_from**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -53,13 +53,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1405](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1405)
+[api.ts:1405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1405)
 
 ___
 
 ### first\_reported\_to
 
-• **first\_reported\_to**: `string`
+• **first\_reported\_to**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -69,13 +69,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1411](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1411)
+[api.ts:1411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1411)
 
 ___
 
 ### group\_ids
 
-• **group\_ids**: `string`
+• **group\_ids**: ``null`` \| `string`
 
 ID of the inventory group.
 
@@ -85,13 +85,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1417](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1417)
+[api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1417)
 
 ___
 
 ### group\_names
 
-• **group\_names**: `string`
+• **group\_names**: ``null`` \| `string`
 
 Name of the inventory group.
 
@@ -101,13 +101,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1423](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1423)
+[api.ts:1423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1423)
 
 ___
 
 ### patch\_access
 
-• **patch\_access**: `boolean`
+• **patch\_access**: ``null`` \| `boolean`
 
 If show_advisories=true shows access to patch service else null
 
@@ -117,13 +117,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1429](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1429)
+[api.ts:1429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1429)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -133,13 +133,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1435](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1435)
+[api.ts:1435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1435)
 
 ___
 
 ### rule\_key
 
-• **rule\_key**: `string`
+• **rule\_key**: ``null`` \| `string`
 
 Filters security rules by its error key.
 
@@ -149,13 +149,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1441](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1441)
+[api.ts:1441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1441)
 
 ___
 
 ### rule\_presence
 
-• **rule\_presence**: `string`
+• **rule\_presence**: ``null`` \| `string`
 
 Filter based on presence of security rule
 
@@ -165,13 +165,13 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1447](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1447)
+[api.ts:1447](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1447)
 
 ___
 
 ### status\_id
 
-• **status\_id**: `string`
+• **status\_id**: ``null`` \| `string`
 
 Filer based on CVE status ID.
 
@@ -181,4 +181,4 @@ MetaAffectedSystemsAllOf
 
 #### Defined in
 
-[api.ts:1453](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1453)
+[api.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1453)

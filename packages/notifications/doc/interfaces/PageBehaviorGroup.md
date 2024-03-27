@@ -28,7 +28,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1336](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1336)
+[packages/notifications/types/index.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1403)
 
 ___
 
@@ -46,7 +46,7 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1342](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1342)
+[packages/notifications/types/index.ts:1409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1409)
 
 ___
 
@@ -60,4 +60,4 @@ PageBehaviorGroup
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1348](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1348)
+[packages/notifications/types/index.ts:1415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1415)

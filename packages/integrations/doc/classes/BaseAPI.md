@@ -40,7 +40,7 @@ Constructor to create baseAPI.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:70](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L70)
+[packages/integrations/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L70)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Constructor to create baseAPI.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:64](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L64)
+[packages/integrations/utils/base.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L64)
 
 ___
 
@@ -60,17 +60,17 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:70](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L70)
+[packages/integrations/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L70)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:63](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L63)
+[packages/integrations/utils/base.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L63)
 
 ## Methods
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:83](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L83)
+[packages/integrations/utils/base.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L83)
 
 ___
 
@@ -122,4 +122,4 @@ promisable axios response.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:111](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L111)
+[packages/integrations/utils/base.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L111)

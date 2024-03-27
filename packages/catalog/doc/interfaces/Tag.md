@@ -26,4 +26,4 @@ Tag
 
 #### Defined in
 
-[api.ts:1281](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1281)
+[api.ts:1281](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1281)

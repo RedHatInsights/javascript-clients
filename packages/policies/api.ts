@@ -517,19 +517,19 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
         /**
          *
          * @summary Return all policies for a given account
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPolicies: async (filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, limit?: number, offset?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPolicies: async (offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -542,8 +542,24 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (filteropDescription !== undefined) {
-                localVarQueryParameter['filter:op[description]'] = filteropDescription;
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (sortColumn !== undefined) {
+                localVarQueryParameter['sortColumn'] = sortColumn;
+            }
+
+            if (sortDirection !== undefined) {
+                localVarQueryParameter['sortDirection'] = sortDirection;
+            }
+
+            if (filterName !== undefined) {
+                localVarQueryParameter['filter[name]'] = filterName;
             }
 
             if (filteropName !== undefined) {
@@ -554,28 +570,12 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 localVarQueryParameter['filter[description]'] = filterDescription;
             }
 
+            if (filteropDescription !== undefined) {
+                localVarQueryParameter['filter:op[description]'] = filteropDescription;
+            }
+
             if (filterIsEnabled !== undefined) {
                 localVarQueryParameter['filter[is_enabled]'] = filterIsEnabled;
-            }
-
-            if (filterName !== undefined) {
-                localVarQueryParameter['filter[name]'] = filterName;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortColumn !== undefined) {
-                localVarQueryParameter['sortColumn'] = sortColumn;
-            }
-
-            if (sortDirection !== undefined) {
-                localVarQueryParameter['sortDirection'] = sortDirection;
             }
 
 
@@ -627,18 +627,18 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
          *
          * @summary Retrieve the trigger history of a single policy
          * @param {string} id UUID of the policy
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
          * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
          * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesByIdHistoryTrigger: async (id: string, filteropId?: 'equal' | 'not_equal' | 'like', filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filterName?: string, limit?: number, offset?: number, sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPoliciesByIdHistoryTrigger: async (id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('getPoliciesByIdHistoryTrigger', 'id', id)
             const localVarPath = `/policies/{id}/history/trigger`
@@ -654,8 +654,16 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (filteropId !== undefined) {
-                localVarQueryParameter['filter:op[id]'] = filteropId;
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (filterName !== undefined) {
+                localVarQueryParameter['filter[name]'] = filterName;
             }
 
             if (filteropName !== undefined) {
@@ -666,16 +674,8 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 localVarQueryParameter['filter[id]'] = filterId;
             }
 
-            if (filterName !== undefined) {
-                localVarQueryParameter['filter[name]'] = filterName;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
+            if (filteropId !== undefined) {
+                localVarQueryParameter['filter:op[id]'] = filteropId;
             }
 
             if (sortColumn !== undefined) {
@@ -700,15 +700,15 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
         /**
          *
          * @summary Return all policy ids for a given account after applying the filters
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
          * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
          * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesIds: async (filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPoliciesIds: async (filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies/ids`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -721,8 +721,8 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (filteropDescription !== undefined) {
-                localVarQueryParameter['filter:op[description]'] = filteropDescription;
+            if (filterName !== undefined) {
+                localVarQueryParameter['filter[name]'] = filterName;
             }
 
             if (filteropName !== undefined) {
@@ -733,12 +733,12 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 localVarQueryParameter['filter[description]'] = filterDescription;
             }
 
-            if (filterIsEnabled !== undefined) {
-                localVarQueryParameter['filter[is_enabled]'] = filterIsEnabled;
+            if (filteropDescription !== undefined) {
+                localVarQueryParameter['filter:op[description]'] = filteropDescription;
             }
 
-            if (filterName !== undefined) {
-                localVarQueryParameter['filter[name]'] = filterName;
+            if (filterIsEnabled !== undefined) {
+                localVarQueryParameter['filter[is_enabled]'] = filterIsEnabled;
             }
 
 
@@ -1022,20 +1022,20 @@ export const PolicyCrudServiceApiFp = function(configuration?: Configuration) {
         /**
          *
          * @summary Return all policies for a given account
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPolicies(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, limit?: number, offset?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfPolicy>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPolicies(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, limit, offset, sortColumn, sortDirection, options);
+        async getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfPolicy>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1053,34 +1053,34 @@ export const PolicyCrudServiceApiFp = function(configuration?: Configuration) {
          *
          * @summary Retrieve the trigger history of a single policy
          * @param {string} id UUID of the policy
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
          * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
          * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPoliciesByIdHistoryTrigger(id: string, filteropId?: 'equal' | 'not_equal' | 'like', filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filterName?: string, limit?: number, offset?: number, sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfHistoryItem>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesByIdHistoryTrigger(id, filteropId, filteropName, filterId, filterName, limit, offset, sortColumn, sortDirection, options);
+        async getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfHistoryItem>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          *
          * @summary Return all policy ids for a given account after applying the filters
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
          * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
          * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getPoliciesIds(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesIds(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, options);
+        async getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1188,20 +1188,20 @@ export const PolicyCrudServiceApiFactory = function (configuration?: Configurati
         /**
          *
          * @summary Return all policies for a given account
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
          * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPolicies(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, limit?: number, offset?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', options?: any): AxiosPromise<PagedResponseOfPolicy> {
-            return localVarFp.getPolicies(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, limit, offset, sortColumn, sortDirection, options).then((request) => request(axios, basePath));
+        getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: any): AxiosPromise<PagedResponseOfPolicy> {
+            return localVarFp.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -1217,33 +1217,33 @@ export const PolicyCrudServiceApiFactory = function (configuration?: Configurati
          *
          * @summary Retrieve the trigger history of a single policy
          * @param {string} id UUID of the policy
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
          * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
          * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
          * @param {'asc' | 'desc'} [sortDirection] Sort direction used
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesByIdHistoryTrigger(id: string, filteropId?: 'equal' | 'not_equal' | 'like', filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filterName?: string, limit?: number, offset?: number, sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: any): AxiosPromise<PagedResponseOfHistoryItem> {
-            return localVarFp.getPoliciesByIdHistoryTrigger(id, filteropId, filteropName, filterId, filterName, limit, offset, sortColumn, sortDirection, options).then((request) => request(axios, basePath));
+        getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: any): AxiosPromise<PagedResponseOfHistoryItem> {
+            return localVarFp.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(axios, basePath));
         },
         /**
          *
          * @summary Return all policy ids for a given account after applying the filters
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
          * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
          * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesIds(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, options?: any): AxiosPromise<Array<string>> {
-            return localVarFp.getPoliciesIds(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, options).then((request) => request(axios, basePath));
+        getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: any): AxiosPromise<Array<string>> {
+            return localVarFp.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
         },
         /**
          *
@@ -1348,21 +1348,21 @@ export class PolicyCrudServiceApi extends BaseAPI {
     /**
      *
      * @summary Return all policies for a given account
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-     * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-     * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
      * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+     * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
      * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
      * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+     * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyCrudServiceApi
      */
-    public getPolicies(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, limit?: number, offset?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPolicies(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, limit, offset, sortColumn, sortDirection, options).then((request) => request(this.axios, this.basePath));
+    public getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig) {
+        return PolicyCrudServiceApiFp(this.configuration).getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1381,36 +1381,36 @@ export class PolicyCrudServiceApi extends BaseAPI {
      *
      * @summary Retrieve the trigger history of a single policy
      * @param {string} id UUID of the policy
-     * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
+     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+     * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+     * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
      * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
      * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-     * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-     * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+     * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
      * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
      * @param {'asc' | 'desc'} [sortDirection] Sort direction used
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyCrudServiceApi
      */
-    public getPoliciesByIdHistoryTrigger(id: string, filteropId?: 'equal' | 'not_equal' | 'like', filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filterName?: string, limit?: number, offset?: number, sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPoliciesByIdHistoryTrigger(id, filteropId, filteropName, filterId, filterName, limit, offset, sortColumn, sortDirection, options).then((request) => request(this.axios, this.basePath));
+    public getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig) {
+        return PolicyCrudServiceApiFp(this.configuration).getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      *
      * @summary Return all policy ids for a given account after applying the filters
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
+     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
      * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
      * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
      * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicyCrudServiceApi
      */
-    public getPoliciesIds(filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filterIsEnabled?: 'true' | 'false', filterName?: string, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPoliciesIds(filteropDescription, filteropName, filterDescription, filterIsEnabled, filterName, options).then((request) => request(this.axios, this.basePath));
+    public getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig) {
+        return PolicyCrudServiceApiFp(this.configuration).getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

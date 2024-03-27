@@ -29,7 +29,7 @@ ProgressMessage
 
 #### Defined in
 
-[api.ts:978](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L978)
+[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L978)
 
 ___
 
@@ -43,7 +43,7 @@ ProgressMessage
 
 #### Defined in
 
-[api.ts:984](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L984)
+[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L984)
 
 ___
 
@@ -57,7 +57,7 @@ ProgressMessage
 
 #### Defined in
 
-[api.ts:990](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L990)
+[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L990)
 
 ___
 
@@ -71,4 +71,4 @@ ProgressMessage
 
 #### Defined in
 
-[api.ts:972](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L972)
+[api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L972)

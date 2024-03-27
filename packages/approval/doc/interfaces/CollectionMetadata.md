@@ -30,7 +30,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:148](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L148)
+[api.ts:148](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L148)
 
 ___
 
@@ -46,7 +46,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:154](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L154)
+[api.ts:154](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L154)
 
 ___
 
@@ -62,4 +62,4 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:160](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/approval/api.ts#L160)
+[api.ts:160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/approval/api.ts#L160)

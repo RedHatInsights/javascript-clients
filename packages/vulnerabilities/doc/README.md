@@ -56,6 +56,14 @@ const vulnApi = new BaseApi(undefined, BASE_PATH, instance);
 export vulnApi;
 ```
 
+## Building
+
+Run `nx build vulnerabilities-client` to build the library.
+
+## Running unit tests
+
+Run `nx test vulnerabilities-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)

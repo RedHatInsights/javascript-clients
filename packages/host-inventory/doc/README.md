@@ -56,6 +56,14 @@ const hostsApi = new HostsApi(undefined, BASE_PATH, instance);
 export hostsApi;
 ```
 
+## Building
+
+Run `nx build host-inventory-client` to build the library.
+
+## Running unit tests
+
+Run `nx test host-inventory-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)

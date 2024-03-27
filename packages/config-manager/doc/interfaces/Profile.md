@@ -37,7 +37,7 @@ Profile
 
 #### Defined in
 
-[api.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L101)
 
 ___
 
@@ -53,7 +53,7 @@ Profile
 
 #### Defined in
 
-[api.ts:107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L107)
+[api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L107)
 
 ___
 
@@ -69,7 +69,7 @@ Profile
 
 #### Defined in
 
-[api.ts:143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L143)
+[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L143)
 
 ___
 
@@ -85,7 +85,7 @@ Profile
 
 #### Defined in
 
-[api.ts:113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L113)
+[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L113)
 
 ___
 
@@ -101,7 +101,7 @@ Profile
 
 #### Defined in
 
-[api.ts:119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L119)
+[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L119)
 
 ___
 
@@ -117,7 +117,7 @@ Profile
 
 #### Defined in
 
-[api.ts:137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L137)
+[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L137)
 
 ___
 
@@ -133,7 +133,7 @@ Profile
 
 #### Defined in
 
-[api.ts:149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L149)
+[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L149)
 
 ___
 
@@ -149,7 +149,7 @@ Profile
 
 #### Defined in
 
-[api.ts:125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L125)
+[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L125)
 
 ___
 
@@ -165,7 +165,7 @@ Profile
 
 #### Defined in
 
-[api.ts:131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L131)
+[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L131)
 
 ___
 
@@ -181,4 +181,4 @@ Profile
 
 #### Defined in
 
-[api.ts:155](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/config-manager/api.ts#L155)
+[api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L155)

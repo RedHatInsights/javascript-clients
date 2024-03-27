@@ -30,4 +30,4 @@ SystemProfileRhsm
 
 #### Defined in
 
-[api.ts:2292](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2292)
+[api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2410)

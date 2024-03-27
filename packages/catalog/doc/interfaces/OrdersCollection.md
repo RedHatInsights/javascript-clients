@@ -28,7 +28,7 @@ OrdersCollection
 
 #### Defined in
 
-[api.ts:707](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L707)
+[api.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L707)
 
 ___
 
@@ -42,7 +42,7 @@ OrdersCollection
 
 #### Defined in
 
-[api.ts:701](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L701)
+[api.ts:701](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L701)
 
 ___
 
@@ -56,4 +56,4 @@ OrdersCollection
 
 #### Defined in
 
-[api.ts:695](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L695)
+[api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L695)

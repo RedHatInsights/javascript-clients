@@ -33,7 +33,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:239](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L239)
+[api.ts:252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L252)
 
 ___
 
@@ -47,7 +47,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:203](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L203)
+[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L216)
 
 ___
 
@@ -61,7 +61,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:209](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L209)
+[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L222)
 
 ___
 
@@ -77,7 +77,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:221](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L221)
+[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L234)
 
 ___
 
@@ -91,7 +91,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:227](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L227)
+[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L240)
 
 ___
 
@@ -105,7 +105,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:245](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L245)
+[api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L258)
 
 ___
 
@@ -119,7 +119,7 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L233)
+[api.ts:246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L246)
 
 ___
 
@@ -133,4 +133,4 @@ PlaybookExecutorDetails
 
 #### Defined in
 
-[api.ts:215](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L215)
+[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L228)

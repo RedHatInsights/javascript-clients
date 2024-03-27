@@ -28,4 +28,4 @@ MultipleDelete
 
 #### Defined in
 
-[api.ts:146](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L146)
+[api.ts:146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L146)

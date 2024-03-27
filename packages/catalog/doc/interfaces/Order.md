@@ -32,7 +32,7 @@ Order
 
 #### Defined in
 
-[api.ts:383](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L383)
+[api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L383)
 
 ___
 
@@ -46,7 +46,7 @@ Order
 
 #### Defined in
 
-[api.ts:371](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L371)
+[api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L371)
 
 ___
 
@@ -60,13 +60,13 @@ Order
 
 #### Defined in
 
-[api.ts:353](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L353)
+[api.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L353)
 
 ___
 
 ### order\_request\_sent\_at
 
-• `Optional` **order\_request\_sent\_at**: `string`
+• `Optional` **order\_request\_sent\_at**: ``null`` \| `string`
 
 The time at which the order request was sent to the catalog inventory Service
 
@@ -76,7 +76,7 @@ Order
 
 #### Defined in
 
-[api.ts:377](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L377)
+[api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L377)
 
 ___
 
@@ -90,7 +90,7 @@ Order
 
 #### Defined in
 
-[api.ts:389](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L389)
+[api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L389)
 
 ___
 
@@ -106,7 +106,7 @@ Order
 
 #### Defined in
 
-[api.ts:365](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L365)
+[api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L365)
 
 ___
 
@@ -120,4 +120,4 @@ Order
 
 #### Defined in
 
-[api.ts:359](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L359)
+[api.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L359)

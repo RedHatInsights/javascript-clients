@@ -31,7 +31,7 @@ TenantSettings
 
 #### Defined in
 
-[api.ts:1344](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1344)
+[api.ts:1344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1344)
 
 ___
 
@@ -47,4 +47,4 @@ TenantSettings
 
 #### Defined in
 
-[api.ts:1350](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L1350)
+[api.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L1350)

@@ -53,7 +53,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ## Properties
 
@@ -67,7 +67,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
@@ -81,13 +81,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -95,7 +95,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/base.ts#L49)
 
 ## Methods
 
@@ -128,7 +128,7 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7539](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7539)
+[api.ts:7539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7539)
 
 ___
 
@@ -160,7 +160,7 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7552](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7552)
+[api.ts:7552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7552)
 
 ___
 
@@ -193,7 +193,7 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7564](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7564)
+[api.ts:7564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7564)
 
 ___
 
@@ -226,7 +226,7 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7576](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7576)
+[api.ts:7576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7576)
 
 ___
 
@@ -259,7 +259,7 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7588](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7588)
+[api.ts:7588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7588)
 
 ___
 
@@ -292,4 +292,4 @@ ServicePlansApi
 
 #### Defined in
 
-[api.ts:7600](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/catalog/api.ts#L7600)
+[api.ts:7600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/catalog/api.ts#L7600)
