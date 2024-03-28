@@ -49,7 +49,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +63,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
@@ -77,13 +77,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -91,7 +91,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
 
 ## Methods
 
@@ -121,8 +121,8 @@ PermissionApi
 | `application?` | `string` | Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications. |
 | `resourceType?` | `string` | Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types. |
 | `verb?` | `string` | Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs. |
-| `excludeGlobals?` | ``"false"`` \| ``"true"`` | If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;. |
-| `allowedOnly?` | ``"false"`` \| ``"true"`` | If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list. |
+| `excludeGlobals?` | ``"true"`` \| ``"false"`` | If set to \&#39;true\&#39;, this will exclude any permission option with a global allowance on the supplied \&#39;?field&#x3D;\&#39; value of \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;. |
+| `allowedOnly?` | ``"true"`` \| ``"false"`` | If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -131,7 +131,7 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4613](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4613)
+[api.ts:4786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4786)
 
 ___
 
@@ -162,9 +162,9 @@ PermissionApi
 | `resourceType?` | `string` | Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types. |
 | `verb?` | `string` | Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs. |
 | `permission?` | `string` | Partial match for the aggregate permission value name of a permission object. |
-| `excludeGlobals?` | ``"false"`` \| ``"true"`` | If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;. |
+| `excludeGlobals?` | ``"true"`` \| ``"false"`` | If set to \&#39;true\&#39;, this will exclude any permission with a global allowance on either \&#39;application\&#39;, \&#39;resource_type\&#39; or \&#39;verb\&#39;. The default is \&#39;false\&#39;. |
 | `excludeRoles?` | `string` | An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s). |
-| `allowedOnly?` | ``"false"`` \| ``"true"`` | If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list. |
+| `allowedOnly?` | ``"true"`` \| ``"false"`` | If set to \&#39;true\&#39;, this will exclude any permission with a role where the \&#39;application\&#39; is not in the role create allow list. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -173,4 +173,4 @@ PermissionApi
 
 #### Defined in
 
-[api.ts:4634](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L4634)
+[api.ts:4807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4807)

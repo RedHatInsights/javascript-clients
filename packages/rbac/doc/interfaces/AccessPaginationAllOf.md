@@ -26,4 +26,4 @@ AccessPaginationAllOf
 
 #### Defined in
 
-[api.ts:77](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L77)
+[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L77)

@@ -126,7 +126,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1803](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1803)
+[api.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1803)
 
 ___
 
@@ -183,7 +183,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:4750](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L4750)
+[api.ts:4750](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L4750)
 
 ___
 
@@ -238,4 +238,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L4133)
+[api.ts:4133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L4133)

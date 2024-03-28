@@ -21,7 +21,7 @@ SystemOut
 
 ### display\_name
 
-• **display\_name**: `string`
+• **display\_name**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -29,13 +29,13 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1195](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1195)
+[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1208)
 
 ___
 
 ### hostname
 
-• **hostname**: `string`
+• **hostname**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -43,7 +43,7 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1189](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1189)
+[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1202)
 
 ___
 
@@ -57,7 +57,7 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1183](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1183)
+[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1196)
 
 ___
 
@@ -71,4 +71,4 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1201](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1201)
+[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1214)

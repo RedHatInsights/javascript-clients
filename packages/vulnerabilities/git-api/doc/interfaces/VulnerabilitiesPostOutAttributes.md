@@ -20,7 +20,7 @@ VulnerabilitiesPostOutAttributes
 
 ### cvss\_score
 
-• **cvss\_score**: `string`
+• **cvss\_score**: ``null`` \| `string`
 
 String representation of cvss3 or cvvs2 (if v3 is not present) score of the CVE.
 
@@ -30,7 +30,7 @@ VulnerabilitiesPostOutAttributes
 
 #### Defined in
 
-[api.ts:2729](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2729)
+[api.ts:2741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2741)
 
 ___
 
@@ -46,7 +46,7 @@ VulnerabilitiesPostOutAttributes
 
 #### Defined in
 
-[api.ts:2735](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2735)
+[api.ts:2747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2747)
 
 ___
 
@@ -62,4 +62,4 @@ VulnerabilitiesPostOutAttributes
 
 #### Defined in
 
-[api.ts:2741](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2741)
+[api.ts:2753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2753)

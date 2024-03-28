@@ -109,13 +109,6 @@ export const endpointResourceV1GetEndpointHistoryParamCreator = async (...config
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        auth:[
-        {
-        // authentication SecurityScheme required
-        // http basic authentication required
-        authType: AuthTypeEnum.Basic,
-        }
-        ]
     };
 }
 

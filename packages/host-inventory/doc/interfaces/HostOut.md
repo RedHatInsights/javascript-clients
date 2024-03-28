@@ -42,7 +42,7 @@ HostOut
 
 ### account
 
-• `Optional` **account**: `string`
+• `Optional` **account**: ``null`` \| `string`
 
 A Red Hat Account number that owns the host.
 
@@ -52,13 +52,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:787](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L787)
+[api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L787)
 
 ___
 
 ### ansible\_host
 
-• `Optional` **ansible\_host**: `string`
+• `Optional` **ansible\_host**: ``null`` \| `string`
 
 The ansible host name for remediations
 
@@ -68,13 +68,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:781](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L781)
+[api.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L781)
 
 ___
 
 ### bios\_uuid
 
-• `Optional` **bios\_uuid**: `string`
+• `Optional` **bios\_uuid**: ``null`` \| `string`
 
 A UUID of the host machine BIOS.  This field is considered to be a canonical fact.
 
@@ -84,7 +84,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:739](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L739)
+[api.ts:739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L739)
 
 ___
 
@@ -100,13 +100,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:805](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L805)
+[api.ts:805](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L805)
 
 ___
 
 ### culled\_timestamp
 
-• `Optional` **culled\_timestamp**: `string`
+• `Optional` **culled\_timestamp**: ``null`` \| `string`
 
 Timestamp from which the host is considered deleted.
 
@@ -116,13 +116,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:835](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)
+[api.ts:835](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L835)
 
 ___
 
 ### display\_name
 
-• `Optional` **display\_name**: `string`
+• `Optional` **display\_name**: ``null`` \| `string`
 
 A host’s human-readable display name, e.g. in a form of a domain name.
 
@@ -132,7 +132,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:775](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L775)
+[api.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L775)
 
 ___
 
@@ -148,13 +148,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:817](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L817)
+[api.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L817)
 
 ___
 
 ### fqdn
 
-• `Optional` **fqdn**: `string`
+• `Optional` **fqdn**: ``null`` \| `string`
 
 A host’s Fully Qualified Domain Name.  This field is considered to be a canonical fact.
 
@@ -164,7 +164,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:751](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L751)
+[api.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L751)
 
 ___
 
@@ -180,7 +180,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:853](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L853)
+[api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L853)
 
 ___
 
@@ -196,13 +196,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:799](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L799)
+[api.ts:799](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L799)
 
 ___
 
 ### insights\_id
 
-• `Optional` **insights\_id**: `string`
+• `Optional` **insights\_id**: ``null`` \| `string`
 
 An ID defined in /etc/insights-client/machine-id. This field is considered a canonical fact.
 
@@ -212,13 +212,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:721](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L721)
+[api.ts:721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L721)
 
 ___
 
 ### ip\_addresses
 
-• `Optional` **ip\_addresses**: `string`[]
+• `Optional` **ip\_addresses**: ``null`` \| `string`[]
 
 Host’s network IP addresses.  This field is considered to be a canonical fact.
 
@@ -228,13 +228,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:745](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L745)
+[api.ts:745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L745)
 
 ___
 
 ### mac\_addresses
 
-• `Optional` **mac\_addresses**: `string`[]
+• `Optional` **mac\_addresses**: ``null`` \| `string`[]
 
 Host’s network interfaces MAC addresses.  This field is considered to be a canonical fact.
 
@@ -244,7 +244,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:757](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L757)
+[api.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L757)
 
 ___
 
@@ -260,7 +260,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:793](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L793)
+[api.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L793)
 
 ___
 
@@ -280,13 +280,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:847](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L847)
+[api.ts:847](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L847)
 
 ___
 
 ### provider\_id
 
-• `Optional` **provider\_id**: `string`
+• `Optional` **provider\_id**: ``null`` \| `string`
 
 Host’s reference in the external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM etc. This field is one of the canonical facts and does not work without provider_type.
 
@@ -296,13 +296,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:763](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L763)
+[api.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L763)
 
 ___
 
 ### provider\_type
 
-• `Optional` **provider\_type**: `string`
+• `Optional` **provider\_type**: ``null`` \| `string`
 
 Type of external source e.g. Alibaba, AWS EC2, Azure, GCP, IBM, etc. This field is one of the canonical facts and does not workout provider_id.
 
@@ -312,13 +312,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:769](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L769)
+[api.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L769)
 
 ___
 
 ### reporter
 
-• `Optional` **reporter**: `string`
+• `Optional` **reporter**: ``null`` \| `string`
 
 Reporting source of the host. Used when updating the stale_timestamp.
 
@@ -328,13 +328,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:841](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L841)
+[api.ts:841](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L841)
 
 ___
 
 ### satellite\_id
 
-• `Optional` **satellite\_id**: `string`
+• `Optional` **satellite\_id**: ``null`` \| `string`
 
 A Red Hat Satellite ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -344,13 +344,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:733](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L733)
+[api.ts:733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L733)
 
 ___
 
 ### stale\_timestamp
 
-• `Optional` **stale\_timestamp**: `string`
+• `Optional` **stale\_timestamp**: ``null`` \| `string`
 
 Timestamp from which the host is considered stale.
 
@@ -360,13 +360,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:823](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L823)
+[api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L823)
 
 ___
 
 ### stale\_warning\_timestamp
 
-• `Optional` **stale\_warning\_timestamp**: `string`
+• `Optional` **stale\_warning\_timestamp**: ``null`` \| `string`
 
 Timestamp from which the host is considered too stale to be listed without an explicit toggle.
 
@@ -376,13 +376,13 @@ HostOut
 
 #### Defined in
 
-[api.ts:829](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L829)
+[api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L829)
 
 ___
 
 ### subscription\_manager\_id
 
-• `Optional` **subscription\_manager\_id**: `string`
+• `Optional` **subscription\_manager\_id**: ``null`` \| `string`
 
 A Red Hat Subcription Manager ID of a RHEL host.  This field is considered to be a canonical fact.
 
@@ -392,7 +392,7 @@ HostOut
 
 #### Defined in
 
-[api.ts:727](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L727)
+[api.ts:727](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L727)
 
 ___
 
@@ -408,4 +408,4 @@ HostOut
 
 #### Defined in
 
-[api.ts:811](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L811)
+[api.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L811)

@@ -39,7 +39,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:71](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L71)
+[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L71)
 
 ___
 
@@ -53,7 +53,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:77](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L77)
+[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L77)
 
 ___
 
@@ -67,7 +67,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:83](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L83)
+[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L83)
 
 ___
 
@@ -81,7 +81,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:89](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L89)
+[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L89)
 
 ___
 
@@ -95,7 +95,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:95](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L95)
+[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L95)
 
 ___
 
@@ -113,7 +113,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L101)
 
 ___
 
@@ -127,7 +127,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L107)
+[api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L107)
 
 ___
 
@@ -141,7 +141,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L113)
+[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L113)
 
 ___
 
@@ -155,7 +155,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L119)
+[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L119)
 
 ___
 
@@ -169,7 +169,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L125)
+[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L125)
 
 ___
 
@@ -183,7 +183,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L131)
+[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L131)
 
 ___
 
@@ -197,7 +197,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:137](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L137)
+[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L137)
 
 ___
 
@@ -211,7 +211,7 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:143](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L143)
+[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L143)
 
 ___
 
@@ -225,4 +225,4 @@ ControllersAdvisoryDetailAttributesV1
 
 #### Defined in
 
-[api.ts:149](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L149)
+[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L149)

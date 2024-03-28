@@ -29,7 +29,7 @@ AutoSubscribe
 
 #### Defined in
 
-[api.ts:236](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L236)
+[api.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L236)
 
 ___
 
@@ -43,4 +43,4 @@ AutoSubscribe
 
 #### Defined in
 
-[api.ts:230](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L230)
+[api.ts:230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L230)

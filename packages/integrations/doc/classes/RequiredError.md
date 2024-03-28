@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:167](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
+[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:167](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
+[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
 
 ___
 

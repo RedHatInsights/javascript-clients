@@ -33,7 +33,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:100](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L100)
+[api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L162)
 
 ___
 
@@ -47,13 +47,13 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:106](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L106)
+[api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L168)
 
 ___
 
 ### deletedAt
 
-• `Optional` **deletedAt**: `string`
+• `Optional` **deletedAt**: [`V1HelpTopicDeletedAt`](../modules.md#v1helptopicdeletedat)
 
 **`Memberof`**
 
@@ -61,7 +61,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:112](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L112)
+[api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L174)
 
 ___
 
@@ -75,7 +75,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:118](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L118)
+[api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L180)
 
 ___
 
@@ -89,7 +89,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:124](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L124)
+[api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L186)
 
 ___
 
@@ -103,7 +103,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:130](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L130)
+[api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L192)
 
 ___
 
@@ -117,7 +117,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:136](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L136)
+[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L198)
 
 ___
 
@@ -131,4 +131,4 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:142](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L142)
+[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L204)

@@ -28,7 +28,7 @@ ControllersSystemAdvisoryItem
 
 #### Defined in
 
-[api.ts:1108](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1108)
+[api.ts:1108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1108)
 
 ___
 
@@ -42,7 +42,7 @@ ControllersSystemAdvisoryItem
 
 #### Defined in
 
-[api.ts:1114](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1114)
+[api.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1114)
 
 ___
 
@@ -56,4 +56,4 @@ ControllersSystemAdvisoryItem
 
 #### Defined in
 
-[api.ts:1120](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L1120)
+[api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1120)

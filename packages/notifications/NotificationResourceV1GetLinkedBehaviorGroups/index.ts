@@ -100,13 +100,6 @@ export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        auth:[
-        {
-        // authentication SecurityScheme required
-        // http basic authentication required
-        authType: AuthTypeEnum.Basic,
-        }
-        ]
     };
 }
 

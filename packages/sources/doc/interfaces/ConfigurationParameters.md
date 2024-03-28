@@ -31,7 +31,7 @@ Do not edit the class manually.
 
 #### Defined in
 
-[configuration.ts:19](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L19)
+[configuration.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L19)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:16](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L16)
+[configuration.ts:16](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L16)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:21](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L21)
+[configuration.ts:21](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L21)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:20](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L20)
+[configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L20)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:18](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L18)
+[configuration.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L18)
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 #### Defined in
 
-[configuration.ts:17](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/configuration.ts#L17)
+[configuration.ts:17](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/configuration.ts#L17)

@@ -26,4 +26,4 @@ CvesWithoutErrataOutUpdatedCvesWithoutErrata
 
 #### Defined in
 
-[api.ts:480](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L480)
+[api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L480)

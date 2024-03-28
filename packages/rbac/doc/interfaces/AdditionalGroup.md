@@ -28,7 +28,7 @@ AdditionalGroup
 
 #### Defined in
 
-[api.ts:96](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L96)
+[api.ts:96](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L96)
 
 ___
 
@@ -42,7 +42,7 @@ AdditionalGroup
 
 #### Defined in
 
-[api.ts:90](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L90)
+[api.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L90)
 
 ___
 
@@ -56,4 +56,4 @@ AdditionalGroup
 
 #### Defined in
 
-[api.ts:102](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L102)
+[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L102)

@@ -27,7 +27,7 @@ Timestamped
 
 #### Defined in
 
-[api.ts:2412](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2412)
+[api.ts:2561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2561)
 
 ___
 
@@ -41,4 +41,4 @@ Timestamped
 
 #### Defined in
 
-[api.ts:2418](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2418)
+[api.ts:2567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2567)

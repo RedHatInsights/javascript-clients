@@ -31,7 +31,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1779](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1779)
+[packages/integrations/types/index.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1846)
 
 ___
 
@@ -45,7 +45,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1785](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1785)
+[packages/integrations/types/index.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1852)
 
 ___
 
@@ -59,7 +59,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1767](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1767)
+[packages/integrations/types/index.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1834)
 
 ___
 
@@ -73,7 +73,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1761](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1761)
+[packages/integrations/types/index.ts:1828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1828)
 
 ___
 
@@ -87,7 +87,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1773](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1773)
+[packages/integrations/types/index.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1840)
 
 ___
 
@@ -101,4 +101,4 @@ WebhookProperties
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1755](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/types/index.ts#L1755)
+[packages/integrations/types/index.ts:1822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1822)

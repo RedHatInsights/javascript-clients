@@ -30,7 +30,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1076](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1076)
+[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1089)
 
 ___
 
@@ -44,7 +44,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1088](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1088)
+[api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1101)
 
 ___
 
@@ -58,7 +58,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1064](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1064)
+[api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1077)
 
 ___
 
@@ -72,7 +72,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1070](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1070)
+[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1083)
 
 ___
 
@@ -86,4 +86,4 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1082](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1082)
+[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1095)

@@ -28,7 +28,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1386](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1386)
+[packages/notifications/types/index.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1453)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1392](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1392)
+[packages/notifications/types/index.ts:1459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1459)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1398](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1398)
+[packages/notifications/types/index.ts:1465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1465)

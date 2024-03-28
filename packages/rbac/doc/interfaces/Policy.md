@@ -27,7 +27,7 @@ Policy
 
 #### Defined in
 
-[api.ts:1426](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1426)
+[api.ts:1426](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1426)
 
 ___
 
@@ -41,4 +41,4 @@ Policy
 
 #### Defined in
 
-[api.ts:1420](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1420)
+[api.ts:1420](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1420)

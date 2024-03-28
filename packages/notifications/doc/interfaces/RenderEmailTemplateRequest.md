@@ -27,7 +27,7 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1467](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1467)
+[packages/notifications/types/index.ts:1534](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1534)
 
 ___
 
@@ -41,4 +41,4 @@ RenderEmailTemplateRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1461](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/notifications/types/index.ts#L1461)
+[packages/notifications/types/index.ts:1528](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1528)

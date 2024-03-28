@@ -26,4 +26,4 @@ UUID
 
 #### Defined in
 
-[api.ts:2431](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L2431)
+[api.ts:2580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2580)

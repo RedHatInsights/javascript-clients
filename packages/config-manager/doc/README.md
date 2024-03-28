@@ -56,6 +56,14 @@ const configApi = new Configuration(undefined, BASE_PATH, instance);
 export configApi;
 ```
 
+## Building
+
+Run `nx build config-manager-client` to build the library.
+
+## Running unit tests
+
+Run `nx test config-manager-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)

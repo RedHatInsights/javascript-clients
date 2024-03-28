@@ -33,7 +33,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2446](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2446)
+[api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2564)
 
 ___
 
@@ -49,7 +49,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2452](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2452)
+[api.ts:2570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2570)
 
 ___
 
@@ -65,7 +65,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2440](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2440)
+[api.ts:2558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2558)
 
 ___
 
@@ -81,4 +81,4 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2434](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L2434)
+[api.ts:2552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2552)

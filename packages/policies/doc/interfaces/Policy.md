@@ -36,7 +36,7 @@ Policy
 
 #### Defined in
 
-[api.ts:207](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L207)
+[api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L207)
 
 ___
 
@@ -52,7 +52,7 @@ Policy
 
 #### Defined in
 
-[api.ts:201](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L201)
+[api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L201)
 
 ___
 
@@ -68,7 +68,7 @@ Policy
 
 #### Defined in
 
-[api.ts:219](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L219)
+[api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L219)
 
 ___
 
@@ -84,7 +84,7 @@ Policy
 
 #### Defined in
 
-[api.ts:189](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L189)
+[api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L189)
 
 ___
 
@@ -98,7 +98,7 @@ Policy
 
 #### Defined in
 
-[api.ts:177](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L177)
+[api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L177)
 
 ___
 
@@ -112,7 +112,7 @@ Policy
 
 #### Defined in
 
-[api.ts:195](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L195)
+[api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L195)
 
 ___
 
@@ -126,7 +126,7 @@ Policy
 
 #### Defined in
 
-[api.ts:225](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L225)
+[api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L225)
 
 ___
 
@@ -142,7 +142,7 @@ Policy
 
 #### Defined in
 
-[api.ts:213](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L213)
+[api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L213)
 
 ___
 
@@ -158,4 +158,4 @@ Policy
 
 #### Defined in
 
-[api.ts:183](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/policies/api.ts#L183)
+[api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L183)

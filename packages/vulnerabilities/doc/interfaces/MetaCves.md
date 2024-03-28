@@ -39,7 +39,7 @@ MetaCves
 
 ### business\_risk\_id
 
-• **business\_risk\_id**: `string`
+• **business\_risk\_id**: ``null`` \| `string`
 
 Filter based on business risk IDs.
 
@@ -49,13 +49,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1526](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1526)
+[api.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1526)
 
 ___
 
 ### cves\_without\_errata
 
-• **cves\_without\_errata**: `boolean`
+• **cves\_without\_errata**: ``null`` \| `boolean`
 
 CVEs without Errata feature flag
 
@@ -65,13 +65,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1532](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1532)
+[api.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1532)
 
 ___
 
 ### cvss\_from
 
-• **cvss\_from**: `number`
+• **cvss\_from**: ``null`` \| `number`
 
 Filter based on cvss score, starting from the value. Use -1 to include also CVEs with N/A cvss score.
 
@@ -81,13 +81,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1538](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1538)
+[api.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1538)
 
 ___
 
 ### cvss\_to
 
-• **cvss\_to**: `number`
+• **cvss\_to**: ``null`` \| `number`
 
 Filter based on cvss score, up to the value.
 
@@ -97,7 +97,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1544](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1544)
+[api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1544)
 
 ___
 
@@ -113,13 +113,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1466](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1466)
+[api.ts:1466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1466)
 
 ___
 
 ### filter
 
-• **filter**: `string`
+• **filter**: ``null`` \| `string`
 
 Full text filter
 
@@ -129,13 +129,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1472](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1472)
+[api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1472)
 
 ___
 
 ### first\_reported\_from
 
-• **first\_reported\_from**: `string`
+• **first\_reported\_from**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -145,13 +145,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1550](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1550)
+[api.ts:1550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1550)
 
 ___
 
 ### first\_reported\_to
 
-• **first\_reported\_to**: `string`
+• **first\_reported\_to**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -161,13 +161,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1556](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1556)
+[api.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1556)
 
 ___
 
 ### impact
 
-• **impact**: `string`
+• **impact**: ``null`` \| `string`
 
 Filter based on impact IDs.
 
@@ -177,7 +177,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1562](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1562)
+[api.ts:1562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1562)
 
 ___
 
@@ -193,7 +193,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1478)
+[api.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1478)
 
 ___
 
@@ -209,7 +209,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1484](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1484)
+[api.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1484)
 
 ___
 
@@ -225,7 +225,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1490](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1490)
+[api.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1490)
 
 ___
 
@@ -241,7 +241,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1496](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1496)
+[api.ts:1496](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1496)
 
 ___
 
@@ -257,13 +257,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1502](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1502)
+[api.ts:1502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1502)
 
 ___
 
 ### patch\_access
 
-• **patch\_access**: `boolean`
+• **patch\_access**: ``null`` \| `boolean`
 
 If show_advisories=true shows access to patch service else null
 
@@ -273,7 +273,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1568](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1568)
+[api.ts:1568](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1568)
 
 ___
 
@@ -289,13 +289,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1520](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1520)
+[api.ts:1520](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1520)
 
 ___
 
 ### public\_from
 
-• **public\_from**: `string`
+• **public\_from**: ``null`` \| `string`
 
 Filter CVEs based on their published date, starting from the date.
 
@@ -305,13 +305,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1574](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1574)
+[api.ts:1574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1574)
 
 ___
 
 ### public\_to
 
-• **public\_to**: `string`
+• **public\_to**: ``null`` \| `string`
 
 Filter CVEs based on their published date, up to the date.
 
@@ -321,13 +321,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1580](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1580)
+[api.ts:1580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1580)
 
 ___
 
 ### rule\_presence
 
-• **rule\_presence**: `string`
+• **rule\_presence**: ``null`` \| `string`
 
 Filter based on presence of security rule
 
@@ -337,13 +337,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1586](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1586)
+[api.ts:1586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1586)
 
 ___
 
 ### sort
 
-• **sort**: `string`
+• **sort**: ``null`` \| `string`
 
 Sorting filter.
 
@@ -353,13 +353,13 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1508](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1508)
+[api.ts:1508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1508)
 
 ___
 
 ### status\_id
 
-• **status\_id**: `string`
+• **status\_id**: ``null`` \| `string`
 
 Filer based on CVE status ID.
 
@@ -369,7 +369,7 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1592](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1592)
+[api.ts:1592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1592)
 
 ___
 
@@ -385,4 +385,4 @@ MetaCves
 
 #### Defined in
 
-[api.ts:1514](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1514)
+[api.ts:1514](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1514)

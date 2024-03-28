@@ -31,13 +31,13 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:288](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L288)
+[api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L301)
 
 ___
 
 ### endpoint\_id
 
-• **endpoint\_id**: `string`
+• **endpoint\_id**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -45,13 +45,13 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:258](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L258)
+[api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L271)
 
 ___
 
 ### executor\_id
 
-• **executor\_id**: `string`
+• **executor\_id**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -59,13 +59,13 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:264](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L264)
+[api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L277)
 
 ___
 
 ### executor\_name
 
-• **executor\_name**: `string`
+• **executor\_name**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -73,13 +73,13 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:276](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L276)
+[api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L289)
 
 ___
 
 ### executor\_type
 
-• **executor\_type**: `string`
+• **executor\_type**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -87,7 +87,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:270](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L270)
+[api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L283)
 
 ___
 
@@ -101,4 +101,4 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:282](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L282)
+[api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L295)

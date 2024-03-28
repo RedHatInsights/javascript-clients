@@ -30,7 +30,7 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2095](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2095)
+[api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2095)
 
 ___
 
@@ -46,7 +46,7 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2089](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2089)
+[api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2089)
 
 ___
 
@@ -62,4 +62,4 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2101)
+[api.ts:2101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2101)

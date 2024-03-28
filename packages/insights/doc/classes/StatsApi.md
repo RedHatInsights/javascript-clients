@@ -52,7 +52,7 @@ BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +66,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
@@ -80,13 +80,13 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
 
 ___
 
 ### configuration
 
-• `Protected` **configuration**: [`Configuration`](Configuration.md)
+• `Protected` **configuration**: `undefined` \| [`Configuration`](Configuration.md)
 
 #### Inherited from
 
@@ -94,7 +94,7 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
 
 ## Methods
 
@@ -122,7 +122,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7958](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7958)
+[api.ts:8283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8283)
 
 ___
 
@@ -154,7 +154,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7972](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7972)
+[api.ts:8297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8297)
 
 ___
 
@@ -186,7 +186,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:7986](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L7986)
+[api.ts:8311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8311)
 
 ___
 
@@ -218,7 +218,7 @@ StatsApi
 
 #### Defined in
 
-[api.ts:8000](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8000)
+[api.ts:8325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8325)
 
 ___
 
@@ -250,4 +250,4 @@ StatsApi
 
 #### Defined in
 
-[api.ts:8014](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L8014)
+[api.ts:8339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8339)

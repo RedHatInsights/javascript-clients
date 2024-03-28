@@ -26,4 +26,4 @@ HelptopicsNameGet200Response
 
 #### Defined in
 
-[api.ts:61](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L61)
+[api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L74)

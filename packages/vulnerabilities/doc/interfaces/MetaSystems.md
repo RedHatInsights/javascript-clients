@@ -39,13 +39,13 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1855](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1855)
+[api.ts:1855](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1855)
 
 ___
 
 ### excluded
 
-• **excluded**: `string`
+• **excluded**: ``null`` \| `string`
 
 Display setting of opted out systems.
 
@@ -55,13 +55,13 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1915](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1915)
+[api.ts:1915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1915)
 
 ___
 
 ### filter
 
-• **filter**: `string`
+• **filter**: ``null`` \| `string`
 
 Full text filter
 
@@ -71,7 +71,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1861](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1861)
+[api.ts:1861](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1861)
 
 ___
 
@@ -87,7 +87,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1867](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1867)
+[api.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1867)
 
 ___
 
@@ -103,7 +103,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1873](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1873)
+[api.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1873)
 
 ___
 
@@ -119,7 +119,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1879](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1879)
+[api.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1879)
 
 ___
 
@@ -135,7 +135,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1885](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1885)
+[api.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1885)
 
 ___
 
@@ -151,7 +151,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1891](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1891)
+[api.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1891)
 
 ___
 
@@ -167,13 +167,13 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1909](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1909)
+[api.ts:1909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1909)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -183,13 +183,13 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1921](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1921)
+[api.ts:1921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1921)
 
 ___
 
 ### sort
 
-• **sort**: `string`
+• **sort**: ``null`` \| `string`
 
 Sorting filter.
 
@@ -199,7 +199,7 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1897](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1897)
+[api.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1897)
 
 ___
 
@@ -215,4 +215,4 @@ MetaSystems
 
 #### Defined in
 
-[api.ts:1903](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1903)
+[api.ts:1903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1903)

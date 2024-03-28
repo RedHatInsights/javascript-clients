@@ -37,7 +37,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:138](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L138)
+[api.ts:138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L138)
 
 ___
 
@@ -51,7 +51,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:144](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L144)
+[api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L144)
 
 ___
 
@@ -65,7 +65,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:150](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L150)
+[api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L150)
 
 ___
 
@@ -81,7 +81,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:156](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L156)
+[api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L156)
 
 ___
 
@@ -95,7 +95,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:162](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L162)
+[api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L162)
 
 ___
 
@@ -109,7 +109,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:168](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L168)
+[api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L168)
 
 ___
 
@@ -123,7 +123,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:174](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L174)
+[api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L174)
 
 ___
 
@@ -137,7 +137,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:180](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L180)
+[api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L180)
 
 ___
 
@@ -153,7 +153,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:186](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L186)
+[api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L186)
 
 ___
 
@@ -167,7 +167,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:192](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L192)
+[api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L192)
 
 ___
 
@@ -181,7 +181,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L198)
+[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L198)
 
 ___
 
@@ -195,4 +195,4 @@ Cluster
 
 #### Defined in
 
-[api.ts:204](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L204)
+[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L204)

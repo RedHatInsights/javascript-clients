@@ -26,4 +26,4 @@ ControllersPackageVersionItem
 
 #### Defined in
 
-[api.ts:953](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L953)
+[api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L953)

@@ -28,7 +28,7 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:404](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L404)
+[api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L404)
 
 ___
 
@@ -44,13 +44,13 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:410](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L410)
+[api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L410)
 
 ___
 
 ### status\_text
 
-• `Optional` **status\_text**: `string`
+• `Optional` **status\_text**: ``null`` \| `string`
 
 Complementary text to the status.
 
@@ -60,4 +60,4 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:416](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L416)
+[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L416)

@@ -56,6 +56,14 @@ const systemApi = new SystemApi(undefined, BASE_PATH, instance);
 export systemApi;
 ```
 
+## Building
+
+Run `nx build insights-client` to build the library.
+
+## Running unit tests
+
+Run `nx test insights-client` to execute the unit tests via [Jest](https://jestjs.io).
+
 ## API documentation
 
 * [README](doc/README.md)

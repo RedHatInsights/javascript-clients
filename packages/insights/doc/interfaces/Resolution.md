@@ -29,7 +29,7 @@ Resolution
 
 #### Defined in
 
-[api.ts:1248](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1248)
+[api.ts:1248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1248)
 
 ___
 
@@ -43,7 +43,7 @@ Resolution
 
 #### Defined in
 
-[api.ts:1236](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1236)
+[api.ts:1236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1236)
 
 ___
 
@@ -57,7 +57,7 @@ Resolution
 
 #### Defined in
 
-[api.ts:1242](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1242)
+[api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1242)
 
 ___
 
@@ -71,4 +71,4 @@ Resolution
 
 #### Defined in
 
-[api.ts:1230](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/insights/api.ts#L1230)
+[api.ts:1230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1230)

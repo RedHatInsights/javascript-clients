@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[configuration.ts:77](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L77)
+[configuration.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L77)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L53)
+[configuration.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L53)
 
 ___
 
@@ -80,7 +80,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:32](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L32)
+[configuration.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L32)
 
 ___
 
@@ -96,7 +96,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:67](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L67)
+[configuration.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L67)
 
 ___
 
@@ -112,7 +112,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:60](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L60)
+[configuration.ts:60](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L60)
 
 ___
 
@@ -130,7 +130,7 @@ do not support the FormData class can still run the generated client.
 
 #### Defined in
 
-[configuration.ts:75](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L75)
+[configuration.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L75)
 
 ___
 
@@ -146,7 +146,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:46](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L46)
+[configuration.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L46)
 
 ___
 
@@ -162,7 +162,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:39](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L39)
+[configuration.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L39)
 
 ## Methods
 
@@ -191,4 +191,4 @@ True if the given MIME is JSON, false otherwise.
 
 #### Defined in
 
-[configuration.ts:97](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L97)
+[configuration.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L97)

@@ -37,7 +37,7 @@ MetaAffectedSystems
 
 ### cves\_without\_errata
 
-• **cves\_without\_errata**: `boolean`
+• **cves\_without\_errata**: ``null`` \| `boolean`
 
 CVEs without Errata feature flag
 
@@ -47,7 +47,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1332](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1332)
+[api.ts:1332](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1332)
 
 ___
 
@@ -63,13 +63,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1272](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1272)
+[api.ts:1272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1272)
 
 ___
 
 ### filter
 
-• **filter**: `string`
+• **filter**: ``null`` \| `string`
 
 Full text filter
 
@@ -79,13 +79,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1278](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1278)
+[api.ts:1278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1278)
 
 ___
 
 ### first\_reported\_from
 
-• **first\_reported\_from**: `string`
+• **first\_reported\_from**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -95,13 +95,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1338](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1338)
+[api.ts:1338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1338)
 
 ___
 
 ### first\_reported\_to
 
-• **first\_reported\_to**: `string`
+• **first\_reported\_to**: ``null`` \| `string`
 
 Filter system-cve pairs based on first time of detection of CVE.
 
@@ -111,13 +111,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1344](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1344)
+[api.ts:1344](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1344)
 
 ___
 
 ### group\_ids
 
-• **group\_ids**: `string`
+• **group\_ids**: ``null`` \| `string`
 
 ID of the inventory group.
 
@@ -127,13 +127,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1350](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1350)
+[api.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1350)
 
 ___
 
 ### group\_names
 
-• **group\_names**: `string`
+• **group\_names**: ``null`` \| `string`
 
 Name of the inventory group.
 
@@ -143,7 +143,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1356](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1356)
+[api.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1356)
 
 ___
 
@@ -159,7 +159,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1284](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1284)
+[api.ts:1284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1284)
 
 ___
 
@@ -175,7 +175,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1290](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1290)
+[api.ts:1290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1290)
 
 ___
 
@@ -191,7 +191,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1296](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1296)
+[api.ts:1296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1296)
 
 ___
 
@@ -207,7 +207,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1302](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1302)
+[api.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1302)
 
 ___
 
@@ -223,13 +223,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1308](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1308)
+[api.ts:1308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1308)
 
 ___
 
 ### patch\_access
 
-• **patch\_access**: `boolean`
+• **patch\_access**: ``null`` \| `boolean`
 
 If show_advisories=true shows access to patch service else null
 
@@ -239,7 +239,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1362](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1362)
+[api.ts:1362](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1362)
 
 ___
 
@@ -255,13 +255,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1326](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1326)
+[api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1326)
 
 ___
 
 ### rhel\_version
 
-• **rhel\_version**: `string`
+• **rhel\_version**: ``null`` \| `string`
 
 Filter base on system RHEL version.
 
@@ -271,13 +271,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1368](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1368)
+[api.ts:1368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1368)
 
 ___
 
 ### rule\_key
 
-• **rule\_key**: `string`
+• **rule\_key**: ``null`` \| `string`
 
 Filters security rules by its error key.
 
@@ -287,13 +287,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1374](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1374)
+[api.ts:1374](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1374)
 
 ___
 
 ### rule\_presence
 
-• **rule\_presence**: `string`
+• **rule\_presence**: ``null`` \| `string`
 
 Filter based on presence of security rule
 
@@ -303,13 +303,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1380](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1380)
+[api.ts:1380](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1380)
 
 ___
 
 ### sort
 
-• **sort**: `string`
+• **sort**: ``null`` \| `string`
 
 Sorting filter.
 
@@ -319,13 +319,13 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1314](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1314)
+[api.ts:1314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1314)
 
 ___
 
 ### status\_id
 
-• **status\_id**: `string`
+• **status\_id**: ``null`` \| `string`
 
 Filer based on CVE status ID.
 
@@ -335,7 +335,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1386](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1386)
+[api.ts:1386](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1386)
 
 ___
 
@@ -351,4 +351,4 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1320](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1320)
+[api.ts:1320](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L1320)

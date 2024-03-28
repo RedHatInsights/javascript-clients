@@ -32,7 +32,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1457](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1457)
+[api.ts:1457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1457)
 
 ___
 
@@ -46,7 +46,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1445](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1445)
+[api.ts:1445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1445)
 
 ___
 
@@ -60,7 +60,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1469](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1469)
+[api.ts:1469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1469)
 
 ___
 
@@ -74,7 +74,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1463](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1463)
+[api.ts:1463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1463)
 
 ___
 
@@ -88,7 +88,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1439](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1439)
+[api.ts:1439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1439)
 
 ___
 
@@ -102,7 +102,7 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1475](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1475)
+[api.ts:1475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1475)
 
 ___
 
@@ -116,4 +116,4 @@ PolicyExtended
 
 #### Defined in
 
-[api.ts:1451](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/rbac/api.ts#L1451)
+[api.ts:1451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1451)

@@ -37,7 +37,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2542](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2542)
+[api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2542)
 
 ___
 
@@ -51,7 +51,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2548](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2548)
+[api.ts:2548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2548)
 
 ___
 
@@ -65,7 +65,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2554](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2554)
+[api.ts:2554](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2554)
 
 ___
 
@@ -79,7 +79,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2560](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2560)
+[api.ts:2560](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2560)
 
 ___
 
@@ -95,7 +95,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2566](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2566)
+[api.ts:2566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2566)
 
 ___
 
@@ -109,7 +109,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2572](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2572)
+[api.ts:2572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2572)
 
 ___
 
@@ -123,7 +123,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2578](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2578)
+[api.ts:2578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2578)
 
 ___
 
@@ -137,7 +137,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2584](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2584)
+[api.ts:2584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2584)
 
 ___
 
@@ -153,7 +153,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2590](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2590)
+[api.ts:2590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2590)
 
 ___
 
@@ -167,7 +167,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2596](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2596)
+[api.ts:2596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2596)
 
 ___
 
@@ -181,7 +181,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2602](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2602)
+[api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2602)
 
 ___
 
@@ -195,4 +195,4 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2608](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2608)
+[api.ts:2608](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2608)

@@ -26,4 +26,4 @@ AuthenticationExtraAzure
 
 #### Defined in
 
-[api.ts:291](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/sources/api.ts#L291)
+[api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L291)

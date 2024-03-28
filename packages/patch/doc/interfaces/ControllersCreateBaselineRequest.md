@@ -29,7 +29,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:611](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L611)
+[api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L611)
 
 ___
 
@@ -45,7 +45,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:617](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L617)
+[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L617)
 
 ___
 
@@ -61,7 +61,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:623](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L623)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L623)
 
 ___
 
@@ -77,4 +77,4 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:629](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/patch/api.ts#L629)
+[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L629)

@@ -34,7 +34,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1095](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1095)
+[api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1120)
 
 ___
 
@@ -48,7 +48,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1101)
+[api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1126)
 
 ___
 
@@ -64,7 +64,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1113](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1113)
+[api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1138)
 
 ___
 
@@ -80,7 +80,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1107](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1107)
+[api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1132)
 
 ___
 
@@ -96,7 +96,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1119](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1119)
+[api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1144)
 
 ___
 
@@ -112,7 +112,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1125)
+[api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1150)
 
 ___
 
@@ -128,4 +128,4 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1131](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1131)
+[api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1156)

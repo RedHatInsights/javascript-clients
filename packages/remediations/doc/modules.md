@@ -30,6 +30,7 @@
 - [InlineResponse200](interfaces/InlineResponse200.md)
 - [Meta](interfaces/Meta.md)
 - [MultipleDelete](interfaces/MultipleDelete.md)
+- [NoExecutors](interfaces/NoExecutors.md)
 - [PlaybookDefinition](interfaces/PlaybookDefinition.md)
 - [PlaybookDefinitionIssues](interfaces/PlaybookDefinitionIssues.md)
 - [PlaybookExecutorDetails](interfaces/PlaybookExecutorDetails.md)
@@ -108,7 +109,7 @@ DiagnosisApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1233)
+[api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1246)
 
 ___
 
@@ -138,7 +139,7 @@ DiagnosisApi - factory interface
 
 #### Defined in
 
-[api.ts:1313](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1313)
+[api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1326)
 
 ___
 
@@ -166,7 +167,7 @@ DiagnosisApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1288](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1288)
+[api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1301)
 
 ___
 
@@ -194,7 +195,7 @@ GeneratorApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1358](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1358)
+[api.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1371)
 
 ___
 
@@ -224,7 +225,7 @@ GeneratorApi - factory interface
 
 #### Defined in
 
-[api.ts:1429](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1429)
+[api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1442)
 
 ___
 
@@ -252,7 +253,7 @@ GeneratorApi - functional programming interface
 
 #### Defined in
 
-[api.ts:1406](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1406)
+[api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1419)
 
 ___
 
@@ -291,7 +292,7 @@ RemediationsApi - axios parameter creator
 | `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediations` | (`sort?`: ``"name"`` \| ``"updated_at"`` \| ``"-updated_at"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
 | `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
@@ -299,7 +300,7 @@ RemediationsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:1470](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1470)
+[api.ts:1483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1483)
 
 ___
 
@@ -340,7 +341,7 @@ RemediationsApi - factory interface
 | `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\> |
 | `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `AxiosPromise`<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\> |
 | `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `AxiosPromise`<`string`\> |
-| `getRemediations` | (`sort?`: ``"name"`` \| ``"updated_at"`` \| ``"-updated_at"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\> |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\> |
 | `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `AxiosPromise`<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\> |
 | `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `AxiosPromise`<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\> |
 | `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `AxiosPromise`<`void`\> |
@@ -348,7 +349,7 @@ RemediationsApi - factory interface
 
 #### Defined in
 
-[api.ts:2708](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2708)
+[api.ts:2721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2721)
 
 ___
 
@@ -387,7 +388,7 @@ RemediationsApi - functional programming interface
 | `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\>\> |
 | `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\>\> |
 | `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`\>\> |
-| `getRemediations` | (`sort?`: ``"name"`` \| ``"updated_at"`` \| ``"-updated_at"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\>\> |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\>\> |
 | `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\>\> |
 | `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\>\> |
 | `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
@@ -395,7 +396,7 @@ RemediationsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:2386](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L2386)
+[api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2399)
 
 ___
 
@@ -424,7 +425,7 @@ ResolutionsApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3233](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3233)
+[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3246)
 
 ___
 
@@ -455,7 +456,7 @@ ResolutionsApi - factory interface
 
 #### Defined in
 
-[api.ts:3354](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3354)
+[api.ts:3367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3367)
 
 ___
 
@@ -484,7 +485,7 @@ ResolutionsApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3317](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3317)
+[api.ts:3330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3330)
 
 ___
 
@@ -512,7 +513,7 @@ VersionApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:3417](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3417)
+[api.ts:3430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3430)
 
 ___
 
@@ -542,7 +543,7 @@ VersionApi - factory interface
 
 #### Defined in
 
-[api.ts:3478](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3478)
+[api.ts:3491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3491)
 
 ___
 
@@ -570,4 +571,4 @@ VersionApi - functional programming interface
 
 #### Defined in
 
-[api.ts:3456](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L3456)
+[api.ts:3469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3469)

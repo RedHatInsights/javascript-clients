@@ -13,8 +13,10 @@ PerReporterStaleness
 ### Properties
 
 - [check\_in\_succeeded](PerReporterStaleness.md#check_in_succeeded)
+- [culled\_timestamp](PerReporterStaleness.md#culled_timestamp)
 - [last\_check\_in](PerReporterStaleness.md#last_check_in)
 - [stale\_timestamp](PerReporterStaleness.md#stale_timestamp)
+- [stale\_warning\_timestamp](PerReporterStaleness.md#stale_warning_timestamp)
 
 ## Properties
 
@@ -28,7 +30,21 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1206](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1206)
+[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1243)
+
+___
+
+### culled\_timestamp
+
+• `Optional` **culled\_timestamp**: `string`
+
+**`Memberof`**
+
+PerReporterStaleness
+
+#### Defined in
+
+[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1237)
 
 ___
 
@@ -42,7 +58,7 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1194](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1194)
+[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)
 
 ___
 
@@ -56,4 +72,18 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1200](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/host-inventory/api.ts#L1200)
+[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1225)
+
+___
+
+### stale\_warning\_timestamp
+
+• `Optional` **stale\_warning\_timestamp**: `string`
+
+**`Memberof`**
+
+PerReporterStaleness
+
+#### Defined in
+
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1231)

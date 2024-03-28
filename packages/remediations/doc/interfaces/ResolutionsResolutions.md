@@ -29,7 +29,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1158](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1158)
+[api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1171)
 
 ___
 
@@ -43,7 +43,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1152](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1152)
+[api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1165)
 
 ___
 
@@ -59,7 +59,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1164](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1164)
+[api.ts:1177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1177)
 
 ___
 
@@ -73,4 +73,4 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1170](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/remediations/api.ts#L1170)
+[api.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1183)

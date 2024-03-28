@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:41](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L41)
+[packages/integrations/utils/base.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L41)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:42](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L42)
+[packages/integrations/utils/base.ts:42](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L42)

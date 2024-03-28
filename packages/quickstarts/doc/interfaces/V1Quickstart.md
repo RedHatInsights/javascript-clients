@@ -15,6 +15,7 @@ V1Quickstart
 - [content](V1Quickstart.md#content)
 - [createdAt](V1Quickstart.md#createdat)
 - [deletedAt](V1Quickstart.md#deletedat)
+- [favoriteQuickstart](V1Quickstart.md#favoritequickstart)
 - [id](V1Quickstart.md#id)
 - [name](V1Quickstart.md#name)
 - [tags](V1Quickstart.md#tags)
@@ -32,7 +33,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:198](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L198)
+[api.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L266)
 
 ___
 
@@ -46,13 +47,13 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:204](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L204)
+[api.ts:272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L272)
 
 ___
 
 ### deletedAt
 
-• `Optional` **deletedAt**: `string`
+• `Optional` **deletedAt**: [`V1HelpTopicDeletedAt`](../modules.md#v1helptopicdeletedat)
 
 **`Memberof`**
 
@@ -60,7 +61,21 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:210](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L210)
+[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L278)
+
+___
+
+### favoriteQuickstart
+
+• `Optional` **favoriteQuickstart**: [`V1QuickstartFavoriteQuickstartInner`](V1QuickstartFavoriteQuickstartInner.md)[]
+
+**`Memberof`**
+
+V1Quickstart
+
+#### Defined in
+
+[api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L284)
 
 ___
 
@@ -74,7 +89,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:216](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L216)
+[api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L290)
 
 ___
 
@@ -88,7 +103,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:222](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L222)
+[api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L296)
 
 ___
 
@@ -102,7 +117,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:228](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L228)
+[api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L302)
 
 ___
 
@@ -116,4 +131,4 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:234](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/quickstarts/api.ts#L234)
+[api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L308)

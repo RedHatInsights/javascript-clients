@@ -26,6 +26,7 @@
 - [AddAccessRequest](interfaces/AddAccessRequest.md)
 - [AddApplicationRequest](interfaces/AddApplicationRequest.md)
 - [AggregationEmailTemplate](interfaces/AggregationEmailTemplate.md)
+- [AggregationEmailTemplateSubjectTemplate](interfaces/AggregationEmailTemplateSubjectTemplate.md)
 - [ApiConfig](interfaces/ApiConfig.md)
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
@@ -98,18 +99,18 @@
 - [APIFactory](modules.md#apifactory)
 - [assertParamExists](modules.md#assertparamexists)
 - [createRequestFunction](modules.md#createrequestfunction)
-- [endpointResourceV1CreateEndpointParamCreator](modules.md#endpointresourcev1createendpointparamcreator)
-- [endpointResourceV1DeleteEndpointParamCreator](modules.md#endpointresourcev1deleteendpointparamcreator)
-- [endpointResourceV1DisableEndpointParamCreator](modules.md#endpointresourcev1disableendpointparamcreator)
-- [endpointResourceV1EnableEndpointParamCreator](modules.md#endpointresourcev1enableendpointparamcreator)
-- [endpointResourceV1GetDetailedEndpointHistoryParamCreator](modules.md#endpointresourcev1getdetailedendpointhistoryparamcreator)
-- [endpointResourceV1GetEndpointHistoryParamCreator](modules.md#endpointresourcev1getendpointhistoryparamcreator)
-- [endpointResourceV1GetEndpointParamCreator](modules.md#endpointresourcev1getendpointparamcreator)
-- [endpointResourceV1GetEndpointsParamCreator](modules.md#endpointresourcev1getendpointsparamcreator)
-- [endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator](modules.md#endpointresourcev1getorcreatedrawersubscriptionendpointparamcreator)
-- [endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator](modules.md#endpointresourcev1getorcreateemailsubscriptionendpointparamcreator)
-- [endpointResourceV1TestEndpointParamCreator](modules.md#endpointresourcev1testendpointparamcreator)
-- [endpointResourceV1UpdateEndpointParamCreator](modules.md#endpointresourcev1updateendpointparamcreator)
+- [endpointResourceV1CreateEndpoint](modules.md#endpointresourcev1createendpoint)
+- [endpointResourceV1DeleteEndpoint](modules.md#endpointresourcev1deleteendpoint)
+- [endpointResourceV1DisableEndpoint](modules.md#endpointresourcev1disableendpoint)
+- [endpointResourceV1EnableEndpoint](modules.md#endpointresourcev1enableendpoint)
+- [endpointResourceV1GetDetailedEndpointHistory](modules.md#endpointresourcev1getdetailedendpointhistory)
+- [endpointResourceV1GetEndpoint](modules.md#endpointresourcev1getendpoint)
+- [endpointResourceV1GetEndpointHistory](modules.md#endpointresourcev1getendpointhistory)
+- [endpointResourceV1GetEndpoints](modules.md#endpointresourcev1getendpoints)
+- [endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint](modules.md#endpointresourcev1getorcreatedrawersubscriptionendpoint)
+- [endpointResourceV1GetOrCreateEmailSubscriptionEndpoint](modules.md#endpointresourcev1getorcreateemailsubscriptionendpoint)
+- [endpointResourceV1TestEndpoint](modules.md#endpointresourcev1testendpoint)
+- [endpointResourceV1UpdateEndpoint](modules.md#endpointresourcev1updateendpoint)
 - [serializeDataIfNeeded](modules.md#serializedataifneeded)
 - [setApiKeyToObject](modules.md#setapikeytoobject)
 - [setBasicAuthToObject](modules.md#setbasicauthtoobject)
@@ -140,7 +141,7 @@
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:55](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L55)
+[packages/integrations/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L55)
 
 ___
 
@@ -150,9 +151,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
 
 ## Variables
 
@@ -172,9 +173,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
 
 ___
 
@@ -184,7 +185,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:12](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L12)
+[packages/integrations/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L12)
 
 ___
 
@@ -205,7 +206,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:18](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L18)
+[packages/integrations/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L18)
 
 ___
 
@@ -217,7 +218,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:13](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L13)
+[packages/integrations/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L13)
 
 ## Functions
 
@@ -249,7 +250,7 @@ created base API.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:145](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/base.ts#L145)
+[packages/integrations/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L145)
 
 ___
 
@@ -275,7 +276,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:20](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L20)
+[packages/integrations/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L20)
 
 ___
 
@@ -320,13 +321,13 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:133](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L133)
+[packages/integrations/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L133)
 
 ___
 
-### endpointResourceV1CreateEndpointParamCreator
+### endpointResourceV1CreateEndpoint
 
-▸ **endpointResourceV1CreateEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1CreateEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
 
@@ -348,13 +349,13 @@ Create a new endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1DeleteEndpointParamCreator
+### endpointResourceV1DeleteEndpoint
 
-▸ **endpointResourceV1DeleteEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1DeleteEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
 
@@ -376,13 +377,13 @@ Delete an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1DisableEndpointParamCreator
+### endpointResourceV1DisableEndpoint
 
-▸ **endpointResourceV1DisableEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1DisableEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
 
@@ -404,13 +405,13 @@ Disable an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1EnableEndpointParamCreator
+### endpointResourceV1EnableEndpoint
 
-▸ **endpointResourceV1EnableEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1EnableEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
 
@@ -432,13 +433,13 @@ Enable an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1GetDetailedEndpointHistoryParamCreator
+### endpointResourceV1GetDetailedEndpointHistory
 
-▸ **endpointResourceV1GetDetailedEndpointHistoryParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetDetailedEndpointHistory**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
 
@@ -460,35 +461,13 @@ Retrieve event notification details
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
+[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
 
 ___
 
-### endpointResourceV1GetEndpointHistoryParamCreator
+### endpointResourceV1GetEndpoint
 
-▸ **endpointResourceV1GetEndpointHistoryParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-**`Throws`**
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Defined in
-
-[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
-
-___
-
-### endpointResourceV1GetEndpointParamCreator
-
-▸ **endpointResourceV1GetEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the public information associated with an endpoint such as its description, name, and properties.
 
@@ -510,13 +489,35 @@ Retrieve an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1GetEndpointsParamCreator
+### endpointResourceV1GetEndpointHistory
 
-▸ **endpointResourceV1GetEndpointsParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetEndpointHistory**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+**`Throws`**
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+#### Defined in
+
+[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
+
+___
+
+### endpointResourceV1GetEndpoints
+
+▸ **endpointResourceV1GetEndpoints**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Provides a list of endpoints. Use this endpoint to find specific endpoints.
 
@@ -538,13 +539,13 @@ List endpoints
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
+[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
 
 ___
 
-### endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator
+### endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint
 
-▸ **endpointResourceV1GetOrCreateDrawerSubscriptionEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
 
@@ -566,13 +567,13 @@ Add a drawer endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator
+### endpointResourceV1GetOrCreateEmailSubscriptionEndpoint
 
-▸ **endpointResourceV1GetOrCreateEmailSubscriptionEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetOrCreateEmailSubscriptionEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
 
@@ -594,13 +595,13 @@ Create an email subscription endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
 
 ___
 
-### endpointResourceV1TestEndpointParamCreator
+### endpointResourceV1TestEndpoint
 
-▸ **endpointResourceV1TestEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1TestEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
 
@@ -622,13 +623,13 @@ Generate a test notification
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
 
 ___
 
-### endpointResourceV1UpdateEndpointParamCreator
+### endpointResourceV1UpdateEndpoint
 
-▸ **endpointResourceV1UpdateEndpointParamCreator**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1UpdateEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
 
@@ -650,7 +651,7 @@ Update an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
 
 ___
 
@@ -674,7 +675,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:111](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L111)
+[packages/integrations/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L111)
 
 ___
 
@@ -698,7 +699,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:30](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L30)
+[packages/integrations/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L30)
 
 ___
 
@@ -721,7 +722,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:43](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L43)
+[packages/integrations/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L43)
 
 ___
 
@@ -744,7 +745,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:53](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L53)
+[packages/integrations/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L53)
 
 ___
 
@@ -769,7 +770,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:66](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L66)
+[packages/integrations/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L66)
 
 ___
 
@@ -792,7 +793,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:101](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L101)
+[packages/integrations/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L101)
 
 ___
 
@@ -814,4 +815,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:125](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/integrations/utils/common.ts#L125)
+[packages/integrations/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L125)

@@ -26,4 +26,4 @@ PlaybookTemplate
 
 #### Defined in
 
-[api.ts:2253](https://github.com/mkholjuraev/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2253)
+[api.ts:2265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2265)
