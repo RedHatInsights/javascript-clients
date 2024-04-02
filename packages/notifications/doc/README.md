@@ -1,5 +1,3 @@
-@redhat-cloud-services/notifications-client / [Exports](modules.md)
-
 # Javascript client for Notifications API
 If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
@@ -20,12 +18,14 @@ This client is using typescript and axios. Types are distributed with this packa
 To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
 ```JS
 // api.js
-import axios from 'axios';
-import { NotificationsApi } from '@redhat-cloud-services/notifications-client';
-const instance = axios.create();
+import APIFactory from '@redhat-cloud-services/notifications-client/utils'; 
+import createBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1CreateBehaviorGroup';
+import updateBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1UpdateBehaviorGroup';
+import deleteBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1DeleteBehaviorGroup';
+
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = new NotificationsApi(undefined, BASE_PATH, instance);
+const notificationsApi = APIFactory(BASE_PATH, undefined, { createBehaviorGroup, updateBehaviorGroup, deleteBehaviorGroup });
 export notificationsApi;
 ```
 
@@ -52,17 +52,17 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = new NotificationsApi(undefined, BASE_PATH, instance);
+const notificationsApi = APIFactory(BASE_PATH, instance, { createBehaviorGroup, updateBehaviorGroup, deleteBehaviorGroup });
 export notificationsApi;
 ```
 
 ## Building
 
-Run `nx build notifications-client` to build the library.
+Run `nx build @redhat-cloud-services/notifications-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test notifications-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/notifications-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

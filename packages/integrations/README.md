@@ -18,12 +18,12 @@ This client is using typescript and axios. Types are distributed with this packa
 To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
 ```JS
 // api.js
-import axios from 'axios';
-import { IntegrationsApi } from '@redhat-cloud-services/integrations-client';
-const instance = axios.create();
+import APIFactory from '@redhat-cloud-services/integrations-client/utils'; 
+import createEndpoint from '@redhat-cloud-services/integrations-client/endpointResourceV1CreateEndpoint';
+import enableEndpoint from '@redhat-cloud-services/integrations-client/endpointResourceV1EnableEndpoint';
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = new IntegrationsApi(undefined, BASE_PATH, instance);
+const integrationsApi = APIFactory(BASE_PATH, undefined, { createEndpoint, enableEndpoint });
 export integrationsApi;
 ```
 
@@ -50,17 +50,17 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = new IntegrationsApi(undefined, BASE_PATH, instance);
+const integrationsApi = APIFactory(BASE_PATH, instance, { createEndpoint, enableEndpoint });
 export integrationsApi;
 ```
 
 ## Building
 
-Run `nx build integrations-client` to build the library.
+Run `nx build @redhat-cloud-services/integrations-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test integrations-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/integrations-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
