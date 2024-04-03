@@ -50,9 +50,6 @@
       "options": {
         "access": "public"
       }
-    },
-    "syncDependencies": {
-      "executor": "@redhat-cloud-services/build-utils:sync-dependencies"
     }
   },
   "tags": []
