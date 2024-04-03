@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.3.2](https://github.com/Hyperkid123/javascript-clients/compare/@redhat-cloud-services/sources-client-1.3.1...@redhat-cloud-services/sources-client-1.3.2) (2024-04-03)
+
+
+### Bug Fixes
+
+* add missing spec files to each client ([d68e2ae](https://github.com/Hyperkid123/javascript-clients/commit/d68e2ae5d7d21f03cb60181c19ea12f18e9989b6))
+
 ## [1.3.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/sources-client-1.3.0...@redhat-cloud-services/sources-client-1.3.1) (2024-02-19)
 
 
