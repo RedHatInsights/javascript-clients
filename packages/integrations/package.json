@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/integrations-client",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "",
   "main": "./index.js",
   "module": "./esm/index.js",
