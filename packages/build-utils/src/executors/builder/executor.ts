@@ -29,10 +29,6 @@ async function runTSC(tsConfigPath: string, outputDir: string) {
   }
 }
 
-async function copyClient(clientDir: string, outputDir: string) {
-  return asyncExec(`rsync -avz --exclude dist ${clientDir}/* ${outputDir}`);
-}
-
 async function copyAssets(assets: string[], outputDir: string) {
   return Promise.all(assets.map((asset) => asyncExec(`cp -r ${asset} ${outputDir}`)));
 }
@@ -57,11 +53,7 @@ export default async function runExecutor(options: BuilderExecutorSchemaType, co
     validateExistingFile(options.cjsTsConfig),
     validateExistingFile(projectPackageJsonPath),
   ]);
-  await Promise.all([
-    runTSC(options.esmTsConfig, `${outputDir}/esm`),
-    runTSC(options.cjsTsConfig, `${outputDir}/dist`),
-    copyClient(currentProjectRoot, outputDir),
-  ]);
+  await Promise.all([runTSC(options.esmTsConfig, `${outputDir}/esm`), runTSC(options.cjsTsConfig, outputDir)]);
   await copyAssets(assets, outputDir);
   return {
     success: true,

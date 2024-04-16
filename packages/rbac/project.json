@@ -5,13 +5,18 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
-        "outputPath": "packages/rbac/dist",
+        "outputPath": "dist/rbac/dist",
         "main": "packages/rbac/index.ts",
         "esmTsConfig": "packages/rbac/tsconfig.esm.json",
-        "cjsTsConfig": "packages/rbac/tsconfig.cjs.json"
+        "cjsTsConfig": "packages/rbac/tsconfig.cjs.json",
+        "tsConfig": "packages/rbac/old-tsconfig.json"
       }
+    },
+    "postbuild": {
+      "command": "rsync -avz --exclude dist packages/rbac/ dist/rbac",
+      "dependsOn": ["build"]
     },
     "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/rbac-client {args.ver} {args.tag}",
