@@ -32,6 +32,9 @@ runs:
     - name: Build
       shell: bash
       run: npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
+    - name: Copy Metadata
+      shell: bash
+      run: npx nx run-many -t copyMetadata --exclude=@redhat-cloud-services/CLIENTNAME-client
     - name: Set publish config
       env:
         NPM_TOKEN: ${{ inputs.npm_token }}

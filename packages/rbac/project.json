@@ -7,15 +7,23 @@
     "build": {
       "executor": "@nx/js:tsc",
       "options": {
-        "outputPath": "dist/rbac/dist",
+        "outputPath": "packages/rbac/dist",
         "main": "packages/rbac/index.ts",
-        "esmTsConfig": "packages/rbac/tsconfig.esm.json",
-        "cjsTsConfig": "packages/rbac/tsconfig.cjs.json",
-        "tsConfig": "packages/rbac/old-tsconfig.json"
+        "tsConfig": "packages/rbac/tsconfig.cjs.json"
       }
     },
-    "postbuild": {
-      "command": "rsync -avz --exclude dist packages/rbac/ dist/rbac",
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/rbac/dist dist/rbac/doc dist/rbac/.openapi-generator",
+            "cp packages/rbac/README.md packages/rbac/package.json packages/rbac/*.ts packages/rbac/*.json packages/rbac/LICENSE packages/rbac/.openapi-generator-ignore packages/rbac/postProcess.sh dist/rbac",
+            "cp packages/rbac/dist/* dist/rbac/dist",
+            "cp -r packages/rbac/doc/* dist/rbac/doc",
+            "cp packages/rbac/.openapi-generator/* dist/rbac/.openapi-generator"
+          ],
+          "parallel": false
+      },
       "dependsOn": ["build"]
     },
     "publish": {
@@ -54,7 +62,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/rbac"
       }
     }
   },

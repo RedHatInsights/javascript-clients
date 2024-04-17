@@ -15,7 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "@redhat-cloud-services/build-utils": ["packages/build-utils/src/index.ts"],
-      "@redhat-cloud-services/approval-client": ["packages/approval/src/index.ts"],
+      "@redhat-cloud-services/rbac-client": ["packages/rbac/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
