@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/insights/dist",
         "main": "packages/insights/index.ts",
-        "esmTsConfig": "packages/insights/tsconfig.esm.json",
-        "cjsTsConfig": "packages/insights/tsconfig.cjs.json"
+        "tsConfig": "packages/insights/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/insights/dist dist/insights/doc",
+            "cp packages/insights/README.md packages/insights/package.json packages/insights/LICENSE packages/insights/CHANGELOG.md dist/insights",
+            "cp packages/insights/dist/* dist/insights/dist",
+            "cp -r packages/insights/doc/* dist/insights/doc",
+            "rm -f dist/insights/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/insights-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/insights"
       }
     }
   },

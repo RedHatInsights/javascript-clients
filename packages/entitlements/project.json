@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/entitlements/dist",
         "main": "packages/entitlements/index.ts",
-        "esmTsConfig": "packages/entitlements/tsconfig.esm.json",
-        "cjsTsConfig": "packages/entitlements/tsconfig.cjs.json"
+        "tsConfig": "packages/entitlements/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/entitlements/dist dist/entitlements/doc",
+            "cp packages/entitlements/README.md packages/entitlements/package.json packages/entitlements/LICENSE packages/entitlements/CHANGELOG.md dist/entitlements",
+            "cp packages/entitlements/dist/* dist/entitlements/dist",
+            "cp -r packages/entitlements/doc/* dist/entitlements/doc",
+            "rm -f dist/entitlements/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/entitlements-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/entitlements"
       }
     }
   },

@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/integrations/dist",
         "main": "packages/integrations/index.ts",
-        "esmTsConfig": "packages/integrations/tsconfig.esm.json",
-        "cjsTsConfig": "packages/integrations/tsconfig.cjs.json"
+        "tsConfig": "packages/integrations/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/integrations/dist dist/integrations/doc",
+            "cp packages/integrations/README.md packages/integrations/package.json packages/integrations/LICENSE packages/integrations/CHANGELOG.md dist/integrations",
+            "cp -r packages/integrations/dist/* dist/integrations/dist",
+            "cp -r packages/integrations/doc/* dist/integrations/doc",
+            "rm -f dist/integrations/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/integrations-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/integrations"
       }
     }
   },

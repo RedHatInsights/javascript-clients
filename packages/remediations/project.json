@@ -5,13 +5,26 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/remediations/dist",
         "main": "packages/remediations/index.ts",
-        "esmTsConfig": "packages/remediations/tsconfig.esm.json",
-        "cjsTsConfig": "packages/remediations/tsconfig.cjs.json"
+        "tsConfig": "packages/remediations/tsconfig.cjs.json"
       }
+    },
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/remediations/dist dist/remediations/doc",
+            "cp packages/remediations/README.md packages/remediations/package.json packages/remediations/CHANGELOG.md dist/remediations",
+            "cp packages/remediations/dist/* dist/remediations/dist",
+            "cp -r packages/remediations/doc/* dist/remediations/doc",
+            "rm -f dist/remediations/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
     },
     "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/remediations-client {args.ver} {args.tag}",
@@ -49,7 +62,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/remediations"
       }
     }
   },

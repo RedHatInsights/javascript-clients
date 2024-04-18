@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/policies/dist",
         "main": "packages/policies/index.ts",
-        "esmTsConfig": "packages/policies/tsconfig.esm.json",
-        "cjsTsConfig": "packages/policies/tsconfig.cjs.json"
+        "tsConfig": "packages/policies/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/policies/dist dist/policies/doc",
+            "cp packages/policies/README.md packages/policies/package.json packages/policies/CHANGELOG.md dist/policies",
+            "cp packages/policies/dist/* dist/policies/dist",
+            "cp -r packages/policies/doc/* dist/policies/doc",
+            "rm -f dist/policies/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/policies-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/policies"
       }
     }
   },
