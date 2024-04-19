@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.3.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-1.3.3...@redhat-cloud-services/quickstarts-client-1.3.4) (2024-04-19)
+
+
+### Bug Fixes
+
+* revert client output to match previous versions ([734a2e2](https://github.com/RedHatInsights/javascript-clients/commit/734a2e22d1464892ca1fb3114b366435c90d1110))
+
 ## [1.3.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-1.3.2...@redhat-cloud-services/quickstarts-client-1.3.3) (2024-04-03)
 
 ## [1.3.2](https://github.com/Hyperkid123/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-1.3.1...@redhat-cloud-services/quickstarts-client-1.3.2) (2024-04-03)
