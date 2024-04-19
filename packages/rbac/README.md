@@ -1,4 +1,4 @@
-# Javascript client for Inventory API
+# Javascript client for RBAC API
 If you want to use [RedHatInsights/insights-host-inventory](https://github.com/RedHatInsights/insights-host-inventory) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
