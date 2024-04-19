@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/host-inventory/dist",
         "main": "packages/host-inventory/index.ts",
-        "esmTsConfig": "packages/host-inventory/tsconfig.esm.json",
-        "cjsTsConfig": "packages/host-inventory/tsconfig.cjs.json"
+        "tsConfig": "packages/host-inventory/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/host-inventory/dist dist/host-inventory/doc",
+            "cp packages/host-inventory/README.md packages/host-inventory/package.json packages/host-inventory/LICENSE packages/host-inventory/CHANGELOG.md dist/host-inventory",
+            "cp packages/host-inventory/dist/* dist/host-inventory/dist",
+            "cp -r packages/host-inventory/doc/* dist/host-inventory/doc",
+            "rm -f dist/host-inventory/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/host-inventory-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/host-inventory"
       }
     }
   },

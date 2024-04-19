@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/config-manager/dist",
         "main": "packages/config-manager/index.ts",
-        "esmTsConfig": "packages/config-manager/tsconfig.esm.json",
-        "cjsTsConfig": "packages/config-manager/tsconfig.cjs.json"
+        "tsConfig": "packages/config-manager/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/config-manager/dist dist/config-manager/doc",
+            "cp packages/config-manager/README.md packages/config-manager/package.json packages/config-manager/LICENSE packages/config-manager/CHANGELOG.md dist/config-manager",
+            "cp packages/config-manager/dist/* dist/config-manager/dist",
+            "cp -r packages/config-manager/doc/* dist/config-manager/doc",
+            "rm -f dist/config-manager/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/config-manager-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/config-manager"
       }
     }
   },

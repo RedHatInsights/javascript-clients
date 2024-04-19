@@ -5,9 +5,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./index.js",
-  "module": "./esm/index.js",
-  "typings": "./index.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RedHatInsights/javascript-clients.git"

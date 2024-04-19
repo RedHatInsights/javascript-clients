@@ -5,15 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:builder",
+      "executor": "@nx/js:tsc",
       "options": {
         "outputPath": "packages/quickstarts/dist",
         "main": "packages/quickstarts/index.ts",
-        "esmTsConfig": "packages/quickstarts/tsconfig.esm.json",
-        "cjsTsConfig": "packages/quickstarts/tsconfig.cjs.json"
+        "tsConfig": "packages/quickstarts/tsconfig.cjs.json"
       }
     },
-    "publish": {
+    "copyMetadata": {
+      "executor": "nx:run-commands",
+      "options": {
+          "commands": [
+            "mkdir -p dist/quickstarts/dist dist/quickstarts/doc",
+            "cp packages/quickstarts/README.md packages/quickstarts/package.json packages/quickstarts/CHANGELOG.md dist/quickstarts",
+            "cp packages/quickstarts/dist/* dist/quickstarts/dist",
+            "cp -r packages/quickstarts/doc/* dist/quickstarts/doc",
+            "rm -f dist/quickstarts/dist/package.json"
+          ],
+          "parallel": false
+      },
+      "dependsOn": ["build"]
+    },    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/quickstarts-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
@@ -49,7 +61,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/quickstarts"
       }
     }
   },
