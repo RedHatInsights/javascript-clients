@@ -4,6 +4,11 @@
       "implementation": "./src/executors/builder/executor",
       "schema": "./src/executors/builder/schema.json",
       "description": "builder executor"
+    },
+    "old-builder": {
+      "implementation": "./src/executors/old-builder/old-executor",
+      "schema": "./src/executors/old-builder/schema.json",
+      "description": "old-builder executor"
     }
   }
 }
