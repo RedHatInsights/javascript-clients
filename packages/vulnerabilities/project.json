@@ -12,20 +12,7 @@
         "tsConfig": "packages/vulnerabilities/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/vulnerabilities/dist dist/vulnerabilities/doc",
-            "cp packages/vulnerabilities/README.md packages/vulnerabilities/package.json packages/vulnerabilities/LICENSE packages/vulnerabilities/CHANGELOG.md dist/vulnerabilities",
-            "cp -r packages/vulnerabilities/dist/* dist/vulnerabilities/dist",
-            "cp -r packages/vulnerabilities/doc/* dist/vulnerabilities/doc",
-            "rm -f dist/vulnerabilities/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/vulnerabilities-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

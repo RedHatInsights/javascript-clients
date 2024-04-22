@@ -12,20 +12,7 @@
         "tsConfig": "packages/patch/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/patch/dist dist/patch/doc",
-            "cp packages/patch/README.md packages/patch/package.json packages/patch/CHANGELOG.md dist/patch",
-            "cp packages/patch/dist/* dist/patch/dist",
-            "cp -r packages/patch/doc/* dist/patch/doc",
-            "rm -f dist/patch/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/patch-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

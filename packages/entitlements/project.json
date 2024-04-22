@@ -12,20 +12,7 @@
         "tsConfig": "packages/entitlements/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/entitlements/dist dist/entitlements/doc",
-            "cp packages/entitlements/README.md packages/entitlements/package.json packages/entitlements/LICENSE packages/entitlements/CHANGELOG.md dist/entitlements",
-            "cp packages/entitlements/dist/* dist/entitlements/dist",
-            "cp -r packages/entitlements/doc/* dist/entitlements/doc",
-            "rm -f dist/entitlements/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/entitlements-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

@@ -9,11 +9,6 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
-    "copyMetadata": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
-    },
     "lint": {
       "cache": true,
       "inputs": [

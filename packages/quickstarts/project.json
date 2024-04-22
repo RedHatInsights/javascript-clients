@@ -12,20 +12,7 @@
         "tsConfig": "packages/quickstarts/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/quickstarts/dist dist/quickstarts/doc",
-            "cp packages/quickstarts/README.md packages/quickstarts/package.json packages/quickstarts/CHANGELOG.md dist/quickstarts",
-            "cp packages/quickstarts/dist/* dist/quickstarts/dist",
-            "cp -r packages/quickstarts/doc/* dist/quickstarts/doc",
-            "rm -f dist/quickstarts/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/quickstarts-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

@@ -23,7 +23,6 @@
     "test:unit:affected": "nx affected -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "test": "npm-run-all --parallel test:* --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "build": "nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
-    "copyMetadata": "nx run-many -t copyMetadata --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint": "nx run-many -t lint --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "lint:fix": "nx run-many -t lint --fix --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "version": "nx run-many -t version --exclude=@redhat-cloud-services/CLIENTNAME-client"

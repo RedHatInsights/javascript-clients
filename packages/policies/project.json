@@ -12,20 +12,7 @@
         "tsConfig": "packages/policies/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/policies/dist dist/policies/doc",
-            "cp packages/policies/README.md packages/policies/package.json packages/policies/CHANGELOG.md dist/policies",
-            "cp packages/policies/dist/* dist/policies/dist",
-            "cp -r packages/policies/doc/* dist/policies/doc",
-            "rm -f dist/policies/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/policies-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
