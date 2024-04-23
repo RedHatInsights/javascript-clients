@@ -5,27 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/insights/dist",
         "main": "packages/insights/index.ts",
         "tsConfig": "packages/insights/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/insights/dist dist/insights/doc",
-            "cp packages/insights/README.md packages/insights/package.json packages/insights/LICENSE packages/insights/CHANGELOG.md dist/insights",
-            "cp packages/insights/dist/* dist/insights/dist",
-            "cp -r packages/insights/doc/* dist/insights/doc",
-            "rm -f dist/insights/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/insights-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

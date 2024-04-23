@@ -5,26 +5,12 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/notifications/dist",
         "main": "packages/notifications/index.ts",
         "tsConfig": "packages/notifications/tsconfig.cjs.json"
       }
-    },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/notifications/dist dist/notifications/doc",
-            "cp packages/notifications/README.md packages/notifications/package.json packages/notifications/LICENSE packages/notifications/CHANGELOG.md dist/notifications",
-            "cp -r packages/notifications/dist/* dist/notifications/dist",
-            "cp -r packages/notifications/doc/* dist/notifications/doc",
-            "rm -f dist/notifications/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
     },
     "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/notifications-client {args.ver} {args.tag}",

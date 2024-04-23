@@ -5,27 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/topological-inventory/dist",
         "main": "packages/topological-inventory/index.ts",
         "tsConfig": "packages/topological-inventory/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/topological-inventory/dist dist/topological-inventory/doc",
-            "cp packages/topological-inventory/README.md packages/topological-inventory/package.json packages/topological-inventory/LICENSE packages/topological-inventory/CHANGELOG.md dist/topological-inventory",
-            "cp packages/topological-inventory/dist/* dist/topological-inventory/dist",
-            "cp -r packages/topological-inventory/doc/* dist/topological-inventory/doc",
-            "rm -f dist/topological-inventory/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/topological-inventory-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

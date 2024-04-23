@@ -5,26 +5,12 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/rbac/dist",
         "main": "packages/rbac/index.ts",
         "tsConfig": "packages/rbac/tsconfig.cjs.json"
       }
-    },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/rbac/dist dist/rbac/doc",
-            "cp packages/rbac/README.md packages/rbac/package.json packages/rbac/LICENSE packages/rbac/CHANGELOG.md dist/rbac",
-            "cp packages/rbac/dist/* dist/rbac/dist",
-            "cp -r packages/rbac/doc/* dist/rbac/doc",
-            "rm -f dist/rbac/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
     },
     "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/rbac-client {args.ver} {args.tag}",

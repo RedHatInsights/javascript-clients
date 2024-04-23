@@ -5,27 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/sources/dist",
         "main": "packages/sources/index.ts",
         "tsConfig": "packages/sources/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/sources/dist dist/sources/doc",
-            "cp packages/sources/README.md packages/sources/package.json packages/sources/LICENSE packages/sources/CHANGELOG.md dist/sources",
-            "cp packages/sources/dist/* dist/sources/dist",
-            "cp -r packages/sources/doc/* dist/sources/doc",
-            "rm -f dist/sources/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/sources-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },

@@ -5,27 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
         "outputPath": "packages/host-inventory/dist",
         "main": "packages/host-inventory/index.ts",
         "tsConfig": "packages/host-inventory/tsconfig.cjs.json"
       }
     },
-    "copyMetadata": {
-      "executor": "nx:run-commands",
-      "options": {
-          "commands": [
-            "mkdir -p dist/host-inventory/dist dist/host-inventory/doc",
-            "cp packages/host-inventory/README.md packages/host-inventory/package.json packages/host-inventory/LICENSE packages/host-inventory/CHANGELOG.md dist/host-inventory",
-            "cp packages/host-inventory/dist/* dist/host-inventory/dist",
-            "cp -r packages/host-inventory/doc/* dist/host-inventory/doc",
-            "rm -f dist/host-inventory/dist/package.json"
-          ],
-          "parallel": false
-      },
-      "dependsOn": ["build"]
-    },    "publish": {
+    "publish": {
       "command": "node tools/scripts/publish.mjs @redhat-cloud-services/host-inventory-client {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
