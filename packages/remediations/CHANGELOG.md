@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.4.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/remediations-client-1.3.3...@redhat-cloud-services/remediations-client-1.4.0) (2024-04-23)
+
+
+### Features
+
+* add new exec for old output ([79ee044](https://github.com/RedHatInsights/javascript-clients/commit/79ee044c77d216c71a5040405017a0a1d422cf90))
+
 ## [1.3.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/remediations-client-1.3.2...@redhat-cloud-services/remediations-client-1.3.3) (2024-04-19)
 
 
