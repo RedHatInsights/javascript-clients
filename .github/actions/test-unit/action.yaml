@@ -7,7 +7,7 @@ runs:
     - uses: './.github/actions/node-cache'
     - name: Install deps
       shell: bash
-      run: npm i
+      run: npm i --include=optional
     - name: Test affected
       shell: bash
       run: npx nx affected -t test --configuration=ci --exclude=@redhat-cloud-services/CLIENTNAME-client

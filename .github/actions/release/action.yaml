@@ -23,7 +23,7 @@ runs:
     - uses: './.github/actions/node-cache'
     - name: Install deps
       shell: bash
-      run: npm i
+      run: npm i --include=optional
     - name: git config
       shell: bash
       run: |

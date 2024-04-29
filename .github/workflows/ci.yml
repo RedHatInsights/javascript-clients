@@ -19,7 +19,7 @@ jobs:
       # cache cypress runner
       - uses: './.github/actions/cypress-cache'
       - name: Install deps
-        run: npm ci
+        run: npm ci --include=optional
   lint:
     needs: [install]
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       - uses: './.github/actions/node-cache'
       - name: Install deps
-        run: npm i
+        run: npm i --include=optional
       - name: Build affected
         run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:

@@ -106,5 +106,12 @@
     "verdaccio": "^5.0.4",
     "webpack-merge": "^5.10.0",
     "zod": "^3.22.4"
+  },
+  "optionalDependencies": {
+    "@nx/nx-darwin-arm64": "17.2.0",
+    "@nx/nx-darwin-x64": "17.2.0",
+    "@nx/nx-linux-x64-gnu": "17.2.0",
+    "@nx/nx-win32-x64-msvc": "17.2.0"
   }
+  
 }
