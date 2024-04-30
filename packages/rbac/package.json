@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
-    "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --gitRevision master index.ts",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
     "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' npm run generate && ./postProcess.sh"
   },

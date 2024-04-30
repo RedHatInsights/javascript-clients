@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --gitRevision master index.ts",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
     "generate:prod": "SPEC='https://cloud.redhat.com/api/policies/v1/openapi.json' npm run generate"
   },
