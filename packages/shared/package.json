@@ -1,0 +1,27 @@
+{
+  "name": "@redhat-cloud-services/javascript-clients-shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/javascript-clients.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/javascript-clients/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
+  "scripts": {
+    "doc": "typedoc --theme markdown --out doc --gitRevision master index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "tslib": "^2.6.2"
+  }
+}
