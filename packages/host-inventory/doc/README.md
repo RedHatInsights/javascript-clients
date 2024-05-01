@@ -58,11 +58,11 @@ export hostsApi;
 
 ## Building
 
-Run `nx build host-inventory-client` to build the library.
+Run `nx build @redhat-cloud-services/host-inventory-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test host-inventory-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/host-inventory-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

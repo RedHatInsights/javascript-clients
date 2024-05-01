@@ -58,11 +58,11 @@ export vulnApi;
 
 ## Building
 
-Run `nx build vulnerabilities-client` to build the library.
+Run `nx build @redhat-cloud-services/vulnerabilities-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test vulnerabilities-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/vulnerabilities-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

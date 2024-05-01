@@ -2,11 +2,11 @@
 
 ## Building
 
-Run `nx build quickstarts-client` to build the library.
+Run `nx build @redhat-cloud-services/quickstarts-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test quickstarts-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/quickstarts-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

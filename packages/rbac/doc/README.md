@@ -58,11 +58,11 @@ export groupApi;
 
 ## Building
 
-Run `nx build rbac-client` to build the library.
+Run `nx build @redhat-cloud-services/rbac-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test rbac-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/rbac-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

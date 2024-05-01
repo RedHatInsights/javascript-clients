@@ -56,11 +56,11 @@ export configApi;
 
 ## Building
 
-Run `nx build config-manager-client` to build the library.
+Run `nx build @redhat-cloud-services/config-manager-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test config-manager-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/config-manager-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

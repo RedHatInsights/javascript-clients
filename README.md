@@ -2,35 +2,20 @@
 Auto generated Javascript clients for swagger API
 
 ## Contribution
-This repository is set up to use monorepo so we have all API clients in place with one configuration and release cycle.
+This repository is set up to use monorepo so we have all API clients in place with one configuration and release cycle. This repo is using NX as its monorepo manager and Github Actions for publishing to NPM.
 
-### New package
-* Create new folder in packages
-* Run `npm init` in this newly created packaged
-* NOTE: Please prepend each package name with `@redhat-cloud-services` in order to have all clients under one company
-* Add custom `doc` (to generate documentation), `build` (to build your client) and `generate:prod` (auto generation) to package scripts 
-* Add `.npmignore` - you may want to copy it from other package
-* Add README.md and LICENSE file to your package
+### Creating a new client
+Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
 
-If you are using `typescript-axios` as code generator you should also add `tsconfig` file to your folder.
+**IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly**
 
-Please do not copy your swagger definition file to this repository as that would make it harder to keep in sync. Much better is to reference the openAPI definition directly either from GH repository or from swaggerhub.
-
-**IMPORTANT! First release has to be done manually, please include in your pull request that it is initial release. Or include publishConfig in your package.json**
-```JSON
-{
-    "publishConfig": {
-        "access": "public"
-    }
-}
-```
-
-### Building all clients
+### Building clients
 
 Run these commands from the root folder:
 
 * To install all dependencies in all packages run `npm install`,
-* To build all packages run `npm run generate` - this will generete code from swagger files, builds them and generates doc. The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To generate all packages run `npm run generate` - this will generete code from swagger files, builds them and generates doc. The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To build packages run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
 
 ## Module federation generator
 
