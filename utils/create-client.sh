@@ -11,10 +11,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   sed -i '' "s/CLIENTNAME/$client/g" packages/$client/package.json
   sed -i '' "s/CLIENTNAME/$client/g" packages/$client/project.json
   sed -i '' "s/CLIENTNAME/$client/g" packages/$client/jest.config.ts
+  sed -i '' "s/CLIENTNAME/$client/g" packages/$client/README.md
 
 else
   sed "s/CLIENTNAME/$client/g" packages/$client/package.json -i
   sed "s/CLIENTNAME/$client/g" packages/$client/project.json -i
   sed "s/CLIENTNAME/$client/g" packages/$client/jest.config.ts -i
+  sed "s/CLIENTNAME/$client/g" packages/$client/README.md -i
 
 fi

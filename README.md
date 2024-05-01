@@ -7,7 +7,7 @@ This repository is set up to use monorepo so we have all API clients in place wi
 ### Creating a new client
 Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
 
-**IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly**
+**IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly. Also, don't forget to update your packages's README with the correct install and usage information**
 
 ### Building clients
 
