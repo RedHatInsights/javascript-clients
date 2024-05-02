@@ -120,28 +120,10 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
       "",                                                       // the destination folder, relative `outputFolder`
       "index.ts")                                          // the output file
     );
-    supportingFiles.add(new SupportingFile("utilCommon.mustache",
-      "utils",                         
-      "common.ts")   
-    );
-    supportingFiles.add(new SupportingFile("utilBaseApi.mustache",
-    "utils",
-    "base.ts") 
-    );
     supportingFiles.add(new SupportingFile("indexTypes.mustache",
     "types", 
     "index.ts")
     );
-    supportingFiles.add(new SupportingFile("configuration.mustache",
-    "utils",
-    "configuration.ts")
-    );
-    supportingFiles.add(new SupportingFile("baseIndex.mustache",
-    "utils",
-    "index.ts")
-    );
-    supportingFiles.add(new SupportingFile("tsconfig-cjs.json", "", "tsconfig-cjs.json").doNotOverwrite());
-    supportingFiles.add(new SupportingFile("tsconfig-esm.json", "", "tsconfig-esm.json").doNotOverwrite());
 
     this.cliOptions.add(new CliOption(LIST_PARAM, "Setting this property to true will generate APIs with list of params.", SchemaTypeUtil.BOOLEAN_TYPE).defaultValue(Boolean.TRUE.toString()));
   }
