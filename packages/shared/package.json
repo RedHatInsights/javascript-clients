@@ -1,6 +1,6 @@
 {
-  "name": "@redhat-cloud-services/rbac-client",
-  "version": "1.4.0",
+  "name": "@redhat-cloud-services/javascript-clients-shared",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
-    "doc": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --gitRevision master index.ts",
-    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' npm run generate && ./postProcess.sh"
+    "doc": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --gitRevision master index.ts"
   },
   "dependencies": {
     "axios": "^0.27.2",

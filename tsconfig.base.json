@@ -15,6 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "@redhat-cloud-services/build-utils": ["packages/build-utils/src/index.ts"],
+      "@redhat-cloud-services/javascript-clients-shared": ["packages/shared/index.ts"],
       "@redhat-cloud-services/rbac-client": ["packages/rbac/index.ts"]
     }
   },
