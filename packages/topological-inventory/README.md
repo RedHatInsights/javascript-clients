@@ -57,11 +57,11 @@ export baseApi;
 ## API documentation
 ## Building
 
-Run `nx build topological-inventory-client` to build the library.
+Run `nx build @redhat-cloud-services/topological-inventory-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test topological-inventory-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/topological-inventory-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

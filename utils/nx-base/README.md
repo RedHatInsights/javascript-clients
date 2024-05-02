@@ -1,15 +1,15 @@
-# Javascript client for Config Manager API
-If you want to use [RedHatInsights/config-manager](https://github.com/RedHatInsights/config-manager) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+# Javascript client for the CLIENTNAME API
+If you want to use [RedHatInsights/CLIENTNAME](https://github.com/RedHatInsights/CLIENTNAME) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
 NPM
 ```bash
-npm install --save @redhat-cloud-services/config-manager-client
+npm install --save @redhat-cloud-services/CLIENTNAME-client
 ```
 
 Or Yarn
 ```bash
-yarn add @redhat-cloud-services/config-manager-client
+yarn add @redhat-cloud-services/CLIENTNAME-client
 ```
 
 ### Usage
@@ -19,7 +19,7 @@ To correctly bootstrap this API you should use this config (no need to define it
 ```JS
 // api.js
 import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/config-manager-client';
+import { Configuration } from '@redhat-cloud-services/CLIENTNAME-client';
 const instance = axios.create();
 
 // BASE_PATH should be set in your constants file
@@ -31,7 +31,7 @@ If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/host-inventory-client';
+import { Configuration } from '@redhat-cloud-services/CLIENTNAME-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -56,11 +56,11 @@ export configApi;
 
 ## Building
 
-Run `nx build @redhat-cloud-services/config-manager-client` to build the library.
+Run `nx build @redhat-cloud-services/CLIENTNAME-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/config-manager-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/CLIENTNAME-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

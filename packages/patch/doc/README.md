@@ -2,11 +2,11 @@
 
 ## Building
 
-Run `nx build patch-client` to build the library.
+Run `nx build @redhat-cloud-services/patch-client` to build the library.
 
 ## Running unit tests
 
-Run `nx test patch-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test @redhat-cloud-services/patch-client` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
