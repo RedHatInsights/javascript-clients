@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.4.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/patch-client-1.4.0...@redhat-cloud-services/patch-client-1.4.1) (2024-05-02)
+
 ## [1.4.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/patch-client-1.3.4...@redhat-cloud-services/patch-client-1.4.0) (2024-04-23)
 
 
