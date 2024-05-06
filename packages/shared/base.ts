@@ -16,7 +16,7 @@ export class BaseAPI {
  * @param { string } basePath basePath of api requests.
  * @param { { axios: AxiosInstance, configuration: Configuration } } config to be passed down to axios.
  */
-  constructor(protected basePath: string, config: ApiConfig = { axios: globalAxios }) {
+  constructor(protected basePath?: string, config: ApiConfig = { axios: globalAxios }) {
       this.axios = config.axios;
       if (config.configuration) {
           this.configuration = config.configuration;

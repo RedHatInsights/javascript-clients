@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RequestArgs
 
 ## Table of contents
@@ -21,21 +19,21 @@ RequestArgs
 
 ### auth
 
-• `Optional` **auth**: { `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum-1)  }[]
+• `Optional` **auth**: \{ `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum)  }[]
 
 #### Defined in
 
-[packages/shared/common.ts:38](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L38)
+[packages/shared/common.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L45)
 
 ___
 
 ### options
 
-• **options**: `AxiosRequestConfig`<`any`\>
+• **options**: `AxiosRequestConfig`\<`any`\>
 
 #### Defined in
 
-[packages/shared/common.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L37)
+[packages/shared/common.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L44)
 
 ___
 
@@ -45,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:42](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L42)
+[packages/shared/common.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L49)
 
 ___
 
@@ -55,4 +53,4 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:36](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L36)
+[packages/shared/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L43)
