@@ -26,13 +26,17 @@
 
 ### constructor
 
-• **new Configuration**(`param?`)
+• **new Configuration**(`param?`): [`Configuration`](Configuration.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `param` | [`ConfigurationParameters`](../interfaces/ConfigurationParameters.md) |
+
+#### Returns
+
+[`Configuration`](Configuration.md)
 
 #### Defined in
 
@@ -42,7 +46,7 @@
 
 ### accessToken
 
-• `Optional` **accessToken**: `string` \| `Promise`<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`<`string`\>
+• `Optional` **accessToken**: `string` \| `Promise`\<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`\<`string`\>
 
 parameter for oauth2 security
 
@@ -66,7 +70,7 @@ ___
 
 ### apiKey
 
-• `Optional` **apiKey**: `string` \| `Promise`<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`<`string`\>
+• `Optional` **apiKey**: `string` \| `Promise`\<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`\<`string`\>
 
 parameter for apiKey security
 
@@ -120,13 +124,17 @@ ___
 
 • `Optional` **formDataCtor**: () => `any`
 
-#### Type declaration
-
-• **new Configuration**()
-
 The FormData constructor that will be used to create multipart form data
 requests. You can inject this here so that execution environments that
 do not support the FormData class can still run the generated client.
+
+#### Type declaration
+
+• **new formDataCtor**(): `any`
+
+##### Returns
+
+`any`
 
 #### Defined in
 

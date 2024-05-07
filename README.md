@@ -2,7 +2,7 @@
 Auto generated Javascript clients for swagger API
 
 ### Overview
-This repository is set up to use monorepo so we have all API clients in place with one configuration and release cycle. This repo is using [NX](https://nx.dev/getting-started/intro) as its monorepo manager and [Github Actions](https://docs.github.com/en/actions) for CI/CD as well as publishing packages to NPM.
+This repository is set up as a monorepo for all API clients to use one configuration and release cycle. This repo is using [NX](https://nx.dev/getting-started/intro) as its monorepo manager and [Github Actions](https://docs.github.com/en/actions) for CI/CD as well as publishing packages to NPM.
 
 
 ### Local development

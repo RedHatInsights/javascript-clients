@@ -24,6 +24,7 @@
 ### Variables
 
 - [AuthTypeEnum](modules.md#authtypeenum-1)
+- [COLLECTION\_FORMATS](modules.md#collection_formats)
 - [DUMMY\_BASE\_URL](modules.md#dummy_base_url)
 
 ### Functions
@@ -43,11 +44,11 @@
 
 ### ActionType
 
-Ƭ **ActionType**: (...`config`: `any`) => `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+Ƭ **ActionType**: (...`config`: `any`) => `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Type declaration
 
-▸ (...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ (`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 ##### Parameters
 
@@ -57,11 +58,11 @@
 
 ##### Returns
 
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Defined in
 
-[packages/shared/common.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L46)
+[packages/shared/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L53)
 
 ___
 
@@ -71,9 +72,9 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L7)
+[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L14)
 
-[packages/shared/common.ts:15](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L15)
+[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L22)
 
 ## Variables
 
@@ -93,9 +94,28 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L7)
+[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L14)
 
-[packages/shared/common.ts:15](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L15)
+[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L22)
+
+___
+
+### COLLECTION\_FORMATS
+
+• `Const` **COLLECTION\_FORMATS**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `csv` | `string` |
+| `pipes` | `string` |
+| `ssv` | `string` |
+| `tsv` | `string` |
+
+#### Defined in
+
+[packages/shared/common.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L7)
 
 ___
 
@@ -107,27 +127,27 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L57)
+[packages/shared/common.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L64)
 
 ## Functions
 
 ### APIFactory
 
-▸ **APIFactory**<`T`\>(`basePath`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
+▸ **APIFactory**\<`T`\>(`basePath`, `actions`, `config?`): [`BaseAPI`](classes/BaseAPI.md) & `T`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends `Record`<`string`, [`ActionType`](modules.md#actiontype)\> |
+| `T` | extends `Record`\<`string`, [`ActionType`](modules.md#actiontype)\> |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `basePath` | `string` |
-| `config` | [`ApiConfig`](interfaces/ApiConfig.md) |
 | `actions` | `T` |
+| `config?` | [`ApiConfig`](interfaces/ApiConfig.md) |
 
 #### Returns
 
@@ -135,17 +155,36 @@ ___
 
 #### Defined in
 
-[packages/shared/utils.ts:5](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/utils.ts#L5)
+[packages/shared/utils.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/utils.ts#L13)
+
+▸ **APIFactory**\<`T`\>(`actions`, `config?`): [`BaseAPI`](classes/BaseAPI.md) & `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends `Record`\<`string`, [`ActionType`](modules.md#actiontype)\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `actions` | `T` |
+| `config?` | [`ApiConfig`](interfaces/ApiConfig.md) |
+
+#### Returns
+
+[`BaseAPI`](classes/BaseAPI.md) & `T`
+
+#### Defined in
+
+[packages/shared/utils.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/utils.ts#L14)
 
 ___
 
 ### assertParamExists
 
 ▸ **assertParamExists**(`functionName`, `paramName`, `paramValue`): `void`
-
-**`Throws`**
-
-**`Export`**
 
 #### Parameters
 
@@ -159,17 +198,19 @@ ___
 
 `void`
 
+**`Throws`**
+
+**`Export`**
+
 #### Defined in
 
-[packages/shared/common.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L64)
+[packages/shared/common.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L71)
 
 ___
 
 ### createRequestFunction
 
-▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): <T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`<`R`\>
-
-**`Export`**
+▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): \<T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`\<`R`\>
 
 #### Parameters
 
@@ -184,14 +225,14 @@ ___
 
 `fn`
 
-▸ <`T`, `R`\>(`axios?`, `basePath?`): `Promise`<`R`\>
+▸ \<`T`, `R`\>(`axios?`, `basePath?`): `Promise`\<`R`\>
 
 ##### Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`, `any`\> |
+| `R` | `AxiosResponse`\<`T`, `any`\> |
 
 ##### Parameters
 
@@ -202,19 +243,19 @@ ___
 
 ##### Returns
 
-`Promise`<`R`\>
+`Promise`\<`R`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/shared/common.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L177)
+[packages/shared/common.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L184)
 
 ___
 
 ### serializeDataIfNeeded
 
 ▸ **serializeDataIfNeeded**(`value`, `requestOptions`, `configuration?`): `any`
-
-**`Export`**
 
 #### Parameters
 
@@ -228,17 +269,17 @@ ___
 
 `any`
 
+**`Export`**
+
 #### Defined in
 
-[packages/shared/common.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L155)
+[packages/shared/common.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L162)
 
 ___
 
 ### setApiKeyToObject
 
-▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -250,19 +291,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/shared/common.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L74)
+[packages/shared/common.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L81)
 
 ___
 
 ### setBasicAuthToObject
 
 ▸ **setBasicAuthToObject**(`object`, `configuration?`): `void`
-
-**`Export`**
 
 #### Parameters
 
@@ -275,17 +316,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/shared/common.ts:87](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L87)
+[packages/shared/common.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L94)
 
 ___
 
 ### setBearerAuthToObject
 
-▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -296,19 +337,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/shared/common.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L97)
+[packages/shared/common.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L104)
 
 ___
 
 ### setOAuthToObject
 
-▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -321,19 +362,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/shared/common.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L110)
+[packages/shared/common.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L117)
 
 ___
 
 ### setSearchParams
 
-▸ **setSearchParams**(`url`, ...`objects`): `void`
-
-**`Export`**
+▸ **setSearchParams**(`url`, `...objects`): `void`
 
 #### Parameters
 
@@ -346,17 +387,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/shared/common.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L145)
+[packages/shared/common.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L152)
 
 ___
 
 ### toPathString
 
 ▸ **toPathString**(`url`): `string`
-
-**`Export`**
 
 #### Parameters
 
@@ -368,6 +409,8 @@ ___
 
 `string`
 
+**`Export`**
+
 #### Defined in
 
-[packages/shared/common.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L169)
+[packages/shared/common.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L176)

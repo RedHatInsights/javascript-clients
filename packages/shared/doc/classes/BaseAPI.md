@@ -6,6 +6,8 @@ Base API to store config, basepath and axios instance.
 
 **`Export`**
 
+BaseAPI
+
 ## Table of contents
 
 ### Constructors
@@ -27,7 +29,7 @@ Base API to store config, basepath and axios instance.
 
 ### constructor
 
-• **new BaseAPI**(`basePath`, `config?`)
+• **new BaseAPI**(`basePath?`, `config?`): [`BaseAPI`](BaseAPI.md)
 
 Constructor to create baseAPI.
 
@@ -35,8 +37,12 @@ Constructor to create baseAPI.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `basePath` | `string` | basePath of api requests. |
+| `basePath?` | `string` | basePath of api requests. |
 | `config` | [`ApiConfig`](../interfaces/ApiConfig.md) | to be passed down to axios. |
+
+#### Returns
+
+[`BaseAPI`](BaseAPI.md)
 
 #### Defined in
 
@@ -56,7 +62,9 @@ ___
 
 ### basePath
 
-• `Protected` **basePath**: `string`
+• `Protected` `Optional` **basePath**: `string`
+
+basePath of api requests.
 
 #### Defined in
 
@@ -76,27 +84,27 @@ ___
 
 ### authConfig
 
-▸ `Private` **authConfig**(`__namedParameters`): `Promise`<`void`\>
+▸ **authConfig**(`«destructured»`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Omit`<[`RequestArgs`](../interfaces/RequestArgs.md), ``"authType"`` \| ``"authKey"``\> & { `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum-1)  } |
+| `«destructured»` | `Omit`\<[`RequestArgs`](../interfaces/RequestArgs.md), ``"authType"`` \| ``"authKey"``\> & \{ `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum)  } |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/shared/base.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L32)
+[packages/shared/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L27)
 
 ___
 
 ### sendRequest
 
-▸ **sendRequest**<`T`\>(`request`, `axios?`, `basePath?`): `Promise`<`AxiosResponse`<`T`, `any`\>\>
+▸ **sendRequest**\<`T`\>(`request`, `axios?`, `basePath?`): `Promise`\<`AxiosResponse`\<`T`, `any`\>\>
 
 Send axios request
 
@@ -110,16 +118,16 @@ Send axios request
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `request` | `Promise`<[`RequestArgs`](../interfaces/RequestArgs.md)\> | to be send trough axios. |
+| `request` | `Promise`\<[`RequestArgs`](../interfaces/RequestArgs.md)\> | to be send trough axios. |
 | `axios?` | `AxiosInstance` | optional axios instance. |
 | `basePath?` | `string` | - |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`T`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`T`, `any`\>\>
 
 promisable axios response.
 
 #### Defined in
 
-[packages/shared/base.ts:60](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L60)
+[packages/shared/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L55)

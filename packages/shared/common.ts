@@ -4,6 +4,13 @@
 import type { Configuration } from "./configuration";
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
+export const COLLECTION_FORMATS = {
+    csv: ",",
+    ssv: " ",
+    tsv: "\t",
+    pipes: "|",
+};
+
 export const AuthTypeEnum = {
   Basic: 'basic',
   Bearer: 'bearer',
