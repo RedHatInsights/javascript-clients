@@ -6,8 +6,6 @@ Error structure for the \"Not Found\" responses.
 
 **`Export`**
 
-**`Interface`**
-
 ErrorNotFound
 
 ## Table of contents
@@ -28,4 +26,4 @@ ErrorNotFound
 
 #### Defined in
 
-[api.ts:844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L844)
+[api.ts:844](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L844)

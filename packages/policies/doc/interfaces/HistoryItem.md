@@ -6,8 +6,6 @@ A single history item for a fired trigger on a host
 
 **`Export`**
 
-**`Interface`**
-
 HistoryItem
 
 ## Table of contents
@@ -32,7 +30,7 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L76)
+[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L76)
 
 ___
 
@@ -48,7 +46,7 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L88)
+[api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L88)
 
 ___
 
@@ -64,4 +62,4 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L82)
+[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L82)

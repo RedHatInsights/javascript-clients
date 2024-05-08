@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerTemplate
 
 ## Table of contents
@@ -37,7 +35,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L987)
+[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L987)
 
 ___
 
@@ -53,7 +51,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L993)
+[api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L993)
 
 ___
 
@@ -67,7 +65,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L999)
+[api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L999)
 
 ___
 
@@ -83,7 +81,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1005)
+[api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1005)
 
 ___
 
@@ -97,7 +95,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1011)
+[api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1011)
 
 ___
 
@@ -111,7 +109,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1017)
+[api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1017)
 
 ___
 
@@ -125,7 +123,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1023)
+[api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1023)
 
 ___
 
@@ -139,7 +137,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1029)
+[api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1029)
 
 ___
 
@@ -153,7 +151,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1035)
+[api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1035)
 
 ___
 
@@ -169,7 +167,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1041)
+[api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1041)
 
 ___
 
@@ -183,7 +181,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1047)
+[api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1047)
 
 ___
 
@@ -197,4 +195,4 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1053)
+[api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1053)

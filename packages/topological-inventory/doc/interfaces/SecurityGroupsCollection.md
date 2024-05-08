@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SecurityGroupsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2248](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2248)
+[api.ts:2248](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2248)
 
 ___
 
@@ -42,7 +40,7 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2242)
+[api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2242)
 
 ___
 
@@ -56,4 +54,4 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2236)
+[api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2236)

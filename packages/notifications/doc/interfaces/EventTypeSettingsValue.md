@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EventTypeSettingsValue
 
 ## Table of contents
@@ -32,7 +30,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1089)
+[packages/notifications/types/index.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1089)
 
 ___
 
@@ -46,7 +44,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1095)
+[packages/notifications/types/index.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1095)
 
 ___
 
@@ -60,4 +58,4 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1101)
+[packages/notifications/types/index.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1101)

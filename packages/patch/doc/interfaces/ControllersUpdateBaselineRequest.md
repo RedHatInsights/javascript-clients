@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersUpdateBaselineRequest
 
 ## Table of contents
@@ -29,7 +27,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1733)
+[api.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1733)
 
 ___
 
@@ -45,7 +43,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1739](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1739)
+[api.ts:1739](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1739)
 
 ___
 
@@ -65,7 +63,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1745)
+[api.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1745)
 
 ___
 
@@ -81,4 +79,4 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1751)
+[api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1751)

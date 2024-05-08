@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AssignmentRuleQueryOutputAllOf
 
 ## Table of contents
@@ -28,4 +26,4 @@ AssignmentRuleQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L243)
+[api.ts:243](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L243)

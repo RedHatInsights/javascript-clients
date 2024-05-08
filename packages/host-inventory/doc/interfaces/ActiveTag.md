@@ -6,8 +6,6 @@ Information about a host tag
 
 **`Export`**
 
-**`Interface`**
-
 ActiveTag
 
 ## Table of contents
@@ -31,7 +29,7 @@ ActiveTag
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L39)
+[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L39)
 
 ___
 
@@ -45,4 +43,4 @@ ActiveTag
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L33)

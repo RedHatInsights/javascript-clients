@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GroupRoleIn
 
 ## Table of contents
@@ -26,4 +24,4 @@ GroupRoleIn
 
 #### Defined in
 
-[api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1056)
+[api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1056)

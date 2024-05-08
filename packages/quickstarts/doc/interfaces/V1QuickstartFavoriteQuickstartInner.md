@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 V1QuickstartFavoriteQuickstartInner
 
 ## Table of contents
@@ -32,7 +30,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L321)
+[api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L321)
 
 ___
 
@@ -46,7 +44,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L327)
+[api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L327)
 
 ___
 
@@ -60,7 +58,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L333)
+[api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L333)
 
 ___
 
@@ -74,7 +72,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L339)
+[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L339)
 
 ___
 
@@ -88,7 +86,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L345)
+[api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L345)
 
 ___
 
@@ -102,7 +100,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L351)
+[api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L351)
 
 ___
 
@@ -116,4 +114,4 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L357)
+[api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L357)

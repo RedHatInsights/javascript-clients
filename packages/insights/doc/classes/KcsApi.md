@@ -6,6 +6,8 @@ KcsApi - object-oriented interface
 
 **`Export`**
 
+KcsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ KcsApi - object-oriented interface
 
 ### constructor
 
-• **new KcsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new KcsApi**(`configuration?`, `basePath?`, `axios?`): [`KcsApi`](KcsApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ KcsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`KcsApi`](KcsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### kcsList
 
-▸ **kcsList**(`nodeIds?`, `options?`): `Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
+▸ **kcsList**(`nodeIds?`, `options?`): `Promise`\<`AxiosResponse`\<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
 
 Looks for all active rules with KCS solutions  Returns a list of dicts of the C.R.C rule URL and its KCS solution number
-
-**`Throws`**
-
-**`Memberof`**
-
-KcsApi
 
 #### Parameters
 
@@ -116,25 +116,25 @@ KcsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5020](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5020)
-
-___
-
-### kcsRetrieve
-
-▸ **kcsRetrieve**(`nodeId`, `options?`): `Promise`<`AxiosResponse`<`string`[], `any`\>\>
-
-Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution
+`Promise`\<`AxiosResponse`\<[`Kcs`](../interfaces/Kcs.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 KcsApi
+
+#### Defined in
+
+[api.ts:5020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5020)
+
+___
+
+### kcsRetrieve
+
+▸ **kcsRetrieve**(`nodeId`, `options?`): `Promise`\<`AxiosResponse`\<`string`[], `any`\>\>
+
+Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution
 
 #### Parameters
 
@@ -145,8 +145,14 @@ KcsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[], `any`\>\>
+`Promise`\<`AxiosResponse`\<`string`[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+KcsApi
 
 #### Defined in
 
-[api.ts:5031](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L5031)
+[api.ts:5031](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5031)

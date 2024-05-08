@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CrossAccountRequestDetailByUseIdAllOf
 
 ## Table of contents
@@ -26,4 +24,4 @@ CrossAccountRequestDetailByUseIdAllOf
 
 #### Defined in
 
-[api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L489)
+[api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L489)

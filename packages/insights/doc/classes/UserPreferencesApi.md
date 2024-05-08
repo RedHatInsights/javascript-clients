@@ -6,6 +6,8 @@ UserPreferencesApi - object-oriented interface
 
 **`Export`**
 
+UserPreferencesApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ UserPreferencesApi - object-oriented interface
 
 ### constructor
 
-• **new UserPreferencesApi**(`configuration?`, `basePath?`, `axios?`)
+• **new UserPreferencesApi**(`configuration?`, `basePath?`, `axios?`): [`UserPreferencesApi`](UserPreferencesApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ UserPreferencesApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`UserPreferencesApi`](UserPreferencesApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### userPreferencesCreate
 
-▸ **userPreferencesCreate**(`preferencesInput`, `options?`): `Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
+▸ **userPreferencesCreate**(`preferencesInput`, `options?`): `Promise`\<`AxiosResponse`\<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
 
 Accept the settings as input, and adjust the actual models accordingly.  The current account settings will be updated, or one will be created, with the
-
-**`Throws`**
-
-**`Memberof`**
-
-UserPreferencesApi
 
 #### Parameters
 
@@ -116,25 +116,25 @@ UserPreferencesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:10369](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10369)
-
-___
-
-### userPreferencesList
-
-▸ **userPreferencesList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
-
-Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
+`Promise`\<`AxiosResponse`\<[`PreferencesInput`](../interfaces/PreferencesInput.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 UserPreferencesApi
+
+#### Defined in
+
+[api.ts:10369](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10369)
+
+___
+
+### userPreferencesList
+
+▸ **userPreferencesList**(`options?`): `Promise`\<`AxiosResponse`\<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+
+Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting and the weekly report \'is_subscribed\' user-specific setting into one handy view, with the description metadata necessary to use Data-Driven Forms to display it.
 
 #### Parameters
 
@@ -144,8 +144,14 @@ UserPreferencesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+UserPreferencesApi
 
 #### Defined in
 
-[api.ts:10379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10379)
+[api.ts:10379](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10379)

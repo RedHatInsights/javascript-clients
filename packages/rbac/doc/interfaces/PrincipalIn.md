@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PrincipalIn
 
 ## Table of contents
@@ -26,4 +24,4 @@ PrincipalIn
 
 #### Defined in
 
-[api.ts:1644](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1644)
+[api.ts:1644](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1644)

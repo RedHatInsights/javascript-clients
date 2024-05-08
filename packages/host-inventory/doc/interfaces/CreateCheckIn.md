@@ -6,8 +6,6 @@ Data required to create a check-in record for a host.
 
 **`Export`**
 
-**`Interface`**
-
 CreateCheckIn
 
 ## Table of contents
@@ -37,7 +35,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L403)
+[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L403)
 
 ___
 
@@ -53,7 +51,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L439)
+[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L439)
 
 ___
 
@@ -67,7 +65,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L415)
+[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L415)
 
 ___
 
@@ -81,7 +79,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L385)
+[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L385)
 
 ___
 
@@ -95,7 +93,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L409)
+[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L409)
 
 ___
 
@@ -109,7 +107,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L421)
+[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L421)
 
 ___
 
@@ -123,7 +121,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L427)
+[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L427)
 
 ___
 
@@ -137,7 +135,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L433)
+[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L433)
 
 ___
 
@@ -151,7 +149,7 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L397)
+[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L397)
 
 ___
 
@@ -165,4 +163,4 @@ CreateCheckIn
 
 #### Defined in
 
-[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L391)
+[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L391)

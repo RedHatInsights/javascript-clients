@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Meta
 
 ## Table of contents
@@ -26,4 +24,4 @@ Meta
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L101)

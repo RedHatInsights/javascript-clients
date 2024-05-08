@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BusinessRiskListOut
 
 ## Table of contents
@@ -29,7 +27,7 @@ BusinessRiskListOut
 
 #### Defined in
 
-[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L121)
+[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L121)
 
 ___
 
@@ -43,4 +41,4 @@ BusinessRiskListOut
 
 #### Defined in
 
-[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L127)
+[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L127)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GroupOutAllOf
 
 ## Table of contents
@@ -30,7 +28,7 @@ GroupOutAllOf
 
 #### Defined in
 
-[api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L992)
+[api.ts:992](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L992)
 
 ___
 
@@ -44,7 +42,7 @@ GroupOutAllOf
 
 #### Defined in
 
-[api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L986)
+[api.ts:986](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L986)
 
 ___
 
@@ -58,7 +56,7 @@ GroupOutAllOf
 
 #### Defined in
 
-[api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L968)
+[api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L968)
 
 ___
 
@@ -72,7 +70,7 @@ GroupOutAllOf
 
 #### Defined in
 
-[api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L974)
+[api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L974)
 
 ___
 
@@ -86,4 +84,4 @@ GroupOutAllOf
 
 #### Defined in
 
-[api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L980)
+[api.ts:980](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L980)

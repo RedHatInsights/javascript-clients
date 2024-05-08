@@ -6,6 +6,8 @@ TopicApi - object-oriented interface
 
 **`Export`**
 
+TopicApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -39,7 +41,7 @@ TopicApi - object-oriented interface
 
 ### constructor
 
-• **new TopicApi**(`configuration?`, `basePath?`, `axios?`)
+• **new TopicApi**(`configuration?`, `basePath?`, `axios?`): [`TopicApi`](TopicApi.md)
 
 #### Parameters
 
@@ -49,13 +51,17 @@ TopicApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`TopicApi`](TopicApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +75,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,7 +89,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -97,15 +103,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### topicCreate
 
-▸ **topicCreate**(`topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+▸ **topicCreate**(`topicEdit`, `options?`): `Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
 
 Create a new rule topic, along with its association to a rule tag
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `topicEdit` | [`TopicEdit`](../interfaces/TopicEdit.md) |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
 
 **`Summary`**
 
@@ -117,28 +134,28 @@ Create a new rule topic
 
 TopicApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `topicEdit` | [`TopicEdit`](../interfaces/TopicEdit.md) |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:9963](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9963)
+[api.ts:9963](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9963)
 
 ___
 
 ### topicDestroy
 
-▸ **topicDestroy**(`slug`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **topicDestroy**(`slug`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Delete a rule topic.  Rules associated with the tag of this topic will be unaffected
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `slug` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -150,34 +167,17 @@ Delete a rule topic
 
 TopicApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `slug` | `string` |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
 #### Defined in
 
-[api.ts:9975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9975)
+[api.ts:9975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9975)
 
 ___
 
 ### topicList
 
-▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
+▸ **topicList**(`filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `showDisabled?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
 
 List the rule topics and their impacted systems counts.  Normally this only shows enabled topics, but if the \'show_disabled\' parameter is set to True then this will show disabled topics as well.
-
-**`Throws`**
-
-**`Memberof`**
-
-TopicApi
 
 #### Parameters
 
@@ -193,29 +193,25 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:9991](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9991)
-
-___
-
-### topicPartialUpdate
-
-▸ **topicPartialUpdate**(`slug`, `patchedTopicEdit?`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
-
-Update an existing rule topic.  Only the fields being changed need to be supplied
-
-**`Summary`**
-
-Partially update a rule topic
+`Promise`\<`AxiosResponse`\<[`Topic`](../interfaces/Topic.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 TopicApi
+
+#### Defined in
+
+[api.ts:9991](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9991)
+
+___
+
+### topicPartialUpdate
+
+▸ **topicPartialUpdate**(`slug`, `patchedTopicEdit?`, `options?`): `Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+
+Update an existing rule topic.  Only the fields being changed need to be supplied
 
 #### Parameters
 
@@ -227,25 +223,29 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+
+**`Summary`**
+
+Partially update a rule topic
+
+**`Throws`**
+
+**`Memberof`**
+
+TopicApi
 
 #### Defined in
 
-[api.ts:10004](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10004)
+[api.ts:10004](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10004)
 
 ___
 
 ### topicRetrieve
 
-▸ **topicRetrieve**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md), `any`\>\>
+▸ **topicRetrieve**(`slug`, `options?`): `Promise`\<`AxiosResponse`\<[`Topic`](../interfaces/Topic.md), `any`\>\>
 
 Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.
-
-**`Throws`**
-
-**`Memberof`**
-
-TopicApi
 
 #### Parameters
 
@@ -256,25 +256,25 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Topic`](../interfaces/Topic.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Topic`](../interfaces/Topic.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+TopicApi
 
 #### Defined in
 
-[api.ts:10015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10015)
+[api.ts:10015](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10015)
 
 ___
 
 ### topicRulesWithTagList
 
-▸ **topicRulesWithTagList**(`slug`, `options?`): `Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
+▸ **topicRulesWithTagList**(`slug`, `options?`): `Promise`\<`AxiosResponse`\<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
 
 Lists the available rules that have this tag.  This shows the rule information for rules with this tag.
-
-**`Throws`**
-
-**`Memberof`**
-
-TopicApi
 
 #### Parameters
 
@@ -285,25 +285,25 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:10026](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10026)
-
-___
-
-### topicSystemsRetrieve
-
-▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
-
-List all systems affected by this rule topic.  Systems are just listed by their UUID.
+`Promise`\<`AxiosResponse`\<[`Rule`](../interfaces/Rule.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 TopicApi
+
+#### Defined in
+
+[api.ts:10026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10026)
+
+___
+
+### topicSystemsRetrieve
+
+▸ **topicSystemsRetrieve**(`slug`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+
+List all systems affected by this rule topic.  Systems are just listed by their UUID.
 
 #### Parameters
 
@@ -320,29 +320,25 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:10043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10043)
-
-___
-
-### topicUpdate
-
-▸ **topicUpdate**(`slug`, `topicEdit`, `options?`): `Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
-
-Update an existing rule topic.  All fields need to be supplied
-
-**`Summary`**
-
-Update a rule topic
+`Promise`\<`AxiosResponse`\<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 TopicApi
+
+#### Defined in
+
+[api.ts:10043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10043)
+
+___
+
+### topicUpdate
+
+▸ **topicUpdate**(`slug`, `topicEdit`, `options?`): `Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+
+Update an existing rule topic.  All fields need to be supplied
 
 #### Parameters
 
@@ -354,8 +350,18 @@ TopicApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`TopicEdit`](../interfaces/TopicEdit.md), `any`\>\>
+
+**`Summary`**
+
+Update a rule topic
+
+**`Throws`**
+
+**`Memberof`**
+
+TopicApi
 
 #### Defined in
 
-[api.ts:10056](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10056)
+[api.ts:10056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10056)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AuthenticationsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L316)
+[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L316)
 
 ___
 
@@ -42,7 +40,7 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L310)
+[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L310)
 
 ___
 
@@ -56,4 +54,4 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L304)
+[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L304)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CveDetailOut
 
 ## Table of contents
@@ -27,7 +25,7 @@ CveDetailOut
 
 #### Defined in
 
-[api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L172)
+[api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L172)
 
 ___
 
@@ -41,4 +39,4 @@ CveDetailOut
 
 #### Defined in
 
-[api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L178)
+[api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L178)

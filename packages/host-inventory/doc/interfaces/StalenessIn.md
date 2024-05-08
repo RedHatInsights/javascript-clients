@@ -6,6 +6,4 @@ Data of a single account staleness.
 
 **`Export`**
 
-**`Interface`**
-
 StalenessIn

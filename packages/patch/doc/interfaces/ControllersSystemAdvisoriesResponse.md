@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersSystemAdvisoriesResponse
 
 ## Table of contents
@@ -30,7 +28,7 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1083)
+[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1083)
 
 ___
 
@@ -44,7 +42,7 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1089)
+[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1089)
 
 ___
 
@@ -58,4 +56,4 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1095)
+[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1095)

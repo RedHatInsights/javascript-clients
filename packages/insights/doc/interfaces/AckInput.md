@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AckInput
 
 ## Table of contents
@@ -27,7 +25,7 @@ AckInput
 
 #### Defined in
 
-[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L95)
+[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L95)
 
 ___
 
@@ -41,4 +39,4 @@ AckInput
 
 #### Defined in
 
-[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L89)
+[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L89)

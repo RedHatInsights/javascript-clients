@@ -6,8 +6,6 @@ Representation of one DNF module
 
 **`Export`**
 
-**`Interface`**
-
 DnfModule
 
 ## Table of contents
@@ -29,7 +27,7 @@ DnfModule
 
 #### Defined in
 
-[api.ts:502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L502)
+[api.ts:502](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L502)
 
 ___
 
@@ -43,4 +41,4 @@ DnfModule
 
 #### Defined in
 
-[api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L508)
+[api.ts:508](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L508)

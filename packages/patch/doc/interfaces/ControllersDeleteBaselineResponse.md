@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersDeleteBaselineResponse
 
 ## Table of contents
@@ -28,4 +26,4 @@ ControllersDeleteBaselineResponse
 
 #### Defined in
 
-[api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L655)
+[api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L655)

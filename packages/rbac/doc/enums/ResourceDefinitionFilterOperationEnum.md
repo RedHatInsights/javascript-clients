@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1796)
+[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1796)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[api.ts:1797](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1797)
+[api.ts:1797](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1797)

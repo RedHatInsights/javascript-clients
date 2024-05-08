@@ -6,8 +6,6 @@ Information about how much systems are affected by a security rule, broken down 
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportRulesBySeverity
 
 ## Table of contents
@@ -31,7 +29,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L934)
+[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L934)
 
 ___
 
@@ -45,7 +43,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L940)
+[api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L940)
 
 ___
 
@@ -59,7 +57,7 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L946)
+[api.ts:946](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L946)
 
 ___
 
@@ -73,4 +71,4 @@ ExecutiveReportRulesBySeverity
 
 #### Defined in
 
-[api.ts:952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L952)
+[api.ts:952](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L952)

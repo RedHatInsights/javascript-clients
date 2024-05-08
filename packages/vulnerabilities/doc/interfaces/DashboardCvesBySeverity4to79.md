@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 DashboardCvesBySeverity4to79
 
 ## Table of contents
@@ -30,7 +28,7 @@ DashboardCvesBySeverity4to79
 
 #### Defined in
 
-[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L623)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L623)
 
 ___
 
@@ -46,7 +44,7 @@ DashboardCvesBySeverity4to79
 
 #### Defined in
 
-[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L629)
+[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L629)
 
 ___
 
@@ -62,4 +60,4 @@ DashboardCvesBySeverity4to79
 
 #### Defined in
 
-[api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L635)
+[api.ts:635](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L635)

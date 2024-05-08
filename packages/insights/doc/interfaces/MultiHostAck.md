@@ -6,8 +6,6 @@ Add acks to multiple hosts for a single rule.
 
 **`Export`**
 
-**`Interface`**
-
 MultiHostAck
 
 ## Table of contents
@@ -29,7 +27,7 @@ MultiHostAck
 
 #### Defined in
 
-[api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L503)
+[api.ts:503](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L503)
 
 ___
 
@@ -43,4 +41,4 @@ MultiHostAck
 
 #### Defined in
 
-[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L497)
+[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L497)

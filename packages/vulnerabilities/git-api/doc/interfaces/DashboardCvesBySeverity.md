@@ -6,8 +6,6 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 **`Export`**
 
-**`Interface`**
-
 DashboardCvesBySeverity
 
 ## Table of contents
@@ -30,7 +28,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L573)
+[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L573)
 
 ___
 
@@ -44,7 +42,7 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L579)
+[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L579)
 
 ___
 
@@ -58,4 +56,4 @@ DashboardCvesBySeverity
 
 #### Defined in
 
-[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L585)
+[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L585)

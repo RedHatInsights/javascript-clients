@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[api.ts:2465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2465)
+[api.ts:2465](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2465)

@@ -6,8 +6,6 @@ A paginated group search query result with group entries and their Inventory met
 
 **`Export`**
 
-**`Interface`**
-
 ResourceTypesGroupsQueryOutput
 
 ## Table of contents
@@ -32,7 +30,7 @@ ResourceTypesGroupsQueryOutput
 
 #### Defined in
 
-[api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1317)
+[api.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1317)
 
 ___
 
@@ -46,7 +44,7 @@ ResourceTypesGroupsQueryOutput
 
 #### Defined in
 
-[api.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1311)
+[api.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1311)
 
 ___
 
@@ -60,4 +58,4 @@ ResourceTypesGroupsQueryOutput
 
 #### Defined in
 
-[api.ts:1305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1305)
+[api.ts:1305](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1305)

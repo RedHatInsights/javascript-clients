@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileByHostOutAllOf
 
 ## Table of contents
@@ -28,4 +26,4 @@ SystemProfileByHostOutAllOf
 
 #### Defined in
 
-[api.ts:2130](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2130)
+[api.ts:2130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2130)

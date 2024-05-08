@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CveStatusIn
 
 ## Table of contents
@@ -28,7 +26,7 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L404)
+[api.ts:404](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L404)
 
 ___
 
@@ -44,7 +42,7 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L410)
+[api.ts:410](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L410)
 
 ___
 
@@ -60,4 +58,4 @@ CveStatusIn
 
 #### Defined in
 
-[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L416)
+[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L416)

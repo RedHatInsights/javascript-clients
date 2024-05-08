@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportTopCves
 
 ## Table of contents
@@ -35,7 +33,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1003)
+[api.ts:1003](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1003)
 
 ___
 
@@ -51,7 +49,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1009)
+[api.ts:1009](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1009)
 
 ___
 
@@ -67,7 +65,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1015)
+[api.ts:1015](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1015)
 
 ___
 
@@ -83,7 +81,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1021)
+[api.ts:1021](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1021)
 
 ___
 
@@ -99,7 +97,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1027)
+[api.ts:1027](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1027)
 
 ___
 
@@ -115,7 +113,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1033)
+[api.ts:1033](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1033)
 
 ___
 
@@ -131,7 +129,7 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1039)
+[api.ts:1039](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1039)
 
 ___
 
@@ -147,4 +145,4 @@ ExecutiveReportTopCves
 
 #### Defined in
 
-[api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1045)
+[api.ts:1045](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1045)

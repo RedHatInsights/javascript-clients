@@ -6,8 +6,6 @@ A set of string facts belonging to a single namespace.
 
 **`Export`**
 
-**`Interface`**
-
 FactSet
 
 ## Table of contents
@@ -31,7 +29,7 @@ FactSet
 
 #### Defined in
 
-[api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L527)
+[api.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L527)
 
 ___
 
@@ -47,4 +45,4 @@ FactSet
 
 #### Defined in
 
-[api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L521)
+[api.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L521)

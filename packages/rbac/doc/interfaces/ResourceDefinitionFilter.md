@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ResourceDefinitionFilter
 
 ## Table of contents
@@ -28,7 +26,7 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[api.ts:1776](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1776)
+[api.ts:1776](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1776)
 
 ___
 
@@ -42,7 +40,7 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[api.ts:1782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1782)
+[api.ts:1782](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1782)
 
 ___
 
@@ -56,4 +54,4 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[api.ts:1788](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1788)
+[api.ts:1788](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1788)

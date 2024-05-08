@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 HelptopicsGet200Response
 
 ## Table of contents
@@ -26,4 +24,4 @@ HelptopicsGet200Response
 
 #### Defined in
 
-[api.ts:61](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L61)
+[api.ts:61](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L61)

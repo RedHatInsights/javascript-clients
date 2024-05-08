@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Permission
 
 ## Table of contents
@@ -30,7 +28,7 @@ Permission
 
 #### Defined in
 
-[api.ts:1307](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1307)
+[api.ts:1307](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1307)
 
 ___
 
@@ -44,7 +42,7 @@ Permission
 
 #### Defined in
 
-[api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1331)
+[api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1331)
 
 ___
 
@@ -58,7 +56,7 @@ Permission
 
 #### Defined in
 
-[api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1325)
+[api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1325)
 
 ___
 
@@ -72,7 +70,7 @@ Permission
 
 #### Defined in
 
-[api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1313)
+[api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1313)
 
 ___
 
@@ -86,4 +84,4 @@ Permission
 
 #### Defined in
 
-[api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1319)
+[api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1319)

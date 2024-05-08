@@ -6,8 +6,6 @@ Object containing data specific to the MS SQL workload
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileMssql
 
 ## Table of contents
@@ -30,4 +28,4 @@ SystemProfileMssql
 
 #### Defined in
 
-[api.ts:2243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2243)
+[api.ts:2243](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2243)

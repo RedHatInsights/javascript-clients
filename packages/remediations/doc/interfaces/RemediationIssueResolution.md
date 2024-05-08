@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationIssueResolution
 
 ## Table of contents
@@ -29,7 +27,7 @@ RemediationIssueResolution
 
 #### Defined in
 
-[api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L872)
+[api.ts:872](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L872)
 
 ___
 
@@ -43,7 +41,7 @@ RemediationIssueResolution
 
 #### Defined in
 
-[api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L866)
+[api.ts:866](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L866)
 
 ___
 
@@ -59,7 +57,7 @@ RemediationIssueResolution
 
 #### Defined in
 
-[api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L884)
+[api.ts:884](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L884)
 
 ___
 
@@ -73,4 +71,4 @@ RemediationIssueResolution
 
 #### Defined in
 
-[api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L878)
+[api.ts:878](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L878)

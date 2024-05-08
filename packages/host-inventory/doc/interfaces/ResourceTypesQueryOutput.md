@@ -6,8 +6,6 @@ A paginated list of resource-types RBAC objects.
 
 **`Export`**
 
-**`Interface`**
-
 ResourceTypesQueryOutput
 
 ## Table of contents
@@ -32,7 +30,7 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1399)
+[api.ts:1399](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1399)
 
 ___
 
@@ -46,7 +44,7 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1393)
+[api.ts:1393](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1393)
 
 ___
 
@@ -60,4 +58,4 @@ ResourceTypesQueryOutput
 
 #### Defined in
 
-[api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1387)
+[api.ts:1387](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1387)

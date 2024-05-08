@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersAdvisoryDetailResponseV1
 
 ## Table of contents
@@ -26,4 +24,4 @@ ControllersAdvisoryDetailResponseV1
 
 #### Defined in
 
-[api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L187)
+[api.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L187)

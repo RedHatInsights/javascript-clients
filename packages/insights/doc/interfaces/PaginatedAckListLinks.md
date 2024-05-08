@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedAckListLinks
 
 ## Table of contents
@@ -29,7 +27,7 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L567)
+[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L567)
 
 ___
 
@@ -43,7 +41,7 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L585)
+[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L585)
 
 ___
 
@@ -57,7 +55,7 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L579)
+[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L579)
 
 ___
 
@@ -71,4 +69,4 @@ PaginatedAckListLinks
 
 #### Defined in
 
-[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L573)
+[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L573)

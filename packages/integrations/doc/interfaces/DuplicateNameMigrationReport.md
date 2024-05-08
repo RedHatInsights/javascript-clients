@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 DuplicateNameMigrationReport
 
 ## Table of contents
@@ -27,7 +25,7 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/integrations/types/index.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L683)
+[packages/integrations/types/index.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L683)
 
 ___
 
@@ -41,4 +39,4 @@ DuplicateNameMigrationReport
 
 #### Defined in
 
-[packages/integrations/types/index.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L677)
+[packages/integrations/types/index.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L677)

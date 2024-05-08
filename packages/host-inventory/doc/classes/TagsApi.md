@@ -6,6 +6,8 @@ TagsApi - object-oriented interface
 
 **`Export`**
 
+TagsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ TagsApi - object-oriented interface
 
 ### constructor
 
-• **new TagsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new TagsApi**(`configuration?`, `basePath?`, `axios?`): [`TagsApi`](TagsApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ TagsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`TagsApi`](TagsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -90,25 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiTagGetTags
 
-▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+▸ **apiTagGetTags**(`tags?`, `orderBy?`, `orderHow?`, `perPage?`, `page?`, `staleness?`, `search?`, `displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `filter?`, `options?`): `Promise`\<`AxiosResponse`\<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
-
-**`Summary`**
-
-Get the active host tags for a given account
-
-**`Throws`**
-
-**`Memberof`**
-
-TagsApi
 
 #### Parameters
 
@@ -136,8 +132,18 @@ TagsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ActiveTags`](../interfaces/ActiveTags.md), `any`\>\>
+
+**`Summary`**
+
+Get the active host tags for a given account
+
+**`Throws`**
+
+**`Memberof`**
+
+TagsApi
 
 #### Defined in
 
-[api.ts:6838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6838)
+[api.ts:6838](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6838)

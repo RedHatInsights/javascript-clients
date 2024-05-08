@@ -91,8 +91,6 @@
 
 DiagnosisApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -103,13 +101,15 @@ DiagnosisApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1246)
+[api.ts:1246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1246)
 
 ___
 
@@ -119,8 +119,6 @@ ___
 
 DiagnosisApi - factory interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -135,11 +133,13 @@ DiagnosisApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `AxiosPromise`<[`Diagnosis`](interfaces/Diagnosis.md)\> |
+| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `AxiosPromise`\<[`Diagnosis`](interfaces/Diagnosis.md)\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1326)
+[api.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1326)
 
 ___
 
@@ -149,8 +149,6 @@ ___
 
 DiagnosisApi - functional programming interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -163,11 +161,13 @@ DiagnosisApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Diagnosis`](interfaces/Diagnosis.md)\>\> |
+| `getDiagnosis` | (`system`: `string`, `remediation?`: `string`, `branchId?`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Diagnosis`](interfaces/Diagnosis.md)\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1301)
+[api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1301)
 
 ___
 
@@ -177,8 +177,6 @@ ___
 
 GeneratorApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -189,13 +187,15 @@ GeneratorApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1371)
+[api.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1371)
 
 ___
 
@@ -205,8 +205,6 @@ ___
 
 GeneratorApi - factory interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -221,11 +219,13 @@ GeneratorApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `AxiosPromise`<`string`\> |
+| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `AxiosPromise`\<`string`\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1442)
+[api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1442)
 
 ___
 
@@ -235,8 +235,6 @@ ___
 
 GeneratorApi - functional programming interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -249,11 +247,13 @@ GeneratorApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`\>\> |
+| `generate` | (`playbookDefinition`: [`PlaybookDefinition`](interfaces/PlaybookDefinition.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`string`\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1419)
+[api.ts:1419](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1419)
 
 ___
 
@@ -263,8 +263,6 @@ ___
 
 RemediationsApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -275,32 +273,34 @@ RemediationsApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:1483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1483)
+[api.ts:1483](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1483)
 
 ___
 
@@ -310,8 +310,6 @@ ___
 
 RemediationsApi - factory interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -326,30 +324,32 @@ RemediationsApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `AxiosPromise`<`object`\> |
-| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `AxiosPromise`<[`RemediationCreated`](interfaces/RemediationCreated.md)\> |
-| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `AxiosPromise`<[`MultipleDelete`](interfaces/MultipleDelete.md)\> |
-| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `AxiosPromise`<`any`\> |
-| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `AxiosPromise`<[`PlaybookRunExecutorDetails`](interfaces/PlaybookRunExecutorDetails.md)\> |
-| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `AxiosPromise`<[`PlaybookRunSystemDetails`](interfaces/PlaybookRunSystemDetails.md)\> |
-| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `AxiosPromise`<[`PlaybookRunSystemList`](interfaces/PlaybookRunSystemList.md)\> |
-| `getRemediation` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`<[`RemediationDetails`](interfaces/RemediationDetails.md)\> |
-| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\> |
-| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `AxiosPromise`<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\> |
-| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `AxiosPromise`<`string`\> |
-| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\> |
-| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `AxiosPromise`<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\> |
-| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `AxiosPromise`<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\> |
-| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `AxiosPromise`<`void`\> |
-| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `AxiosPromise`<`void`\> |
+| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `AxiosPromise`\<`object`\> |
+| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
+| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `AxiosPromise`\<[`RemediationCreated`](interfaces/RemediationCreated.md)\> |
+| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
+| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
+| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
+| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `AxiosPromise`\<[`MultipleDelete`](interfaces/MultipleDelete.md)\> |
+| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `AxiosPromise`\<`any`\> |
+| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `AxiosPromise`\<[`PlaybookRunExecutorDetails`](interfaces/PlaybookRunExecutorDetails.md)\> |
+| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `AxiosPromise`\<[`PlaybookRunSystemDetails`](interfaces/PlaybookRunSystemDetails.md)\> |
+| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `AxiosPromise`\<[`PlaybookRunSystemList`](interfaces/PlaybookRunSystemList.md)\> |
+| `getRemediation` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<[`RemediationDetails`](interfaces/RemediationDetails.md)\> |
+| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\> |
+| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `AxiosPromise`\<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\> |
+| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `AxiosPromise`\<`string`\> |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `AxiosPromise`\<[`RemediationList`](interfaces/RemediationList.md)\> |
+| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `AxiosPromise`\<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\> |
+| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `AxiosPromise`\<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\> |
+| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `AxiosPromise`\<`void`\> |
+| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `AxiosPromise`\<`void`\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:2721](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2721)
+[api.ts:2721](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L2721)
 
 ___
 
@@ -359,8 +359,6 @@ ___
 
 RemediationsApi - functional programming interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -373,30 +371,32 @@ RemediationsApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`object`\>\> |
-| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationCreated`](interfaces/RemediationCreated.md)\>\> |
-| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`MultipleDelete`](interfaces/MultipleDelete.md)\>\> |
-| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`any`\>\> |
-| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookRunExecutorDetails`](interfaces/PlaybookRunExecutorDetails.md)\>\> |
-| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookRunSystemDetails`](interfaces/PlaybookRunSystemDetails.md)\>\> |
-| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookRunSystemList`](interfaces/PlaybookRunSystemList.md)\>\> |
-| `getRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationDetails`](interfaces/RemediationDetails.md)\>\> |
-| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\>\> |
-| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\>\> |
-| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`string`\>\> |
-| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`RemediationList`](interfaces/RemediationList.md)\>\> |
-| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\>\> |
-| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\>\> |
-| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
-| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<`void`\>\> |
+| `cancelPlaybookRuns` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`object`\>\> |
+| `checkExecutable` | (`id`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+| `createRemediation` | (`remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RemediationCreated`](interfaces/RemediationCreated.md)\>\> |
+| `deleteRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+| `deleteRemediationIssue` | (`id`: `string`, `issue`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+| `deleteRemediationIssueSystem` | (`id`: `string`, `issue`: `string`, `system`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+| `deleteRemediations` | (`remediationsList`: [`RemediationsList`](interfaces/RemediationsList.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`MultipleDelete`](interfaces/MultipleDelete.md)\>\> |
+| `downloadPlaybooks` | (`selectedRemediations?`: `string`[], `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`any`\>\> |
+| `getPlaybookRunDetails` | (`id`: `string`, `playbookRunId`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PlaybookRunExecutorDetails`](interfaces/PlaybookRunExecutorDetails.md)\>\> |
+| `getPlaybookRunSystemDetails` | (`id`: `string`, `playbookRunId`: `string`, `system`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PlaybookRunSystemDetails`](interfaces/PlaybookRunSystemDetails.md)\>\> |
+| `getPlaybookRunSystems` | (`id`: `string`, `playbookRunId`: `string`, `executor?`: `string`, `limit?`: `number`, `offset?`: `number`, `ansibleHost?`: `string`, `sort?`: ``"system_name"`` \| ``"-system_name"``, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PlaybookRunSystemList`](interfaces/PlaybookRunSystemList.md)\>\> |
+| `getRemediation` | (`id`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RemediationDetails`](interfaces/RemediationDetails.md)\>\> |
+| `getRemediationConnectionStatus` | (`id`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RemediationConnectionStatus`](interfaces/RemediationConnectionStatus.md)\>\> |
+| `getRemediationIssueSystems` | (`id`: `string`, `issue`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"display_name"`` \| ``"-display_name"``, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RemediationIssueSystemList`](interfaces/RemediationIssueSystemList.md)\>\> |
+| `getRemediationPlaybook` | (`id`: `string`, `hosts?`: `string`[], `satOrg?`: `string`, `localhost?`: `boolean`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`string`\>\> |
+| `getRemediations` | (`sort?`: ``"updated_at"`` \| ``"-updated_at"`` \| ``"name"`` \| ``"-name"`` \| ``"system_count"`` \| ``"-system_count"`` \| ``"issue_count"`` \| ``"-issue_count"``, `filter?`: `string`, `limit?`: `number`, `offset?`: `number`, `system?`: `string`, `hideArchived?`: `boolean`, `fieldsData?`: ``"playbook_runs"``[], `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RemediationList`](interfaces/RemediationList.md)\>\> |
+| `listPlaybookRuns` | (`id`: `string`, `limit?`: `number`, `offset?`: `number`, `sort?`: ``"updated_at"`` \| ``"-updated_at"``, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PlaybookRunsList`](interfaces/PlaybookRunsList.md)\>\> |
+| `runRemediation` | (`id`: `string`, `playbookRunsInput?`: [`PlaybookRunsInput`](interfaces/PlaybookRunsInput.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`ExecuteRemediation`](interfaces/ExecuteRemediation.md)\>\> |
+| `updateRemediation` | (`id`: `string`, `remediationInput`: [`RemediationInput`](interfaces/RemediationInput.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+| `updateRemediationIssue` | (`id`: `string`, `issue`: `string`, `remediationIssueIn`: [`RemediationIssueIn`](interfaces/RemediationIssueIn.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L2399)
+[api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L2399)
 
 ___
 
@@ -406,8 +406,6 @@ ___
 
 ResolutionsApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -418,14 +416,16 @@ ResolutionsApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `Promise`<`RequestArgs`\> |
-| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3246)
+[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3246)
 
 ___
 
@@ -435,8 +435,6 @@ ___
 
 ResolutionsApi - factory interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -451,12 +449,14 @@ ResolutionsApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `AxiosPromise`<[`Resolutions`](interfaces/Resolutions.md)\> |
-| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `AxiosPromise`<{ `[key: string]`: [`Resolutions`](interfaces/Resolutions.md) \| `boolean`;  }\> |
+| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `AxiosPromise`\<[`Resolutions`](interfaces/Resolutions.md)\> |
+| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `AxiosPromise`\<\{ `[key: string]`: [`Resolutions`](interfaces/Resolutions.md) \| `boolean`;  }\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3367)
+[api.ts:3367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3367)
 
 ___
 
@@ -466,8 +466,6 @@ ___
 
 ResolutionsApi - functional programming interface
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -480,12 +478,14 @@ ResolutionsApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`Resolutions`](interfaces/Resolutions.md)\>\> |
-| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<{ `[key: string]`: [`Resolutions`](interfaces/Resolutions.md) \| `boolean`;  }\>\> |
+| `getResolutionsForIssue` | (`issue`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Resolutions`](interfaces/Resolutions.md)\>\> |
+| `getResolutionsForIssues` | (`resolutionsBatchInput`: [`ResolutionsBatchInput`](interfaces/ResolutionsBatchInput.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<\{ `[key: string]`: [`Resolutions`](interfaces/Resolutions.md) \| `boolean`;  }\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3330)
+[api.ts:3330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3330)
 
 ___
 
@@ -495,8 +495,6 @@ ___
 
 VersionApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -507,13 +505,15 @@ VersionApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `getVersion` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `getVersion` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3430](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3430)
+[api.ts:3430](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3430)
 
 ___
 
@@ -522,8 +522,6 @@ ___
 ▸ **VersionApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
 
 VersionApi - factory interface
-
-**`Export`**
 
 #### Parameters
 
@@ -539,11 +537,13 @@ VersionApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `getVersion` | (`options?`: `any`) => `AxiosPromise`<[`InlineResponse200`](interfaces/InlineResponse200.md)\> |
+| `getVersion` | (`options?`: `any`) => `AxiosPromise`\<[`InlineResponse200`](interfaces/InlineResponse200.md)\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3491)
+[api.ts:3491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3491)
 
 ___
 
@@ -552,8 +552,6 @@ ___
 ▸ **VersionApiFp**(`configuration?`): `Object`
 
 VersionApi - functional programming interface
-
-**`Export`**
 
 #### Parameters
 
@@ -567,8 +565,10 @@ VersionApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `getVersion` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`InlineResponse200`](interfaces/InlineResponse200.md)\>\> |
+| `getVersion` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`InlineResponse200`](interfaces/InlineResponse200.md)\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:3469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3469)
+[api.ts:3469](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3469)

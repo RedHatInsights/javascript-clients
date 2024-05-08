@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AuthenticationExtra
 
 ## Table of contents
@@ -26,4 +24,4 @@ AuthenticationExtra
 
 #### Defined in
 
-[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L278)
+[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L278)

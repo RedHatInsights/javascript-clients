@@ -6,6 +6,8 @@ WeeklyreportsubscriptionApi - object-oriented interface
 
 **`Export`**
 
+WeeklyreportsubscriptionApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ WeeklyreportsubscriptionApi - object-oriented interface
 
 ### constructor
 
-• **new WeeklyreportsubscriptionApi**(`configuration?`, `basePath?`, `axios?`)
+• **new WeeklyreportsubscriptionApi**(`configuration?`, `basePath?`, `axios?`): [`WeeklyreportsubscriptionApi`](WeeklyreportsubscriptionApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ WeeklyreportsubscriptionApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`WeeklyreportsubscriptionApi`](WeeklyreportsubscriptionApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### weeklyreportsubscriptionCreate
 
-▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`, `options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
+▸ **weeklyreportsubscriptionCreate**(`weeklyReportSubscription`, `options?`): `Promise`\<`AxiosResponse`\<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
 
 Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.
-
-**`Throws`**
-
-**`Memberof`**
-
-WeeklyreportsubscriptionApi
 
 #### Parameters
 
@@ -116,25 +116,25 @@ WeeklyreportsubscriptionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:10735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10735)
-
-___
-
-### weeklyreportsubscriptionList
-
-▸ **weeklyreportsubscriptionList**(`options?`): `Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
-
-Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+`Promise`\<`AxiosResponse`\<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 WeeklyreportsubscriptionApi
+
+#### Defined in
+
+[api.ts:10735](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10735)
+
+___
+
+### weeklyreportsubscriptionList
+
+▸ **weeklyreportsubscriptionList**(`options?`): `Promise`\<`AxiosResponse`\<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
+
+Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
 
 #### Parameters
 
@@ -144,8 +144,14 @@ WeeklyreportsubscriptionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`WeeklyReportSubscription`](../interfaces/WeeklyReportSubscription.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+WeeklyreportsubscriptionApi
 
 #### Defined in
 
-[api.ts:10745](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10745)
+[api.ts:10745](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10745)

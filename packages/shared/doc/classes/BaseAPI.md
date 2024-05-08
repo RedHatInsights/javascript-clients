@@ -46,7 +46,7 @@ Constructor to create baseAPI.
 
 #### Defined in
 
-[packages/shared/base.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L19)
+[packages/shared/base.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L19)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Constructor to create baseAPI.
 
 #### Defined in
 
-[packages/shared/base.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L13)
+[packages/shared/base.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L13)
 
 ___
 
@@ -68,7 +68,7 @@ basePath of api requests.
 
 #### Defined in
 
-[packages/shared/base.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L19)
+[packages/shared/base.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L19)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[packages/shared/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L12)
+[packages/shared/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L12)
 
 ## Methods
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[packages/shared/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L27)
+[packages/shared/base.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L27)
 
 ___
 
@@ -130,4 +130,4 @@ promisable axios response.
 
 #### Defined in
 
-[packages/shared/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/base.ts#L55)
+[packages/shared/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/base.ts#L55)

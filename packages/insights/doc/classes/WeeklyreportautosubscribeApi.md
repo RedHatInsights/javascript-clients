@@ -6,6 +6,8 @@ WeeklyreportautosubscribeApi - object-oriented interface
 
 **`Export`**
 
+WeeklyreportautosubscribeApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ WeeklyreportautosubscribeApi - object-oriented interface
 
 ### constructor
 
-• **new WeeklyreportautosubscribeApi**(`configuration?`, `basePath?`, `axios?`)
+• **new WeeklyreportautosubscribeApi**(`configuration?`, `basePath?`, `axios?`): [`WeeklyreportautosubscribeApi`](WeeklyreportautosubscribeApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ WeeklyreportautosubscribeApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`WeeklyreportautosubscribeApi`](WeeklyreportautosubscribeApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### weeklyreportautosubscribeCreate
 
-▸ **weeklyreportautosubscribeCreate**(`autoSubscribeInput`, `options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
+▸ **weeklyreportautosubscribeCreate**(`autoSubscribeInput`, `options?`): `Promise`\<`AxiosResponse`\<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
 
 Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.
-
-**`Throws`**
-
-**`Memberof`**
-
-WeeklyreportautosubscribeApi
 
 #### Parameters
 
@@ -116,25 +116,25 @@ WeeklyreportautosubscribeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:10552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10552)
-
-___
-
-### weeklyreportautosubscribeList
-
-▸ **weeklyreportautosubscribeList**(`options?`): `Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
-
-Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
+`Promise`\<`AxiosResponse`\<[`AutoSubscribe`](../interfaces/AutoSubscribe.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 WeeklyreportautosubscribeApi
+
+#### Defined in
+
+[api.ts:10552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10552)
+
+___
+
+### weeklyreportautosubscribeList
+
+▸ **weeklyreportautosubscribeList**(`options?`): `Promise`\<`AxiosResponse`\<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
+
+Show the user\'s current subscription status.  This shows the presence of a weekly report subscription by the user in this account.
 
 #### Parameters
 
@@ -144,8 +144,14 @@ WeeklyreportautosubscribeApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`AutoSubscribe`](../interfaces/AutoSubscribe.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+WeeklyreportautosubscribeApi
 
 #### Defined in
 
-[api.ts:10562](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10562)
+[api.ts:10562](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10562)

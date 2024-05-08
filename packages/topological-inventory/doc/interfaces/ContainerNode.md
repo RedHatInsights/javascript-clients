@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerNode
 
 ## Table of contents
@@ -47,7 +45,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L597)
+[api.ts:597](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L597)
 
 ___
 
@@ -61,7 +59,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L603)
+[api.ts:603](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L603)
 
 ___
 
@@ -75,7 +73,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L609)
+[api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L609)
 
 ___
 
@@ -89,7 +87,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L615)
+[api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L615)
 
 ___
 
@@ -103,7 +101,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L621)
+[api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L621)
 
 ___
 
@@ -117,7 +115,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L627)
+[api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L627)
 
 ___
 
@@ -131,7 +129,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L633)
+[api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L633)
 
 ___
 
@@ -145,7 +143,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L639)
+[api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L639)
 
 ___
 
@@ -161,7 +159,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L645)
+[api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L645)
 
 ___
 
@@ -175,7 +173,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L651)
+[api.ts:651](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L651)
 
 ___
 
@@ -191,7 +189,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L657)
+[api.ts:657](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L657)
 
 ___
 
@@ -205,7 +203,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L663)
+[api.ts:663](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L663)
 
 ___
 
@@ -219,7 +217,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L669)
+[api.ts:669](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L669)
 
 ___
 
@@ -233,7 +231,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L675)
+[api.ts:675](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L675)
 
 ___
 
@@ -247,7 +245,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L681)
+[api.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L681)
 
 ___
 
@@ -261,7 +259,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L687)
+[api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L687)
 
 ___
 
@@ -275,7 +273,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L693)
+[api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L693)
 
 ___
 
@@ -289,7 +287,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L699)
+[api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L699)
 
 ___
 
@@ -303,7 +301,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L705)
+[api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L705)
 
 ___
 
@@ -319,7 +317,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L711)
+[api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L711)
 
 ___
 
@@ -333,7 +331,7 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L717)
+[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L717)
 
 ___
 
@@ -347,4 +345,4 @@ ContainerNode
 
 #### Defined in
 
-[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L723)
+[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L723)

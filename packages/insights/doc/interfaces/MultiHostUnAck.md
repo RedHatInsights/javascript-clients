@@ -6,8 +6,6 @@ Delete acks from multiple hosts for a single rule.
 
 **`Export`**
 
-**`Interface`**
-
 MultiHostUnAck
 
 ## Table of contents
@@ -28,4 +26,4 @@ MultiHostUnAck
 
 #### Defined in
 
-[api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L516)
+[api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L516)

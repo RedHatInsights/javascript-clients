@@ -6,8 +6,6 @@ Reason for failure
 
 **`Export`**
 
-**`Interface`**
-
 Msg
 
 ## Table of contents
@@ -28,4 +26,4 @@ Msg
 
 #### Defined in
 
-[api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L114)
+[api.ts:114](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L114)

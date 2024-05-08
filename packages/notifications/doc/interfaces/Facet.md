@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Facet
 
 ## Table of contents
@@ -29,7 +27,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1132)
+[packages/notifications/types/index.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1132)
 
 ___
 
@@ -43,7 +41,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1126)
+[packages/notifications/types/index.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1126)
 
 ___
 
@@ -57,7 +55,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1114)
+[packages/notifications/types/index.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1114)
 
 ___
 
@@ -71,4 +69,4 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1120)
+[packages/notifications/types/index.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1120)

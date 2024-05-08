@@ -6,6 +6,8 @@ RatingApi - object-oriented interface
 
 **`Export`**
 
+RatingApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -36,7 +38,7 @@ RatingApi - object-oriented interface
 
 ### constructor
 
-• **new RatingApi**(`configuration?`, `basePath?`, `axios?`)
+• **new RatingApi**(`configuration?`, `basePath?`, `axios?`): [`RatingApi`](RatingApi.md)
 
 #### Parameters
 
@@ -46,13 +48,17 @@ RatingApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`RatingApi`](RatingApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -80,7 +86,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -94,21 +100,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### ratingAllRatingsList
 
-▸ **ratingAllRatingsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
+▸ **ratingAllRatingsList**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
 
 Show all ratings.  Available only to internal users.
-
-**`Throws`**
-
-**`Memberof`**
-
-RatingApi
 
 #### Parameters
 
@@ -120,25 +120,25 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6456)
-
-___
-
-### ratingCreate
-
-▸ **ratingCreate**(`ruleRating`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
-
-Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
+`Promise`\<`AxiosResponse`\<[`PaginatedAllRuleRatingsList`](../interfaces/PaginatedAllRuleRatingsList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RatingApi
+
+#### Defined in
+
+[api.ts:6456](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6456)
+
+___
+
+### ratingCreate
+
+▸ **ratingCreate**(`ruleRating`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
+
+Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.
 
 #### Parameters
 
@@ -149,25 +149,25 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6467](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6467)
-
-___
-
-### ratingList
-
-▸ **ratingList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
-
-List all rules rated by the current user  Only the current user\'s ratings are listed here.
+`Promise`\<`AxiosResponse`\<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RatingApi
+
+#### Defined in
+
+[api.ts:6467](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6467)
+
+___
+
+### ratingList
+
+▸ **ratingList**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
+
+List all rules rated by the current user  Only the current user\'s ratings are listed here.
 
 #### Parameters
 
@@ -179,19 +179,36 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PaginatedRuleRatingList`](../interfaces/PaginatedRuleRatingList.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+RatingApi
 
 #### Defined in
 
-[api.ts:6479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6479)
+[api.ts:6479](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6479)
 
 ___
 
 ### ratingRetrieve
 
-▸ **ratingRetrieve**(`rule`, `options?`): `Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
+▸ **ratingRetrieve**(`rule`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 Retrieve the ratings for a single rule, by Insights Rule ID
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `rule` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
 
 **`Summary`**
 
@@ -203,34 +220,17 @@ Retrieve the ratings for a single rule
 
 RatingApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `rule` | `string` |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`RuleRating`](../interfaces/RuleRating.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:6491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6491)
+[api.ts:6491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6491)
 
 ___
 
 ### ratingStatsList
 
-▸ **ratingStatsList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
+▸ **ratingStatsList**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
 
 Summarise the ratings for a rule.  This summarises the statistics for each rule.  Available only to internal users.
-
-**`Throws`**
-
-**`Memberof`**
-
-RatingApi
 
 #### Parameters
 
@@ -242,8 +242,14 @@ RatingApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PaginatedRuleRatingStatsList`](../interfaces/PaginatedRuleRatingStatsList.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+RatingApi
 
 #### Defined in
 
-[api.ts:6503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L6503)
+[api.ts:6503](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6503)

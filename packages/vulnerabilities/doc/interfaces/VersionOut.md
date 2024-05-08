@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 VersionOut
 
 ## Table of contents
@@ -29,7 +27,7 @@ VersionOut
 
 #### Defined in
 
-[api.ts:2634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2634)
+[api.ts:2634](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2634)
 
 ___
 
@@ -45,4 +43,4 @@ VersionOut
 
 #### Defined in
 
-[api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2640)
+[api.ts:2640](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2640)

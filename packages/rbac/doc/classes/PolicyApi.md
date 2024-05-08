@@ -6,6 +6,8 @@ PolicyApi - object-oriented interface
 
 **`Export`**
 
+PolicyApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -36,7 +38,7 @@ PolicyApi - object-oriented interface
 
 ### constructor
 
-• **new PolicyApi**(`configuration?`, `basePath?`, `axios?`)
+• **new PolicyApi**(`configuration?`, `basePath?`, `axios?`): [`PolicyApi`](PolicyApi.md)
 
 #### Parameters
 
@@ -46,13 +48,17 @@ PolicyApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`PolicyApi`](PolicyApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -80,7 +86,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -94,13 +100,24 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### createPolicies
 
-▸ **createPolicies**(`policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+▸ **createPolicies**(`policyIn`, `options?`): `Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `policyIn` | [`PolicyIn`](../interfaces/PolicyIn.md) | Policy to create |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -112,26 +129,26 @@ Create a policy in a tenant
 
 PolicyApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `policyIn` | [`PolicyIn`](../interfaces/PolicyIn.md) | Policy to create |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:5241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5241)
+[api.ts:5241](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5241)
 
 ___
 
 ### deletePolicy
 
-▸ **deletePolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **deletePolicy**(`uuid`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `uuid` | `string` | ID of policy to delete |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -143,26 +160,26 @@ Delete a policy in the tenant
 
 PolicyApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `uuid` | `string` | ID of policy to delete |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
 #### Defined in
 
-[api.ts:5253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5253)
+[api.ts:5253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5253)
 
 ___
 
 ### getPolicy
 
-▸ **getPolicy**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+▸ **getPolicy**(`uuid`, `options?`): `Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `uuid` | `string` | ID of policy to get |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 **`Summary`**
 
@@ -174,38 +191,17 @@ Get a policy in the tenant
 
 PolicyApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `uuid` | `string` | ID of policy to get |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:5265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5265)
+[api.ts:5265](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5265)
 
 ___
 
 ### listPolicies
 
-▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
+▸ **listPolicies**(`limit?`, `offset?`, `name?`, `scope?`, `groupName?`, `groupUuid?`, `orderBy?`, `options?`): `Promise`\<`AxiosResponse`\<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by policy name
-
-**`Summary`**
-
-List the policies in the tenant
-
-**`Throws`**
-
-**`Memberof`**
-
-PolicyApi
 
 #### Parameters
 
@@ -222,27 +218,27 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5283)
-
-___
-
-### updatePolicy
-
-▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PolicyPagination`](../interfaces/PolicyPagination.md), `any`\>\>
 
 **`Summary`**
 
-Update a policy in the tenant
+List the policies in the tenant
 
 **`Throws`**
 
 **`Memberof`**
 
 PolicyApi
+
+#### Defined in
+
+[api.ts:5283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5283)
+
+___
+
+### updatePolicy
+
+▸ **updatePolicy**(`uuid`, `policyIn`, `options?`): `Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
 
 #### Parameters
 
@@ -254,8 +250,18 @@ PolicyApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PolicyExtended`](../interfaces/PolicyExtended.md), `any`\>\>
+
+**`Summary`**
+
+Update a policy in the tenant
+
+**`Throws`**
+
+**`Memberof`**
+
+PolicyApi
 
 #### Defined in
 
-[api.ts:5296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5296)
+[api.ts:5296](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5296)

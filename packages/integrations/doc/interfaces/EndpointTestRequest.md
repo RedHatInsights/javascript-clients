@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EndpointTestRequest
 
 ## Table of contents
@@ -26,4 +24,4 @@ EndpointTestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L814)
+[packages/integrations/types/index.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L814)

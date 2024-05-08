@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CrossAccountRequestPaginationAllOf
 
 ## Table of contents
@@ -26,4 +24,4 @@ CrossAccountRequestPaginationAllOf
 
 #### Defined in
 
-[api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L625)
+[api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L625)

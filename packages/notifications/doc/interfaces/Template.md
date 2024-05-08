@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Template
 
 ## Table of contents
@@ -31,7 +29,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1667)
+[packages/notifications/types/index.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1667)
 
 ___
 
@@ -45,7 +43,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1697)
+[packages/notifications/types/index.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1697)
 
 ___
 
@@ -59,7 +57,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1691)
+[packages/notifications/types/index.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1691)
 
 ___
 
@@ -73,7 +71,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1679)
+[packages/notifications/types/index.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1679)
 
 ___
 
@@ -87,7 +85,7 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1685)
+[packages/notifications/types/index.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1685)
 
 ___
 
@@ -101,4 +99,4 @@ Template
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1673)
+[packages/notifications/types/index.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1673)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AddAccessRequest
 
 ## Table of contents
@@ -27,7 +25,7 @@ AddAccessRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L18)
+[packages/notifications/types/index.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L18)
 
 ___
 
@@ -41,4 +39,4 @@ AddAccessRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L12)
+[packages/notifications/types/index.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L12)

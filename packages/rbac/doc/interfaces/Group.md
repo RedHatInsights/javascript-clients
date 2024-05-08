@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Group
 
 ## Table of contents
@@ -27,7 +25,7 @@ Group
 
 #### Defined in
 
-[api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L888)
+[api.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L888)
 
 ___
 
@@ -41,4 +39,4 @@ Group
 
 #### Defined in
 
-[api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L882)
+[api.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L882)

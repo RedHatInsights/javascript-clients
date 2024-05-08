@@ -6,6 +6,8 @@ DefaultApi - object-oriented interface
 
 **`Export`**
 
+DefaultApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -35,7 +37,7 @@ DefaultApi - object-oriented interface
 
 ### constructor
 
-• **new DefaultApi**(`configuration?`, `basePath?`, `axios?`)
+• **new DefaultApi**(`configuration?`, `basePath?`, `axios?`): [`DefaultApi`](DefaultApi.md)
 
 #### Parameters
 
@@ -45,13 +47,17 @@ DefaultApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`DefaultApi`](DefaultApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +71,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/base.ts#L51)
 
 ___
 
@@ -79,7 +85,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/base.ts#L51)
 
 ___
 
@@ -93,15 +99,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/base.ts#L49)
 
 ## Methods
 
 ### createProfile
 
-▸ **createProfile**(`inlineObject`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+▸ **createProfile**(`inlineObject`, `options?`): `Promise`\<`AxiosResponse`\<[`Profile`](../interfaces/Profile.md), `any`\>\>
 
 Create and optionally activate a new profile.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `inlineObject` | [`InlineObject`](../interfaces/InlineObject.md) |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`Profile`](../interfaces/Profile.md), `any`\>\>
 
 **`Summary`**
 
@@ -113,28 +130,28 @@ Create a new profile
 
 DefaultApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `inlineObject` | [`InlineObject`](../interfaces/InlineObject.md) |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L452)
+[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L452)
 
 ___
 
 ### getPlaybook
 
-▸ **getPlaybook**(`profileId`, `options?`): `Promise`<`AxiosResponse`<`object`, `any`\>\>
+▸ **getPlaybook**(`profileId`, `options?`): `Promise`\<`AxiosResponse`\<`object`, `any`\>\>
 
 Constructs and returns a Ansible playbook suitable to configure a host for the requested profile.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `profileId` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`object`, `any`\>\>
 
 **`Summary`**
 
@@ -146,28 +163,28 @@ Retrieve an Ansible playbook for the requested profile
 
 DefaultApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `profileId` | `string` |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`object`, `any`\>\>
-
 #### Defined in
 
-[api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L464)
+[api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L464)
 
 ___
 
 ### getProfile
 
-▸ **getProfile**(`id`, `options?`): `Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
+▸ **getProfile**(`id`, `options?`): `Promise`\<`AxiosResponse`\<[`Profile`](../interfaces/Profile.md), `any`\>\>
 
 Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`Profile`](../interfaces/Profile.md), `any`\>\>
 
 **`Summary`**
 
@@ -179,38 +196,17 @@ Get a specific profile
 
 DefaultApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`Profile`](../interfaces/Profile.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L476)
+[api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L476)
 
 ___
 
 ### getProfiles
 
-▸ **getProfiles**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+▸ **getProfiles**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 Retrieve a paginated array of profiles for the identified account. The URL query parameters \'limit\' and \'offset\' can be used to paginate the results. The default value of \'limit\' is 50. The default value of \'offset\' is 0.
-
-**`Summary`**
-
-Get a list of all profiles
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
 
 #### Parameters
 
@@ -222,8 +218,18 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+
+**`Summary`**
+
+Get a list of all profiles
+
+**`Throws`**
+
+**`Memberof`**
+
+DefaultApi
 
 #### Defined in
 
-[api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L489)
+[api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L489)

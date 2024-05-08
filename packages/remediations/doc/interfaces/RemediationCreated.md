@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationCreated
 
 ## Table of contents
@@ -26,4 +24,4 @@ RemediationCreated
 
 #### Defined in
 
-[api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L655)
+[api.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L655)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ApplicationSettingsValue
 
 ## Table of contents
@@ -30,4 +28,4 @@ ApplicationSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L279)
+[packages/notifications/types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L279)

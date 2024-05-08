@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ListPagination
 
 ## Table of contents
@@ -27,7 +25,7 @@ ListPagination
 
 #### Defined in
 
-[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1237)
+[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1237)
 
 ___
 
@@ -41,4 +39,4 @@ ListPagination
 
 #### Defined in
 
-[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1231)
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1231)

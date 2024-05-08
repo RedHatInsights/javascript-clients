@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceAccountInGroupResponse
 
 ## Table of contents
@@ -34,7 +32,7 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2491)
+[api.ts:2491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2491)
 
 ___
 
@@ -50,7 +48,7 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2485)
+[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2485)
 
 ___
 
@@ -64,4 +62,4 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2479)
+[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2479)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RequestDefaultBehaviorGroupPropertyList
 
 ## Table of contents
@@ -27,7 +25,7 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1553)
+[packages/notifications/types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1553)
 
 ___
 
@@ -41,4 +39,4 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1547)
+[packages/notifications/types/index.ts:1547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1547)

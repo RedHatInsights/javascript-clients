@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationInputAdd
 
 ## Table of contents
@@ -27,7 +25,7 @@ RemediationInputAdd
 
 #### Defined in
 
-[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L772)
+[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L772)
 
 ___
 
@@ -41,4 +39,4 @@ RemediationInputAdd
 
 #### Defined in
 
-[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L778)
+[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L778)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselineItemAttributes
 
 ## Table of contents
@@ -29,7 +27,7 @@ ControllersBaselineItemAttributes
 
 #### Defined in
 
-[api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L491)
+[api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L491)
 
 ___
 
@@ -45,4 +43,4 @@ ControllersBaselineItemAttributes
 
 #### Defined in
 
-[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L497)
+[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L497)

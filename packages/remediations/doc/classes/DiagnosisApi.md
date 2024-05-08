@@ -6,6 +6,8 @@ DiagnosisApi - object-oriented interface
 
 **`Export`**
 
+DiagnosisApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ DiagnosisApi - object-oriented interface
 
 ### constructor
 
-• **new DiagnosisApi**(`configuration?`, `basePath?`, `axios?`)
+• **new DiagnosisApi**(`configuration?`, `basePath?`, `axios?`): [`DiagnosisApi`](DiagnosisApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ DiagnosisApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`DiagnosisApi`](DiagnosisApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -90,25 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L49)
 
 ## Methods
 
 ### getDiagnosis
 
-▸ **getDiagnosis**(`system`, `remediation?`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
+▸ **getDiagnosis**(`system`, `remediation?`, `branchId?`, `options?`): `Promise`\<`AxiosResponse`\<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
 
 Provides host-specific diagnosis information
-
-**`Summary`**
-
-host-specific diagnosis
-
-**`Throws`**
-
-**`Memberof`**
-
-DiagnosisApi
 
 #### Parameters
 
@@ -121,8 +117,18 @@ DiagnosisApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Diagnosis`](../interfaces/Diagnosis.md), `any`\>\>
+
+**`Summary`**
+
+host-specific diagnosis
+
+**`Throws`**
+
+**`Memberof`**
+
+DiagnosisApi
 
 #### Defined in
 
-[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1360)
+[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1360)

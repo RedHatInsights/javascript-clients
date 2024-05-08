@@ -54,7 +54,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/shared/common.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L31)
+[packages/shared/common.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L31)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/shared/common.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L31)
+[packages/shared/common.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L31)
 
 ___
 

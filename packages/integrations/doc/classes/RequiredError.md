@@ -4,6 +4,8 @@
 
 **`Export`**
 
+RequiredError
+
 ## Hierarchy
 
 - `Error`
@@ -33,7 +35,7 @@
 
 ### constructor
 
-• **new RequiredError**(`field`, `msg?`)
+• **new RequiredError**(`field`, `msg?`): [`RequiredError`](RequiredError.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@
 | `field` | `string` |
 | `msg?` | `string` |
 
+#### Returns
+
+[`RequiredError`](RequiredError.md)
+
 #### Overrides
 
 Error.constructor
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
+[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L167)
 
 ## Properties
 
@@ -58,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L167)
+[packages/integrations/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L167)
 
 ___
 
@@ -72,7 +78,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1041
+node_modules/typescript/lib/lib.es5.d.ts:1054
 
 ___
 
@@ -86,7 +92,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1040
+node_modules/typescript/lib/lib.es5.d.ts:1053
 
 ___
 
@@ -100,7 +106,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1042
+node_modules/typescript/lib/lib.es5.d.ts:1055
 
 ___
 
@@ -108,15 +114,15 @@ ___
 
 ▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
 
-#### Type declaration
-
-▸ (`err`, `stackTraces`): `any`
-
 Optional override for formatting stack traces
 
 **`See`**
 
 https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
 
 ##### Parameters
 
@@ -155,7 +161,7 @@ node_modules/@types/node/globals.d.ts:117
 
 ### captureStackTrace
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 

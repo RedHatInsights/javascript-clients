@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AuthenticationExtraAzure
 
 ## Table of contents
@@ -26,4 +24,4 @@ AuthenticationExtraAzure
 
 #### Defined in
 
-[api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L291)
+[api.ts:291](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L291)

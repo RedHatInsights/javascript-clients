@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BehaviorGroup
 
 ## Table of contents
@@ -34,13 +32,13 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L347)
+[packages/integrations/types/index.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L347)
 
 ___
 
 ### behaviors
 
-• `Optional` **behaviors**: `Set`<[`EventTypeBehavior`](EventTypeBehavior.md)\>
+• `Optional` **behaviors**: `Set`\<[`EventTypeBehavior`](EventTypeBehavior.md)\>
 
 **`Memberof`**
 
@@ -48,7 +46,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L353)
+[packages/integrations/types/index.ts:353](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L353)
 
 ___
 
@@ -62,7 +60,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L341)
+[packages/integrations/types/index.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L341)
 
 ___
 
@@ -76,7 +74,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L335)
+[packages/integrations/types/index.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L335)
 
 ___
 
@@ -90,7 +88,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L311)
+[packages/integrations/types/index.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L311)
 
 ___
 
@@ -104,7 +102,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L359)
+[packages/integrations/types/index.ts:359](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L359)
 
 ___
 
@@ -118,7 +116,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L329)
+[packages/integrations/types/index.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L329)
 
 ___
 
@@ -132,7 +130,7 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L323)
+[packages/integrations/types/index.ts:323](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L323)
 
 ___
 
@@ -146,4 +144,4 @@ BehaviorGroup
 
 #### Defined in
 
-[packages/integrations/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L317)
+[packages/integrations/types/index.ts:317](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L317)

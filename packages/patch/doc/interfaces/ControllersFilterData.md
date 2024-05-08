@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersFilterData
 
 ## Table of contents
@@ -27,7 +25,7 @@ ControllersFilterData
 
 #### Defined in
 
-[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L668)
+[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L668)
 
 ___
 
@@ -41,4 +39,4 @@ ControllersFilterData
 
 #### Defined in
 
-[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L674)
+[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L674)

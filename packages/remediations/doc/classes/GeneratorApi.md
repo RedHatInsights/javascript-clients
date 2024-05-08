@@ -6,6 +6,8 @@ GeneratorApi - object-oriented interface
 
 **`Export`**
 
+GeneratorApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ GeneratorApi - object-oriented interface
 
 ### constructor
 
-• **new GeneratorApi**(`configuration?`, `basePath?`, `axios?`)
+• **new GeneratorApi**(`configuration?`, `basePath?`, `axios?`): [`GeneratorApi`](GeneratorApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ GeneratorApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`GeneratorApi`](GeneratorApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -90,15 +96,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L49)
 
 ## Methods
 
 ### generate
 
-▸ **generate**(`playbookDefinition`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
+▸ **generate**(`playbookDefinition`, `options?`): `Promise`\<`AxiosResponse`\<`string`, `any`\>\>
 
 Generates an Ansible Playbook based on input parameters
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `playbookDefinition` | [`PlaybookDefinition`](../interfaces/PlaybookDefinition.md) |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`string`, `any`\>\>
 
 **`Summary`**
 
@@ -110,17 +127,6 @@ Generate an Ansible Playbook
 
 GeneratorApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `playbookDefinition` | [`PlaybookDefinition`](../interfaces/PlaybookDefinition.md) |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`string`, `any`\>\>
-
 #### Defined in
 
-[api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1472)
+[api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1472)

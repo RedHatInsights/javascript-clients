@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ApplicationTypesCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ ApplicationTypesCollection
 
 #### Defined in
 
-[api.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L161)
+[api.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L161)
 
 ___
 
@@ -42,7 +40,7 @@ ApplicationTypesCollection
 
 #### Defined in
 
-[api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L155)
+[api.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L155)
 
 ___
 
@@ -56,4 +54,4 @@ ApplicationTypesCollection
 
 #### Defined in
 
-[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L149)
+[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L149)

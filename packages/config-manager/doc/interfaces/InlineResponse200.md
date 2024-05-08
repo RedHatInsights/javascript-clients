@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 InlineResponse200
 
 ## Table of contents
@@ -30,7 +28,7 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L70)
+[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L70)
 
 ___
 
@@ -44,7 +42,7 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L76)
+[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L76)
 
 ___
 
@@ -58,7 +56,7 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L82)
+[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L82)
 
 ___
 
@@ -72,7 +70,7 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L88)
+[api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L88)
 
 ___
 
@@ -86,4 +84,4 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/config-manager/api.ts#L64)
+[api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L64)

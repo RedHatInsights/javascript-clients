@@ -6,8 +6,6 @@ A paginated group search query result with group entries and their Inventory met
 
 **`Export`**
 
-**`Interface`**
-
 GroupQueryOutput
 
 ## Table of contents
@@ -34,7 +32,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L671)
+[api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L671)
 
 ___
 
@@ -50,7 +48,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L677)
+[api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L677)
 
 ___
 
@@ -66,7 +64,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L683)
+[api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L683)
 
 ___
 
@@ -82,7 +80,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L695)
+[api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L695)
 
 ___
 
@@ -98,4 +96,4 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L689)
+[api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L689)

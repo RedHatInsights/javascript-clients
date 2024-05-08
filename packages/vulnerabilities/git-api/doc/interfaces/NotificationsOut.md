@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 NotificationsOut
 
 ## Table of contents
@@ -28,4 +26,4 @@ NotificationsOut
 
 #### Defined in
 
-[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L2233)
+[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2233)

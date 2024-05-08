@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 WeeklyReportSubscription
 
 ## Table of contents
@@ -26,4 +24,4 @@ WeeklyReportSubscription
 
 #### Defined in
 
-[api.ts:2338](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2338)
+[api.ts:2338](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2338)

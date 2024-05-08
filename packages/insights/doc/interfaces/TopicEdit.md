@@ -6,8 +6,6 @@ Create or edit topics.
 
 **`Export`**
 
-**`Interface`**
-
 TopicEdit
 
 ## Table of contents
@@ -33,7 +31,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2294)
+[api.ts:2294](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2294)
 
 ___
 
@@ -47,7 +45,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2312)
+[api.ts:2312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2312)
 
 ___
 
@@ -61,7 +59,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2306)
+[api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2306)
 
 ___
 
@@ -75,7 +73,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2282)
+[api.ts:2282](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2282)
 
 ___
 
@@ -91,7 +89,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2288)
+[api.ts:2288](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2288)
 
 ___
 
@@ -105,4 +103,4 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2300)
+[api.ts:2300](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2300)

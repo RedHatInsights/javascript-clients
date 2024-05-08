@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerNodesCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ ContainerNodesCollection
 
 #### Defined in
 
-[api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L748)
+[api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L748)
 
 ___
 
@@ -42,7 +40,7 @@ ContainerNodesCollection
 
 #### Defined in
 
-[api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L742)
+[api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L742)
 
 ___
 
@@ -56,4 +54,4 @@ ContainerNodesCollection
 
 #### Defined in
 
-[api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L736)
+[api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L736)

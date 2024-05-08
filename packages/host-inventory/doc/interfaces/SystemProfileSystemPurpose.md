@@ -6,8 +6,6 @@ Object for system purpose information
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileSystemPurpose
 
 ## Table of contents
@@ -32,7 +30,7 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2504)
+[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2504)
 
 ___
 
@@ -48,7 +46,7 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2510)
+[api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2510)
 
 ___
 
@@ -64,4 +62,4 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2498)
+[api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2498)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 VulnerabilitiesPostOut
 
 ## Table of contents
@@ -28,7 +26,7 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2716)
+[api.ts:2716](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2716)
 
 ___
 
@@ -42,7 +40,7 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2722)
+[api.ts:2722](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2722)
 
 ___
 
@@ -56,4 +54,4 @@ VulnerabilitiesPostOut
 
 #### Defined in
 
-[api.ts:2728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2728)
+[api.ts:2728](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2728)

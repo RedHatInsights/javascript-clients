@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 VulnerabilitiesPostIn
 
 ## Table of contents
@@ -28,4 +26,4 @@ VulnerabilitiesPostIn
 
 #### Defined in
 
-[api.ts:2703](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2703)
+[api.ts:2703](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2703)

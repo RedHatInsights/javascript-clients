@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationIssueSystemList
 
 ## Table of contents
@@ -27,7 +25,7 @@ RemediationIssueSystemList
 
 #### Defined in
 
-[api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L897)
+[api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L897)
 
 ___
 
@@ -41,4 +39,4 @@ RemediationIssueSystemList
 
 #### Defined in
 
-[api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L903)
+[api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L903)

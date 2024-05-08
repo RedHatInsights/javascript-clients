@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 QuickstartsGet200Response
 
 ## Table of contents
@@ -26,4 +24,4 @@ QuickstartsGet200Response
 
 #### Defined in
 
-[api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L100)
+[api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L100)

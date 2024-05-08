@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Tenant
 
 ## Table of contents
@@ -28,7 +26,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L773)
+[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L773)
 
 ___
 
@@ -42,7 +40,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L779)
+[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L779)
 
 ___
 
@@ -56,4 +54,4 @@ Tenant
 
 #### Defined in
 
-[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L767)
+[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L767)

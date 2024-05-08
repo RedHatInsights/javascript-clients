@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselineDetailResponse
 
 ## Table of contents
@@ -26,4 +24,4 @@ ControllersBaselineDetailResponse
 
 #### Defined in
 
-[api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L453)
+[api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L453)

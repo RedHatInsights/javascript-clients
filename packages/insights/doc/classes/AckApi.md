@@ -6,6 +6,8 @@ AckApi - object-oriented interface
 
 **`Export`**
 
+AckApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -37,7 +39,7 @@ AckApi - object-oriented interface
 
 ### constructor
 
-• **new AckApi**(`configuration?`, `basePath?`, `axios?`)
+• **new AckApi**(`configuration?`, `basePath?`, `axios?`): [`AckApi`](AckApi.md)
 
 #### Parameters
 
@@ -47,13 +49,17 @@ AckApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`AckApi`](AckApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -67,7 +73,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -81,7 +87,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -95,21 +101,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### ackAllList
 
-▸ **ackAllList**(`options?`): `Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
+▸ **ackAllList**(`options?`): `Promise`\<`AxiosResponse`\<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
 
 List acks from all accounts, with org_id.  Has no pagination.
-
-**`Throws`**
-
-**`Memberof`**
-
-AckApi
 
 #### Parameters
 
@@ -119,25 +119,25 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:3051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3051)
-
-___
-
-### ackCreate
-
-▸ **ackCreate**(`ackInput`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
-
-Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
+`Promise`\<`AxiosResponse`\<[`AllAck`](../interfaces/AllAck.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckApi
+
+#### Defined in
+
+[api.ts:3051](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3051)
+
+___
+
+### ackCreate
+
+▸ **ackCreate**(`ackInput`, `options?`): `Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
+
+Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.
 
 #### Parameters
 
@@ -148,25 +148,25 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:3062](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3062)
-
-___
-
-### ackDestroy
-
-▸ **ackDestroy**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<`string`, `any`\>\>
-
-Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
+`Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckApi
+
+#### Defined in
+
+[api.ts:3062](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3062)
+
+___
+
+### ackDestroy
+
+▸ **ackDestroy**(`ruleId`, `options?`): `Promise`\<`AxiosResponse`\<`string`, `any`\>\>
+
+Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.
 
 #### Parameters
 
@@ -177,25 +177,25 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`, `any`\>\>
-
-#### Defined in
-
-[api.ts:3073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3073)
-
-___
-
-### ackList
-
-▸ **ackList**(`limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
-
-List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+`Promise`\<`AxiosResponse`\<`string`, `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckApi
+
+#### Defined in
+
+[api.ts:3073](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3073)
+
+___
+
+### ackList
+
+▸ **ackList**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
+
+List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
 
 #### Parameters
 
@@ -207,25 +207,25 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:3085](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3085)
-
-___
-
-### ackRetrieve
-
-▸ **ackRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
-
-Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
+`Promise`\<`AxiosResponse`\<[`PaginatedAckList`](../interfaces/PaginatedAckList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckApi
+
+#### Defined in
+
+[api.ts:3085](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3085)
+
+___
+
+### ackRetrieve
+
+▸ **ackRetrieve**(`ruleId`, `options?`): `Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
+
+Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
 
 #### Parameters
 
@@ -236,25 +236,25 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:3096](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3096)
-
-___
-
-### ackUpdate
-
-▸ **ackUpdate**(`ruleId`, `ackJustification?`, `options?`): `Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
-
-Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
+`Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckApi
+
+#### Defined in
+
+[api.ts:3096](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3096)
+
+___
+
+### ackUpdate
+
+▸ **ackUpdate**(`ruleId`, `ackJustification?`, `options?`): `Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
+
+Update an acknowledgement for a rule, by rule ID.  A new justification can be supplied.  The username is taken from the authenticated request.  The updated ack is returned.
 
 #### Parameters
 
@@ -266,8 +266,14 @@ AckApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Ack`](../interfaces/Ack.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Ack`](../interfaces/Ack.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+AckApi
 
 #### Defined in
 
-[api.ts:3108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3108)
+[api.ts:3108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3108)

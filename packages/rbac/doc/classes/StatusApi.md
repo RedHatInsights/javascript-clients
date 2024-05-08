@@ -6,6 +6,8 @@ StatusApi - object-oriented interface
 
 **`Export`**
 
+StatusApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ StatusApi - object-oriented interface
 
 ### constructor
 
-• **new StatusApi**(`configuration?`, `basePath?`, `axios?`)
+• **new StatusApi**(`configuration?`, `basePath?`, `axios?`): [`StatusApi`](StatusApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ StatusApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`StatusApi`](StatusApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -90,13 +96,23 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### getStatus
 
-▸ **getStatus**(`options?`): `Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
+▸ **getStatus**(`options?`): `Promise`\<`AxiosResponse`\<[`Status`](../interfaces/Status.md), `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`Status`](../interfaces/Status.md), `any`\>\>
 
 **`Summary`**
 
@@ -108,16 +124,6 @@ Obtain server status
 
 StatusApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`Status`](../interfaces/Status.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:6321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L6321)
+[api.ts:6321](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L6321)

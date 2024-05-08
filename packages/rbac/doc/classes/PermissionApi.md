@@ -6,6 +6,8 @@ PermissionApi - object-oriented interface
 
 **`Export`**
 
+PermissionApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ PermissionApi - object-oriented interface
 
 ### constructor
 
-• **new PermissionApi**(`configuration?`, `basePath?`, `axios?`)
+• **new PermissionApi**(`configuration?`, `basePath?`, `axios?`): [`PermissionApi`](PermissionApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ PermissionApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`PermissionApi`](PermissionApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -91,25 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### listPermissionOptions
 
-▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
+▸ **listPermissionOptions**(`field`, `limit?`, `offset?`, `application?`, `resourceType?`, `verb?`, `excludeGlobals?`, `allowedOnly?`, `options?`): `Promise`\<`AxiosResponse`\<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
 
 By default, options of application is returned. And could be resource_type or verb on demand.
-
-**`Summary`**
-
-List the available options for fields of permissions for a tenant
-
-**`Throws`**
-
-**`Memberof`**
-
-PermissionApi
 
 #### Parameters
 
@@ -127,29 +123,29 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:4786](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4786)
-
-___
-
-### listPermissions
-
-▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
-
-By default, responses are sorted in ascending order by permission application.
+`Promise`\<`AxiosResponse`\<[`PermissionOptionsPagination`](../interfaces/PermissionOptionsPagination.md), `any`\>\>
 
 **`Summary`**
 
-List the permissions for a tenant
+List the available options for fields of permissions for a tenant
 
 **`Throws`**
 
 **`Memberof`**
 
 PermissionApi
+
+#### Defined in
+
+[api.ts:4786](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L4786)
+
+___
+
+### listPermissions
+
+▸ **listPermissions**(`limit?`, `offset?`, `orderBy?`, `application?`, `resourceType?`, `verb?`, `permission?`, `excludeGlobals?`, `excludeRoles?`, `allowedOnly?`, `options?`): `Promise`\<`AxiosResponse`\<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
+
+By default, responses are sorted in ascending order by permission application.
 
 #### Parameters
 
@@ -169,8 +165,18 @@ PermissionApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PermissionPagination`](../interfaces/PermissionPagination.md), `any`\>\>
+
+**`Summary`**
+
+List the permissions for a tenant
+
+**`Throws`**
+
+**`Memberof`**
+
+PermissionApi
 
 #### Defined in
 
-[api.ts:4807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L4807)
+[api.ts:4807](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L4807)

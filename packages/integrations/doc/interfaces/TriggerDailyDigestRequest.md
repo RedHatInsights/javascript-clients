@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 TriggerDailyDigestRequest
 
 ## Table of contents
@@ -30,7 +28,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1710](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1710)
+[packages/integrations/types/index.ts:1710](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1710)
 
 ___
 
@@ -44,7 +42,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1716](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1716)
+[packages/integrations/types/index.ts:1716](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1716)
 
 ___
 
@@ -58,7 +56,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1722](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1722)
+[packages/integrations/types/index.ts:1722](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1722)
 
 ___
 
@@ -72,7 +70,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1728](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1728)
+[packages/integrations/types/index.ts:1728](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1728)
 
 ___
 
@@ -86,4 +84,4 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1734)
+[packages/integrations/types/index.ts:1734](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1734)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Bundle
 
 ## Table of contents
@@ -30,7 +28,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L416)
+[packages/integrations/types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L416)
 
 ___
 
@@ -44,7 +42,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L440)
+[packages/integrations/types/index.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L440)
 
 ___
 
@@ -58,7 +56,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L428)
+[packages/integrations/types/index.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L428)
 
 ___
 
@@ -72,7 +70,7 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L434)
+[packages/integrations/types/index.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L434)
 
 ___
 
@@ -86,4 +84,4 @@ Bundle
 
 #### Defined in
 
-[packages/integrations/types/index.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L422)
+[packages/integrations/types/index.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L422)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Application1
 
 ## Table of contents
@@ -27,7 +25,7 @@ Application1
 
 #### Defined in
 
-[packages/integrations/types/index.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L223)
+[packages/integrations/types/index.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L223)
 
 ___
 
@@ -41,4 +39,4 @@ Application1
 
 #### Defined in
 
-[packages/integrations/types/index.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L217)
+[packages/integrations/types/index.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L217)

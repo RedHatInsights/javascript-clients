@@ -6,8 +6,6 @@ The basic report information for each system affected by a rule.  Only lists bas
 
 **`Export`**
 
-**`Interface`**
-
 ExportHits
 
 ## Table of contents
@@ -38,7 +36,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L268)
+[api.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L268)
 
 ___
 
@@ -52,7 +50,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L286)
+[api.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L286)
 
 ___
 
@@ -66,7 +64,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L310)
+[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L310)
 
 ___
 
@@ -80,7 +78,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L316)
+[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L316)
 
 ___
 
@@ -94,7 +92,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L328)
+[api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L328)
 
 ___
 
@@ -108,7 +106,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L274)
+[api.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L274)
 
 ___
 
@@ -122,7 +120,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L298)
+[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L298)
 
 ___
 
@@ -136,7 +134,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L322)
+[api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L322)
 
 ___
 
@@ -150,7 +148,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L292)
+[api.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L292)
 
 ___
 
@@ -164,7 +162,7 @@ ExportHits
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L304)
+[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L304)
 
 ___
 
@@ -178,4 +176,4 @@ ExportHits
 
 #### Defined in
 
-[api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L280)
+[api.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L280)

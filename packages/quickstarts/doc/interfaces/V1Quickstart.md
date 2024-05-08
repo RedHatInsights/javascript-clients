@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 V1Quickstart
 
 ## Table of contents
@@ -33,7 +31,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L266)
+[api.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L266)
 
 ___
 
@@ -47,7 +45,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:272](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L272)
+[api.ts:272](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L272)
 
 ___
 
@@ -61,7 +59,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L278)
+[api.ts:278](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L278)
 
 ___
 
@@ -75,7 +73,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L284)
+[api.ts:284](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L284)
 
 ___
 
@@ -89,7 +87,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L290)
+[api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L290)
 
 ___
 
@@ -103,7 +101,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L296)
+[api.ts:296](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L296)
 
 ___
 
@@ -117,7 +115,7 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L302)
+[api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L302)
 
 ___
 
@@ -131,4 +129,4 @@ V1Quickstart
 
 #### Defined in
 
-[api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L308)
+[api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L308)

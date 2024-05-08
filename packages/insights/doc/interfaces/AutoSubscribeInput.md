@@ -6,8 +6,6 @@ Serializer specifically for handling CREATE and UPDATE views for AutoSubscribe
 
 **`Export`**
 
-**`Interface`**
-
 AutoSubscribeInput
 
 ## Table of contents
@@ -29,7 +27,7 @@ AutoSubscribeInput
 
 #### Defined in
 
-[api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L255)
+[api.ts:255](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L255)
 
 ___
 
@@ -43,4 +41,4 @@ AutoSubscribeInput
 
 #### Defined in
 
-[api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L249)
+[api.ts:249](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L249)

@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L210)
+[api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L210)
 
 ## Functions
 
@@ -54,8 +54,6 @@
 ▸ **DefaultApiAxiosParamCreator**(`configuration?`): `Object`
 
 DefaultApi - axios parameter creator
-
-**`Export`**
 
 #### Parameters
 
@@ -67,18 +65,20 @@ DefaultApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `favoritesGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `helptopicsGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `quickstartsGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
-| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `favoritesGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+| `helptopicsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+| `quickstartsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L389)
+[api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L389)
 
 ___
 
@@ -87,8 +87,6 @@ ___
 ▸ **DefaultApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
 
 DefaultApi - factory interface
-
-**`Export`**
 
 #### Parameters
 
@@ -104,16 +102,18 @@ DefaultApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `favoritesGet` | (`options?`: `any`) => `AxiosPromise`<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\> |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `any`) => `AxiosPromise`<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\> |
-| `helptopicsGet` | (`options?`: `any`) => `AxiosPromise`<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\> |
-| `helptopicsNameGet` | (`options?`: `any`) => `AxiosPromise`<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\> |
-| `quickstartsGet` | (`options?`: `any`) => `AxiosPromise`<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\> |
-| `quickstartsIdGet` | (`options?`: `any`) => `AxiosPromise`<[`V1Quickstart`](interfaces/V1Quickstart.md)\> |
+| `favoritesGet` | (`options?`: `any`) => `AxiosPromise`\<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\> |
+| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `any`) => `AxiosPromise`\<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\> |
+| `helptopicsGet` | (`options?`: `any`) => `AxiosPromise`\<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\> |
+| `helptopicsNameGet` | (`options?`: `any`) => `AxiosPromise`\<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\> |
+| `quickstartsGet` | (`options?`: `any`) => `AxiosPromise`\<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\> |
+| `quickstartsIdGet` | (`options?`: `any`) => `AxiosPromise`\<[`V1Quickstart`](interfaces/V1Quickstart.md)\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L653)
+[api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L653)
 
 ___
 
@@ -122,8 +122,6 @@ ___
 ▸ **DefaultApiFp**(`configuration?`): `Object`
 
 DefaultApi - functional programming interface
-
-**`Export`**
 
 #### Parameters
 
@@ -137,13 +135,15 @@ DefaultApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `favoritesGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\>\> |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\>\> |
-| `helptopicsGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\>\> |
-| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\>\> |
-| `quickstartsGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\>\> |
-| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`<`any`\>) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<[`V1Quickstart`](interfaces/V1Quickstart.md)\>\> |
+| `favoritesGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\>\> |
+| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\>\> |
+| `helptopicsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\>\> |
+| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\>\> |
+| `quickstartsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\>\> |
+| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`V1Quickstart`](interfaces/V1Quickstart.md)\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L582)
+[api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L582)

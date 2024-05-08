@@ -6,8 +6,6 @@ Object containing image data from command bootc status
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileBootcStatus
 
 ## Table of contents
@@ -31,7 +29,7 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2043)
+[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2043)
 
 ___
 
@@ -45,7 +43,7 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2049)
+[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2049)
 
 ___
 
@@ -59,7 +57,7 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2055)
+[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2055)
 
 ___
 
@@ -73,4 +71,4 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2061)
+[api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2061)

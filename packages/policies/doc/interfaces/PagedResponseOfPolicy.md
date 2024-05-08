@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PagedResponseOfPolicy
 
 ## Table of contents
@@ -28,7 +26,7 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L164)
+[api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L164)
 
 ___
 
@@ -46,7 +44,7 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L158)
+[api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L158)
 
 ___
 
@@ -60,4 +58,4 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L152)
+[api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L152)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CvesWithoutErrataOut
 
 ## Table of contents
@@ -27,7 +25,7 @@ CvesWithoutErrataOut
 
 #### Defined in
 
-[api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L442)
+[api.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L442)
 
 ___
 
@@ -41,4 +39,4 @@ CvesWithoutErrataOut
 
 #### Defined in
 
-[api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L448)
+[api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L448)

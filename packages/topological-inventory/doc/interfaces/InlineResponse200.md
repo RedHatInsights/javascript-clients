@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 InlineResponse200
 
 ## Table of contents
@@ -26,4 +24,4 @@ InlineResponse200
 
 #### Defined in
 
-[api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1570)
+[api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1570)

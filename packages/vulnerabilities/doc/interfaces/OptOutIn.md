@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 OptOutIn
 
 ## Table of contents
@@ -27,7 +25,7 @@ OptOutIn
 
 #### Defined in
 
-[api.ts:2246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2246)
+[api.ts:2246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2246)
 
 ___
 
@@ -43,4 +41,4 @@ OptOutIn
 
 #### Defined in
 
-[api.ts:2252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2252)
+[api.ts:2252](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2252)

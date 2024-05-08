@@ -133,11 +133,11 @@
 
 ### ActionType
 
-Ƭ **ActionType**: (...`config`: `any`) => `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+Ƭ **ActionType**: (...`config`: `any`) => `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Type declaration
 
-▸ (...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ (`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 ##### Parameters
 
@@ -147,11 +147,11 @@
 
 ##### Returns
 
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L55)
+[packages/notifications/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L55)
 
 ___
 
@@ -161,9 +161,9 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L45)
+[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L45)
 
-[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L53)
+[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L53)
 
 ## Variables
 
@@ -183,9 +183,9 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L45)
+[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L45)
 
-[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L53)
+[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L53)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L12)
+[packages/notifications/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L12)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L18)
+[packages/notifications/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L18)
 
 ___
 
@@ -228,13 +228,13 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L13)
+[packages/notifications/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L13)
 
 ## Functions
 
 ### APIFactory
 
-▸ **APIFactory**<`T`\>(`basePath?`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
+▸ **APIFactory**\<`T`\>(`basePath?`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
 
 Factory for creating API with option to add enpoints to the API.
 
@@ -242,7 +242,7 @@ Factory for creating API with option to add enpoints to the API.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends `Record`<`string`, [`ActionType`](modules.md#actiontype)\> |
+| `T` | extends `Record`\<`string`, [`ActionType`](modules.md#actiontype)\> |
 
 #### Parameters
 
@@ -260,17 +260,13 @@ created base API.
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L145)
+[packages/notifications/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L145)
 
 ___
 
 ### assertParamExists
 
 ▸ **assertParamExists**(`functionName`, `paramName`, `paramValue`): `void`
-
-**`Throws`**
-
-**`Export`**
 
 #### Parameters
 
@@ -284,17 +280,19 @@ ___
 
 `void`
 
+**`Throws`**
+
+**`Export`**
+
 #### Defined in
 
-[packages/notifications/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L20)
+[packages/notifications/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L20)
 
 ___
 
 ### createRequestFunction
 
-▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): <T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`<`R`\>
-
-**`Export`**
+▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): \<T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`\<`R`\>
 
 #### Parameters
 
@@ -309,14 +307,14 @@ ___
 
 `fn`
 
-▸ <`T`, `R`\>(`axios?`, `basePath?`): `Promise`<`R`\>
+▸ \<`T`, `R`\>(`axios?`, `basePath?`): `Promise`\<`R`\>
 
 ##### Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`, `any`\> |
+| `R` | `AxiosResponse`\<`T`, `any`\> |
 
 ##### Parameters
 
@@ -327,19 +325,31 @@ ___
 
 ##### Returns
 
-`Promise`<`R`\>
+`Promise`\<`R`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/notifications/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L133)
+[packages/notifications/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L133)
 
 ___
 
 ### drawerResourceV1GetDrawerEntries
 
-▸ **drawerResourceV1GetDrawerEntries**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **drawerResourceV1GetDrawerEntries**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`DrawerResourceV1GetDrawerEntriesParams`] \| [`Set`\<`string`\>, `Set`\<`string`\>, `string`, `Set`\<`string`\>, `number`, `number`, `number`, `boolean`, `string`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -347,27 +357,27 @@ Retrieve drawer notifications entries.
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`DrawerResourceV1GetDrawerEntriesParams`] \| [`Set`<`string`\>, `Set`<`string`\>, `string`, `Set`<`string`\>, `number`, `number`, `number`, `boolean`, `string`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L94)
+[packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L94)
 
 ___
 
 ### drawerResourceV1UpdateNotificationReadStatus
 
-▸ **drawerResourceV1UpdateNotificationReadStatus**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **drawerResourceV1UpdateNotificationReadStatus**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Update drawer notifications status.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`DrawerResourceV1UpdateNotificationReadStatusParams`] \| [[`UpdateNotificationDrawerStatus`](interfaces/UpdateNotificationDrawerStatus.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -375,27 +385,27 @@ Update drawer notifications status.
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`DrawerResourceV1UpdateNotificationReadStatusParams`] \| [[`UpdateNotificationDrawerStatus`](interfaces/UpdateNotificationDrawerStatus.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L34)
+[packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L34)
 
 ___
 
 ### eventResourceV1GetEvents
 
-▸ **eventResourceV1GetEvents**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **eventResourceV1GetEvents**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EventResourceV1GetEventsParams`] \| [`Set`\<`string`\>, `Set`\<`string`\>, `string`, `Set`\<`string`\>, `string`, `boolean`, `boolean`, `boolean`, `Set`\<`boolean`\>, `number`, `number`, `number`, `string`, `string`, `string`, `Set`\<[`EventLogEntryActionStatus`](enums/EventLogEntryActionStatus.md)\>, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -403,25 +413,25 @@ Retrieve the event log entries
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EventResourceV1GetEventsParams`] \| [`Set`<`string`\>, `Set`<`string`\>, `string`, `Set`<`string`\>, `string`, `boolean`, `boolean`, `boolean`, `Set`<`boolean`\>, `number`, `number`, `number`, `string`, `string`, `string`, `Set`<[`EventLogEntryActionStatus`](enums/EventLogEntryActionStatus.md)\>, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/EventResourceV1GetEvents/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/EventResourceV1GetEvents/index.ts#L124)
+[packages/notifications/EventResourceV1GetEvents/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/EventResourceV1GetEvents/index.ts#L124)
 
 ___
 
 ### notificationResourceV1AppendBehaviorGroupToEventType
 
-▸ **notificationResourceV1AppendBehaviorGroupToEventType**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1AppendBehaviorGroupToEventType**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1AppendBehaviorGroupToEventTypeParams`] \| [`string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -429,27 +439,27 @@ Add a behavior group to the given event type.
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1AppendBehaviorGroupToEventTypeParams`] \| [`string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L40)
+[packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L40)
 
 ___
 
 ### notificationResourceV1CreateBehaviorGroup
 
-▸ **notificationResourceV1CreateBehaviorGroup**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1CreateBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1CreateBehaviorGroupParams`] \| [[`CreateBehaviorGroupRequest`](interfaces/CreateBehaviorGroupRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -457,27 +467,27 @@ Create a behavior group
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1CreateBehaviorGroupParams`] \| [[`CreateBehaviorGroupRequest`](interfaces/CreateBehaviorGroupRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts#L34)
+[packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1CreateBehaviorGroup/index.ts#L34)
 
 ___
 
 ### notificationResourceV1DeleteBehaviorGroup
 
-▸ **notificationResourceV1DeleteBehaviorGroup**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1DeleteBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1DeleteBehaviorGroupParams`] \| [`string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -485,27 +495,27 @@ Delete a behavior group
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1DeleteBehaviorGroupParams`] \| [`string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L34)
+[packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L34)
 
 ___
 
 ### notificationResourceV1DeleteBehaviorGroupFromEventType
 
-▸ **notificationResourceV1DeleteBehaviorGroupFromEventType**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1DeleteBehaviorGroupFromEventType**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Adds a behavior group to the specified event type.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -513,27 +523,27 @@ Add a behavior group to an event type
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L40)
+[packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L40)
 
 ___
 
 ### notificationResourceV1FindBehaviorGroupsByBundleId
 
-▸ **notificationResourceV1FindBehaviorGroupsByBundleId**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1FindBehaviorGroupsByBundleId**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1FindBehaviorGroupsByBundleIdParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -541,27 +551,27 @@ List behavior groups in a bundle
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1FindBehaviorGroupsByBundleIdParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L34)
+[packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetApplicationByNameAndBundleName
 
-▸ **notificationResourceV1GetApplicationByNameAndBundleName**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetApplicationByNameAndBundleName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1GetApplicationByNameAndBundleNameParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -569,27 +579,27 @@ Retrieve an application by bundle and application names
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetApplicationByNameAndBundleNameParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L40)
+[packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L40)
 
 ___
 
 ### notificationResourceV1GetApplicationsFacets
 
-▸ **notificationResourceV1GetApplicationsFacets**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetApplicationsFacets**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1GetApplicationsFacetsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -597,27 +607,27 @@ List configured applications
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetApplicationsFacetsParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L34)
+[packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint
 
-▸ **notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -625,27 +635,27 @@ List the behavior groups affected by the removal of an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts#L34)
+[packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetBundleByName
 
-▸ **notificationResourceV1GetBundleByName**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBundleByName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the details of a bundle by searching by its name.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1GetBundleByNameParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -653,27 +663,27 @@ Retrieve a bundle by name
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetBundleByNameParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetBundleByName/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L34)
+[packages/notifications/NotificationResourceV1GetBundleByName/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetBundleFacets
 
-▸ **notificationResourceV1GetBundleFacets**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBundleFacets**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1GetBundleFacetsParams`] \| [`boolean`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -681,27 +691,27 @@ List configured bundles
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetBundleFacetsParams`] \| [`boolean`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetBundleFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetBundleFacets/index.ts#L34)
+[packages/notifications/NotificationResourceV1GetBundleFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleFacets/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetEventTypes
 
-▸ **notificationResourceV1GetEventTypes**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypes**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Lists all event types. You can filter the returned list by bundle or application name.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1GetEventTypesParams`] \| [`Set`\<`string`\>, `string`, `string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -709,27 +719,27 @@ List all event types
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetEventTypesParams`] \| [`Set`<`string`\>, `string`, `string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypes/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L76)
+[packages/notifications/NotificationResourceV1GetEventTypes/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L76)
 
 ___
 
 ### notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
 
-▸ **notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -737,27 +747,27 @@ List the event types affected by the removal of a behavior group
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts#L34)
+[packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup/index.ts#L34)
 
 ___
 
 ### notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName
 
-▸ **notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams`] \| [`string`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -765,27 +775,27 @@ Retrieve an event type by bundle, application and event type names
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams`] \| [`string`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L46)
+[packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L46)
 
 ___
 
 ### notificationResourceV1GetLinkedBehaviorGroups
 
-▸ **notificationResourceV1GetLinkedBehaviorGroups**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetLinkedBehaviorGroups**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1GetLinkedBehaviorGroupsParams`] \| [`string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -793,27 +803,27 @@ List the behavior groups linked to an event type
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1GetLinkedBehaviorGroupsParams`] \| [`string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L64)
+[packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L64)
 
 ___
 
 ### notificationResourceV1UpdateBehaviorGroup
 
-▸ **notificationResourceV1UpdateBehaviorGroup**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1UpdateBehaviorGroupParams`] \| [`string`, [`UpdateBehaviorGroupRequest`](interfaces/UpdateBehaviorGroupRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -821,27 +831,27 @@ Update a behavior group
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateBehaviorGroupParams`] \| [`string`, [`UpdateBehaviorGroupRequest`](interfaces/UpdateBehaviorGroupRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L40)
+[packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L40)
 
 ___
 
 ### notificationResourceV1UpdateBehaviorGroupActions
 
-▸ **notificationResourceV1UpdateBehaviorGroupActions**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateBehaviorGroupActions**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Updates the list of actions to be executed in that particular behavior group after an event is received.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1UpdateBehaviorGroupActionsParams`] \| [`string`, `string`[], `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -849,27 +859,27 @@ Update the list of behavior group actions
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateBehaviorGroupActionsParams`] \| [`string`, `string`[], `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L40)
+[packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L40)
 
 ___
 
 ### notificationResourceV1UpdateEventTypeBehaviors
 
-▸ **notificationResourceV1UpdateEventTypeBehaviors**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateEventTypeBehaviors**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Updates the list of behavior groups associated with an event type.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`NotificationResourceV1UpdateEventTypeBehaviorsParams`] \| [`string`, `Set`\<`string`\>, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -877,27 +887,27 @@ Update the list of behavior groups for an event type
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`NotificationResourceV1UpdateEventTypeBehaviorsParams`] \| [`string`, `Set`<`string`\>, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L40)
+[packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L40)
 
 ___
 
 ### orgConfigResourceV1GetDailyDigestTimePreference
 
-▸ **orgConfigResourceV1GetDailyDigestTimePreference**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **orgConfigResourceV1GetDailyDigestTimePreference**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`OrgConfigResourceV1GetDailyDigestTimePreferenceParams`] \| [`AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -905,27 +915,27 @@ Retrieve the daily digest time
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`OrgConfigResourceV1GetDailyDigestTimePreferenceParams`] \| [`AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts#L28)
+[packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1GetDailyDigestTimePreference/index.ts#L28)
 
 ___
 
 ### orgConfigResourceV1SaveDailyDigestTimePreference
 
-▸ **orgConfigResourceV1SaveDailyDigestTimePreference**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **orgConfigResourceV1SaveDailyDigestTimePreference**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`OrgConfigResourceV1SaveDailyDigestTimePreferenceParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -933,27 +943,15 @@ Set the daily digest time
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`OrgConfigResourceV1SaveDailyDigestTimePreferenceParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)
+[packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)
 
 ___
 
 ### serializeDataIfNeeded
 
 ▸ **serializeDataIfNeeded**(`value`, `requestOptions`, `configuration?`): `any`
-
-**`Export`**
 
 #### Parameters
 
@@ -967,17 +965,17 @@ ___
 
 `any`
 
+**`Export`**
+
 #### Defined in
 
-[packages/notifications/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L111)
+[packages/notifications/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L111)
 
 ___
 
 ### setApiKeyToObject
 
-▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -989,19 +987,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/notifications/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L30)
+[packages/notifications/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L30)
 
 ___
 
 ### setBasicAuthToObject
 
 ▸ **setBasicAuthToObject**(`object`, `configuration?`): `void`
-
-**`Export`**
 
 #### Parameters
 
@@ -1014,17 +1012,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/notifications/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L43)
+[packages/notifications/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L43)
 
 ___
 
 ### setBearerAuthToObject
 
-▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -1035,19 +1033,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/notifications/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L53)
+[packages/notifications/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L53)
 
 ___
 
 ### setOAuthToObject
 
-▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -1060,19 +1058,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/notifications/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L66)
+[packages/notifications/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L66)
 
 ___
 
 ### setSearchParams
 
-▸ **setSearchParams**(`url`, ...`objects`): `void`
-
-**`Export`**
+▸ **setSearchParams**(`url`, `...objects`): `void`
 
 #### Parameters
 
@@ -1085,17 +1083,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/notifications/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L101)
+[packages/notifications/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L101)
 
 ___
 
 ### toPathString
 
 ▸ **toPathString**(`url`): `string`
-
-**`Export`**
 
 #### Parameters
 
@@ -1107,6 +1105,8 @@ ___
 
 `string`
 
+**`Export`**
+
 #### Defined in
 
-[packages/notifications/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/common.ts#L125)
+[packages/notifications/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L125)

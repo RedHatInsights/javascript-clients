@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselinesResponse
 
 ## Table of contents
@@ -30,7 +28,7 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L586)
+[api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L586)
 
 ___
 
@@ -44,7 +42,7 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L592)
+[api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L592)
 
 ___
 
@@ -58,4 +56,4 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L598)
+[api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L598)

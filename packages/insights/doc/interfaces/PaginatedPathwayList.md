@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedPathwayList
 
 ## Table of contents
@@ -28,7 +26,7 @@ PaginatedPathwayList
 
 #### Defined in
 
-[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L723)
+[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L723)
 
 ___
 
@@ -42,7 +40,7 @@ PaginatedPathwayList
 
 #### Defined in
 
-[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L717)
+[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L717)
 
 ___
 
@@ -56,4 +54,4 @@ PaginatedPathwayList
 
 #### Defined in
 
-[api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L711)
+[api.ts:711](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L711)

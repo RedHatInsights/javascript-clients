@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedSystemsDetailList
 
 ## Table of contents
@@ -28,7 +26,7 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L898)
+[api.ts:898](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L898)
 
 ___
 
@@ -42,7 +40,7 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L892)
+[api.ts:892](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L892)
 
 ___
 
@@ -56,4 +54,4 @@ PaginatedSystemsDetailList
 
 #### Defined in
 
-[api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L886)
+[api.ts:886](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L886)

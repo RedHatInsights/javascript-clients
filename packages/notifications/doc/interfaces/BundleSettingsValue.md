@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BundleSettingsValue
 
 ## Table of contents
@@ -30,4 +28,4 @@ BundleSettingsValue
 
 #### Defined in
 
-[packages/notifications/types/index.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L453)
+[packages/notifications/types/index.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L453)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SourceTypesCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L729)
+[api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L729)
 
 ___
 
@@ -42,7 +40,7 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L723)
+[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L723)
 
 ___
 
@@ -56,4 +54,4 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L717)
+[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L717)

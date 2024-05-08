@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 UUID
 
 ## Table of contents
@@ -26,4 +24,4 @@ UUID
 
 #### Defined in
 
-[api.ts:2580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2580)
+[api.ts:2580](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2580)

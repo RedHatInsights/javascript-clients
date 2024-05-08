@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SubscriptionExcludedAccount
 
 ## Table of contents
@@ -27,7 +25,7 @@ SubscriptionExcludedAccount
 
 #### Defined in
 
-[api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2006)
+[api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2006)
 
 ___
 
@@ -41,4 +39,4 @@ SubscriptionExcludedAccount
 
 #### Defined in
 
-[api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2000)
+[api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2000)

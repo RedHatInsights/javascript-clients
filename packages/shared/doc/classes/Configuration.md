@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[packages/shared/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L65)
+[packages/shared/configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L65)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L41)
+[packages/shared/configuration.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L41)
 
 ___
 
@@ -84,7 +84,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L20)
+[packages/shared/configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L20)
 
 ___
 
@@ -100,7 +100,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L55)
+[packages/shared/configuration.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L55)
 
 ___
 
@@ -116,7 +116,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L48)
+[packages/shared/configuration.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L48)
 
 ___
 
@@ -138,7 +138,7 @@ do not support the FormData class can still run the generated client.
 
 #### Defined in
 
-[packages/shared/configuration.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L63)
+[packages/shared/configuration.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L63)
 
 ___
 
@@ -154,7 +154,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L34)
+[packages/shared/configuration.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L34)
 
 ___
 
@@ -170,7 +170,7 @@ Configuration
 
 #### Defined in
 
-[packages/shared/configuration.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L27)
+[packages/shared/configuration.ts:27](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L27)
 
 ## Methods
 
@@ -199,4 +199,4 @@ True if the given MIME is JSON, false otherwise.
 
 #### Defined in
 
-[packages/shared/configuration.ts:85](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/configuration.ts#L85)
+[packages/shared/configuration.ts:85](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/configuration.ts#L85)

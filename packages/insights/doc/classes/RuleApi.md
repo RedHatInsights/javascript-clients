@@ -6,6 +6,8 @@ RuleApi - object-oriented interface
 
 **`Export`**
 
+RuleApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -39,7 +41,7 @@ RuleApi - object-oriented interface
 
 ### constructor
 
-• **new RuleApi**(`configuration?`, `basePath?`, `axios?`)
+• **new RuleApi**(`configuration?`, `basePath?`, `axios?`): [`RuleApi`](RuleApi.md)
 
 #### Parameters
 
@@ -49,13 +51,17 @@ RuleApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`RuleApi`](RuleApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -69,7 +75,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -83,7 +89,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -97,21 +103,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### ruleAckHostsCreate
 
-▸ **ruleAckHostsCreate**(`ruleId`, `multiHostAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+▸ **ruleAckHostsCreate**(`ruleId`, `multiHostAck`, `options?`): `Promise`\<`AxiosResponse`\<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
 
 Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.
-
-**`Throws`**
-
-**`Memberof`**
-
-RuleApi
 
 #### Parameters
 
@@ -123,25 +123,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7443)
-
-___
-
-### ruleJustificationsList
-
-▸ **ruleJustificationsList**(`ruleId`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
-
-List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
+`Promise`\<`AxiosResponse`\<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7443)
+
+___
+
+### ruleJustificationsList
+
+▸ **ruleJustificationsList**(`ruleId`, `limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
+
+List all justifications given for disabling this rule.  This is an **internal-only** view that allows us to provide feedback on why rules are disabled by our customers.  It lists the justifications given in both account-wide acks and host-specific acks of a rule.
 
 #### Parameters
 
@@ -154,25 +154,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7456](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7456)
-
-___
-
-### ruleList
-
-▸ **ruleList**(`category?`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
-
-List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
+`Promise`\<`AxiosResponse`\<[`PaginatedJustificationCountList`](../interfaces/PaginatedJustificationCountList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7456](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7456)
+
+___
+
+### ruleList
+
+▸ **ruleList**(`category?`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `hasTag?`, `impact?`, `impacting?`, `incident?`, `likelihood?`, `limit?`, `offset?`, `pathway?`, `reboot?`, `reportsShown?`, `resRisk?`, `ruleStatus?`, `sort?`, `tags?`, `text?`, `topic?`, `totalRisk?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
+
+List all active rules for this account.  If \'acked\' is False or not given, then only rules that are not acked will be shown.  If acked is set and \'true\' as a string or evaluates to a true value, then all rules including those that are acked will be shown.
 
 #### Parameters
 
@@ -207,25 +207,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7491](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7491)
-
-___
-
-### ruleRetrieve
-
-▸ **ruleRetrieve**(`ruleId`, `groups?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
-
-Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
+`Promise`\<`AxiosResponse`\<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7491)
+
+___
+
+### ruleRetrieve
+
+▸ **ruleRetrieve**(`ruleId`, `groups?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
+
+Retrieve a single rule and its associated details.  This includes the account-relevant details such as number of impacted systems and host acknowledgements.
 
 #### Parameters
 
@@ -238,25 +238,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7504)
-
-___
-
-### ruleStatsRetrieve
-
-▸ **ruleStatsRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
-
-Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
+`Promise`\<`AxiosResponse`\<[`RuleForAccount`](../interfaces/RuleForAccount.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7504)
+
+___
+
+### ruleStatsRetrieve
+
+▸ **ruleStatsRetrieve**(`ruleId`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
+
+Display usage and impact statistics for this rule.  For internal use only.  This allows rule developers to see the number of systems and accounts impacted by a rule.
 
 #### Parameters
 
@@ -267,25 +267,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7515)
-
-___
-
-### ruleSystemsDetailList
-
-▸ **ruleSystemsDetailList**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
-
-List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
+`Promise`\<`AxiosResponse`\<[`RuleUsageStats`](../interfaces/RuleUsageStats.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7515](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7515)
+
+___
+
+### ruleSystemsDetailList
+
+▸ **ruleSystemsDetailList**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `limit?`, `name?`, `offset?`, `rhelVersion?`, `sort?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
+
+List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.
 
 #### Parameters
 
@@ -307,25 +307,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7537](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7537)
-
-___
-
-### ruleSystemsRetrieve
-
-▸ **ruleSystemsRetrieve**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
-
-List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
+`Promise`\<`AxiosResponse`\<[`PaginatedSystemsDetailList`](../interfaces/PaginatedSystemsDetailList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7537](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7537)
+
+___
+
+### ruleSystemsRetrieve
+
+▸ **ruleSystemsRetrieve**(`ruleId`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `name?`, `rhelVersion?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
+
+List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.
 
 #### Parameters
 
@@ -347,25 +347,25 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:7559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7559)
-
-___
-
-### ruleUnackHostsCreate
-
-▸ **ruleUnackHostsCreate**(`ruleId`, `multiHostUnAck`, `options?`): `Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
-
-Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
+`Promise`\<`AxiosResponse`\<[`SystemsForRule`](../interfaces/SystemsForRule.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RuleApi
+
+#### Defined in
+
+[api.ts:7559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7559)
+
+___
+
+### ruleUnackHostsCreate
+
+▸ **ruleUnackHostsCreate**(`ruleId`, `multiHostUnAck`, `options?`): `Promise`\<`AxiosResponse`\<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+
+Delete acknowledgements for one or more hosts to this rule.  Any host acknowledgements for this rule in this account for the given system are deleted.  Hosts that do not have an acknowledgement for this rule in this account are ignored.  The count of deleted host acknowledgements, and the list of hosts now impacted by this rule, will be returned.  Account-wide acks are unaffected.
 
 #### Parameters
 
@@ -377,8 +377,14 @@ RuleApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`MultiAckResponse`](../interfaces/MultiAckResponse.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+RuleApi
 
 #### Defined in
 
-[api.ts:7571](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7571)
+[api.ts:7571](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7571)

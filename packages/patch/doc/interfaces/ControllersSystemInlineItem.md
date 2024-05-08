@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersSystemInlineItem
 
 ## Table of contents
@@ -50,7 +48,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1207)
+[api.ts:1207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1207)
 
 ___
 
@@ -64,7 +62,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1213)
+[api.ts:1213](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1213)
 
 ___
 
@@ -78,7 +76,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1219)
+[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1219)
 
 ___
 
@@ -92,7 +90,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1225)
+[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1225)
 
 ___
 
@@ -106,7 +104,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1231)
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1231)
 
 ___
 
@@ -120,7 +118,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1237)
+[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1237)
 
 ___
 
@@ -134,7 +132,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1243)
+[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1243)
 
 ___
 
@@ -148,7 +146,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1249)
+[api.ts:1249](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1249)
 
 ___
 
@@ -162,7 +160,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1255)
+[api.ts:1255](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1255)
 
 ___
 
@@ -176,7 +174,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1261)
+[api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1261)
 
 ___
 
@@ -190,7 +188,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1267)
+[api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1267)
 
 ___
 
@@ -204,7 +202,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1273)
+[api.ts:1273](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1273)
 
 ___
 
@@ -218,7 +216,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1279)
+[api.ts:1279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1279)
 
 ___
 
@@ -232,7 +230,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1285)
+[api.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1285)
 
 ___
 
@@ -246,7 +244,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1291)
+[api.ts:1291](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1291)
 
 ___
 
@@ -260,7 +258,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1297)
+[api.ts:1297](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1297)
 
 ___
 
@@ -274,7 +272,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1303)
+[api.ts:1303](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1303)
 
 ___
 
@@ -288,7 +286,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1309)
+[api.ts:1309](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1309)
 
 ___
 
@@ -302,7 +300,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1315)
+[api.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1315)
 
 ___
 
@@ -316,7 +314,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1321)
+[api.ts:1321](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1321)
 
 ___
 
@@ -330,7 +328,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1327)
+[api.ts:1327](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1327)
 
 ___
 
@@ -344,7 +342,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1333)
+[api.ts:1333](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1333)
 
 ___
 
@@ -358,7 +356,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1339)
+[api.ts:1339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1339)
 
 ___
 
@@ -372,7 +370,7 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1345)
+[api.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1345)
 
 ___
 
@@ -386,4 +384,4 @@ ControllersSystemInlineItem
 
 #### Defined in
 
-[api.ts:1351](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1351)
+[api.ts:1351](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1351)

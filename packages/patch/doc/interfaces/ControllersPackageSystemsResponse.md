@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersPackageSystemsResponse
 
 ## Table of contents
@@ -28,7 +26,7 @@ ControllersPackageSystemsResponse
 
 #### Defined in
 
-[api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L928)
+[api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L928)
 
 ___
 
@@ -42,7 +40,7 @@ ControllersPackageSystemsResponse
 
 #### Defined in
 
-[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L934)
+[api.ts:934](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L934)
 
 ___
 
@@ -56,4 +54,4 @@ ControllersPackageSystemsResponse
 
 #### Defined in
 
-[api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L940)
+[api.ts:940](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L940)

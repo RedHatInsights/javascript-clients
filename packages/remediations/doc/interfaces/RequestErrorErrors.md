@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RequestErrorErrors
 
 ## Table of contents
@@ -30,7 +28,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1089)
+[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1089)
 
 ___
 
@@ -44,7 +42,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1101)
+[api.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1101)
 
 ___
 
@@ -58,7 +56,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1077)
+[api.ts:1077](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1077)
 
 ___
 
@@ -72,7 +70,7 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1083)
+[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1083)
 
 ___
 
@@ -86,4 +84,4 @@ RequestErrorErrors
 
 #### Defined in
 
-[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1095)
+[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1095)

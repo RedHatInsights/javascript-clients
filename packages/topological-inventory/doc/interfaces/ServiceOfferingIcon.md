@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceOfferingIcon
 
 ## Table of contents
@@ -32,7 +30,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2754)
+[api.ts:2754](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2754)
 
 ___
 
@@ -48,7 +46,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2760)
+[api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2760)
 
 ___
 
@@ -64,7 +62,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2766)
+[api.ts:2766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2766)
 
 ___
 
@@ -78,7 +76,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2772)
+[api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2772)
 
 ___
 
@@ -94,7 +92,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2778)
+[api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2778)
 
 ___
 
@@ -108,7 +106,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2784)
+[api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2784)
 
 ___
 
@@ -122,4 +120,4 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2790)
+[api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2790)

@@ -6,6 +6,8 @@ SettingsApi - object-oriented interface
 
 **`Export`**
 
+SettingsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ SettingsApi - object-oriented interface
 
 ### constructor
 
-• **new SettingsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new SettingsApi**(`configuration?`, `basePath?`, `axios?`): [`SettingsApi`](SettingsApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ SettingsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`SettingsApi`](SettingsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -90,21 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### settingsList
 
-▸ **settingsList**(`options?`): `Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+▸ **settingsList**(`options?`): `Promise`\<`AxiosResponse`\<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
 
 Describe the settings we have in a Data-Driven Forms way.  This simply compiles the \'show_satellite_hosts\' account-wide setting into a format compatible with Data-Driven Forms.
-
-**`Throws`**
-
-**`Memberof`**
-
-SettingsApi
 
 #### Parameters
 
@@ -114,8 +114,14 @@ SettingsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`SettingsDDF`](../interfaces/SettingsDDF.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+SettingsApi
 
 #### Defined in
 
-[api.ts:7839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7839)
+[api.ts:7839](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7839)

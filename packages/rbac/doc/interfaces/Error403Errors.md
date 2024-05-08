@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Error403Errors
 
 ## Table of contents
@@ -28,7 +26,7 @@ Error403Errors
 
 #### Defined in
 
-[api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L800)
+[api.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L800)
 
 ___
 
@@ -42,7 +40,7 @@ Error403Errors
 
 #### Defined in
 
-[api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L806)
+[api.ts:806](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L806)
 
 ___
 
@@ -56,4 +54,4 @@ Error403Errors
 
 #### Defined in
 
-[api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L812)
+[api.ts:812](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L812)

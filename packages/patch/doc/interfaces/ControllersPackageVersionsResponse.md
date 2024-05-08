@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersPackageVersionsResponse
 
 ## Table of contents
@@ -28,7 +26,7 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L966)
+[api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L966)
 
 ___
 
@@ -42,7 +40,7 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L972)
+[api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L972)
 
 ___
 
@@ -56,4 +54,4 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L978)
+[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L978)

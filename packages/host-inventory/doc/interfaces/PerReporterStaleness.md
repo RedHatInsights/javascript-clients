@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PerReporterStaleness
 
 ## Table of contents
@@ -30,7 +28,7 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1243)
+[api.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1243)
 
 ___
 
@@ -44,7 +42,7 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1237)
+[api.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1237)
 
 ___
 
@@ -58,7 +56,7 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1219)
+[api.ts:1219](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1219)
 
 ___
 
@@ -72,7 +70,7 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1225)
+[api.ts:1225](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1225)
 
 ___
 
@@ -86,4 +84,4 @@ PerReporterStaleness
 
 #### Defined in
 
-[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1231)
+[api.ts:1231](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1231)

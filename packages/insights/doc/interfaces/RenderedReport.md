@@ -6,8 +6,6 @@ The actual rule fields with the report data for a particular system rendered int
 
 **`Export`**
 
-**`Interface`**
-
 RenderedReport
 
 ## Table of contents
@@ -33,7 +31,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1113)
+[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1113)
 
 ___
 
@@ -47,7 +45,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1125)
+[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1125)
 
 ___
 
@@ -61,7 +59,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1137)
+[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1137)
 
 ___
 
@@ -75,7 +73,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1131)
+[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1131)
 
 ___
 
@@ -89,7 +87,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1143)
+[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1143)
 
 ___
 
@@ -103,4 +101,4 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1119)
+[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1119)

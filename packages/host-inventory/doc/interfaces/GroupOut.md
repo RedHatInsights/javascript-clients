@@ -6,8 +6,6 @@ Data of a single group belonging to an account.
 
 **`Export`**
 
-**`Interface`**
-
 GroupOut
 
 ## Table of contents
@@ -35,7 +33,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L578)
+[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L578)
 
 ___
 
@@ -51,7 +49,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L590)
+[api.ts:590](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L590)
 
 ___
 
@@ -65,7 +63,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L566)
+[api.ts:566](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L566)
 
 ___
 
@@ -81,7 +79,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L572)
+[api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L572)
 
 ___
 
@@ -97,7 +95,7 @@ GroupOut
 
 #### Defined in
 
-[api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L584)
+[api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L584)
 
 ___
 
@@ -113,4 +111,4 @@ GroupOut
 
 #### Defined in
 
-[api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L596)
+[api.ts:596](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L596)

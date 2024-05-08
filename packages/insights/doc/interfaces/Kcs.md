@@ -6,8 +6,6 @@ Pairings of C.R.C rule URL and its KCS solution number (node_id)
 
 **`Export`**
 
-**`Interface`**
-
 Kcs
 
 ## Table of contents
@@ -31,7 +29,7 @@ Kcs
 
 #### Defined in
 
-[api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L465)
+[api.ts:465](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L465)
 
 ___
 
@@ -47,4 +45,4 @@ Kcs
 
 #### Defined in
 
-[api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L459)
+[api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L459)

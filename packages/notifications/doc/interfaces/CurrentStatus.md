@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CurrentStatus
 
 ## Table of contents
@@ -28,7 +26,7 @@ CurrentStatus
 
 #### Defined in
 
-[packages/notifications/types/index.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L613)
+[packages/notifications/types/index.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L613)
 
 ___
 
@@ -42,7 +40,7 @@ CurrentStatus
 
 #### Defined in
 
-[packages/notifications/types/index.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L607)
+[packages/notifications/types/index.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L607)
 
 ___
 
@@ -56,4 +54,4 @@ CurrentStatus
 
 #### Defined in
 
-[packages/notifications/types/index.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L601)
+[packages/notifications/types/index.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L601)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileBootcStatusBooted
 
 ## Table of contents
@@ -29,7 +27,7 @@ SystemProfileBootcStatusBooted
 
 #### Defined in
 
-[api.ts:2074](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2074)
+[api.ts:2074](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2074)
 
 ___
 
@@ -45,4 +43,4 @@ SystemProfileBootcStatusBooted
 
 #### Defined in
 
-[api.ts:2080](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2080)
+[api.ts:2080](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2080)

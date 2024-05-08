@@ -6,8 +6,6 @@ Data describing a single resource-types RBAC object.
 
 **`Export`**
 
-**`Interface`**
-
 ResourceTypesOut
 
 ## Table of contents
@@ -30,7 +28,7 @@ ResourceTypesOut
 
 #### Defined in
 
-[api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1355)
+[api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1355)
 
 ___
 
@@ -46,7 +44,7 @@ ResourceTypesOut
 
 #### Defined in
 
-[api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1349)
+[api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1349)
 
 ___
 
@@ -62,4 +60,4 @@ ResourceTypesOut
 
 #### Defined in
 
-[api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1343)
+[api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1343)

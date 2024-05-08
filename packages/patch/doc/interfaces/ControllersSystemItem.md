@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersSystemItem
 
 ## Table of contents
@@ -28,7 +26,7 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1364)
+[api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1364)
 
 ___
 
@@ -42,7 +40,7 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1370)
+[api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1370)
 
 ___
 
@@ -56,4 +54,4 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1376)
+[api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1376)

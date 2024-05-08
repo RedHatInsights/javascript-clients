@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 UpdateApplicationRequest
 
 ## Table of contents
@@ -28,7 +26,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1753)
+[packages/notifications/types/index.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1753)
 
 ___
 
@@ -42,7 +40,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1747)
+[packages/notifications/types/index.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1747)
 
 ___
 
@@ -56,4 +54,4 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1759)
+[packages/notifications/types/index.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1759)

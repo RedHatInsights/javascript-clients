@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersPackageSystemItem
 
 ## Table of contents
@@ -33,7 +31,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L873)
+[api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L873)
 
 ___
 
@@ -47,7 +45,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L879)
+[api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L879)
 
 ___
 
@@ -61,7 +59,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L885)
+[api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L885)
 
 ___
 
@@ -75,7 +73,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L891)
+[api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L891)
 
 ___
 
@@ -89,7 +87,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L897)
+[api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L897)
 
 ___
 
@@ -103,7 +101,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L903)
+[api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L903)
 
 ___
 
@@ -117,7 +115,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L909)
+[api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L909)
 
 ___
 
@@ -131,4 +129,4 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L915)
+[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L915)

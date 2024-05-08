@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookRunExecutorDetails
 
 ## Table of contents
@@ -32,7 +30,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L440)
+[api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L440)
 
 ___
 
@@ -46,7 +44,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L434)
+[api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L434)
 
 ___
 
@@ -60,7 +58,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L422)
+[api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L422)
 
 ___
 
@@ -74,7 +72,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L416)
+[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L416)
 
 ___
 
@@ -88,7 +86,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L428)
+[api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L428)
 
 ___
 
@@ -102,7 +100,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L452)
+[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L452)
 
 ___
 
@@ -116,4 +114,4 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L446)
+[api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L446)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GraphQLRequest
 
 ## Table of contents
@@ -30,7 +28,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L551)
+[api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L551)
 
 ___
 
@@ -46,7 +44,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L545)
+[api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L545)
 
 ___
 
@@ -62,4 +60,4 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L557)
+[api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L557)

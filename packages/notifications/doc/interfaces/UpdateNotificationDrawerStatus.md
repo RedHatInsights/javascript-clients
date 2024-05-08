@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 UpdateNotificationDrawerStatus
 
 ## Table of contents
@@ -19,7 +17,7 @@ UpdateNotificationDrawerStatus
 
 ### notification\_ids
 
-• **notification\_ids**: `Set`<`string`\>
+• **notification\_ids**: `Set`\<`string`\>
 
 **`Memberof`**
 
@@ -27,7 +25,7 @@ UpdateNotificationDrawerStatus
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1803)
+[packages/notifications/types/index.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1803)
 
 ___
 
@@ -41,4 +39,4 @@ UpdateNotificationDrawerStatus
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1809)
+[packages/notifications/types/index.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1809)

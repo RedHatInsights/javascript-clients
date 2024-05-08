@@ -6,8 +6,6 @@ Number of CVEs discovered on the managed systems, divided into buckets based on 
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportCvesBySeverity
 
 ## Table of contents
@@ -30,7 +28,7 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L852)
+[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L852)
 
 ___
 
@@ -44,7 +42,7 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L858)
+[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L858)
 
 ___
 
@@ -58,4 +56,4 @@ ExecutiveReportCvesBySeverity
 
 #### Defined in
 
-[api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L864)
+[api.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L864)

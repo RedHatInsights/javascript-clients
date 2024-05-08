@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CollectionMetadata
 
 ## Table of contents
@@ -28,7 +26,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L360)
+[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L360)
 
 ___
 
@@ -42,7 +40,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L366)
+[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L366)
 
 ___
 
@@ -56,4 +54,4 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L372)
+[api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L372)

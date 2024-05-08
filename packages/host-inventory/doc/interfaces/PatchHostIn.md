@@ -6,8 +6,6 @@ Data of a single host to be updated.
 
 **`Export`**
 
-**`Interface`**
-
 PatchHostIn
 
 ## Table of contents
@@ -31,7 +29,7 @@ PatchHostIn
 
 #### Defined in
 
-[api.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1200)
+[api.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1200)
 
 ___
 
@@ -47,4 +45,4 @@ PatchHostIn
 
 #### Defined in
 
-[api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1206)
+[api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1206)

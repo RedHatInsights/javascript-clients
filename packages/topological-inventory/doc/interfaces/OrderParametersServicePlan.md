@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 OrderParametersServicePlan
 
 ## Table of contents
@@ -29,7 +27,7 @@ OrderParametersServicePlan
 
 #### Defined in
 
-[api.ts:2120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2120)
+[api.ts:2120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2120)
 
 ___
 
@@ -45,4 +43,4 @@ OrderParametersServicePlan
 
 #### Defined in
 
-[api.ts:2114](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2114)
+[api.ts:2114](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2114)

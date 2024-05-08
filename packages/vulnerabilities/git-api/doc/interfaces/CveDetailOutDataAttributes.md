@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CveDetailOutDataAttributes
 
 ## Table of contents
@@ -52,7 +50,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L216)
+[api.ts:216](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L216)
 
 ___
 
@@ -68,7 +66,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L222)
+[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L222)
 
 ___
 
@@ -84,7 +82,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L228)
+[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L228)
 
 ___
 
@@ -100,7 +98,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L234)
+[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L234)
 
 ___
 
@@ -116,7 +114,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L240)
+[api.ts:240](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L240)
 
 ___
 
@@ -132,7 +130,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L246)
+[api.ts:246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L246)
 
 ___
 
@@ -148,7 +146,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:252](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L252)
+[api.ts:252](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L252)
 
 ___
 
@@ -164,7 +162,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L258)
+[api.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L258)
 
 ___
 
@@ -180,7 +178,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L264)
+[api.ts:264](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L264)
 
 ___
 
@@ -196,7 +194,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L270)
+[api.ts:270](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L270)
 
 ___
 
@@ -212,7 +210,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L276)
+[api.ts:276](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L276)
 
 ___
 
@@ -228,7 +226,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L282)
+[api.ts:282](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L282)
 
 ___
 
@@ -244,7 +242,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L288)
+[api.ts:288](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L288)
 
 ___
 
@@ -260,7 +258,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L294)
+[api.ts:294](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L294)
 
 ___
 
@@ -276,7 +274,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L300)
+[api.ts:300](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L300)
 
 ___
 
@@ -292,7 +290,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L306)
+[api.ts:306](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L306)
 
 ___
 
@@ -308,7 +306,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L312)
+[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L312)
 
 ___
 
@@ -322,7 +320,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L318)
+[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L318)
 
 ___
 
@@ -338,7 +336,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L324)
+[api.ts:324](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L324)
 
 ___
 
@@ -354,7 +352,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L330)
+[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L330)
 
 ___
 
@@ -370,7 +368,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L336)
+[api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L336)
 
 ___
 
@@ -386,7 +384,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L342)
+[api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L342)
 
 ___
 
@@ -402,7 +400,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L348)
+[api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L348)
 
 ___
 
@@ -418,7 +416,7 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L354)
+[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L354)
 
 ___
 
@@ -434,4 +432,4 @@ CveDetailOutDataAttributes
 
 #### Defined in
 
-[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L360)
+[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L360)

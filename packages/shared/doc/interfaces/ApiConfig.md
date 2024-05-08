@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[packages/shared/common.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L56)
+[packages/shared/common.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L56)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L57)
+[packages/shared/common.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L57)

@@ -6,6 +6,8 @@ SystemtypeApi - object-oriented interface
 
 **`Export`**
 
+SystemtypeApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ SystemtypeApi - object-oriented interface
 
 ### constructor
 
-• **new SystemtypeApi**(`configuration?`, `basePath?`, `axios?`)
+• **new SystemtypeApi**(`configuration?`, `basePath?`, `axios?`): [`SystemtypeApi`](SystemtypeApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ SystemtypeApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`SystemtypeApi`](SystemtypeApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,15 +97,25 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### systemtypeList
 
-▸ **systemtypeList**(`options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
+▸ **systemtypeList**(`options?`): `Promise`\<`AxiosResponse`\<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
 
 List all system types by role and product code
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
 
 **`Summary`**
 
@@ -111,27 +127,28 @@ List all system types
 
 SystemtypeApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md)[], `any`\>\>
-
 #### Defined in
 
-[api.ts:9273](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9273)
+[api.ts:9273](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9273)
 
 ___
 
 ### systemtypeRetrieve
 
-▸ **systemtypeRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
+▸ **systemtypeRetrieve**(`id`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
 
 Retrieve details of a single system type
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `number` | A unique integer value identifying this system type. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
 
 **`Summary`**
 
@@ -143,17 +160,6 @@ Retrieve a system type
 
 SystemtypeApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `number` | A unique integer value identifying this system type. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`SystemType`](../interfaces/SystemType.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:9285](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9285)
+[api.ts:9285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9285)

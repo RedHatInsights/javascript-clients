@@ -6,6 +6,8 @@ AccessApi - object-oriented interface
 
 **`Export`**
 
+AccessApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ AccessApi - object-oriented interface
 
 ### constructor
 
-• **new AccessApi**(`configuration?`, `basePath?`, `axios?`)
+• **new AccessApi**(`configuration?`, `basePath?`, `axios?`): [`AccessApi`](AccessApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ AccessApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`AccessApi`](AccessApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -90,25 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### getPrincipalAccess
 
-▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `status?`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
+▸ **getPrincipalAccess**(`application`, `username?`, `orderBy?`, `status?`, `limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
 
 Access responses are sorted in ascending order by an ID internal to the database
-
-**`Summary`**
-
-Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
-
-**`Throws`**
-
-**`Memberof`**
-
-AccessApi
 
 #### Parameters
 
@@ -124,8 +120,18 @@ AccessApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`AccessPagination`](../interfaces/AccessPagination.md), `any`\>\>
+
+**`Summary`**
+
+Get the permitted access for a principal in the tenant (defaults to principal from the identity header)
+
+**`Throws`**
+
+**`Memberof`**
+
+AccessApi
 
 #### Defined in
 
-[api.ts:2734](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2734)
+[api.ts:2734](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2734)

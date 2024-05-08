@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SettingsValuesByEventType
 
 ## Table of contents
@@ -30,4 +28,4 @@ SettingsValuesByEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1600)
+[packages/integrations/types/index.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1600)

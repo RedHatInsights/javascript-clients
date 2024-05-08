@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 V1QuickstartProgress
 
 ## Table of contents
@@ -28,7 +26,7 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L370)
+[api.ts:370](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L370)
 
 ___
 
@@ -42,7 +40,7 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:376](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L376)
+[api.ts:376](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L376)
 
 ___
 
@@ -56,4 +54,4 @@ V1QuickstartProgress
 
 #### Defined in
 
-[api.ts:382](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L382)
+[api.ts:382](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L382)

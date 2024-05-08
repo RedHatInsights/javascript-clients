@@ -6,8 +6,6 @@ Structure of the output of the host system profile query
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileByHostOut
 
 ## Table of contents
@@ -34,7 +32,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2093)
+[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2093)
 
 ___
 
@@ -50,7 +48,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2099](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2099)
+[api.ts:2099](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2099)
 
 ___
 
@@ -66,7 +64,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2105](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2105)
+[api.ts:2105](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2105)
 
 ___
 
@@ -82,7 +80,7 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2117)
+[api.ts:2117](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2117)
 
 ___
 
@@ -98,4 +96,4 @@ SystemProfileByHostOut
 
 #### Defined in
 
-[api.ts:2111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2111)
+[api.ts:2111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2111)

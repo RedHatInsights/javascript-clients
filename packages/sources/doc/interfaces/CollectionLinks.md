@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CollectionLinks
 
 ## Table of contents
@@ -29,7 +27,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L329)
+[api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L329)
 
 ___
 
@@ -43,7 +41,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L335)
+[api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L335)
 
 ___
 
@@ -57,7 +55,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L341)
+[api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L341)
 
 ___
 
@@ -71,4 +69,4 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L347)
+[api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L347)

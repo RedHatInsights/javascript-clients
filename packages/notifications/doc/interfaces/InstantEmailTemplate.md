@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 InstantEmailTemplate
 
 ## Table of contents
@@ -34,7 +32,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1202)
+[packages/notifications/types/index.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1202)
 
 ___
 
@@ -48,7 +46,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1208)
+[packages/notifications/types/index.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1208)
 
 ___
 
@@ -62,7 +60,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1160](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1160)
+[packages/notifications/types/index.ts:1160](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1160)
 
 ___
 
@@ -76,7 +74,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1178)
+[packages/notifications/types/index.ts:1178](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1178)
 
 ___
 
@@ -90,7 +88,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1184)
+[packages/notifications/types/index.ts:1184](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1184)
 
 ___
 
@@ -104,7 +102,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1172)
+[packages/notifications/types/index.ts:1172](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1172)
 
 ___
 
@@ -118,7 +116,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1190)
+[packages/notifications/types/index.ts:1190](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1190)
 
 ___
 
@@ -132,7 +130,7 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1196)
+[packages/notifications/types/index.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1196)
 
 ___
 
@@ -146,4 +144,4 @@ InstantEmailTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1166](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1166)
+[packages/notifications/types/index.ts:1166](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1166)

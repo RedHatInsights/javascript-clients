@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PagedResponseOfHistoryItem
 
 ## Table of contents
@@ -28,7 +26,7 @@ PagedResponseOfHistoryItem
 
 #### Defined in
 
-[api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L139)
+[api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L139)
 
 ___
 
@@ -46,7 +44,7 @@ PagedResponseOfHistoryItem
 
 #### Defined in
 
-[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L133)
+[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L133)
 
 ___
 
@@ -60,4 +58,4 @@ PagedResponseOfHistoryItem
 
 #### Defined in
 
-[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L127)
+[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L127)

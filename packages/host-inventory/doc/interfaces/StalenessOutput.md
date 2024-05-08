@@ -6,8 +6,6 @@ Data of a account staleness.
 
 **`Export`**
 
-**`Interface`**
-
 StalenessOutput
 
 ## Table of contents
@@ -37,7 +35,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1506](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1506)
+[api.ts:1506](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1506)
 
 ___
 
@@ -51,7 +49,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1494](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1494)
+[api.ts:1494](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1494)
 
 ___
 
@@ -65,7 +63,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1500](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1500)
+[api.ts:1500](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1500)
 
 ___
 
@@ -81,7 +79,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1530](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1530)
+[api.ts:1530](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1530)
 
 ___
 
@@ -95,7 +93,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1482](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1482)
+[api.ts:1482](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1482)
 
 ___
 
@@ -109,7 +107,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1524](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1524)
+[api.ts:1524](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1524)
 
 ___
 
@@ -123,7 +121,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1512](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1512)
+[api.ts:1512](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1512)
 
 ___
 
@@ -137,7 +135,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1518](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1518)
+[api.ts:1518](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1518)
 
 ___
 
@@ -153,7 +151,7 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1488](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1488)
+[api.ts:1488](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1488)
 
 ___
 
@@ -169,4 +167,4 @@ StalenessOutput
 
 #### Defined in
 
-[api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1536)
+[api.ts:1536](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1536)

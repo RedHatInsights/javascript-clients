@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileSapSystemOutResults
 
 ## Table of contents
@@ -27,7 +25,7 @@ SystemProfileSapSystemOutResults
 
 #### Defined in
 
-[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2485)
+[api.ts:2485](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2485)
 
 ___
 
@@ -41,4 +39,4 @@ SystemProfileSapSystemOutResults
 
 #### Defined in
 
-[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2479)
+[api.ts:2479](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2479)

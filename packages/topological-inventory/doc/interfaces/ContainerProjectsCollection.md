@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerProjectsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ ContainerProjectsCollection
 
 #### Defined in
 
-[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L858)
+[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L858)
 
 ___
 
@@ -42,7 +40,7 @@ ContainerProjectsCollection
 
 #### Defined in
 
-[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L852)
+[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L852)
 
 ___
 
@@ -56,4 +54,4 @@ ContainerProjectsCollection
 
 #### Defined in
 
-[api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L846)
+[api.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L846)

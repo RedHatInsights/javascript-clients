@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Diagnosis
 
 ## Table of contents
@@ -32,7 +30,7 @@ Diagnosis
 
 #### Defined in
 
-[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L82)
+[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L82)
 
 ___
 
@@ -46,7 +44,7 @@ Diagnosis
 
 #### Defined in
 
-[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L70)
+[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L70)
 
 ___
 
@@ -60,4 +58,4 @@ Diagnosis
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L76)
+[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L76)
