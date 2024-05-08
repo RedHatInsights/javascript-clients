@@ -23,7 +23,7 @@ Run `npm run create-client` and enter your new client name (e.g. entering `notif
 Run these commands from the root folder:
 
 * To install all dependencies in all packages run `npm install`,
-* To generate all packages run `npm run generate` - this will generete code from swagger files, builds them and generates doc. The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To generate all packages run `npm run generate` -- The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
 * To build packages run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
 
 ### Module federation generator
