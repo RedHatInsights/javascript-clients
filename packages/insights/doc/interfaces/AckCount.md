@@ -6,8 +6,6 @@ A rule_id and the number of acks on it
 
 **`Export`**
 
-**`Interface`**
-
 AckCount
 
 ## Table of contents
@@ -29,7 +27,7 @@ AckCount
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L76)
+[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L76)
 
 ___
 
@@ -43,4 +41,4 @@ AckCount
 
 #### Defined in
 
-[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L70)
+[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L70)

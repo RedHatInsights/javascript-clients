@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PageEventType
 
 ## Table of contents
@@ -28,7 +26,7 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1478)
+[packages/notifications/types/index.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1478)
 
 ___
 
@@ -46,7 +44,7 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1484)
+[packages/notifications/types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1484)
 
 ___
 
@@ -60,4 +58,4 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1490)
+[packages/notifications/types/index.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1490)

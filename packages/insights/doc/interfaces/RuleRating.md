@@ -6,8 +6,6 @@ Rule ratings list the rating (-1, 0 or +1) for one or more rules.  The rule is l
 
 **`Export`**
 
-**`Interface`**
-
 RuleRating
 
 ## Table of contents
@@ -31,7 +29,7 @@ RuleRating
 
 #### Defined in
 
-[api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1790)
+[api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1790)
 
 ___
 
@@ -47,4 +45,4 @@ RuleRating
 
 #### Defined in
 
-[api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1784)
+[api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1784)

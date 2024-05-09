@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedHostAckList
 
 ## Table of contents
@@ -28,7 +26,7 @@ PaginatedHostAckList
 
 #### Defined in
 
-[api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L648)
+[api.ts:648](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L648)
 
 ___
 
@@ -42,7 +40,7 @@ PaginatedHostAckList
 
 #### Defined in
 
-[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L642)
+[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L642)
 
 ___
 
@@ -56,4 +54,4 @@ PaginatedHostAckList
 
 #### Defined in
 
-[api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L636)
+[api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L636)

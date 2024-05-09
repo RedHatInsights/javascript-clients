@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookRunSystemList
 
 ## Table of contents
@@ -27,7 +25,7 @@ PlaybookRunSystemList
 
 #### Defined in
 
-[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L535)
+[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L535)
 
 ___
 
@@ -41,4 +39,4 @@ PlaybookRunSystemList
 
 #### Defined in
 
-[api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L541)
+[api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L541)

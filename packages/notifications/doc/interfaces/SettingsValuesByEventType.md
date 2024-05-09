@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SettingsValuesByEventType
 
 ## Table of contents
@@ -30,4 +28,4 @@ SettingsValuesByEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1600)
+[packages/notifications/types/index.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1600)

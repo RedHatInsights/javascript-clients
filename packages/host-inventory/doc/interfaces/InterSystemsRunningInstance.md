@@ -6,8 +6,6 @@ The info for an InterSystems instance running on the system
 
 **`Export`**
 
-**`Interface`**
-
 InterSystemsRunningInstance
 
 ## Table of contents
@@ -32,7 +30,7 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1051)
+[api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1051)
 
 ___
 
@@ -48,7 +46,7 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1057)
+[api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1057)
 
 ___
 
@@ -64,4 +62,4 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1063)
+[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1063)

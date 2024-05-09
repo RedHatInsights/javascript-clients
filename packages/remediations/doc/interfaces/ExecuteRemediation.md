@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ExecuteRemediation
 
 ## Table of contents
@@ -26,4 +24,4 @@ ExecuteRemediation
 
 #### Defined in
 
-[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L95)
+[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L95)

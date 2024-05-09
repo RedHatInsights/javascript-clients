@@ -123,11 +123,11 @@
 
 ### ActionType
 
-Ƭ **ActionType**: (...`config`: `any`) => `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+Ƭ **ActionType**: (...`config`: `any`) => `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Type declaration
 
-▸ (...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ (`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 ##### Parameters
 
@@ -137,11 +137,11 @@
 
 ##### Returns
 
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L55)
+[packages/integrations/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L55)
 
 ___
 
@@ -151,9 +151,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L53)
 
 ## Variables
 
@@ -173,9 +173,9 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L45)
+[packages/integrations/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L45)
 
-[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L53)
+[packages/integrations/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L53)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L12)
+[packages/integrations/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L12)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L18)
+[packages/integrations/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L18)
 
 ___
 
@@ -218,13 +218,13 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L13)
+[packages/integrations/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L13)
 
 ## Functions
 
 ### APIFactory
 
-▸ **APIFactory**<`T`\>(`basePath?`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
+▸ **APIFactory**\<`T`\>(`basePath?`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
 
 Factory for creating API with option to add enpoints to the API.
 
@@ -232,7 +232,7 @@ Factory for creating API with option to add enpoints to the API.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends `Record`<`string`, [`ActionType`](modules.md#actiontype)\> |
+| `T` | extends `Record`\<`string`, [`ActionType`](modules.md#actiontype)\> |
 
 #### Parameters
 
@@ -250,17 +250,13 @@ created base API.
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/base.ts#L145)
+[packages/integrations/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L145)
 
 ___
 
 ### assertParamExists
 
 ▸ **assertParamExists**(`functionName`, `paramName`, `paramValue`): `void`
-
-**`Throws`**
-
-**`Export`**
 
 #### Parameters
 
@@ -274,17 +270,19 @@ ___
 
 `void`
 
+**`Throws`**
+
+**`Export`**
+
 #### Defined in
 
-[packages/integrations/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L20)
+[packages/integrations/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L20)
 
 ___
 
 ### createRequestFunction
 
-▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): <T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`<`R`\>
-
-**`Export`**
+▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): \<T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`\<`R`\>
 
 #### Parameters
 
@@ -299,14 +297,14 @@ ___
 
 `fn`
 
-▸ <`T`, `R`\>(`axios?`, `basePath?`): `Promise`<`R`\>
+▸ \<`T`, `R`\>(`axios?`, `basePath?`): `Promise`\<`R`\>
 
 ##### Type parameters
 
 | Name | Type |
 | :------ | :------ |
 | `T` | `unknown` |
-| `R` | `AxiosResponse`<`T`, `any`\> |
+| `R` | `AxiosResponse`\<`T`, `any`\> |
 
 ##### Parameters
 
@@ -317,19 +315,31 @@ ___
 
 ##### Returns
 
-`Promise`<`R`\>
+`Promise`\<`R`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L133)
+[packages/integrations/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L133)
 
 ___
 
 ### endpointResourceV1CreateEndpoint
 
-▸ **endpointResourceV1CreateEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1CreateEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -337,27 +347,27 @@ Create a new endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1CreateEndpointParams`] \| [[`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1DeleteEndpoint
 
-▸ **endpointResourceV1DeleteEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1DeleteEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -365,27 +375,27 @@ Delete an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1DeleteEndpointParams`] \| [`string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1DisableEndpoint
 
-▸ **endpointResourceV1DisableEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1DisableEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -393,27 +403,27 @@ Disable an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1DisableEndpointParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1EnableEndpoint
 
-▸ **endpointResourceV1EnableEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1EnableEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -421,27 +431,27 @@ Enable an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1EnableEndpointParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1EnableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1EnableEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1GetDetailedEndpointHistory
 
-▸ **endpointResourceV1GetDetailedEndpointHistory**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetDetailedEndpointHistory**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -449,27 +459,27 @@ Retrieve event notification details
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetDetailedEndpointHistoryParams`] \| [`string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
+[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
 
 ___
 
 ### endpointResourceV1GetEndpoint
 
-▸ **endpointResourceV1GetEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Retrieves the public information associated with an endpoint such as its description, name, and properties.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -477,49 +487,49 @@ Retrieve an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`string`, `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetEndpointParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1GetEndpointHistory
 
-▸ **endpointResourceV1GetEndpointHistory**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-**`Throws`**
+▸ **endpointResourceV1GetEndpointHistory**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`<`any`\>] | with all available params. |
+| `...config` | [`EndpointResourceV1GetEndpointHistoryParams`] \| [`string`, `number`, `number`, `boolean`, `number`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+
+**`Throws`**
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
+[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
 
 ___
 
 ### endpointResourceV1GetEndpoints
 
-▸ **endpointResourceV1GetEndpoints**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetEndpoints**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Provides a list of endpoints. Use this endpoint to find specific endpoints.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -527,27 +537,27 @@ List endpoints
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetEndpointsParams`] \| [`number`, `number`, `boolean`, `string`, `number`, `string`, `string`, `string`[], `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
+[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
 
 ___
 
 ### endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint
 
-▸ **endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetOrCreateDrawerSubscriptionEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -555,27 +565,27 @@ Add a drawer endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams`] \| [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1GetOrCreateEmailSubscriptionEndpoint
 
-▸ **endpointResourceV1GetOrCreateEmailSubscriptionEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1GetOrCreateEmailSubscriptionEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`\<`any`\>] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -583,27 +593,27 @@ Create an email subscription endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [[`RequestSystemSubscriptionProperties`](interfaces/RequestSystemSubscriptionProperties.md), `AxiosRequestConfig`<`any`\>] \| [`EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams`] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
+[packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts#L34)
 
 ___
 
 ### endpointResourceV1TestEndpoint
 
-▸ **endpointResourceV1TestEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1TestEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1TestEndpointParams`] \| [`string`, [`EndpointTestRequest`](interfaces/EndpointTestRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -611,27 +621,27 @@ Generate a test notification
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1TestEndpointParams`] \| [`string`, [`EndpointTestRequest`](interfaces/EndpointTestRequest.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
 
 ___
 
 ### endpointResourceV1UpdateEndpoint
 
-▸ **endpointResourceV1UpdateEndpoint**(...`config`): `Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **endpointResourceV1UpdateEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
 
 **`Summary`**
 
@@ -639,27 +649,15 @@ Update an endpoint
 
 **`Throws`**
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...config` | [`EndpointResourceV1UpdateEndpointParams`] \| [`string`, [`Endpoint`](interfaces/Endpoint.md), `AxiosRequestConfig`<`any`\>] | with all available params. |
-
-#### Returns
-
-`Promise`<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
 #### Defined in
 
-[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
+[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
 
 ___
 
 ### serializeDataIfNeeded
 
 ▸ **serializeDataIfNeeded**(`value`, `requestOptions`, `configuration?`): `any`
-
-**`Export`**
 
 #### Parameters
 
@@ -673,17 +671,17 @@ ___
 
 `any`
 
+**`Export`**
+
 #### Defined in
 
-[packages/integrations/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L111)
+[packages/integrations/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L111)
 
 ___
 
 ### setApiKeyToObject
 
-▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -695,19 +693,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L30)
+[packages/integrations/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L30)
 
 ___
 
 ### setBasicAuthToObject
 
 ▸ **setBasicAuthToObject**(`object`, `configuration?`): `void`
-
-**`Export`**
 
 #### Parameters
 
@@ -720,17 +718,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/integrations/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L43)
+[packages/integrations/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L43)
 
 ___
 
 ### setBearerAuthToObject
 
-▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -741,19 +739,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L53)
+[packages/integrations/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L53)
 
 ___
 
 ### setOAuthToObject
 
-▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`<`void`\>
-
-**`Export`**
+▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -766,19 +764,19 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Export`**
 
 #### Defined in
 
-[packages/integrations/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L66)
+[packages/integrations/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L66)
 
 ___
 
 ### setSearchParams
 
-▸ **setSearchParams**(`url`, ...`objects`): `void`
-
-**`Export`**
+▸ **setSearchParams**(`url`, `...objects`): `void`
 
 #### Parameters
 
@@ -791,17 +789,17 @@ ___
 
 `void`
 
+**`Export`**
+
 #### Defined in
 
-[packages/integrations/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L101)
+[packages/integrations/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L101)
 
 ___
 
 ### toPathString
 
 ▸ **toPathString**(`url`): `string`
-
-**`Export`**
 
 #### Parameters
 
@@ -813,6 +811,8 @@ ___
 
 `string`
 
+**`Export`**
+
 #### Defined in
 
-[packages/integrations/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/utils/common.ts#L125)
+[packages/integrations/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/common.ts#L125)

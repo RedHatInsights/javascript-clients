@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Counts
 
 ## Table of contents
@@ -30,7 +28,7 @@ Counts
 
 #### Defined in
 
-[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L57)
+[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L57)
 
 ___
 
@@ -44,7 +42,7 @@ Counts
 
 #### Defined in
 
-[api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L51)
+[api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L51)
 
 ___
 
@@ -58,7 +56,7 @@ Counts
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L33)
 
 ___
 
@@ -72,7 +70,7 @@ Counts
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L39)
+[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L39)
 
 ___
 
@@ -86,4 +84,4 @@ Counts
 
 #### Defined in
 
-[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L45)
+[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L45)

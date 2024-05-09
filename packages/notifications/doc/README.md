@@ -1,3 +1,5 @@
+@redhat-cloud-services/notifications-client / [Exports](modules.md)
+
 # Javascript client for Notifications API
 If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
@@ -22,7 +24,6 @@ import APIFactory from '@redhat-cloud-services/notifications-client/utils';
 import createBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1CreateBehaviorGroup';
 import updateBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1UpdateBehaviorGroup';
 import deleteBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1DeleteBehaviorGroup';
-
 
 // BASE_PATH should be set in your constants file
 const notificationsApi = APIFactory(BASE_PATH, undefined, { createBehaviorGroup, updateBehaviorGroup, deleteBehaviorGroup });

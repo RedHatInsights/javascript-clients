@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 TagsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3557](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3557)
+[api.ts:3557](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3557)
 
 ___
 
@@ -42,7 +40,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3551](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3551)
+[api.ts:3551](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3551)
 
 ___
 
@@ -56,4 +54,4 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3545)
+[api.ts:3545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3545)

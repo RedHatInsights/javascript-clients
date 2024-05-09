@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Endpoint
 
 ## Table of contents
@@ -41,7 +39,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L409)
+[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L409)
 
 ___
 
@@ -55,7 +53,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L385)
+[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L385)
 
 ___
 
@@ -69,7 +67,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L391)
+[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L391)
 
 ___
 
@@ -85,7 +83,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L397)
+[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L397)
 
 ___
 
@@ -99,7 +97,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L403)
+[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L403)
 
 ___
 
@@ -115,7 +113,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L415)
+[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L415)
 
 ___
 
@@ -131,7 +129,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L421)
+[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L421)
 
 ___
 
@@ -147,7 +145,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L427)
+[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L427)
 
 ___
 
@@ -163,7 +161,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L433)
+[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L433)
 
 ___
 
@@ -179,7 +177,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L439)
+[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L439)
 
 ___
 
@@ -193,7 +191,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L445)
+[api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L445)
 
 ___
 
@@ -209,7 +207,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L451)
+[api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L451)
 
 ___
 
@@ -225,7 +223,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L457)
+[api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L457)
 
 ___
 
@@ -239,7 +237,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L463)
+[api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L463)
 
 ___
 
@@ -253,7 +251,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L469)
+[api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L469)
 
 ___
 
@@ -269,4 +267,4 @@ Endpoint
 
 #### Defined in
 
-[api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/sources/api.ts#L475)
+[api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L475)

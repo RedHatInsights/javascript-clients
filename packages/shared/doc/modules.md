@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[packages/shared/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L53)
+[packages/shared/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L53)
 
 ___
 
@@ -72,9 +72,9 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L14)
+[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L14)
 
-[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L22)
+[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L22)
 
 ## Variables
 
@@ -94,9 +94,9 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L14)
+[packages/shared/common.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L14)
 
-[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L22)
+[packages/shared/common.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L22)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L7)
+[packages/shared/common.ts:7](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L7)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L64)
+[packages/shared/common.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L64)
 
 ## Functions
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/shared/utils.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/utils.ts#L13)
+[packages/shared/utils.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/utils.ts#L13)
 
 ▸ **APIFactory**\<`T`\>(`actions`, `config?`): [`BaseAPI`](classes/BaseAPI.md) & `T`
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[packages/shared/utils.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/utils.ts#L14)
+[packages/shared/utils.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/utils.ts#L14)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L71)
+[packages/shared/common.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L71)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L184)
+[packages/shared/common.ts:184](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L184)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L162)
+[packages/shared/common.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L162)
 
 ___
 
@@ -297,7 +297,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L81)
+[packages/shared/common.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L81)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L94)
+[packages/shared/common.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L94)
 
 ___
 
@@ -343,7 +343,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L104)
+[packages/shared/common.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L104)
 
 ___
 
@@ -368,7 +368,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L117)
+[packages/shared/common.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L117)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L152)
+[packages/shared/common.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L152)
 
 ___
 
@@ -413,4 +413,4 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L176)
+[packages/shared/common.ts:176](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L176)

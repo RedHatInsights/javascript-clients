@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PageEventLogEntry
 
 ## Table of contents
@@ -28,7 +26,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1453)
+[packages/notifications/types/index.ts:1453](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1453)
 
 ___
 
@@ -46,7 +44,7 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1459](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1459)
+[packages/notifications/types/index.ts:1459](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1459)
 
 ___
 
@@ -60,4 +58,4 @@ PageEventLogEntry
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1465](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1465)
+[packages/notifications/types/index.ts:1465](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1465)

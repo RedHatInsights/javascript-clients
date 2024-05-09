@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PageNotificationHistory
 
 ## Table of contents
@@ -28,7 +26,7 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1503)
+[packages/integrations/types/index.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1503)
 
 ___
 
@@ -46,7 +44,7 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1509)
+[packages/integrations/types/index.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1509)
 
 ___
 
@@ -60,4 +58,4 @@ PageNotificationHistory
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1515)
+[packages/integrations/types/index.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1515)

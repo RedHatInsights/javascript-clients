@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PolicyInAllOf
 
 ## Table of contents
@@ -27,7 +25,7 @@ PolicyInAllOf
 
 #### Defined in
 
-[api.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1538)
+[api.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1538)
 
 ___
 
@@ -41,4 +39,4 @@ PolicyInAllOf
 
 #### Defined in
 
-[api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1544)
+[api.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1544)

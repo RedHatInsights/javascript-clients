@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CvesWithoutErrataOutUpdatedCvesWithoutErrata
 
 ## Table of contents
@@ -26,4 +24,4 @@ CvesWithoutErrataOutUpdatedCvesWithoutErrata
 
 #### Defined in
 
-[api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L480)
+[api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L480)

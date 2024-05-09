@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 UpdateBehaviorGroupRequest
 
 ## Table of contents
@@ -29,7 +27,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1772)
+[packages/integrations/types/index.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1772)
 
 ___
 
@@ -43,7 +41,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1790)
+[packages/integrations/types/index.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1790)
 
 ___
 
@@ -57,13 +55,13 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1778)
+[packages/integrations/types/index.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1778)
 
 ___
 
 ### event\_type\_ids
 
-• `Optional` **event\_type\_ids**: `Set`<`string`\>
+• `Optional` **event\_type\_ids**: `Set`\<`string`\>
 
 **`Memberof`**
 
@@ -71,4 +69,4 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1784)
+[packages/integrations/types/index.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1784)

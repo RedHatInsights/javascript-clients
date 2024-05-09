@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GroupWithPrincipalsAndRolesAllOf
 
 ## Table of contents
@@ -27,7 +25,7 @@ GroupWithPrincipalsAndRolesAllOf
 
 #### Defined in
 
-[api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1199)
+[api.ts:1199](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1199)
 
 ___
 
@@ -41,4 +39,4 @@ GroupWithPrincipalsAndRolesAllOf
 
 #### Defined in
 
-[api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1205)
+[api.ts:1205](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1205)

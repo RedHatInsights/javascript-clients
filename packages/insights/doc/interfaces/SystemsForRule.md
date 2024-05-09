@@ -6,8 +6,6 @@ The list of Inventory Host IDs that are (currently) affected by a given rule.
 
 **`Export`**
 
-**`Interface`**
-
 SystemsForRule
 
 ## Table of contents
@@ -28,4 +26,4 @@ SystemsForRule
 
 #### Defined in
 
-[api.ts:2220](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2220)
+[api.ts:2220](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2220)

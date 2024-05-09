@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportCvesBySeverity8to10
 
 ## Table of contents
@@ -29,7 +27,7 @@ ExecutiveReportCvesBySeverity8to10
 
 #### Defined in
 
-[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L915)
+[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L915)
 
 ___
 
@@ -45,4 +43,4 @@ ExecutiveReportCvesBySeverity8to10
 
 #### Defined in
 
-[api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L921)
+[api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L921)

@@ -6,8 +6,6 @@ Ignore reports of this rule on this system for this account.  Use this when crea
 
 **`Export`**
 
-**`Interface`**
-
 HostAckInput
 
 ## Table of contents
@@ -30,7 +28,7 @@ HostAckInput
 
 #### Defined in
 
-[api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L408)
+[api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L408)
 
 ___
 
@@ -46,7 +44,7 @@ HostAckInput
 
 #### Defined in
 
-[api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L396)
+[api.ts:396](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L396)
 
 ___
 
@@ -60,4 +58,4 @@ HostAckInput
 
 #### Defined in
 
-[api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L402)
+[api.ts:402](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L402)

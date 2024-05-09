@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Availability
 
 ## Table of contents
@@ -35,7 +33,7 @@ Availability
 
 #### Defined in
 
-[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L71)
+[api.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L71)
 
 ___
 
@@ -49,7 +47,7 @@ Availability
 
 #### Defined in
 
-[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L77)
+[api.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L77)
 
 ___
 
@@ -63,7 +61,7 @@ Availability
 
 #### Defined in
 
-[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L83)
+[api.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L83)
 
 ___
 
@@ -79,7 +77,7 @@ Availability
 
 #### Defined in
 
-[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L89)
+[api.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L89)
 
 ___
 
@@ -93,7 +91,7 @@ Availability
 
 #### Defined in
 
-[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L95)
+[api.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L95)
 
 ___
 
@@ -107,7 +105,7 @@ Availability
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L101)
 
 ___
 
@@ -121,7 +119,7 @@ Availability
 
 #### Defined in
 
-[api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L107)
+[api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L107)
 
 ___
 
@@ -137,7 +135,7 @@ Availability
 
 #### Defined in
 
-[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L113)
+[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L113)
 
 ___
 
@@ -151,7 +149,7 @@ Availability
 
 #### Defined in
 
-[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L119)
+[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L119)
 
 ___
 
@@ -165,4 +163,4 @@ Availability
 
 #### Defined in
 
-[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L125)
+[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L125)

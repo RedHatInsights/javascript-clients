@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EndpointTestRequest
 
 ## Table of contents
@@ -26,4 +24,4 @@ EndpointTestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L814)
+[packages/notifications/types/index.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L814)

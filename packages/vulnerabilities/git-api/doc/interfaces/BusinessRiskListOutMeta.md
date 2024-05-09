@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BusinessRiskListOutMeta
 
 ## Table of contents
@@ -28,4 +26,4 @@ BusinessRiskListOutMeta
 
 #### Defined in
 
-[api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L159)
+[api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L159)

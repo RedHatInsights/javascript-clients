@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PageDrawerEntryPayload
 
 ## Table of contents
@@ -28,7 +26,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1428](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1428)
+[packages/integrations/types/index.ts:1428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1428)
 
 ___
 
@@ -46,7 +44,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1434)
+[packages/integrations/types/index.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1434)
 
 ___
 
@@ -60,4 +58,4 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1440](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1440)
+[packages/integrations/types/index.ts:1440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1440)

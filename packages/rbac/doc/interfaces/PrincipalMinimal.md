@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PrincipalMinimal
 
 ## Table of contents
@@ -26,4 +24,4 @@ PrincipalMinimal
 
 #### Defined in
 
-[api.ts:1657](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1657)
+[api.ts:1657](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1657)

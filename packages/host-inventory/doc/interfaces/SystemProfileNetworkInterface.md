@@ -6,8 +6,6 @@ Representation of one network interface
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileNetworkInterface
 
 ## Table of contents
@@ -34,7 +32,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2256)
+[api.ts:2256](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2256)
 
 ___
 
@@ -48,7 +46,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2262)
+[api.ts:2262](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2262)
 
 ___
 
@@ -64,7 +62,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2274)
+[api.ts:2274](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2274)
 
 ___
 
@@ -80,7 +78,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2268)
+[api.ts:2268](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2268)
 
 ___
 
@@ -96,7 +94,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2280)
+[api.ts:2280](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2280)
 
 ___
 
@@ -112,7 +110,7 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2286)
+[api.ts:2286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2286)
 
 ___
 
@@ -128,4 +126,4 @@ SystemProfileNetworkInterface
 
 #### Defined in
 
-[api.ts:2292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2292)
+[api.ts:2292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2292)

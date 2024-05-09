@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerImage
 
 ## Table of contents
@@ -37,7 +35,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L493)
+[api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L493)
 
 ___
 
@@ -51,7 +49,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L499)
+[api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L499)
 
 ___
 
@@ -67,7 +65,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L505)
+[api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L505)
 
 ___
 
@@ -81,7 +79,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L511)
+[api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L511)
 
 ___
 
@@ -95,7 +93,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L517)
+[api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L517)
 
 ___
 
@@ -109,7 +107,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L523)
+[api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L523)
 
 ___
 
@@ -123,7 +121,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L529)
+[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L529)
 
 ___
 
@@ -137,7 +135,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L535)
+[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L535)
 
 ___
 
@@ -153,7 +151,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L541)
+[api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L541)
 
 ___
 
@@ -167,7 +165,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L547)
+[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L547)
 
 ___
 
@@ -181,7 +179,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L553)
+[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L553)
 
 ___
 
@@ -195,4 +193,4 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L559)
+[api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L559)

@@ -27,21 +27,21 @@ Do not edit the class manually.
 
 ### accessToken
 
-• `Optional` **accessToken**: `string` \| `Promise`<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`<`string`\>
+• `Optional` **accessToken**: `string` \| `Promise`\<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`\<`string`\>
 
 #### Defined in
 
-[configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L20)
+[configuration.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L20)
 
 ___
 
 ### apiKey
 
-• `Optional` **apiKey**: `string` \| `Promise`<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`<`string`\>
+• `Optional` **apiKey**: `string` \| `Promise`\<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`\<`string`\>
 
 #### Defined in
 
-[configuration.ts:17](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L17)
+[configuration.ts:17](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L17)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L22)
+[configuration.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L22)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:21](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L21)
+[configuration.ts:21](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L21)
 
 ___
 
@@ -71,11 +71,15 @@ ___
 
 #### Type declaration
 
-• **new ConfigurationParameters**()
+• **new formDataCtor**(): `any`
+
+##### Returns
+
+`any`
 
 #### Defined in
 
-[configuration.ts:23](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L23)
+[configuration.ts:23](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L23)
 
 ___
 
@@ -85,7 +89,7 @@ ___
 
 #### Defined in
 
-[configuration.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L19)
+[configuration.ts:19](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L19)
 
 ___
 
@@ -95,4 +99,4 @@ ___
 
 #### Defined in
 
-[configuration.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L18)
+[configuration.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L18)

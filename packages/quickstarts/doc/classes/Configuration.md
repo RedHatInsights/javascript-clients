@@ -26,7 +26,7 @@
 
 ### constructor
 
-• **new Configuration**(`param?`)
+• **new Configuration**(`param?`): [`Configuration`](Configuration.md)
 
 #### Parameters
 
@@ -34,15 +34,19 @@
 | :------ | :------ |
 | `param` | [`ConfigurationParameters`](../interfaces/ConfigurationParameters.md) |
 
+#### Returns
+
+[`Configuration`](Configuration.md)
+
 #### Defined in
 
-[configuration.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L77)
+[configuration.ts:77](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L77)
 
 ## Properties
 
 ### accessToken
 
-• `Optional` **accessToken**: `string` \| `Promise`<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`<`string`\>
+• `Optional` **accessToken**: `string` \| `Promise`\<`string`\> \| (`name?`: `string`, `scopes?`: `string`[]) => `string` \| (`name?`: `string`, `scopes?`: `string`[]) => `Promise`\<`string`\>
 
 parameter for oauth2 security
 
@@ -60,13 +64,13 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L53)
+[configuration.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L53)
 
 ___
 
 ### apiKey
 
-• `Optional` **apiKey**: `string` \| `Promise`<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`<`string`\>
+• `Optional` **apiKey**: `string` \| `Promise`\<`string`\> \| (`name`: `string`) => `string` \| (`name`: `string`) => `Promise`\<`string`\>
 
 parameter for apiKey security
 
@@ -80,7 +84,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L32)
+[configuration.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L32)
 
 ___
 
@@ -96,7 +100,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L67)
+[configuration.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L67)
 
 ___
 
@@ -112,7 +116,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:60](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L60)
+[configuration.ts:60](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L60)
 
 ___
 
@@ -120,17 +124,21 @@ ___
 
 • `Optional` **formDataCtor**: () => `any`
 
-#### Type declaration
-
-• **new Configuration**()
-
 The FormData constructor that will be used to create multipart form data
 requests. You can inject this here so that execution environments that
 do not support the FormData class can still run the generated client.
 
+#### Type declaration
+
+• **new formDataCtor**(): `any`
+
+##### Returns
+
+`any`
+
 #### Defined in
 
-[configuration.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L75)
+[configuration.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L75)
 
 ___
 
@@ -146,7 +154,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L46)
+[configuration.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L46)
 
 ___
 
@@ -162,7 +170,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L39)
+[configuration.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L39)
 
 ## Methods
 
@@ -191,4 +199,4 @@ True if the given MIME is JSON, false otherwise.
 
 #### Defined in
 
-[configuration.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/configuration.ts#L97)
+[configuration.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/configuration.ts#L97)

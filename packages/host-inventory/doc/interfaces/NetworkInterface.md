@@ -6,8 +6,6 @@ Representation of one network interface
 
 **`Export`**
 
-**`Interface`**
-
 NetworkInterface
 
 ## Table of contents
@@ -34,7 +32,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1120)
+[api.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1120)
 
 ___
 
@@ -48,7 +46,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1126)
+[api.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1126)
 
 ___
 
@@ -64,7 +62,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1138)
+[api.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1138)
 
 ___
 
@@ -80,7 +78,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1132)
+[api.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1132)
 
 ___
 
@@ -96,7 +94,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1144)
+[api.ts:1144](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1144)
 
 ___
 
@@ -112,7 +110,7 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1150)
+[api.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1150)
 
 ___
 
@@ -128,4 +126,4 @@ NetworkInterface
 
 #### Defined in
 
-[api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1156)
+[api.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1156)

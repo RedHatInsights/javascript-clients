@@ -6,8 +6,6 @@ Representation of one DNF module
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileDnfModule
 
 ## Table of contents
@@ -29,7 +27,7 @@ SystemProfileDnfModule
 
 #### Defined in
 
-[api.ts:2180](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2180)
+[api.ts:2180](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2180)
 
 ___
 
@@ -43,4 +41,4 @@ SystemProfileDnfModule
 
 #### Defined in
 
-[api.ts:2186](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2186)
+[api.ts:2186](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2186)

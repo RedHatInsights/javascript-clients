@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BulkChangeOut
 
 ## Table of contents
@@ -27,7 +25,7 @@ BulkChangeOut
 
 #### Defined in
 
-[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L102)
+[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L102)
 
 ___
 
@@ -43,4 +41,4 @@ BulkChangeOut
 
 #### Defined in
 
-[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L108)
+[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L108)

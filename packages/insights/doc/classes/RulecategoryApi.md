@@ -6,6 +6,8 @@ RulecategoryApi - object-oriented interface
 
 **`Export`**
 
+RulecategoryApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ RulecategoryApi - object-oriented interface
 
 ### constructor
 
-• **new RulecategoryApi**(`configuration?`, `basePath?`, `axios?`)
+• **new RulecategoryApi**(`configuration?`, `basePath?`, `axios?`): [`RulecategoryApi`](RulecategoryApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ RulecategoryApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`RulecategoryApi`](RulecategoryApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### rulecategoryList
 
-▸ **rulecategoryList**(`options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
+▸ **rulecategoryList**(`options?`): `Promise`\<`AxiosResponse`\<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
 
 Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
-
-**`Throws`**
-
-**`Memberof`**
-
-RulecategoryApi
 
 #### Parameters
 
@@ -115,25 +115,25 @@ RulecategoryApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:7724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7724)
-
-___
-
-### rulecategoryRetrieve
-
-▸ **rulecategoryRetrieve**(`id`, `options?`): `Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
-
-Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
+`Promise`\<`AxiosResponse`\<[`RuleCategory`](../interfaces/RuleCategory.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 RulecategoryApi
+
+#### Defined in
+
+[api.ts:7724](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7724)
+
+___
+
+### rulecategoryRetrieve
+
+▸ **rulecategoryRetrieve**(`id`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
+
+Rules are divided into categories, the usual being Availability, Stability, Security and Performance.  Categories are listed in decreasing order of importance.
 
 #### Parameters
 
@@ -144,8 +144,14 @@ RulecategoryApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`RuleCategory`](../interfaces/RuleCategory.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+RulecategoryApi
 
 #### Defined in
 
-[api.ts:7735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L7735)
+[api.ts:7735](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7735)

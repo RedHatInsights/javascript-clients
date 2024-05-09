@@ -6,6 +6,8 @@ ResolutionsApi - object-oriented interface
 
 **`Export`**
 
+ResolutionsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ ResolutionsApi - object-oriented interface
 
 ### constructor
 
-• **new ResolutionsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new ResolutionsApi**(`configuration?`, `basePath?`, `axios?`): [`ResolutionsApi`](ResolutionsApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ ResolutionsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`ResolutionsApi`](ResolutionsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -91,15 +97,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L49)
 
 ## Methods
 
 ### getResolutionsForIssue
 
-▸ **getResolutionsForIssue**(`issue`, `options?`): `Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
+▸ **getResolutionsForIssue**(`issue`, `options?`): `Promise`\<`AxiosResponse`\<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
 
 Provides information about resolutions available for the given issue
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `issue` | `string` | Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel\|KERNEL_CVE_2017_6074&#x60;) |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
 
 **`Summary`**
 
@@ -111,28 +128,28 @@ Resolution metadata
 
 ResolutionsApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `issue` | `string` | Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel\|KERNEL_CVE_2017_6074&#x60;) |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`Resolutions`](../interfaces/Resolutions.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3407](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3407)
+[api.ts:3407](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3407)
 
 ___
 
 ### getResolutionsForIssues
 
-▸ **getResolutionsForIssues**(`resolutionsBatchInput`, `options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
+▸ **getResolutionsForIssues**(`resolutionsBatchInput`, `options?`): `Promise`\<`AxiosResponse`\<\{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
 
 Provides information about resolutions available for the given issues
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `resolutionsBatchInput` | [`ResolutionsBatchInput`](../interfaces/ResolutionsBatchInput.md) |  |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<\{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
 
 **`Summary`**
 
@@ -144,17 +161,6 @@ Resolution metadata (batch)
 
 ResolutionsApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `resolutionsBatchInput` | [`ResolutionsBatchInput`](../interfaces/ResolutionsBatchInput.md) |  |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<{ `[key: string]`: [`Resolutions`](../interfaces/Resolutions.md) \| `boolean`;  }, `any`\>\>
-
 #### Defined in
 
-[api.ts:3419](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3419)
+[api.ts:3419](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3419)

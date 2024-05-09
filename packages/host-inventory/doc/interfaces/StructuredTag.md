@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 StructuredTag
 
 ## Table of contents
@@ -28,7 +26,7 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1555](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1555)
+[api.ts:1555](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1555)
 
 ___
 
@@ -42,7 +40,7 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1549](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1549)
+[api.ts:1549](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1549)
 
 ___
 
@@ -56,4 +54,4 @@ StructuredTag
 
 #### Defined in
 
-[api.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1561)
+[api.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1561)

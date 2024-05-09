@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Vm
 
 ## Table of contents
@@ -48,7 +46,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3681](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3681)
+[api.ts:3681](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3681)
 
 ___
 
@@ -64,7 +62,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3687)
+[api.ts:3687](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3687)
 
 ___
 
@@ -78,7 +76,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3693)
+[api.ts:3693](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3693)
 
 ___
 
@@ -94,7 +92,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3699)
+[api.ts:3699](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3699)
 
 ___
 
@@ -108,7 +106,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3705)
+[api.ts:3705](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3705)
 
 ___
 
@@ -124,7 +122,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3711](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3711)
+[api.ts:3711](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3711)
 
 ___
 
@@ -138,7 +136,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3717)
+[api.ts:3717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3717)
 
 ___
 
@@ -152,7 +150,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3723)
+[api.ts:3723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3723)
 
 ___
 
@@ -168,7 +166,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3729)
+[api.ts:3729](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3729)
 
 ___
 
@@ -182,7 +180,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3735)
+[api.ts:3735](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3735)
 
 ___
 
@@ -196,7 +194,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3741)
+[api.ts:3741](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3741)
 
 ___
 
@@ -212,7 +210,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3747)
+[api.ts:3747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3747)
 
 ___
 
@@ -226,7 +224,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3753)
+[api.ts:3753](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3753)
 
 ___
 
@@ -242,7 +240,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3759)
+[api.ts:3759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3759)
 
 ___
 
@@ -256,7 +254,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3765)
+[api.ts:3765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3765)
 
 ___
 
@@ -270,7 +268,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3771)
+[api.ts:3771](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3771)
 
 ___
 
@@ -284,7 +282,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3777)
+[api.ts:3777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3777)
 
 ___
 
@@ -300,7 +298,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3783)
+[api.ts:3783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3783)
 
 ___
 
@@ -314,7 +312,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3789)
+[api.ts:3789](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3789)
 
 ___
 
@@ -330,7 +328,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3795)
+[api.ts:3795](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3795)
 
 ___
 
@@ -346,7 +344,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3801)
+[api.ts:3801](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3801)
 
 ___
 
@@ -362,7 +360,7 @@ Vm
 
 #### Defined in
 
-[api.ts:3807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3807)
+[api.ts:3807](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3807)
 
 ___
 
@@ -376,4 +374,4 @@ Vm
 
 #### Defined in
 
-[api.ts:3813](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3813)
+[api.ts:3813](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3813)

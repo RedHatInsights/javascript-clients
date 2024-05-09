@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookTemplate
 
 ## Table of contents
@@ -26,4 +24,4 @@ PlaybookTemplate
 
 #### Defined in
 
-[api.ts:2265](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2265)
+[api.ts:2265](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2265)

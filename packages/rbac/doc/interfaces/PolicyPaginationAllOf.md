@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PolicyPaginationAllOf
 
 ## Table of contents
@@ -26,4 +24,4 @@ PolicyPaginationAllOf
 
 #### Defined in
 
-[api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1582)
+[api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1582)

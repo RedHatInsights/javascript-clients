@@ -6,8 +6,6 @@ An approximation of the number of unique hits per day.
 
 **`Export`**
 
-**`Interface`**
-
 Usage
 
 ## Table of contents
@@ -28,4 +26,4 @@ Usage
 
 #### Defined in
 
-[api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L2325)
+[api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2325)

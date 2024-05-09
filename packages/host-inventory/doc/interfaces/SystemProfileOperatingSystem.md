@@ -6,8 +6,6 @@ Object for OS details. Supports range operations
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileOperatingSystem
 
 ## Table of contents
@@ -32,7 +30,7 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2305](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2305)
+[api.ts:2305](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2305)
 
 ___
 
@@ -48,7 +46,7 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2311)
+[api.ts:2311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2311)
 
 ___
 
@@ -64,4 +62,4 @@ SystemProfileOperatingSystem
 
 #### Defined in
 
-[api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2317)
+[api.ts:2317](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2317)

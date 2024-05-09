@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookRunSystemDetails
 
 ## Table of contents
@@ -33,7 +31,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L510)
+[api.ts:510](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L510)
 
 ___
 
@@ -47,7 +45,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L516)
+[api.ts:516](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L516)
 
 ___
 
@@ -61,7 +59,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L504)
+[api.ts:504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L504)
 
 ___
 
@@ -75,7 +73,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L492)
+[api.ts:492](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L492)
 
 ___
 
@@ -89,7 +87,7 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L498)
+[api.ts:498](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L498)
 
 ___
 
@@ -103,4 +101,4 @@ PlaybookRunSystemDetails
 
 #### Defined in
 
-[api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L522)
+[api.ts:522](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L522)

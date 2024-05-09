@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RequestError
 
 ## Table of contents
@@ -26,4 +24,4 @@ RequestError
 
 #### Defined in
 
-[api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1064)
+[api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1064)

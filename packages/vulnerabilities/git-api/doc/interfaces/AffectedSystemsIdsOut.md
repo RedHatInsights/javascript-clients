@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AffectedSystemsIdsOut
 
 ## Table of contents
@@ -28,7 +26,7 @@ AffectedSystemsIdsOut
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L33)
 
 ___
 
@@ -42,7 +40,7 @@ AffectedSystemsIdsOut
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L39)
+[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L39)
 
 ___
 
@@ -56,4 +54,4 @@ AffectedSystemsIdsOut
 
 #### Defined in
 
-[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L45)
+[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L45)

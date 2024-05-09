@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AddApplicationRequest
 
 ## Table of contents
@@ -29,7 +27,7 @@ AddApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L43)
+[packages/integrations/types/index.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L43)
 
 ___
 
@@ -43,7 +41,7 @@ AddApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L37)
+[packages/integrations/types/index.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L37)
 
 ___
 
@@ -57,7 +55,7 @@ AddApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L31)
+[packages/integrations/types/index.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L31)
 
 ___
 
@@ -71,4 +69,4 @@ AddApplicationRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L49)
+[packages/integrations/types/index.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L49)

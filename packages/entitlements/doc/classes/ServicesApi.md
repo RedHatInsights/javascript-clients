@@ -6,6 +6,8 @@ ServicesApi - object-oriented interface
 
 **`Export`**
 
+ServicesApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ ServicesApi - object-oriented interface
 
 ### constructor
 
-• **new ServicesApi**(`configuration?`, `basePath?`, `axios?`)
+• **new ServicesApi**(`configuration?`, `basePath?`, `axios?`): [`ServicesApi`](ServicesApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ ServicesApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`ServicesApi`](ServicesApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/base.ts#L51)
 
 ___
 
@@ -90,13 +96,23 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/base.ts#L49)
 
 ## Methods
 
 ### servicesGet
 
-▸ **servicesGet**(`options?`): `Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
+▸ **servicesGet**(`options?`): `Promise`\<`AxiosResponse`\<\{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<\{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
 
 **`Summary`**
 
@@ -108,16 +124,6 @@ get a list of services a user is entitled to
 
 ServicesApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<{ `[key: string]`: [`ServiceDetails`](../interfaces/ServiceDetails.md);  }, `any`\>\>
-
 #### Defined in
 
-[api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L129)
+[api.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L129)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ContainerGroupsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ ContainerGroupsCollection
 
 #### Defined in
 
-[api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L480)
+[api.ts:480](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L480)
 
 ___
 
@@ -42,7 +40,7 @@ ContainerGroupsCollection
 
 #### Defined in
 
-[api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L474)
+[api.ts:474](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L474)
 
 ___
 
@@ -56,4 +54,4 @@ ContainerGroupsCollection
 
 #### Defined in
 
-[api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L468)
+[api.ts:468](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L468)

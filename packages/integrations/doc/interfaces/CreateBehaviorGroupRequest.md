@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CreateBehaviorGroupRequest
 
 ## Table of contents
@@ -31,7 +29,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L515)
+[packages/integrations/types/index.ts:515](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L515)
 
 ___
 
@@ -45,7 +43,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L521)
+[packages/integrations/types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L521)
 
 ___
 
@@ -59,7 +57,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L545)
+[packages/integrations/types/index.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L545)
 
 ___
 
@@ -73,7 +71,7 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L527)
+[packages/integrations/types/index.ts:527](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L527)
 
 ___
 
@@ -87,13 +85,13 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L533)
+[packages/integrations/types/index.ts:533](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L533)
 
 ___
 
 ### event\_type\_ids
 
-• `Optional` **event\_type\_ids**: `Set`<`string`\>
+• `Optional` **event\_type\_ids**: `Set`\<`string`\>
 
 **`Memberof`**
 
@@ -101,4 +99,4 @@ CreateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L539)
+[packages/integrations/types/index.ts:539](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L539)

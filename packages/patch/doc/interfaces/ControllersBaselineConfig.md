@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselineConfig
 
 ## Table of contents
@@ -28,4 +26,4 @@ ControllersBaselineConfig
 
 #### Defined in
 
-[api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L390)
+[api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L390)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 MetaVulnerabilitiesOutAllOf
 
 ## Table of contents
@@ -40,7 +38,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2098)
+[api.ts:2098](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2098)
 
 ___
 
@@ -56,7 +54,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2104](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2104)
+[api.ts:2104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2104)
 
 ___
 
@@ -72,7 +70,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2110](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2110)
+[api.ts:2110](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2110)
 
 ___
 
@@ -88,7 +86,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2116](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2116)
+[api.ts:2116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2116)
 
 ___
 
@@ -104,7 +102,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2122](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2122)
+[api.ts:2122](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2122)
 
 ___
 
@@ -120,7 +118,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2128](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2128)
+[api.ts:2128](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2128)
 
 ___
 
@@ -136,7 +134,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2134](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2134)
+[api.ts:2134](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2134)
 
 ___
 
@@ -152,7 +150,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2140](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2140)
+[api.ts:2140](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2140)
 
 ___
 
@@ -168,7 +166,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2146](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2146)
+[api.ts:2146](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2146)
 
 ___
 
@@ -184,7 +182,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2152)
+[api.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2152)
 
 ___
 
@@ -200,7 +198,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2158)
+[api.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2158)
 
 ___
 
@@ -216,7 +214,7 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2164)
+[api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2164)
 
 ___
 
@@ -230,4 +228,4 @@ MetaVulnerabilitiesOutAllOf
 
 #### Defined in
 
-[api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L2170)
+[api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2170)

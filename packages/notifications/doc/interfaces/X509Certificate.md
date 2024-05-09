@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 X509Certificate
 
 ## Table of contents
@@ -30,7 +28,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1891)
+[packages/notifications/types/index.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1891)
 
 ___
 
@@ -44,7 +42,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1885)
+[packages/notifications/types/index.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1885)
 
 ___
 
@@ -58,7 +56,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1867)
+[packages/notifications/types/index.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1867)
 
 ___
 
@@ -72,7 +70,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1879)
+[packages/notifications/types/index.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1879)
 
 ___
 
@@ -86,4 +84,4 @@ X509Certificate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1873)
+[packages/notifications/types/index.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1873)

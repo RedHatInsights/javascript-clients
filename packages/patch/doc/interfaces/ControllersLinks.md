@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersLinks
 
 ## Table of contents
@@ -29,7 +27,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L687)
+[api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L687)
 
 ___
 
@@ -43,7 +41,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L693)
+[api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L693)
 
 ___
 
@@ -57,7 +55,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L699)
+[api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L699)
 
 ___
 
@@ -71,4 +69,4 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L705)
+[api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L705)

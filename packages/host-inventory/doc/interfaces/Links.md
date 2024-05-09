@@ -6,8 +6,6 @@ A collection of pagination links for resource-types endpoints
 
 **`Export`**
 
-**`Interface`**
-
 Links
 
 ## Table of contents
@@ -33,7 +31,7 @@ Links
 
 #### Defined in
 
-[api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1076)
+[api.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1076)
 
 ___
 
@@ -49,7 +47,7 @@ Links
 
 #### Defined in
 
-[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1094)
+[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1094)
 
 ___
 
@@ -65,7 +63,7 @@ Links
 
 #### Defined in
 
-[api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1088)
+[api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1088)
 
 ___
 
@@ -81,4 +79,4 @@ Links
 
 #### Defined in
 
-[api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1082)
+[api.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1082)

@@ -6,6 +6,8 @@ SystemApi - object-oriented interface
 
 **`Export`**
 
+SystemApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -35,7 +37,7 @@ SystemApi - object-oriented interface
 
 ### constructor
 
-• **new SystemApi**(`configuration?`, `basePath?`, `axios?`)
+• **new SystemApi**(`configuration?`, `basePath?`, `axios?`): [`SystemApi`](SystemApi.md)
 
 #### Parameters
 
@@ -45,13 +47,17 @@ SystemApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`SystemApi`](SystemApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +71,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -79,7 +85,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -93,21 +99,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### systemList
 
-▸ **systemList**(`displayName?`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hits?`, `incident?`, `limit?`, `offset?`, `pathway?`, `rhelVersion?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
+▸ **systemList**(`displayName?`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hits?`, `incident?`, `limit?`, `offset?`, `pathway?`, `rhelVersion?`, `sort?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
 
 Returns systems with their hit count and last upload time.  Results can be sorted and systems can be filtered by display name and hits
-
-**`Throws`**
-
-**`Memberof`**
-
-SystemApi
 
 #### Parameters
 
@@ -132,25 +132,25 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:9066](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9066)
-
-___
-
-### systemRenderedReportsList
-
-▸ **systemRenderedReportsList**(`uuid`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`RenderedReport`](../interfaces/RenderedReport.md)[], `any`\>\>
-
-Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
+`Promise`\<`AxiosResponse`\<[`PaginatedSystemList`](../interfaces/PaginatedSystemList.md), `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 SystemApi
+
+#### Defined in
+
+[api.ts:9066](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9066)
+
+___
+
+### systemRenderedReportsList
+
+▸ **systemRenderedReportsList**(`uuid`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`RenderedReport`](../interfaces/RenderedReport.md)[], `any`\>\>
+
+Returns the list of reports for an Inventory Host ID, with the rule templates filled in thanks to node.js and DoT and Markdown.  If the host ID is not found, return an empty list.
 
 #### Parameters
 
@@ -167,25 +167,25 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RenderedReport`](../interfaces/RenderedReport.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:9083](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9083)
-
-___
-
-### systemReportsList
-
-▸ **systemReportsList**(`uuid`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `tags?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`Report`](../interfaces/Report.md)[], `any`\>\>
-
-Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
+`Promise`\<`AxiosResponse`\<[`RenderedReport`](../interfaces/RenderedReport.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 SystemApi
+
+#### Defined in
+
+[api.ts:9083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9083)
+
+___
+
+### systemReportsList
+
+▸ **systemReportsList**(`uuid`, `filterSystemProfileAnsible?`, `filterSystemProfileMssql?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `tags?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`Report`](../interfaces/Report.md)[], `any`\>\>
+
+Returns the list of latest reports for an Inventory Host ID.  Returns reports that:  * are in the user\'s account  * have an active, not-deleted rule  * where the rule has not been acked by this account  If the host ID is not found, return an empty list.
 
 #### Parameters
 
@@ -203,19 +203,36 @@ SystemApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Report`](../interfaces/Report.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Report`](../interfaces/Report.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+SystemApi
 
 #### Defined in
 
-[api.ts:9101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9101)
+[api.ts:9101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9101)
 
 ___
 
 ### systemRetrieve
 
-▸ **systemRetrieve**(`uuid`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md), `any`\>\>
+▸ **systemRetrieve**(`uuid`, `options?`): `Promise`\<`AxiosResponse`\<[`System`](../interfaces/System.md), `any`\>\>
 
 Retrieve the reports for a single system by Insights Inventory UUID
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `uuid` | `string` | A UUID string identifying this inventory host. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`System`](../interfaces/System.md), `any`\>\>
 
 **`Summary`**
 
@@ -227,17 +244,6 @@ Retrieve the reports for a single system
 
 SystemApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `uuid` | `string` | A UUID string identifying this inventory host. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:9113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L9113)
+[api.ts:9113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9113)

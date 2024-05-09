@@ -6,6 +6,8 @@ Base API to store config, basepath and axios instance.
 
 **`Export`**
 
+BaseAPI
+
 ## Table of contents
 
 ### Constructors
@@ -27,7 +29,7 @@ Base API to store config, basepath and axios instance.
 
 ### constructor
 
-• **new BaseAPI**(`basePath?`, `config?`)
+• **new BaseAPI**(`basePath?`, `config?`): [`BaseAPI`](BaseAPI.md)
 
 Constructor to create baseAPI.
 
@@ -38,9 +40,13 @@ Constructor to create baseAPI.
 | `basePath` | `string` | `BASE_PATH` | basePath of api requests. |
 | `config` | [`ApiConfig`](../interfaces/ApiConfig.md) | `undefined` | to be passed down to axios. |
 
+#### Returns
+
+[`BaseAPI`](BaseAPI.md)
+
 #### Defined in
 
-[packages/notifications/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L70)
+[packages/notifications/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L70)
 
 ## Properties
 
@@ -50,7 +56,7 @@ Constructor to create baseAPI.
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L64)
+[packages/notifications/utils/base.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L64)
 
 ___
 
@@ -58,9 +64,11 @@ ___
 
 • `Protected` **basePath**: `string` = `BASE_PATH`
 
+basePath of api requests.
+
 #### Defined in
 
-[packages/notifications/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L70)
+[packages/notifications/utils/base.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L70)
 
 ___
 
@@ -70,33 +78,33 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L63)
+[packages/notifications/utils/base.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L63)
 
 ## Methods
 
 ### authConfig
 
-▸ `Private` **authConfig**(`__namedParameters`): `Promise`<`void`\>
+▸ **authConfig**(`«destructured»`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Omit`<[`RequestArgs`](../interfaces/RequestArgs.md), ``"authType"`` \| ``"authKey"``\> & { `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum-1)  } |
+| `«destructured»` | `Omit`\<[`RequestArgs`](../interfaces/RequestArgs.md), ``"authType"`` \| ``"authKey"``\> & \{ `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum)  } |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L83)
+[packages/notifications/utils/base.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L83)
 
 ___
 
 ### sendRequest
 
-▸ **sendRequest**<`T`\>(`request`, `axios?`, `basePath?`): `Promise`<`AxiosResponse`<`T`, `any`\>\>
+▸ **sendRequest**\<`T`\>(`request`, `axios?`, `basePath?`): `Promise`\<`AxiosResponse`\<`T`, `any`\>\>
 
 Send axios request
 
@@ -110,16 +118,16 @@ Send axios request
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `request` | `Promise`<[`RequestArgs`](../interfaces/RequestArgs.md)\> | to be send trough axios. |
+| `request` | `Promise`\<[`RequestArgs`](../interfaces/RequestArgs.md)\> | to be send trough axios. |
 | `axios?` | `AxiosInstance` | optional axios instance. |
 | `basePath?` | `string` | - |
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`T`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`T`, `any`\>\>
 
 promisable axios response.
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/utils/base.ts#L111)
+[packages/notifications/utils/base.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L111)

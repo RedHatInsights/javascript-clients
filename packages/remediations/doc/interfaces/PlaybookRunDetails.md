@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookRunDetails
 
 ## Table of contents
@@ -32,7 +30,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L391)
+[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L391)
 
 ___
 
@@ -46,7 +44,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L385)
+[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L385)
 
 ___
 
@@ -60,7 +58,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L373)
+[api.ts:373](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L373)
 
 ___
 
@@ -74,7 +72,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L367)
+[api.ts:367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L367)
 
 ___
 
@@ -88,7 +86,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L379)
+[api.ts:379](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L379)
 
 ___
 
@@ -102,7 +100,7 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L403)
+[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L403)
 
 ___
 
@@ -116,4 +114,4 @@ PlaybookRunDetails
 
 #### Defined in
 
-[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L397)
+[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L397)

@@ -6,8 +6,6 @@ Representation of one mounted device
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileDiskDevice
 
 ## Table of contents
@@ -32,7 +30,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2143)
+[api.ts:2143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2143)
 
 ___
 
@@ -48,7 +46,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2149)
+[api.ts:2149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2149)
 
 ___
 
@@ -64,7 +62,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2161)
+[api.ts:2161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2161)
 
 ___
 
@@ -84,7 +82,7 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2155)
+[api.ts:2155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2155)
 
 ___
 
@@ -100,4 +98,4 @@ SystemProfileDiskDevice
 
 #### Defined in
 
-[api.ts:2167](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2167)
+[api.ts:2167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2167)

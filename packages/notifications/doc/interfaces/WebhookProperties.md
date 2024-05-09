@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 WebhookProperties
 
 ## Table of contents
@@ -31,7 +29,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1846)
+[packages/notifications/types/index.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1846)
 
 ___
 
@@ -45,7 +43,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1852)
+[packages/notifications/types/index.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1852)
 
 ___
 
@@ -59,7 +57,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1834)
+[packages/notifications/types/index.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1834)
 
 ___
 
@@ -73,7 +71,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1828](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1828)
+[packages/notifications/types/index.ts:1828](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1828)
 
 ___
 
@@ -87,7 +85,7 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1840)
+[packages/notifications/types/index.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1840)
 
 ___
 
@@ -101,4 +99,4 @@ WebhookProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1822](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1822)
+[packages/notifications/types/index.ts:1822](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1822)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedAllRuleRatingsList
 
 ## Table of contents
@@ -28,7 +26,7 @@ PaginatedAllRuleRatingsList
 
 #### Defined in
 
-[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L623)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L623)
 
 ___
 
@@ -42,7 +40,7 @@ PaginatedAllRuleRatingsList
 
 #### Defined in
 
-[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L617)
+[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L617)
 
 ___
 
@@ -56,4 +54,4 @@ PaginatedAllRuleRatingsList
 
 #### Defined in
 
-[api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L611)
+[api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L611)

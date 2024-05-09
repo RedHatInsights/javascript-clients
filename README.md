@@ -18,21 +18,15 @@ Run `npm run create-client` and enter your new client name (e.g. entering `notif
 
 **IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly. Also, don't forget to update your packages's README with the correct install and usage information.**
 
-### Building clients
+### Generating and Building clients
 
-Run these commands from the root folder:
+From the root javascript-clients folder:
+* To generate all clients run `npm run generate` -- The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To build clients and generate their dist to be published run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
 
-* To install all dependencies in all packages run `npm install`,
-* To generate all packages run `npm run generate` - this will generete code from swagger files, builds them and generates doc. The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
-* To build packages run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
+### Custom Module Federation Generator
 
-### Module federation generator
-
-We have a custom generator available for any application. This generator has been built with webpack module federation in mind which means the code is ready for treeshaking by webpack. The generator will create a new folder which serves as new package for each API resource. This will allow consumers to import endpoints they are going to use without the need of importing entire API.
-
-### Using module federation generator
-
-This generator should be replacement for regular `typescript-axios` generator. So just adjusting your generate command should be enough
+As the default, we use `typescript-axios` to generate a client based on their OpenAPI spec. In addition, we have a custom generator available for use built with module federation in mind which allows for treeshaking by webpack. This will create a new folder for each endpoint allowing consumers to import only the endpoints they are going to use without the need of importing the entire API. This generator should be a replacement for the regular `typescript-axios` generator. See below for an example script to use the new generator:
 
 ```JSON
 {
@@ -44,4 +38,4 @@ This generator should be replacement for regular `typescript-axios` generator. S
 }
 ```
 
-If you've previously used the generator you will also have to change the version of `generator-cli.version` in `openapitool.json` to at least `6.6.0`.
+If you've previously used the `typescript-axios` generator you will also have to change the version of `generator-cli.version` in `openapitool.json` to at least `6.6.0`.

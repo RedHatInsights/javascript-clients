@@ -6,8 +6,6 @@ Number of recently published CVEs identified on managed systems
 
 **`Export`**
 
-**`Interface`**
-
 DashboardRecentCves
 
 ## Table of contents
@@ -32,7 +30,7 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L673)
+[api.ts:673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L673)
 
 ___
 
@@ -48,7 +46,7 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L679)
+[api.ts:679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L679)
 
 ___
 
@@ -64,4 +62,4 @@ DashboardRecentCves
 
 #### Defined in
 
-[api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L685)
+[api.ts:685](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L685)

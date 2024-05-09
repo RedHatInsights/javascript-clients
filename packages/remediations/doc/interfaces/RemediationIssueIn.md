@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationIssueIn
 
 ## Table of contents
@@ -26,4 +24,4 @@ RemediationIssueIn
 
 #### Defined in
 
-[api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L853)
+[api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L853)

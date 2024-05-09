@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceAccount
 
 ## Table of contents
@@ -32,7 +30,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2405)
+[api.ts:2405](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2405)
 
 ___
 
@@ -46,7 +44,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2417)
+[api.ts:2417](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2417)
 
 ___
 
@@ -60,7 +58,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2411](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2411)
+[api.ts:2411](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2411)
 
 ___
 
@@ -74,7 +72,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2423)
+[api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2423)
 
 ___
 
@@ -88,7 +86,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2429)
+[api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2429)
 
 ___
 
@@ -102,7 +100,7 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2399)
+[api.ts:2399](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2399)
 
 ___
 
@@ -116,4 +114,4 @@ ServiceAccount
 
 #### Defined in
 
-[api.ts:2393](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2393)
+[api.ts:2393](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2393)

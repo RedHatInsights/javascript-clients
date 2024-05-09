@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Meta
 
 ## Table of contents
@@ -29,7 +27,7 @@ Meta
 
 #### Defined in
 
-[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L127)
+[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L127)
 
 ___
 
@@ -45,4 +43,4 @@ Meta
 
 #### Defined in
 
-[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L133)
+[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L133)

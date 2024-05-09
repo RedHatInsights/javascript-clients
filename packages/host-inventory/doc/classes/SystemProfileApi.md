@@ -6,6 +6,8 @@ SystemProfileApi - object-oriented interface
 
 **`Export`**
 
+SystemProfileApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -35,7 +37,7 @@ SystemProfileApi - object-oriented interface
 
 ### constructor
 
-• **new SystemProfileApi**(`configuration?`, `basePath?`, `axios?`)
+• **new SystemProfileApi**(`configuration?`, `basePath?`, `axios?`): [`SystemProfileApi`](SystemProfileApi.md)
 
 #### Parameters
 
@@ -45,13 +47,17 @@ SystemProfileApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`SystemProfileApi`](SystemProfileApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +71,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -79,7 +85,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -93,25 +99,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiSystemProfileGetOperatingSystem
 
-▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
+▸ **apiSystemProfileGetOperatingSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 Required permissions: inventory:hosts:read
-
-**`Summary`**
-
-get all operating system versions and counts on the account
-
-**`Throws`**
-
-**`Memberof`**
-
-SystemProfileApi
 
 #### Parameters
 
@@ -127,29 +123,29 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6532)
-
-___
-
-### apiSystemProfileGetSapSids
-
-▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
-
-Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`SystemProfileOperatingSystemOut`](../interfaces/SystemProfileOperatingSystemOut.md), `any`\>\>
 
 **`Summary`**
 
-get all sap sids values and counts on the account
+get all operating system versions and counts on the account
 
 **`Throws`**
 
 **`Memberof`**
 
 SystemProfileApi
+
+#### Defined in
+
+[api.ts:6532](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6532)
+
+___
+
+### apiSystemProfileGetSapSids
+
+▸ **apiSystemProfileGetSapSids**(`search?`, `tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+
+Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -166,29 +162,29 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6550](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6550)
-
-___
-
-### apiSystemProfileGetSapSystem
-
-▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
-
-Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 **`Summary`**
 
-get all sap system values and counts on the account
+get all sap sids values and counts on the account
 
 **`Throws`**
 
 **`Memberof`**
 
 SystemProfileApi
+
+#### Defined in
+
+[api.ts:6550](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6550)
+
+___
+
+### apiSystemProfileGetSapSystem
+
+▸ **apiSystemProfileGetSapSystem**(`tags?`, `perPage?`, `page?`, `staleness?`, `registeredWith?`, `filter?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
+
+Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -204,29 +200,29 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6567](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6567)
-
-___
-
-### apiSystemProfileValidateSchema
-
-▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
+`Promise`\<`AxiosResponse`\<[`SystemProfileSapSystemOut`](../interfaces/SystemProfileSapSystemOut.md), `any`\>\>
 
 **`Summary`**
 
-validate system profile schema
+get all sap system values and counts on the account
 
 **`Throws`**
 
 **`Memberof`**
 
 SystemProfileApi
+
+#### Defined in
+
+[api.ts:6567](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6567)
+
+___
+
+### apiSystemProfileValidateSchema
+
+▸ **apiSystemProfileValidateSchema**(`repoBranch`, `repoFork?`, `days?`, `maxMessages?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.
 
 #### Parameters
 
@@ -240,8 +236,18 @@ SystemProfileApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+**`Summary`**
+
+validate system profile schema
+
+**`Throws`**
+
+**`Memberof`**
+
+SystemProfileApi
 
 #### Defined in
 
-[api.ts:6582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6582)
+[api.ts:6582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6582)

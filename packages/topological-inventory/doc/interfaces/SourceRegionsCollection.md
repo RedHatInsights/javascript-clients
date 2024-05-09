@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SourceRegionsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3219](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3219)
+[api.ts:3219](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3219)
 
 ___
 
@@ -42,7 +40,7 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3213](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3213)
+[api.ts:3213](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3213)
 
 ___
 
@@ -56,4 +54,4 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3207)
+[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3207)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 OrchestrationStacksCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2076)
+[api.ts:2076](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2076)
 
 ___
 
@@ -42,7 +40,7 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2070)
+[api.ts:2070](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2070)
 
 ___
 
@@ -56,4 +54,4 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2064](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2064)
+[api.ts:2064](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2064)

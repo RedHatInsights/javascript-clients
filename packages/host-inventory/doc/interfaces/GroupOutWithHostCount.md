@@ -6,8 +6,6 @@ Data of a single group belonging to an account.
 
 **`Export`**
 
-**`Interface`**
-
 GroupOutWithHostCount
 
 ## Table of contents
@@ -36,7 +34,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L621)
+[api.ts:621](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L621)
 
 ___
 
@@ -52,7 +50,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L633)
+[api.ts:633](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L633)
 
 ___
 
@@ -68,7 +66,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L645)
+[api.ts:645](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L645)
 
 ___
 
@@ -82,7 +80,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L609)
+[api.ts:609](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L609)
 
 ___
 
@@ -98,7 +96,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L615)
+[api.ts:615](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L615)
 
 ___
 
@@ -114,7 +112,7 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L627)
+[api.ts:627](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L627)
 
 ___
 
@@ -130,4 +128,4 @@ GroupOutWithHostCount
 
 #### Defined in
 
-[api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L639)
+[api.ts:639](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L639)

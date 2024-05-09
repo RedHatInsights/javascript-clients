@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ResourceTypesGroupsQueryOutputAllOf
 
 ## Table of contents
@@ -28,4 +26,4 @@ ResourceTypesGroupsQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1330)
+[api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1330)

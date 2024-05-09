@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ResolutionsResolutions
 
 ## Table of contents
@@ -29,7 +27,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1171)
+[api.ts:1171](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1171)
 
 ___
 
@@ -43,7 +41,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1165)
+[api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1165)
 
 ___
 
@@ -59,7 +57,7 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1177](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1177)
+[api.ts:1177](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1177)
 
 ___
 
@@ -73,4 +71,4 @@ ResolutionsResolutions
 
 #### Defined in
 
-[api.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1183)
+[api.ts:1183](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1183)

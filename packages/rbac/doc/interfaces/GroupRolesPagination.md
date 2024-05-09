@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GroupRolesPagination
 
 ## Table of contents
@@ -28,7 +26,7 @@ GroupRolesPagination
 
 #### Defined in
 
-[api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1081)
+[api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1081)
 
 ___
 
@@ -42,7 +40,7 @@ GroupRolesPagination
 
 #### Defined in
 
-[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1075)
+[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1075)
 
 ___
 
@@ -56,4 +54,4 @@ GroupRolesPagination
 
 #### Defined in
 
-[api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1069)
+[api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1069)

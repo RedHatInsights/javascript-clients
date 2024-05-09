@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 CreateBehaviorGroupResponse
 
 ## Table of contents
@@ -31,7 +29,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L564)
+[packages/notifications/types/index.ts:564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L564)
 
 ___
 
@@ -45,7 +43,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L588)
+[packages/notifications/types/index.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L588)
 
 ___
 
@@ -59,7 +57,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L570)
+[packages/notifications/types/index.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L570)
 
 ___
 
@@ -73,13 +71,13 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L576)
+[packages/notifications/types/index.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L576)
 
 ___
 
 ### event\_types
 
-• **event\_types**: `Set`<`string`\>
+• **event\_types**: `Set`\<`string`\>
 
 **`Memberof`**
 
@@ -87,7 +85,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L582)
+[packages/notifications/types/index.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L582)
 
 ___
 
@@ -101,4 +99,4 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/notifications/types/index.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L558)
+[packages/notifications/types/index.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L558)

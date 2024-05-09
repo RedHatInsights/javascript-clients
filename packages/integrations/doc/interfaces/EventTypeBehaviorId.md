@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EventTypeBehaviorId
 
 ## Table of contents
@@ -27,7 +25,7 @@ EventTypeBehaviorId
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1076)
+[packages/integrations/types/index.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1076)
 
 ___
 
@@ -41,4 +39,4 @@ EventTypeBehaviorId
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1070)
+[packages/integrations/types/index.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1070)

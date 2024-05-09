@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 FlavorsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1373)
+[api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1373)
 
 ___
 
@@ -42,7 +40,7 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1367)
+[api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1367)
 
 ___
 
@@ -56,4 +54,4 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1361)
+[api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1361)

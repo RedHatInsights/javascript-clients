@@ -6,8 +6,6 @@ Object containing data specific to the SAP workload
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileSap
 
 ## Table of contents
@@ -33,7 +31,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2435](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2435)
+[api.ts:2435](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2435)
 
 ___
 
@@ -49,7 +47,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2423)
+[api.ts:2423](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2423)
 
 ___
 
@@ -63,7 +61,7 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2429)
+[api.ts:2429](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2429)
 
 ___
 
@@ -79,4 +77,4 @@ SystemProfileSap
 
 #### Defined in
 
-[api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2441)
+[api.ts:2441](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2441)

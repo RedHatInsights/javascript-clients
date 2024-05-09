@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/vulnerabilities#readme",
   "scripts": {
-    "doc:production": "typedoc --theme markdown --out doc --exclude \"**/git-api/*.ts\" --gitRevision master index.ts",
-    "doc:git-api": "typedoc --theme markdown --out git-api/doc --gitRevision master ./git-api/index.ts",
+    "doc:production": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --exclude \"**/git-api/*.ts\" --gitRevision main index.ts",
+    "doc:git-api": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out git-api/doc --gitRevision main ./git-api/index.ts",
     "doc": "npm run doc:git-api; npm run doc:production",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o $OUTPUT --skip-validate-spec --enable-post-process-file",
     "generate:production": "OUTPUT=. SPEC=$(node preProcess.js 'https://console.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",

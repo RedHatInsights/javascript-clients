@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookDefinition
 
 ## Table of contents
@@ -29,7 +27,7 @@ PlaybookDefinition
 
 #### Defined in
 
-[api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L178)
+[api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L178)
 
 ___
 
@@ -43,4 +41,4 @@ PlaybookDefinition
 
 #### Defined in
 
-[api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L172)
+[api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L172)

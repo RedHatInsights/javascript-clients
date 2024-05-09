@@ -6,8 +6,6 @@ Limited deployment information from systems managed by rpm-ostree as reported by
 
 **`Export`**
 
-**`Interface`**
-
 RPMOSTreeDeployment
 
 ## Table of contents
@@ -36,7 +34,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1286)
+[api.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1286)
 
 ___
 
@@ -52,7 +50,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1262)
+[api.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1262)
 
 ___
 
@@ -68,7 +66,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1256)
+[api.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1256)
 
 ___
 
@@ -84,7 +82,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1268)
+[api.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1268)
 
 ___
 
@@ -100,7 +98,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1274)
+[api.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1274)
 
 ___
 
@@ -116,7 +114,7 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1292)
+[api.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1292)
 
 ___
 
@@ -132,4 +130,4 @@ RPMOSTreeDeployment
 
 #### Defined in
 
-[api.ts:1280](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1280)
+[api.ts:1280](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1280)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 NetworksCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1960](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1960)
+[api.ts:1960](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1960)
 
 ___
 
@@ -42,7 +40,7 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1954](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1954)
+[api.ts:1954](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1954)
 
 ___
 
@@ -56,4 +54,4 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1948](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1948)
+[api.ts:1948](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1948)

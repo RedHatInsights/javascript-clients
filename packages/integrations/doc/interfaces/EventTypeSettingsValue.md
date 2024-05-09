@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EventTypeSettingsValue
 
 ## Table of contents
@@ -32,7 +30,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1089)
+[packages/integrations/types/index.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1089)
 
 ___
 
@@ -46,7 +44,7 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1095)
+[packages/integrations/types/index.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1095)
 
 ___
 
@@ -60,4 +58,4 @@ EventTypeSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1101)
+[packages/integrations/types/index.ts:1101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1101)

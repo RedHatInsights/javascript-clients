@@ -6,6 +6,8 @@ UsageApi - object-oriented interface
 
 **`Export`**
 
+UsageApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ UsageApi - object-oriented interface
 
 ### constructor
 
-• **new UsageApi**(`configuration?`, `basePath?`, `axios?`)
+• **new UsageApi**(`configuration?`, `basePath?`, `axios?`): [`UsageApi`](UsageApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ UsageApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`UsageApi`](UsageApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -90,21 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### usageList
 
-▸ **usageList**(`account?`, `end?`, `orgId?`, `start?`, `options?`): `Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md), `any`\>\>
+▸ **usageList**(`account?`, `end?`, `orgId?`, `start?`, `options?`): `Promise`\<`AxiosResponse`\<[`Usage`](../interfaces/Usage.md), `any`\>\>
 
 List the unique rule hits for this account over the given time range  This uses a HashLogLog structure to record number of hits, and this is therefore an approximation.
-
-**`Throws`**
-
-**`Memberof`**
-
-UsageApi
 
 #### Parameters
 
@@ -118,8 +118,14 @@ UsageApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Usage`](../interfaces/Usage.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Usage`](../interfaces/Usage.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+UsageApi
 
 #### Defined in
 
-[api.ts:10196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L10196)
+[api.ts:10196](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10196)

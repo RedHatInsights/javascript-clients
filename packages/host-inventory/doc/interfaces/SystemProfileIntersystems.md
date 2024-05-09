@@ -6,8 +6,6 @@ Object containing data specific to InterSystems workload
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileIntersystems
 
 ## Table of contents
@@ -31,7 +29,7 @@ SystemProfileIntersystems
 
 #### Defined in
 
-[api.ts:2224](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2224)
+[api.ts:2224](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2224)
 
 ___
 
@@ -45,4 +43,4 @@ SystemProfileIntersystems
 
 #### Defined in
 
-[api.ts:2230](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2230)
+[api.ts:2230](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2230)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationListItem
 
 ## Table of contents
@@ -39,7 +37,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1001)
+[api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1001)
 
 ___
 
@@ -53,7 +51,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L959)
+[api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L959)
 
 ___
 
@@ -67,7 +65,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L953)
+[api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L953)
 
 ___
 
@@ -81,7 +79,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L941)
+[api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L941)
 
 ___
 
@@ -95,7 +93,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L977)
+[api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L977)
 
 ___
 
@@ -109,7 +107,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L947)
+[api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L947)
 
 ___
 
@@ -125,7 +123,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L995)
+[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L995)
 
 ___
 
@@ -139,7 +137,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1007)
+[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1007)
 
 ___
 
@@ -153,7 +151,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L989)
+[api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L989)
 
 ___
 
@@ -167,7 +165,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L983)
+[api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L983)
 
 ___
 
@@ -181,7 +179,7 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L971)
+[api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L971)
 
 ___
 
@@ -195,4 +193,4 @@ RemediationListItem
 
 #### Defined in
 
-[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L965)
+[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L965)

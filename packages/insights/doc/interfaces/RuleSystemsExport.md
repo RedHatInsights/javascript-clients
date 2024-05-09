@@ -6,8 +6,6 @@ List of systems with current reports for each rule.
 
 **`Export`**
 
-**`Interface`**
-
 RuleSystemsExport
 
 ## Table of contents
@@ -32,4 +30,4 @@ RuleSystemsExport
 
 #### Defined in
 
-[api.ts:1845](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1845)
+[api.ts:1845](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1845)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Status
 
 ## Table of contents
@@ -27,7 +25,7 @@ Status
 
 #### Defined in
 
-[api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2542)
+[api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2542)
 
 ___
 
@@ -41,4 +39,4 @@ Status
 
 #### Defined in
 
-[api.ts:2548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2548)
+[api.ts:2548](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2548)

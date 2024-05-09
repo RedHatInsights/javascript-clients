@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceAccountPaginationAllOf
 
 ## Table of contents
@@ -26,4 +24,4 @@ ServiceAccountPaginationAllOf
 
 #### Defined in
 
-[api.ts:2529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L2529)
+[api.ts:2529](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L2529)

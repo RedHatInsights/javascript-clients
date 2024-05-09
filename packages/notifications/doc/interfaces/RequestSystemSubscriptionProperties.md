@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RequestSystemSubscriptionProperties
 
 ## Table of contents
@@ -27,7 +25,7 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1572)
+[packages/notifications/types/index.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1572)
 
 ___
 
@@ -41,4 +39,4 @@ RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1566)
+[packages/notifications/types/index.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1566)

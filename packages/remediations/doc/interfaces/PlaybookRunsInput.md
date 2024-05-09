@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookRunsInput
 
 ## Table of contents
@@ -26,4 +24,4 @@ PlaybookRunsInput
 
 #### Defined in
 
-[api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L604)
+[api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L604)

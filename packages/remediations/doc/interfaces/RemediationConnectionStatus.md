@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RemediationConnectionStatus
 
 ## Table of contents
@@ -27,7 +25,7 @@ RemediationConnectionStatus
 
 #### Defined in
 
-[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L642)
+[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L642)
 
 ___
 
@@ -41,4 +39,4 @@ RemediationConnectionStatus
 
 #### Defined in
 
-[api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L636)
+[api.ts:636](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L636)

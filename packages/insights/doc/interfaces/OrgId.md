@@ -6,8 +6,6 @@ A specific org id for a Red Hat customer.
 
 **`Export`**
 
-**`Interface`**
-
 OrgId
 
 ## Table of contents
@@ -28,4 +26,4 @@ OrgId
 
 #### Defined in
 
-[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L529)
+[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L529)

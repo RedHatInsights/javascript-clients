@@ -6,8 +6,6 @@ Advisor rule or report frequency statisics.
 
 **`Export`**
 
-**`Interface`**
-
 Stats
 
 ## Table of contents
@@ -34,7 +32,7 @@ Stats
 
 #### Defined in
 
-[api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1987)
+[api.ts:1987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1987)
 
 ___
 
@@ -48,7 +46,7 @@ Stats
 
 #### Defined in
 
-[api.ts:1975](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1975)
+[api.ts:1975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1975)
 
 ___
 
@@ -66,4 +64,4 @@ Stats
 
 #### Defined in
 
-[api.ts:1981](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1981)
+[api.ts:1981](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1981)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 SystemOut
 
 ## Table of contents
@@ -29,7 +27,7 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1208)
+[api.ts:1208](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1208)
 
 ___
 
@@ -43,7 +41,7 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1202)
+[api.ts:1202](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1202)
 
 ___
 
@@ -57,7 +55,7 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1196)
+[api.ts:1196](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1196)
 
 ___
 
@@ -71,4 +69,4 @@ SystemOut
 
 #### Defined in
 
-[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L1214)
+[api.ts:1214](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1214)

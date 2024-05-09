@@ -6,6 +6,8 @@ AckcountApi - object-oriented interface
 
 **`Export`**
 
+AckcountApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ AckcountApi - object-oriented interface
 
 ### constructor
 
-• **new AckcountApi**(`configuration?`, `basePath?`, `axios?`)
+• **new AckcountApi**(`configuration?`, `basePath?`, `axios?`): [`AckcountApi`](AckcountApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ AckcountApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`AckcountApi`](AckcountApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -91,21 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### ackcountList
 
-▸ **ackcountList**(`options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
+▸ **ackcountList**(`options?`): `Promise`\<`AxiosResponse`\<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
 
 Get the ack counts for all active rules  Return a list of rule_ids and their ack counts
-
-**`Throws`**
-
-**`Memberof`**
-
-AckcountApi
 
 #### Parameters
 
@@ -115,25 +115,25 @@ AckcountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:3277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3277)
-
-___
-
-### ackcountRetrieve
-
-▸ **ackcountRetrieve**(`ruleId`, `options?`): `Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
-
-Get the ack count for the given rule_id  Returns the rule_id and its ack count
+`Promise`\<`AxiosResponse`\<[`AckCount`](../interfaces/AckCount.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 AckcountApi
+
+#### Defined in
+
+[api.ts:3277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3277)
+
+___
+
+### ackcountRetrieve
+
+▸ **ackcountRetrieve**(`ruleId`, `options?`): `Promise`\<`AxiosResponse`\<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
+
+Get the ack count for the given rule_id  Returns the rule_id and its ack count
 
 #### Parameters
 
@@ -144,8 +144,14 @@ AckcountApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`AckCount`](../interfaces/AckCount.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+AckcountApi
 
 #### Defined in
 
-[api.ts:3288](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L3288)
+[api.ts:3288](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3288)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 NoExecutors
 
 ## Table of contents
@@ -18,7 +16,7 @@ NoExecutors
 
 ### errors
 
-• `Optional` **errors**: { `[key: string]`: `object`;  }[]
+• `Optional` **errors**: \{ `[key: string]`: `object`;  }[]
 
 **`Memberof`**
 
@@ -26,4 +24,4 @@ NoExecutors
 
 #### Defined in
 
-[api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L159)
+[api.ts:159](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L159)

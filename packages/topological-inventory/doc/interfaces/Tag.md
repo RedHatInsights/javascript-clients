@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Tag
 
 ## Table of contents
@@ -32,7 +30,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3471](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3471)
+[api.ts:3471](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3471)
 
 ___
 
@@ -46,7 +44,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3477)
+[api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3477)
 
 ___
 
@@ -62,7 +60,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3483)
+[api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3483)
 
 ___
 
@@ -76,7 +74,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3489)
+[api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3489)
 
 ___
 
@@ -90,7 +88,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3495](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3495)
+[api.ts:3495](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3495)
 
 ___
 
@@ -104,7 +102,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3501)
+[api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3501)
 
 ___
 
@@ -118,4 +116,4 @@ Tag
 
 #### Defined in
 
-[api.ts:3507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L3507)
+[api.ts:3507](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3507)

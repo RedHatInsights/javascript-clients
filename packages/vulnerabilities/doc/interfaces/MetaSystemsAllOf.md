@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 MetaSystemsAllOf
 
 ## Table of contents
@@ -29,7 +27,7 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1934)
+[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1934)
 
 ___
 
@@ -45,4 +43,4 @@ MetaSystemsAllOf
 
 #### Defined in
 
-[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1940)
+[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1940)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceOfferingsCollection
 
 ## Table of contents
@@ -28,7 +26,7 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2956](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2956)
+[api.ts:2956](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2956)
 
 ___
 
@@ -42,7 +40,7 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2950](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2950)
+[api.ts:2950](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2950)
 
 ___
 
@@ -56,4 +54,4 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L2944)
+[api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2944)

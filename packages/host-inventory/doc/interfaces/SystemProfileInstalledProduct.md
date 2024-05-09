@@ -6,8 +6,6 @@ Representation of one installed product
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileInstalledProduct
 
 ## Table of contents
@@ -32,7 +30,7 @@ SystemProfileInstalledProduct
 
 #### Defined in
 
-[api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2205)
+[api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2205)
 
 ___
 
@@ -46,7 +44,7 @@ SystemProfileInstalledProduct
 
 #### Defined in
 
-[api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2199)
+[api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2199)
 
 ___
 
@@ -62,4 +60,4 @@ SystemProfileInstalledProduct
 
 #### Defined in
 
-[api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2211)
+[api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2211)

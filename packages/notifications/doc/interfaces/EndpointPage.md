@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 EndpointPage
 
 ## Table of contents
@@ -28,7 +26,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L771)
+[packages/notifications/types/index.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L771)
 
 ___
 
@@ -46,7 +44,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L777)
+[packages/notifications/types/index.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L777)
 
 ___
 
@@ -60,4 +58,4 @@ EndpointPage
 
 #### Defined in
 
-[packages/notifications/types/index.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L783)
+[packages/notifications/types/index.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L783)

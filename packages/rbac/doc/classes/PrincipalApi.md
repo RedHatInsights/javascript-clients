@@ -6,6 +6,8 @@ PrincipalApi - object-oriented interface
 
 **`Export`**
 
+PrincipalApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ PrincipalApi - object-oriented interface
 
 ### constructor
 
-• **new PrincipalApi**(`configuration?`, `basePath?`, `axios?`)
+• **new PrincipalApi**(`configuration?`, `basePath?`, `axios?`): [`PrincipalApi`](PrincipalApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ PrincipalApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`PrincipalApi`](PrincipalApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L51)
 
 ___
 
@@ -90,25 +96,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/base.ts#L49)
 
 ## Methods
 
 ### listPrincipals
 
-▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `type?`, `options?`): `Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
+▸ **listPrincipals**(`limit?`, `offset?`, `matchCriteria?`, `usernames?`, `sortOrder?`, `email?`, `status?`, `adminOnly?`, `orderBy?`, `usernameOnly?`, `type?`, `options?`): `Promise`\<`AxiosResponse`\<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
 
 By default, responses are sorted in ascending order by username
-
-**`Summary`**
-
-List the principals for a tenant
-
-**`Throws`**
-
-**`Memberof`**
-
-PrincipalApi
 
 #### Parameters
 
@@ -129,8 +125,18 @@ PrincipalApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PrincipalPagination`](../interfaces/PrincipalPagination.md) \| [`ServiceAccountPagination`](../interfaces/ServiceAccountPagination.md), `any`\>\>
+
+**`Summary`**
+
+List the principals for a tenant
+
+**`Throws`**
+
+**`Memberof`**
+
+PrincipalApi
 
 #### Defined in
 
-[api.ts:5490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L5490)
+[api.ts:5490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L5490)

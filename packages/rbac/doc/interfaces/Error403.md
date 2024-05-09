@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Error403
 
 ## Table of contents
@@ -26,4 +24,4 @@ Error403
 
 #### Defined in
 
-[api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L787)
+[api.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L787)

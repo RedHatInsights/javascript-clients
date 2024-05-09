@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BasicAuthentication
 
 ## Table of contents
@@ -27,7 +25,7 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/notifications/types/index.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L298)
+[packages/notifications/types/index.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L298)
 
 ___
 
@@ -41,4 +39,4 @@ BasicAuthentication
 
 #### Defined in
 
-[packages/notifications/types/index.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L292)
+[packages/notifications/types/index.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L292)

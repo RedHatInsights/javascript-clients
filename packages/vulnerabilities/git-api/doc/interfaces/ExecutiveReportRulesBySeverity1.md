@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportRulesBySeverity1
 
 ## Table of contents
@@ -29,7 +27,7 @@ ExecutiveReportRulesBySeverity1
 
 #### Defined in
 
-[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L965)
+[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L965)
 
 ___
 
@@ -45,4 +43,4 @@ ExecutiveReportRulesBySeverity1
 
 #### Defined in
 
-[api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/git-api/api.ts#L971)
+[api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L971)

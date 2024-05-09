@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 GroupOutWithHostCountAllOf
 
 ## Table of contents
@@ -28,4 +26,4 @@ GroupOutWithHostCountAllOf
 
 #### Defined in
 
-[api.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L658)
+[api.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L658)

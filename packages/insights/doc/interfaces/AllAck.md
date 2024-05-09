@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AllAck
 
 ## Table of contents
@@ -32,7 +30,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L121)
+[api.ts:121](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L121)
 
 ___
 
@@ -46,7 +44,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L151)
+[api.ts:151](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L151)
 
 ___
 
@@ -62,7 +60,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L145)
+[api.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L145)
 
 ___
 
@@ -78,7 +76,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L139)
+[api.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L139)
 
 ___
 
@@ -92,7 +90,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L127)
+[api.ts:127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L127)
 
 ___
 
@@ -106,7 +104,7 @@ AllAck
 
 #### Defined in
 
-[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L133)
+[api.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L133)
 
 ___
 
@@ -120,4 +118,4 @@ AllAck
 
 #### Defined in
 
-[api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L157)
+[api.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L157)

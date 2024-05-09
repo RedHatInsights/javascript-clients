@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 V1HelpTopicTagsInner
 
 ## Table of contents
@@ -31,7 +29,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L223)
+[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L223)
 
 ___
 
@@ -45,7 +43,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L229)
+[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L229)
 
 ___
 
@@ -59,7 +57,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L235)
+[api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L235)
 
 ___
 
@@ -73,7 +71,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L241)
+[api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L241)
 
 ___
 
@@ -87,7 +85,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L247)
+[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L247)
 
 ___
 
@@ -101,4 +99,4 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L253)
+[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L253)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ServiceDetails
 
 ## Table of contents
@@ -26,4 +24,4 @@ ServiceDetails
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L33)
+[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L33)

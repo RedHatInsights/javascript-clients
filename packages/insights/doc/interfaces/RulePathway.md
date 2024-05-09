@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 RulePathway
 
 ## Table of contents
@@ -28,7 +26,7 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1765)
+[api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1765)
 
 ___
 
@@ -42,7 +40,7 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1759)
+[api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1759)
 
 ___
 
@@ -56,4 +54,4 @@ RulePathway
 
 #### Defined in
 
-[api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1771)
+[api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1771)

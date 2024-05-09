@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PolicyIn
 
 ## Table of contents
@@ -29,7 +27,7 @@ PolicyIn
 
 #### Defined in
 
-[api.ts:1513](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1513)
+[api.ts:1513](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1513)
 
 ___
 
@@ -43,7 +41,7 @@ PolicyIn
 
 #### Defined in
 
-[api.ts:1519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1519)
+[api.ts:1519](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1519)
 
 ___
 
@@ -57,7 +55,7 @@ PolicyIn
 
 #### Defined in
 
-[api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1507)
+[api.ts:1507](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1507)
 
 ___
 
@@ -71,4 +69,4 @@ PolicyIn
 
 #### Defined in
 
-[api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/rbac/api.ts#L1525)
+[api.ts:1525](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/api.ts#L1525)

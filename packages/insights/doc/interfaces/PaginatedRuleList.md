@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PaginatedRuleList
 
 ## Table of contents
@@ -28,7 +26,7 @@ PaginatedRuleList
 
 #### Defined in
 
-[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L773)
+[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L773)
 
 ___
 
@@ -42,7 +40,7 @@ PaginatedRuleList
 
 #### Defined in
 
-[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L767)
+[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L767)
 
 ___
 
@@ -56,4 +54,4 @@ PaginatedRuleList
 
 #### Defined in
 
-[api.ts:761](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L761)
+[api.ts:761](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L761)

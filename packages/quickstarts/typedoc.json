@@ -1,0 +1,9 @@
+{
+  "entryPoints": ["index.ts"],
+  "out": "doc",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "theme": "markdown",
+  "gitRevision": "main"
+}

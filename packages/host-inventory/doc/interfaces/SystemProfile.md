@@ -6,8 +6,6 @@ Representation of the system profile fields
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfile
 
 ## Table of contents
@@ -93,7 +91,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1934)
+[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1934)
 
 ___
 
@@ -107,7 +105,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1706](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1706)
+[api.ts:1706](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1706)
 
 ___
 
@@ -123,7 +121,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1712](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1712)
+[api.ts:1712](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1712)
 
 ___
 
@@ -137,7 +135,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1664)
+[api.ts:1664](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1664)
 
 ___
 
@@ -151,7 +149,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1652)
+[api.ts:1652](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1652)
 
 ___
 
@@ -165,7 +163,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1658)
+[api.ts:1658](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1658)
 
 ___
 
@@ -179,7 +177,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1964](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1964)
+[api.ts:1964](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1964)
 
 ___
 
@@ -193,7 +191,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1808](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1808)
+[api.ts:1808](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1808)
 
 ___
 
@@ -207,7 +205,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1760](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1760)
+[api.ts:1760](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1760)
 
 ___
 
@@ -221,7 +219,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1610)
+[api.ts:1610](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1610)
 
 ___
 
@@ -235,7 +233,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1670](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1670)
+[api.ts:1670](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1670)
 
 ___
 
@@ -251,7 +249,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1592)
+[api.ts:1592](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1592)
 
 ___
 
@@ -265,7 +263,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1646)
+[api.ts:1646](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1646)
 
 ___
 
@@ -279,7 +277,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1784)
+[api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1784)
 
 ___
 
@@ -293,7 +291,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1838](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1838)
+[api.ts:1838](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1838)
 
 ___
 
@@ -307,7 +305,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1826](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1826)
+[api.ts:1826](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1826)
 
 ___
 
@@ -323,7 +321,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1910)
+[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1910)
 
 ___
 
@@ -339,7 +337,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1904)
+[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1904)
 
 ___
 
@@ -355,7 +353,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1898)
+[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1898)
 
 ___
 
@@ -369,7 +367,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1628)
+[api.ts:1628](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1628)
 
 ___
 
@@ -383,7 +381,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1634)
+[api.ts:1634](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1634)
 
 ___
 
@@ -399,7 +397,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1796)
+[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1796)
 
 ___
 
@@ -413,7 +411,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1802](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1802)
+[api.ts:1802](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1802)
 
 ___
 
@@ -427,7 +425,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1814](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1814)
+[api.ts:1814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1814)
 
 ___
 
@@ -441,7 +439,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1820)
+[api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1820)
 
 ___
 
@@ -455,7 +453,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1790)
+[api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1790)
 
 ___
 
@@ -469,7 +467,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1832)
+[api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1832)
 
 ___
 
@@ -483,7 +481,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1940)
+[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1940)
 
 ___
 
@@ -499,7 +497,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1892)
+[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1892)
 
 ___
 
@@ -513,7 +511,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1748](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1748)
+[api.ts:1748](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1748)
 
 ___
 
@@ -527,7 +525,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1718](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1718)
+[api.ts:1718](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1718)
 
 ___
 
@@ -541,7 +539,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1724](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1724)
+[api.ts:1724](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1724)
 
 ___
 
@@ -555,7 +553,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1946)
+[api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1946)
 
 ___
 
@@ -569,7 +567,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1640)
+[api.ts:1640](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1640)
 
 ___
 
@@ -583,7 +581,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1598](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1598)
+[api.ts:1598](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1598)
 
 ___
 
@@ -597,7 +595,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1604](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1604)
+[api.ts:1604](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1604)
 
 ___
 
@@ -611,7 +609,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1682)
+[api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1682)
 
 ___
 
@@ -627,7 +625,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1694](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1694)
+[api.ts:1694](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1694)
 
 ___
 
@@ -641,7 +639,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1688](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1688)
+[api.ts:1688](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1688)
 
 ___
 
@@ -657,7 +655,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1574](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1574)
+[api.ts:1574](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1574)
 
 ___
 
@@ -671,7 +669,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1772)
+[api.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1772)
 
 ___
 
@@ -685,7 +683,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1766)
+[api.ts:1766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1766)
 
 ___
 
@@ -701,7 +699,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1700)
+[api.ts:1700](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1700)
 
 ___
 
@@ -717,7 +715,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1580](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1580)
+[api.ts:1580](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1580)
 
 ___
 
@@ -733,7 +731,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1586](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1586)
+[api.ts:1586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1586)
 
 ___
 
@@ -747,7 +745,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1922)
+[api.ts:1922](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1922)
 
 ___
 
@@ -763,7 +761,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1916)
+[api.ts:1916](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1916)
 
 ___
 
@@ -777,7 +775,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1730](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1730)
+[api.ts:1730](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1730)
 
 ___
 
@@ -791,7 +789,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1844)
+[api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1844)
 
 ___
 
@@ -807,7 +805,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1862)
+[api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1862)
 
 ___
 
@@ -821,7 +819,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1856)
+[api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1856)
 
 ___
 
@@ -837,7 +835,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1850)
+[api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1850)
 
 ___
 
@@ -853,7 +851,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1868)
+[api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1868)
 
 ___
 
@@ -867,7 +865,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1754)
+[api.ts:1754](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1754)
 
 ___
 
@@ -883,7 +881,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1886)
+[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1886)
 
 ___
 
@@ -899,7 +897,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1880)
+[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1880)
 
 ___
 
@@ -913,7 +911,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1742)
+[api.ts:1742](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1742)
 
 ___
 
@@ -927,7 +925,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1736](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1736)
+[api.ts:1736](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1736)
 
 ___
 
@@ -941,7 +939,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1622](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1622)
+[api.ts:1622](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1622)
 
 ___
 
@@ -955,7 +953,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1928](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1928)
+[api.ts:1928](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1928)
 
 ___
 
@@ -971,7 +969,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1952](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1952)
+[api.ts:1952](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1952)
 
 ___
 
@@ -985,7 +983,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1676)
+[api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1676)
 
 ___
 
@@ -1001,7 +999,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1616](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1616)
+[api.ts:1616](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1616)
 
 ___
 
@@ -1017,7 +1015,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1874)
+[api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1874)
 
 ___
 
@@ -1033,7 +1031,7 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1958)
+[api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1958)
 
 ___
 
@@ -1047,4 +1045,4 @@ SystemProfile
 
 #### Defined in
 
-[api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1778)
+[api.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1778)

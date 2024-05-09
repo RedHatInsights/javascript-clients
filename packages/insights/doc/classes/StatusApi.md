@@ -6,6 +6,8 @@ StatusApi - object-oriented interface
 
 **`Export`**
 
+StatusApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -34,7 +36,7 @@ StatusApi - object-oriented interface
 
 ### constructor
 
-• **new StatusApi**(`configuration?`, `basePath?`, `axios?`)
+• **new StatusApi**(`configuration?`, `basePath?`, `axios?`): [`StatusApi`](StatusApi.md)
 
 #### Parameters
 
@@ -44,13 +46,17 @@ StatusApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`StatusApi`](StatusApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -64,7 +70,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -78,7 +84,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -92,21 +98,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### statusLiveRetrieve
 
-▸ **statusLiveRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusLiveRetrieve**(`options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Is the Advisor API live and serving requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  At the moment this is the same as the Readiness check (see `/ready/`). In the future it may include other checks if we need to, but the properties of `/ready/` will always be included.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatusApi
 
 #### Parameters
 
@@ -116,25 +116,25 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatusApi
 
 #### Defined in
 
-[api.ts:8533](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8533)
+[api.ts:8533](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8533)
 
 ___
 
 ### statusReadyRetrieve
 
-▸ **statusReadyRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusReadyRetrieve**(`options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Is the Advisor API ready to serve requests?  This returns a dictionary with properties defining the status of the components Advisor relies on.  * \'django\' should always be True.  If Django isn\'t ready, you can\'t   get this information :-) * \'database\' is True when a database access returns successfully with   valid information. * \'rbac\' is True when we can make a request to the RBAC API and get   a valid response. * \'advisor\' is True if all of the above are True.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatusApi
 
 #### Parameters
 
@@ -144,25 +144,25 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatusApi
 
 #### Defined in
 
-[api.ts:8543](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8543)
+[api.ts:8543](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8543)
 
 ___
 
 ### statusRetrieve
 
-▸ **statusRetrieve**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **statusRetrieve**(`options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Provide a simple list of URLs contained here.  A list of statistics views.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatusApi
 
 #### Parameters
 
@@ -172,8 +172,14 @@ StatusApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatusApi
 
 #### Defined in
 
-[api.ts:8553](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8553)
+[api.ts:8553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8553)

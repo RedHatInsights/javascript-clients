@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ErrorsErrors
 
 ## Table of contents
@@ -27,7 +25,7 @@ ErrorsErrors
 
 #### Defined in
 
-[api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L766)
+[api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L766)
 
 ___
 
@@ -43,4 +41,4 @@ ErrorsErrors
 
 #### Defined in
 
-[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L772)
+[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L772)

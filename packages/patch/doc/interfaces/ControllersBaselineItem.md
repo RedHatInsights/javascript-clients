@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselineItem
 
 ## Table of contents
@@ -28,7 +26,7 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L466)
+[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L466)
 
 ___
 
@@ -44,7 +42,7 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L472)
+[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L472)
 
 ___
 
@@ -60,4 +58,4 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L478)
+[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L478)

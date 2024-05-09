@@ -6,6 +6,8 @@ DefaultApi - object-oriented interface
 
 **`Export`**
 
+DefaultApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -59,7 +61,7 @@ DefaultApi - object-oriented interface
 
 ### constructor
 
-• **new DefaultApi**(`configuration?`, `basePath?`, `axios?`)
+• **new DefaultApi**(`configuration?`, `basePath?`, `axios?`): [`DefaultApi`](DefaultApi.md)
 
 #### Parameters
 
@@ -69,13 +71,17 @@ DefaultApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`DefaultApi`](DefaultApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/base.ts#L51)
 
 ## Properties
 
@@ -89,7 +95,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/base.ts#L51)
 
 ___
 
@@ -103,7 +109,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/base.ts#L51)
 
 ___
 
@@ -117,25 +123,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/base.ts#L49)
 
 ## Methods
 
 ### baselineDelete
 
-▸ **baselineDelete**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
+▸ **baselineDelete**(`baselineId`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
 
 Delete a baseline
-
-**`Summary`**
-
-Delete a baseline
-
-**`Throws`**
-
-**`Memberof`**
-
-DefaultApi
 
 #### Parameters
 
@@ -146,29 +142,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5266](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5266)
-
-___
-
-### createBaseline
-
-▸ **createBaseline**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
-
-Create a baseline for my set of systems
+`Promise`\<`AxiosResponse`\<[`ControllersDeleteBaselineResponse`](../interfaces/ControllersDeleteBaselineResponse.md), `any`\>\>
 
 **`Summary`**
 
-Create a baseline for my set of systems
+Delete a baseline
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5266](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5266)
+
+___
+
+### createBaseline
+
+▸ **createBaseline**(`body`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
+
+Create a baseline for my set of systems
 
 #### Parameters
 
@@ -179,29 +175,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5278](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5278)
-
-___
-
-### deletesystem
-
-▸ **deletesystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Delete system by inventory id
+`Promise`\<`AxiosResponse`\<[`ControllersCreateBaselineResponse`](../interfaces/ControllersCreateBaselineResponse.md), `any`\>\>
 
 **`Summary`**
 
-Delete system by inventory id
+Create a baseline for my set of systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5278](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5278)
+
+___
+
+### deletesystem
+
+▸ **deletesystem**(`inventoryId`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Delete system by inventory id
 
 #### Parameters
 
@@ -212,29 +208,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5290](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5290)
-
-___
-
-### detailAdvisory
-
-▸ **detailAdvisory**(`advisoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
-
-Show me details an advisory by given advisory name
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Show me details an advisory by given advisory name
+Delete system by inventory id
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5290)
+
+___
+
+### detailAdvisory
+
+▸ **detailAdvisory**(`advisoryId`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
+
+Show me details an advisory by given advisory name
 
 #### Parameters
 
@@ -245,29 +241,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5302](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5302)
-
-___
-
-### detailBaseline
-
-▸ **detailBaseline**(`baselineId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
-
-Show baseline detail by given baseline ID
+`Promise`\<`AxiosResponse`\<[`ControllersAdvisoryDetailResponseV1`](../interfaces/ControllersAdvisoryDetailResponseV1.md), `any`\>\>
 
 **`Summary`**
 
-Show baseline detail by given baseline ID
+Show me details an advisory by given advisory name
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5302)
+
+___
+
+### detailBaseline
+
+▸ **detailBaseline**(`baselineId`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
+
+Show baseline detail by given baseline ID
 
 #### Parameters
 
@@ -278,29 +274,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5314)
-
-___
-
-### detailSystem
-
-▸ **detailSystem**(`inventoryId`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
-
-Show me details about a system by given inventory id
+`Promise`\<`AxiosResponse`\<[`ControllersBaselineDetailResponse`](../interfaces/ControllersBaselineDetailResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me details about a system by given inventory id
+Show baseline detail by given baseline ID
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5314](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5314)
+
+___
+
+### detailSystem
+
+▸ **detailSystem**(`inventoryId`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
+
+Show me details about a system by given inventory id
 
 #### Parameters
 
@@ -311,29 +307,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5326](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5326)
-
-___
-
-### exportAdvisories
-
-▸ **exportAdvisories**(`search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
-
-Export applicable advisories for all my systems
+`Promise`\<`AxiosResponse`\<[`ControllersSystemDetailResponse`](../interfaces/ControllersSystemDetailResponse.md), `any`\>\>
 
 **`Summary`**
 
-Export applicable advisories for all my systems
+Show me details about a system by given inventory id
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5326](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5326)
+
+___
+
+### exportAdvisories
+
+▸ **exportAdvisories**(`search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
+
+Export applicable advisories for all my systems
 
 #### Parameters
 
@@ -352,29 +348,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5346](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5346)
-
-___
-
-### exportAdvisorySystems
-
-▸ **exportAdvisorySystems**(`advisoryId`, `search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
-
-Export systems for my account
+`Promise`\<`AxiosResponse`\<[`ControllersAdvisoryInlineItem`](../interfaces/ControllersAdvisoryInlineItem.md)[], `any`\>\>
 
 **`Summary`**
 
-Export systems for my account
+Export applicable advisories for all my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5346](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5346)
+
+___
+
+### exportAdvisorySystems
+
+▸ **exportAdvisorySystems**(`advisoryId`, `search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
+
+Export systems for my account
 
 #### Parameters
 
@@ -408,29 +404,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5381](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5381)
-
-___
-
-### exportPackageSystems
-
-▸ **exportPackageSystems**(`packageName`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
-
-Show me all my systems which have a package installed
+`Promise`\<`AxiosResponse`\<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 **`Summary`**
 
-Show me all my systems which have a package installed
+Export systems for my account
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5381](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5381)
+
+___
+
+### exportPackageSystems
+
+▸ **exportPackageSystems**(`packageName`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
+
+Show me all my systems which have a package installed
 
 #### Parameters
 
@@ -448,29 +444,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5400](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5400)
-
-___
-
-### exportPackages
-
-▸ **exportPackages**(`sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
-
-Show me all installed packages across my systems
+`Promise`\<`AxiosResponse`\<[`ControllersPackageSystemItem`](../interfaces/ControllersPackageSystemItem.md)[], `any`\>\>
 
 **`Summary`**
 
-Show me all installed packages across my systems
+Show me all my systems which have a package installed
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5400](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5400)
+
+___
+
+### exportPackages
+
+▸ **exportPackages**(`sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
+
+Show me all installed packages across my systems
 
 #### Parameters
 
@@ -486,29 +482,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5417](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5417)
-
-___
-
-### exportSystemAdvisories
-
-▸ **exportSystemAdvisories**(`inventoryId`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
-
-Export applicable advisories for all my systems
+`Promise`\<`AxiosResponse`\<[`ControllersPackageItem`](../interfaces/ControllersPackageItem.md)[], `any`\>\>
 
 **`Summary`**
 
-Export applicable advisories for all my systems
+Show me all installed packages across my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5417](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5417)
+
+___
+
+### exportSystemAdvisories
+
+▸ **exportSystemAdvisories**(`inventoryId`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
+
+Export applicable advisories for all my systems
 
 #### Parameters
 
@@ -527,29 +523,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5437)
-
-___
-
-### exportSystemPackages
-
-▸ **exportSystemPackages**(`inventoryId`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
-
-Show me details about a system packages by given inventory id
+`Promise`\<`AxiosResponse`\<[`ControllersSystemAdvisoriesDBLookup`](../interfaces/ControllersSystemAdvisoriesDBLookup.md)[], `any`\>\>
 
 **`Summary`**
 
-Show me details about a system packages by given inventory id
+Export applicable advisories for all my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5437](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5437)
+
+___
+
+### exportSystemPackages
+
+▸ **exportSystemPackages**(`inventoryId`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
+
+Show me details about a system packages by given inventory id
 
 #### Parameters
 
@@ -566,29 +562,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5455](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5455)
-
-___
-
-### exportSystems
-
-▸ **exportSystems**(`search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
-
-Export systems for my account
+`Promise`\<`AxiosResponse`\<[`ControllersSystemPackageInline`](../interfaces/ControllersSystemPackageInline.md)[], `any`\>\>
 
 **`Summary`**
 
-Export systems for my account
+Show me details about a system packages by given inventory id
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5455](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5455)
+
+___
+
+### exportSystems
+
+▸ **exportSystems**(`search?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
+
+Export systems for my account
 
 #### Parameters
 
@@ -622,29 +618,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:5490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5490)
-
-___
-
-### latestPackage
-
-▸ **latestPackage**(`packageName`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
-
-Show me metadata of selected package
+`Promise`\<`AxiosResponse`\<[`ControllersSystemInlineItem`](../interfaces/ControllersSystemInlineItem.md)[], `any`\>\>
 
 **`Summary`**
 
-Show me metadata of selected package
+Export systems for my account
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5490)
+
+___
+
+### latestPackage
+
+▸ **latestPackage**(`packageName`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
+
+Show me metadata of selected package
 
 #### Parameters
 
@@ -655,29 +651,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5502](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5502)
-
-___
-
-### listAdvisories
-
-▸ **listAdvisories**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
-
-Show me all applicable advisories for all my systems
+`Promise`\<`AxiosResponse`\<[`ControllersPackageDetailResponse`](../interfaces/ControllersPackageDetailResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all applicable advisories for all my systems
+Show me metadata of selected package
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5502](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5502)
+
+___
+
+### listAdvisories
+
+▸ **listAdvisories**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `filterApplicableSystems?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
+
+Show me all applicable advisories for all my systems
 
 #### Parameters
 
@@ -706,29 +702,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5532](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5532)
-
-___
-
-### listAdvisorySystems
-
-▸ **listAdvisorySystems**(`advisoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterInsightsId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
-
-Show me systems on which the given advisory is applicable
+`Promise`\<`AxiosResponse`\<[`ControllersAdvisoriesResponse`](../interfaces/ControllersAdvisoriesResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me systems on which the given advisory is applicable
+Show me all applicable advisories for all my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5532](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5532)
+
+___
+
+### listAdvisorySystems
+
+▸ **listAdvisorySystems**(`advisoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterInsightsId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
+
+Show me systems on which the given advisory is applicable
 
 #### Parameters
 
@@ -768,29 +764,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5573](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5573)
-
-___
-
-### listBaseline
-
-▸ **listBaseline**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterName?`, `filterSystems?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
-
-Show me all baselines for all my systems
+`Promise`\<`AxiosResponse`\<[`ControllersAdvisorySystemsResponse`](../interfaces/ControllersAdvisorySystemsResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all baselines for all my systems
+Show me systems on which the given advisory is applicable
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5573)
+
+___
+
+### listBaseline
+
+▸ **listBaseline**(`limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterName?`, `filterSystems?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
+
+Show me all baselines for all my systems
 
 #### Parameters
 
@@ -808,29 +804,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5592](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5592)
-
-___
-
-### listBaselineSystems
-
-▸ **listBaselineSystems**(`baselineId`, `limit?`, `offset?`, `sort?`, `search?`, `filterDisplayName?`, `tags?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
-
-Show me all systems applicable to a baseline
+`Promise`\<`AxiosResponse`\<[`ControllersBaselinesResponse`](../interfaces/ControllersBaselinesResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all systems belonging to a baseline
+Show me all baselines for all my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5592](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5592)
+
+___
+
+### listBaselineSystems
+
+▸ **listBaselineSystems**(`baselineId`, `limit?`, `offset?`, `sort?`, `search?`, `filterDisplayName?`, `tags?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
+
+Show me all systems applicable to a baseline
 
 #### Parameters
 
@@ -847,29 +843,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5610](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5610)
-
-___
-
-### listPackages
-
-▸ **listPackages**(`limit?`, `offset?`, `sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
-
-Show me all installed packages across my systems
+`Promise`\<`AxiosResponse`\<[`ControllersBaselineSystemsResponse`](../interfaces/ControllersBaselineSystemsResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all installed packages across my systems
+Show me all systems belonging to a baseline
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5610](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5610)
+
+___
+
+### listPackages
+
+▸ **listPackages**(`limit?`, `offset?`, `sort?`, `search?`, `filterName?`, `filterSystemsInstalled?`, `filterSystemsUpdatable?`, `filterSummary?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
+
+Show me all installed packages across my systems
 
 #### Parameters
 
@@ -894,29 +890,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5636](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5636)
-
-___
-
-### listSystemAdvisories
-
-▸ **listSystemAdvisories**(`inventoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
-
-Show me advisories for a system by given inventory id
+`Promise`\<`AxiosResponse`\<[`ControllersPackagesResponse`](../interfaces/ControllersPackagesResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me advisories for a system by given inventory id
+Show me all installed packages across my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5636](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5636)
+
+___
+
+### listSystemAdvisories
+
+▸ **listSystemAdvisories**(`inventoryId`, `limit?`, `offset?`, `sort?`, `search?`, `filterId?`, `filterDescription?`, `filterPublicDate?`, `filterSynopsis?`, `filterAdvisoryType?`, `filterAdvisoryTypeName?`, `filterSeverity?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
+
+Show me advisories for a system by given inventory id
 
 #### Parameters
 
@@ -938,29 +934,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5659](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5659)
-
-___
-
-### listSystems
-
-▸ **listSystems**(`limit?`, `offset?`, `sort?`, `search?`, `filterInsightsId?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
-
-Show me all my systems
+`Promise`\<`AxiosResponse`\<[`ControllersSystemAdvisoriesResponse`](../interfaces/ControllersSystemAdvisoriesResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all my systems
+Show me advisories for a system by given inventory id
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5659](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5659)
+
+___
+
+### listSystems
+
+▸ **listSystems**(`limit?`, `offset?`, `sort?`, `search?`, `filterInsightsId?`, `filterId?`, `filterDisplayName?`, `filterLastEvaluation?`, `filterLastUpload?`, `filterRhsaCount?`, `filterRhbaCount?`, `filterRheaCount?`, `filterOtherCount?`, `filterStale?`, `filterPackagesInstalled?`, `filterPackagesUpdatable?`, `filterStaleTimestamp?`, `filterStaleWarningTimestamp?`, `filterCulledTimestamp?`, `filterCreated?`, `filterOsname?`, `filterOsminor?`, `filterOsmajor?`, `filterBaselineName?`, `filterOs?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
+
+Show me all my systems
 
 #### Parameters
 
@@ -1002,29 +998,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5702](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5702)
-
-___
-
-### packageSystems
-
-▸ **packageSystems**(`packageName`, `limit?`, `offset?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
-
-Show me all my systems which have a package installed
+`Promise`\<`AxiosResponse`\<[`ControllersSystemsResponse`](../interfaces/ControllersSystemsResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all my systems which have a package installed
+Show me all my systems
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5702](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5702)
+
+___
+
+### packageSystems
+
+▸ **packageSystems**(`packageName`, `limit?`, `offset?`, `tags?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsIn?`, `filterSystemProfileAnsible?`, `filterSystemProfileAnsibleControllerVersion?`, `filterSystemProfileMssql?`, `filterSystemProfileMssqlVersion?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
+
+Show me all my systems which have a package installed
 
 #### Parameters
 
@@ -1044,29 +1040,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5723)
-
-___
-
-### packageVersions
-
-▸ **packageVersions**(`packageName`, `limit?`, `offset?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
-
-Show me all package versions installed on some system
+`Promise`\<`AxiosResponse`\<[`ControllersPackageSystemsResponse`](../interfaces/ControllersPackageSystemsResponse.md), `any`\>\>
 
 **`Summary`**
 
-Show me all package versions installed on some system
+Show me all my systems which have a package installed
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5723)
+
+___
+
+### packageVersions
+
+▸ **packageVersions**(`packageName`, `limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
+
+Show me all package versions installed on some system
 
 #### Parameters
 
@@ -1079,29 +1075,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5737](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5737)
-
-___
-
-### removeBaselineSystems
-
-▸ **removeBaselineSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Remove systems from baseline
+`Promise`\<`AxiosResponse`\<[`ControllersPackageVersionsResponse`](../interfaces/ControllersPackageVersionsResponse.md), `any`\>\>
 
 **`Summary`**
 
-Remove systems from baseline
+Show me all package versions installed on some system
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5737](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5737)
+
+___
+
+### removeBaselineSystems
+
+▸ **removeBaselineSystems**(`body`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Remove systems from baseline
 
 #### Parameters
 
@@ -1112,29 +1108,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5749](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5749)
-
-___
-
-### systemPackages
-
-▸ **systemPackages**(`inventoryId`, `limit?`, `offset?`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
-
-Show me details about a system packages by given inventory id
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Show me details about a system packages by given inventory id
+Remove systems from baseline
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5749](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5749)
+
+___
+
+### systemPackages
+
+▸ **systemPackages**(`inventoryId`, `limit?`, `offset?`, `search?`, `filterName?`, `filterDescription?`, `filterEvra?`, `filterSummary?`, `filterUpdatable?`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
+
+Show me details about a system packages by given inventory id
 
 #### Parameters
 
@@ -1153,29 +1149,29 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5769](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5769)
-
-___
-
-### updateBaseline
-
-▸ **updateBaseline**(`baselineId`, `body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
-
-Update a baseline for my set of systems
+`Promise`\<`AxiosResponse`\<[`ControllersSystemPackageResponse`](../interfaces/ControllersSystemPackageResponse.md), `any`\>\>
 
 **`Summary`**
 
-Update a baseline for my set of systems
+Show me details about a system packages by given inventory id
 
 **`Throws`**
 
 **`Memberof`**
 
 DefaultApi
+
+#### Defined in
+
+[api.ts:5769](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5769)
+
+___
+
+### updateBaseline
+
+▸ **updateBaseline**(`baselineId`, `body`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
+
+Update a baseline for my set of systems
 
 #### Parameters
 
@@ -1187,19 +1183,40 @@ DefaultApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ControllersUpdateBaselineResponse`](../interfaces/ControllersUpdateBaselineResponse.md), `any`\>\>
+
+**`Summary`**
+
+Update a baseline for my set of systems
+
+**`Throws`**
+
+**`Memberof`**
+
+DefaultApi
 
 #### Defined in
 
-[api.ts:5782](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5782)
+[api.ts:5782](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5782)
 
 ___
 
 ### viewAdvisoriesSystems
 
-▸ **viewAdvisoriesSystems**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
+▸ **viewAdvisoriesSystems**(`body`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
 
 View advisory-system pairs for selected systems and advisories
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `body` | [`ControllersSystemsAdvisoriesRequest`](../interfaces/ControllersSystemsAdvisoriesRequest.md) | Request body |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
 
 **`Summary`**
 
@@ -1211,28 +1228,28 @@ View advisory-system pairs for selected systems and advisories
 
 DefaultApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `body` | [`ControllersSystemsAdvisoriesRequest`](../interfaces/ControllersSystemsAdvisoriesRequest.md) | Request body |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`ControllersAdvisoriesSystemsResponse`](../interfaces/ControllersAdvisoriesSystemsResponse.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:5794](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5794)
+[api.ts:5794](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5794)
 
 ___
 
 ### viewSystemsAdvisories
 
-▸ **viewSystemsAdvisories**(`body`, `options?`): `Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
+▸ **viewSystemsAdvisories**(`body`, `options?`): `Promise`\<`AxiosResponse`\<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
 
 View system-advisory pairs for selected systems and advisories
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `body` | [`ControllersSystemsAdvisoriesRequest`](../interfaces/ControllersSystemsAdvisoriesRequest.md) | Request body |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
 
 **`Summary`**
 
@@ -1244,17 +1261,6 @@ View system-advisory pairs for selected systems and advisories
 
 DefaultApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `body` | [`ControllersSystemsAdvisoriesRequest`](../interfaces/ControllersSystemsAdvisoriesRequest.md) | Request body |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`ControllersSystemsAdvisoriesResponse`](../interfaces/ControllersSystemsAdvisoriesResponse.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:5806](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L5806)
+[api.ts:5806](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L5806)

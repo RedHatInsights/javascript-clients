@@ -6,6 +6,8 @@ VersionApi - object-oriented interface
 
 **`Export`**
 
+VersionApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ VersionApi - object-oriented interface
 
 ### constructor
 
-• **new VersionApi**(`configuration?`, `basePath?`, `axios?`)
+• **new VersionApi**(`configuration?`, `basePath?`, `axios?`): [`VersionApi`](VersionApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ VersionApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`VersionApi`](VersionApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L51)
 
 ___
 
@@ -90,15 +96,25 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/base.ts#L49)
 
 ## Methods
 
 ### getVersion
 
-▸ **getVersion**(`options?`): `Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+▸ **getVersion**(`options?`): `Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 Provides information about the version of the service
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 **`Summary`**
 
@@ -110,16 +126,6 @@ Get service version
 
 VersionApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3519](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L3519)
+[api.ts:3519](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3519)

@@ -6,8 +6,6 @@ The metadata for resource-types responses
 
 **`Export`**
 
-**`Interface`**
-
 Meta
 
 ## Table of contents
@@ -30,4 +28,4 @@ Meta
 
 #### Defined in
 
-[api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L1107)
+[api.ts:1107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1107)

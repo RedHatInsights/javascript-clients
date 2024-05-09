@@ -6,6 +6,8 @@ ExportApi - object-oriented interface
 
 **`Export`**
 
+ExportApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -35,7 +37,7 @@ ExportApi - object-oriented interface
 
 ### constructor
 
-• **new ExportApi**(`configuration?`, `basePath?`, `axios?`)
+• **new ExportApi**(`configuration?`, `basePath?`, `axios?`): [`ExportApi`](ExportApi.md)
 
 #### Parameters
 
@@ -45,13 +47,17 @@ ExportApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`ExportApi`](ExportApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -65,7 +71,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -79,7 +85,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -93,21 +99,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### exportHitsList
 
-▸ **exportHitsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
+▸ **exportHitsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `format?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`\<`AxiosResponse`\<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
 
 Get each host and all rules currently affecting it.  We also only present active, non-acked (on an account AND host level) rules.  Inventory data may be requested if Advisor has not seen all the hosts. The accepted content type supplied in the request headers is used to determine the supplied content type.
-
-**`Throws`**
-
-**`Memberof`**
-
-ExportApi
 
 #### Parameters
 
@@ -134,25 +134,25 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ExportHits`](../interfaces/ExportHits.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+ExportApi
 
 #### Defined in
 
-[api.ts:4316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4316)
+[api.ts:4316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4316)
 
 ___
 
 ### exportReportsList
 
-▸ **exportReportsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
+▸ **exportReportsList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`\<`AxiosResponse`\<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
 
 List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
-
-**`Throws`**
-
-**`Memberof`**
-
-ExportApi
 
 #### Parameters
 
@@ -178,25 +178,25 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ReportExport`](../interfaces/ReportExport.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+ExportApi
 
 #### Defined in
 
-[api.ts:4342](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4342)
+[api.ts:4342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4342)
 
 ___
 
 ### exportRulesList
 
-▸ **exportRulesList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
+▸ **exportRulesList**(`category?`, `displayName?`, `filterSystemProfileSapSidsContains?`, `filterSystemProfileSapSystem?`, `groups?`, `hasPlaybook?`, `impact?`, `incident?`, `likelihood?`, `reboot?`, `resRisk?`, `tags?`, `text?`, `totalRisk?`, `updateMethod?`, `uuid?`, `options?`): `Promise`\<`AxiosResponse`\<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
 
 List the report details of each rule affecting each system.  System and Rule are referred to by ID only, to be correlated with the Rule and System export data.  It\'s like the hits output but much less repetitive.
-
-**`Throws`**
-
-**`Memberof`**
-
-ExportApi
 
 #### Parameters
 
@@ -222,25 +222,25 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
-
-#### Defined in
-
-[api.ts:4368](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4368)
-
-___
-
-### exportSystemsList
-
-▸ **exportSystemsList**(`displayName?`, `format?`, `groups?`, `ruleId?`, `sort?`, `updateMethod?`, `options?`): `Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[], `any`\>\>
-
-List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
+`Promise`\<`AxiosResponse`\<[`RuleExport`](../interfaces/RuleExport.md)[], `any`\>\>
 
 **`Throws`**
 
 **`Memberof`**
 
 ExportApi
+
+#### Defined in
+
+[api.ts:4368](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4368)
+
+___
+
+### exportSystemsList
+
+▸ **exportSystemsList**(`displayName?`, `format?`, `groups?`, `ruleId?`, `sort?`, `updateMethod?`, `options?`): `Promise`\<`AxiosResponse`\<[`System`](../interfaces/System.md)[], `any`\>\>
+
+List of systems with details and hit counts.  Systems can be sorted and filtered by display name and rule id.
 
 #### Parameters
 
@@ -256,8 +256,14 @@ ExportApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`System`](../interfaces/System.md)[], `any`\>\>
+`Promise`\<`AxiosResponse`\<[`System`](../interfaces/System.md)[], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+ExportApi
 
 #### Defined in
 
-[api.ts:4384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L4384)
+[api.ts:4384](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4384)

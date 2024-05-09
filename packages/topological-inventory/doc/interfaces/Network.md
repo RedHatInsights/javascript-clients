@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 Network
 
 ## Table of contents
@@ -41,7 +39,7 @@ Network
 
 #### Defined in
 
-[api.ts:1717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1717)
+[api.ts:1717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1717)
 
 ___
 
@@ -55,7 +53,7 @@ Network
 
 #### Defined in
 
-[api.ts:1723](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1723)
+[api.ts:1723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1723)
 
 ___
 
@@ -69,7 +67,7 @@ Network
 
 #### Defined in
 
-[api.ts:1729](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1729)
+[api.ts:1729](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1729)
 
 ___
 
@@ -83,7 +81,7 @@ Network
 
 #### Defined in
 
-[api.ts:1735](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1735)
+[api.ts:1735](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1735)
 
 ___
 
@@ -99,7 +97,7 @@ Network
 
 #### Defined in
 
-[api.ts:1741](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1741)
+[api.ts:1741](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1741)
 
 ___
 
@@ -113,7 +111,7 @@ Network
 
 #### Defined in
 
-[api.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1747)
+[api.ts:1747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1747)
 
 ___
 
@@ -127,7 +125,7 @@ Network
 
 #### Defined in
 
-[api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1753)
+[api.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1753)
 
 ___
 
@@ -143,7 +141,7 @@ Network
 
 #### Defined in
 
-[api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1759)
+[api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1759)
 
 ___
 
@@ -157,7 +155,7 @@ Network
 
 #### Defined in
 
-[api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1765)
+[api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1765)
 
 ___
 
@@ -171,7 +169,7 @@ Network
 
 #### Defined in
 
-[api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1771)
+[api.ts:1771](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1771)
 
 ___
 
@@ -187,7 +185,7 @@ Network
 
 #### Defined in
 
-[api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1777)
+[api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1777)
 
 ___
 
@@ -201,7 +199,7 @@ Network
 
 #### Defined in
 
-[api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1783)
+[api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1783)
 
 ___
 
@@ -217,7 +215,7 @@ Network
 
 #### Defined in
 
-[api.ts:1789](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1789)
+[api.ts:1789](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1789)
 
 ___
 
@@ -231,7 +229,7 @@ Network
 
 #### Defined in
 
-[api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1795)
+[api.ts:1795](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1795)
 
 ___
 
@@ -247,7 +245,7 @@ Network
 
 #### Defined in
 
-[api.ts:1801](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1801)
+[api.ts:1801](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1801)
 
 ___
 
@@ -261,4 +259,4 @@ Network
 
 #### Defined in
 
-[api.ts:1807](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/topological-inventory/api.ts#L1807)
+[api.ts:1807](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1807)

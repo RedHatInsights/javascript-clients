@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 V1FavoriteQuickstart
 
 ## Table of contents
@@ -32,7 +30,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L113)
+[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L113)
 
 ___
 
@@ -46,7 +44,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L119)
+[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L119)
 
 ___
 
@@ -60,7 +58,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L125)
+[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L125)
 
 ___
 
@@ -74,7 +72,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L131)
+[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L131)
 
 ___
 
@@ -88,7 +86,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L137)
+[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L137)
 
 ___
 
@@ -102,7 +100,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L143)
+[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L143)
 
 ___
 
@@ -116,4 +114,4 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L149)
+[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L149)

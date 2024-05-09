@@ -6,6 +6,8 @@ AccountsStalenessApi - object-oriented interface
 
 **`Export`**
 
+AccountsStalenessApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -36,7 +38,7 @@ AccountsStalenessApi - object-oriented interface
 
 ### constructor
 
-• **new AccountsStalenessApi**(`configuration?`, `basePath?`, `axios?`)
+• **new AccountsStalenessApi**(`configuration?`, `basePath?`, `axios?`): [`AccountsStalenessApi`](AccountsStalenessApi.md)
 
 #### Parameters
 
@@ -46,13 +48,17 @@ AccountsStalenessApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`AccountsStalenessApi`](AccountsStalenessApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -80,7 +86,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -94,15 +100,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiStalenessCreateStaleness
 
-▸ **apiStalenessCreateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
+▸ **apiStalenessCreateStaleness**(`stalenessIn`, `options?`): `Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Create account staleness record. Required permissions: inventory:TODO:write
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to create a record for a account staleness. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 **`Summary`**
 
@@ -114,28 +131,27 @@ Create account staleness record
 
 AccountsStalenessApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to create a record for a account staleness. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3201](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3201)
+[api.ts:3201](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3201)
 
 ___
 
 ### apiStalenessDeleteStaleness
 
-▸ **apiStalenessDeleteStaleness**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiStalenessDeleteStaleness**(`options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -147,27 +163,27 @@ Delete an account staleness
 
 AccountsStalenessApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
 #### Defined in
 
-[api.ts:3212](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3212)
+[api.ts:3212](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3212)
 
 ___
 
 ### apiStalenessGetDefaultStaleness
 
-▸ **apiStalenessGetDefaultStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
+▸ **apiStalenessGetDefaultStaleness**(`options?`): `Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 **`Summary`**
 
@@ -179,27 +195,27 @@ Read the entire list of account staleness
 
 AccountsStalenessApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3223](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3223)
+[api.ts:3223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3223)
 
 ___
 
 ### apiStalenessGetStaleness
 
-▸ **apiStalenessGetStaleness**(`options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
+▸ **apiStalenessGetStaleness**(`options?`): `Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 **`Summary`**
 
@@ -211,27 +227,28 @@ Read the entire list of account staleness
 
 AccountsStalenessApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3234](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3234)
+[api.ts:3234](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3234)
 
 ___
 
 ### apiStalenessUpdateStaleness
 
-▸ **apiStalenessUpdateStaleness**(`stalenessIn`, `options?`): `Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
+▸ **apiStalenessUpdateStaleness**(`stalenessIn`, `options?`): `Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 Update account staleness record. Required permissions: inventory:staleness:write
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to update a record for a account staleness. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
 
 **`Summary`**
 
@@ -243,17 +260,6 @@ Update account staleness record
 
 AccountsStalenessApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `stalenessIn` | [`StalenessIn`](../interfaces/StalenessIn.md) | Data required to update a record for a account staleness. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`StalenessOutput`](../interfaces/StalenessOutput.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L3246)
+[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3246)

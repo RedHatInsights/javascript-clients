@@ -6,6 +6,8 @@ StatsApi - object-oriented interface
 
 **`Export`**
 
+StatsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -36,7 +38,7 @@ StatsApi - object-oriented interface
 
 ### constructor
 
-• **new StatsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new StatsApi**(`configuration?`, `basePath?`, `axios?`): [`StatsApi`](StatsApi.md)
 
 #### Parameters
 
@@ -46,13 +48,17 @@ StatsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`StatsApi`](StatsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ## Properties
 
@@ -66,7 +72,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -80,7 +86,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L51)
 
 ___
 
@@ -94,21 +100,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/base.ts#L49)
 
 ## Methods
 
 ### statsList
 
-▸ **statsList**(`options?`): `Promise`<`AxiosResponse`<`string`[][], `any`\>\>
+▸ **statsList**(`options?`): `Promise`\<`AxiosResponse`\<`string`[][], `any`\>\>
 
 Provide a simple list of URLs contained here.  A list of statistics views.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatsApi
 
 #### Parameters
 
@@ -118,25 +118,25 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`string`[][], `any`\>\>
+`Promise`\<`AxiosResponse`\<`string`[][], `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatsApi
 
 #### Defined in
 
-[api.ts:8283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8283)
+[api.ts:8283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8283)
 
 ___
 
 ### statsOverviewRetrieve
 
-▸ **statsOverviewRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsOverviewRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
 
 Show overview statistics for this user  This gives the number of pathways, and incident, critical and important recommendations, affecting systems that the user can see.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatsApi
 
 #### Parameters
 
@@ -150,25 +150,25 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatsApi
 
 #### Defined in
 
-[api.ts:8297](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8297)
+[api.ts:8297](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8297)
 
 ___
 
 ### statsReportsRetrieve
 
-▸ **statsReportsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsReportsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
 
 Show statistics of reports impacting across categories and risks.  Only current reports are considered.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatsApi
 
 #### Parameters
 
@@ -182,25 +182,25 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatsApi
 
 #### Defined in
 
-[api.ts:8311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8311)
+[api.ts:8311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8311)
 
 ___
 
 ### statsRulesRetrieve
 
-▸ **statsRulesRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsRulesRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
 
 Show statistics of rule usage across categories and risks.  Only current reports are considered.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatsApi
 
 #### Parameters
 
@@ -214,25 +214,25 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatsApi
 
 #### Defined in
 
-[api.ts:8325](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8325)
+[api.ts:8325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8325)
 
 ___
 
 ### statsSystemsRetrieve
 
-▸ **statsSystemsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+▸ **statsSystemsRetrieve**(`tags?`, `groups?`, `filterSystemProfileSapSystem?`, `filterSystemProfileSapSidsContains?`, `options?`): `Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
 
 Show statistics of systems being impacted across categories and risks.  Only current reports are considered.
-
-**`Throws`**
-
-**`Memberof`**
-
-StatsApi
 
 #### Parameters
 
@@ -246,8 +246,14 @@ StatsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`Stats`](../interfaces/Stats.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`Stats`](../interfaces/Stats.md), `any`\>\>
+
+**`Throws`**
+
+**`Memberof`**
+
+StatsApi
 
 #### Defined in
 
-[api.ts:8339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L8339)
+[api.ts:8339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L8339)

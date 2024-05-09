@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 InternalUserPermissions
 
 ## Table of contents
@@ -28,7 +26,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1277)
+[packages/notifications/types/index.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1277)
 
 ___
 
@@ -42,7 +40,7 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1271)
+[packages/notifications/types/index.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1271)
 
 ___
 
@@ -56,4 +54,4 @@ InternalUserPermissions
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/notifications/types/index.ts#L1283)
+[packages/notifications/types/index.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1283)

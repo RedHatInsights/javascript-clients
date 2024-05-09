@@ -6,8 +6,6 @@ Object containing data specific to Ansible Automation Platform
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileAnsible
 
 ## Table of contents
@@ -33,7 +31,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2024)
+[api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2024)
 
 ___
 
@@ -49,7 +47,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2012)
+[api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2012)
 
 ___
 
@@ -65,7 +63,7 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2018)
+[api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2018)
 
 ___
 
@@ -81,4 +79,4 @@ SystemProfileAnsible
 
 #### Defined in
 
-[api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2030)
+[api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2030)

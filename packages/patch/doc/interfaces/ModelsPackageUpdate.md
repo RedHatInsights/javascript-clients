@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ModelsPackageUpdate
 
 ## Table of contents
@@ -27,7 +25,7 @@ ModelsPackageUpdate
 
 #### Defined in
 
-[api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1777)
+[api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1777)
 
 ___
 
@@ -41,4 +39,4 @@ ModelsPackageUpdate
 
 #### Defined in
 
-[api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L1783)
+[api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1783)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 MetaPermissions
 
 ## Table of contents
@@ -28,4 +26,4 @@ MetaPermissions
 
 #### Defined in
 
-[api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L1842)
+[api.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1842)

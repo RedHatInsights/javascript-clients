@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PlaybookExecutorStatus
 
 ## Table of contents
@@ -31,7 +29,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L301)
+[api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L301)
 
 ___
 
@@ -45,7 +43,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L271)
+[api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L271)
 
 ___
 
@@ -59,7 +57,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L277)
+[api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L277)
 
 ___
 
@@ -73,7 +71,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L289)
+[api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L289)
 
 ___
 
@@ -87,7 +85,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L283)
+[api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L283)
 
 ___
 
@@ -101,4 +99,4 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L295)
+[api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L295)

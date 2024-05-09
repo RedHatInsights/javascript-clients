@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 FavoritesGet200Response
 
 ## Table of contents
@@ -26,4 +24,4 @@ FavoritesGet200Response
 
 #### Defined in
 
-[api.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/quickstarts/api.ts#L48)
+[api.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L48)

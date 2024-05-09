@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 PageEventType
 
 ## Table of contents
@@ -28,7 +26,7 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1478)
+[packages/integrations/types/index.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1478)
 
 ___
 
@@ -46,7 +44,7 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1484)
+[packages/integrations/types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1484)
 
 ___
 
@@ -60,4 +58,4 @@ PageEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L1490)
+[packages/integrations/types/index.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1490)

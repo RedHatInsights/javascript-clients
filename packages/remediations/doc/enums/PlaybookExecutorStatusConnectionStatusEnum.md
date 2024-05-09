@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L309)
+[api.ts:309](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L309)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L310)
+[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L310)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L311)
+[api.ts:311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L311)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L312)
+[api.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L312)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L314)
+[api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L314)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L316)
+[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L316)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L315)
+[api.ts:315](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L315)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/remediations/api.ts#L313)
+[api.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L313)

@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 DrawerEntryPayload
 
 ## Table of contents
@@ -32,7 +30,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L664)
+[packages/integrations/types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L664)
 
 ___
 
@@ -46,7 +44,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:646](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L646)
+[packages/integrations/types/index.ts:646](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L646)
 
 ___
 
@@ -60,7 +58,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L634)
+[packages/integrations/types/index.ts:634](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L634)
 
 ___
 
@@ -74,7 +72,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:628](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L628)
+[packages/integrations/types/index.ts:628](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L628)
 
 ___
 
@@ -88,7 +86,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L652)
+[packages/integrations/types/index.ts:652](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L652)
 
 ___
 
@@ -102,7 +100,7 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L658)
+[packages/integrations/types/index.ts:658](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L658)
 
 ___
 
@@ -116,4 +114,4 @@ DrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L640)
+[packages/integrations/types/index.ts:640](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L640)

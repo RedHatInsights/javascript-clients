@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 BehaviorGroupAction
 
 ## Table of contents
@@ -28,7 +26,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L372)
+[packages/integrations/types/index.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L372)
 
 ___
 
@@ -42,7 +40,7 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L384)
+[packages/integrations/types/index.ts:384](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L384)
 
 ___
 
@@ -56,4 +54,4 @@ BehaviorGroupAction
 
 #### Defined in
 
-[packages/integrations/types/index.ts:378](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L378)
+[packages/integrations/types/index.ts:378](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L378)

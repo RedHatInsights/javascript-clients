@@ -6,6 +6,8 @@ FactServiceApi - object-oriented interface
 
 **`Export`**
 
+FactServiceApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ FactServiceApi - object-oriented interface
 
 ### constructor
 
-• **new FactServiceApi**(`configuration?`, `basePath?`, `axios?`)
+• **new FactServiceApi**(`configuration?`, `basePath?`, `axios?`): [`FactServiceApi`](FactServiceApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ FactServiceApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`FactServiceApi`](FactServiceApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ___
 
@@ -90,13 +96,23 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L50)
+[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L50)
 
 ## Methods
 
 ### getFacts
 
-▸ **getFacts**(`options?`): `Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
+▸ **getFacts**(`options?`): `Promise`\<`AxiosResponse`\<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `AxiosRequestConfig`\<`any`\> | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
 
 **`Summary`**
 
@@ -108,16 +124,6 @@ Retrieve a list of fact (keys) along with their data types
 
 FactServiceApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`Fact`](../interfaces/Fact.md)[], `any`\>\>
-
 #### Defined in
 
-[api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L437)
+[api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L437)

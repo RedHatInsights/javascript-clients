@@ -6,6 +6,8 @@ HostsApi - object-oriented interface
 
 **`Export`**
 
+HostsApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -43,7 +45,7 @@ HostsApi - object-oriented interface
 
 ### constructor
 
-• **new HostsApi**(`configuration?`, `basePath?`, `axios?`)
+• **new HostsApi**(`configuration?`, `basePath?`, `axios?`): [`HostsApi`](HostsApi.md)
 
 #### Parameters
 
@@ -53,13 +55,17 @@ HostsApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`HostsApi`](HostsApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -73,7 +79,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -87,7 +93,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -101,15 +107,26 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiHostDeleteAllHosts
 
-▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostDeleteAllHosts**(`confirmDeleteAll?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Delete all hosts on the account.  The request must include \"confirm_delete_all=true\". <br /><br /> Required permissions: inventory:hosts:write
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `confirmDeleteAll?` | `boolean` | Confirmation to delete all hosts on the account |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -121,38 +138,17 @@ Delete all hosts on the account
 
 HostsApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `confirmDeleteAll?` | `boolean` | Confirmation to delete all hosts on the account |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
 #### Defined in
 
-[api.ts:5662](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5662)
+[api.ts:5662](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5662)
 
 ___
 
 ### apiHostDeleteHostById
 
-▸ **apiHostDeleteHostById**(`hostIdList`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostDeleteHostById**(`hostIdList`, `branchId?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Delete hosts by IDs <br /><br /> Required permissions: inventory:hosts:write
-
-**`Summary`**
-
-Delete hosts by IDs
-
-**`Throws`**
-
-**`Memberof`**
-
-HostsApi
 
 #### Parameters
 
@@ -164,29 +160,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5675](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5675)
-
-___
-
-### apiHostDeleteHostsByFilter
-
-▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Delete the entire list of hosts filtered by the given parameters
+Delete hosts by IDs
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5675](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5675)
+
+___
+
+### apiHostDeleteHostsByFilter
+
+▸ **apiHostDeleteHostsByFilter**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `registeredWith?`, `staleness?`, `tags?`, `filter?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
 
 #### Parameters
 
@@ -209,29 +205,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5699](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5699)
-
-___
-
-### apiHostGetHostById
-
-▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
-
-Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Find hosts by their IDs
+Delete the entire list of hosts filtered by the given parameters
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5699](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5699)
+
+___
+
+### apiHostGetHostById
+
+▸ **apiHostGetHostById**(`hostIdList`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `fields?`, `options?`): `Promise`\<`AxiosResponse`\<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+
+Find one or more hosts by their ID. <br /><br /> Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -248,29 +244,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5717](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5717)
-
-___
-
-### apiHostGetHostList
-
-▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
-
-Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 **`Summary`**
 
-Read the entire list of hosts
+Find hosts by their IDs
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5717)
+
+___
+
+### apiHostGetHostList
+
+▸ **apiHostGetHostList**(`displayName?`, `fqdn?`, `hostnameOrId?`, `insightsId?`, `providerId?`, `providerType?`, `updatedStart?`, `updatedEnd?`, `groupName?`, `branchId?`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `staleness?`, `tags?`, `registeredWith?`, `filter?`, `fields?`, `options?`): `Promise`\<`AxiosResponse`\<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
+
+Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -299,29 +295,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5747](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5747)
-
-___
-
-### apiHostGetHostSystemProfileById
-
-▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
-
-Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`HostQueryOutput`](../interfaces/HostQueryOutput.md), `any`\>\>
 
 **`Summary`**
 
-Return one or more hosts system profile
+Read the entire list of hosts
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5747)
+
+___
+
+### apiHostGetHostSystemProfileById
+
+▸ **apiHostGetHostSystemProfileById**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `branchId?`, `fields?`, `options?`): `Promise`\<`AxiosResponse`\<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
+
+Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -338,29 +334,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5765](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5765)
-
-___
-
-### apiHostGetHostTagCount
-
-▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
-
-Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`SystemProfileByHostOut`](../interfaces/SystemProfileByHostOut.md), `any`\>\>
 
 **`Summary`**
 
-Get the number of tags on a host or hosts
+Return one or more hosts system profile
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5765)
+
+___
+
+### apiHostGetHostTagCount
+
+▸ **apiHostGetHostTagCount**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `options?`): `Promise`\<`AxiosResponse`\<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
+
+Get the number of tags on a host or hosts <br /><br /> Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -375,29 +371,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:5781](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5781)
-
-___
-
-### apiHostGetHostTags
-
-▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
-
-Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
+`Promise`\<`AxiosResponse`\<[`TagCountOut`](../interfaces/TagCountOut.md), `any`\>\>
 
 **`Summary`**
 
-Get the tags on a host
+Get the number of tags on a host or hosts
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5781](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5781)
+
+___
+
+### apiHostGetHostTags
+
+▸ **apiHostGetHostTags**(`hostIdList`, `perPage?`, `page?`, `orderBy?`, `orderHow?`, `search?`, `options?`): `Promise`\<`AxiosResponse`\<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
+
+Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
 
 #### Parameters
 
@@ -413,19 +409,40 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`TagsOut`](../interfaces/TagsOut.md), `any`\>\>
+
+**`Summary`**
+
+Get the tags on a host
+
+**`Throws`**
+
+**`Memberof`**
+
+HostsApi
 
 #### Defined in
 
-[api.ts:5798](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5798)
+[api.ts:5798](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5798)
 
 ___
 
 ### apiHostHostCheckin
 
-▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
+▸ **apiHostHostCheckin**(`createCheckIn`, `options?`): `Promise`\<`AxiosResponse`\<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
 
 Finds a host and updates its staleness timestamps. It uses the supplied canonical facts to determine which host to update. By default, the staleness timestamp is set to 1 hour from when the request is received; however, this can be overridden by supplying the interval. <br /><br /> Required permissions: inventory:hosts:write
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `createCheckIn` | [`CreateCheckIn`](../interfaces/CreateCheckIn.md) | Data required to create a check-in record for a host. |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
 
 **`Summary`**
 
@@ -437,38 +454,17 @@ Update staleness timestamps for a host matching the provided facts
 
 HostsApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `createCheckIn` | [`CreateCheckIn`](../interfaces/CreateCheckIn.md) | Data required to create a check-in record for a host. |
-| `options?` | `any` | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<[`HostOut`](../interfaces/HostOut.md), `any`\>\>
-
 #### Defined in
 
-[api.ts:5810](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5810)
+[api.ts:5810](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5810)
 
 ___
 
 ### apiHostMergeFacts
 
-▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **apiHostMergeFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 Merge one or multiple hosts facts under a namespace. <br /><br /> Required permissions: inventory:hosts:write
-
-**`Summary`**
-
-Merge facts under a namespace
-
-**`Throws`**
-
-**`Memberof`**
-
-HostsApi
 
 #### Parameters
 
@@ -482,29 +478,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5825](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5825)
-
-___
-
-### apiHostPatchHostById
-
-▸ **apiHostPatchHostById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Update hosts <br /><br /> Required permissions: inventory:hosts:write
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Update hosts
+Merge facts under a namespace
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5825](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5825)
+
+___
+
+### apiHostPatchHostById
+
+▸ **apiHostPatchHostById**(`hostIdList`, `patchHostIn`, `branchId?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Update hosts <br /><br /> Required permissions: inventory:hosts:write
 
 #### Parameters
 
@@ -517,29 +513,29 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-#### Defined in
-
-[api.ts:5839](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5839)
-
-___
-
-### apiHostReplaceFacts
-
-▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
-
-Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
-Replace facts under a namespace
+Update hosts
 
 **`Throws`**
 
 **`Memberof`**
 
 HostsApi
+
+#### Defined in
+
+[api.ts:5839](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5839)
+
+___
+
+### apiHostReplaceFacts
+
+▸ **apiHostReplaceFacts**(`hostIdList`, `namespace`, `body`, `branchId?`, `options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write
 
 #### Parameters
 
@@ -553,8 +549,18 @@ HostsApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+**`Summary`**
+
+Replace facts under a namespace
+
+**`Throws`**
+
+**`Memberof`**
+
+HostsApi
 
 #### Defined in
 
-[api.ts:5854](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L5854)
+[api.ts:5854](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L5854)

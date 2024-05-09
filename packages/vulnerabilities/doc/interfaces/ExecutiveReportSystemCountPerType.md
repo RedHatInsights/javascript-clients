@@ -6,8 +6,6 @@ Number of systems managed by vulnerability application, grouped by host type.
 
 **`Export`**
 
-**`Interface`**
-
 ExecutiveReportSystemCountPerType
 
 ## Table of contents
@@ -31,7 +29,7 @@ ExecutiveReportSystemCountPerType
 
 #### Defined in
 
-[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L984)
+[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L984)
 
 ___
 
@@ -47,4 +45,4 @@ ExecutiveReportSystemCountPerType
 
 #### Defined in
 
-[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/vulnerabilities/api.ts#L990)
+[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L990)

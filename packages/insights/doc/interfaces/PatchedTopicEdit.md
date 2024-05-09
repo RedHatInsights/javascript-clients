@@ -6,8 +6,6 @@ Create or edit topics.
 
 **`Export`**
 
-**`Interface`**
-
 PatchedTopicEdit
 
 ## Table of contents
@@ -33,7 +31,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L923)
+[api.ts:923](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L923)
 
 ___
 
@@ -47,7 +45,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L941)
+[api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L941)
 
 ___
 
@@ -61,7 +59,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L935)
+[api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L935)
 
 ___
 
@@ -75,7 +73,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L911)
+[api.ts:911](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L911)
 
 ___
 
@@ -91,7 +89,7 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L917)
+[api.ts:917](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L917)
 
 ___
 
@@ -105,4 +103,4 @@ PatchedTopicEdit
 
 #### Defined in
 
-[api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L929)
+[api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L929)

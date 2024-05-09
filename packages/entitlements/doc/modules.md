@@ -28,8 +28,6 @@
 
 ServicesApi - axios parameter creator
 
-**`Export`**
-
 #### Parameters
 
 | Name | Type |
@@ -40,13 +38,15 @@ ServicesApi - axios parameter creator
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `Promise`<`RequestArgs`\> |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `servicesGet` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L40)
+[api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L40)
 
 ___
 
@@ -55,8 +55,6 @@ ___
 ▸ **ServicesApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
 
 ServicesApi - factory interface
-
-**`Export`**
 
 #### Parameters
 
@@ -72,11 +70,13 @@ ServicesApi - factory interface
 
 | Name | Type |
 | :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `AxiosPromise`<{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\> |
+| `servicesGet` | (`options?`: `any`) => `AxiosPromise`\<\{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L101)
+[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L101)
 
 ___
 
@@ -85,8 +85,6 @@ ___
 ▸ **ServicesApiFp**(`configuration?`): `Object`
 
 ServicesApi - functional programming interface
-
-**`Export`**
 
 #### Parameters
 
@@ -100,8 +98,10 @@ ServicesApi - functional programming interface
 
 | Name | Type |
 | :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `Promise`<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`<{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\>\> |
+| `servicesGet` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<\{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\>\> |
+
+**`Export`**
 
 #### Defined in
 
-[api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/entitlements/api.ts#L79)
+[api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L79)

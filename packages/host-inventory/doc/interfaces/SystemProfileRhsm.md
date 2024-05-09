@@ -6,8 +6,6 @@ Object for subscription-manager details
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileRhsm
 
 ## Table of contents
@@ -30,4 +28,4 @@ SystemProfileRhsm
 
 #### Defined in
 
-[api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2410)
+[api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2410)

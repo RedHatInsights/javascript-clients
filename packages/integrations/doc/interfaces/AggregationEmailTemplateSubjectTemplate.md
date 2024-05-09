@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 AggregationEmailTemplateSubjectTemplate
 
 ## Table of contents
@@ -31,7 +29,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L131)
+[packages/integrations/types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L131)
 
 ___
 
@@ -45,7 +43,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L161)
+[packages/integrations/types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L161)
 
 ___
 
@@ -59,7 +57,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L155)
+[packages/integrations/types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L155)
 
 ___
 
@@ -73,7 +71,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L143)
+[packages/integrations/types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L143)
 
 ___
 
@@ -87,7 +85,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L149)
+[packages/integrations/types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L149)
 
 ___
 
@@ -101,4 +99,4 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/integrations/types/index.ts#L137)
+[packages/integrations/types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L137)

@@ -23,7 +23,7 @@ RequestArgs
 
 #### Defined in
 
-[packages/shared/common.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L45)
+[packages/shared/common.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L45)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L44)
+[packages/shared/common.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L44)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L49)
+[packages/shared/common.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L49)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[packages/shared/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/shared/common.ts#L43)
+[packages/shared/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/shared/common.ts#L43)

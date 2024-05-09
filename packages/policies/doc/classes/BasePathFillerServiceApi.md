@@ -6,6 +6,8 @@ BasePathFillerServiceApi - object-oriented interface
 
 **`Export`**
 
+BasePathFillerServiceApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -32,7 +34,7 @@ BasePathFillerServiceApi - object-oriented interface
 
 ### constructor
 
-• **new BasePathFillerServiceApi**(`configuration?`, `basePath?`, `axios?`)
+• **new BasePathFillerServiceApi**(`configuration?`, `basePath?`, `axios?`): [`BasePathFillerServiceApi`](BasePathFillerServiceApi.md)
 
 #### Parameters
 
@@ -42,13 +44,17 @@ BasePathFillerServiceApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`BasePathFillerServiceApi`](BasePathFillerServiceApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ## Properties
 
@@ -62,7 +68,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ___
 
@@ -76,7 +82,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L52)
+[base.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L52)
 
 ___
 
@@ -90,13 +96,23 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/base.ts#L50)
+[base.ts:50](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/base.ts#L50)
 
 ## Methods
 
 ### get
 
-▸ **get**(`options?`): `Promise`<`AxiosResponse`<`void`, `any`\>\>
+▸ **get**(`options?`): `Promise`\<`AxiosResponse`\<`void`, `any`\>\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `AxiosRequestConfig`\<`any`\> | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`void`, `any`\>\>
 
 **`Summary`**
 
@@ -108,16 +124,6 @@ Just a filler to have a defined return code for the base path
 
 BasePathFillerServiceApi
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `AxiosRequestConfig`<`any`\> | Override http request option. |
-
-#### Returns
-
-`Promise`<`AxiosResponse`<`void`, `any`\>\>
-
 #### Defined in
 
-[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/policies/api.ts#L339)
+[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L339)

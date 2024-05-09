@@ -6,8 +6,6 @@ Serializer specifically for handling CREATE and UPDATE views for Pathways
 
 **`Export`**
 
-**`Interface`**
-
 PathwayInput
 
 ## Table of contents
@@ -32,7 +30,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1075)
+[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1075)
 
 ___
 
@@ -46,7 +44,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1069)
+[api.ts:1069](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1069)
 
 ___
 
@@ -60,7 +58,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1063)
+[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1063)
 
 ___
 
@@ -74,7 +72,7 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1087)
+[api.ts:1087](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1087)
 
 ___
 
@@ -88,4 +86,4 @@ PathwayInput
 
 #### Defined in
 
-[api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/insights/api.ts#L1081)
+[api.ts:1081](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1081)

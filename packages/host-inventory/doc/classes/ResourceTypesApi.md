@@ -6,6 +6,8 @@ ResourceTypesApi - object-oriented interface
 
 **`Export`**
 
+ResourceTypesApi
+
 ## Hierarchy
 
 - `BaseAPI`
@@ -33,7 +35,7 @@ ResourceTypesApi - object-oriented interface
 
 ### constructor
 
-• **new ResourceTypesApi**(`configuration?`, `basePath?`, `axios?`)
+• **new ResourceTypesApi**(`configuration?`, `basePath?`, `axios?`): [`ResourceTypesApi`](ResourceTypesApi.md)
 
 #### Parameters
 
@@ -43,13 +45,17 @@ ResourceTypesApi - object-oriented interface
 | `basePath` | `string` | `BASE_PATH` |
 | `axios` | `AxiosInstance` | `globalAxios` |
 
+#### Returns
+
+[`ResourceTypesApi`](ResourceTypesApi.md)
+
 #### Inherited from
 
 BaseAPI.constructor
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ## Properties
 
@@ -63,7 +69,7 @@ BaseAPI.axios
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -77,7 +83,7 @@ BaseAPI.basePath
 
 #### Defined in
 
-[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L51)
+[base.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L51)
 
 ___
 
@@ -91,25 +97,15 @@ BaseAPI.configuration
 
 #### Defined in
 
-[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/base.ts#L49)
+[base.ts:49](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/base.ts#L49)
 
 ## Methods
 
 ### apiResourceTypeGetResourceTypeGroupsList
 
-▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
+▸ **apiResourceTypeGetResourceTypeGroupsList**(`name?`, `perPage?`, `page?`, `options?`): `Promise`\<`AxiosResponse`\<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 Returns the list of groups in the current account. <br /><br /> Required permissions: rbac:*:*
-
-**`Summary`**
-
-Get the list of inventory groups in resource-types format
-
-**`Throws`**
-
-**`Memberof`**
-
-ResourceTypesApi
 
 #### Parameters
 
@@ -122,29 +118,29 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
-
-#### Defined in
-
-[api.ts:6060](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6060)
-
-___
-
-### apiResourceTypeGetResourceTypeList
-
-▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
-
-Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
+`Promise`\<`AxiosResponse`\<[`ResourceTypesGroupsQueryOutput`](../interfaces/ResourceTypesGroupsQueryOutput.md), `any`\>\>
 
 **`Summary`**
 
-Get the list of resource types
+Get the list of inventory groups in resource-types format
 
 **`Throws`**
 
 **`Memberof`**
 
 ResourceTypesApi
+
+#### Defined in
+
+[api.ts:6060](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6060)
+
+___
+
+### apiResourceTypeGetResourceTypeList
+
+▸ **apiResourceTypeGetResourceTypeList**(`perPage?`, `page?`, `options?`): `Promise`\<`AxiosResponse`\<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
+
+Returns the list of available RBAC resource types. <br /><br /> Required permissions: rbac:*:*
 
 #### Parameters
 
@@ -156,8 +152,18 @@ ResourceTypesApi
 
 #### Returns
 
-`Promise`<`AxiosResponse`<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`ResourceTypesQueryOutput`](../interfaces/ResourceTypesQueryOutput.md), `any`\>\>
+
+**`Summary`**
+
+Get the list of resource types
+
+**`Throws`**
+
+**`Memberof`**
+
+ResourceTypesApi
 
 #### Defined in
 
-[api.ts:6073](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L6073)
+[api.ts:6073](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6073)

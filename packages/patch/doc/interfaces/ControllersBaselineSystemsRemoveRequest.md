@@ -4,8 +4,6 @@
 
 **`Export`**
 
-**`Interface`**
-
 ControllersBaselineSystemsRemoveRequest
 
 ## Table of contents
@@ -28,4 +26,4 @@ ControllersBaselineSystemsRemoveRequest
 
 #### Defined in
 
-[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/patch/api.ts#L548)
+[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L548)

@@ -6,8 +6,6 @@ Object for whole system systemd state, as reported by systemctl status --all
 
 **`Export`**
 
-**`Interface`**
-
 SystemProfileSystemd
 
 ## Table of contents
@@ -33,7 +31,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2564)
+[api.ts:2564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2564)
 
 ___
 
@@ -49,7 +47,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2570](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2570)
+[api.ts:2570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2570)
 
 ___
 
@@ -65,7 +63,7 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2558](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2558)
+[api.ts:2558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2558)
 
 ___
 
@@ -81,4 +79,4 @@ SystemProfileSystemd
 
 #### Defined in
 
-[api.ts:2552](https://github.com/RedHatInsights/javascript-clients/blob/master/packages/host-inventory/api.ts#L2552)
+[api.ts:2552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2552)
