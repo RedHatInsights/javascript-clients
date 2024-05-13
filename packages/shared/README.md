@@ -1,6 +1,7 @@
 @redhat-cloud-services/javascript-clients-shared / [Exports](modules.md)
 
 # Shared Javascript utils for javascript-clients
+This package contains some common configurations and functions needed for clients using the new [javascript-clients](https://github.com/RedHatInsights/javascript-clients) generator.
 
 ## Install
 NPM
