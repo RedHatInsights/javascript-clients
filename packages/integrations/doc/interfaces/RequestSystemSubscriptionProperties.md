@@ -4,7 +4,7 @@
 
 **`Export`**
 
-RequestSystemSubscriptionProperties
+RequestSystemSubscriptionPropertie
 
 ## Table of contents
 
@@ -21,11 +21,11 @@ RequestSystemSubscriptionProperties
 
 **`Memberof`**
 
-RequestSystemSubscriptionProperties
+RequestSystemSubscriptionPropertie
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1572)
+[packages/integrations/types/index.ts:1578](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1578)
 
 ___
 
@@ -35,8 +35,8 @@ ___
 
 **`Memberof`**
 
-RequestSystemSubscriptionProperties
+RequestSystemSubscriptionPropertie
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1566](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1566)
+[packages/integrations/types/index.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1572)

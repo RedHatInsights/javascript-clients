@@ -4,7 +4,7 @@
 
 **`Export`**
 
-CamelProperties
+CamelPropertie
 
 ## Table of contents
 
@@ -26,7 +26,7 @@ CamelProperties
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 
@@ -40,7 +40,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 
@@ -54,7 +54,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 
@@ -68,7 +68,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 
@@ -82,7 +82,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Index signature
 
@@ -100,7 +100,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 
@@ -114,7 +114,7 @@ ___
 
 **`Memberof`**
 
-CamelProperties
+CamelPropertie
 
 #### Defined in
 

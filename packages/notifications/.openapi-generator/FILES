@@ -29,10 +29,4 @@ configuration.ts
 git_push.sh
 index.ts
 index.ts
-tsconfig-cjs.json
-tsconfig-esm.json
 types/index.ts
-utils/base.ts
-utils/common.ts
-utils/configuration.ts
-utils/index.ts

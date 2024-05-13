@@ -1,11 +1,11 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
-import type { RequestArgs } from '../utils/base';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
-import { Configuration } from '../utils/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
 import type {  } from '../types';
@@ -13,17 +13,17 @@ import type {  } from '../types';
 
 export type EndpointResourceV1GetDetailedEndpointHistoryParams = {
   /**
-  *
+  * 
   * @type { string }
   * @memberof EndpointResourceV1GetDetailedEndpointHistoryApi
   */
-  historyId: string,
+  historyId: string, 
   /**
-  *
+  * 
   * @type { string }
   * @memberof EndpointResourceV1GetDetailedEndpointHistoryApi
   */
-  id: string,
+  id: string, 
   options?: AxiosRequestConfig
 }
 
@@ -32,7 +32,7 @@ const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [End
 }
 /**
 * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
-* @summary Retrieve event notification details
+* @summary Retrieve event notification detail
 * @param {EndpointResourceV1GetDetailedEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

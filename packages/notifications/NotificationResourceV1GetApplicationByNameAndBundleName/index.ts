@@ -1,11 +1,11 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
-import type { RequestArgs } from '../utils/base';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
-import { Configuration } from '../utils/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
 import type { Application } from '../types';
@@ -13,17 +13,17 @@ import type { Application } from '../types';
 
 export type NotificationResourceV1GetApplicationByNameAndBundleNameParams = {
   /**
-  *
+  * 
   * @type { string }
   * @memberof NotificationResourceV1GetApplicationByNameAndBundleNameApi
   */
-  applicationName: string,
+  applicationName: string, 
   /**
-  *
+  * 
   * @type { string }
   * @memberof NotificationResourceV1GetApplicationByNameAndBundleNameApi
   */
-  bundleName: string,
+  bundleName: string, 
   options?: AxiosRequestConfig
 }
 
@@ -32,7 +32,7 @@ const isNotificationResourceV1GetApplicationByNameAndBundleNameObjectParams = (p
 }
 /**
 * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
-* @summary Retrieve an application by bundle and application names
+* @summary Retrieve an application by bundle and application name
 * @param {NotificationResourceV1GetApplicationByNameAndBundleNameParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

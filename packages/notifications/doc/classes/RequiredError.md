@@ -54,7 +54,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L167)
+[packages/notifications/base.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/base.ts#L68)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L167)
+[packages/notifications/base.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/base.ts#L68)
 
 ___
 

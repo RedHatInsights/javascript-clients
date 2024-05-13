@@ -28,7 +28,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1710](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1710)
+[packages/notifications/types/index.ts:1716](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1716)
 
 ___
 
@@ -42,7 +42,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1716](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1716)
+[packages/notifications/types/index.ts:1722](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1722)
 
 ___
 
@@ -56,7 +56,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1722](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1722)
+[packages/notifications/types/index.ts:1728](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1728)
 
 ___
 
@@ -70,7 +70,7 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1728](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1728)
+[packages/notifications/types/index.ts:1734](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1734)
 
 ___
 
@@ -84,4 +84,4 @@ TriggerDailyDigestRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1734](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1734)
+[packages/notifications/types/index.ts:1740](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1740)

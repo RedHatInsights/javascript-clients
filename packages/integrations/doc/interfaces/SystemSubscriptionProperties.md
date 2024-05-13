@@ -4,7 +4,7 @@
 
 **`Export`**
 
-SystemSubscriptionProperties
+SystemSubscriptionPropertie
 
 ## Table of contents
 
@@ -22,11 +22,11 @@ SystemSubscriptionProperties
 
 **`Memberof`**
 
-SystemSubscriptionProperties
+SystemSubscriptionPropertie
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1654)
+[packages/integrations/types/index.ts:1660](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1660)
 
 ___
 
@@ -36,11 +36,11 @@ ___
 
 **`Memberof`**
 
-SystemSubscriptionProperties
+SystemSubscriptionPropertie
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1648](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1648)
+[packages/integrations/types/index.ts:1654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1654)
 
 ___
 
@@ -50,8 +50,8 @@ ___
 
 **`Memberof`**
 
-SystemSubscriptionProperties
+SystemSubscriptionPropertie
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1642)
+[packages/integrations/types/index.ts:1648](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1648)

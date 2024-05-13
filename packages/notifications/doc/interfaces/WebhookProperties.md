@@ -4,7 +4,7 @@
 
 **`Export`**
 
-WebhookProperties
+WebhookPropertie
 
 ## Table of contents
 
@@ -25,11 +25,11 @@ WebhookProperties
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1846)
+[packages/notifications/types/index.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1852)
 
 ___
 
@@ -39,11 +39,11 @@ ___
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1852)
+[packages/notifications/types/index.ts:1858](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1858)
 
 ___
 
@@ -53,11 +53,11 @@ ___
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1834)
+[packages/notifications/types/index.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1840)
 
 ___
 
@@ -67,11 +67,11 @@ ___
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1828](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1828)
+[packages/notifications/types/index.ts:1834](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1834)
 
 ___
 
@@ -81,11 +81,11 @@ ___
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1840](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1840)
+[packages/notifications/types/index.ts:1846](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1846)
 
 ___
 
@@ -95,8 +95,8 @@ ___
 
 **`Memberof`**
 
-WebhookProperties
+WebhookPropertie
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1822](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1822)
+[packages/notifications/types/index.ts:1828](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1828)

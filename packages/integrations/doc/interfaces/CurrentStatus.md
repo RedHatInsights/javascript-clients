@@ -4,7 +4,7 @@
 
 **`Export`**
 
-CurrentStatus
+CurrentStatu
 
 ## Table of contents
 
@@ -22,7 +22,7 @@ CurrentStatus
 
 **`Memberof`**
 
-CurrentStatus
+CurrentStatu
 
 #### Defined in
 
@@ -36,7 +36,7 @@ ___
 
 **`Memberof`**
 
-CurrentStatus
+CurrentStatu
 
 #### Defined in
 
@@ -50,7 +50,7 @@ ___
 
 **`Memberof`**
 
-CurrentStatus
+CurrentStatu
 
 #### Defined in
 

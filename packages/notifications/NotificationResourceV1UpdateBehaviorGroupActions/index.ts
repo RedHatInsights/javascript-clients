@@ -1,11 +1,11 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
-import type { RequestArgs } from '../utils/base';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
-import { Configuration } from '../utils/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
 import type {  } from '../types';
@@ -17,13 +17,13 @@ export type NotificationResourceV1UpdateBehaviorGroupActionsParams = {
   * @type { string }
   * @memberof NotificationResourceV1UpdateBehaviorGroupActionsApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: string, 
   /**
-  *
+  * 
   * @type { Array<string> }
   * @memberof NotificationResourceV1UpdateBehaviorGroupActionsApi
   */
-  requestBody?: Array<string>,
+  requestBody?: Array<string>, 
   options?: AxiosRequestConfig
 }
 
@@ -32,7 +32,7 @@ const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: 
 }
 /**
 * Updates the list of actions to be executed in that particular behavior group after an event is received.
-* @summary Update the list of behavior group actions
+* @summary Update the list of behavior group action
 * @param {NotificationResourceV1UpdateBehaviorGroupActionsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

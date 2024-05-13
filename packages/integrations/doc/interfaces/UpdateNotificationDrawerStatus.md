@@ -4,7 +4,7 @@
 
 **`Export`**
 
-UpdateNotificationDrawerStatus
+UpdateNotificationDrawerStatu
 
 ## Table of contents
 
@@ -21,11 +21,11 @@ UpdateNotificationDrawerStatus
 
 **`Memberof`**
 
-UpdateNotificationDrawerStatus
+UpdateNotificationDrawerStatu
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1803](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1803)
+[packages/integrations/types/index.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1809)
 
 ___
 
@@ -35,8 +35,8 @@ ___
 
 **`Memberof`**
 
-UpdateNotificationDrawerStatus
+UpdateNotificationDrawerStatu
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1809)
+[packages/integrations/types/index.ts:1815](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1815)

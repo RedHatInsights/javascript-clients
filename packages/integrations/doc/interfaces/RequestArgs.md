@@ -4,28 +4,16 @@
 
 **`Export`**
 
-RequestArgs
+RequestArg
 
 ## Table of contents
 
 ### Properties
 
-- [auth](RequestArgs.md#auth)
 - [options](RequestArgs.md#options)
-- [serializeData](RequestArgs.md#serializedata)
-- [urlObj](RequestArgs.md#urlobj)
+- [url](RequestArgs.md#url)
 
 ## Properties
-
-### auth
-
-• `Optional` **auth**: \{ `authKey?`: `string` \| [`string`, `string`[]] ; `authType`: [`AuthTypeEnum`](../modules.md#authtypeenum)  }[]
-
-#### Defined in
-
-[packages/integrations/utils/base.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L33)
-
-___
 
 ### options
 
@@ -33,24 +21,14 @@ ___
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:32](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L32)
+[packages/integrations/base.ts:42](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/base.ts#L42)
 
 ___
 
-### serializeData
+### url
 
-• `Optional` **serializeData**: `unknown`
-
-#### Defined in
-
-[packages/integrations/utils/base.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L37)
-
-___
-
-### urlObj
-
-• **urlObj**: `URL`
+• **url**: `string`
 
 #### Defined in
 
-[packages/integrations/utils/base.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/utils/base.ts#L31)
+[packages/integrations/base.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/base.ts#L41)
