@@ -41,13 +41,15 @@
       "executor": "@jscutlery/semver:github",
       "options": {
         "tag": "{tag}",
-        "notes": "{notes}"
+        "notes": "{notes}",
+        "commitMessageFormat": "release: bump {projectName} to {version} [skip ci]"
       }
     },
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/CLIENTNAME"
       }
     }
   },
