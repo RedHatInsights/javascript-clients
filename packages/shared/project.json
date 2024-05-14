@@ -34,7 +34,8 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "push": true,
-        "preset": "conventionalcommits"
+        "preset": "conventionalcommits",
+        "commitMessageFormat": "release: bump {projectName} to {version} [skip ci]"
       }
     },
     "github": {
@@ -47,7 +48,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/shared"
       }
     },
     "syncDependencies": {
