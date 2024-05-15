@@ -4,6 +4,8 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [1.2.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.1...@redhat-cloud-services/javascript-clients-shared-1.2.2) (2024-05-15)
 
+## [1.2.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.1...@redhat-cloud-services/javascript-clients-shared-1.2.2) (2024-05-15)
+
 ## [1.2.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.0...@redhat-cloud-services/javascript-clients-shared-1.2.1) (2024-05-09)
 
 ## [1.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.1.0...@redhat-cloud-services/javascript-clients-shared-1.2.0) (2024-05-07)
