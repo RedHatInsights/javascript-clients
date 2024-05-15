@@ -20,7 +20,7 @@
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
     "doc": "typedoc",
-    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
+    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC --custom-generator=../../target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation -o . --additional-properties=useSingleRequestParameter=true --skip-validate-spec --enable-post-process-file",
     "generate:prod": "SPEC='https://cloud.redhat.com/api/compliance/v2/openapi.json' npm run generate"
   },
   "dependencies": {

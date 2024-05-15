@@ -1156,10 +1156,1388 @@ export interface ValueDefinitions200Response {
 }
 
 /**
- * ContentApi - axios parameter creator
+ * AssignRuleApi - axios parameter creator
  * @export
  */
-export const ContentApiAxiosParamCreator = function (configuration?: Configuration) {
+export const AssignRuleApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Assigns a Rule to a Tailoring
+         * @summary Assign a Rule to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assignRule: async (policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('assignRule', 'policyId', policyId)
+            // verify required parameter 'tailoringId' is not null or undefined
+            assertParamExists('assignRule', 'tailoringId', tailoringId)
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('assignRule', 'id', id)
+            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{id}`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)))
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AssignRuleApi - functional programming interface
+ * @export
+ */
+export const AssignRuleApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AssignRuleApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Assigns a Rule to a Tailoring
+         * @summary Assign a Rule to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async assignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.assignRule(policyId, tailoringId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AssignRuleApi - factory interface
+ * @export
+ */
+export const AssignRuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AssignRuleApiFp(configuration)
+    return {
+        /**
+         * Assigns a Rule to a Tailoring
+         * @summary Assign a Rule to a Tailoring
+         * @param {AssignRuleApiAssignRuleRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assignRule(requestParameters: AssignRuleApiAssignRuleRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.assignRule(requestParameters.policyId, requestParameters.tailoringId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for assignRule operation in AssignRuleApi.
+ * @export
+ * @interface AssignRuleApiAssignRuleRequest
+ */
+export interface AssignRuleApiAssignRuleRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRuleApiAssignRule
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRuleApiAssignRule
+     */
+    readonly tailoringId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRuleApiAssignRule
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRuleApiAssignRule
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * AssignRuleApi - object-oriented interface
+ * @export
+ * @class AssignRuleApi
+ * @extends {BaseAPI}
+ */
+export class AssignRuleApi extends BaseAPI {
+    /**
+     * Assigns a Rule to a Tailoring
+     * @summary Assign a Rule to a Tailoring
+     * @param {AssignRuleApiAssignRuleRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AssignRuleApi
+     */
+    public assignRule(requestParameters: AssignRuleApiAssignRuleRequest, options?: AxiosRequestConfig) {
+        return AssignRuleApiFp(this.configuration).assignRule(requestParameters.policyId, requestParameters.tailoringId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AssignRulesApi - axios parameter creator
+ * @export
+ */
+export const AssignRulesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Rules to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY]
+         * @param {AssignRulesRequest} [assignRulesRequest]
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        assignRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('assignRules', 'policyId', policyId)
+            // verify required parameter 'tailoringId' is not null or undefined
+            assertParamExists('assignRules', 'tailoringId', tailoringId)
+            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(assignRulesRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AssignRulesApi - functional programming interface
+ * @export
+ */
+export const AssignRulesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AssignRulesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Rules to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY]
+         * @param {AssignRulesRequest} [assignRulesRequest]
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        async assignRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.assignRules(policyId, tailoringId, xRHIDENTITY, assignRulesRequest, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AssignRulesApi - factory interface
+ * @export
+ */
+export const AssignRulesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AssignRulesApiFp(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Rules to a Tailoring
+         * @param {AssignRulesApiAssignRulesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        assignRules(requestParameters: AssignRulesApiAssignRulesRequest, options?: AxiosRequestConfig): AxiosPromise<Rules200Response> {
+            return localVarFp.assignRules(requestParameters.policyId, requestParameters.tailoringId, requestParameters.xRHIDENTITY, requestParameters.assignRulesRequest, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for assignRules operation in AssignRulesApi.
+ * @export
+ * @interface AssignRulesApiAssignRulesRequest
+ */
+export interface AssignRulesApiAssignRulesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRulesApiAssignRules
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRulesApiAssignRules
+     */
+    readonly tailoringId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignRulesApiAssignRules
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     *
+     * @type {AssignRulesRequest}
+     * @memberof AssignRulesApiAssignRules
+     */
+    readonly assignRulesRequest?: AssignRulesRequest
+}
+
+/**
+ * AssignRulesApi - object-oriented interface
+ * @export
+ * @class AssignRulesApi
+ * @extends {BaseAPI}
+ */
+export class AssignRulesApi extends BaseAPI {
+    /**
+     * This feature is exclusively used by the frontend
+     * @summary Bulk assign Rules to a Tailoring
+     * @param {AssignRulesApiAssignRulesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @deprecated
+     * @throws {RequiredError}
+     * @memberof AssignRulesApi
+     */
+    public assignRules(requestParameters: AssignRulesApiAssignRulesRequest, options?: AxiosRequestConfig) {
+        return AssignRulesApiFp(this.configuration).assignRules(requestParameters.policyId, requestParameters.tailoringId, requestParameters.xRHIDENTITY, requestParameters.assignRulesRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AssignSystemApi - axios parameter creator
+ * @export
+ */
+export const AssignSystemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Assigns a System to a Policy
+         * @summary Assign a System to a Policy
+         * @param {any} id
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assignSystem: async (id: any, policyId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('assignSystem', 'id', id)
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('assignSystem', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/systems/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AssignSystemApi - functional programming interface
+ * @export
+ */
+export const AssignSystemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AssignSystemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Assigns a System to a Policy
+         * @summary Assign a System to a Policy
+         * @param {any} id
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async assignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.assignSystem(id, policyId, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AssignSystemApi - factory interface
+ * @export
+ */
+export const AssignSystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AssignSystemApiFp(configuration)
+    return {
+        /**
+         * Assigns a System to a Policy
+         * @summary Assign a System to a Policy
+         * @param {AssignSystemApiAssignSystemRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assignSystem(requestParameters: AssignSystemApiAssignSystemRequest, options?: AxiosRequestConfig): AxiosPromise<System200Response> {
+            return localVarFp.assignSystem(requestParameters.id, requestParameters.policyId, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for assignSystem operation in AssignSystemApi.
+ * @export
+ * @interface AssignSystemApiAssignSystemRequest
+ */
+export interface AssignSystemApiAssignSystemRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof AssignSystemApiAssignSystem
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignSystemApiAssignSystem
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignSystemApiAssignSystem
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * AssignSystemApi - object-oriented interface
+ * @export
+ * @class AssignSystemApi
+ * @extends {BaseAPI}
+ */
+export class AssignSystemApi extends BaseAPI {
+    /**
+     * Assigns a System to a Policy
+     * @summary Assign a System to a Policy
+     * @param {AssignSystemApiAssignSystemRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AssignSystemApi
+     */
+    public assignSystem(requestParameters: AssignSystemApiAssignSystemRequest, options?: AxiosRequestConfig) {
+        return AssignSystemApiFp(this.configuration).assignSystem(requestParameters.id, requestParameters.policyId, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * AssignSystemsApi - axios parameter creator
+ * @export
+ */
+export const AssignSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Systems to a Policy
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {AssignRulesRequest} [assignRulesRequest]
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        assignSystems: async (policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('assignSystems', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/systems`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(assignRulesRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AssignSystemsApi - functional programming interface
+ * @export
+ */
+export const AssignSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AssignSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Systems to a Policy
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {AssignRulesRequest} [assignRulesRequest]
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        async assignSystems(policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.assignSystems(policyId, xRHIDENTITY, assignRulesRequest, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AssignSystemsApi - factory interface
+ * @export
+ */
+export const AssignSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AssignSystemsApiFp(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Bulk assign Systems to a Policy
+         * @param {AssignSystemsApiAssignSystemsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        assignSystems(requestParameters: AssignSystemsApiAssignSystemsRequest, options?: AxiosRequestConfig): AxiosPromise<Systems200Response> {
+            return localVarFp.assignSystems(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.assignRulesRequest, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for assignSystems operation in AssignSystemsApi.
+ * @export
+ * @interface AssignSystemsApiAssignSystemsRequest
+ */
+export interface AssignSystemsApiAssignSystemsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof AssignSystemsApiAssignSystems
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof AssignSystemsApiAssignSystems
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     *
+     * @type {AssignRulesRequest}
+     * @memberof AssignSystemsApiAssignSystems
+     */
+    readonly assignRulesRequest?: AssignRulesRequest
+}
+
+/**
+ * AssignSystemsApi - object-oriented interface
+ * @export
+ * @class AssignSystemsApi
+ * @extends {BaseAPI}
+ */
+export class AssignSystemsApi extends BaseAPI {
+    /**
+     * This feature is exclusively used by the frontend
+     * @summary Bulk assign Systems to a Policy
+     * @param {AssignSystemsApiAssignSystemsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @deprecated
+     * @throws {RequiredError}
+     * @memberof AssignSystemsApi
+     */
+    public assignSystems(requestParameters: AssignSystemsApiAssignSystemsRequest, options?: AxiosRequestConfig) {
+        return AssignSystemsApiFp(this.configuration).assignSystems(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.assignRulesRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * CreatePolicyApi - axios parameter creator
+ * @export
+ */
+export const CreatePolicyApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a Policy with the provided attributes
+         * @summary Create a Policy
+         * @param {any} [xRHIDENTITY]
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createPolicy: async (xRHIDENTITY?: any, policy?: Policy, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/policies`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(policy, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreatePolicyApi - functional programming interface
+ * @export
+ */
+export const CreatePolicyApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreatePolicyApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Create a Policy with the provided attributes
+         * @summary Create a Policy
+         * @param {any} [xRHIDENTITY]
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createPolicy(xRHIDENTITY?: any, policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createPolicy(xRHIDENTITY, policy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreatePolicyApi - factory interface
+ * @export
+ */
+export const CreatePolicyApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreatePolicyApiFp(configuration)
+    return {
+        /**
+         * Create a Policy with the provided attributes
+         * @summary Create a Policy
+         * @param {CreatePolicyApiCreatePolicyRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createPolicy(requestParameters: CreatePolicyApiCreatePolicyRequest = {}, options?: AxiosRequestConfig): AxiosPromise<CreatePolicy201Response> {
+            return localVarFp.createPolicy(requestParameters.xRHIDENTITY, requestParameters.policy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for createPolicy operation in CreatePolicyApi.
+ * @export
+ * @interface CreatePolicyApiCreatePolicyRequest
+ */
+export interface CreatePolicyApiCreatePolicyRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof CreatePolicyApiCreatePolicy
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     *
+     * @type {Policy}
+     * @memberof CreatePolicyApiCreatePolicy
+     */
+    readonly policy?: Policy
+}
+
+/**
+ * CreatePolicyApi - object-oriented interface
+ * @export
+ * @class CreatePolicyApi
+ * @extends {BaseAPI}
+ */
+export class CreatePolicyApi extends BaseAPI {
+    /**
+     * Create a Policy with the provided attributes
+     * @summary Create a Policy
+     * @param {CreatePolicyApiCreatePolicyRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreatePolicyApi
+     */
+    public createPolicy(requestParameters: CreatePolicyApiCreatePolicyRequest = {}, options?: AxiosRequestConfig) {
+        return CreatePolicyApiFp(this.configuration).createPolicy(requestParameters.xRHIDENTITY, requestParameters.policy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * DeletePolicyApi - axios parameter creator
+ * @export
+ */
+export const DeletePolicyApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes a Policy
+         * @summary Delete a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deletePolicy: async (id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deletePolicy', 'id', id)
+            const localVarPath = `/policies/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DeletePolicyApi - functional programming interface
+ * @export
+ */
+export const DeletePolicyApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeletePolicyApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Deletes a Policy
+         * @summary Delete a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deletePolicy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePolicy(id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeletePolicyApi - factory interface
+ * @export
+ */
+export const DeletePolicyApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeletePolicyApiFp(configuration)
+    return {
+        /**
+         * Deletes a Policy
+         * @summary Delete a Policy
+         * @param {DeletePolicyApiDeletePolicyRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deletePolicy(requestParameters: DeletePolicyApiDeletePolicyRequest, options?: AxiosRequestConfig): AxiosPromise<CreatePolicy201Response> {
+            return localVarFp.deletePolicy(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for deletePolicy operation in DeletePolicyApi.
+ * @export
+ * @interface DeletePolicyApiDeletePolicyRequest
+ */
+export interface DeletePolicyApiDeletePolicyRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof DeletePolicyApiDeletePolicy
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof DeletePolicyApiDeletePolicy
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * DeletePolicyApi - object-oriented interface
+ * @export
+ * @class DeletePolicyApi
+ * @extends {BaseAPI}
+ */
+export class DeletePolicyApi extends BaseAPI {
+    /**
+     * Deletes a Policy
+     * @summary Delete a Policy
+     * @param {DeletePolicyApiDeletePolicyRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeletePolicyApi
+     */
+    public deletePolicy(requestParameters: DeletePolicyApiDeletePolicyRequest, options?: AxiosRequestConfig) {
+        return DeletePolicyApiFp(this.configuration).deletePolicy(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * PoliciesApi - axios parameter creator
+ * @export
+ */
+export const PoliciesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Lists Policies
+         * @summary Request Policies
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policies: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/policies`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PoliciesApi - functional programming interface
+ * @export
+ */
+export const PoliciesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PoliciesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Policies
+         * @summary Request Policies
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.policies(xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PoliciesApi - factory interface
+ * @export
+ */
+export const PoliciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PoliciesApiFp(configuration)
+    return {
+        /**
+         * Lists Policies
+         * @summary Request Policies
+         * @param {PoliciesApiPoliciesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policies(requestParameters: PoliciesApiPoliciesRequest = {}, options?: AxiosRequestConfig): AxiosPromise<Policies200Response> {
+            return localVarFp.policies(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for policies operation in PoliciesApi.
+ * @export
+ * @interface PoliciesApiPoliciesRequest
+ */
+export interface PoliciesApiPoliciesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof PoliciesApiPolicies
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof PoliciesApiPolicies
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof PoliciesApiPolicies
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof PoliciesApiPolicies
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof PoliciesApiPolicies
+     */
+    readonly filter?: any
+}
+
+/**
+ * PoliciesApi - object-oriented interface
+ * @export
+ * @class PoliciesApi
+ * @extends {BaseAPI}
+ */
+export class PoliciesApi extends BaseAPI {
+    /**
+     * Lists Policies
+     * @summary Request Policies
+     * @param {PoliciesApiPoliciesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PoliciesApi
+     */
+    public policies(requestParameters: PoliciesApiPoliciesRequest = {}, options?: AxiosRequestConfig) {
+        return PoliciesApiFp(this.configuration).policies(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * PolicyApi - axios parameter creator
+ * @export
+ */
+export const PolicyApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Policy
+         * @summary Request a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policy: async (id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('policy', 'id', id)
+            const localVarPath = `/policies/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PolicyApi - functional programming interface
+ * @export
+ */
+export const PolicyApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PolicyApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Policy
+         * @summary Request a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async policy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.policy(id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PolicyApi - factory interface
+ * @export
+ */
+export const PolicyApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PolicyApiFp(configuration)
+    return {
+        /**
+         * Returns a Policy
+         * @summary Request a Policy
+         * @param {PolicyApiPolicyRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policy(requestParameters: PolicyApiPolicyRequest, options?: AxiosRequestConfig): AxiosPromise<CreatePolicy201Response> {
+            return localVarFp.policy(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for policy operation in PolicyApi.
+ * @export
+ * @interface PolicyApiPolicyRequest
+ */
+export interface PolicyApiPolicyRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof PolicyApiPolicy
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof PolicyApiPolicy
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * PolicyApi - object-oriented interface
+ * @export
+ * @class PolicyApi
+ * @extends {BaseAPI}
+ */
+export class PolicyApi extends BaseAPI {
+    /**
+     * Returns a Policy
+     * @summary Request a Policy
+     * @param {PolicyApiPolicyRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PolicyApi
+     */
+    public policy(requestParameters: PolicyApiPolicyRequest, options?: AxiosRequestConfig) {
+        return PolicyApiFp(this.configuration).policy(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * PolicySystemsApi - axios parameter creator
+ * @export
+ */
+export const PolicySystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Lists Systems assigned to a Policy
+         * @summary Request Systems assigned to a Policy
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policySystems: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('policySystems', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/systems`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PolicySystemsApi - functional programming interface
+ * @export
+ */
+export const PolicySystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PolicySystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Systems assigned to a Policy
+         * @summary Request Systems assigned to a Policy
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PolicySystemsApi - factory interface
+ * @export
+ */
+export const PolicySystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PolicySystemsApiFp(configuration)
+    return {
+        /**
+         * Lists Systems assigned to a Policy
+         * @summary Request Systems assigned to a Policy
+         * @param {PolicySystemsApiPolicySystemsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        policySystems(requestParameters: PolicySystemsApiPolicySystemsRequest, options?: AxiosRequestConfig): AxiosPromise<Systems200Response> {
+            return localVarFp.policySystems(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for policySystems operation in PolicySystemsApi.
+ * @export
+ * @interface PolicySystemsApiPolicySystemsRequest
+ */
+export interface PolicySystemsApiPolicySystemsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof PolicySystemsApiPolicySystems
+     */
+    readonly filter?: any
+}
+
+/**
+ * PolicySystemsApi - object-oriented interface
+ * @export
+ * @class PolicySystemsApi
+ * @extends {BaseAPI}
+ */
+export class PolicySystemsApi extends BaseAPI {
+    /**
+     * Lists Systems assigned to a Policy
+     * @summary Request Systems assigned to a Policy
+     * @param {PolicySystemsApiPolicySystemsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PolicySystemsApi
+     */
+    public policySystems(requestParameters: PolicySystemsApiPolicySystemsRequest, options?: AxiosRequestConfig) {
+        return PolicySystemsApiFp(this.configuration).policySystems(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfileApi - axios parameter creator
+ * @export
+ */
+export const ProfileApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Returns a Profile
@@ -1206,6 +2584,107 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ProfileApi - functional programming interface
+ * @export
+ */
+export const ProfileApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfileApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Profile
+         * @summary Request a Profile
+         * @param {any} securityGuideId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async profile(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profile200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profile(securityGuideId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfileApi - factory interface
+ * @export
+ */
+export const ProfileApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfileApiFp(configuration)
+    return {
+        /**
+         * Returns a Profile
+         * @summary Request a Profile
+         * @param {ProfileApiProfileRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profile(requestParameters: ProfileApiProfileRequest, options?: AxiosRequestConfig): AxiosPromise<Profile200Response> {
+            return localVarFp.profile(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for profile operation in ProfileApi.
+ * @export
+ * @interface ProfileApiProfileRequest
+ */
+export interface ProfileApiProfileRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileApiProfile
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileApiProfile
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileApiProfile
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * ProfileApi - object-oriented interface
+ * @export
+ * @class ProfileApi
+ * @extends {BaseAPI}
+ */
+export class ProfileApi extends BaseAPI {
+    /**
+     * Returns a Profile
+     * @summary Request a Profile
+     * @param {ProfileApiProfileRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApi
+     */
+    public profile(requestParameters: ProfileApiProfileRequest, options?: AxiosRequestConfig) {
+        return ProfileApiFp(this.configuration).profile(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfileRuleApi - axios parameter creator
+ * @export
+ */
+export const ProfileRuleApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns a Rule assigned to a Profile
          * @summary Request a Rule assigned to a Profile
@@ -1255,6 +2734,115 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ProfileRuleApi - functional programming interface
+ * @export
+ */
+export const ProfileRuleApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfileRuleApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Rule assigned to a Profile
+         * @summary Request a Rule assigned to a Profile
+         * @param {any} securityGuideId
+         * @param {any} profileId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async profileRule(securityGuideId: any, profileId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rule200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRule(securityGuideId, profileId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfileRuleApi - factory interface
+ * @export
+ */
+export const ProfileRuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfileRuleApiFp(configuration)
+    return {
+        /**
+         * Returns a Rule assigned to a Profile
+         * @summary Request a Rule assigned to a Profile
+         * @param {ProfileRuleApiProfileRuleRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profileRule(requestParameters: ProfileRuleApiProfileRuleRequest, options?: AxiosRequestConfig): AxiosPromise<Rule200Response> {
+            return localVarFp.profileRule(requestParameters.securityGuideId, requestParameters.profileId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for profileRule operation in ProfileRuleApi.
+ * @export
+ * @interface ProfileRuleApiProfileRuleRequest
+ */
+export interface ProfileRuleApiProfileRuleRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRuleApiProfileRule
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRuleApiProfileRule
+     */
+    readonly profileId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRuleApiProfileRule
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRuleApiProfileRule
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * ProfileRuleApi - object-oriented interface
+ * @export
+ * @class ProfileRuleApi
+ * @extends {BaseAPI}
+ */
+export class ProfileRuleApi extends BaseAPI {
+    /**
+     * Returns a Rule assigned to a Profile
+     * @summary Request a Rule assigned to a Profile
+     * @param {ProfileRuleApiProfileRuleRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileRuleApi
+     */
+    public profileRule(requestParameters: ProfileRuleApiProfileRuleRequest, options?: AxiosRequestConfig) {
+        return ProfileRuleApiFp(this.configuration).profileRule(requestParameters.securityGuideId, requestParameters.profileId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfileRulesApi - axios parameter creator
+ * @export
+ */
+export const ProfileRulesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Rules assigned to a Profile
          * @summary Request Rules assigned to a Profile
@@ -1320,6 +2908,139 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ProfileRulesApi - functional programming interface
+ * @export
+ */
+export const ProfileRulesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfileRulesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Rules assigned to a Profile
+         * @summary Request Rules assigned to a Profile
+         * @param {any} securityGuideId
+         * @param {any} profileId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfileRulesApi - factory interface
+ * @export
+ */
+export const ProfileRulesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfileRulesApiFp(configuration)
+    return {
+        /**
+         * Lists Rules assigned to a Profile
+         * @summary Request Rules assigned to a Profile
+         * @param {ProfileRulesApiProfileRulesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profileRules(requestParameters: ProfileRulesApiProfileRulesRequest, options?: AxiosRequestConfig): AxiosPromise<Rules200Response> {
+            return localVarFp.profileRules(requestParameters.securityGuideId, requestParameters.profileId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for profileRules operation in ProfileRulesApi.
+ * @export
+ * @interface ProfileRulesApiProfileRulesRequest
+ */
+export interface ProfileRulesApiProfileRulesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly profileId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof ProfileRulesApiProfileRules
+     */
+    readonly filter?: any
+}
+
+/**
+ * ProfileRulesApi - object-oriented interface
+ * @export
+ * @class ProfileRulesApi
+ * @extends {BaseAPI}
+ */
+export class ProfileRulesApi extends BaseAPI {
+    /**
+     * Lists Rules assigned to a Profile
+     * @summary Request Rules assigned to a Profile
+     * @param {ProfileRulesApiProfileRulesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileRulesApi
+     */
+    public profileRules(requestParameters: ProfileRulesApiProfileRulesRequest, options?: AxiosRequestConfig) {
+        return ProfileRulesApiFp(this.configuration).profileRules(requestParameters.securityGuideId, requestParameters.profileId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfilesApi - axios parameter creator
+ * @export
+ */
+export const ProfilesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Profiles
          * @summary Request Profiles
@@ -1381,6 +3102,131 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ProfilesApi - functional programming interface
+ * @export
+ */
+export const ProfilesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfilesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Profiles
+         * @summary Request Profiles
+         * @param {any} securityGuideId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profiles200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfilesApi - factory interface
+ * @export
+ */
+export const ProfilesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfilesApiFp(configuration)
+    return {
+        /**
+         * Lists Profiles
+         * @summary Request Profiles
+         * @param {ProfilesApiProfilesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profiles(requestParameters: ProfilesApiProfilesRequest, options?: AxiosRequestConfig): AxiosPromise<Profiles200Response> {
+            return localVarFp.profiles(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for profiles operation in ProfilesApi.
+ * @export
+ * @interface ProfilesApiProfilesRequest
+ */
+export interface ProfilesApiProfilesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof ProfilesApiProfiles
+     */
+    readonly filter?: any
+}
+
+/**
+ * ProfilesApi - object-oriented interface
+ * @export
+ * @class ProfilesApi
+ * @extends {BaseAPI}
+ */
+export class ProfilesApi extends BaseAPI {
+    /**
+     * Lists Profiles
+     * @summary Request Profiles
+     * @param {ProfilesApiProfilesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilesApi
+     */
+    public profiles(requestParameters: ProfilesApiProfilesRequest, options?: AxiosRequestConfig) {
+        return ProfilesApiFp(this.configuration).profiles(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * RuleApi - axios parameter creator
+ * @export
+ */
+export const RuleApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns a Rule
          * @summary Request a Rule
@@ -1426,6 +3272,107 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * RuleApi - functional programming interface
+ * @export
+ */
+export const RuleApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RuleApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Rule
+         * @summary Request a Rule
+         * @param {any} securityGuideId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async rule(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rule200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.rule(securityGuideId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RuleApi - factory interface
+ * @export
+ */
+export const RuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RuleApiFp(configuration)
+    return {
+        /**
+         * Returns a Rule
+         * @summary Request a Rule
+         * @param {RuleApiRuleRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rule(requestParameters: RuleApiRuleRequest, options?: AxiosRequestConfig): AxiosPromise<Rule200Response> {
+            return localVarFp.rule(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for rule operation in RuleApi.
+ * @export
+ * @interface RuleApiRuleRequest
+ */
+export interface RuleApiRuleRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleApiRule
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RuleApiRule
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RuleApiRule
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * RuleApi - object-oriented interface
+ * @export
+ * @class RuleApi
+ * @extends {BaseAPI}
+ */
+export class RuleApi extends BaseAPI {
+    /**
+     * Returns a Rule
+     * @summary Request a Rule
+     * @param {RuleApiRuleRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleApi
+     */
+    public rule(requestParameters: RuleApiRuleRequest, options?: AxiosRequestConfig) {
+        return RuleApiFp(this.configuration).rule(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * RuleGroupApi - axios parameter creator
+ * @export
+ */
+export const RuleGroupApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns a Rule Group
          * @summary Request a Rule Group
@@ -1471,6 +3418,107 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * RuleGroupApi - functional programming interface
+ * @export
+ */
+export const RuleGroupApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RuleGroupApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Rule Group
+         * @summary Request a Rule Group
+         * @param {any} securityGuideId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleGroup(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroup200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroup(securityGuideId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RuleGroupApi - factory interface
+ * @export
+ */
+export const RuleGroupApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RuleGroupApiFp(configuration)
+    return {
+        /**
+         * Returns a Rule Group
+         * @summary Request a Rule Group
+         * @param {RuleGroupApiRuleGroupRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleGroup(requestParameters: RuleGroupApiRuleGroupRequest, options?: AxiosRequestConfig): AxiosPromise<RuleGroup200Response> {
+            return localVarFp.ruleGroup(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for ruleGroup operation in RuleGroupApi.
+ * @export
+ * @interface RuleGroupApiRuleGroupRequest
+ */
+export interface RuleGroupApiRuleGroupRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleGroupApiRuleGroup
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RuleGroupApiRuleGroup
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RuleGroupApiRuleGroup
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * RuleGroupApi - object-oriented interface
+ * @export
+ * @class RuleGroupApi
+ * @extends {BaseAPI}
+ */
+export class RuleGroupApi extends BaseAPI {
+    /**
+     * Returns a Rule Group
+     * @summary Request a Rule Group
+     * @param {RuleGroupApiRuleGroupRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleGroupApi
+     */
+    public ruleGroup(requestParameters: RuleGroupApiRuleGroupRequest, options?: AxiosRequestConfig) {
+        return RuleGroupApiFp(this.configuration).ruleGroup(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * RuleGroupsApi - axios parameter creator
+ * @export
+ */
+export const RuleGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Rule Groups
          * @summary Request Rule Groups
@@ -1532,6 +3580,131 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * RuleGroupsApi - functional programming interface
+ * @export
+ */
+export const RuleGroupsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RuleGroupsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Rule Groups
+         * @summary Request Rule Groups
+         * @param {any} securityGuideId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroups200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RuleGroupsApi - factory interface
+ * @export
+ */
+export const RuleGroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RuleGroupsApiFp(configuration)
+    return {
+        /**
+         * Lists Rule Groups
+         * @summary Request Rule Groups
+         * @param {RuleGroupsApiRuleGroupsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        ruleGroups(requestParameters: RuleGroupsApiRuleGroupsRequest, options?: AxiosRequestConfig): AxiosPromise<RuleGroups200Response> {
+            return localVarFp.ruleGroups(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for ruleGroups operation in RuleGroupsApi.
+ * @export
+ * @interface RuleGroupsApiRuleGroupsRequest
+ */
+export interface RuleGroupsApiRuleGroupsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof RuleGroupsApiRuleGroups
+     */
+    readonly filter?: any
+}
+
+/**
+ * RuleGroupsApi - object-oriented interface
+ * @export
+ * @class RuleGroupsApi
+ * @extends {BaseAPI}
+ */
+export class RuleGroupsApi extends BaseAPI {
+    /**
+     * Lists Rule Groups
+     * @summary Request Rule Groups
+     * @param {RuleGroupsApiRuleGroupsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RuleGroupsApi
+     */
+    public ruleGroups(requestParameters: RuleGroupsApiRuleGroupsRequest, options?: AxiosRequestConfig) {
+        return RuleGroupsApiFp(this.configuration).ruleGroups(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * RulesApi - axios parameter creator
+ * @export
+ */
+export const RulesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Rules assigned
          * @summary Request Rules
@@ -1593,6 +3766,131 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * RulesApi - functional programming interface
+ * @export
+ */
+export const RulesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RulesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Rules assigned
+         * @summary Request Rules
+         * @param {any} securityGuideId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RulesApi - factory interface
+ * @export
+ */
+export const RulesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RulesApiFp(configuration)
+    return {
+        /**
+         * Lists Rules assigned
+         * @summary Request Rules
+         * @param {RulesApiRulesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        rules(requestParameters: RulesApiRulesRequest, options?: AxiosRequestConfig): AxiosPromise<Rules200Response> {
+            return localVarFp.rules(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for rules operation in RulesApi.
+ * @export
+ * @interface RulesApiRulesRequest
+ */
+export interface RulesApiRulesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof RulesApiRules
+     */
+    readonly filter?: any
+}
+
+/**
+ * RulesApi - object-oriented interface
+ * @export
+ * @class RulesApi
+ * @extends {BaseAPI}
+ */
+export class RulesApi extends BaseAPI {
+    /**
+     * Lists Rules assigned
+     * @summary Request Rules
+     * @param {RulesApiRulesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RulesApi
+     */
+    public rules(requestParameters: RulesApiRulesRequest, options?: AxiosRequestConfig) {
+        return RulesApiFp(this.configuration).rules(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SecurityGuideApi - axios parameter creator
+ * @export
+ */
+export const SecurityGuideApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns a Security Guide
          * @summary Request a Security Guide
@@ -1634,6 +3932,99 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * SecurityGuideApi - functional programming interface
+ * @export
+ */
+export const SecurityGuideApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SecurityGuideApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Security Guide
+         * @summary Request a Security Guide
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async securityGuide(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuide200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuide(id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SecurityGuideApi - factory interface
+ * @export
+ */
+export const SecurityGuideApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SecurityGuideApiFp(configuration)
+    return {
+        /**
+         * Returns a Security Guide
+         * @summary Request a Security Guide
+         * @param {SecurityGuideApiSecurityGuideRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        securityGuide(requestParameters: SecurityGuideApiSecurityGuideRequest, options?: AxiosRequestConfig): AxiosPromise<SecurityGuide200Response> {
+            return localVarFp.securityGuide(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for securityGuide operation in SecurityGuideApi.
+ * @export
+ * @interface SecurityGuideApiSecurityGuideRequest
+ */
+export interface SecurityGuideApiSecurityGuideRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGuideApiSecurityGuide
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGuideApiSecurityGuide
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * SecurityGuideApi - object-oriented interface
+ * @export
+ * @class SecurityGuideApi
+ * @extends {BaseAPI}
+ */
+export class SecurityGuideApi extends BaseAPI {
+    /**
+     * Returns a Security Guide
+     * @summary Request a Security Guide
+     * @param {SecurityGuideApiSecurityGuideRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SecurityGuideApi
+     */
+    public securityGuide(requestParameters: SecurityGuideApiSecurityGuideRequest, options?: AxiosRequestConfig) {
+        return SecurityGuideApiFp(this.configuration).securityGuide(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SecurityGuideRuleTreeApi - axios parameter creator
+ * @export
+ */
+export const SecurityGuideRuleTreeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns the Rule Tree of a Security Guide
          * @summary Request the Rule Tree of a Security Guide
@@ -1675,6 +4066,99 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * SecurityGuideRuleTreeApi - functional programming interface
+ * @export
+ */
+export const SecurityGuideRuleTreeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SecurityGuideRuleTreeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Security Guide
+         * @summary Request the Rule Tree of a Security Guide
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async securityGuideRuleTree(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuideRuleTree(id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SecurityGuideRuleTreeApi - factory interface
+ * @export
+ */
+export const SecurityGuideRuleTreeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SecurityGuideRuleTreeApiFp(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Security Guide
+         * @summary Request the Rule Tree of a Security Guide
+         * @param {SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        securityGuideRuleTree(requestParameters: SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest, options?: AxiosRequestConfig): AxiosPromise<any> {
+            return localVarFp.securityGuideRuleTree(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for securityGuideRuleTree operation in SecurityGuideRuleTreeApi.
+ * @export
+ * @interface SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest
+ */
+export interface SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGuideRuleTreeApiSecurityGuideRuleTree
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGuideRuleTreeApiSecurityGuideRuleTree
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * SecurityGuideRuleTreeApi - object-oriented interface
+ * @export
+ * @class SecurityGuideRuleTreeApi
+ * @extends {BaseAPI}
+ */
+export class SecurityGuideRuleTreeApi extends BaseAPI {
+    /**
+     * Returns the Rule Tree of a Security Guide
+     * @summary Request the Rule Tree of a Security Guide
+     * @param {SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SecurityGuideRuleTreeApi
+     */
+    public securityGuideRuleTree(requestParameters: SecurityGuideRuleTreeApiSecurityGuideRuleTreeRequest, options?: AxiosRequestConfig) {
+        return SecurityGuideRuleTreeApiFp(this.configuration).securityGuideRuleTree(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SecurityGuidesApi - axios parameter creator
+ * @export
+ */
+export const SecurityGuidesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Security Guides
          * @summary Request Security Guides
@@ -1732,6 +4216,123 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * SecurityGuidesApi - functional programming interface
+ * @export
+ */
+export const SecurityGuidesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SecurityGuidesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Security Guides
+         * @summary Request Security Guides
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuides200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SecurityGuidesApi - factory interface
+ * @export
+ */
+export const SecurityGuidesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SecurityGuidesApiFp(configuration)
+    return {
+        /**
+         * Lists Security Guides
+         * @summary Request Security Guides
+         * @param {SecurityGuidesApiSecurityGuidesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        securityGuides(requestParameters: SecurityGuidesApiSecurityGuidesRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SecurityGuides200Response> {
+            return localVarFp.securityGuides(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for securityGuides operation in SecurityGuidesApi.
+ * @export
+ * @interface SecurityGuidesApiSecurityGuidesRequest
+ */
+export interface SecurityGuidesApiSecurityGuidesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SecurityGuidesApiSecurityGuides
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof SecurityGuidesApiSecurityGuides
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof SecurityGuidesApiSecurityGuides
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof SecurityGuidesApiSecurityGuides
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof SecurityGuidesApiSecurityGuides
+     */
+    readonly filter?: any
+}
+
+/**
+ * SecurityGuidesApi - object-oriented interface
+ * @export
+ * @class SecurityGuidesApi
+ * @extends {BaseAPI}
+ */
+export class SecurityGuidesApi extends BaseAPI {
+    /**
+     * Lists Security Guides
+     * @summary Request Security Guides
+     * @param {SecurityGuidesApiSecurityGuidesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SecurityGuidesApi
+     */
+    public securityGuides(requestParameters: SecurityGuidesApiSecurityGuidesRequest = {}, options?: AxiosRequestConfig) {
+        return SecurityGuidesApiFp(this.configuration).securityGuides(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SupportedProfilesApi - axios parameter creator
+ * @export
+ */
+export const SupportedProfilesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Supported Profiles
          * @summary Request Supported Profiles
@@ -1789,279 +4390,16 @@ export const ContentApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Returns a Value Definition
-         * @summary Request a Value Definition
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        valueDefinition: async (securityGuideId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'securityGuideId' is not null or undefined
-            assertParamExists('valueDefinition', 'securityGuideId', securityGuideId)
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('valueDefinition', 'id', id)
-            const localVarPath = `/security_guides/{security_guide_id}/value_definitions/{id}`
-                .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Lists Value Definitions
-         * @summary Request Value Definitions
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        valueDefinitions: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'securityGuideId' is not null or undefined
-            assertParamExists('valueDefinitions', 'securityGuideId', securityGuideId)
-            const localVarPath = `/security_guides/{security_guide_id}/value_definitions`
-                .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
 /**
- * ContentApi - functional programming interface
+ * SupportedProfilesApi - functional programming interface
  * @export
  */
-export const ContentApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = ContentApiAxiosParamCreator(configuration)
+export const SupportedProfilesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SupportedProfilesApiAxiosParamCreator(configuration)
     return {
-        /**
-         * Returns a Profile
-         * @summary Request a Profile
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async profile(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profile200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profile(securityGuideId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Rule assigned to a Profile
-         * @summary Request a Rule assigned to a Profile
-         * @param {any} securityGuideId
-         * @param {any} profileId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async profileRule(securityGuideId: any, profileId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rule200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRule(securityGuideId, profileId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Rules assigned to a Profile
-         * @summary Request Rules assigned to a Profile
-         * @param {any} securityGuideId
-         * @param {any} profileId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Profiles
-         * @summary Request Profiles
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profiles200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Rule
-         * @summary Request a Rule
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async rule(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rule200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.rule(securityGuideId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Rule Group
-         * @summary Request a Rule Group
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async ruleGroup(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroup200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroup(securityGuideId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Rule Groups
-         * @summary Request Rule Groups
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroups200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Rules assigned
-         * @summary Request Rules
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Security Guide
-         * @summary Request a Security Guide
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async securityGuide(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuide200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuide(id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns the Rule Tree of a Security Guide
-         * @summary Request the Rule Tree of a Security Guide
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async securityGuideRuleTree(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuideRuleTree(id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Security Guides
-         * @summary Request Security Guides
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuides200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
         /**
          * Lists Supported Profiles
          * @summary Request Supported Profiles
@@ -2077,1954 +4415,97 @@ export const ContentApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = await localVarAxiosParamCreator.supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
-        /**
-         * Returns a Value Definition
-         * @summary Request a Value Definition
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async valueDefinition(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinition200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinition(securityGuideId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Value Definitions
-         * @summary Request Value Definitions
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinitions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
     }
 };
 
 /**
- * ContentApi - factory interface
+ * SupportedProfilesApi - factory interface
  * @export
  */
-export const ContentApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = ContentApiFp(configuration)
+export const SupportedProfilesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SupportedProfilesApiFp(configuration)
     return {
-        /**
-         * Returns a Profile
-         * @summary Request a Profile
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        profile(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<Profile200Response> {
-            return localVarFp.profile(securityGuideId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Rule assigned to a Profile
-         * @summary Request a Rule assigned to a Profile
-         * @param {any} securityGuideId
-         * @param {any} profileId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        profileRule(securityGuideId: any, profileId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<Rule200Response> {
-            return localVarFp.profileRule(securityGuideId, profileId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Rules assigned to a Profile
-         * @summary Request Rules assigned to a Profile
-         * @param {any} securityGuideId
-         * @param {any} profileId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Profiles
-         * @summary Request Profiles
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Profiles200Response> {
-            return localVarFp.profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Rule
-         * @summary Request a Rule
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        rule(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<Rule200Response> {
-            return localVarFp.rule(securityGuideId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Rule Group
-         * @summary Request a Rule Group
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        ruleGroup(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<RuleGroup200Response> {
-            return localVarFp.ruleGroup(securityGuideId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Rule Groups
-         * @summary Request Rule Groups
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<RuleGroups200Response> {
-            return localVarFp.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Rules assigned
-         * @summary Request Rules
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Security Guide
-         * @summary Request a Security Guide
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        securityGuide(id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<SecurityGuide200Response> {
-            return localVarFp.securityGuide(id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns the Rule Tree of a Security Guide
-         * @summary Request the Rule Tree of a Security Guide
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        securityGuideRuleTree(id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<any> {
-            return localVarFp.securityGuideRuleTree(id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Security Guides
-         * @summary Request Security Guides
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SecurityGuides200Response> {
-            return localVarFp.securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
         /**
          * Lists Supported Profiles
          * @summary Request Supported Profiles
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {SupportedProfilesApiSupportedProfilesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SupportedProfiles200Response> {
-            return localVarFp.supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Value Definition
-         * @summary Request a Value Definition
-         * @param {any} securityGuideId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        valueDefinition(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<ValueDefinition200Response> {
-            return localVarFp.valueDefinition(securityGuideId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Value Definitions
-         * @summary Request Value Definitions
-         * @param {any} securityGuideId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ValueDefinitions200Response> {
-            return localVarFp.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        supportedProfiles(requestParameters: SupportedProfilesApiSupportedProfilesRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SupportedProfiles200Response> {
+            return localVarFp.supportedProfiles(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * ContentApi - object-oriented interface
+ * Request parameters for supportedProfiles operation in SupportedProfilesApi.
  * @export
- * @class ContentApi
+ * @interface SupportedProfilesApiSupportedProfilesRequest
+ */
+export interface SupportedProfilesApiSupportedProfilesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SupportedProfilesApiSupportedProfiles
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof SupportedProfilesApiSupportedProfiles
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof SupportedProfilesApiSupportedProfiles
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof SupportedProfilesApiSupportedProfiles
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof SupportedProfilesApiSupportedProfiles
+     */
+    readonly filter?: any
+}
+
+/**
+ * SupportedProfilesApi - object-oriented interface
+ * @export
+ * @class SupportedProfilesApi
  * @extends {BaseAPI}
  */
-export class ContentApi extends BaseAPI {
-    /**
-     * Returns a Profile
-     * @summary Request a Profile
-     * @param {any} securityGuideId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public profile(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).profile(securityGuideId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Rule assigned to a Profile
-     * @summary Request a Rule assigned to a Profile
-     * @param {any} securityGuideId
-     * @param {any} profileId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public profileRule(securityGuideId: any, profileId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).profileRule(securityGuideId, profileId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Rules assigned to a Profile
-     * @summary Request Rules assigned to a Profile
-     * @param {any} securityGuideId
-     * @param {any} profileId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Profiles
-     * @summary Request Profiles
-     * @param {any} securityGuideId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Rule
-     * @summary Request a Rule
-     * @param {any} securityGuideId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public rule(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).rule(securityGuideId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Rule Group
-     * @summary Request a Rule Group
-     * @param {any} securityGuideId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public ruleGroup(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).ruleGroup(securityGuideId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Rule Groups
-     * @summary Request Rule Groups
-     * @param {any} securityGuideId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Rules assigned
-     * @summary Request Rules
-     * @param {any} securityGuideId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Security Guide
-     * @summary Request a Security Guide
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public securityGuide(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).securityGuide(id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns the Rule Tree of a Security Guide
-     * @summary Request the Rule Tree of a Security Guide
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public securityGuideRuleTree(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).securityGuideRuleTree(id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Security Guides
-     * @summary Request Security Guides
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class SupportedProfilesApi extends BaseAPI {
     /**
      * Lists Supported Profiles
      * @summary Request Supported Profiles
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @param {SupportedProfilesApiSupportedProfilesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ContentApi
+     * @memberof SupportedProfilesApi
      */
-    public supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Value Definition
-     * @summary Request a Value Definition
-     * @param {any} securityGuideId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public valueDefinition(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).valueDefinition(securityGuideId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Value Definitions
-     * @summary Request Value Definitions
-     * @param {any} securityGuideId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ContentApi
-     */
-    public valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ContentApiFp(this.configuration).valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public supportedProfiles(requestParameters: SupportedProfilesApiSupportedProfilesRequest = {}, options?: AxiosRequestConfig) {
+        return SupportedProfilesApiFp(this.configuration).supportedProfiles(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
 
 /**
- * PoliciesApi - axios parameter creator
+ * SystemApi - axios parameter creator
  * @export
  */
-export const PoliciesApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * Assigns a Rule to a Tailoring
-         * @summary Assign a Rule to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        assignRule: async (policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('assignRule', 'policyId', policyId)
-            // verify required parameter 'tailoringId' is not null or undefined
-            assertParamExists('assignRule', 'tailoringId', tailoringId)
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('assignRule', 'id', id)
-            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{id}`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Rules to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        assignRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('assignRules', 'policyId', policyId)
-            // verify required parameter 'tailoringId' is not null or undefined
-            assertParamExists('assignRules', 'tailoringId', tailoringId)
-            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(assignRulesRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Assigns a System to a Policy
-         * @summary Assign a System to a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        assignSystem: async (id: any, policyId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('assignSystem', 'id', id)
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('assignSystem', 'policyId', policyId)
-            const localVarPath = `/policies/{policy_id}/systems/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Systems to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        assignSystems: async (policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('assignSystems', 'policyId', policyId)
-            const localVarPath = `/policies/{policy_id}/systems`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(assignRulesRequest, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Create a Policy with the provided attributes
-         * @summary Create a Policy
-         * @param {any} [xRHIDENTITY]
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createPolicy: async (xRHIDENTITY?: any, policy?: Policy, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/policies`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(policy, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Policy
-         * @summary Delete a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deletePolicy: async (id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('deletePolicy', 'id', id)
-            const localVarPath = `/policies/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Lists Policies
-         * @summary Request Policies
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policies: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/policies`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Policy
-         * @summary Request a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policy: async (id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('policy', 'id', id)
-            const localVarPath = `/policies/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Lists Systems assigned to a Policy
-         * @summary Request Systems assigned to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policySystems: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('policySystems', 'policyId', policyId)
-            const localVarPath = `/policies/{policy_id}/systems`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Tailoring
-         * @summary Request a Tailoring
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoring: async (policyId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('tailoring', 'policyId', policyId)
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('tailoring', 'id', id)
-            const localVarPath = `/policies/{policy_id}/tailorings/{id}`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Tailoring File
-         * @summary Request a Tailoring file
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoringFile: async (policyId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('tailoringFile', 'policyId', policyId)
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('tailoringFile', 'id', id)
-            const localVarPath = `/policies/{policy_id}/tailorings/{id}/tailoring_file.json`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Lists Rules assigned to a Tailoring
-         * @summary Request Rules assigned to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoringRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('tailoringRules', 'policyId', policyId)
-            // verify required parameter 'tailoringId' is not null or undefined
-            assertParamExists('tailoringRules', 'tailoringId', tailoringId)
-            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Lists Tailorings
-         * @summary Request Tailorings
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailorings: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('tailorings', 'policyId', policyId)
-            const localVarPath = `/policies/{policy_id}/tailorings`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Unassigns a Rule from a Tailoring
-         * @summary Unassign a Rule from a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unassignRule: async (policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('unassignRule', 'policyId', policyId)
-            // verify required parameter 'tailoringId' is not null or undefined
-            assertParamExists('unassignRule', 'tailoringId', tailoringId)
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('unassignRule', 'id', id)
-            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{id}`
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)))
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Unassigns a System from a Policy
-         * @summary Unassign a System from a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unassignSystem: async (id: any, policyId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('unassignSystem', 'id', id)
-            // verify required parameter 'policyId' is not null or undefined
-            assertParamExists('unassignSystem', 'policyId', policyId)
-            const localVarPath = `/policies/{policy_id}/systems/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
-                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Policy with the provided attributes
-         * @summary Update a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {PolicyUpdate} [policyUpdate]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updatePolicy: async (id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('updatePolicy', 'id', id)
-            const localVarPath = `/policies/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (xRHIDENTITY != null) {
-                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-                    ? xRHIDENTITY
-                    : JSON.stringify(xRHIDENTITY);
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(policyUpdate, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * PoliciesApi - functional programming interface
- * @export
- */
-export const PoliciesApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = PoliciesApiAxiosParamCreator(configuration)
-    return {
-        /**
-         * Assigns a Rule to a Tailoring
-         * @summary Assign a Rule to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async assignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.assignRule(policyId, tailoringId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Rules to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        async assignRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.assignRules(policyId, tailoringId, xRHIDENTITY, assignRulesRequest, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Assigns a System to a Policy
-         * @summary Assign a System to a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async assignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.assignSystem(id, policyId, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Systems to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        async assignSystems(policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.assignSystems(policyId, xRHIDENTITY, assignRulesRequest, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Create a Policy with the provided attributes
-         * @summary Create a Policy
-         * @param {any} [xRHIDENTITY]
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createPolicy(xRHIDENTITY?: any, policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createPolicy(xRHIDENTITY, policy, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Deletes a Policy
-         * @summary Delete a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deletePolicy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePolicy(id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Policies
-         * @summary Request Policies
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.policies(xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Policy
-         * @summary Request a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async policy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.policy(id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Systems assigned to a Policy
-         * @summary Request Systems assigned to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Tailoring
-         * @summary Request a Tailoring
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tailoring(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailoring200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoring(policyId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Returns a Tailoring File
-         * @summary Request a Tailoring file
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tailoringFile(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TailoringFile>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringFile(policyId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Rules assigned to a Tailoring
-         * @summary Request Rules assigned to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Tailorings
-         * @summary Request Tailorings
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailorings200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Unassigns a Rule from a Tailoring
-         * @summary Unassign a Rule from a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async unassignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.unassignRule(policyId, tailoringId, id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Unassigns a System from a Policy
-         * @summary Unassign a System from a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async unassignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.unassignSystem(id, policyId, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Updates a Policy with the provided attributes
-         * @summary Update a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {PolicyUpdate} [policyUpdate]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updatePolicy(id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.updatePolicy(id, xRHIDENTITY, policyUpdate, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * PoliciesApi - factory interface
- * @export
- */
-export const PoliciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = PoliciesApiFp(configuration)
-    return {
-        /**
-         * Assigns a Rule to a Tailoring
-         * @summary Assign a Rule to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        assignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<void> {
-            return localVarFp.assignRule(policyId, tailoringId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Rules to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        assignRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.assignRules(policyId, tailoringId, xRHIDENTITY, assignRulesRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Assigns a System to a Policy
-         * @summary Assign a System to a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        assignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<System200Response> {
-            return localVarFp.assignSystem(id, policyId, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * This feature is exclusively used by the frontend
-         * @summary Bulk assign Systems to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {AssignRulesRequest} [assignRulesRequest]
-         * @param {*} [options] Override http request option.
-         * @deprecated
-         * @throws {RequiredError}
-         */
-        assignSystems(policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.assignSystems(policyId, xRHIDENTITY, assignRulesRequest, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Create a Policy with the provided attributes
-         * @summary Create a Policy
-         * @param {any} [xRHIDENTITY]
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createPolicy(xRHIDENTITY?: any, policy?: Policy, options?: any): AxiosPromise<CreatePolicy201Response> {
-            return localVarFp.createPolicy(xRHIDENTITY, policy, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Deletes a Policy
-         * @summary Delete a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deletePolicy(id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<CreatePolicy201Response> {
-            return localVarFp.deletePolicy(id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Policies
-         * @summary Request Policies
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
-            return localVarFp.policies(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Policy
-         * @summary Request a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policy(id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<CreatePolicy201Response> {
-            return localVarFp.policy(id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Systems assigned to a Policy
-         * @summary Request Systems assigned to a Policy
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Tailoring
-         * @summary Request a Tailoring
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoring(policyId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<Tailoring200Response> {
-            return localVarFp.tailoring(policyId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Returns a Tailoring File
-         * @summary Request a Tailoring file
-         * @param {any} policyId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoringFile(policyId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<TailoringFile> {
-            return localVarFp.tailoringFile(policyId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Rules assigned to a Tailoring
-         * @summary Request Rules assigned to a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Tailorings
-         * @summary Request Tailorings
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Tailorings200Response> {
-            return localVarFp.tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Unassigns a Rule from a Tailoring
-         * @summary Unassign a Rule from a Tailoring
-         * @param {any} policyId
-         * @param {any} tailoringId
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unassignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<void> {
-            return localVarFp.unassignRule(policyId, tailoringId, id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Unassigns a System from a Policy
-         * @summary Unassign a System from a Policy
-         * @param {any} id
-         * @param {any} policyId
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        unassignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<System200Response> {
-            return localVarFp.unassignSystem(id, policyId, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Updates a Policy with the provided attributes
-         * @summary Update a Policy
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {PolicyUpdate} [policyUpdate]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updatePolicy(id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options?: any): AxiosPromise<CreatePolicy201Response> {
-            return localVarFp.updatePolicy(id, xRHIDENTITY, policyUpdate, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * PoliciesApi - object-oriented interface
- * @export
- * @class PoliciesApi
- * @extends {BaseAPI}
- */
-export class PoliciesApi extends BaseAPI {
-    /**
-     * Assigns a Rule to a Tailoring
-     * @summary Assign a Rule to a Tailoring
-     * @param {any} policyId
-     * @param {any} tailoringId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public assignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).assignRule(policyId, tailoringId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * This feature is exclusively used by the frontend
-     * @summary Bulk assign Rules to a Tailoring
-     * @param {any} policyId
-     * @param {any} tailoringId
-     * @param {any} [xRHIDENTITY]
-     * @param {AssignRulesRequest} [assignRulesRequest]
-     * @param {*} [options] Override http request option.
-     * @deprecated
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public assignRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).assignRules(policyId, tailoringId, xRHIDENTITY, assignRulesRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Assigns a System to a Policy
-     * @summary Assign a System to a Policy
-     * @param {any} id
-     * @param {any} policyId
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public assignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).assignSystem(id, policyId, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * This feature is exclusively used by the frontend
-     * @summary Bulk assign Systems to a Policy
-     * @param {any} policyId
-     * @param {any} [xRHIDENTITY]
-     * @param {AssignRulesRequest} [assignRulesRequest]
-     * @param {*} [options] Override http request option.
-     * @deprecated
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public assignSystems(policyId: any, xRHIDENTITY?: any, assignRulesRequest?: AssignRulesRequest, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).assignSystems(policyId, xRHIDENTITY, assignRulesRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Create a Policy with the provided attributes
-     * @summary Create a Policy
-     * @param {any} [xRHIDENTITY]
-     * @param {Policy} [policy]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public createPolicy(xRHIDENTITY?: any, policy?: Policy, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).createPolicy(xRHIDENTITY, policy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Deletes a Policy
-     * @summary Delete a Policy
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public deletePolicy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).deletePolicy(id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Policies
-     * @summary Request Policies
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).policies(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Policy
-     * @summary Request a Policy
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public policy(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).policy(id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Systems assigned to a Policy
-     * @summary Request Systems assigned to a Policy
-     * @param {any} policyId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Tailoring
-     * @summary Request a Tailoring
-     * @param {any} policyId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public tailoring(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).tailoring(policyId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Tailoring File
-     * @summary Request a Tailoring file
-     * @param {any} policyId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public tailoringFile(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).tailoringFile(policyId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Rules assigned to a Tailoring
-     * @summary Request Rules assigned to a Tailoring
-     * @param {any} policyId
-     * @param {any} tailoringId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Tailorings
-     * @summary Request Tailorings
-     * @param {any} policyId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Unassigns a Rule from a Tailoring
-     * @summary Unassign a Rule from a Tailoring
-     * @param {any} policyId
-     * @param {any} tailoringId
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public unassignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).unassignRule(policyId, tailoringId, id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Unassigns a System from a Policy
-     * @summary Unassign a System from a Policy
-     * @param {any} id
-     * @param {any} policyId
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public unassignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).unassignSystem(id, policyId, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Updates a Policy with the provided attributes
-     * @summary Update a Policy
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {PolicyUpdate} [policyUpdate]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PoliciesApi
-     */
-    public updatePolicy(id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).updatePolicy(id, xRHIDENTITY, policyUpdate, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-/**
- * SystemsApi - axios parameter creator
- * @export
- */
-export const SystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+export const SystemApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Returns a System
@@ -4067,6 +4548,99 @@ export const SystemsApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * SystemApi - functional programming interface
+ * @export
+ */
+export const SystemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a System
+         * @summary Request a System
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async system(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.system(id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SystemApi - factory interface
+ * @export
+ */
+export const SystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemApiFp(configuration)
+    return {
+        /**
+         * Returns a System
+         * @summary Request a System
+         * @param {SystemApiSystemRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        system(requestParameters: SystemApiSystemRequest, options?: AxiosRequestConfig): AxiosPromise<System200Response> {
+            return localVarFp.system(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for system operation in SystemApi.
+ * @export
+ * @interface SystemApiSystemRequest
+ */
+export interface SystemApiSystemRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SystemApiSystem
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof SystemApiSystem
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * SystemApi - object-oriented interface
+ * @export
+ * @class SystemApi
+ * @extends {BaseAPI}
+ */
+export class SystemApi extends BaseAPI {
+    /**
+     * Returns a System
+     * @summary Request a System
+     * @param {SystemApiSystemRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemApi
+     */
+    public system(requestParameters: SystemApiSystemRequest, options?: AxiosRequestConfig) {
+        return SystemApiFp(this.configuration).system(requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SystemsApi - axios parameter creator
+ * @export
+ */
+export const SystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Systems
          * @summary Request Systems
@@ -4124,6 +4698,123 @@ export const SystemsApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * SystemsApi - functional programming interface
+ * @export
+ */
+export const SystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Systems
+         * @summary Request Systems
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systems(xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SystemsApi - factory interface
+ * @export
+ */
+export const SystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemsApiFp(configuration)
+    return {
+        /**
+         * Lists Systems
+         * @summary Request Systems
+         * @param {SystemsApiSystemsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systems(requestParameters: SystemsApiSystemsRequest = {}, options?: AxiosRequestConfig): AxiosPromise<Systems200Response> {
+            return localVarFp.systems(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for systems operation in SystemsApi.
+ * @export
+ * @interface SystemsApiSystemsRequest
+ */
+export interface SystemsApiSystemsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SystemsApiSystems
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof SystemsApiSystems
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof SystemsApiSystems
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof SystemsApiSystems
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof SystemsApiSystems
+     */
+    readonly filter?: any
+}
+
+/**
+ * SystemsApi - object-oriented interface
+ * @export
+ * @class SystemsApi
+ * @extends {BaseAPI}
+ */
+export class SystemsApi extends BaseAPI {
+    /**
+     * Lists Systems
+     * @summary Request Systems
+     * @param {SystemsApiSystemsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemsApi
+     */
+    public systems(requestParameters: SystemsApiSystemsRequest = {}, options?: AxiosRequestConfig) {
+        return SystemsApiFp(this.configuration).systems(requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SystemsPoliciesApi - axios parameter creator
+ * @export
+ */
+export const SystemsPoliciesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Lists Policies under a System
          * @summary Request Policies assigned to a System
@@ -4189,39 +4880,12 @@ export const SystemsApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * SystemsApi - functional programming interface
+ * SystemsPoliciesApi - functional programming interface
  * @export
  */
-export const SystemsApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = SystemsApiAxiosParamCreator(configuration)
+export const SystemsPoliciesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemsPoliciesApiAxiosParamCreator(configuration)
     return {
-        /**
-         * Returns a System
-         * @summary Request a System
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async system(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.system(id, xRHIDENTITY, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * Lists Systems
-         * @summary Request Systems
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.systems(xRHIDENTITY, limit, offset, sortBy, filter, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
         /**
          * Lists Policies under a System
          * @summary Request Policies assigned to a System
@@ -4242,106 +4906,1549 @@ export const SystemsApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * SystemsApi - factory interface
+ * SystemsPoliciesApi - factory interface
  * @export
  */
-export const SystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = SystemsApiFp(configuration)
+export const SystemsPoliciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemsPoliciesApiFp(configuration)
     return {
-        /**
-         * Returns a System
-         * @summary Request a System
-         * @param {any} id
-         * @param {any} [xRHIDENTITY]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        system(id: any, xRHIDENTITY?: any, options?: any): AxiosPromise<System200Response> {
-            return localVarFp.system(id, xRHIDENTITY, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Lists Systems
-         * @summary Request Systems
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.systems(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
-        },
         /**
          * Lists Policies under a System
          * @summary Request Policies assigned to a System
-         * @param {any} systemId
-         * @param {any} [xRHIDENTITY]
-         * @param {any} [limit] Number of items to return per page
-         * @param {any} [offset] Offset of first item of paginated response
-         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {SystemsPoliciesApiSystemsPoliciesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
-            return localVarFp.systemsPolicies(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        systemsPolicies(requestParameters: SystemsPoliciesApiSystemsPoliciesRequest, options?: AxiosRequestConfig): AxiosPromise<Policies200Response> {
+            return localVarFp.systemsPolicies(requestParameters.systemId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * SystemsApi - object-oriented interface
+ * Request parameters for systemsPolicies operation in SystemsPoliciesApi.
  * @export
- * @class SystemsApi
+ * @interface SystemsPoliciesApiSystemsPoliciesRequest
+ */
+export interface SystemsPoliciesApiSystemsPoliciesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly systemId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof SystemsPoliciesApiSystemsPolicies
+     */
+    readonly filter?: any
+}
+
+/**
+ * SystemsPoliciesApi - object-oriented interface
+ * @export
+ * @class SystemsPoliciesApi
  * @extends {BaseAPI}
  */
-export class SystemsApi extends BaseAPI {
-    /**
-     * Returns a System
-     * @summary Request a System
-     * @param {any} id
-     * @param {any} [xRHIDENTITY]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SystemsApi
-     */
-    public system(id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
-        return SystemsApiFp(this.configuration).system(id, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Lists Systems
-     * @summary Request Systems
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SystemsApi
-     */
-    public systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SystemsApiFp(this.configuration).systems(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class SystemsPoliciesApi extends BaseAPI {
     /**
      * Lists Policies under a System
      * @summary Request Policies assigned to a System
-     * @param {any} systemId
-     * @param {any} [xRHIDENTITY]
-     * @param {any} [limit] Number of items to return per page
-     * @param {any} [offset] Offset of first item of paginated response
-     * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @param {SystemsPoliciesApiSystemsPoliciesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SystemsApi
+     * @memberof SystemsPoliciesApi
      */
-    public systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SystemsApiFp(this.configuration).systemsPolicies(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public systemsPolicies(requestParameters: SystemsPoliciesApiSystemsPoliciesRequest, options?: AxiosRequestConfig) {
+        return SystemsPoliciesApiFp(this.configuration).systemsPolicies(requestParameters.systemId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * TailoringApi - axios parameter creator
+ * @export
+ */
+export const TailoringApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Tailoring
+         * @summary Request a Tailoring
+         * @param {any} policyId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoring: async (policyId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('tailoring', 'policyId', policyId)
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('tailoring', 'id', id)
+            const localVarPath = `/policies/{policy_id}/tailorings/{id}`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TailoringApi - functional programming interface
+ * @export
+ */
+export const TailoringApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TailoringApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Tailoring
+         * @summary Request a Tailoring
+         * @param {any} policyId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tailoring(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailoring200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoring(policyId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * TailoringApi - factory interface
+ * @export
+ */
+export const TailoringApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TailoringApiFp(configuration)
+    return {
+        /**
+         * Returns a Tailoring
+         * @summary Request a Tailoring
+         * @param {TailoringApiTailoringRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoring(requestParameters: TailoringApiTailoringRequest, options?: AxiosRequestConfig): AxiosPromise<Tailoring200Response> {
+            return localVarFp.tailoring(requestParameters.policyId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for tailoring operation in TailoringApi.
+ * @export
+ * @interface TailoringApiTailoringRequest
+ */
+export interface TailoringApiTailoringRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringApiTailoring
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringApiTailoring
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringApiTailoring
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * TailoringApi - object-oriented interface
+ * @export
+ * @class TailoringApi
+ * @extends {BaseAPI}
+ */
+export class TailoringApi extends BaseAPI {
+    /**
+     * Returns a Tailoring
+     * @summary Request a Tailoring
+     * @param {TailoringApiTailoringRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TailoringApi
+     */
+    public tailoring(requestParameters: TailoringApiTailoringRequest, options?: AxiosRequestConfig) {
+        return TailoringApiFp(this.configuration).tailoring(requestParameters.policyId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * TailoringFileApi - axios parameter creator
+ * @export
+ */
+export const TailoringFileApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Tailoring File
+         * @summary Request a Tailoring file
+         * @param {any} policyId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringFile: async (policyId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('tailoringFile', 'policyId', policyId)
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('tailoringFile', 'id', id)
+            const localVarPath = `/policies/{policy_id}/tailorings/{id}/tailoring_file.json`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TailoringFileApi - functional programming interface
+ * @export
+ */
+export const TailoringFileApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TailoringFileApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Tailoring File
+         * @summary Request a Tailoring file
+         * @param {any} policyId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tailoringFile(policyId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TailoringFile>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringFile(policyId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * TailoringFileApi - factory interface
+ * @export
+ */
+export const TailoringFileApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TailoringFileApiFp(configuration)
+    return {
+        /**
+         * Returns a Tailoring File
+         * @summary Request a Tailoring file
+         * @param {TailoringFileApiTailoringFileRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringFile(requestParameters: TailoringFileApiTailoringFileRequest, options?: AxiosRequestConfig): AxiosPromise<TailoringFile> {
+            return localVarFp.tailoringFile(requestParameters.policyId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for tailoringFile operation in TailoringFileApi.
+ * @export
+ * @interface TailoringFileApiTailoringFileRequest
+ */
+export interface TailoringFileApiTailoringFileRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringFileApiTailoringFile
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringFileApiTailoringFile
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringFileApiTailoringFile
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * TailoringFileApi - object-oriented interface
+ * @export
+ * @class TailoringFileApi
+ * @extends {BaseAPI}
+ */
+export class TailoringFileApi extends BaseAPI {
+    /**
+     * Returns a Tailoring File
+     * @summary Request a Tailoring file
+     * @param {TailoringFileApiTailoringFileRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TailoringFileApi
+     */
+    public tailoringFile(requestParameters: TailoringFileApiTailoringFileRequest, options?: AxiosRequestConfig) {
+        return TailoringFileApiFp(this.configuration).tailoringFile(requestParameters.policyId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * TailoringRulesApi - axios parameter creator
+ * @export
+ */
+export const TailoringRulesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Lists Rules assigned to a Tailoring
+         * @summary Request Rules assigned to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('tailoringRules', 'policyId', policyId)
+            // verify required parameter 'tailoringId' is not null or undefined
+            assertParamExists('tailoringRules', 'tailoringId', tailoringId)
+            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TailoringRulesApi - functional programming interface
+ * @export
+ */
+export const TailoringRulesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TailoringRulesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Rules assigned to a Tailoring
+         * @summary Request Rules assigned to a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * TailoringRulesApi - factory interface
+ * @export
+ */
+export const TailoringRulesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TailoringRulesApiFp(configuration)
+    return {
+        /**
+         * Lists Rules assigned to a Tailoring
+         * @summary Request Rules assigned to a Tailoring
+         * @param {TailoringRulesApiTailoringRulesRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringRules(requestParameters: TailoringRulesApiTailoringRulesRequest, options?: AxiosRequestConfig): AxiosPromise<Rules200Response> {
+            return localVarFp.tailoringRules(requestParameters.policyId, requestParameters.tailoringId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for tailoringRules operation in TailoringRulesApi.
+ * @export
+ * @interface TailoringRulesApiTailoringRulesRequest
+ */
+export interface TailoringRulesApiTailoringRulesRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly tailoringId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60; and &#x60;severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof TailoringRulesApiTailoringRules
+     */
+    readonly filter?: any
+}
+
+/**
+ * TailoringRulesApi - object-oriented interface
+ * @export
+ * @class TailoringRulesApi
+ * @extends {BaseAPI}
+ */
+export class TailoringRulesApi extends BaseAPI {
+    /**
+     * Lists Rules assigned to a Tailoring
+     * @summary Request Rules assigned to a Tailoring
+     * @param {TailoringRulesApiTailoringRulesRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TailoringRulesApi
+     */
+    public tailoringRules(requestParameters: TailoringRulesApiTailoringRulesRequest, options?: AxiosRequestConfig) {
+        return TailoringRulesApiFp(this.configuration).tailoringRules(requestParameters.policyId, requestParameters.tailoringId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * TailoringsApi - axios parameter creator
+ * @export
+ */
+export const TailoringsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Lists Tailorings
+         * @summary Request Tailorings
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailorings: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('tailorings', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/tailorings`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TailoringsApi - functional programming interface
+ * @export
+ */
+export const TailoringsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TailoringsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Tailorings
+         * @summary Request Tailorings
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailorings200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * TailoringsApi - factory interface
+ * @export
+ */
+export const TailoringsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TailoringsApiFp(configuration)
+    return {
+        /**
+         * Lists Tailorings
+         * @summary Request Tailorings
+         * @param {TailoringsApiTailoringsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailorings(requestParameters: TailoringsApiTailoringsRequest, options?: AxiosRequestConfig): AxiosPromise<Tailorings200Response> {
+            return localVarFp.tailorings(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for tailorings operation in TailoringsApi.
+ * @export
+ * @interface TailoringsApiTailoringsRequest
+ */
+export interface TailoringsApiTailoringsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof TailoringsApiTailorings
+     */
+    readonly filter?: any
+}
+
+/**
+ * TailoringsApi - object-oriented interface
+ * @export
+ * @class TailoringsApi
+ * @extends {BaseAPI}
+ */
+export class TailoringsApi extends BaseAPI {
+    /**
+     * Lists Tailorings
+     * @summary Request Tailorings
+     * @param {TailoringsApiTailoringsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TailoringsApi
+     */
+    public tailorings(requestParameters: TailoringsApiTailoringsRequest, options?: AxiosRequestConfig) {
+        return TailoringsApiFp(this.configuration).tailorings(requestParameters.policyId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * UnassignRuleApi - axios parameter creator
+ * @export
+ */
+export const UnassignRuleApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Unassigns a Rule from a Tailoring
+         * @summary Unassign a Rule from a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unassignRule: async (policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('unassignRule', 'policyId', policyId)
+            // verify required parameter 'tailoringId' is not null or undefined
+            assertParamExists('unassignRule', 'tailoringId', tailoringId)
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('unassignRule', 'id', id)
+            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{id}`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)))
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UnassignRuleApi - functional programming interface
+ * @export
+ */
+export const UnassignRuleApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UnassignRuleApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Unassigns a Rule from a Tailoring
+         * @summary Unassign a Rule from a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async unassignRule(policyId: any, tailoringId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.unassignRule(policyId, tailoringId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UnassignRuleApi - factory interface
+ * @export
+ */
+export const UnassignRuleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UnassignRuleApiFp(configuration)
+    return {
+        /**
+         * Unassigns a Rule from a Tailoring
+         * @summary Unassign a Rule from a Tailoring
+         * @param {UnassignRuleApiUnassignRuleRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unassignRule(requestParameters: UnassignRuleApiUnassignRuleRequest, options?: AxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.unassignRule(requestParameters.policyId, requestParameters.tailoringId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for unassignRule operation in UnassignRuleApi.
+ * @export
+ * @interface UnassignRuleApiUnassignRuleRequest
+ */
+export interface UnassignRuleApiUnassignRuleRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignRuleApiUnassignRule
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignRuleApiUnassignRule
+     */
+    readonly tailoringId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignRuleApiUnassignRule
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignRuleApiUnassignRule
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * UnassignRuleApi - object-oriented interface
+ * @export
+ * @class UnassignRuleApi
+ * @extends {BaseAPI}
+ */
+export class UnassignRuleApi extends BaseAPI {
+    /**
+     * Unassigns a Rule from a Tailoring
+     * @summary Unassign a Rule from a Tailoring
+     * @param {UnassignRuleApiUnassignRuleRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UnassignRuleApi
+     */
+    public unassignRule(requestParameters: UnassignRuleApiUnassignRuleRequest, options?: AxiosRequestConfig) {
+        return UnassignRuleApiFp(this.configuration).unassignRule(requestParameters.policyId, requestParameters.tailoringId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * UnassignSystemApi - axios parameter creator
+ * @export
+ */
+export const UnassignSystemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Unassigns a System from a Policy
+         * @summary Unassign a System from a Policy
+         * @param {any} id
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unassignSystem: async (id: any, policyId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('unassignSystem', 'id', id)
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('unassignSystem', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/systems/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UnassignSystemApi - functional programming interface
+ * @export
+ */
+export const UnassignSystemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UnassignSystemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Unassigns a System from a Policy
+         * @summary Unassign a System from a Policy
+         * @param {any} id
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async unassignSystem(id: any, policyId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<System200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.unassignSystem(id, policyId, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UnassignSystemApi - factory interface
+ * @export
+ */
+export const UnassignSystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UnassignSystemApiFp(configuration)
+    return {
+        /**
+         * Unassigns a System from a Policy
+         * @summary Unassign a System from a Policy
+         * @param {UnassignSystemApiUnassignSystemRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        unassignSystem(requestParameters: UnassignSystemApiUnassignSystemRequest, options?: AxiosRequestConfig): AxiosPromise<System200Response> {
+            return localVarFp.unassignSystem(requestParameters.id, requestParameters.policyId, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for unassignSystem operation in UnassignSystemApi.
+ * @export
+ * @interface UnassignSystemApiUnassignSystemRequest
+ */
+export interface UnassignSystemApiUnassignSystemRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignSystemApiUnassignSystem
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignSystemApiUnassignSystem
+     */
+    readonly policyId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UnassignSystemApiUnassignSystem
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * UnassignSystemApi - object-oriented interface
+ * @export
+ * @class UnassignSystemApi
+ * @extends {BaseAPI}
+ */
+export class UnassignSystemApi extends BaseAPI {
+    /**
+     * Unassigns a System from a Policy
+     * @summary Unassign a System from a Policy
+     * @param {UnassignSystemApiUnassignSystemRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UnassignSystemApi
+     */
+    public unassignSystem(requestParameters: UnassignSystemApiUnassignSystemRequest, options?: AxiosRequestConfig) {
+        return UnassignSystemApiFp(this.configuration).unassignSystem(requestParameters.id, requestParameters.policyId, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * UpdatePolicyApi - axios parameter creator
+ * @export
+ */
+export const UpdatePolicyApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates a Policy with the provided attributes
+         * @summary Update a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {PolicyUpdate} [policyUpdate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updatePolicy: async (id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('updatePolicy', 'id', id)
+            const localVarPath = `/policies/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(policyUpdate, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdatePolicyApi - functional programming interface
+ * @export
+ */
+export const UpdatePolicyApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdatePolicyApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates a Policy with the provided attributes
+         * @summary Update a Policy
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {PolicyUpdate} [policyUpdate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updatePolicy(id: any, xRHIDENTITY?: any, policyUpdate?: PolicyUpdate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreatePolicy201Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updatePolicy(id, xRHIDENTITY, policyUpdate, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdatePolicyApi - factory interface
+ * @export
+ */
+export const UpdatePolicyApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdatePolicyApiFp(configuration)
+    return {
+        /**
+         * Updates a Policy with the provided attributes
+         * @summary Update a Policy
+         * @param {UpdatePolicyApiUpdatePolicyRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updatePolicy(requestParameters: UpdatePolicyApiUpdatePolicyRequest, options?: AxiosRequestConfig): AxiosPromise<CreatePolicy201Response> {
+            return localVarFp.updatePolicy(requestParameters.id, requestParameters.xRHIDENTITY, requestParameters.policyUpdate, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for updatePolicy operation in UpdatePolicyApi.
+ * @export
+ * @interface UpdatePolicyApiUpdatePolicyRequest
+ */
+export interface UpdatePolicyApiUpdatePolicyRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof UpdatePolicyApiUpdatePolicy
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof UpdatePolicyApiUpdatePolicy
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     *
+     * @type {PolicyUpdate}
+     * @memberof UpdatePolicyApiUpdatePolicy
+     */
+    readonly policyUpdate?: PolicyUpdate
+}
+
+/**
+ * UpdatePolicyApi - object-oriented interface
+ * @export
+ * @class UpdatePolicyApi
+ * @extends {BaseAPI}
+ */
+export class UpdatePolicyApi extends BaseAPI {
+    /**
+     * Updates a Policy with the provided attributes
+     * @summary Update a Policy
+     * @param {UpdatePolicyApiUpdatePolicyRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UpdatePolicyApi
+     */
+    public updatePolicy(requestParameters: UpdatePolicyApiUpdatePolicyRequest, options?: AxiosRequestConfig) {
+        return UpdatePolicyApiFp(this.configuration).updatePolicy(requestParameters.id, requestParameters.xRHIDENTITY, requestParameters.policyUpdate, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ValueDefinitionApi - axios parameter creator
+ * @export
+ */
+export const ValueDefinitionApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Value Definition
+         * @summary Request a Value Definition
+         * @param {any} securityGuideId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        valueDefinition: async (securityGuideId: any, id: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'securityGuideId' is not null or undefined
+            assertParamExists('valueDefinition', 'securityGuideId', securityGuideId)
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('valueDefinition', 'id', id)
+            const localVarPath = `/security_guides/{security_guide_id}/value_definitions/{id}`
+                .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ValueDefinitionApi - functional programming interface
+ * @export
+ */
+export const ValueDefinitionApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ValueDefinitionApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Value Definition
+         * @summary Request a Value Definition
+         * @param {any} securityGuideId
+         * @param {any} id
+         * @param {any} [xRHIDENTITY]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async valueDefinition(securityGuideId: any, id: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinition200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinition(securityGuideId, id, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ValueDefinitionApi - factory interface
+ * @export
+ */
+export const ValueDefinitionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ValueDefinitionApiFp(configuration)
+    return {
+        /**
+         * Returns a Value Definition
+         * @summary Request a Value Definition
+         * @param {ValueDefinitionApiValueDefinitionRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        valueDefinition(requestParameters: ValueDefinitionApiValueDefinitionRequest, options?: AxiosRequestConfig): AxiosPromise<ValueDefinition200Response> {
+            return localVarFp.valueDefinition(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for valueDefinition operation in ValueDefinitionApi.
+ * @export
+ * @interface ValueDefinitionApiValueDefinitionRequest
+ */
+export interface ValueDefinitionApiValueDefinitionRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ValueDefinitionApiValueDefinition
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ValueDefinitionApiValueDefinition
+     */
+    readonly id: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ValueDefinitionApiValueDefinition
+     */
+    readonly xRHIDENTITY?: any
+}
+
+/**
+ * ValueDefinitionApi - object-oriented interface
+ * @export
+ * @class ValueDefinitionApi
+ * @extends {BaseAPI}
+ */
+export class ValueDefinitionApi extends BaseAPI {
+    /**
+     * Returns a Value Definition
+     * @summary Request a Value Definition
+     * @param {ValueDefinitionApiValueDefinitionRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ValueDefinitionApi
+     */
+    public valueDefinition(requestParameters: ValueDefinitionApiValueDefinitionRequest, options?: AxiosRequestConfig) {
+        return ValueDefinitionApiFp(this.configuration).valueDefinition(requestParameters.securityGuideId, requestParameters.id, requestParameters.xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ValueDefinitionsApi - axios parameter creator
+ * @export
+ */
+export const ValueDefinitionsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Lists Value Definitions
+         * @summary Request Value Definitions
+         * @param {any} securityGuideId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        valueDefinitions: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'securityGuideId' is not null or undefined
+            assertParamExists('valueDefinitions', 'securityGuideId', securityGuideId)
+            const localVarPath = `/security_guides/{security_guide_id}/value_definitions`
+                .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ValueDefinitionsApi - functional programming interface
+ * @export
+ */
+export const ValueDefinitionsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ValueDefinitionsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Lists Value Definitions
+         * @summary Request Value Definitions
+         * @param {any} securityGuideId
+         * @param {any} [xRHIDENTITY]
+         * @param {any} [limit] Number of items to return per page
+         * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinitions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ValueDefinitionsApi - factory interface
+ * @export
+ */
+export const ValueDefinitionsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ValueDefinitionsApiFp(configuration)
+    return {
+        /**
+         * Lists Value Definitions
+         * @summary Request Value Definitions
+         * @param {ValueDefinitionsApiValueDefinitionsRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        valueDefinitions(requestParameters: ValueDefinitionsApiValueDefinitionsRequest, options?: AxiosRequestConfig): AxiosPromise<ValueDefinitions200Response> {
+            return localVarFp.valueDefinitions(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Request parameters for valueDefinitions operation in ValueDefinitionsApi.
+ * @export
+ * @interface ValueDefinitionsApiValueDefinitionsRequest
+ */
+export interface ValueDefinitionsApiValueDefinitionsRequest {
+    /**
+     *
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly securityGuideId: any
+
+    /**
+     *
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly xRHIDENTITY?: any
+
+    /**
+     * Number of items to return per page
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly limit?: any
+
+    /**
+     * Offset of first item of paginated response
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly offset?: any
+
+    /**
+     * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly sortBy?: any
+
+    /**
+     * Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(version&#x3D;0.1.47 AND os_major_verision&#x3D;8)&#x60;)
+     * @type {any}
+     * @memberof ValueDefinitionsApiValueDefinitions
+     */
+    readonly filter?: any
+}
+
+/**
+ * ValueDefinitionsApi - object-oriented interface
+ * @export
+ * @class ValueDefinitionsApi
+ * @extends {BaseAPI}
+ */
+export class ValueDefinitionsApi extends BaseAPI {
+    /**
+     * Lists Value Definitions
+     * @summary Request Value Definitions
+     * @param {ValueDefinitionsApiValueDefinitionsRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ValueDefinitionsApi
+     */
+    public valueDefinitions(requestParameters: ValueDefinitionsApiValueDefinitionsRequest, options?: AxiosRequestConfig) {
+        return ValueDefinitionsApiFp(this.configuration).valueDefinitions(requestParameters.securityGuideId, requestParameters.xRHIDENTITY, requestParameters.limit, requestParameters.offset, requestParameters.sortBy, requestParameters.filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
