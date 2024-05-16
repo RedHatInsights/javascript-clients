@@ -29,7 +29,7 @@ Tailoring
 
 #### Defined in
 
-api.ts:945
+[types/index.ts:920](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L920)
 
 ___
 
@@ -45,7 +45,7 @@ Tailoring
 
 #### Defined in
 
-api.ts:963
+[types/index.ts:938](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L938)
 
 ___
 
@@ -61,7 +61,7 @@ Tailoring
 
 #### Defined in
 
-api.ts:969
+[types/index.ts:944](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L944)
 
 ___
 
@@ -77,7 +77,7 @@ Tailoring
 
 #### Defined in
 
-api.ts:957
+[types/index.ts:932](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L932)
 
 ___
 
@@ -91,7 +91,7 @@ Tailoring
 
 #### Defined in
 
-api.ts:951
+[types/index.ts:926](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L926)
 
 ___
 
@@ -107,4 +107,4 @@ Tailoring
 
 #### Defined in
 
-api.ts:975
+[types/index.ts:950](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L950)

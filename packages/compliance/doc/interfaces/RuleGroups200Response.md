@@ -26,7 +26,7 @@ RuleGroups200Response
 
 #### Defined in
 
-api.ts:576
+[types/index.ts:551](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L551)
 
 ___
 
@@ -40,7 +40,7 @@ RuleGroups200Response
 
 #### Defined in
 
-api.ts:570
+[types/index.ts:545](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L545)
 
 ___
 
@@ -54,4 +54,4 @@ RuleGroups200Response
 
 #### Defined in
 
-api.ts:564
+[types/index.ts:539](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L539)

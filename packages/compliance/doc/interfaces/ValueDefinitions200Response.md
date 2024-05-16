@@ -26,7 +26,7 @@ ValueDefinitions200Response
 
 #### Defined in
 
-api.ts:1155
+[types/index.ts:1130](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1130)
 
 ___
 
@@ -40,7 +40,7 @@ ValueDefinitions200Response
 
 #### Defined in
 
-api.ts:1149
+[types/index.ts:1124](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1124)
 
 ___
 
@@ -54,4 +54,4 @@ ValueDefinitions200Response
 
 #### Defined in
 
-api.ts:1143
+[types/index.ts:1118](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1118)

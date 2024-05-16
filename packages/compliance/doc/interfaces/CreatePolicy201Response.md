@@ -24,4 +24,4 @@ CreatePolicy201Response
 
 #### Defined in
 
-api.ts:50
+[types/index.ts:25](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L25)

@@ -26,7 +26,7 @@ SecurityGuides200Response
 
 #### Defined in
 
-api.ts:708
+[types/index.ts:683](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L683)
 
 ___
 
@@ -40,7 +40,7 @@ SecurityGuides200Response
 
 #### Defined in
 
-api.ts:702
+[types/index.ts:677](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L677)
 
 ___
 
@@ -54,4 +54,4 @@ SecurityGuides200Response
 
 #### Defined in
 
-api.ts:696
+[types/index.ts:671](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L671)

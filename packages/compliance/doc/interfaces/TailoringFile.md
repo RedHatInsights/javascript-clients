@@ -30,4 +30,4 @@ TailoringFile
 
 #### Defined in
 
-api.ts:1023
+[types/index.ts:998](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L998)

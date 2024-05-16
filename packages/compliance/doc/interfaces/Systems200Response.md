@@ -26,7 +26,7 @@ Systems200Response
 
 #### Defined in
 
-api.ts:932
+[types/index.ts:907](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L907)
 
 ___
 
@@ -40,7 +40,7 @@ Systems200Response
 
 #### Defined in
 
-api.ts:926
+[types/index.ts:901](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L901)
 
 ___
 
@@ -54,4 +54,4 @@ Systems200Response
 
 #### Defined in
 
-api.ts:920
+[types/index.ts:895](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L895)

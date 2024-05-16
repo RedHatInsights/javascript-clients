@@ -26,7 +26,7 @@ Policies200Response
 
 #### Defined in
 
-api.ts:169
+[types/index.ts:144](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L144)
 
 ___
 
@@ -40,7 +40,7 @@ Policies200Response
 
 #### Defined in
 
-api.ts:163
+[types/index.ts:138](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L138)
 
 ___
 
@@ -54,4 +54,4 @@ Policies200Response
 
 #### Defined in
 
-api.ts:157
+[types/index.ts:132](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L132)

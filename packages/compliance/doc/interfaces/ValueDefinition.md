@@ -32,7 +32,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1097
+[types/index.ts:1072](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1072)
 
 ___
 
@@ -48,7 +48,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1091
+[types/index.ts:1066](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1066)
 
 ___
 
@@ -62,7 +62,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1061
+[types/index.ts:1036](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1036)
 
 ___
 
@@ -78,7 +78,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1073
+[types/index.ts:1048](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1048)
 
 ___
 
@@ -94,7 +94,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1079
+[types/index.ts:1054](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1054)
 
 ___
 
@@ -108,7 +108,7 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1067
+[types/index.ts:1042](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1042)
 
 ___
 
@@ -124,4 +124,4 @@ ValueDefinition
 
 #### Defined in
 
-api.ts:1085
+[types/index.ts:1060](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1060)

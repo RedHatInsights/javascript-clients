@@ -24,4 +24,4 @@ AssignRulesRequest
 
 #### Defined in
 
-api.ts:37
+[types/index.ts:12](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L12)

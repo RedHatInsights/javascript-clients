@@ -4,17 +4,9 @@
 
 ## Table of contents
 
-### Classes
-
-- [Configuration](classes/Configuration.md)
-- [ContentApi](classes/ContentApi.md)
-- [PoliciesApi](classes/PoliciesApi.md)
-- [SystemsApi](classes/SystemsApi.md)
-
 ### Interfaces
 
 - [AssignRulesRequest](interfaces/AssignRulesRequest.md)
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [CreatePolicy201Response](interfaces/CreatePolicy201Response.md)
 - [CreatePolicy201ResponseData](interfaces/CreatePolicy201ResponseData.md)
 - [Errors](interfaces/Errors.md)
@@ -81,15 +73,39 @@
 
 ### Functions
 
-- [ContentApiAxiosParamCreator](modules.md#contentapiaxiosparamcreator)
-- [ContentApiFactory](modules.md#contentapifactory)
-- [ContentApiFp](modules.md#contentapifp)
-- [PoliciesApiAxiosParamCreator](modules.md#policiesapiaxiosparamcreator)
-- [PoliciesApiFactory](modules.md#policiesapifactory)
-- [PoliciesApiFp](modules.md#policiesapifp)
-- [SystemsApiAxiosParamCreator](modules.md#systemsapiaxiosparamcreator)
-- [SystemsApiFactory](modules.md#systemsapifactory)
-- [SystemsApiFp](modules.md#systemsapifp)
+- [assignRule](modules.md#assignrule)
+- [assignRules](modules.md#assignrules)
+- [assignSystem](modules.md#assignsystem)
+- [assignSystems](modules.md#assignsystems)
+- [createPolicy](modules.md#createpolicy)
+- [deletePolicy](modules.md#deletepolicy)
+- [policies](modules.md#policies)
+- [policy](modules.md#policy)
+- [policySystems](modules.md#policysystems)
+- [profile](modules.md#profile)
+- [profileRule](modules.md#profilerule)
+- [profileRules](modules.md#profilerules)
+- [profiles](modules.md#profiles)
+- [rule](modules.md#rule)
+- [ruleGroup](modules.md#rulegroup)
+- [ruleGroups](modules.md#rulegroups)
+- [rules](modules.md#rules)
+- [securityGuide](modules.md#securityguide)
+- [securityGuideRuleTree](modules.md#securityguideruletree)
+- [securityGuides](modules.md#securityguides)
+- [supportedProfiles](modules.md#supportedprofiles)
+- [system](modules.md#system)
+- [systems](modules.md#systems)
+- [systemsPolicies](modules.md#systemspolicies)
+- [tailoring](modules.md#tailoring)
+- [tailoringFile](modules.md#tailoringfile)
+- [tailoringRules](modules.md#tailoringrules)
+- [tailorings](modules.md#tailorings)
+- [unassignRule](modules.md#unassignrule)
+- [unassignSystem](modules.md#unassignsystem)
+- [updatePolicy](modules.md#updatepolicy)
+- [valueDefinition](modules.md#valuedefinition)
+- [valueDefinitions](modules.md#valuedefinitions)
 
 ## Type Aliases
 
@@ -99,9 +115,9 @@
 
 #### Defined in
 
-api.ts:245
+[types/index.ts:220](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
 
-api.ts:249
+[types/index.ts:224](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
 
 ___
 
@@ -111,9 +127,9 @@ ___
 
 #### Defined in
 
-api.ts:320
+[types/index.ts:295](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
 
-api.ts:324
+[types/index.ts:299](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
 
 ___
 
@@ -123,9 +139,9 @@ ___
 
 #### Defined in
 
-api.ts:521
+[types/index.ts:496](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L496)
 
-api.ts:525
+[types/index.ts:500](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L500)
 
 ___
 
@@ -135,9 +151,9 @@ ___
 
 #### Defined in
 
-api.ts:439
+[types/index.ts:414](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L414)
 
-api.ts:443
+[types/index.ts:418](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L418)
 
 ___
 
@@ -147,9 +163,9 @@ ___
 
 #### Defined in
 
-api.ts:653
+[types/index.ts:628](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L628)
 
-api.ts:657
+[types/index.ts:632](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L632)
 
 ___
 
@@ -159,9 +175,9 @@ ___
 
 #### Defined in
 
-api.ts:760
+[types/index.ts:735](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L735)
 
-api.ts:764
+[types/index.ts:739](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L739)
 
 ___
 
@@ -171,9 +187,9 @@ ___
 
 #### Defined in
 
-api.ts:877
+[types/index.ts:852](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L852)
 
-api.ts:881
+[types/index.ts:856](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L856)
 
 ___
 
@@ -183,9 +199,9 @@ ___
 
 #### Defined in
 
-api.ts:978
+[types/index.ts:953](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L953)
 
-api.ts:982
+[types/index.ts:957](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L957)
 
 ___
 
@@ -195,9 +211,9 @@ ___
 
 #### Defined in
 
-api.ts:1100
+[types/index.ts:1075](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1075)
 
-api.ts:1104
+[types/index.ts:1079](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1079)
 
 ## Variables
 
@@ -213,9 +229,9 @@ api.ts:1104
 
 #### Defined in
 
-api.ts:245
+[types/index.ts:220](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
 
-api.ts:249
+[types/index.ts:224](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
 
 ___
 
@@ -231,9 +247,9 @@ ___
 
 #### Defined in
 
-api.ts:320
+[types/index.ts:295](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
 
-api.ts:324
+[types/index.ts:299](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
 
 ___
 
@@ -249,9 +265,9 @@ ___
 
 #### Defined in
 
-api.ts:521
+[types/index.ts:496](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L496)
 
-api.ts:525
+[types/index.ts:500](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L500)
 
 ___
 
@@ -267,9 +283,9 @@ ___
 
 #### Defined in
 
-api.ts:439
+[types/index.ts:414](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L414)
 
-api.ts:443
+[types/index.ts:418](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L418)
 
 ___
 
@@ -285,9 +301,9 @@ ___
 
 #### Defined in
 
-api.ts:653
+[types/index.ts:628](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L628)
 
-api.ts:657
+[types/index.ts:632](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L632)
 
 ___
 
@@ -303,9 +319,9 @@ ___
 
 #### Defined in
 
-api.ts:760
+[types/index.ts:735](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L735)
 
-api.ts:764
+[types/index.ts:739](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L739)
 
 ___
 
@@ -321,9 +337,9 @@ ___
 
 #### Defined in
 
-api.ts:877
+[types/index.ts:852](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L852)
 
-api.ts:881
+[types/index.ts:856](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L856)
 
 ___
 
@@ -339,9 +355,9 @@ ___
 
 #### Defined in
 
-api.ts:978
+[types/index.ts:953](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L953)
 
-api.ts:982
+[types/index.ts:957](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L957)
 
 ___
 
@@ -357,354 +373,934 @@ ___
 
 #### Defined in
 
-api.ts:1100
+[types/index.ts:1075](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1075)
 
-api.ts:1104
+[types/index.ts:1079](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1079)
 
 ## Functions
 
-### ContentApiAxiosParamCreator
+### assignRule
 
-▸ **ContentApiAxiosParamCreator**(`configuration?`): `Object`
+▸ **assignRule**(`...config`): `Promise`\<`RequestArgs`\>
 
-ContentApi - axios parameter creator
+Assigns a Rule to a Tailoring
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `profile` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `profileRule` | (`securityGuideId`: `any`, `profileId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `profileRules` | (`securityGuideId`: `any`, `profileId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `profiles` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `rule` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `ruleGroup` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `ruleGroups` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `rules` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `securityGuide` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `securityGuideRuleTree` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `securityGuides` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `supportedProfiles` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `valueDefinition` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `valueDefinitions` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-api.ts:1162
-
-___
-
-### ContentApiFactory
-
-▸ **ContentApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-ContentApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`AssignRuleParams`] \| [`any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `profile` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Profile200Response`](interfaces/Profile200Response.md)\> |
-| `profileRule` | (`securityGuideId`: `any`, `profileId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Rule200Response`](interfaces/Rule200Response.md)\> |
-| `profileRules` | (`securityGuideId`: `any`, `profileId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\> |
-| `profiles` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Profiles200Response`](interfaces/Profiles200Response.md)\> |
-| `rule` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Rule200Response`](interfaces/Rule200Response.md)\> |
-| `ruleGroup` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`RuleGroup200Response`](interfaces/RuleGroup200Response.md)\> |
-| `ruleGroups` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`RuleGroups200Response`](interfaces/RuleGroups200Response.md)\> |
-| `rules` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\> |
-| `securityGuide` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`SecurityGuide200Response`](interfaces/SecurityGuide200Response.md)\> |
-| `securityGuideRuleTree` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<`any`\> |
-| `securityGuides` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`SecurityGuides200Response`](interfaces/SecurityGuides200Response.md)\> |
-| `supportedProfiles` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`SupportedProfiles200Response`](interfaces/SupportedProfiles200Response.md)\> |
-| `valueDefinition` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`ValueDefinition200Response`](interfaces/ValueDefinition200Response.md)\> |
-| `valueDefinitions` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`ValueDefinitions200Response`](interfaces/ValueDefinitions200Response.md)\> |
+**`Summary`**
 
-**`Export`**
+Assign a Rule to a Tailoring
+
+**`Throws`**
 
 #### Defined in
 
-api.ts:2116
+[AssignRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignRule/index.ts#L52)
 
 ___
 
-### ContentApiFp
+### assignRules
 
-▸ **ContentApiFp**(`configuration?`): `Object`
+▸ **assignRules**(`...config`): `Promise`\<`RequestArgs`\>
 
-ContentApi - functional programming interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `profile` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Profile200Response`](interfaces/Profile200Response.md)\>\> |
-| `profileRule` | (`securityGuideId`: `any`, `profileId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rule200Response`](interfaces/Rule200Response.md)\>\> |
-| `profileRules` | (`securityGuideId`: `any`, `profileId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\>\> |
-| `profiles` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Profiles200Response`](interfaces/Profiles200Response.md)\>\> |
-| `rule` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rule200Response`](interfaces/Rule200Response.md)\>\> |
-| `ruleGroup` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RuleGroup200Response`](interfaces/RuleGroup200Response.md)\>\> |
-| `ruleGroups` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`RuleGroups200Response`](interfaces/RuleGroups200Response.md)\>\> |
-| `rules` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\>\> |
-| `securityGuide` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`SecurityGuide200Response`](interfaces/SecurityGuide200Response.md)\>\> |
-| `securityGuideRuleTree` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`any`\>\> |
-| `securityGuides` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`SecurityGuides200Response`](interfaces/SecurityGuides200Response.md)\>\> |
-| `supportedProfiles` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`SupportedProfiles200Response`](interfaces/SupportedProfiles200Response.md)\>\> |
-| `valueDefinition` | (`securityGuideId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`ValueDefinition200Response`](interfaces/ValueDefinition200Response.md)\>\> |
-| `valueDefinitions` | (`securityGuideId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`ValueDefinitions200Response`](interfaces/ValueDefinitions200Response.md)\>\> |
-
-**`Export`**
-
-#### Defined in
-
-api.ts:1905
-
-___
-
-### PoliciesApiAxiosParamCreator
-
-▸ **PoliciesApiAxiosParamCreator**(`configuration?`): `Object`
-
-PoliciesApi - axios parameter creator
+This feature is exclusively used by the frontend
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `assignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `assignRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `assignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `assignSystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `createPolicy` | (`xRHIDENTITY?`: `any`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `deletePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `policies` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `policy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `policySystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `tailoring` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `tailoringFile` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `tailoringRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `tailorings` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `unassignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `unassignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `updatePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `policyUpdate?`: [`PolicyUpdate`](interfaces/PolicyUpdate.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-api.ts:2537
-
-___
-
-### PoliciesApiFactory
-
-▸ **PoliciesApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-PoliciesApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`AssignRulesParams`] \| [`any`, `any`, `any`, [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `assignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
-| `assignRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `any`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\> |
-| `assignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\> |
-| `assignSystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `any`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\> |
-| `createPolicy` | (`xRHIDENTITY?`: `any`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `any`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\> |
-| `deletePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\> |
-| `policies` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Policies200Response`](interfaces/Policies200Response.md)\> |
-| `policy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\> |
-| `policySystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\> |
-| `tailoring` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Tailoring200Response`](interfaces/Tailoring200Response.md)\> |
-| `tailoringFile` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`TailoringFile`](interfaces/TailoringFile.md)\> |
-| `tailoringRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\> |
-| `tailorings` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Tailorings200Response`](interfaces/Tailorings200Response.md)\> |
-| `unassignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
-| `unassignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\> |
-| `updatePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `policyUpdate?`: [`PolicyUpdate`](interfaces/PolicyUpdate.md), `options?`: `any`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\> |
+**`Summary`**
 
-**`Export`**
+Bulk assign Rules to a Tailoring
+
+**`Deprecated`**
+
+**`Throws`**
 
 #### Defined in
 
-api.ts:3564
+[AssignRules/index.ts:53](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignRules/index.ts#L53)
 
 ___
 
-### PoliciesApiFp
+### assignSystem
 
-▸ **PoliciesApiFp**(`configuration?`): `Object`
+▸ **assignSystem**(`...config`): `Promise`\<`RequestArgs`\>
 
-PoliciesApi - functional programming interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `assignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-| `assignRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\>\> |
-| `assignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\>\> |
-| `assignSystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `assignRulesRequest?`: [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\>\> |
-| `createPolicy` | (`xRHIDENTITY?`: `any`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\>\> |
-| `deletePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\>\> |
-| `policies` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Policies200Response`](interfaces/Policies200Response.md)\>\> |
-| `policy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\>\> |
-| `policySystems` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\>\> |
-| `tailoring` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Tailoring200Response`](interfaces/Tailoring200Response.md)\>\> |
-| `tailoringFile` | (`policyId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`TailoringFile`](interfaces/TailoringFile.md)\>\> |
-| `tailoringRules` | (`policyId`: `any`, `tailoringId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Rules200Response`](interfaces/Rules200Response.md)\>\> |
-| `tailorings` | (`policyId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Tailorings200Response`](interfaces/Tailorings200Response.md)\>\> |
-| `unassignRule` | (`policyId`: `any`, `tailoringId`: `any`, `id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-| `unassignSystem` | (`id`: `any`, `policyId`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\>\> |
-| `updatePolicy` | (`id`: `any`, `xRHIDENTITY?`: `any`, `policyUpdate?`: [`PolicyUpdate`](interfaces/PolicyUpdate.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`CreatePolicy201Response`](interfaces/CreatePolicy201Response.md)\>\> |
-
-**`Export`**
-
-#### Defined in
-
-api.ts:3332
-
-___
-
-### SystemsApiAxiosParamCreator
-
-▸ **SystemsApiAxiosParamCreator**(`configuration?`): `Object`
-
-SystemsApi - axios parameter creator
+Assigns a System to a Policy
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `system` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `systems` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `systemsPolicies` | (`systemId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-api.ts:4027
-
-___
-
-### SystemsApiFactory
-
-▸ **SystemsApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-SystemsApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`AssignSystemParams`] \| [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `system` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\> |
-| `systems` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\> |
-| `systemsPolicies` | (`systemId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `any`) => `AxiosPromise`\<[`Policies200Response`](interfaces/Policies200Response.md)\> |
+**`Summary`**
 
-**`Export`**
+Assign a System to a Policy
+
+**`Throws`**
 
 #### Defined in
 
-api.ts:4248
+[AssignSystem/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignSystem/index.ts#L46)
 
 ___
 
-### SystemsApiFp
+### assignSystems
 
-▸ **SystemsApiFp**(`configuration?`): `Object`
+▸ **assignSystems**(`...config`): `Promise`\<`RequestArgs`\>
 
-SystemsApi - functional programming interface
+This feature is exclusively used by the frontend
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AssignSystemsParams`] \| [`any`, `any`, [`AssignRulesRequest`](interfaces/AssignRulesRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `system` | (`id`: `any`, `xRHIDENTITY?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`System200Response`](interfaces/System200Response.md)\>\> |
-| `systems` | (`xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Systems200Response`](interfaces/Systems200Response.md)\>\> |
-| `systemsPolicies` | (`systemId`: `any`, `xRHIDENTITY?`: `any`, `limit?`: `any`, `offset?`: `any`, `sortBy?`: `any`, `filter?`: `any`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Policies200Response`](interfaces/Policies200Response.md)\>\> |
+**`Summary`**
 
-**`Export`**
+Bulk assign Systems to a Policy
+
+**`Deprecated`**
+
+**`Throws`**
 
 #### Defined in
 
-api.ts:4195
+[AssignSystems/index.ts:47](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignSystems/index.ts#L47)
+
+___
+
+### createPolicy
+
+▸ **createPolicy**(`...config`): `Promise`\<`RequestArgs`\>
+
+Create a Policy with the provided attributes
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`CreatePolicyParams`] \| [`any`, [`Policy`](interfaces/Policy.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Create a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[CreatePolicy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/CreatePolicy/index.ts#L40)
+
+___
+
+### deletePolicy
+
+▸ **deletePolicy**(`...config`): `Promise`\<`RequestArgs`\>
+
+Deletes a Policy
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`DeletePolicyParams`] \| [`any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Delete a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[DeletePolicy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/DeletePolicy/index.ts#L40)
+
+___
+
+### policies
+
+▸ **policies**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Policies
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PoliciesParams`] \| [`any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Policies
+
+**`Throws`**
+
+#### Defined in
+
+[Policies/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Policies/index.ts#L58)
+
+___
+
+### policy
+
+▸ **policy**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Policy
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`PolicyParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[Policy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Policy/index.ts#L40)
+
+___
+
+### policySystems
+
+▸ **policySystems**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Systems assigned to a Policy
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PolicySystemsParams`] \| [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Systems assigned to a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[PolicySystems/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/PolicySystems/index.ts#L64)
+
+___
+
+### profile
+
+▸ **profile**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Profile
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ProfileParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Profile
+
+**`Throws`**
+
+#### Defined in
+
+[Profile/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Profile/index.ts#L46)
+
+___
+
+### profileRule
+
+▸ **profileRule**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Rule assigned to a Profile
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ProfileRuleParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Rule assigned to a Profile
+
+**`Throws`**
+
+#### Defined in
+
+[ProfileRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ProfileRule/index.ts#L52)
+
+___
+
+### profileRules
+
+▸ **profileRules**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Rules assigned to a Profile
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`ProfileRulesParams`] \| [`any`, `any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Rules assigned to a Profile
+
+**`Throws`**
+
+#### Defined in
+
+[ProfileRules/index.ts:70](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ProfileRules/index.ts#L70)
+
+___
+
+### profiles
+
+▸ **profiles**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Profiles
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ProfilesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Profiles
+
+**`Throws`**
+
+#### Defined in
+
+[Profiles/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Profiles/index.ts#L64)
+
+___
+
+### rule
+
+▸ **rule**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Rule
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`RuleParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Rule
+
+**`Throws`**
+
+#### Defined in
+
+[Rule/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Rule/index.ts#L46)
+
+___
+
+### ruleGroup
+
+▸ **ruleGroup**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Rule Group
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`RuleGroupParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Rule Group
+
+**`Throws`**
+
+#### Defined in
+
+[RuleGroup/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/RuleGroup/index.ts#L46)
+
+___
+
+### ruleGroups
+
+▸ **ruleGroups**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Rule Groups
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`RuleGroupsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Rule Groups
+
+**`Throws`**
+
+#### Defined in
+
+[RuleGroups/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/RuleGroups/index.ts#L64)
+
+___
+
+### rules
+
+▸ **rules**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Rules assigned
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`RulesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Rules
+
+**`Throws`**
+
+#### Defined in
+
+[Rules/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Rules/index.ts#L64)
+
+___
+
+### securityGuide
+
+▸ **securityGuide**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Security Guide
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SecurityGuideParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Security Guide
+
+**`Throws`**
+
+#### Defined in
+
+[SecurityGuide/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuide/index.ts#L40)
+
+___
+
+### securityGuideRuleTree
+
+▸ **securityGuideRuleTree**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns the Rule Tree of a Security Guide
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SecurityGuideRuleTreeParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request the Rule Tree of a Security Guide
+
+**`Throws`**
+
+#### Defined in
+
+[SecurityGuideRuleTree/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuideRuleTree/index.ts#L40)
+
+___
+
+### securityGuides
+
+▸ **securityGuides**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Security Guides
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SecurityGuidesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Security Guides
+
+**`Throws`**
+
+#### Defined in
+
+[SecurityGuides/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuides/index.ts#L58)
+
+___
+
+### supportedProfiles
+
+▸ **supportedProfiles**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Supported Profiles
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SupportedProfilesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Supported Profiles
+
+**`Throws`**
+
+#### Defined in
+
+[SupportedProfiles/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SupportedProfiles/index.ts#L58)
+
+___
+
+### system
+
+▸ **system**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a System
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SystemParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a System
+
+**`Throws`**
+
+#### Defined in
+
+[System/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/System/index.ts#L40)
+
+___
+
+### systems
+
+▸ **systems**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Systems
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SystemsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Systems
+
+**`Throws`**
+
+#### Defined in
+
+[Systems/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Systems/index.ts#L58)
+
+___
+
+### systemsPolicies
+
+▸ **systemsPolicies**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Policies under a System
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`SystemsPoliciesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Policies assigned to a System
+
+**`Throws`**
+
+#### Defined in
+
+[SystemsPolicies/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SystemsPolicies/index.ts#L64)
+
+___
+
+### tailoring
+
+▸ **tailoring**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Tailoring
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`TailoringParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Tailoring
+
+**`Throws`**
+
+#### Defined in
+
+[Tailoring/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Tailoring/index.ts#L46)
+
+___
+
+### tailoringFile
+
+▸ **tailoringFile**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Tailoring File
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`TailoringFileParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Tailoring file
+
+**`Throws`**
+
+#### Defined in
+
+[TailoringFile/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/TailoringFile/index.ts#L46)
+
+___
+
+### tailoringRules
+
+▸ **tailoringRules**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Rules assigned to a Tailoring
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`TailoringRulesParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Rules assigned to a Tailoring
+
+**`Throws`**
+
+#### Defined in
+
+[TailoringRules/index.ts:70](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/TailoringRules/index.ts#L70)
+
+___
+
+### tailorings
+
+▸ **tailorings**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Tailorings
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`TailoringsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Tailorings
+
+**`Throws`**
+
+#### Defined in
+
+[Tailorings/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Tailorings/index.ts#L64)
+
+___
+
+### unassignRule
+
+▸ **unassignRule**(`...config`): `Promise`\<`RequestArgs`\>
+
+Unassigns a Rule from a Tailoring
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`UnassignRuleParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Unassign a Rule from a Tailoring
+
+**`Throws`**
+
+#### Defined in
+
+[UnassignRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UnassignRule/index.ts#L52)
+
+___
+
+### unassignSystem
+
+▸ **unassignSystem**(`...config`): `Promise`\<`RequestArgs`\>
+
+Unassigns a System from a Policy
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`UnassignSystemParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Unassign a System from a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[UnassignSystem/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UnassignSystem/index.ts#L46)
+
+___
+
+### updatePolicy
+
+▸ **updatePolicy**(`...config`): `Promise`\<`RequestArgs`\>
+
+Updates a Policy with the provided attributes
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`UpdatePolicyParams`] \| [`any`, `any`, [`PolicyUpdate`](interfaces/PolicyUpdate.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Update a Policy
+
+**`Throws`**
+
+#### Defined in
+
+[UpdatePolicy/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UpdatePolicy/index.ts#L46)
+
+___
+
+### valueDefinition
+
+▸ **valueDefinition**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Value Definition
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ValueDefinitionParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Value Definition
+
+**`Throws`**
+
+#### Defined in
+
+[ValueDefinition/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ValueDefinition/index.ts#L46)
+
+___
+
+### valueDefinitions
+
+▸ **valueDefinitions**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Value Definitions
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ValueDefinitionsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Value Definitions
+
+**`Throws`**
+
+#### Defined in
+
+[ValueDefinitions/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ValueDefinitions/index.ts#L64)

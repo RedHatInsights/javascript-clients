@@ -24,4 +24,4 @@ Errors
 
 #### Defined in
 
-api.ts:76
+[types/index.ts:51](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L51)

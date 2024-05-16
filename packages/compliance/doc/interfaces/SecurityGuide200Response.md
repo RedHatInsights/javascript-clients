@@ -24,4 +24,4 @@ SecurityGuide200Response
 
 #### Defined in
 
-api.ts:670
+[types/index.ts:645](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L645)

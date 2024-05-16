@@ -24,4 +24,4 @@ Profile200ResponseData
 
 #### Defined in
 
-api.ts:350
+[types/index.ts:325](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L325)

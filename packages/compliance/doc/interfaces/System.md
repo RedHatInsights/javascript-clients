@@ -36,7 +36,7 @@ System
 
 #### Defined in
 
-api.ts:826
+[types/index.ts:801](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L801)
 
 ___
 
@@ -52,7 +52,7 @@ System
 
 #### Defined in
 
-api.ts:814
+[types/index.ts:789](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L789)
 
 ___
 
@@ -66,7 +66,7 @@ System
 
 #### Defined in
 
-api.ts:820
+[types/index.ts:795](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L795)
 
 ___
 
@@ -80,7 +80,7 @@ System
 
 #### Defined in
 
-api.ts:802
+[types/index.ts:777](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L777)
 
 ___
 
@@ -94,7 +94,7 @@ System
 
 #### Defined in
 
-api.ts:850
+[types/index.ts:825](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L825)
 
 ___
 
@@ -110,7 +110,7 @@ System
 
 #### Defined in
 
-api.ts:862
+[types/index.ts:837](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L837)
 
 ___
 
@@ -126,7 +126,7 @@ System
 
 #### Defined in
 
-api.ts:868
+[types/index.ts:843](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L843)
 
 ___
 
@@ -142,7 +142,7 @@ System
 
 #### Defined in
 
-api.ts:874
+[types/index.ts:849](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L849)
 
 ___
 
@@ -156,7 +156,7 @@ System
 
 #### Defined in
 
-api.ts:832
+[types/index.ts:807](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L807)
 
 ___
 
@@ -170,7 +170,7 @@ System
 
 #### Defined in
 
-api.ts:838
+[types/index.ts:813](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L813)
 
 ___
 
@@ -184,7 +184,7 @@ System
 
 #### Defined in
 
-api.ts:856
+[types/index.ts:831](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L831)
 
 ___
 
@@ -198,7 +198,7 @@ System
 
 #### Defined in
 
-api.ts:808
+[types/index.ts:783](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L783)
 
 ___
 
@@ -212,4 +212,4 @@ System
 
 #### Defined in
 
-api.ts:844
+[types/index.ts:819](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L819)

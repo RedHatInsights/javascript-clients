@@ -34,7 +34,7 @@ Rule
 
 #### Defined in
 
-api.ts:418
+[types/index.ts:393](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L393)
 
 ___
 
@@ -48,7 +48,7 @@ Rule
 
 #### Defined in
 
-api.ts:388
+[types/index.ts:363](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L363)
 
 ___
 
@@ -64,7 +64,7 @@ Rule
 
 #### Defined in
 
-api.ts:424
+[types/index.ts:399](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L399)
 
 ___
 
@@ -80,7 +80,7 @@ Rule
 
 #### Defined in
 
-api.ts:412
+[types/index.ts:387](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L387)
 
 ___
 
@@ -96,7 +96,7 @@ Rule
 
 #### Defined in
 
-api.ts:400
+[types/index.ts:375](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L375)
 
 ___
 
@@ -112,7 +112,7 @@ Rule
 
 #### Defined in
 
-api.ts:436
+[types/index.ts:411](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L411)
 
 ___
 
@@ -128,7 +128,7 @@ Rule
 
 #### Defined in
 
-api.ts:430
+[types/index.ts:405](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L405)
 
 ___
 
@@ -144,7 +144,7 @@ Rule
 
 #### Defined in
 
-api.ts:406
+[types/index.ts:381](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L381)
 
 ___
 
@@ -158,4 +158,4 @@ Rule
 
 #### Defined in
 
-api.ts:394
+[types/index.ts:369](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L369)

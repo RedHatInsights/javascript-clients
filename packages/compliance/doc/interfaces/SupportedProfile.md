@@ -30,7 +30,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:721
+[types/index.ts:696](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L696)
 
 ___
 
@@ -46,7 +46,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:751
+[types/index.ts:726](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L726)
 
 ___
 
@@ -62,7 +62,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:757
+[types/index.ts:732](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L732)
 
 ___
 
@@ -78,7 +78,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:733
+[types/index.ts:708](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L708)
 
 ___
 
@@ -94,7 +94,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:745
+[types/index.ts:720](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L720)
 
 ___
 
@@ -110,7 +110,7 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:739
+[types/index.ts:714](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L714)
 
 ___
 
@@ -124,4 +124,4 @@ SupportedProfile
 
 #### Defined in
 
-api.ts:727
+[types/index.ts:702](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L702)

@@ -26,7 +26,7 @@ Tailorings200Response
 
 #### Defined in
 
-api.ts:1048
+[types/index.ts:1023](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1023)
 
 ___
 
@@ -40,7 +40,7 @@ Tailorings200Response
 
 #### Defined in
 
-api.ts:1042
+[types/index.ts:1017](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1017)
 
 ___
 
@@ -54,4 +54,4 @@ Tailorings200Response
 
 #### Defined in
 
-api.ts:1036
+[types/index.ts:1011](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1011)

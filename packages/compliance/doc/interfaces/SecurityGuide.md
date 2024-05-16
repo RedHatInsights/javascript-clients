@@ -32,7 +32,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:644
+[types/index.ts:619](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L619)
 
 ___
 
@@ -46,7 +46,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:614
+[types/index.ts:589](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L589)
 
 ___
 
@@ -62,7 +62,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:650
+[types/index.ts:625](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L625)
 
 ___
 
@@ -78,7 +78,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:626
+[types/index.ts:601](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L601)
 
 ___
 
@@ -94,7 +94,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:632
+[types/index.ts:607](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L607)
 
 ___
 
@@ -108,7 +108,7 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:620
+[types/index.ts:595](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L595)
 
 ___
 
@@ -124,4 +124,4 @@ SecurityGuide
 
 #### Defined in
 
-api.ts:638
+[types/index.ts:613](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L613)

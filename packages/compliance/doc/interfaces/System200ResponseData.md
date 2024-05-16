@@ -24,4 +24,4 @@ System200ResponseData
 
 #### Defined in
 
-api.ts:907
+[types/index.ts:882](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L882)

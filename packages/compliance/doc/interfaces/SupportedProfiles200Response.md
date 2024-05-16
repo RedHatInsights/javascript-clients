@@ -26,7 +26,7 @@ SupportedProfiles200Response
 
 #### Defined in
 
-api.ts:789
+[types/index.ts:764](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L764)
 
 ___
 
@@ -40,7 +40,7 @@ SupportedProfiles200Response
 
 #### Defined in
 
-api.ts:783
+[types/index.ts:758](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L758)
 
 ___
 
@@ -54,4 +54,4 @@ SupportedProfiles200Response
 
 #### Defined in
 
-api.ts:777
+[types/index.ts:752](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L752)

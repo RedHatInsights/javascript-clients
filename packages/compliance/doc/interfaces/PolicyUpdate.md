@@ -28,7 +28,7 @@ PolicyUpdate
 
 #### Defined in
 
-api.ts:268
+[types/index.ts:243](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L243)
 
 ___
 
@@ -44,7 +44,7 @@ PolicyUpdate
 
 #### Defined in
 
-api.ts:274
+[types/index.ts:249](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L249)
 
 ___
 
@@ -60,4 +60,4 @@ PolicyUpdate
 
 #### Defined in
 
-api.ts:262
+[types/index.ts:237](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L237)

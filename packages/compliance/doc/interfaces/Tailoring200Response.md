@@ -24,4 +24,4 @@ Tailoring200Response
 
 #### Defined in
 
-api.ts:995
+[types/index.ts:970](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L970)
