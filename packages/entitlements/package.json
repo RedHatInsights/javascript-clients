@@ -23,7 +23,7 @@
     "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/entitlements-api/master/swagger/api.spec.json' npm run generate"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.8",
     "tslib": "^2.6.2"
   }
 }

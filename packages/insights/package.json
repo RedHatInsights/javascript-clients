@@ -23,7 +23,7 @@
     "generate:prod": "SPEC='https://cloud.redhat.com/api/insights/v1/openapi.json' npm run generate && ./postProcess.sh"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.8",
     "tslib": "^2.6.2"
   }
 }
