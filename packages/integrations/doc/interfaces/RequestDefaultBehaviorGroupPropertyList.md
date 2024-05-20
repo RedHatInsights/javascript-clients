@@ -25,7 +25,7 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1553)
+[packages/integrations/types/index.ts:1559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1559)
 
 ___
 
@@ -39,4 +39,4 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1547)
+[packages/integrations/types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1553)

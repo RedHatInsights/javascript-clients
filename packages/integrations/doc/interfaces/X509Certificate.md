@@ -28,7 +28,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1891)
+[packages/integrations/types/index.ts:1897](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1897)
 
 ___
 
@@ -42,7 +42,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1885)
+[packages/integrations/types/index.ts:1891](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1891)
 
 ___
 
@@ -56,7 +56,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1867)
+[packages/integrations/types/index.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1873)
 
 ___
 
@@ -70,7 +70,7 @@ X509Certificate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1879)
+[packages/integrations/types/index.ts:1885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1885)
 
 ___
 
@@ -84,4 +84,4 @@ X509Certificate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1873)
+[packages/integrations/types/index.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1879)

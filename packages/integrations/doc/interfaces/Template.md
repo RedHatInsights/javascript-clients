@@ -29,7 +29,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1667)
+[packages/integrations/types/index.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1673)
 
 ___
 
@@ -43,7 +43,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1697)
+[packages/integrations/types/index.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1703)
 
 ___
 
@@ -57,7 +57,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1691)
+[packages/integrations/types/index.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1697)
 
 ___
 
@@ -71,7 +71,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1679)
+[packages/integrations/types/index.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1685)
 
 ___
 
@@ -85,7 +85,7 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1685)
+[packages/integrations/types/index.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1691)
 
 ___
 
@@ -99,4 +99,4 @@ Template
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1673)
+[packages/integrations/types/index.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1679)

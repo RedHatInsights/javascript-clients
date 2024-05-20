@@ -27,7 +27,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1772)
+[packages/notifications/types/index.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1778)
 
 ___
 
@@ -41,7 +41,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1790)
+[packages/notifications/types/index.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1796)
 
 ___
 
@@ -55,7 +55,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1778)
+[packages/notifications/types/index.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1784)
 
 ___
 
@@ -69,4 +69,4 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1784)
+[packages/notifications/types/index.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1790)

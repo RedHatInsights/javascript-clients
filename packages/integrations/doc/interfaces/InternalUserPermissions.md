@@ -4,7 +4,7 @@
 
 **`Export`**
 
-InternalUserPermissions
+InternalUserPermission
 
 ## Table of contents
 
@@ -22,11 +22,11 @@ InternalUserPermissions
 
 **`Memberof`**
 
-InternalUserPermissions
+InternalUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1277)
+[packages/integrations/types/index.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1283)
 
 ___
 
@@ -36,11 +36,11 @@ ___
 
 **`Memberof`**
 
-InternalUserPermissions
+InternalUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1271)
+[packages/integrations/types/index.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1277)
 
 ___
 
@@ -50,8 +50,8 @@ ___
 
 **`Memberof`**
 
-InternalUserPermissions
+InternalUserPermission
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1283)
+[packages/integrations/types/index.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1289)

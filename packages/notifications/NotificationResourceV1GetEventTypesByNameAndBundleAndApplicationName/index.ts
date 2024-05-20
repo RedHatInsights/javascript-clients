@@ -1,11 +1,11 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
-import type { RequestArgs } from '../utils/base';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
-import { Configuration } from '../utils/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
 import type { EventType } from '../types';
@@ -13,23 +13,23 @@ import type { EventType } from '../types';
 
 export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams = {
   /**
-  *
+  * 
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  applicationName: string,
+  applicationName: string, 
   /**
-  *
+  * 
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  bundleName: string,
+  bundleName: string, 
   /**
-  *
+  * 
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  eventTypeName: string,
+  eventTypeName: string, 
   options?: AxiosRequestConfig
 }
 
@@ -38,7 +38,7 @@ const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObje
 }
 /**
 * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
-* @summary Retrieve an event type by bundle, application and event type names
+* @summary Retrieve an event type by bundle, application and event type name
 * @param {NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

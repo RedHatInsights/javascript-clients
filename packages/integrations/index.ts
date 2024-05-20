@@ -1,8 +1,6 @@
 // This is a sample supporting file mustache template.
 
-export * from './utils/base';
-export * from './utils/common';
-export * from './utils/configuration';
+export * from './base'
 export * from './types'
 
 export { default as endpointResourceV1CreateEndpoint } from './EndpointResourceV1CreateEndpoint'

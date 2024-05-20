@@ -18,7 +18,6 @@
 ### Classes
 
 - [BaseAPI](classes/BaseAPI.md)
-- [Configuration](classes/Configuration.md)
 - [RequiredError](classes/RequiredError.md)
 
 ### Interfaces
@@ -27,7 +26,6 @@
 - [AddApplicationRequest](interfaces/AddApplicationRequest.md)
 - [AggregationEmailTemplate](interfaces/AggregationEmailTemplate.md)
 - [AggregationEmailTemplateSubjectTemplate](interfaces/AggregationEmailTemplateSubjectTemplate.md)
-- [ApiConfig](interfaces/ApiConfig.md)
 - [Application](interfaces/Application.md)
 - [Application1](interfaces/Application1.md)
 - [ApplicationDTO](interfaces/ApplicationDTO.md)
@@ -39,7 +37,6 @@
 - [Bundle](interfaces/Bundle.md)
 - [BundleSettingsValue](interfaces/BundleSettingsValue.md)
 - [CamelProperties](interfaces/CamelProperties.md)
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [CreateBehaviorGroupRequest](interfaces/CreateBehaviorGroupRequest.md)
 - [CreateBehaviorGroupResponse](interfaces/CreateBehaviorGroupResponse.md)
 - [CurrentStatus](interfaces/CurrentStatus.md)
@@ -82,23 +79,13 @@
 - [WebhookProperties](interfaces/WebhookProperties.md)
 - [X509Certificate](interfaces/X509Certificate.md)
 
-### Type Aliases
-
-- [ActionType](modules.md#actiontype)
-- [AuthTypeEnum](modules.md#authtypeenum)
-
 ### Variables
 
-- [AuthTypeEnum](modules.md#authtypeenum-1)
 - [BASE\_PATH](modules.md#base_path)
 - [COLLECTION\_FORMATS](modules.md#collection_formats)
-- [DUMMY\_BASE\_URL](modules.md#dummy_base_url)
 
 ### Functions
 
-- [APIFactory](modules.md#apifactory)
-- [assertParamExists](modules.md#assertparamexists)
-- [createRequestFunction](modules.md#createrequestfunction)
 - [drawerResourceV1GetDrawerEntries](modules.md#drawerresourcev1getdrawerentries)
 - [drawerResourceV1UpdateNotificationReadStatus](modules.md#drawerresourcev1updatenotificationreadstatus)
 - [eventResourceV1GetEvents](modules.md#eventresourcev1getevents)
@@ -121,73 +108,8 @@
 - [notificationResourceV1UpdateEventTypeBehaviors](modules.md#notificationresourcev1updateeventtypebehaviors)
 - [orgConfigResourceV1GetDailyDigestTimePreference](modules.md#orgconfigresourcev1getdailydigesttimepreference)
 - [orgConfigResourceV1SaveDailyDigestTimePreference](modules.md#orgconfigresourcev1savedailydigesttimepreference)
-- [serializeDataIfNeeded](modules.md#serializedataifneeded)
-- [setApiKeyToObject](modules.md#setapikeytoobject)
-- [setBasicAuthToObject](modules.md#setbasicauthtoobject)
-- [setBearerAuthToObject](modules.md#setbearerauthtoobject)
-- [setOAuthToObject](modules.md#setoauthtoobject)
-- [setSearchParams](modules.md#setsearchparams)
-- [toPathString](modules.md#topathstring)
-
-## Type Aliases
-
-### ActionType
-
-Ƭ **ActionType**: (...`config`: `any`) => `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Type declaration
-
-▸ (`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `...config` | `any` |
-
-##### Returns
-
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
-
-#### Defined in
-
-[packages/notifications/utils/base.ts:55](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L55)
-
-___
-
-### AuthTypeEnum
-
-Ƭ **AuthTypeEnum**: typeof [`AuthTypeEnum`](modules.md#authtypeenum-1)[keyof typeof [`AuthTypeEnum`](modules.md#authtypeenum-1)]
-
-#### Defined in
-
-[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L45)
-
-[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L53)
 
 ## Variables
-
-### AuthTypeEnum
-
-• `Const` **AuthTypeEnum**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `Basic` | ``"basic"`` |
-| `Bearer` | ``"bearer"`` |
-| `InHeader` | ``"inHeader"`` |
-| `InQuery` | ``"inQuery"`` |
-| `Oauth` | ``"oath"`` |
-
-#### Defined in
-
-[packages/notifications/utils/base.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L45)
-
-[packages/notifications/utils/base.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L53)
-
-___
 
 ### BASE\_PATH
 
@@ -195,7 +117,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L12)
+[packages/notifications/base.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/base.ts#L22)
 
 ___
 
@@ -216,128 +138,13 @@ ___
 
 #### Defined in
 
-[packages/notifications/utils/base.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L18)
-
-___
-
-### DUMMY\_BASE\_URL
-
-• `Const` **DUMMY\_BASE\_URL**: ``"https://example.com"``
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:13](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L13)
+[packages/notifications/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/base.ts#L28)
 
 ## Functions
 
-### APIFactory
-
-▸ **APIFactory**\<`T`\>(`basePath?`, `config?`, `actions`): [`BaseAPI`](classes/BaseAPI.md) & `T`
-
-Factory for creating API with option to add enpoints to the API.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Record`\<`string`, [`ActionType`](modules.md#actiontype)\> |
-
-#### Parameters
-
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `basePath` | `string` | `BASE_PATH` | basePath of api requests. |
-| `config` | [`ApiConfig`](interfaces/ApiConfig.md) | `undefined` | to be passed down to axios. |
-| `actions` | `T` | `undefined` | object with actions to send with axios. |
-
-#### Returns
-
-[`BaseAPI`](classes/BaseAPI.md) & `T`
-
-created base API.
-
-#### Defined in
-
-[packages/notifications/utils/base.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/base.ts#L145)
-
-___
-
-### assertParamExists
-
-▸ **assertParamExists**(`functionName`, `paramName`, `paramValue`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `functionName` | `string` |
-| `paramName` | `string` |
-| `paramValue` | `unknown` |
-
-#### Returns
-
-`void`
-
-**`Throws`**
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:20](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L20)
-
-___
-
-### createRequestFunction
-
-▸ **createRequestFunction**(`axiosArgs`, `globalAxios`, `BASE_PATH`, `configuration?`): \<T, R\>(`axios`: `AxiosInstance`, `basePath`: `string`) => `Promise`\<`R`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `axiosArgs` | [`RequestArgs`](interfaces/RequestArgs.md) |
-| `globalAxios` | `AxiosInstance` |
-| `BASE_PATH` | `string` |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`fn`
-
-▸ \<`T`, `R`\>(`axios?`, `basePath?`): `Promise`\<`R`\>
-
-##### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | `unknown` |
-| `R` | `AxiosResponse`\<`T`, `any`\> |
-
-##### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `axios` | `AxiosInstance` | `globalAxios` |
-| `basePath` | `string` | `BASE_PATH` |
-
-##### Returns
-
-`Promise`\<`R`\>
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L133)
-
-___
-
 ### drawerResourceV1GetDrawerEntries
 
-▸ **drawerResourceV1GetDrawerEntries**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **drawerResourceV1GetDrawerEntries**(`...config`): `Promise`\<`RequestArgs`\>
 
 Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `startTime`, `endTime` and `read`. The ordering can be optionally specified by appending `:asc` or `:desc` to the field, e.g. `bundle:desc`. Defaults to `desc` for the `created` field and to `asc` for all other fields.
 
@@ -349,7 +156,7 @@ Allowed `sort_by` fields are `bundleIds`, `applicationIds`, `eventTypeIds`, `sta
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -365,7 +172,7 @@ ___
 
 ### drawerResourceV1UpdateNotificationReadStatus
 
-▸ **drawerResourceV1UpdateNotificationReadStatus**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **drawerResourceV1UpdateNotificationReadStatus**(`...config`): `Promise`\<`RequestArgs`\>
 
 Update drawer notifications status.
 
@@ -377,7 +184,7 @@ Update drawer notifications status.
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -393,7 +200,7 @@ ___
 
 ### eventResourceV1GetEvents
 
-▸ **eventResourceV1GetEvents**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **eventResourceV1GetEvents**(`...config`): `Promise`\<`RequestArgs`\>
 
 Retrieves the event log entries. Use this endpoint to review a full history of the events related to the tenant. You can sort by the bundle, application, event, and created fields. You can specify the sort order by appending :asc or :desc to the field, for example bundle:desc. Sorting defaults to desc for the created field and to asc for all other fields.
 
@@ -405,11 +212,11 @@ Retrieves the event log entries. Use this endpoint to review a full history of t
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-Retrieve the event log entries
+Retrieve the event log entrie
 
 **`Throws`**
 
@@ -421,7 +228,7 @@ ___
 
 ### notificationResourceV1AppendBehaviorGroupToEventType
 
-▸ **notificationResourceV1AppendBehaviorGroupToEventType**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1AppendBehaviorGroupToEventType**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
 
@@ -431,7 +238,7 @@ ___
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -447,7 +254,7 @@ ___
 
 ### notificationResourceV1CreateBehaviorGroup
 
-▸ **notificationResourceV1CreateBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1CreateBehaviorGroup**(`...config`): `Promise`\<`RequestArgs`\>
 
 Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.
 
@@ -459,7 +266,7 @@ Creates a behavior group that defines which notifications will be sent to extern
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -475,7 +282,7 @@ ___
 
 ### notificationResourceV1DeleteBehaviorGroup
 
-▸ **notificationResourceV1DeleteBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1DeleteBehaviorGroup**(`...config`): `Promise`\<`RequestArgs`\>
 
 Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
 
@@ -487,7 +294,7 @@ Deletes a behavior group and all of its configured actions. Use this endpoint wh
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -503,7 +310,7 @@ ___
 
 ### notificationResourceV1DeleteBehaviorGroupFromEventType
 
-▸ **notificationResourceV1DeleteBehaviorGroupFromEventType**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1DeleteBehaviorGroupFromEventType**(`...config`): `Promise`\<`RequestArgs`\>
 
 Adds a behavior group to the specified event type.
 
@@ -515,7 +322,7 @@ Adds a behavior group to the specified event type.
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -531,7 +338,7 @@ ___
 
 ### notificationResourceV1FindBehaviorGroupsByBundleId
 
-▸ **notificationResourceV1FindBehaviorGroupsByBundleId**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1FindBehaviorGroupsByBundleId**(`...config`): `Promise`\<`RequestArgs`\>
 
 Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
 
@@ -543,7 +350,7 @@ Lists the behavior groups associated with a bundle. Use this endpoint to see the
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -559,7 +366,7 @@ ___
 
 ### notificationResourceV1GetApplicationByNameAndBundleName
 
-▸ **notificationResourceV1GetApplicationByNameAndBundleName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetApplicationByNameAndBundleName**(`...config`): `Promise`\<`RequestArgs`\>
 
 Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
 
@@ -571,11 +378,11 @@ Retrieves an application by bundle and application names. Use this endpoint to  
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-Retrieve an application by bundle and application names
+Retrieve an application by bundle and application name
 
 **`Throws`**
 
@@ -587,7 +394,7 @@ ___
 
 ### notificationResourceV1GetApplicationsFacets
 
-▸ **notificationResourceV1GetApplicationsFacets**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetApplicationsFacets**(`...config`): `Promise`\<`RequestArgs`\>
 
 Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
 
@@ -599,11 +406,11 @@ Returns a list of configured applications that includes the application name, th
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-List configured applications
+List configured application
 
 **`Throws`**
 
@@ -615,7 +422,7 @@ ___
 
 ### notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint
 
-▸ **notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint**(`...config`): `Promise`\<`RequestArgs`\>
 
 Lists the behavior groups that are affected by the removal of an endpoint. Use this endpoint to understand how removing an endpoint affects existing behavior groups.
 
@@ -627,7 +434,7 @@ Lists the behavior groups that are affected by the removal of an endpoint. Use t
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -643,7 +450,7 @@ ___
 
 ### notificationResourceV1GetBundleByName
 
-▸ **notificationResourceV1GetBundleByName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBundleByName**(`...config`): `Promise`\<`RequestArgs`\>
 
 Retrieves the details of a bundle by searching by its name.
 
@@ -655,7 +462,7 @@ Retrieves the details of a bundle by searching by its name.
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -671,7 +478,7 @@ ___
 
 ### notificationResourceV1GetBundleFacets
 
-▸ **notificationResourceV1GetBundleFacets**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetBundleFacets**(`...config`): `Promise`\<`RequestArgs`\>
 
 Returns a list of configured bundles that includes the bundle name, the display name, and the ID. You can use this list to configure a filter in the UI.
 
@@ -683,11 +490,11 @@ Returns a list of configured bundles that includes the bundle name, the display 
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-List configured bundles
+List configured bundle
 
 **`Throws`**
 
@@ -699,7 +506,7 @@ ___
 
 ### notificationResourceV1GetEventTypes
 
-▸ **notificationResourceV1GetEventTypes**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypes**(`...config`): `Promise`\<`RequestArgs`\>
 
 Lists all event types. You can filter the returned list by bundle or application name.
 
@@ -711,11 +518,11 @@ Lists all event types. You can filter the returned list by bundle or application
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-List all event types
+List all event type
 
 **`Throws`**
 
@@ -727,7 +534,7 @@ ___
 
 ### notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup
 
-▸ **notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup**(`...config`): `Promise`\<`RequestArgs`\>
 
 Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
 
@@ -739,7 +546,7 @@ Lists the event types that will be affected by the removal of a behavior group. 
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -755,7 +562,7 @@ ___
 
 ### notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName
 
-▸ **notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName**(`...config`): `Promise`\<`RequestArgs`\>
 
 Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
 
@@ -767,11 +574,11 @@ Retrieves the details of an event type by specifying the bundle name, the applic
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-Retrieve an event type by bundle, application and event type names
+Retrieve an event type by bundle, application and event type name
 
 **`Throws`**
 
@@ -783,7 +590,7 @@ ___
 
 ### notificationResourceV1GetLinkedBehaviorGroups
 
-▸ **notificationResourceV1GetLinkedBehaviorGroups**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1GetLinkedBehaviorGroups**(`...config`): `Promise`\<`RequestArgs`\>
 
 Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
 
@@ -795,7 +602,7 @@ Lists the behavior groups that are linked to an event type. Use this endpoint to
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -811,7 +618,7 @@ ___
 
 ### notificationResourceV1UpdateBehaviorGroup
 
-▸ **notificationResourceV1UpdateBehaviorGroup**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateBehaviorGroup**(`...config`): `Promise`\<`RequestArgs`\>
 
 Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
 
@@ -823,7 +630,7 @@ Updates the details of a behavior group. Use this endpoint to update the list of
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -839,7 +646,7 @@ ___
 
 ### notificationResourceV1UpdateBehaviorGroupActions
 
-▸ **notificationResourceV1UpdateBehaviorGroupActions**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateBehaviorGroupActions**(`...config`): `Promise`\<`RequestArgs`\>
 
 Updates the list of actions to be executed in that particular behavior group after an event is received.
 
@@ -851,11 +658,11 @@ Updates the list of actions to be executed in that particular behavior group aft
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
-Update the list of behavior group actions
+Update the list of behavior group action
 
 **`Throws`**
 
@@ -867,7 +674,7 @@ ___
 
 ### notificationResourceV1UpdateEventTypeBehaviors
 
-▸ **notificationResourceV1UpdateEventTypeBehaviors**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **notificationResourceV1UpdateEventTypeBehaviors**(`...config`): `Promise`\<`RequestArgs`\>
 
 Updates the list of behavior groups associated with an event type.
 
@@ -879,7 +686,7 @@ Updates the list of behavior groups associated with an event type.
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -895,7 +702,7 @@ ___
 
 ### orgConfigResourceV1GetDailyDigestTimePreference
 
-▸ **orgConfigResourceV1GetDailyDigestTimePreference**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **orgConfigResourceV1GetDailyDigestTimePreference**(`...config`): `Promise`\<`RequestArgs`\>
 
 Retrieves the daily digest time setting. Use this endpoint to check the time that daily emails are sent.
 
@@ -907,7 +714,7 @@ Retrieves the daily digest time setting. Use this endpoint to check the time tha
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -923,7 +730,7 @@ ___
 
 ### orgConfigResourceV1SaveDailyDigestTimePreference
 
-▸ **orgConfigResourceV1SaveDailyDigestTimePreference**(`...config`): `Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+▸ **orgConfigResourceV1SaveDailyDigestTimePreference**(`...config`): `Promise`\<`RequestArgs`\>
 
 Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
 
@@ -935,7 +742,7 @@ Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 4
 
 #### Returns
 
-`Promise`\<[`RequestArgs`](interfaces/RequestArgs.md)\>
+`Promise`\<`RequestArgs`\>
 
 **`Summary`**
 
@@ -946,167 +753,3 @@ Set the daily digest time
 #### Defined in
 
 [packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)
-
-___
-
-### serializeDataIfNeeded
-
-▸ **serializeDataIfNeeded**(`value`, `requestOptions`, `configuration?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `requestOptions` | `any` |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`any`
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L111)
-
-___
-
-### setApiKeyToObject
-
-▸ **setApiKeyToObject**(`object`, `keyParamName`, `configuration?`): `Promise`\<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `object` | `any` |
-| `keyParamName` | `string` |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L30)
-
-___
-
-### setBasicAuthToObject
-
-▸ **setBasicAuthToObject**(`object`, `configuration?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `object` | `any` |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`void`
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L43)
-
-___
-
-### setBearerAuthToObject
-
-▸ **setBearerAuthToObject**(`object`, `configuration?`): `Promise`\<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `object` | `any` |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L53)
-
-___
-
-### setOAuthToObject
-
-▸ **setOAuthToObject**(`object`, `name`, `scopes`, `configuration?`): `Promise`\<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `object` | `any` |
-| `name` | `string` |
-| `scopes` | `string`[] |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Promise`\<`void`\>
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:66](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L66)
-
-___
-
-### setSearchParams
-
-▸ **setSearchParams**(`url`, `...objects`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `url` | `URL` |
-| `...objects` | `any`[] |
-
-#### Returns
-
-`void`
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L101)
-
-___
-
-### toPathString
-
-▸ **toPathString**(`url`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `url` | `URL` |
-
-#### Returns
-
-`string`
-
-**`Export`**
-
-#### Defined in
-
-[packages/notifications/utils/common.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/utils/common.ts#L125)

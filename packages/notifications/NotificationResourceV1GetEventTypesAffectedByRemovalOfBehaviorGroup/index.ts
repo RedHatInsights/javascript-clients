@@ -1,11 +1,11 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../utils/common';
-import type { RequestArgs } from '../utils/base';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, AuthTypeEnum } from '../utils/base';
-import { Configuration } from '../utils/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
 import type { EventType } from '../types';
@@ -17,7 +17,7 @@ export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupP
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: string, 
   options?: AxiosRequestConfig
 }
 

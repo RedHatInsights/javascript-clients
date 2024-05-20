@@ -20,6 +20,7 @@ EventType
 - [not\_subscription\_locked\_or\_subscribed\_by\_default](EventType.md#not_subscription_locked_or_subscribed_by_default)
 - [subscribed\_by\_default](EventType.md#subscribed_by_default)
 - [subscription\_locked](EventType.md#subscription_locked)
+- [visible](EventType.md#visible)
 
 ## Properties
 
@@ -131,7 +132,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1032)
+[packages/notifications/types/index.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1038)
 
 ___
 
@@ -145,7 +146,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1020)
+[packages/notifications/types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1026)
 
 ___
 
@@ -159,4 +160,18 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1026)
+[packages/notifications/types/index.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1032)
+
+___
+
+### visible
+
+• `Optional` **visible**: `boolean`
+
+**`Memberof`**
+
+EventType
+
+#### Defined in
+
+[packages/notifications/types/index.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1020)

@@ -27,7 +27,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1132)
+[packages/notifications/types/index.ts:1138](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1138)
 
 ___
 
@@ -41,7 +41,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1126)
+[packages/notifications/types/index.ts:1132](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1132)
 
 ___
 
@@ -55,7 +55,7 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1114](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1114)
+[packages/notifications/types/index.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1120)
 
 ___
 
@@ -69,4 +69,4 @@ Facet
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1120)
+[packages/notifications/types/index.ts:1126](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1126)
