@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.4.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.3.2...@redhat-cloud-services/notifications-client-2.4.0) (2024-05-20)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.2`
+
+### Features
+
+* update imports to use new shared packages ([706ab6f](https://github.com/RedHatInsights/javascript-clients/commit/706ab6f2fc91da4999328eff09b95f9b56bf8ef2))
+
 ## [2.3.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.3.1...@redhat-cloud-services/notifications-client-2.3.2) (2024-05-09)
 
 ## [2.3.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.3.0...@redhat-cloud-services/notifications-client-2.3.1) (2024-05-02)
