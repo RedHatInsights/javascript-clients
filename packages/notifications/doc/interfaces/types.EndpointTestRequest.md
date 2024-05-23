@@ -1,0 +1,29 @@
+[@redhat-cloud-services/javascript-clients](../README.md) / [Exports](../modules.md) / [types](../modules/types.md) / EndpointTestRequest
+
+# Interface: EndpointTestRequest
+
+[types](../modules/types.md).EndpointTestRequest
+
+**`Export`**
+
+EndpointTestRequest
+
+## Table of contents
+
+### Properties
+
+- [message](types.EndpointTestRequest.md#message)
+
+## Properties
+
+### message
+
+• **message**: `string`
+
+**`Memberof`**
+
+EndpointTestRequest
+
+#### Defined in
+
+[packages/notifications/types/index.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L814)
