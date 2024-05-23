@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.1.0...@redhat-cloud-services/compliance-client-0.1.1) (2024-05-23)
+
+
+### Bug Fixes
+
+* add shared package to compliance ([bcac8bc](https://github.com/RedHatInsights/javascript-clients/commit/bcac8bc3220cb7f8e2a7947ac86f4f9f9aadf5d7))
+
 ## 0.1.0 (2024-05-16)
 
 ### Dependency Updates
