@@ -13,23 +13,23 @@ import type { TailoringFile } from '../types';
 
 export type TailoringFileParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringFileApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringFileApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof TailoringFileApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const tailoringFileParamCreator = async (...config: ([TailoringFileParams
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

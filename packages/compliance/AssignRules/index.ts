@@ -13,29 +13,29 @@ import type { AssignRulesRequest, Rules200Response } from '../types';
 
 export type AssignRulesParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof AssignRulesApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof AssignRulesApi
   */
-  tailoringId: any,
+  tailoringId: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof AssignRulesApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
-  *
+  * 
   * @type { AssignRulesRequest }
   * @memberof AssignRulesApi
   */
-  assignRulesRequest?: AssignRulesRequest,
+  assignRulesRequest?: AssignRulesRequest, 
   options?: AxiosRequestConfig
 }
 
@@ -63,8 +63,8 @@ export const assignRulesParamCreator = async (...config: ([AssignRulesParams] | 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

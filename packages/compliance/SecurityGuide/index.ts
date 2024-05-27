@@ -13,17 +13,17 @@ import type { Errors, SecurityGuide200Response } from '../types';
 
 export type SecurityGuideParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof SecurityGuideApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof SecurityGuideApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ export const securityGuideParamCreator = async (...config: ([SecurityGuideParams
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

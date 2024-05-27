@@ -1,7 +1,7 @@
 // tslint:disable
 /**
- * Sources
- * Sources
+ * Source
+ * Source
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@redhat.com
@@ -15,12 +15,12 @@
 import * as globalImportUrl from 'url';
 import { Configuration } from './configuration';
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
-// Some imports not used depending on template conditions
+// Some imports not used depending on template condition
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- *
+ * 
  * @export
  * @interface Application
  */
@@ -32,25 +32,25 @@ export interface Application {
      */
     application_type_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Application
      */
     availability_status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Application
      */
     availability_status_error?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Application
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Application
      */
@@ -68,38 +68,38 @@ export interface Application {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Application
      */
     tenant?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Application
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ApplicationType
  */
 export interface ApplicationType {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ApplicationType
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ApplicationType
      */
     dependent_applications?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ApplicationType
      */
@@ -111,106 +111,106 @@ export interface ApplicationType {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ApplicationType
      */
     name?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ApplicationType
      */
     supported_authentication_types?: object;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ApplicationType
      */
     supported_source_types?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ApplicationType
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ApplicationTypesCollection
  */
 export interface ApplicationTypesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ApplicationTypesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ApplicationTypesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ApplicationType>}
      * @memberof ApplicationTypesCollection
      */
     data?: Array<ApplicationType>;
 }
 /**
- *
+ * 
  * @export
  * @interface ApplicationsCollection
  */
 export interface ApplicationsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ApplicationsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ApplicationsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Application>}
      * @memberof ApplicationsCollection
      */
     data?: Array<Application>;
 }
 /**
- *
+ * 
  * @export
  * @interface Authentication
  */
 export interface Authentication {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     authtype?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     availability_status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     availability_status_error?: string;
     /**
-     *
+     * 
      * @type {AuthenticationExtra}
      * @memberof Authentication
      */
@@ -222,13 +222,13 @@ export interface Authentication {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
@@ -240,7 +240,7 @@ export interface Authentication {
      */
     resource_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
@@ -252,139 +252,139 @@ export interface Authentication {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     tenant?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Authentication
      */
     username?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface AuthenticationExtra
  */
 export interface AuthenticationExtra {
     /**
-     *
+     * 
      * @type {AuthenticationExtraAzure}
      * @memberof AuthenticationExtra
      */
     azure?: AuthenticationExtraAzure;
 }
 /**
- *
+ * 
  * @export
  * @interface AuthenticationExtraAzure
  */
 export interface AuthenticationExtraAzure {
     /**
-     *
+     * 
      * @type {string}
      * @memberof AuthenticationExtraAzure
      */
     tenant_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface AuthenticationsCollection
  */
 export interface AuthenticationsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof AuthenticationsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof AuthenticationsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Authentication>}
      * @memberof AuthenticationsCollection
      */
     data?: Array<Authentication>;
 }
 /**
- *
+ * 
  * @export
- * @interface CollectionLinks
+ * @interface CollectionLink
  */
 export interface CollectionLinks {
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     first?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     last?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     next?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     prev?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface CollectionMetadata
  */
 export interface CollectionMetadata {
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     count?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     limit?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     offset?: number;
 }
 /**
- *
+ * 
  * @export
  * @interface Endpoint
  */
 export interface Endpoint {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
     availability_status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
@@ -396,13 +396,13 @@ export interface Endpoint {
      */
     certificate_authority?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {boolean}
      * @memberof Endpoint
      */
@@ -438,7 +438,7 @@ export interface Endpoint {
      */
     receptor_node?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
@@ -456,13 +456,13 @@ export interface Endpoint {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
     tenant?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Endpoint
      */
@@ -475,64 +475,64 @@ export interface Endpoint {
     verify_ssl?: boolean;
 }
 /**
- *
+ * 
  * @export
  * @interface EndpointsCollection
  */
 export interface EndpointsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof EndpointsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof EndpointsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Endpoint>}
      * @memberof EndpointsCollection
      */
     data?: Array<Endpoint>;
 }
 /**
- *
+ * 
  * @export
  * @interface ErrorNotFound
  */
 export interface ErrorNotFound {
     /**
-     *
+     * 
      * @type {Array<ErrorNotFoundErrors>}
      * @memberof ErrorNotFound
      */
     errors?: Array<ErrorNotFoundErrors>;
 }
 /**
- *
+ * 
  * @export
- * @interface ErrorNotFoundErrors
+ * @interface ErrorNotFoundError
  */
 export interface ErrorNotFoundErrors {
     /**
-     *
+     * 
      * @type {number}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundError
      */
     status?: number;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundError
      */
     detail?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLRequest
  */
@@ -550,14 +550,14 @@ export interface GraphQLRequest {
      */
     operationName?: string;
     /**
-     * Optional Query variables
+     * Optional Query variable
      * @type {object}
      * @memberof GraphQLRequest
      */
     variables?: object | null;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLResponse
  */
@@ -576,19 +576,19 @@ export interface GraphQLResponse {
     errors?: Array<object>;
 }
 /**
- *
+ * 
  * @export
  * @interface Source
  */
 export interface Source {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     availability_status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
@@ -600,19 +600,19 @@ export interface Source {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     imported?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
@@ -624,44 +624,44 @@ export interface Source {
      */
     source_type_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     tenant?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     uid?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     version?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SourceType
  */
 export interface SourceType {
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
@@ -673,106 +673,106 @@ export interface SourceType {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     product_name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     schema?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceType
      */
     vendor?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SourceTypesCollection
  */
 export interface SourceTypesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SourceTypesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SourceTypesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<SourceType>}
      * @memberof SourceTypesCollection
      */
     data?: Array<SourceType>;
 }
 /**
- *
+ * 
  * @export
  * @interface SourcesCollection
  */
 export interface SourcesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SourcesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SourcesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Source>}
      * @memberof SourcesCollection
      */
     data?: Array<Source>;
 }
 /**
- *
+ * 
  * @export
  * @interface Tenant
  */
 export interface Tenant {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
     description?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
@@ -815,7 +815,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -856,7 +856,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -901,7 +901,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -946,7 +946,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -991,7 +991,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1037,7 +1037,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1079,7 +1079,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1121,7 +1121,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1163,7 +1163,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1176,7 +1176,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1199,7 +1199,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1212,7 +1212,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for ApplicationType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1261,7 +1261,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1274,8 +1274,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
+         * Returns an array of ApplicationType object
+         * @summary List ApplicationType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1317,7 +1317,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1330,8 +1330,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications
+         * Returns an array of Application object
+         * @summary List Application
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1373,7 +1373,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1386,8 +1386,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
+         * Returns an array of Authentication object
+         * @summary List Authentication
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1429,7 +1429,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1442,7 +1442,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Endpoint
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1491,7 +1491,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1504,8 +1504,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
+         * Returns an array of Endpoint object
+         * @summary List Endpoint
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1547,7 +1547,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1560,7 +1560,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ApplicationType objects
+         * Returns an array of ApplicationType object
          * @summary List ApplicationTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1609,7 +1609,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1622,7 +1622,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Application objects
+         * Returns an array of Application object
          * @summary List Applications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1671,7 +1671,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1684,7 +1684,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1733,7 +1733,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1746,7 +1746,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Endpoint objects
+         * Returns an array of Endpoint object
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1795,7 +1795,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1808,7 +1808,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for SourceType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -1857,7 +1857,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1870,8 +1870,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
+         * Returns an array of SourceType object
+         * @summary List SourceType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1913,7 +1913,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1926,8 +1926,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -1969,7 +1969,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2010,7 +2010,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2056,7 +2056,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2098,7 +2098,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2140,7 +2140,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2182,7 +2182,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2224,7 +2224,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2266,7 +2266,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2313,7 +2313,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2364,7 +2364,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2415,7 +2415,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2466,7 +2466,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2618,7 +2618,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2631,7 +2631,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for ApplicationType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2649,8 +2649,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
+         * Returns an array of ApplicationType object
+         * @summary List ApplicationType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -2666,8 +2666,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications
+         * Returns an array of Application object
+         * @summary List Application
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -2683,8 +2683,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
+         * Returns an array of Authentication object
+         * @summary List Authentication
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -2700,7 +2700,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Endpoint
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2718,8 +2718,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
+         * Returns an array of Endpoint object
+         * @summary List Endpoint
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -2735,7 +2735,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ApplicationType objects
+         * Returns an array of ApplicationType object
          * @summary List ApplicationTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2753,7 +2753,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Application objects
+         * Returns an array of Application object
          * @summary List Applications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2771,7 +2771,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2789,7 +2789,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Endpoint objects
+         * Returns an array of Endpoint object
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2807,7 +2807,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for SourceType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -2825,8 +2825,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
+         * Returns an array of SourceType object
+         * @summary List SourceType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -2842,8 +2842,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3116,7 +3116,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).deleteSource(id, options).then((request) => request(axios, basePath));
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3125,7 +3125,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for ApplicationType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3139,8 +3139,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
+         * Returns an array of ApplicationType object
+         * @summary List ApplicationType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3152,8 +3152,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Application objects
-         * @summary List Applications
+         * Returns an array of Application object
+         * @summary List Application
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3165,8 +3165,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
+         * Returns an array of Authentication object
+         * @summary List Authentication
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3178,7 +3178,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Endpoint
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3192,8 +3192,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
+         * Returns an array of Endpoint object
+         * @summary List Endpoint
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3205,7 +3205,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ApplicationType objects
+         * Returns an array of ApplicationType object
          * @summary List ApplicationTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3219,7 +3219,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Application objects
+         * Returns an array of Application object
          * @summary List Applications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3233,7 +3233,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Authentication objects
+         * Returns an array of Authentication object
          * @summary List Authentications for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3247,7 +3247,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Endpoint objects
+         * Returns an array of Endpoint object
          * @summary List Endpoints for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3261,7 +3261,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Source objects
+         * Returns an array of Source object
          * @summary List Sources for SourceType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -3275,8 +3275,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
+         * Returns an array of SourceType object
+         * @summary List SourceType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3288,8 +3288,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -3533,7 +3533,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     *
+     * 
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3544,7 +3544,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Source objects
+     * Returns an array of Source object
      * @summary List Sources for ApplicationType
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3560,8 +3560,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ApplicationType objects
-     * @summary List ApplicationTypes
+     * Returns an array of ApplicationType object
+     * @summary List ApplicationType
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -3575,8 +3575,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Application objects
-     * @summary List Applications
+     * Returns an array of Application object
+     * @summary List Application
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -3590,8 +3590,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications
+     * Returns an array of Authentication object
+     * @summary List Authentication
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -3605,7 +3605,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Authentication objects
+     * Returns an array of Authentication object
      * @summary List Authentications for Endpoint
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3621,8 +3621,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Endpoint objects
-     * @summary List Endpoints
+     * Returns an array of Endpoint object
+     * @summary List Endpoint
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -3636,7 +3636,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ApplicationType objects
+     * Returns an array of ApplicationType object
      * @summary List ApplicationTypes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3652,7 +3652,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Application objects
+     * Returns an array of Application object
      * @summary List Applications for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3668,7 +3668,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Authentication objects
+     * Returns an array of Authentication object
      * @summary List Authentications for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3684,7 +3684,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Endpoint objects
+     * Returns an array of Endpoint object
      * @summary List Endpoints for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3700,7 +3700,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Source objects
+     * Returns an array of Source object
      * @summary List Sources for SourceType
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -3716,8 +3716,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SourceType objects
-     * @summary List SourceTypes
+     * Returns an array of SourceType object
+     * @summary List SourceType
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -3731,8 +3731,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Source objects
-     * @summary List Sources
+     * Returns an array of Source object
+     * @summary List Source
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.

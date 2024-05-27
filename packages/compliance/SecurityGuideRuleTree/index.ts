@@ -13,17 +13,17 @@ import type { Errors } from '../types';
 
 export type SecurityGuideRuleTreeParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof SecurityGuideRuleTreeApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof SecurityGuideRuleTreeApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ export const securityGuideRuleTreeParamCreator = async (...config: ([SecurityGui
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

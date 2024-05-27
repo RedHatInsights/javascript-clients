@@ -13,23 +13,23 @@ import type { Errors, Tailoring200Response } from '../types';
 
 export type TailoringParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof TailoringApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const tailoringParamCreator = async (...config: ([TailoringParams] | [any
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

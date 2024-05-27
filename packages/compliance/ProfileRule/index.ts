@@ -13,29 +13,29 @@ import type { Errors, Rule200Response } from '../types';
 
 export type ProfileRuleParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof ProfileRuleApi
   */
-  securityGuideId: any,
+  securityGuideId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof ProfileRuleApi
   */
-  profileId: any,
+  profileId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof ProfileRuleApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof ProfileRuleApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -63,8 +63,8 @@ export const profileRuleParamCreator = async (...config: ([ProfileRuleParams] | 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

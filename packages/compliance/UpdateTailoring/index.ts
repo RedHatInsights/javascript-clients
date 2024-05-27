@@ -8,50 +8,56 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
-import type { Errors, Profile200Response } from '../types';
+import type { Tailoring, Tailoring200Response } from '../types';
 
 
-export type ProfileParams = {
+export type UpdateTailoringParams = {
   /**
   * 
   * @type { any }
-  * @memberof ProfileApi
+  * @memberof UpdateTailoringApi
   */
-  securityGuideId: any, 
+  policyId: any, 
   /**
   * 
   * @type { any }
-  * @memberof ProfileApi
+  * @memberof UpdateTailoringApi
   */
   id: any, 
   /**
   * For internal use only
   * @type { any }
-  * @memberof ProfileApi
+  * @memberof UpdateTailoringApi
   */
   xRHIDENTITY?: any, 
+  /**
+  * 
+  * @type { Tailoring }
+  * @memberof UpdateTailoringApi
+  */
+  tailoring?: Tailoring, 
   options?: AxiosRequestConfig
 }
 
-const isProfileObjectParams = (params: [ProfileParams] | unknown[]): params is [ProfileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'id') && true
+const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'id') && true && true
 }
 /**
-* Returns a Profile
-* @summary Request a Profile
-* @param {ProfileParams} config with all available params.
+* Updates a Tailoring with the provided value_override
+* @summary Update a Tailoring
+* @param {UpdateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const profileParamCreator = async (...config: ([ProfileParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isProfileObjectParams(config) ? config[0] : ['securityGuideId', 'id', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileParams;
-    const { securityGuideId, id, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/security_guides/{security_guide_id}/profiles/{id}`
-        .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
+export const updateTailoringParamCreator = async (...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isUpdateTailoringObjectParams(config) ? config[0] : ['policyId', 'id', 'xRHIDENTITY', 'tailoring', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTailoringParams;
+    const { policyId, id, xRHIDENTITY, tailoring, options = {} } = params;
+    const localVarPath = `/policies/{policy_id}/tailorings/{id}`
+        .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'GET' as Method, ...options};
+    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -63,13 +69,16 @@ export const profileParamCreator = async (...config: ([ProfileParams] | [any, an
 
 
 
+    localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
+        serializeData: tailoring,
     };
 }
 
-export default profileParamCreator;
+export default updateTailoringParamCreator;

@@ -54,6 +54,14 @@ export { default as profiles } from './Profiles'
 
 
 // end of operations block
+export { default as report } from './Report'
+
+
+// end of operations block
+export { default as reports } from './Reports'
+
+
+// end of operations block
 export { default as rule } from './Rule'
 
 
@@ -123,6 +131,10 @@ export { default as unassignSystem } from './UnassignSystem'
 
 // end of operations block
 export { default as updatePolicy } from './UpdatePolicy'
+
+
+// end of operations block
+export { default as updateTailoring } from './UpdateTailoring'
 
 
 // end of operations block

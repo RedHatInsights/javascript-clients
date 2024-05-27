@@ -13,35 +13,35 @@ import type { Errors, Policies200Response } from '../types';
 
 export type PoliciesParams = {
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof PoliciesApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
   * Number of items to return per page
   * @type { any }
   * @memberof PoliciesApi
   */
-  limit?: any,
+  limit?: any, 
   /**
   * Offset of first item of paginated response
   * @type { any }
   * @memberof PoliciesApi
   */
-  offset?: any,
+  offset?: any, 
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof PoliciesApi
   */
-  sortBy?: any,
+  sortBy?: any, 
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Policies are searchable using attributes `title` and `os_major_version`<br><br>(e.g.: `(version=0.1.47 AND os_major_verision=8)`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Policies are searchable using attributes `title`, `os_major_version`, and `os_minor_version`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof PoliciesApi
   */
-  filter?: any,
+  filter?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is
   return params.length === 1 && true && true && true && true && true
 }
 /**
-* Lists Policies
-* @summary Request Policies
+* Lists Policie
+* @summary Request Policie
 * @param {PoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
@@ -82,8 +82,8 @@ export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, 
     }
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

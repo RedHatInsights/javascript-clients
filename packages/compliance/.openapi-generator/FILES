@@ -13,6 +13,8 @@ Profile/index.ts
 ProfileRule/index.ts
 ProfileRules/index.ts
 Profiles/index.ts
+Report/index.ts
+Reports/index.ts
 Rule/index.ts
 RuleGroup/index.ts
 RuleGroups/index.ts
@@ -31,6 +33,7 @@ Tailorings/index.ts
 UnassignRule/index.ts
 UnassignSystem/index.ts
 UpdatePolicy/index.ts
+UpdateTailoring/index.ts
 ValueDefinition/index.ts
 ValueDefinitions/index.ts
 api.ts

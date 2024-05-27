@@ -13,41 +13,41 @@ import type { Errors, Rules200Response } from '../types';
 
 export type RulesParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof RulesApi
   */
-  securityGuideId: any,
+  securityGuideId: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof RulesApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
   * Number of items to return per page
   * @type { any }
   * @memberof RulesApi
   */
-  limit?: any,
+  limit?: any, 
   /**
   * Offset of first item of paginated response
   * @type { any }
   * @memberof RulesApi
   */
-  offset?: any,
+  offset?: any, 
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof RulesApi
   */
-  sortBy?: any,
+  sortBy?: any, 
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title` and `severity`<br><br>(e.g.: `(version=0.1.47 AND os_major_verision=8)`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title` and `severity`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof RulesApi
   */
-  filter?: any,
+  filter?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,7 +56,7 @@ const isRulesObjectParams = (params: [RulesParams] | unknown[]): params is [Rule
 }
 /**
 * Lists Rules assigned
-* @summary Request Rules
+* @summary Request Rule
 * @param {RulesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
@@ -89,8 +89,8 @@ export const rulesParamCreator = async (...config: ([RulesParams] | [any, any, a
     }
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

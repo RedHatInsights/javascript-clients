@@ -13,17 +13,17 @@ import type { CreatePolicy201Response } from '../types';
 
 export type DeletePolicyParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof DeletePolicyApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof DeletePolicyApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ export const deletePolicyParamCreator = async (...config: ([DeletePolicyParams] 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

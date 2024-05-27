@@ -13,35 +13,35 @@ import type { Errors, SecurityGuides200Response } from '../types';
 
 export type SecurityGuidesParams = {
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof SecurityGuidesApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
   * Number of items to return per page
   * @type { any }
   * @memberof SecurityGuidesApi
   */
-  limit?: any,
+  limit?: any, 
   /**
   * Offset of first item of paginated response
   * @type { any }
   * @memberof SecurityGuidesApi
   */
-  offset?: any,
+  offset?: any, 
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof SecurityGuidesApi
   */
-  sortBy?: any,
+  sortBy?: any, 
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Security Guides are searchable using attributes `title`, `version`, `ref_id`, and `os_major_version`<br><br>(e.g.: `(version=0.1.47 AND os_major_verision=8)`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Security Guides are searchable using attributes `title`, `version`, `ref_id`, and `os_major_version`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof SecurityGuidesApi
   */
-  filter?: any,
+  filter?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]
   return params.length === 1 && true && true && true && true && true
 }
 /**
-* Lists Security Guides
-* @summary Request Security Guides
+* Lists Security Guide
+* @summary Request Security Guide
 * @param {SecurityGuidesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
@@ -82,8 +82,8 @@ export const securityGuidesParamCreator = async (...config: ([SecurityGuidesPara
     }
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

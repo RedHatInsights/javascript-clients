@@ -13,23 +13,23 @@ import type { Errors, ValueDefinition200Response } from '../types';
 
 export type ValueDefinitionParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  securityGuideId: any,
+  securityGuideId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const valueDefinitionParamCreator = async (...config: ([ValueDefinitionPa
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

@@ -13,47 +13,47 @@ import type { Errors, Rules200Response } from '../types';
 
 export type TailoringRulesParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  tailoringId: any,
+  tailoringId: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
   * Number of items to return per page
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  limit?: any,
+  limit?: any, 
   /**
   * Offset of first item of paginated response
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  offset?: any,
+  offset?: any, 
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  sortBy?: any,
+  sortBy?: any, 
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title` and `severity`<br><br>(e.g.: `(version=0.1.47 AND os_major_verision=8)`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title` and `severity`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof TailoringRulesApi
   */
-  filter?: any,
+  filter?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -96,8 +96,8 @@ export const tailoringRulesParamCreator = async (...config: ([TailoringRulesPara
     }
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

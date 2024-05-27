@@ -13,23 +13,23 @@ import type { Errors, RuleGroup200Response } from '../types';
 
 export type RuleGroupParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof RuleGroupApi
   */
-  securityGuideId: any,
+  securityGuideId: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof RuleGroupApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof RuleGroupApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const ruleGroupParamCreator = async (...config: ([RuleGroupParams] | [any
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

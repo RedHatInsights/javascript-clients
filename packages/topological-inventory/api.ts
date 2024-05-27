@@ -15,68 +15,68 @@
 import * as globalImportUrl from 'url';
 import { Configuration } from './configuration';
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
-// Some imports not used depending on template conditions
+// Some imports not used depending on template condition
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- *
+ * 
  * @export
  * @interface AppliedInventoriesParametersServicePlan
  */
 export interface AppliedInventoriesParametersServicePlan {
     /**
-     * The provider specific parameters needed to compute list of used service inventories
+     * The provider specific parameters needed to compute list of used service inventorie
      * @type {object}
      * @memberof AppliedInventoriesParametersServicePlan
      */
     service_parameters?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface AvailabilitiesCollection
  */
 export interface AvailabilitiesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof AvailabilitiesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof AvailabilitiesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Availability>}
      * @memberof AvailabilitiesCollection
      */
     data?: Array<Availability>;
 }
 /**
- *
+ * 
  * @export
  * @interface Availability
  */
 export interface Availability {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     action?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     availability?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
@@ -88,19 +88,19 @@ export interface Availability {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     identifier?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     last_checked_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
@@ -112,38 +112,38 @@ export interface Availability {
      */
     resource_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     resource_type?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Availability
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface Cluster
  */
 export interface Cluster {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Cluster
      */
@@ -155,25 +155,25 @@ export interface Cluster {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
@@ -185,113 +185,113 @@ export interface Cluster {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     uid_ems?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Cluster
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ClustersCollection
  */
 export interface ClustersCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ClustersCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ClustersCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Cluster>}
      * @memberof ClustersCollection
      */
     data?: Array<Cluster>;
 }
 /**
- *
+ * 
  * @export
- * @interface CollectionLinks
+ * @interface CollectionLink
  */
 export interface CollectionLinks {
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     first?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     last?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     next?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof CollectionLinks
+     * @memberof CollectionLink
      */
     prev?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface CollectionMetadata
  */
 export interface CollectionMetadata {
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     count?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     limit?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof CollectionMetadata
      */
     offset?: number;
 }
 /**
- *
+ * 
  * @export
  * @interface Container
  */
 export interface Container {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Container
      */
@@ -309,19 +309,19 @@ export interface Container {
      */
     container_image_id?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Container
      */
     cpu_limit?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Container
      */
     cpu_request?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Container
      */
@@ -333,44 +333,44 @@ export interface Container {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Container
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Container
      */
     memory_limit?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Container
      */
     memory_request?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Container
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Container
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerGroup
  */
 export interface ContainerGroup {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
@@ -388,7 +388,7 @@ export interface ContainerGroup {
      */
     container_project_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
@@ -400,37 +400,37 @@ export interface ContainerGroup {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     ipaddress?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
@@ -442,57 +442,57 @@ export interface ContainerGroup {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerGroup
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerGroupsCollection
  */
 export interface ContainerGroupsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerGroupsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerGroupsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerGroup>}
      * @memberof ContainerGroupsCollection
      */
     data?: Array<ContainerGroup>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerImage
  */
 export interface ContainerImage {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
@@ -504,31 +504,31 @@ export interface ContainerImage {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
@@ -540,99 +540,99 @@ export interface ContainerImage {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     tag?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerImage
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerImagesCollection
  */
 export interface ContainerImagesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerImagesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerImagesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerImage>}
      * @memberof ContainerImagesCollection
      */
     data?: Array<ContainerImage>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerNode
  */
 export interface ContainerNode {
     /**
-     *
+     * 
      * @type {object}
      * @memberof ContainerNode
      */
     addresses?: object;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     allocatable_cpus?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     allocatable_memory?: number;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     allocatable_pods?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ContainerNode
      */
     conditions?: object;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     cpus?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
@@ -644,7 +644,7 @@ export interface ContainerNode {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
@@ -656,49 +656,49 @@ export interface ContainerNode {
      */
     lives_on_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     lives_on_type?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     memory?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     name?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ContainerNode
      */
     node_info?: object;
     /**
-     *
+     * 
      * @type {number}
      * @memberof ContainerNode
      */
     pods?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
@@ -710,63 +710,63 @@ export interface ContainerNode {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerNode
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerNodesCollection
  */
 export interface ContainerNodesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerNodesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerNodesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerNode>}
      * @memberof ContainerNodesCollection
      */
     data?: Array<ContainerNode>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerProject
  */
 export interface ContainerProject {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
@@ -778,31 +778,31 @@ export interface ContainerProject {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
@@ -814,57 +814,57 @@ export interface ContainerProject {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     status_phase?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerProject
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerProjectsCollection
  */
 export interface ContainerProjectsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerProjectsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerProjectsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerProject>}
      * @memberof ContainerProjectsCollection
      */
     data?: Array<ContainerProject>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerResourceQuota
  */
 export interface ContainerResourceQuota {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
@@ -876,7 +876,7 @@ export interface ContainerResourceQuota {
      */
     container_project_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
@@ -888,31 +888,31 @@ export interface ContainerResourceQuota {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
@@ -924,63 +924,63 @@ export interface ContainerResourceQuota {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ContainerResourceQuota
      */
     spec?: object;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ContainerResourceQuota
      */
     status?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerResourceQuota
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerResourceQuotaCollection
  */
 export interface ContainerResourceQuotaCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerResourceQuotaCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerResourceQuotaCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerResourceQuota>}
      * @memberof ContainerResourceQuotaCollection
      */
     data?: Array<ContainerResourceQuota>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerTemplate
  */
 export interface ContainerTemplate {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
@@ -992,7 +992,7 @@ export interface ContainerTemplate {
      */
     container_project_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
@@ -1004,31 +1004,31 @@ export interface ContainerTemplate {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     resource_version?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
@@ -1040,100 +1040,100 @@ export interface ContainerTemplate {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ContainerTemplate
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainerTemplatesCollection
  */
 export interface ContainerTemplatesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainerTemplatesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainerTemplatesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ContainerTemplate>}
      * @memberof ContainerTemplatesCollection
      */
     data?: Array<ContainerTemplate>;
 }
 /**
- *
+ * 
  * @export
  * @interface ContainersCollection
  */
 export interface ContainersCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ContainersCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ContainersCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Container>}
      * @memberof ContainersCollection
      */
     data?: Array<Container>;
 }
 /**
- *
+ * 
  * @export
  * @interface Datastore
  */
 export interface Datastore {
     /**
-     *
+     * 
      * @type {boolean}
      * @memberof Datastore
      */
     accessible?: boolean;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Datastore
      */
     extra?: object;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Datastore
      */
@@ -1145,31 +1145,31 @@ export interface Datastore {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     location?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
@@ -1181,125 +1181,125 @@ export interface Datastore {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     status?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Datastore
      */
     total_space?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Datastore
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface DatastoresCollection
  */
 export interface DatastoresCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof DatastoresCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof DatastoresCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Datastore>}
      * @memberof DatastoresCollection
      */
     data?: Array<Datastore>;
 }
 /**
- *
+ * 
  * @export
  * @interface ErrorNotFound
  */
 export interface ErrorNotFound {
     /**
-     *
+     * 
      * @type {Array<ErrorNotFoundErrors>}
      * @memberof ErrorNotFound
      */
     errors?: Array<ErrorNotFoundErrors>;
 }
 /**
- *
+ * 
  * @export
- * @interface ErrorNotFoundErrors
+ * @interface ErrorNotFoundError
  */
 export interface ErrorNotFoundErrors {
     /**
-     *
+     * 
      * @type {number}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundError
      */
     status?: number;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundError
      */
     detail?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface Flavor
  */
 export interface Flavor {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
     archived_at?: string;
     /**
-     * Number of CPUs
+     * Number of CPU
      * @type {number}
      * @memberof Flavor
      */
     cpus?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
     created_at?: string;
     /**
-     * The number of default disks
+     * The number of default disk
      * @type {number}
      * @memberof Flavor
      */
     disk_count?: number;
     /**
-     * Size of the default disks in bytes
+     * Size of the default disks in byte
      * @type {number}
      * @memberof Flavor
      */
     disk_size?: number;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Flavor
      */
@@ -1311,19 +1311,19 @@ export interface Flavor {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
     last_seen_at?: string;
     /**
-     * Amount of RAM in bytes
+     * Amount of RAM in byte
      * @type {number}
      * @memberof Flavor
      */
     memory?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
@@ -1335,45 +1335,45 @@ export interface Flavor {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Flavor
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface FlavorsCollection
  */
 export interface FlavorsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof FlavorsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof FlavorsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Flavor>}
      * @memberof FlavorsCollection
      */
     data?: Array<Flavor>;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLRequest
  */
@@ -1391,14 +1391,14 @@ export interface GraphQLRequest {
      */
     operationName?: string;
     /**
-     * Optional Query variables
+     * Optional Query variable
      * @type {object}
      * @memberof GraphQLRequest
      */
     variables?: object | null;
 }
 /**
- *
+ * 
  * @export
  * @interface GraphQLResponse
  */
@@ -1417,13 +1417,13 @@ export interface GraphQLResponse {
     errors?: Array<object>;
 }
 /**
- *
+ * 
  * @export
  * @interface Host
  */
 export interface Host {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
@@ -1435,31 +1435,31 @@ export interface Host {
      */
     cluster_id?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Host
      */
     cpus?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     description?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Host
      */
     extra?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
@@ -1471,37 +1471,37 @@ export interface Host {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {number}
      * @memberof Host
      */
     memory?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     power_state?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
@@ -1513,222 +1513,222 @@ export interface Host {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     uid_ems?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Host
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface HostsCollection
  */
 export interface HostsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof HostsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof HostsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Host>}
      * @memberof HostsCollection
      */
     data?: Array<Host>;
 }
 /**
- *
+ * 
  * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
     /**
-     *
+     * 
      * @type {string}
      * @memberof InlineResponse200
      */
     task_id?: string;
 }
 /**
- *
+ * 
  * @export
- * @interface Ipaddress
+ * @interface Ipaddre
  */
 export interface Ipaddress {
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     extra?: object;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     ipaddress?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     kind?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     last_seen_at?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     network_adapter_id?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     source_deleted_at?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     source_ref?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     source_region_id?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     subnet_id?: string;
     /**
      * ID of the resource
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
-     * @memberof Ipaddress
+     * @memberof Ipaddre
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface IpaddressesCollection
  */
 export interface IpaddressesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof IpaddressesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof IpaddressesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Ipaddress>}
      * @memberof IpaddressesCollection
      */
     data?: Array<Ipaddress>;
 }
 /**
- *
+ * 
  * @export
  * @interface Network
  */
 export interface Network {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     cidr?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Network
      */
@@ -1740,13 +1740,13 @@ export interface Network {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
@@ -1758,13 +1758,13 @@ export interface Network {
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
@@ -1776,7 +1776,7 @@ export interface Network {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
@@ -1788,7 +1788,7 @@ export interface Network {
      */
     source_region_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
@@ -1800,26 +1800,26 @@ export interface Network {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Network
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface NetworkAdapter
  */
 export interface NetworkAdapter {
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
@@ -1831,13 +1831,13 @@ export interface NetworkAdapter {
      */
     device_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
     device_type?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof NetworkAdapter
      */
@@ -1849,13 +1849,13 @@ export interface NetworkAdapter {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
@@ -1867,13 +1867,13 @@ export interface NetworkAdapter {
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
@@ -1885,7 +1885,7 @@ export interface NetworkAdapter {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
@@ -1903,76 +1903,76 @@ export interface NetworkAdapter {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof NetworkAdapter
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface NetworkAdaptersCollection
  */
 export interface NetworkAdaptersCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof NetworkAdaptersCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof NetworkAdaptersCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<NetworkAdapter>}
      * @memberof NetworkAdaptersCollection
      */
     data?: Array<NetworkAdapter>;
 }
 /**
- *
+ * 
  * @export
  * @interface NetworksCollection
  */
 export interface NetworksCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof NetworksCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof NetworksCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Network>}
      * @memberof NetworksCollection
      */
     data?: Array<Network>;
 }
 /**
- *
+ * 
  * @export
  * @interface OrchestrationStack
  */
 export interface OrchestrationStack {
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
@@ -1990,13 +1990,13 @@ export interface OrchestrationStack {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
@@ -2008,13 +2008,13 @@ export interface OrchestrationStack {
      */
     parent_orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
@@ -2026,7 +2026,7 @@ export interface OrchestrationStack {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
@@ -2044,51 +2044,51 @@ export interface OrchestrationStack {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof OrchestrationStack
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface OrchestrationStacksCollection
  */
 export interface OrchestrationStacksCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof OrchestrationStacksCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof OrchestrationStacksCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<OrchestrationStack>}
      * @memberof OrchestrationStacksCollection
      */
     data?: Array<OrchestrationStack>;
 }
 /**
- *
+ * 
  * @export
  * @interface OrderParametersServiceOffering
  */
 export interface OrderParametersServiceOffering {
     /**
-     * JSON object with provisioning parameters
+     * JSON object with provisioning parameter
      * @type {object}
      * @memberof OrderParametersServiceOffering
      */
     service_parameters?: object;
     /**
-     * The provider specific parameters needed to provision this service. This might include namespaces, special keys
+     * The provider specific parameters needed to provision this service. This might include namespaces, special key
      * @type {object}
      * @memberof OrderParametersServiceOffering
      */
@@ -2101,50 +2101,50 @@ export interface OrderParametersServiceOffering {
     service_plan_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface OrderParametersServicePlan
  */
 export interface OrderParametersServicePlan {
     /**
-     * JSON object with provisioning parameters
+     * JSON object with provisioning parameter
      * @type {object}
      * @memberof OrderParametersServicePlan
      */
     service_parameters?: object;
     /**
-     * The provider specific parameters needed to provision this service. This might include namespaces, special keys
+     * The provider specific parameters needed to provision this service. This might include namespaces, special key
      * @type {object}
      * @memberof OrderParametersServicePlan
      */
     provider_control_parameters?: object;
 }
 /**
- *
+ * 
  * @export
  * @interface SecurityGroup
  */
 export interface SecurityGroup {
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     description?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof SecurityGroup
      */
@@ -2156,13 +2156,13 @@ export interface SecurityGroup {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
@@ -2180,13 +2180,13 @@ export interface SecurityGroup {
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
@@ -2198,7 +2198,7 @@ export interface SecurityGroup {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
@@ -2216,57 +2216,57 @@ export interface SecurityGroup {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SecurityGroup
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SecurityGroupsCollection
  */
 export interface SecurityGroupsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SecurityGroupsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SecurityGroupsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<SecurityGroup>}
      * @memberof SecurityGroupsCollection
      */
     data?: Array<SecurityGroup>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInstance
  */
 export interface ServiceInstance {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
@@ -2284,13 +2284,13 @@ export interface ServiceInstance {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
@@ -2320,13 +2320,13 @@ export interface ServiceInstance {
      */
     service_plan_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
@@ -2338,7 +2338,7 @@ export interface ServiceInstance {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
@@ -2356,32 +2356,32 @@ export interface ServiceInstance {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstance
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInstanceNode
  */
 export interface ServiceInstanceNode {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ServiceInstanceNode
      */
@@ -2393,13 +2393,13 @@ export interface ServiceInstanceNode {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
@@ -2423,7 +2423,7 @@ export interface ServiceInstanceNode {
      */
     service_inventory_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
@@ -2435,125 +2435,125 @@ export interface ServiceInstanceNode {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     source_updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInstanceNode
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInstanceNodesCollection
  */
 export interface ServiceInstanceNodesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceInstanceNodesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceInstanceNodesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceInstanceNode>}
      * @memberof ServiceInstanceNodesCollection
      */
     data?: Array<ServiceInstanceNode>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInstancesCollection
  */
 export interface ServiceInstancesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceInstancesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceInstancesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceInstance>}
      * @memberof ServiceInstancesCollection
      */
     data?: Array<ServiceInstance>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInventoriesCollection
  */
 export interface ServiceInventoriesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceInventoriesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceInventoriesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceInventory>}
      * @memberof ServiceInventoriesCollection
      */
     data?: Array<ServiceInventory>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceInventory
  */
 export interface ServiceInventory {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     description?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ServiceInventory
      */
@@ -2565,19 +2565,19 @@ export interface ServiceInventory {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
@@ -2589,62 +2589,62 @@ export interface ServiceInventory {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     source_updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceInventory
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOffering
  */
 export interface ServiceOffering {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     description?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     display_name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     distributor?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
@@ -2662,19 +2662,19 @@ export interface ServiceOffering {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     long_description?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
@@ -2692,13 +2692,13 @@ export interface ServiceOffering {
      */
     service_offering_icon_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
@@ -2728,26 +2728,26 @@ export interface ServiceOffering {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     support_url?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOffering
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOfferingIcon
  */
 export interface ServiceOfferingIcon {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingIcon
      */
@@ -2765,7 +2765,7 @@ export interface ServiceOfferingIcon {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingIcon
      */
@@ -2777,63 +2777,63 @@ export interface ServiceOfferingIcon {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingIcon
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingIcon
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOfferingIconsCollection
  */
 export interface ServiceOfferingIconsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceOfferingIconsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceOfferingIconsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceOfferingIcon>}
      * @memberof ServiceOfferingIconsCollection
      */
     data?: Array<ServiceOfferingIcon>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOfferingNode
  */
 export interface ServiceOfferingNode {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ServiceOfferingNode
      */
@@ -2845,13 +2845,13 @@ export interface ServiceOfferingNode {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
@@ -2875,7 +2875,7 @@ export interface ServiceOfferingNode {
      */
     service_offering_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
@@ -2887,100 +2887,100 @@ export interface ServiceOfferingNode {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     source_updated_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServiceOfferingNode
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOfferingNodesCollection
  */
 export interface ServiceOfferingNodesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceOfferingNodesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceOfferingNodesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceOfferingNode>}
      * @memberof ServiceOfferingNodesCollection
      */
     data?: Array<ServiceOfferingNode>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServiceOfferingsCollection
  */
 export interface ServiceOfferingsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServiceOfferingsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServiceOfferingsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServiceOffering>}
      * @memberof ServiceOfferingsCollection
      */
     data?: Array<ServiceOffering>;
 }
 /**
- *
+ * 
  * @export
  * @interface ServicePlan
  */
 export interface ServicePlan {
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof ServicePlan
      */
     create_json_schema?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
@@ -2998,19 +2998,19 @@ export interface ServicePlan {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
@@ -3022,13 +3022,13 @@ export interface ServicePlan {
      */
     service_offering_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
@@ -3040,7 +3040,7 @@ export interface ServicePlan {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
@@ -3058,51 +3058,51 @@ export interface ServicePlan {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     update_json_schema?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof ServicePlan
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface ServicePlansCollection
  */
 export interface ServicePlansCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof ServicePlansCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof ServicePlansCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<ServicePlan>}
      * @memberof ServicePlansCollection
      */
     data?: Array<ServicePlan>;
 }
 /**
- *
+ * 
  * @export
  * @interface Source
  */
 export interface Source {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
@@ -3114,44 +3114,44 @@ export interface Source {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     refresh_status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     uid?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Source
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SourceRegion
  */
 export interface SourceRegion {
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
@@ -3163,13 +3163,13 @@ export interface SourceRegion {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
@@ -3181,94 +3181,94 @@ export interface SourceRegion {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof SourceRegion
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SourceRegionsCollection
  */
 export interface SourceRegionsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SourceRegionsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SourceRegionsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<SourceRegion>}
      * @memberof SourceRegionsCollection
      */
     data?: Array<SourceRegion>;
 }
 /**
- *
+ * 
  * @export
  * @interface SourcesCollection
  */
 export interface SourcesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SourcesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SourcesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Source>}
      * @memberof SourcesCollection
      */
     data?: Array<Source>;
 }
 /**
- *
+ * 
  * @export
  * @interface Subnet
  */
 export interface Subnet {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     cidr?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Subnet
      */
@@ -3280,13 +3280,13 @@ export interface Subnet {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
@@ -3304,13 +3304,13 @@ export interface Subnet {
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
@@ -3322,7 +3322,7 @@ export interface Subnet {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
@@ -3334,7 +3334,7 @@ export interface Subnet {
      */
     source_region_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
@@ -3346,51 +3346,51 @@ export interface Subnet {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subnet
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SubnetsCollection
  */
 export interface SubnetsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SubnetsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SubnetsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Subnet>}
      * @memberof SubnetsCollection
      */
     data?: Array<Subnet>;
 }
 /**
- *
+ * 
  * @export
  * @interface Subscription
  */
 export interface Subscription {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
@@ -3402,13 +3402,13 @@ export interface Subscription {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
@@ -3420,57 +3420,57 @@ export interface Subscription {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Subscription
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface SubscriptionsCollection
  */
 export interface SubscriptionsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof SubscriptionsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof SubscriptionsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Subscription>}
      * @memberof SubscriptionsCollection
      */
     data?: Array<Subscription>;
 }
 /**
- *
+ * 
  * @export
  * @interface Tag
  */
 export interface Tag {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
@@ -3482,32 +3482,32 @@ export interface Tag {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     namespace?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tag
      */
     value?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface Tagging
  */
@@ -3519,63 +3519,63 @@ export interface Tagging {
      */
     tag_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tagging
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tagging
      */
     value?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface TagsCollection
  */
 export interface TagsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof TagsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof TagsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Tag>}
      * @memberof TagsCollection
      */
     data?: Array<Tag>;
 }
 /**
- *
+ * 
  * @export
  * @interface Task
  */
 export interface Task {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
     completed_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Task
      */
     context?: object;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
@@ -3587,57 +3587,57 @@ export interface Task {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
     state?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
     status?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Task
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface TasksCollection
  */
 export interface TasksCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof TasksCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof TasksCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Task>}
      * @memberof TasksCollection
      */
     data?: Array<Task>;
 }
 /**
- *
+ * 
  * @export
  * @interface Tenant
  */
@@ -3649,44 +3649,44 @@ export interface Tenant {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
     name?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
     description?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Tenant
      */
     external_tenant?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface Vm
  */
 export interface Vm {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     archived_at?: string;
     /**
-     * Total number of CPUs
+     * Total number of CPU
      * @type {number}
      * @memberof Vm
      */
     cpus?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
@@ -3698,7 +3698,7 @@ export interface Vm {
      */
     description?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Vm
      */
@@ -3710,13 +3710,13 @@ export interface Vm {
      */
     flavor_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     host_inventory_uuid?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
@@ -3728,25 +3728,25 @@ export interface Vm {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {Array<string>}
      * @memberof Vm
      */
     mac_addresses?: Array<string>;
     /**
-     * Total RAM in bytes
+     * Total RAM in byte
      * @type {number}
      * @memberof Vm
      */
     memory?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
@@ -3758,19 +3758,19 @@ export interface Vm {
      */
     orchestration_stack_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     power_state?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
@@ -3782,7 +3782,7 @@ export interface Vm {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
@@ -3806,57 +3806,57 @@ export interface Vm {
      */
     uid_ems?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Vm
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface VmsCollection
  */
 export interface VmsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof VmsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof VmsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Vm>}
      * @memberof VmsCollection
      */
     data?: Array<Vm>;
 }
 /**
- *
+ * 
  * @export
  * @interface Volume
  */
 export interface Volume {
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof Volume
      */
@@ -3868,13 +3868,13 @@ export interface Volume {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
@@ -3886,19 +3886,19 @@ export interface Volume {
      */
     orchestration_stack_id?: string;
     /**
-     * Size of the volume in bytes
+     * Size of the volume in byte
      * @type {number}
      * @memberof Volume
      */
     size?: number;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
     source_created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
@@ -3910,7 +3910,7 @@ export interface Volume {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
@@ -3922,7 +3922,7 @@ export interface Volume {
      */
     source_region_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
@@ -3934,7 +3934,7 @@ export interface Volume {
      */
     subscription_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof Volume
      */
@@ -3947,13 +3947,13 @@ export interface Volume {
     volume_type_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface VolumeAttachment
  */
 export interface VolumeAttachment {
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeAttachment
      */
@@ -3965,13 +3965,13 @@ export interface VolumeAttachment {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeAttachment
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeAttachment
      */
@@ -3990,56 +3990,56 @@ export interface VolumeAttachment {
     volume_id?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface VolumeAttachmentsCollection
  */
 export interface VolumeAttachmentsCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof VolumeAttachmentsCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof VolumeAttachmentsCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<VolumeAttachment>}
      * @memberof VolumeAttachmentsCollection
      */
     data?: Array<VolumeAttachment>;
 }
 /**
- *
+ * 
  * @export
  * @interface VolumeType
  */
 export interface VolumeType {
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     archived_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     created_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     description?: string;
     /**
-     *
+     * 
      * @type {object}
      * @memberof VolumeType
      */
@@ -4051,13 +4051,13 @@ export interface VolumeType {
      */
     id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     last_seen_at?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
@@ -4069,63 +4069,63 @@ export interface VolumeType {
      */
     source_id?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     source_ref?: string;
     /**
-     *
+     * 
      * @type {string}
      * @memberof VolumeType
      */
     updated_at?: string;
 }
 /**
- *
+ * 
  * @export
  * @interface VolumeTypesCollection
  */
 export interface VolumeTypesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof VolumeTypesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof VolumeTypesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<VolumeType>}
      * @memberof VolumeTypesCollection
      */
     data?: Array<VolumeType>;
 }
 /**
- *
+ * 
  * @export
  * @interface VolumesCollection
  */
 export interface VolumesCollection {
     /**
-     *
+     * 
      * @type {CollectionMetadata}
      * @memberof VolumesCollection
      */
     meta?: CollectionMetadata;
     /**
-     *
+     * 
      * @type {CollectionLinks}
      * @memberof VolumesCollection
      */
     links?: CollectionLinks;
     /**
-     *
+     * 
      * @type {Array<Volume>}
      * @memberof VolumesCollection
      */
@@ -4142,7 +4142,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * Returns a Task id
          * @summary Invokes computing of ServiceInventories for given ServiceOffering
          * @param {string} id ID of the resource
-         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventorie
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4173,7 +4173,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4190,7 +4190,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4213,7 +4213,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4226,7 +4226,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Cluster
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4275,7 +4275,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4288,8 +4288,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Cluster objects
-         * @summary List Clusters
+         * Returns an array of Cluster object
+         * @summary List Cluster
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -4331,7 +4331,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4344,7 +4344,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4393,7 +4393,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4406,7 +4406,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4455,7 +4455,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4468,8 +4468,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
-         * @summary List ContainerGroups
+         * Returns an array of ContainerGroup object
+         * @summary List ContainerGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -4511,7 +4511,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4524,7 +4524,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerImage
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4573,7 +4573,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4586,8 +4586,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerImage objects
-         * @summary List ContainerImages
+         * Returns an array of ContainerImage object
+         * @summary List ContainerImage
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -4629,7 +4629,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4642,7 +4642,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4691,7 +4691,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4704,7 +4704,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4753,7 +4753,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4766,8 +4766,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerNode objects
-         * @summary List ContainerNodes
+         * Returns an array of ContainerNode object
+         * @summary List ContainerNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -4809,7 +4809,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4822,7 +4822,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4871,7 +4871,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4884,7 +4884,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4933,7 +4933,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -4946,7 +4946,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -4995,7 +4995,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5008,7 +5008,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5057,7 +5057,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5070,8 +5070,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerProject objects
-         * @summary List ContainerProjects
+         * Returns an array of ContainerProject object
+         * @summary List ContainerProject
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5113,7 +5113,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5126,7 +5126,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -5169,7 +5169,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5182,7 +5182,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerTemplate
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5231,7 +5231,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5244,8 +5244,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
-         * @summary List ContainerTemplates
+         * Returns an array of ContainerTemplate object
+         * @summary List ContainerTemplate
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5287,7 +5287,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5300,8 +5300,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Container objects
-         * @summary List Containers
+         * Returns an array of Container object
+         * @summary List Container
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5343,7 +5343,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5356,8 +5356,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Datastore objects
-         * @summary List Datastores
+         * Returns an array of Datastore object
+         * @summary List Datastore
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5399,7 +5399,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5412,8 +5412,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Flavor objects
-         * @summary List Flavors
+         * Returns an array of Flavor object
+         * @summary List Flavor
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5455,7 +5455,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5468,8 +5468,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Host objects
-         * @summary List Hosts
+         * Returns an array of Host object
+         * @summary List Host
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5511,7 +5511,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5524,8 +5524,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for Ipaddress
+         * Returns an array of Tag object
+         * @summary List Tags for Ipaddre
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -5573,7 +5573,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5586,8 +5586,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
-         * @summary List Ipaddresses
+         * Returns an array of Ipaddress object
+         * @summary List Ipaddresse
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5629,7 +5629,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5642,7 +5642,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5691,7 +5691,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5704,7 +5704,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5753,7 +5753,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5766,8 +5766,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
-         * @summary List NetworkAdapters
+         * Returns an array of NetworkAdapter object
+         * @summary List NetworkAdapter
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5809,7 +5809,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5822,7 +5822,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5871,7 +5871,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5884,7 +5884,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -5933,7 +5933,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -5946,8 +5946,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
-         * @summary List Networks
+         * Returns an array of Network object
+         * @summary List Network
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -5989,7 +5989,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6002,7 +6002,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6051,7 +6051,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6064,7 +6064,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6113,7 +6113,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6126,7 +6126,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6175,7 +6175,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6188,7 +6188,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6237,7 +6237,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6250,7 +6250,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6299,7 +6299,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6312,7 +6312,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6361,7 +6361,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6374,7 +6374,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6423,7 +6423,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6436,8 +6436,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
-         * @summary List OrchestrationStacks
+         * Returns an array of OrchestrationStack object
+         * @summary List OrchestrationStack
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -6479,7 +6479,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6492,7 +6492,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6541,7 +6541,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6554,7 +6554,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6603,7 +6603,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6616,8 +6616,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
-         * @summary List SecurityGroups
+         * Returns an array of SecurityGroup object
+         * @summary List SecurityGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -6659,7 +6659,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6672,8 +6672,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
-         * @summary List ServiceInstanceNodes
+         * Returns an array of ServiceInstanceNode object
+         * @summary List ServiceInstanceNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -6715,7 +6715,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6728,7 +6728,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for ServiceInstance
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6777,7 +6777,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6790,8 +6790,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
-         * @summary List ServiceInstances
+         * Returns an array of ServiceInstance object
+         * @summary List ServiceInstance
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -6833,7 +6833,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6846,8 +6846,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
-         * @summary List ServiceInventories
+         * Returns an array of ServiceInventory object
+         * @summary List ServiceInventorie
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -6889,7 +6889,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6902,7 +6902,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceInventory
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -6951,7 +6951,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -6964,8 +6964,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOfferingIcon objects
-         * @summary List ServiceOfferingIcons
+         * Returns an array of ServiceOfferingIcon object
+         * @summary List ServiceOfferingIcon
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -7007,7 +7007,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7020,8 +7020,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
-         * @summary List ServiceOfferingNodes
+         * Returns an array of ServiceOfferingNode object
+         * @summary List ServiceOfferingNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -7063,7 +7063,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7076,7 +7076,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7125,7 +7125,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7138,7 +7138,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7187,7 +7187,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7200,7 +7200,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7249,7 +7249,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7262,7 +7262,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7311,7 +7311,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7324,8 +7324,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
-         * @summary List ServiceOfferings
+         * Returns an array of ServiceOffering object
+         * @summary List ServiceOffering
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -7367,7 +7367,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7380,7 +7380,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServicePlan
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7429,7 +7429,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7442,8 +7442,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServicePlan objects
-         * @summary List ServicePlans
+         * Returns an array of ServicePlan object
+         * @summary List ServicePlan
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -7485,7 +7485,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7498,7 +7498,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Availability objects
+         * Returns an array of Availability object
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7547,7 +7547,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7560,7 +7560,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Cluster objects
+         * Returns an array of Cluster object
          * @summary List Clusters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7609,7 +7609,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7622,7 +7622,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7671,7 +7671,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7684,7 +7684,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7733,7 +7733,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7746,7 +7746,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7795,7 +7795,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7808,7 +7808,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7857,7 +7857,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7870,7 +7870,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7919,7 +7919,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7932,7 +7932,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -7981,7 +7981,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -7994,7 +7994,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Datastore objects
+         * Returns an array of Datastore object
          * @summary List Datastores for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8043,7 +8043,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8056,7 +8056,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8105,7 +8105,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8118,7 +8118,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8167,7 +8167,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8180,7 +8180,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8229,7 +8229,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8242,7 +8242,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8291,7 +8291,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8304,7 +8304,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8353,7 +8353,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8366,7 +8366,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8415,7 +8415,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8428,7 +8428,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8477,7 +8477,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8490,7 +8490,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8539,7 +8539,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8552,7 +8552,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8601,7 +8601,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8614,7 +8614,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8663,7 +8663,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8676,7 +8676,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8725,7 +8725,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8738,7 +8738,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8787,7 +8787,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8800,7 +8800,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8849,7 +8849,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8862,7 +8862,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8911,7 +8911,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8924,7 +8924,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -8973,7 +8973,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -8986,7 +8986,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9035,7 +9035,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9048,8 +9048,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SourceRegion objects
-         * @summary List SourceRegions
+         * Returns an array of SourceRegion object
+         * @summary List SourceRegion
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -9091,7 +9091,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9104,7 +9104,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9153,7 +9153,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9166,7 +9166,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9215,7 +9215,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9228,7 +9228,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9277,7 +9277,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9290,7 +9290,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9339,7 +9339,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9352,7 +9352,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9401,7 +9401,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9414,7 +9414,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9463,7 +9463,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9476,7 +9476,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9525,7 +9525,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9538,7 +9538,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SourceRegion objects
+         * Returns an array of SourceRegion object
          * @summary List SourceRegions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9587,7 +9587,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9600,7 +9600,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9649,7 +9649,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9662,7 +9662,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subscription objects
+         * Returns an array of Subscription object
          * @summary List Subscriptions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9711,7 +9711,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9724,7 +9724,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9773,7 +9773,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9786,7 +9786,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of VolumeType objects
+         * Returns an array of VolumeType object
          * @summary List VolumeTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9835,7 +9835,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9848,7 +9848,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -9897,7 +9897,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9910,8 +9910,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -9953,7 +9953,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -9966,7 +9966,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10015,7 +10015,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10028,7 +10028,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10077,7 +10077,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10090,7 +10090,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10139,7 +10139,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10152,8 +10152,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
-         * @summary List Subnets
+         * Returns an array of Subnet object
+         * @summary List Subnet
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -10195,7 +10195,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10208,7 +10208,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10257,7 +10257,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10270,7 +10270,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10319,7 +10319,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10332,7 +10332,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10381,7 +10381,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10394,7 +10394,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10443,7 +10443,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10456,7 +10456,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10505,7 +10505,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10518,7 +10518,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10567,7 +10567,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10580,7 +10580,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10629,7 +10629,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10642,7 +10642,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10691,7 +10691,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10704,7 +10704,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10753,7 +10753,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10766,7 +10766,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10815,7 +10815,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10828,7 +10828,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10877,7 +10877,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10890,8 +10890,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subscription objects
-         * @summary List Subscriptions
+         * Returns an array of Subscription object
+         * @summary List Subscription
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -10933,7 +10933,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -10946,7 +10946,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -10995,7 +10995,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11008,7 +11008,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11057,7 +11057,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11070,7 +11070,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11119,7 +11119,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11132,7 +11132,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11181,7 +11181,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11194,7 +11194,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11243,7 +11243,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11256,7 +11256,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11305,7 +11305,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11318,7 +11318,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11367,7 +11367,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11380,7 +11380,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11429,7 +11429,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11442,7 +11442,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11491,7 +11491,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11504,7 +11504,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11553,7 +11553,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11566,7 +11566,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11615,7 +11615,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11628,7 +11628,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11677,7 +11677,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11690,7 +11690,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11739,7 +11739,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11752,8 +11752,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags
+         * Returns an array of Tag object
+         * @summary List Tag
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -11795,7 +11795,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11808,8 +11808,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Task objects
-         * @summary List Tasks
+         * Returns an array of Task object
+         * @summary List Task
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -11851,7 +11851,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11864,7 +11864,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11913,7 +11913,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11926,7 +11926,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -11975,7 +11975,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -11988,7 +11988,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -12037,7 +12037,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12050,7 +12050,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of VolumeAttachment objects
+         * Returns an array of VolumeAttachment object
          * @summary List VolumeAttachments for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -12099,7 +12099,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12112,7 +12112,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -12161,7 +12161,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12174,8 +12174,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
-         * @summary List Vms
+         * Returns an array of Vm object
+         * @summary List Vm
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -12217,7 +12217,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12230,8 +12230,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of VolumeAttachment objects
-         * @summary List VolumeAttachments
+         * Returns an array of VolumeAttachment object
+         * @summary List VolumeAttachment
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -12273,7 +12273,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12286,7 +12286,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for VolumeType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -12335,7 +12335,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12348,8 +12348,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of VolumeType objects
-         * @summary List VolumeTypes
+         * Returns an array of VolumeType object
+         * @summary List VolumeType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -12391,7 +12391,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12404,7 +12404,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Volume
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -12453,7 +12453,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12466,8 +12466,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Returns an array of Volume objects
-         * @summary List Volumes
+         * Returns an array of Volume object
+         * @summary List Volume
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -12509,7 +12509,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12556,7 +12556,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -12607,7 +12607,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -12652,7 +12652,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -12698,7 +12698,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12740,7 +12740,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12782,7 +12782,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12824,7 +12824,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12866,7 +12866,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12908,7 +12908,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12950,7 +12950,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -12992,7 +12992,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13034,7 +13034,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13076,7 +13076,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13118,7 +13118,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13132,7 +13132,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * Returns a Ipaddress object
-         * @summary Show an existing Ipaddress
+         * @summary Show an existing Ipaddre
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -13160,7 +13160,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13202,7 +13202,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13244,7 +13244,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13286,7 +13286,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13328,7 +13328,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13370,7 +13370,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13412,7 +13412,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13454,7 +13454,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13496,7 +13496,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13538,7 +13538,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13580,7 +13580,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13622,7 +13622,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13664,7 +13664,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13706,7 +13706,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13748,7 +13748,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13790,7 +13790,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13832,7 +13832,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13874,7 +13874,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13916,7 +13916,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -13958,7 +13958,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -14000,7 +14000,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -14042,7 +14042,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -14084,7 +14084,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -14131,7 +14131,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-
+    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -14160,7 +14160,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * Returns a Task id
          * @summary Invokes computing of ServiceInventories for given ServiceOffering
          * @param {string} id ID of the resource
-         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventorie
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14172,7 +14172,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -14185,7 +14185,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Cluster
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14203,8 +14203,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Cluster objects
-         * @summary List Clusters
+         * Returns an array of Cluster object
+         * @summary List Cluster
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14220,7 +14220,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14238,7 +14238,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14256,8 +14256,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
-         * @summary List ContainerGroups
+         * Returns an array of ContainerGroup object
+         * @summary List ContainerGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14273,7 +14273,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerImage
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14291,8 +14291,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerImage objects
-         * @summary List ContainerImages
+         * Returns an array of ContainerImage object
+         * @summary List ContainerImage
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14308,7 +14308,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14326,7 +14326,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14344,8 +14344,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerNode objects
-         * @summary List ContainerNodes
+         * Returns an array of ContainerNode object
+         * @summary List ContainerNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14361,7 +14361,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14379,7 +14379,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14397,7 +14397,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14415,7 +14415,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14433,8 +14433,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerProject objects
-         * @summary List ContainerProjects
+         * Returns an array of ContainerProject object
+         * @summary List ContainerProject
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14450,7 +14450,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -14467,7 +14467,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerTemplate
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14485,8 +14485,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
-         * @summary List ContainerTemplates
+         * Returns an array of ContainerTemplate object
+         * @summary List ContainerTemplate
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14502,8 +14502,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Container objects
-         * @summary List Containers
+         * Returns an array of Container object
+         * @summary List Container
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14519,8 +14519,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Datastore objects
-         * @summary List Datastores
+         * Returns an array of Datastore object
+         * @summary List Datastore
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14536,8 +14536,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Flavor objects
-         * @summary List Flavors
+         * Returns an array of Flavor object
+         * @summary List Flavor
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14553,8 +14553,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Host objects
-         * @summary List Hosts
+         * Returns an array of Host object
+         * @summary List Host
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14570,8 +14570,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for Ipaddress
+         * Returns an array of Tag object
+         * @summary List Tags for Ipaddre
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -14588,8 +14588,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
-         * @summary List Ipaddresses
+         * Returns an array of Ipaddress object
+         * @summary List Ipaddresse
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14605,7 +14605,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14623,7 +14623,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14641,8 +14641,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
-         * @summary List NetworkAdapters
+         * Returns an array of NetworkAdapter object
+         * @summary List NetworkAdapter
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14658,7 +14658,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14676,7 +14676,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14694,8 +14694,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
-         * @summary List Networks
+         * Returns an array of Network object
+         * @summary List Network
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14711,7 +14711,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14729,7 +14729,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14747,7 +14747,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14765,7 +14765,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14783,7 +14783,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14801,7 +14801,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14819,7 +14819,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14837,8 +14837,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
-         * @summary List OrchestrationStacks
+         * Returns an array of OrchestrationStack object
+         * @summary List OrchestrationStack
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14854,7 +14854,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14872,7 +14872,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14890,8 +14890,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
-         * @summary List SecurityGroups
+         * Returns an array of SecurityGroup object
+         * @summary List SecurityGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14907,8 +14907,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
-         * @summary List ServiceInstanceNodes
+         * Returns an array of ServiceInstanceNode object
+         * @summary List ServiceInstanceNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14924,7 +14924,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for ServiceInstance
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14942,8 +14942,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
-         * @summary List ServiceInstances
+         * Returns an array of ServiceInstance object
+         * @summary List ServiceInstance
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14959,8 +14959,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
-         * @summary List ServiceInventories
+         * Returns an array of ServiceInventory object
+         * @summary List ServiceInventorie
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -14976,7 +14976,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceInventory
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -14994,8 +14994,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOfferingIcon objects
-         * @summary List ServiceOfferingIcons
+         * Returns an array of ServiceOfferingIcon object
+         * @summary List ServiceOfferingIcon
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15011,8 +15011,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
-         * @summary List ServiceOfferingNodes
+         * Returns an array of ServiceOfferingNode object
+         * @summary List ServiceOfferingNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15028,7 +15028,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15046,7 +15046,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15064,7 +15064,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15082,7 +15082,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15100,8 +15100,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
-         * @summary List ServiceOfferings
+         * Returns an array of ServiceOffering object
+         * @summary List ServiceOffering
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15117,7 +15117,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServicePlan
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15135,8 +15135,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServicePlan objects
-         * @summary List ServicePlans
+         * Returns an array of ServicePlan object
+         * @summary List ServicePlan
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15152,7 +15152,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Availability objects
+         * Returns an array of Availability object
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15170,7 +15170,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Cluster objects
+         * Returns an array of Cluster object
          * @summary List Clusters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15188,7 +15188,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15206,7 +15206,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15224,7 +15224,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15242,7 +15242,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15260,7 +15260,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15278,7 +15278,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15296,7 +15296,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Datastore objects
+         * Returns an array of Datastore object
          * @summary List Datastores for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15314,7 +15314,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15332,7 +15332,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15350,7 +15350,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15368,7 +15368,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15386,7 +15386,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15404,7 +15404,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15422,7 +15422,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15440,7 +15440,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15458,7 +15458,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15476,7 +15476,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15494,7 +15494,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15512,7 +15512,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15530,7 +15530,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15548,7 +15548,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15566,7 +15566,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15584,7 +15584,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15602,8 +15602,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SourceRegion objects
-         * @summary List SourceRegions
+         * Returns an array of SourceRegion object
+         * @summary List SourceRegion
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15619,7 +15619,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15637,7 +15637,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15655,7 +15655,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15673,7 +15673,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15691,7 +15691,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15709,7 +15709,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15727,7 +15727,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15745,7 +15745,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SourceRegion objects
+         * Returns an array of SourceRegion object
          * @summary List SourceRegions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15763,7 +15763,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15781,7 +15781,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subscription objects
+         * Returns an array of Subscription object
          * @summary List Subscriptions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15799,7 +15799,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15817,7 +15817,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of VolumeType objects
+         * Returns an array of VolumeType object
          * @summary List VolumeTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15835,7 +15835,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15853,8 +15853,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15870,7 +15870,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15888,7 +15888,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15906,7 +15906,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15924,8 +15924,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
-         * @summary List Subnets
+         * Returns an array of Subnet object
+         * @summary List Subnet
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -15941,7 +15941,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15959,7 +15959,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15977,7 +15977,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -15995,7 +15995,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16013,7 +16013,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16031,7 +16031,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16049,7 +16049,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16067,7 +16067,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16085,7 +16085,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16103,7 +16103,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16121,7 +16121,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16139,8 +16139,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subscription objects
-         * @summary List Subscriptions
+         * Returns an array of Subscription object
+         * @summary List Subscription
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16156,7 +16156,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16174,7 +16174,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16192,7 +16192,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16210,7 +16210,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16228,7 +16228,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16246,7 +16246,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16264,7 +16264,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16282,7 +16282,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16300,7 +16300,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16318,7 +16318,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16336,7 +16336,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16354,7 +16354,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16372,7 +16372,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16390,8 +16390,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags
+         * Returns an array of Tag object
+         * @summary List Tag
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16407,8 +16407,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Task objects
-         * @summary List Tasks
+         * Returns an array of Task object
+         * @summary List Task
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16424,7 +16424,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16442,7 +16442,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16460,7 +16460,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16478,7 +16478,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of VolumeAttachment objects
+         * Returns an array of VolumeAttachment object
          * @summary List VolumeAttachments for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16496,7 +16496,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16514,8 +16514,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
-         * @summary List Vms
+         * Returns an array of Vm object
+         * @summary List Vm
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16531,8 +16531,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of VolumeAttachment objects
-         * @summary List VolumeAttachments
+         * Returns an array of VolumeAttachment object
+         * @summary List VolumeAttachment
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16548,7 +16548,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for VolumeType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16566,8 +16566,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of VolumeType objects
-         * @summary List VolumeTypes
+         * Returns an array of VolumeType object
+         * @summary List VolumeType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16583,7 +16583,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Volume
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -16601,8 +16601,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Returns an array of Volume objects
-         * @summary List Volumes
+         * Returns an array of Volume object
+         * @summary List Volume
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -16817,7 +16817,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         },
         /**
          * Returns a Ipaddress object
-         * @summary Show an existing Ipaddress
+         * @summary Show an existing Ipaddre
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -17165,7 +17165,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * Returns a Task id
          * @summary Invokes computing of ServiceInventories for given ServiceOffering
          * @param {string} id ID of the resource
-         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+         * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventorie
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -17173,7 +17173,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).appliedInventoriesForServiceOffering(id, appliedInventoriesParametersServicePlan, options).then((request) => request(axios, basePath));
         },
         /**
-         *
+         * 
          * @summary Return this API document in JSON format
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -17182,7 +17182,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Cluster
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17196,8 +17196,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listClusterHosts(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Cluster objects
-         * @summary List Clusters
+         * Returns an array of Cluster object
+         * @summary List Cluster
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17209,7 +17209,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listClusters(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17223,7 +17223,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerGroupContainers(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17237,8 +17237,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerGroup objects
-         * @summary List ContainerGroups
+         * Returns an array of ContainerGroup object
+         * @summary List ContainerGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17250,7 +17250,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerGroups(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerImage
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17264,8 +17264,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerImageTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerImage objects
-         * @summary List ContainerImages
+         * Returns an array of ContainerImage object
+         * @summary List ContainerImage
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17277,7 +17277,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerImages(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17291,7 +17291,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerNodeContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerNode
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17305,8 +17305,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerNodeTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerNode objects
-         * @summary List ContainerNodes
+         * Returns an array of ContainerNode object
+         * @summary List ContainerNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17318,7 +17318,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17332,7 +17332,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerProjectContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17346,7 +17346,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerProjectContainerResourceQuota(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17360,7 +17360,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerProjectContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerProject
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17374,8 +17374,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerProjectTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerProject objects
-         * @summary List ContainerProjects
+         * Returns an array of ContainerProject object
+         * @summary List ContainerProject
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17387,7 +17387,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerProjects(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerResourceQuota objects
+         * Returns an array of ContainerResourceQuota object
          * @summary List ContainerResourceQuota
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -17400,7 +17400,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerResourceQuota(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ContainerTemplate
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17414,8 +17414,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerTemplateTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerTemplate objects
-         * @summary List ContainerTemplates
+         * Returns an array of ContainerTemplate object
+         * @summary List ContainerTemplate
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17427,8 +17427,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainerTemplates(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Container objects
-         * @summary List Containers
+         * Returns an array of Container object
+         * @summary List Container
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17440,8 +17440,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listContainers(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Datastore objects
-         * @summary List Datastores
+         * Returns an array of Datastore object
+         * @summary List Datastore
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17453,8 +17453,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listDatastores(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Flavor objects
-         * @summary List Flavors
+         * Returns an array of Flavor object
+         * @summary List Flavor
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17466,8 +17466,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listFlavors(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Host objects
-         * @summary List Hosts
+         * Returns an array of Host object
+         * @summary List Host
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17479,8 +17479,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listHosts(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags for Ipaddress
+         * Returns an array of Tag object
+         * @summary List Tags for Ipaddre
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -17493,8 +17493,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listIpaddressTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
-         * @summary List Ipaddresses
+         * Returns an array of Ipaddress object
+         * @summary List Ipaddresse
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17506,7 +17506,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listIpaddresses(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17520,7 +17520,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworkAdapterIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for NetworkAdapter
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17534,8 +17534,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworkAdapterTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
-         * @summary List NetworkAdapters
+         * Returns an array of NetworkAdapter object
+         * @summary List NetworkAdapter
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17547,7 +17547,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworkAdapters(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17561,7 +17561,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworkSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Network
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17575,8 +17575,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworkTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
-         * @summary List Networks
+         * Returns an array of Network object
+         * @summary List Network
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17588,7 +17588,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listNetworks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17602,7 +17602,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17616,7 +17616,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17630,7 +17630,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17644,7 +17644,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17658,7 +17658,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17672,7 +17672,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for OrchestrationStack
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17686,8 +17686,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStackVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of OrchestrationStack objects
-         * @summary List OrchestrationStacks
+         * Returns an array of OrchestrationStack object
+         * @summary List OrchestrationStack
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17699,7 +17699,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listOrchestrationStacks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17713,7 +17713,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSecurityGroupTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SecurityGroup
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17727,8 +17727,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSecurityGroupVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
-         * @summary List SecurityGroups
+         * Returns an array of SecurityGroup object
+         * @summary List SecurityGroup
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17740,8 +17740,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSecurityGroups(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
-         * @summary List ServiceInstanceNodes
+         * Returns an array of ServiceInstanceNode object
+         * @summary List ServiceInstanceNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17753,7 +17753,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceInstanceNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for ServiceInstance
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17767,8 +17767,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceInstanceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
-         * @summary List ServiceInstances
+         * Returns an array of ServiceInstance object
+         * @summary List ServiceInstance
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17780,8 +17780,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceInstances(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInventory objects
-         * @summary List ServiceInventories
+         * Returns an array of ServiceInventory object
+         * @summary List ServiceInventorie
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17793,7 +17793,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceInventories(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceInventory
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17807,8 +17807,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceInventoryTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOfferingIcon objects
-         * @summary List ServiceOfferingIcons
+         * Returns an array of ServiceOfferingIcon object
+         * @summary List ServiceOfferingIcon
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17820,8 +17820,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingIcons(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
-         * @summary List ServiceOfferingNodes
+         * Returns an array of ServiceOfferingNode object
+         * @summary List ServiceOfferingNode
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17833,7 +17833,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingNodes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17847,7 +17847,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17861,7 +17861,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17875,7 +17875,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for ServiceOffering
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17889,8 +17889,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferingTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOffering objects
-         * @summary List ServiceOfferings
+         * Returns an array of ServiceOffering object
+         * @summary List ServiceOffering
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17902,7 +17902,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServiceOfferings(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for ServicePlan
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17916,8 +17916,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServicePlanServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServicePlan objects
-         * @summary List ServicePlans
+         * Returns an array of ServicePlan object
+         * @summary List ServicePlan
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -17929,7 +17929,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listServicePlans(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Availability objects
+         * Returns an array of Availability object
          * @summary List Availabilities for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17943,7 +17943,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceAvailabilities(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Cluster objects
+         * Returns an array of Cluster object
          * @summary List Clusters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17957,7 +17957,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceClusters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17971,7 +17971,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17985,7 +17985,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -17999,7 +17999,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18013,7 +18013,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18027,7 +18027,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Container objects
+         * Returns an array of Container object
          * @summary List Containers for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18041,7 +18041,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceContainers(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Datastore objects
+         * Returns an array of Datastore object
          * @summary List Datastores for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18055,7 +18055,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceDatastores(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Host objects
+         * Returns an array of Host object
          * @summary List Hosts for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18069,7 +18069,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceHosts(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18083,7 +18083,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18097,7 +18097,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18111,7 +18111,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18125,7 +18125,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18139,7 +18139,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18153,7 +18153,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18167,7 +18167,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18181,7 +18181,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18195,7 +18195,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18209,7 +18209,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18223,7 +18223,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18237,7 +18237,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18251,7 +18251,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18265,7 +18265,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for SourceRegion
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18279,8 +18279,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SourceRegion objects
-         * @summary List SourceRegions
+         * Returns an array of SourceRegion object
+         * @summary List SourceRegion
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18292,7 +18292,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceRegions(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18306,7 +18306,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstanceNode objects
+         * Returns an array of ServiceInstanceNode object
          * @summary List ServiceInstanceNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18320,7 +18320,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServiceInstanceNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18334,7 +18334,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18348,7 +18348,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOfferingNode objects
+         * Returns an array of ServiceOfferingNode object
          * @summary List ServiceOfferingNodes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18362,7 +18362,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServiceOfferingNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18376,7 +18376,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18390,7 +18390,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SourceRegion objects
+         * Returns an array of SourceRegion object
          * @summary List SourceRegions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18404,7 +18404,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceSourceRegions(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18418,7 +18418,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subscription objects
+         * Returns an array of Subscription object
          * @summary List Subscriptions for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18432,7 +18432,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceSubscriptions(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18446,7 +18446,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of VolumeType objects
+         * Returns an array of VolumeType object
          * @summary List VolumeTypes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18460,7 +18460,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceVolumeTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Source
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18474,8 +18474,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSourceVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Source objects
-         * @summary List Sources
+         * Returns an array of Source object
+         * @summary List Source
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18487,7 +18487,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18501,7 +18501,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubnetIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18515,7 +18515,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubnetNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Subnet
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18529,8 +18529,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubnetTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
-         * @summary List Subnets
+         * Returns an array of Subnet object
+         * @summary List Subnet
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18542,7 +18542,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubnets(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18556,7 +18556,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18570,7 +18570,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18584,7 +18584,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of OrchestrationStack objects
+         * Returns an array of OrchestrationStack object
          * @summary List OrchestrationStacks for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18598,7 +18598,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionOrchestrationStacks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18612,7 +18612,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInstance objects
+         * Returns an array of ServiceInstance object
          * @summary List ServiceInstances for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18626,7 +18626,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionServiceInstances(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18640,7 +18640,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServicePlan objects
+         * Returns an array of ServicePlan object
          * @summary List ServicePlans for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18654,7 +18654,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionServicePlans(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18668,7 +18668,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18682,7 +18682,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Subscription
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18696,8 +18696,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptionVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subscription objects
-         * @summary List Subscriptions
+         * Returns an array of Subscription object
+         * @summary List Subscription
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18709,7 +18709,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listSubscriptions(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerGroup objects
+         * Returns an array of ContainerGroup object
          * @summary List ContainerGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18723,7 +18723,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerImage objects
+         * Returns an array of ContainerImage object
          * @summary List ContainerImages for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18737,7 +18737,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerImages(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerNode objects
+         * Returns an array of ContainerNode object
          * @summary List ContainerNodes for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18751,7 +18751,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerNodes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerProject objects
+         * Returns an array of ContainerProject object
          * @summary List ContainerProjects for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18765,7 +18765,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerProjects(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ContainerTemplate objects
+         * Returns an array of ContainerTemplate object
          * @summary List ContainerTemplates for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18779,7 +18779,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagContainerTemplates(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Ipaddress objects
+         * Returns an array of Ipaddress object
          * @summary List Ipaddresses for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18793,7 +18793,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagIpaddresses(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18807,7 +18807,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Network objects
+         * Returns an array of Network object
          * @summary List Networks for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18821,7 +18821,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagNetworks(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18835,7 +18835,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceInventory objects
+         * Returns an array of ServiceInventory object
          * @summary List ServiceInventories for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18849,7 +18849,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagServiceInventories(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of ServiceOffering objects
+         * Returns an array of ServiceOffering object
          * @summary List ServiceOfferings for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18863,7 +18863,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagServiceOfferings(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Subnet objects
+         * Returns an array of Subnet object
          * @summary List Subnets for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18877,7 +18877,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagSubnets(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Tag
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18891,8 +18891,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTagVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
-         * @summary List Tags
+         * Returns an array of Tag object
+         * @summary List Tag
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18904,8 +18904,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTags(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Task objects
-         * @summary List Tasks
+         * Returns an array of Task object
+         * @summary List Task
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -18917,7 +18917,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listTasks(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of NetworkAdapter objects
+         * Returns an array of NetworkAdapter object
          * @summary List NetworkAdapters for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18931,7 +18931,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVmNetworkAdapters(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of SecurityGroup objects
+         * Returns an array of SecurityGroup object
          * @summary List SecurityGroups for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18945,7 +18945,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVmSecurityGroups(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Tag objects
+         * Returns an array of Tag object
          * @summary List Tags for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18959,7 +18959,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVmTags(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of VolumeAttachment objects
+         * Returns an array of VolumeAttachment object
          * @summary List VolumeAttachments for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18973,7 +18973,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVmVolumeAttachments(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for Vm
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -18987,8 +18987,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVmVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
-         * @summary List Vms
+         * Returns an array of Vm object
+         * @summary List Vm
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -19000,8 +19000,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVms(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of VolumeAttachment objects
-         * @summary List VolumeAttachments
+         * Returns an array of VolumeAttachment object
+         * @summary List VolumeAttachment
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -19013,7 +19013,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeAttachments(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
+         * Returns an array of Volume object
          * @summary List Volumes for VolumeType
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -19027,8 +19027,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeTypeVolumes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of VolumeType objects
-         * @summary List VolumeTypes
+         * Returns an array of VolumeType object
+         * @summary List VolumeType
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -19040,7 +19040,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Vm objects
+         * Returns an array of Vm object
          * @summary List Vms for Volume
          * @param {string} id ID of the resource
          * @param {number} [limit] The numbers of items to return per page.
@@ -19054,8 +19054,8 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return DefaultApiFp(configuration).listVolumeVms(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
         },
         /**
-         * Returns an array of Volume objects
-         * @summary List Volumes
+         * Returns an array of Volume object
+         * @summary List Volume
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
@@ -19210,7 +19210,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * Returns a Ipaddress object
-         * @summary Show an existing Ipaddress
+         * @summary Show an existing Ipaddre
          * @param {string} id ID of the resource
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -19463,7 +19463,7 @@ export class DefaultApi extends BaseAPI {
      * Returns a Task id
      * @summary Invokes computing of ServiceInventories for given ServiceOffering
      * @param {string} id ID of the resource
-     * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventories
+     * @param {AppliedInventoriesParametersServicePlan} appliedInventoriesParametersServicePlan Parameters defining input data for computing inventorie
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
@@ -19473,7 +19473,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     *
+     * 
      * @summary Return this API document in JSON format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -19484,7 +19484,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Host objects
+     * Returns an array of Host object
      * @summary List Hosts for Cluster
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19500,8 +19500,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Cluster objects
-     * @summary List Clusters
+     * Returns an array of Cluster object
+     * @summary List Cluster
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19515,7 +19515,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Container objects
+     * Returns an array of Container object
      * @summary List Containers for ContainerGroup
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19531,7 +19531,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ContainerGroup
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19547,8 +19547,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerGroup objects
-     * @summary List ContainerGroups
+     * Returns an array of ContainerGroup object
+     * @summary List ContainerGroup
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19562,7 +19562,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ContainerImage
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19578,8 +19578,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerImage objects
-     * @summary List ContainerImages
+     * Returns an array of ContainerImage object
+     * @summary List ContainerImage
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19593,7 +19593,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerGroup objects
+     * Returns an array of ContainerGroup object
      * @summary List ContainerGroups for ContainerNode
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19609,7 +19609,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ContainerNode
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19625,8 +19625,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerNode objects
-     * @summary List ContainerNodes
+     * Returns an array of ContainerNode object
+     * @summary List ContainerNode
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19640,7 +19640,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerGroup objects
+     * Returns an array of ContainerGroup object
      * @summary List ContainerGroups for ContainerProject
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19656,7 +19656,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerResourceQuota objects
+     * Returns an array of ContainerResourceQuota object
      * @summary List ContainerResourceQuota for ContainerProject
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19672,7 +19672,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerTemplate objects
+     * Returns an array of ContainerTemplate object
      * @summary List ContainerTemplates for ContainerProject
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19688,7 +19688,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ContainerProject
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19704,8 +19704,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerProject objects
-     * @summary List ContainerProjects
+     * Returns an array of ContainerProject object
+     * @summary List ContainerProject
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19719,7 +19719,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerResourceQuota objects
+     * Returns an array of ContainerResourceQuota object
      * @summary List ContainerResourceQuota
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -19734,7 +19734,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ContainerTemplate
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19750,8 +19750,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerTemplate objects
-     * @summary List ContainerTemplates
+     * Returns an array of ContainerTemplate object
+     * @summary List ContainerTemplate
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19765,8 +19765,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Container objects
-     * @summary List Containers
+     * Returns an array of Container object
+     * @summary List Container
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19780,8 +19780,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Datastore objects
-     * @summary List Datastores
+     * Returns an array of Datastore object
+     * @summary List Datastore
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19795,8 +19795,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Flavor objects
-     * @summary List Flavors
+     * Returns an array of Flavor object
+     * @summary List Flavor
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19810,8 +19810,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Host objects
-     * @summary List Hosts
+     * Returns an array of Host object
+     * @summary List Host
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19825,8 +19825,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
-     * @summary List Tags for Ipaddress
+     * Returns an array of Tag object
+     * @summary List Tags for Ipaddre
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
@@ -19841,8 +19841,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
-     * @summary List Ipaddresses
+     * Returns an array of Ipaddress object
+     * @summary List Ipaddresse
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19856,7 +19856,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for NetworkAdapter
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19872,7 +19872,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for NetworkAdapter
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19888,8 +19888,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
-     * @summary List NetworkAdapters
+     * Returns an array of NetworkAdapter object
+     * @summary List NetworkAdapter
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19903,7 +19903,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for Network
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19919,7 +19919,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for Network
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19935,8 +19935,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
-     * @summary List Networks
+     * Returns an array of Network object
+     * @summary List Network
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -19950,7 +19950,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19966,7 +19966,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19982,7 +19982,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
+     * Returns an array of Network object
      * @summary List Networks for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -19998,7 +19998,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20014,7 +20014,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20030,7 +20030,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20046,7 +20046,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for OrchestrationStack
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20062,8 +20062,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of OrchestrationStack objects
-     * @summary List OrchestrationStacks
+     * Returns an array of OrchestrationStack object
+     * @summary List OrchestrationStack
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20077,7 +20077,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for SecurityGroup
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20093,7 +20093,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for SecurityGroup
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20109,8 +20109,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
-     * @summary List SecurityGroups
+     * Returns an array of SecurityGroup object
+     * @summary List SecurityGroup
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20124,8 +20124,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstanceNode objects
-     * @summary List ServiceInstanceNodes
+     * Returns an array of ServiceInstanceNode object
+     * @summary List ServiceInstanceNode
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20139,7 +20139,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstanceNode objects
+     * Returns an array of ServiceInstanceNode object
      * @summary List ServiceInstanceNodes for ServiceInstance
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20155,8 +20155,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
-     * @summary List ServiceInstances
+     * Returns an array of ServiceInstance object
+     * @summary List ServiceInstance
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20170,8 +20170,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInventory objects
-     * @summary List ServiceInventories
+     * Returns an array of ServiceInventory object
+     * @summary List ServiceInventorie
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20185,7 +20185,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ServiceInventory
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20201,8 +20201,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOfferingIcon objects
-     * @summary List ServiceOfferingIcons
+     * Returns an array of ServiceOfferingIcon object
+     * @summary List ServiceOfferingIcon
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20216,8 +20216,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOfferingNode objects
-     * @summary List ServiceOfferingNodes
+     * Returns an array of ServiceOfferingNode object
+     * @summary List ServiceOfferingNode
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20231,7 +20231,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
+     * Returns an array of ServiceInstance object
      * @summary List ServiceInstances for ServiceOffering
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20247,7 +20247,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOfferingNode objects
+     * Returns an array of ServiceOfferingNode object
      * @summary List ServiceOfferingNodes for ServiceOffering
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20263,7 +20263,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServicePlan objects
+     * Returns an array of ServicePlan object
      * @summary List ServicePlans for ServiceOffering
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20279,7 +20279,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for ServiceOffering
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20295,8 +20295,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOffering objects
-     * @summary List ServiceOfferings
+     * Returns an array of ServiceOffering object
+     * @summary List ServiceOffering
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20310,7 +20310,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
+     * Returns an array of ServiceInstance object
      * @summary List ServiceInstances for ServicePlan
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20326,8 +20326,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServicePlan objects
-     * @summary List ServicePlans
+     * Returns an array of ServicePlan object
+     * @summary List ServicePlan
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20341,7 +20341,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Availability objects
+     * Returns an array of Availability object
      * @summary List Availabilities for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20357,7 +20357,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Cluster objects
+     * Returns an array of Cluster object
      * @summary List Clusters for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20373,7 +20373,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerGroup objects
+     * Returns an array of ContainerGroup object
      * @summary List ContainerGroups for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20389,7 +20389,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerImage objects
+     * Returns an array of ContainerImage object
      * @summary List ContainerImages for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20405,7 +20405,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerNode objects
+     * Returns an array of ContainerNode object
      * @summary List ContainerNodes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20421,7 +20421,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerProject objects
+     * Returns an array of ContainerProject object
      * @summary List ContainerProjects for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20437,7 +20437,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerTemplate objects
+     * Returns an array of ContainerTemplate object
      * @summary List ContainerTemplates for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20453,7 +20453,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Container objects
+     * Returns an array of Container object
      * @summary List Containers for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20469,7 +20469,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Datastore objects
+     * Returns an array of Datastore object
      * @summary List Datastores for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20485,7 +20485,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Host objects
+     * Returns an array of Host object
      * @summary List Hosts for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20501,7 +20501,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20517,7 +20517,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20533,7 +20533,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
+     * Returns an array of Network object
      * @summary List Networks for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20549,7 +20549,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of OrchestrationStack objects
+     * Returns an array of OrchestrationStack object
      * @summary List OrchestrationStacks for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20565,7 +20565,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20581,7 +20581,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20597,7 +20597,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
+     * Returns an array of Network object
      * @summary List Networks for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20613,7 +20613,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of OrchestrationStack objects
+     * Returns an array of OrchestrationStack object
      * @summary List OrchestrationStacks for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20629,7 +20629,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20645,7 +20645,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
+     * Returns an array of ServiceInstance object
      * @summary List ServiceInstances for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20661,7 +20661,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOffering objects
+     * Returns an array of ServiceOffering object
      * @summary List ServiceOfferings for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20677,7 +20677,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServicePlan objects
+     * Returns an array of ServicePlan object
      * @summary List ServicePlans for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20693,7 +20693,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20709,7 +20709,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20725,7 +20725,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for SourceRegion
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20741,8 +20741,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SourceRegion objects
-     * @summary List SourceRegions
+     * Returns an array of SourceRegion object
+     * @summary List SourceRegion
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20756,7 +20756,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20772,7 +20772,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstanceNode objects
+     * Returns an array of ServiceInstanceNode object
      * @summary List ServiceInstanceNodes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20788,7 +20788,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
+     * Returns an array of ServiceInstance object
      * @summary List ServiceInstances for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20804,7 +20804,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInventory objects
+     * Returns an array of ServiceInventory object
      * @summary List ServiceInventories for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20820,7 +20820,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOfferingNode objects
+     * Returns an array of ServiceOfferingNode object
      * @summary List ServiceOfferingNodes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20836,7 +20836,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOffering objects
+     * Returns an array of ServiceOffering object
      * @summary List ServiceOfferings for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20852,7 +20852,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServicePlan objects
+     * Returns an array of ServicePlan object
      * @summary List ServicePlans for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20868,7 +20868,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SourceRegion objects
+     * Returns an array of SourceRegion object
      * @summary List SourceRegions for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20884,7 +20884,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20900,7 +20900,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subscription objects
+     * Returns an array of Subscription object
      * @summary List Subscriptions for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20916,7 +20916,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20932,7 +20932,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of VolumeType objects
+     * Returns an array of VolumeType object
      * @summary List VolumeTypes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20948,7 +20948,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for Source
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20964,8 +20964,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Source objects
-     * @summary List Sources
+     * Returns an array of Source object
+     * @summary List Source
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -20979,7 +20979,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for Subnet
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -20995,7 +20995,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for Subnet
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21011,7 +21011,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for Subnet
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21027,8 +21027,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
-     * @summary List Subnets
+     * Returns an array of Subnet object
+     * @summary List Subnet
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21042,7 +21042,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21058,7 +21058,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21074,7 +21074,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
+     * Returns an array of Network object
      * @summary List Networks for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21090,7 +21090,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of OrchestrationStack objects
+     * Returns an array of OrchestrationStack object
      * @summary List OrchestrationStacks for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21106,7 +21106,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21122,7 +21122,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInstance objects
+     * Returns an array of ServiceInstance object
      * @summary List ServiceInstances for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21138,7 +21138,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOffering objects
+     * Returns an array of ServiceOffering object
      * @summary List ServiceOfferings for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21154,7 +21154,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServicePlan objects
+     * Returns an array of ServicePlan object
      * @summary List ServicePlans for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21170,7 +21170,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21186,7 +21186,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21202,7 +21202,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for Subscription
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21218,8 +21218,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subscription objects
-     * @summary List Subscriptions
+     * Returns an array of Subscription object
+     * @summary List Subscription
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21233,7 +21233,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerGroup objects
+     * Returns an array of ContainerGroup object
      * @summary List ContainerGroups for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21249,7 +21249,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerImage objects
+     * Returns an array of ContainerImage object
      * @summary List ContainerImages for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21265,7 +21265,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerNode objects
+     * Returns an array of ContainerNode object
      * @summary List ContainerNodes for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21281,7 +21281,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerProject objects
+     * Returns an array of ContainerProject object
      * @summary List ContainerProjects for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21297,7 +21297,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ContainerTemplate objects
+     * Returns an array of ContainerTemplate object
      * @summary List ContainerTemplates for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21313,7 +21313,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Ipaddress objects
+     * Returns an array of Ipaddress object
      * @summary List Ipaddresses for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21329,7 +21329,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21345,7 +21345,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Network objects
+     * Returns an array of Network object
      * @summary List Networks for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21361,7 +21361,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21377,7 +21377,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceInventory objects
+     * Returns an array of ServiceInventory object
      * @summary List ServiceInventories for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21393,7 +21393,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of ServiceOffering objects
+     * Returns an array of ServiceOffering object
      * @summary List ServiceOfferings for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21409,7 +21409,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Subnet objects
+     * Returns an array of Subnet object
      * @summary List Subnets for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21425,7 +21425,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for Tag
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21441,8 +21441,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
-     * @summary List Tags
+     * Returns an array of Tag object
+     * @summary List Tag
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21456,8 +21456,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Task objects
-     * @summary List Tasks
+     * Returns an array of Task object
+     * @summary List Task
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21471,7 +21471,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of NetworkAdapter objects
+     * Returns an array of NetworkAdapter object
      * @summary List NetworkAdapters for Vm
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21487,7 +21487,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of SecurityGroup objects
+     * Returns an array of SecurityGroup object
      * @summary List SecurityGroups for Vm
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21503,7 +21503,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Tag objects
+     * Returns an array of Tag object
      * @summary List Tags for Vm
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21519,7 +21519,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of VolumeAttachment objects
+     * Returns an array of VolumeAttachment object
      * @summary List VolumeAttachments for Vm
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21535,7 +21535,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for Vm
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21551,8 +21551,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
-     * @summary List Vms
+     * Returns an array of Vm object
+     * @summary List Vm
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21566,8 +21566,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of VolumeAttachment objects
-     * @summary List VolumeAttachments
+     * Returns an array of VolumeAttachment object
+     * @summary List VolumeAttachment
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21581,7 +21581,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
+     * Returns an array of Volume object
      * @summary List Volumes for VolumeType
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21597,8 +21597,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of VolumeType objects
-     * @summary List VolumeTypes
+     * Returns an array of VolumeType object
+     * @summary List VolumeType
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21612,7 +21612,7 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Vm objects
+     * Returns an array of Vm object
      * @summary List Vms for Volume
      * @param {string} id ID of the resource
      * @param {number} [limit] The numbers of items to return per page.
@@ -21628,8 +21628,8 @@ export class DefaultApi extends BaseAPI {
     }
 
     /**
-     * Returns an array of Volume objects
-     * @summary List Volumes
+     * Returns an array of Volume object
+     * @summary List Volume
      * @param {number} [limit] The numbers of items to return per page.
      * @param {number} [offset] The number of items to skip before starting to collect the result set.
      * @param {object} [filter] Filter for querying collections.
@@ -21814,7 +21814,7 @@ export class DefaultApi extends BaseAPI {
 
     /**
      * Returns a Ipaddress object
-     * @summary Show an existing Ipaddress
+     * @summary Show an existing Ipaddre
      * @param {string} id ID of the resource
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

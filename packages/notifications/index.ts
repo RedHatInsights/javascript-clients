@@ -1,6 +1,5 @@
 // This is a sample supporting file mustache template.
 
-export * from './base'
 export * from './types'
 
 export { default as drawerResourceV1GetDrawerEntries } from './DrawerResourceV1GetDrawerEntries'
