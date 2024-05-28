@@ -13,23 +13,23 @@ import type { Errors, System200Response } from '../types';
 
 export type UnassignSystemParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof UnassignSystemApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * 
   * @type { any }
   * @memberof UnassignSystemApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof UnassignSystemApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const unassignSystemParamCreator = async (...config: ([UnassignSystemPara
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

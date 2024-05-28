@@ -13,17 +13,17 @@ import type { CreatePolicy201Response, Errors } from '../types';
 
 export type PolicyParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof PolicyApi
   */
-  id: any,
+  id: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof PolicyApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   options?: AxiosRequestConfig
 }
 
@@ -49,8 +49,8 @@ export const policyParamCreator = async (...config: ([PolicyParams] | [any, any,
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

@@ -13,17 +13,17 @@ import type { CreatePolicy201Response, Policy } from '../types';
 
 export type CreatePolicyParams = {
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof CreatePolicyApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
-  *
+  * 
   * @type { Policy }
   * @memberof CreatePolicyApi
   */
-  policy?: Policy,
+  policy?: Policy, 
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isCreatePolicyObjectParams = (params: [CreatePolicyParams] | unknown[]): p
   return params.length === 1 && true && true
 }
 /**
-* Create a Policy with the provided attributes
+* Create a Policy with the provided attribute
 * @summary Create a Policy
 * @param {CreatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.
@@ -48,8 +48,8 @@ export const createPolicyParamCreator = async (...config: ([CreatePolicyParams] 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 

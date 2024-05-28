@@ -1,94 +1,94 @@
 /**
- *
+ * 
  * @export
  * @interface AssignRulesRequest
  */
 export interface AssignRulesRequest {
     /**
-     *
+     * 
      * @type {any}
      * @memberof AssignRulesRequest
      */
     'ids'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface CreatePolicy201Response
  */
 export interface CreatePolicy201Response {
     /**
-     *
+     * 
      * @type {CreatePolicy201ResponseData}
      * @memberof CreatePolicy201Response
      */
     'data'?: CreatePolicy201ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface CreatePolicy201ResponseData
  */
 export interface CreatePolicy201ResponseData {
     /**
-     *
+     * 
      * @type {Policy}
      * @memberof CreatePolicy201ResponseData
      */
     'schema'?: Policy;
 }
 /**
- *
+ * 
  * @export
- * @interface Errors
+ * @interface Error
  */
 export interface Errors {
     /**
-     *
+     * 
      * @type {any}
-     * @memberof Errors
+     * @memberof Error
      */
     'errors': any;
 }
 /**
- *
+ * 
  * @export
- * @interface Links
+ * @interface Link
  */
 export interface Links {
     /**
      * Link to first page
      * @type {any}
-     * @memberof Links
+     * @memberof Link
      */
     'first'?: any;
     /**
      * Link to last page
      * @type {any}
-     * @memberof Links
+     * @memberof Link
      */
     'last'?: any;
     /**
      * Link to previous page
      * @type {any}
-     * @memberof Links
+     * @memberof Link
      */
     'previous'?: any;
     /**
      * Link to next page
      * @type {any}
-     * @memberof Links
+     * @memberof Link
      */
     'next'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Metadata
  */
 export interface Metadata {
     /**
-     * Total number of items
+     * Total number of item
      * @type {any}
      * @memberof Metadata
      */
@@ -112,51 +112,51 @@ export interface Metadata {
      */
     'sort_by'?: any;
     /**
-     * Query string used to filter items by their attributes
+     * Query string used to filter items by their attribute
      * @type {any}
      * @memberof Metadata
      */
     'filter'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Policies200Response
  */
 export interface Policies200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof Policies200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof Policies200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Policies200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Policy
  */
 export interface Policy {
     /**
-     *
+     * 
      * @type {any}
      * @memberof Policy
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Policy
      */
@@ -180,7 +180,7 @@ export interface Policy {
      */
     'business_objective'?: any;
     /**
-     * The percentage above which the Policy meets compliance requirements
+     * The percentage above which the Policy meets compliance requirement
      * @type {any}
      * @memberof Policy
      */
@@ -192,7 +192,7 @@ export interface Policy {
      */
     'profile_id': any;
     /**
-     * Major version of the Operating System that the Policy covers
+     * Major version of the Operating System that the Policy cover
      * @type {any}
      * @memberof Policy
      */
@@ -224,7 +224,7 @@ export const PolicyTypeEnum = {
 export type PolicyTypeEnum = typeof PolicyTypeEnum[keyof typeof PolicyTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface PolicyUpdate
  */
@@ -242,26 +242,26 @@ export interface PolicyUpdate {
      */
     'business_objective'?: any;
     /**
-     * The percentage above which the Policy meets compliance requirements
+     * The percentage above which the Policy meets compliance requirement
      * @type {any}
      * @memberof PolicyUpdate
      */
     'compliance_threshold'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Profile
  */
 export interface Profile {
     /**
-     *
+     * 
      * @type {any}
      * @memberof Profile
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Profile
      */
@@ -285,7 +285,7 @@ export interface Profile {
      */
     'description'?: any;
     /**
-     * Pair of keys and values for Value Definition customizations
+     * Pair of keys and values for Value Definition customization
      * @type {any}
      * @memberof Profile
      */
@@ -299,70 +299,207 @@ export const ProfileTypeEnum = {
 export type ProfileTypeEnum = typeof ProfileTypeEnum[keyof typeof ProfileTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface Profile200Response
  */
 export interface Profile200Response {
     /**
-     *
+     * 
      * @type {Profile200ResponseData}
      * @memberof Profile200Response
      */
     'data'?: Profile200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface Profile200ResponseData
  */
 export interface Profile200ResponseData {
     /**
-     *
+     * 
      * @type {Profile}
      * @memberof Profile200ResponseData
      */
     'schema'?: Profile;
 }
 /**
- *
+ * 
  * @export
  * @interface Profiles200Response
  */
 export interface Profiles200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof Profiles200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof Profiles200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Profiles200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
+ * @export
+ * @interface Report
+ */
+export interface Report {
+    /**
+     * 
+     * @type {any}
+     * @memberof Report
+     */
+    'id'?: any;
+    /**
+     * 
+     * @type {any}
+     * @memberof Report
+     */
+    'type'?: ReportTypeEnum;
+    /**
+     * Short title of the Report
+     * @type {any}
+     * @memberof Report
+     */
+    'title'?: any;
+    /**
+     * The Business Objective associated to the Policy
+     * @type {any}
+     * @memberof Report
+     */
+    'business_objective'?: any;
+    /**
+     * The percentage above which the Policy meets compliance requirement
+     * @type {any}
+     * @memberof Report
+     */
+    'compliance_threshold'?: any;
+    /**
+     * Major version of the Operating System that the Report cover
+     * @type {any}
+     * @memberof Report
+     */
+    'os_major_version'?: any;
+    /**
+     * Identificator of the Profile
+     * @type {any}
+     * @memberof Report
+     */
+    'ref_id'?: any;
+    /**
+     * Title of the associated Profile
+     * @type {any}
+     * @memberof Report
+     */
+    'profile_title'?: any;
+    /**
+     * The number of Systems assigned to this Report
+     * @type {any}
+     * @memberof Report
+     */
+    'assigned_system_count'?: any;
+    /**
+     * The number of compliant Systems assigned to this Report
+     * @type {any}
+     * @memberof Report
+     */
+    'compliant_system_count'?: any;
+    /**
+     * Informs if the user has access to all the account\'s system
+     * @type {any}
+     * @memberof Report
+     */
+    'all_systems_exposed'?: any;
+    /**
+     * The number of unsupported Systems assigned to this Report
+     * @type {any}
+     * @memberof Report
+     */
+    'unsupported_system_count'?: any;
+}
+
+export const ReportTypeEnum = {
+    Report: 'report'
+} as const;
+
+export type ReportTypeEnum = typeof ReportTypeEnum[keyof typeof ReportTypeEnum];
+
+/**
+ * 
+ * @export
+ * @interface Report200Response
+ */
+export interface Report200Response {
+    /**
+     * 
+     * @type {Report200ResponseData}
+     * @memberof Report200Response
+     */
+    'data'?: Report200ResponseData;
+}
+/**
+ * 
+ * @export
+ * @interface Report200ResponseData
+ */
+export interface Report200ResponseData {
+    /**
+     * 
+     * @type {Report}
+     * @memberof Report200ResponseData
+     */
+    'schema'?: Report;
+}
+/**
+ * 
+ * @export
+ * @interface Reports200Response
+ */
+export interface Reports200Response {
+    /**
+     * 
+     * @type {Metadata}
+     * @memberof Reports200Response
+     */
+    'meta'?: Metadata;
+    /**
+     * 
+     * @type {Links}
+     * @memberof Reports200Response
+     */
+    'links'?: Links;
+    /**
+     * 
+     * @type {any}
+     * @memberof Reports200Response
+     */
+    'data'?: any;
+}
+/**
+ * 
  * @export
  * @interface Rule
  */
 export interface Rule {
     /**
-     *
+     * 
      * @type {any}
      * @memberof Rule
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Rule
      */
@@ -418,45 +555,45 @@ export const RuleTypeEnum = {
 export type RuleTypeEnum = typeof RuleTypeEnum[keyof typeof RuleTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface Rule200Response
  */
 export interface Rule200Response {
     /**
-     *
+     * 
      * @type {Rule200ResponseData}
      * @memberof Rule200Response
      */
     'data'?: Rule200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface Rule200ResponseData
  */
 export interface Rule200ResponseData {
     /**
-     *
+     * 
      * @type {Rule}
      * @memberof Rule200ResponseData
      */
     'schema'?: Rule;
 }
 /**
- *
+ * 
  * @export
  * @interface RuleGroup
  */
 export interface RuleGroup {
     /**
-     *
+     * 
      * @type {any}
      * @memberof RuleGroup
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof RuleGroup
      */
@@ -500,95 +637,95 @@ export const RuleGroupTypeEnum = {
 export type RuleGroupTypeEnum = typeof RuleGroupTypeEnum[keyof typeof RuleGroupTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface RuleGroup200Response
  */
 export interface RuleGroup200Response {
     /**
-     *
+     * 
      * @type {RuleGroup200ResponseData}
      * @memberof RuleGroup200Response
      */
     'data'?: RuleGroup200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface RuleGroup200ResponseData
  */
 export interface RuleGroup200ResponseData {
     /**
-     *
+     * 
      * @type {RuleGroup}
      * @memberof RuleGroup200ResponseData
      */
     'schema'?: RuleGroup;
 }
 /**
- *
+ * 
  * @export
  * @interface RuleGroups200Response
  */
 export interface RuleGroups200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof RuleGroups200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof RuleGroups200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof RuleGroups200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Rules200Response
  */
 export interface Rules200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof Rules200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof Rules200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Rules200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface SecurityGuide
  */
 export interface SecurityGuide {
     /**
-     *
+     * 
      * @type {any}
      * @memberof SecurityGuide
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof SecurityGuide
      */
@@ -618,7 +755,7 @@ export interface SecurityGuide {
      */
     'description'?: any;
     /**
-     * Major version of the Operating System that the Security Guide covers
+     * Major version of the Operating System that the Security Guide cover
      * @type {any}
      * @memberof SecurityGuide
      */
@@ -632,70 +769,70 @@ export const SecurityGuideTypeEnum = {
 export type SecurityGuideTypeEnum = typeof SecurityGuideTypeEnum[keyof typeof SecurityGuideTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface SecurityGuide200Response
  */
 export interface SecurityGuide200Response {
     /**
-     *
+     * 
      * @type {SecurityGuide200ResponseData}
      * @memberof SecurityGuide200Response
      */
     'data'?: SecurityGuide200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface SecurityGuide200ResponseData
  */
 export interface SecurityGuide200ResponseData {
     /**
-     *
+     * 
      * @type {SecurityGuide}
      * @memberof SecurityGuide200ResponseData
      */
     'schema'?: SecurityGuide;
 }
 /**
- *
+ * 
  * @export
  * @interface SecurityGuides200Response
  */
 export interface SecurityGuides200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof SecurityGuides200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof SecurityGuides200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof SecurityGuides200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface SupportedProfile
  */
 export interface SupportedProfile {
     /**
-     *
+     * 
      * @type {any}
      * @memberof SupportedProfile
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof SupportedProfile
      */
@@ -719,13 +856,13 @@ export interface SupportedProfile {
      */
     'security_guide_version'?: any;
     /**
-     * Major version of the Operating System that the Profile covers
+     * Major version of the Operating System that the Profile cover
      * @type {any}
      * @memberof SupportedProfile
      */
     'os_major_version'?: any;
     /**
-     * List of the supported Operating System minor versions that the Profile covers
+     * List of the supported Operating System minor versions that the Profile cover
      * @type {any}
      * @memberof SupportedProfile
      */
@@ -739,44 +876,44 @@ export const SupportedProfileTypeEnum = {
 export type SupportedProfileTypeEnum = typeof SupportedProfileTypeEnum[keyof typeof SupportedProfileTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface SupportedProfiles200Response
  */
 export interface SupportedProfiles200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof SupportedProfiles200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof SupportedProfiles200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof SupportedProfiles200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface System
  */
 export interface System {
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
@@ -788,43 +925,43 @@ export interface System {
      */
     'display_name'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'groups'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'culled_timestamp'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'stale_timestamp'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'stale_warning_timestamp'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'updated'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
     'insights_id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof System
      */
@@ -856,70 +993,70 @@ export const SystemTypeEnum = {
 export type SystemTypeEnum = typeof SystemTypeEnum[keyof typeof SystemTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface System200Response
  */
 export interface System200Response {
     /**
-     *
+     * 
      * @type {System200ResponseData}
      * @memberof System200Response
      */
     'data'?: System200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface System200ResponseData
  */
 export interface System200ResponseData {
     /**
-     *
+     * 
      * @type {System}
      * @memberof System200ResponseData
      */
     'schema'?: System;
 }
 /**
- *
+ * 
  * @export
  * @interface Systems200Response
  */
 export interface Systems200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof Systems200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof Systems200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Systems200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Tailoring
  */
 export interface Tailoring {
     /**
-     *
+     * 
      * @type {any}
      * @memberof Tailoring
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Tailoring
      */
@@ -931,19 +1068,25 @@ export interface Tailoring {
      */
     'profile_id'?: any;
     /**
-     * Major version of the Operating System that the Tailoring covers
+     * Identificator of the Security Guide that contains the parent Profile
+     * @type {any}
+     * @memberof Tailoring
+     */
+    'security_guide_id'?: any;
+    /**
+     * Major version of the Operating System that the Tailoring cover
      * @type {any}
      * @memberof Tailoring
      */
     'os_major_version'?: any;
     /**
-     * Minor version of the Operating System that the Tailoring covers
+     * Minor version of the Operating System that the Tailoring cover
      * @type {any}
      * @memberof Tailoring
      */
     'os_minor_version'?: any;
     /**
-     * Pair of keys and values for Value Definition customizations
+     * Pair of keys and values for Value Definition customization
      * @type {any}
      * @memberof Tailoring
      */
@@ -957,33 +1100,33 @@ export const TailoringTypeEnum = {
 export type TailoringTypeEnum = typeof TailoringTypeEnum[keyof typeof TailoringTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface Tailoring200Response
  */
 export interface Tailoring200Response {
     /**
-     *
+     * 
      * @type {Tailoring200ResponseData}
      * @memberof Tailoring200Response
      */
     'data'?: Tailoring200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface Tailoring200ResponseData
  */
 export interface Tailoring200ResponseData {
     /**
-     *
+     * 
      * @type {Tailoring}
      * @memberof Tailoring200ResponseData
      */
     'schema'?: Tailoring;
 }
 /**
- * Defines customizations of rules and variables for a set of profiles
+ * Defines customizations of rules and variables for a set of profile
  * @export
  * @interface TailoringFile
  */
@@ -991,51 +1134,51 @@ export interface TailoringFile {
     [key: string]: any;
 
     /**
-     *
+     * 
      * @type {any}
      * @memberof TailoringFile
      */
     'profiles'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface Tailorings200Response
  */
 export interface Tailorings200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof Tailorings200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof Tailorings200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof Tailorings200Response
      */
     'data'?: any;
 }
 /**
- *
+ * 
  * @export
  * @interface ValueDefinition
  */
 export interface ValueDefinition {
     /**
-     *
+     * 
      * @type {any}
      * @memberof ValueDefinition
      */
     'id'?: any;
     /**
-     *
+     * 
      * @type {any}
      * @memberof ValueDefinition
      */
@@ -1079,51 +1222,51 @@ export const ValueDefinitionTypeEnum = {
 export type ValueDefinitionTypeEnum = typeof ValueDefinitionTypeEnum[keyof typeof ValueDefinitionTypeEnum];
 
 /**
- *
+ * 
  * @export
  * @interface ValueDefinition200Response
  */
 export interface ValueDefinition200Response {
     /**
-     *
+     * 
      * @type {ValueDefinition200ResponseData}
      * @memberof ValueDefinition200Response
      */
     'data'?: ValueDefinition200ResponseData;
 }
 /**
- *
+ * 
  * @export
  * @interface ValueDefinition200ResponseData
  */
 export interface ValueDefinition200ResponseData {
     /**
-     *
+     * 
      * @type {ValueDefinition}
      * @memberof ValueDefinition200ResponseData
      */
     'schema'?: ValueDefinition;
 }
 /**
- *
+ * 
  * @export
  * @interface ValueDefinitions200Response
  */
 export interface ValueDefinitions200Response {
     /**
-     *
+     * 
      * @type {Metadata}
      * @memberof ValueDefinitions200Response
      */
     'meta'?: Metadata;
     /**
-     *
+     * 
      * @type {Links}
      * @memberof ValueDefinitions200Response
      */
     'links'?: Links;
     /**
-     *
+     * 
      * @type {any}
      * @memberof ValueDefinitions200Response
      */

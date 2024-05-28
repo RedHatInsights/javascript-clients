@@ -1,7 +1,7 @@
 // tslint:disable
 /**
- * Entitlements
- * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements)
+ * Entitlement
+ * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements) 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: ihands@redhat.com
@@ -15,20 +15,20 @@
 import * as globalImportUrl from 'url';
 import { Configuration } from './configuration';
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
-// Some imports not used depending on template conditions
+// Some imports not used depending on template condition
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- *
+ * 
  * @export
- * @interface ServiceDetails
+ * @interface ServiceDetail
  */
 export interface ServiceDetails {
     /**
-     *
+     * 
      * @type {boolean}
-     * @memberof ServiceDetails
+     * @memberof ServiceDetail
      */
     isEntitled?: boolean;
 }
@@ -40,7 +40,7 @@ export interface ServiceDetails {
 export const ServicesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         *
+         * 
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -57,7 +57,7 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-
+    
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -79,7 +79,7 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
 export const ServicesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         *
+         * 
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -101,7 +101,7 @@ export const ServicesApiFp = function(configuration?: Configuration) {
 export const ServicesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         *
+         * 
          * @summary get a list of services a user is entitled to
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -120,7 +120,7 @@ export const ServicesApiFactory = function (configuration?: Configuration, baseP
  */
 export class ServicesApi extends BaseAPI {
     /**
-     *
+     * 
      * @summary get a list of services a user is entitled to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

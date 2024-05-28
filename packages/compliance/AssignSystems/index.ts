@@ -13,23 +13,23 @@ import type { AssignRulesRequest, Systems200Response } from '../types';
 
 export type AssignSystemsParams = {
   /**
-  *
+  * 
   * @type { any }
   * @memberof AssignSystemsApi
   */
-  policyId: any,
+  policyId: any, 
   /**
-  *
+  * For internal use only
   * @type { any }
   * @memberof AssignSystemsApi
   */
-  xRHIDENTITY?: any,
+  xRHIDENTITY?: any, 
   /**
-  *
+  * 
   * @type { AssignRulesRequest }
   * @memberof AssignSystemsApi
   */
-  assignRulesRequest?: AssignRulesRequest,
+  assignRulesRequest?: AssignRulesRequest, 
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const assignSystemsParamCreator = async (...config: ([AssignSystemsParams
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
-            ? xRHIDENTITY
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
+            ? xRHIDENTITY 
             : JSON.stringify(xRHIDENTITY);
     }
 
