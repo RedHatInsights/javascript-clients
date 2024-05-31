@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,71 +13,71 @@ import type { PageDrawerEntryPayload } from '../types';
 
 export type DrawerResourceV1GetDrawerEntriesParams = {
   /**
-  * 
+  *
   * @type { Set<string> }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  appIds?: Set<string>, 
+  appIds?: Set<string>,
   /**
-  * 
+  *
   * @type { Set<string> }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  bundleIds?: Set<string>, 
+  bundleIds?: Set<string>,
   /**
-  * 
+  *
   * @type { string }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  endDate?: string, 
+  endDate?: string,
   /**
-  * 
+  *
   * @type { Set<string> }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  eventTypeIds?: Set<string>, 
+  eventTypeIds?: Set<string>,
   /**
-  * 
+  *
   * @type { number }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  limit?: number, 
+  limit?: number,
   /**
-  * 
+  *
   * @type { number }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  offset?: number, 
+  offset?: number,
   /**
-  * 
+  *
   * @type { number }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  pageNumber?: number, 
+  pageNumber?: number,
   /**
-  * 
+  *
   * @type { boolean }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  readStatus?: boolean, 
+  readStatus?: boolean,
   /**
-  * 
+  *
   * @type { string }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  sortBy?: string, 
+  sortBy?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  sortBy2?: string, 
+  sortBy2?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  startDate?: string, 
+  startDate?: string,
   options?: AxiosRequestConfig
 }
 

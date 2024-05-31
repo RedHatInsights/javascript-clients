@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,23 +13,23 @@ import type { CreatePolicy201Response, PolicyUpdate } from '../types';
 
 export type UpdatePolicyParams = {
   /**
-  * 
+  *
   * @type { any }
   * @memberof UpdatePolicyApi
   */
-  id: any, 
+  id: any,
   /**
   * For internal use only
   * @type { any }
   * @memberof UpdatePolicyApi
   */
-  xRHIDENTITY?: any, 
+  xRHIDENTITY?: any,
   /**
-  * 
+  *
   * @type { PolicyUpdate }
   * @memberof UpdatePolicyApi
   */
-  policyUpdate?: PolicyUpdate, 
+  policyUpdate?: PolicyUpdate,
   options?: AxiosRequestConfig
 }
 
@@ -37,7 +37,7 @@ const isUpdatePolicyObjectParams = (params: [UpdatePolicyParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true
 }
 /**
-* Updates a Policy with the provided attribute
+* Updates a Policy with the provided attributes
 * @summary Update a Policy
 * @param {UpdatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.
@@ -55,8 +55,8 @@ export const updatePolicyParamCreator = async (...config: ([UpdatePolicyParams] 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
-            ? xRHIDENTITY 
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+            ? xRHIDENTITY
             : JSON.stringify(xRHIDENTITY);
     }
 

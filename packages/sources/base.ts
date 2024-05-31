@@ -1,7 +1,7 @@
 // tslint:disable
 /**
- * Source
- * Source
+ * Sources
+ * Sources
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@redhat.com
@@ -13,7 +13,7 @@
 
 
 import { Configuration } from "./configuration";
-// Some imports not used depending on template condition
+// Some imports not used depending on template conditions
 // @ts-ignore
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
@@ -33,7 +33,7 @@ export const COLLECTION_FORMATS = {
 /**
  *
  * @export
- * @interface RequestArg
+ * @interface RequestArgs
  */
 export interface RequestArgs {
     url: string;

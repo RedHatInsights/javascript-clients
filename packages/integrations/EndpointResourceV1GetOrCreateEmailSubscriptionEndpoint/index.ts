@@ -1,23 +1,23 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 
 // @ts-ignore
-import type { Endpoint, RequestSystemSubscriptionProperties } from '../types';
+import type { EndpointDTO, RequestSystemSubscriptionProperties } from '../types';
 
 
 export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams = {
   /**
-  * 
+  *
   * @type { RequestSystemSubscriptionProperties }
   * @memberof EndpointResourceV1GetOrCreateEmailSubscriptionEndpointApi
   */
-  requestSystemSubscriptionProperties: RequestSystemSubscriptionProperties, 
+  requestSystemSubscriptionProperties: RequestSystemSubscriptionProperties,
   options?: AxiosRequestConfig
 }
 

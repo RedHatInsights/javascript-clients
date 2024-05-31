@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,17 +13,17 @@ import type {  } from '../types';
 
 export type NotificationResourceV1AppendBehaviorGroupToEventTypeParams = {
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1AppendBehaviorGroupToEventTypeApi
   */
-  behaviorGroupUuid: string, 
+  behaviorGroupUuid: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1AppendBehaviorGroupToEventTypeApi
   */
-  eventTypeUuid: string, 
+  eventTypeUuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (para
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupUuid') && Object.prototype.hasOwnProperty.call(params, 'eventTypeUuid')
 }
 /**
-* 
+*
 * @summary Add a behavior group to the given event type.
 * @param {NotificationResourceV1AppendBehaviorGroupToEventTypeParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -1,6 +1,6 @@
 // tslint:disable
 /**
- * Insights Remediation
+ * Insights Remediations
  * Insights Remediations Service
  *
  * The version of the OpenAPI document: 1.5.0

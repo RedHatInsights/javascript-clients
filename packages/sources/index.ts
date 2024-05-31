@@ -1,7 +1,7 @@
 // tslint:disable
 /**
- * Source
- * Source
+ * Sources
+ * Sources
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@redhat.com

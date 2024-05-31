@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,47 +13,47 @@ import type { NotificationHistory } from '../types';
 
 export type EndpointResourceV1GetEndpointHistoryParams = {
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  id: string, 
+  id: string,
   /**
   * Number of items per page, if not specified or 0 is used, returns a maximum of 500 elements.
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Page number. Starts at first page (0), if not specified starts at first page.
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  pageNumber?: number, 
+  pageNumber?: number,
   /**
   * Include the detail in the reply
   * @type { boolean }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  includeDetail?: boolean, 
+  includeDetail?: boolean,
   /**
-  * 
+  *
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  offset?: number, 
+  offset?: number,
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  sortBy?: string, 
+  sortBy?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  sortBy2?: string, 
+  sortBy2?: string,
   options?: AxiosRequestConfig
 }
 
@@ -61,7 +61,7 @@ const isEndpointResourceV1GetEndpointHistoryObjectParams = (params: [EndpointRes
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true && true && true
 }
 /**
-* 
+*
 * @param {EndpointResourceV1GetEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

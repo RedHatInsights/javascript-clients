@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,11 +13,11 @@ import type { Facet } from '../types';
 
 export type NotificationResourceV1GetApplicationsFacetsParams = {
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1GetApplicationsFacetsApi
   */
-  bundleName?: string, 
+  bundleName?: string,
   options?: AxiosRequestConfig
 }
 
@@ -26,7 +26,7 @@ const isNotificationResourceV1GetApplicationsFacetsObjectParams = (params: [Noti
 }
 /**
 * Returns a list of configured applications that includes the application name, the display name, and the ID. You can use this list to configure a filter in the UI.
-* @summary List configured application
+* @summary List configured applications
 * @param {NotificationResourceV1GetApplicationsFacetsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

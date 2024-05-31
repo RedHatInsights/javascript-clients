@@ -1,6 +1,6 @@
 // tslint:disable
 /**
- * Insights Remediation
+ * Insights Remediations
  * Insights Remediations Service
  *
  * The version of the OpenAPI document: 1.5.0
@@ -30,14 +30,14 @@ export class Configuration {
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     /**
      * parameter for basic security
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */
     username?: string;
     /**
      * parameter for basic security
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */
@@ -51,13 +51,13 @@ export class Configuration {
     accessToken?: string | ((name?: string, scopes?: string[]) => string);
     /**
      * override base path
-     * 
+     *
      * @type {string}
      * @memberof Configuration
      */
     basePath?: string;
     /**
-     * base options for axios call
+     * base options for axios calls
      *
      * @type {any}
      * @memberof Configuration

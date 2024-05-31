@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,53 +13,53 @@ import type { PageEventType } from '../types';
 
 export type NotificationResourceV1GetEventTypesParams = {
   /**
-  * 
+  *
   * @type { Set<string> }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  applicationIds?: Set<string>, 
+  applicationIds?: Set<string>,
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  bundleId?: string, 
+  bundleId?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  eventTypeName?: string, 
+  eventTypeName?: string,
   /**
-  * 
+  *
   * @type { number }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  limit?: number, 
+  limit?: number,
   /**
-  * 
+  *
   * @type { number }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  offset?: number, 
+  offset?: number,
   /**
-  * 
+  *
   * @type { number }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  pageNumber?: number, 
+  pageNumber?: number,
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  sortBy?: string, 
+  sortBy?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  sortBy2?: string, 
+  sortBy2?: string,
   options?: AxiosRequestConfig
 }
 
@@ -68,7 +68,7 @@ const isNotificationResourceV1GetEventTypesObjectParams = (params: [Notification
 }
 /**
 * Lists all event types. You can filter the returned list by bundle or application name.
-* @summary List all event type
+* @summary List all event types
 * @param {NotificationResourceV1GetEventTypesParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

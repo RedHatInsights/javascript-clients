@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,23 +13,23 @@ import type { Errors, ValueDefinition200Response } from '../types';
 
 export type ValueDefinitionParams = {
   /**
-  * 
+  *
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  securityGuideId: any, 
+  securityGuideId: any,
   /**
-  * 
+  *
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  id: any, 
+  id: any,
   /**
   * For internal use only
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  xRHIDENTITY?: any, 
+  xRHIDENTITY?: any,
   options?: AxiosRequestConfig
 }
 
@@ -56,8 +56,8 @@ export const valueDefinitionParamCreator = async (...config: ([ValueDefinitionPa
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
-            ? xRHIDENTITY 
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+            ? xRHIDENTITY
             : JSON.stringify(xRHIDENTITY);
     }
 
