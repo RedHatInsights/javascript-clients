@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.1.4...@redhat-cloud-services/compliance-client-0.1.5) (2024-05-31)
+
+
+### Bug Fixes
+
+* apply fixed template import paths ([4d389ef](https://github.com/RedHatInsights/javascript-clients/commit/4d389ef15abf07a4ac24e6ff6656e39cb9789889))
+
 ## [0.1.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.1.3...@redhat-cloud-services/compliance-client-0.1.4) (2024-05-29)
 
 ## [0.1.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.1.2...@redhat-cloud-services/compliance-client-0.1.3) (2024-05-29)
