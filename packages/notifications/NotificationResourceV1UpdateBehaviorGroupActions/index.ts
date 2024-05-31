@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -17,13 +17,13 @@ export type NotificationResourceV1UpdateBehaviorGroupActionsParams = {
   * @type { string }
   * @memberof NotificationResourceV1UpdateBehaviorGroupActionsApi
   */
-  behaviorGroupId: string, 
+  behaviorGroupId: string,
   /**
-  * 
+  *
   * @type { Array<string> }
   * @memberof NotificationResourceV1UpdateBehaviorGroupActionsApi
   */
-  requestBody?: Array<string>, 
+  requestBody?: Array<string>,
   options?: AxiosRequestConfig
 }
 
@@ -32,7 +32,7 @@ const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: 
 }
 /**
 * Updates the list of actions to be executed in that particular behavior group after an event is received.
-* @summary Update the list of behavior group action
+* @summary Update the list of behavior group actions
 * @param {NotificationResourceV1UpdateBehaviorGroupActionsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

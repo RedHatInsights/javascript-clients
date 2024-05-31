@@ -1,6 +1,6 @@
 // tslint:disable
 /**
- * Insights Remediation
+ * Insights Remediations
  * Insights Remediations Service
  *
  * The version of the OpenAPI document: 1.5.0
@@ -15,106 +15,106 @@
 import * as globalImportUrl from 'url';
 import { Configuration } from './configuration';
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
-// Some imports not used depending on template condition
+// Some imports not used depending on template conditions
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
- * 
+ *
  * @export
- * @interface Count
+ * @interface Counts
  */
 export interface Counts {
     /**
-     * 
+     *
      * @type {number}
-     * @memberof Count
+     * @memberof Counts
      */
     pending: number;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof Count
+     * @memberof Counts
      */
     running: number;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof Count
+     * @memberof Counts
      */
     success: number;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof Count
+     * @memberof Counts
      */
     failure: number;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof Count
+     * @memberof Counts
      */
     canceled: number;
 }
 /**
- * 
+ *
  * @export
- * @interface Diagnosi
+ * @interface Diagnosis
  */
 export interface Diagnosis {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof Diagnosi
+     * @memberof Diagnosis
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof Diagnosi
+     * @memberof Diagnosis
      */
     insights_id: string;
     /**
-     * 
+     *
      * @type {{ [key: string]: object; }}
-     * @memberof Diagnosi
+     * @memberof Diagnosis
      */
     details: { [key: string]: object; };
 }
 /**
- * 
+ *
  * @export
  * @interface ExecuteRemediation
  */
 export interface ExecuteRemediation {
     /**
-     * 
+     *
      * @type {string}
      * @memberof ExecuteRemediation
      */
     id: string;
 }
 /**
- * 
+ *
  * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
     /**
-     * 
+     *
      * @type {string}
      * @memberof InlineResponse200
      */
     version: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof InlineResponse200
      */
     commit: string;
 }
 /**
- * 
+ *
  * @export
  * @interface Meta
  */
@@ -133,7 +133,7 @@ export interface Meta {
     total: number;
 }
 /**
- * 
+ *
  * @export
  * @interface MultipleDelete
  */
@@ -146,194 +146,194 @@ export interface MultipleDelete {
     deleted_count: number;
 }
 /**
- * 
+ *
  * @export
- * @interface NoExecutor
+ * @interface NoExecutors
  */
 export interface NoExecutors {
     /**
-     * 
+     *
      * @type {Array<NoExecutorsErrors>}
-     * @memberof NoExecutor
+     * @memberof NoExecutors
      */
     errors: Array<NoExecutorsErrors>;
 }
 /**
- * 
+ *
  * @export
- * @interface NoExecutorsError
+ * @interface NoExecutorsErrors
  */
 export interface NoExecutorsErrors {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof NoExecutorsError
+     * @memberof NoExecutorsErrors
      */
     id: string;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof NoExecutorsError
+     * @memberof NoExecutorsErrors
      */
     status?: number;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof NoExecutorsError
+     * @memberof NoExecutorsErrors
      */
     code?: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof NoExecutorsError
+     * @memberof NoExecutorsErrors
      */
     title?: string;
 }
 /**
- * 
+ *
  * @export
  * @interface PlaybookDefinition
  */
 export interface PlaybookDefinition {
     /**
-     * 
+     *
      * @type {Array<PlaybookDefinitionIssues>}
      * @memberof PlaybookDefinition
      */
     issues: Array<PlaybookDefinitionIssues>;
     /**
-     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not 
+     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
      * @type {boolean}
      * @memberof PlaybookDefinition
      */
     auto_reboot?: boolean;
 }
 /**
- * 
+ *
  * @export
- * @interface PlaybookDefinitionIssue
+ * @interface PlaybookDefinitionIssues
  */
 export interface PlaybookDefinitionIssues {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookDefinitionIssue
+     * @memberof PlaybookDefinitionIssues
      */
     id: string;
     /**
-     * 
+     *
      * @type {Array<string>}
-     * @memberof PlaybookDefinitionIssue
+     * @memberof PlaybookDefinitionIssues
      */
     systems: Array<string>;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookDefinitionIssue
+     * @memberof PlaybookDefinitionIssues
      */
     resolution?: string;
 }
 /**
- * 
+ *
  * @export
- * @interface PlaybookExecutorDetail
+ * @interface PlaybookExecutorDetails
  */
 export interface PlaybookExecutorDetails {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     executor_id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     executor_name: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     updated_at: string;
     /**
      * Playbook created for the playbook run executor.
      * @type {string}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     playbook: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     playbook_run_id: string;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     system_count: number;
     /**
-     * 
+     *
      * @type {Counts}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     counts?: Counts;
     /**
-     * 
+     *
      * @type {PlaybookRunExecutorStatus}
-     * @memberof PlaybookExecutorDetail
+     * @memberof PlaybookExecutorDetails
      */
     status: PlaybookRunExecutorStatus;
 }
 /**
- * 
+ *
  * @export
- * @interface PlaybookExecutorStatu
+ * @interface PlaybookExecutorStatus
  */
 export interface PlaybookExecutorStatus {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     endpoint_id: string | null;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     executor_id: string | null;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     executor_type: string | null;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     executor_name: string | null;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     system_count: number;
     /**
-     * 
+     *
      * @type {Array<string>}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     system_ids: Array<string>;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutorStatu
+     * @memberof PlaybookExecutorStatus
      */
     connection_status: PlaybookExecutorStatusConnectionStatusEnum;
 }
@@ -349,142 +349,142 @@ export enum PlaybookExecutorStatusConnectionStatusEnum {
 }
 
 /**
- * 
+ *
  * @export
- * @interface PlaybookExecutor
+ * @interface PlaybookExecutors
  */
 export interface PlaybookExecutors {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutor
+     * @memberof PlaybookExecutors
      */
     executor_id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookExecutor
+     * @memberof PlaybookExecutors
      */
     executor_name: string;
     /**
-     * 
+     *
      * @type {PlaybookRunExecutorStatus}
-     * @memberof PlaybookExecutor
+     * @memberof PlaybookExecutors
      */
     status: PlaybookRunExecutorStatus;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof PlaybookExecutor
+     * @memberof PlaybookExecutors
      */
     system_count: number;
     /**
-     * 
+     *
      * @type {Counts}
-     * @memberof PlaybookExecutor
+     * @memberof PlaybookExecutors
      */
     counts: Counts;
 }
 /**
- * 
+ *
  * @export
- * @interface PlaybookRunDetail
+ * @interface PlaybookRunDetails
  */
 export interface PlaybookRunDetails {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     id: string;
     /**
-     * 
+     *
      * @type {Array<PlaybookExecutors>}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     executors: Array<PlaybookExecutors>;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     remediation_id: string;
     /**
-     * 
+     *
      * @type {UserOut}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     created_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     created_at: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     updated_at: string;
     /**
-     * 
+     *
      * @type {PlaybookRunStatus}
-     * @memberof PlaybookRunDetail
+     * @memberof PlaybookRunDetails
      */
     status: PlaybookRunStatus;
 }
 /**
- * 
+ *
  * @export
- * @interface PlaybookRunExecutorDetail
+ * @interface PlaybookRunExecutorDetails
  */
 export interface PlaybookRunExecutorDetails {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     id?: string;
     /**
-     * 
+     *
      * @type {Array<PlaybookExecutorDetails>}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     executors: Array<PlaybookExecutorDetails>;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     remediation_id: string;
     /**
-     * 
+     *
      * @type {UserOut}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     created_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     created_at: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     updated_at: string;
     /**
-     * 
+     *
      * @type {PlaybookRunStatus}
-     * @memberof PlaybookRunExecutorDetail
+     * @memberof PlaybookRunExecutorDetails
      */
     status: PlaybookRunStatus;
 }
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
@@ -498,7 +498,7 @@ export enum PlaybookRunExecutorStatus {
 }
 
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
@@ -511,69 +511,69 @@ export enum PlaybookRunStatus {
 }
 
 /**
- * 
+ *
  * @export
- * @interface PlaybookRunSystemDetail
+ * @interface PlaybookRunSystemDetails
  */
 export interface PlaybookRunSystemDetails {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     system_id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     system_name: string;
     /**
-     * 
+     *
      * @type {PlaybookRunSystemStatus}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     status: PlaybookRunSystemStatus;
     /**
      * Current formatted system log from playbook run system.
      * @type {string}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     console: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     playbook_run_executor_id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystemDetail
+     * @memberof PlaybookRunSystemDetails
      */
     updated_at: string;
 }
 /**
- * 
+ *
  * @export
  * @interface PlaybookRunSystemList
  */
 export interface PlaybookRunSystemList {
     /**
-     * 
+     *
      * @type {Array<PlaybookRunSystems>}
      * @memberof PlaybookRunSystemList
      */
     data: Array<PlaybookRunSystems>;
     /**
-     * 
+     *
      * @type {Meta}
      * @memberof PlaybookRunSystemList
      */
     meta: Meta;
 }
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
@@ -586,187 +586,187 @@ export enum PlaybookRunSystemStatus {
 }
 
 /**
- * 
+ *
  * @export
- * @interface PlaybookRunSystem
+ * @interface PlaybookRunSystems
  */
 export interface PlaybookRunSystems {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystem
+     * @memberof PlaybookRunSystems
      */
     system_id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystem
+     * @memberof PlaybookRunSystems
      */
     system_name: string;
     /**
-     * 
+     *
      * @type {PlaybookRunSystemStatus}
-     * @memberof PlaybookRunSystem
+     * @memberof PlaybookRunSystems
      */
     status: PlaybookRunSystemStatus;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystem
+     * @memberof PlaybookRunSystems
      */
     updated_at: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof PlaybookRunSystem
+     * @memberof PlaybookRunSystems
      */
     playbook_run_executor_id: string;
 }
 /**
- * 
+ *
  * @export
  * @interface PlaybookRunsInput
  */
 export interface PlaybookRunsInput {
     /**
-     * 
+     *
      * @type {Array<string>}
      * @memberof PlaybookRunsInput
      */
     exclude?: Array<string>;
 }
 /**
- * 
+ *
  * @export
  * @interface PlaybookRunsList
  */
 export interface PlaybookRunsList {
     /**
-     * 
+     *
      * @type {Array<PlaybookRunDetails>}
      * @memberof PlaybookRunsList
      */
     data: Array<PlaybookRunDetails>;
     /**
-     * 
+     *
      * @type {Meta}
      * @memberof PlaybookRunsList
      */
     meta: Meta;
 }
 /**
- * 
+ *
  * @export
- * @interface RemediationConnectionStatu
+ * @interface RemediationConnectionStatus
  */
 export interface RemediationConnectionStatus {
     /**
-     * 
+     *
      * @type {Meta}
-     * @memberof RemediationConnectionStatu
+     * @memberof RemediationConnectionStatus
      */
     meta: Meta;
     /**
-     * 
+     *
      * @type {Array<PlaybookExecutorStatus>}
-     * @memberof RemediationConnectionStatu
+     * @memberof RemediationConnectionStatus
      */
     data: Array<PlaybookExecutorStatus>;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationCreated
  */
 export interface RemediationCreated {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationCreated
      */
     id: string;
 }
 /**
- * 
+ *
  * @export
- * @interface RemediationDetail
+ * @interface RemediationDetails
  */
 export interface RemediationDetails {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     name: string;
     /**
      * Indicates whether any of the issues contained in the remediation require system reboot
      * @type {boolean}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     needs_reboot: boolean;
     /**
      * Indicates whether a remediation has been marked as archived
      * @type {boolean}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     archived: boolean;
     /**
-     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not 
+     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
      * @type {boolean}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     auto_reboot: boolean;
     /**
-     * 
+     *
      * @type {UserOut}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     created_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     created_at: string;
     /**
-     * 
+     *
      * @type {UserOut}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     updated_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     updated_at: string;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     resolved_count: number;
     /**
-     * 
+     *
      * @type {Array<RemediationIssue>}
-     * @memberof RemediationDetail
+     * @memberof RemediationDetails
      */
     issues: Array<RemediationIssue>;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationInput
  */
 export interface RemediationInput {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationInput
      */
@@ -778,82 +778,82 @@ export interface RemediationInput {
      */
     archived?: boolean;
     /**
-     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not 
+     * Indicates whether systems that require reboot for the remediation to be properly applied should be rebooted automatically or not
      * @type {boolean}
      * @memberof RemediationInput
      */
     auto_reboot?: boolean;
     /**
-     * 
+     *
      * @type {RemediationInputAdd}
      * @memberof RemediationInput
      */
     add?: RemediationInputAdd;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationInputAdd
  */
 export interface RemediationInputAdd {
     /**
-     * 
+     *
      * @type {Array<RemediationInputAddIssues>}
      * @memberof RemediationInputAdd
      */
     issues: Array<RemediationInputAddIssues>;
     /**
-     * 
+     *
      * @type {Array<string>}
      * @memberof RemediationInputAdd
      */
     systems?: Array<string>;
 }
 /**
- * 
+ *
  * @export
- * @interface RemediationInputAddIssue
+ * @interface RemediationInputAddIssues
  */
 export interface RemediationInputAddIssues {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationInputAddIssue
+     * @memberof RemediationInputAddIssues
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RemediationInputAddIssue
+     * @memberof RemediationInputAddIssues
      */
     resolution?: string;
     /**
-     * 
+     *
      * @type {Array<string>}
-     * @memberof RemediationInputAddIssue
+     * @memberof RemediationInputAddIssues
      */
     systems?: Array<string>;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationIssue
  */
 export interface RemediationIssue {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationIssue
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationIssue
      */
     description: string;
     /**
-     * 
+     *
      * @type {RemediationIssueResolution}
      * @memberof RemediationIssue
      */
@@ -865,45 +865,45 @@ export interface RemediationIssue {
      */
     resolutions_available?: number;
     /**
-     * 
+     *
      * @type {Array<SystemOut>}
      * @memberof RemediationIssue
      */
     systems: Array<SystemOut>;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationIssueIn
  */
 export interface RemediationIssueIn {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationIssueIn
      */
     resolution: string;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationIssueResolution
  */
 export interface RemediationIssueResolution {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationIssueResolution
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationIssueResolution
      */
     description: string;
     /**
-     * 
+     *
      * @type {ResolutionRisk}
      * @memberof RemediationIssueResolution
      */
@@ -916,105 +916,105 @@ export interface RemediationIssueResolution {
     needs_reboot: boolean;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationIssueSystemList
  */
 export interface RemediationIssueSystemList {
     /**
-     * 
+     *
      * @type {Array<SystemOut>}
      * @memberof RemediationIssueSystemList
      */
     data: Array<SystemOut>;
     /**
-     * 
+     *
      * @type {Meta}
      * @memberof RemediationIssueSystemList
      */
     meta: Meta;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationList
  */
 export interface RemediationList {
     /**
-     * 
+     *
      * @type {Array<RemediationListItem>}
      * @memberof RemediationList
      */
     data: Array<RemediationListItem>;
     /**
-     * 
+     *
      * @type {Meta}
      * @memberof RemediationList
      */
     meta: Meta;
     /**
-     * 
+     *
      * @type {RemediationListLinks}
      * @memberof RemediationList
      */
     links: RemediationListLinks;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationListItem
  */
 export interface RemediationListItem {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationListItem
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationListItem
      */
     name: string;
     /**
-     * 
+     *
      * @type {UserOut}
      * @memberof RemediationListItem
      */
     created_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationListItem
      */
     created_at: string;
     /**
-     * 
+     *
      * @type {UserOut}
      * @memberof RemediationListItem
      */
     updated_by: UserOut;
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationListItem
      */
     updated_at: string;
     /**
-     * 
+     *
      * @type {number}
      * @memberof RemediationListItem
      */
     issue_count: number;
     /**
-     * 
+     *
      * @type {number}
      * @memberof RemediationListItem
      */
     system_count: number;
     /**
-     * 
+     *
      * @type {number}
      * @memberof RemediationListItem
      */
@@ -1032,146 +1032,146 @@ export interface RemediationListItem {
      */
     archived: boolean;
     /**
-     * 
+     *
      * @type {Array<PlaybookRunDetails>}
      * @memberof RemediationListItem
      */
     playbook_runs?: Array<PlaybookRunDetails>;
 }
 /**
- * 
+ *
  * @export
- * @interface RemediationListLink
+ * @interface RemediationListLinks
  */
 export interface RemediationListLinks {
     /**
-     * relative link to the first page of the query result
+     * relative link to the first page of the query results
      * @type {string}
-     * @memberof RemediationListLink
+     * @memberof RemediationListLinks
      */
     first: string;
     /**
-     * relative link to the last page of the query result
+     * relative link to the last page of the query results
      * @type {string}
-     * @memberof RemediationListLink
+     * @memberof RemediationListLinks
      */
     last: string;
     /**
      * relative link to the next page of the query results (or null if this is the last page)
      * @type {string}
-     * @memberof RemediationListLink
+     * @memberof RemediationListLinks
      */
     next: string | null;
     /**
      * relative link to the previous page of the query results (or null if this is the first page)
      * @type {string}
-     * @memberof RemediationListLink
+     * @memberof RemediationListLinks
      */
     previous: string | null;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationNameList
  */
 export interface RemediationNameList {
     /**
-     * 
+     *
      * @type {Array<RemediationNameListItem>}
      * @memberof RemediationNameList
      */
     data: Array<RemediationNameListItem>;
     /**
-     * 
+     *
      * @type {Meta}
      * @memberof RemediationNameList
      */
     meta: Meta;
     /**
-     * 
+     *
      * @type {RemediationListLinks}
      * @memberof RemediationNameList
      */
     links: RemediationListLinks;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationNameListItem
  */
 export interface RemediationNameListItem {
     /**
-     * 
+     *
      * @type {string}
      * @memberof RemediationNameListItem
      */
     name: string;
 }
 /**
- * 
+ *
  * @export
  * @interface RemediationsList
  */
 export interface RemediationsList {
     /**
-     * 
+     *
      * @type {Array<string>}
      * @memberof RemediationsList
      */
     remediation_ids: Array<string>;
 }
 /**
- * 
+ *
  * @export
  * @interface RequestError
  */
 export interface RequestError {
     /**
-     * 
+     *
      * @type {Array<RequestErrorErrors>}
      * @memberof RequestError
      */
     errors: Array<RequestErrorErrors>;
 }
 /**
- * 
+ *
  * @export
- * @interface RequestErrorError
+ * @interface RequestErrorErrors
  */
 export interface RequestErrorErrors {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RequestErrorError
+     * @memberof RequestErrorErrors
      */
     id: string;
     /**
-     * 
+     *
      * @type {number}
-     * @memberof RequestErrorError
+     * @memberof RequestErrorErrors
      */
     status: number;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RequestErrorError
+     * @memberof RequestErrorErrors
      */
     code: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof RequestErrorError
+     * @memberof RequestErrorErrors
      */
     title: string;
     /**
-     * 
+     *
      * @type {object}
-     * @memberof RequestErrorError
+     * @memberof RequestErrorErrors
      */
     details?: object;
 }
 /**
- * 
+ *
  * @export
  * @enum {string}
  */
@@ -1184,125 +1184,125 @@ export enum ResolutionRisk {
 }
 
 /**
- * 
+ *
  * @export
- * @interface Resolution
+ * @interface Resolutions
  */
 export interface Resolutions {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof Resolution
+     * @memberof Resolutions
      */
     id: string;
     /**
-     * 
+     *
      * @type {ResolutionRisk}
-     * @memberof Resolution
+     * @memberof Resolutions
      */
     resolution_risk: ResolutionRisk;
     /**
-     * 
+     *
      * @type {Array<ResolutionsResolutions>}
-     * @memberof Resolution
+     * @memberof Resolutions
      */
     resolutions: Array<ResolutionsResolutions>;
 }
 /**
- * 
+ *
  * @export
  * @interface ResolutionsBatchInput
  */
 export interface ResolutionsBatchInput {
     /**
-     * 
+     *
      * @type {Array<string>}
      * @memberof ResolutionsBatchInput
      */
     issues: Array<string>;
 }
 /**
- * 
+ *
  * @export
- * @interface ResolutionsResolution
+ * @interface ResolutionsResolutions
  */
 export interface ResolutionsResolutions {
     /**
-     * 
+     *
      * @type {string}
-     * @memberof ResolutionsResolution
+     * @memberof ResolutionsResolutions
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
-     * @memberof ResolutionsResolution
+     * @memberof ResolutionsResolutions
      */
     description: string;
     /**
      * Indicates whether the given resolution involves system reboot
      * @type {boolean}
-     * @memberof ResolutionsResolution
+     * @memberof ResolutionsResolutions
      */
     needs_reboot: boolean;
     /**
-     * 
+     *
      * @type {ResolutionRisk}
-     * @memberof ResolutionsResolution
+     * @memberof ResolutionsResolutions
      */
     resolution_risk: ResolutionRisk;
 }
 /**
- * 
+ *
  * @export
  * @interface SystemOut
  */
 export interface SystemOut {
     /**
-     * 
+     *
      * @type {string}
      * @memberof SystemOut
      */
     id: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SystemOut
      */
     hostname: string | null;
     /**
-     * 
+     *
      * @type {string}
      * @memberof SystemOut
      */
     display_name: string | null;
     /**
-     * 
+     *
      * @type {boolean}
      * @memberof SystemOut
      */
     resolved?: boolean;
 }
 /**
- * 
+ *
  * @export
  * @interface UserOut
  */
 export interface UserOut {
     /**
-     * 
+     *
      * @type {string}
      * @memberof UserOut
      */
     username: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof UserOut
      */
     first_name?: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof UserOut
      */
@@ -1317,7 +1317,7 @@ export const DiagnosisApiAxiosParamCreator = function (configuration?: Configura
     return {
         /**
          * Provides host-specific diagnosis information
-         * @summary host-specific diagnosi
+         * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
          * @param {string} [branchId] Branch ID passed by satellite
@@ -1349,7 +1349,7 @@ export const DiagnosisApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1372,7 +1372,7 @@ export const DiagnosisApiFp = function(configuration?: Configuration) {
     return {
         /**
          * Provides host-specific diagnosis information
-         * @summary host-specific diagnosi
+         * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
          * @param {string} [branchId] Branch ID passed by satellite
@@ -1397,7 +1397,7 @@ export const DiagnosisApiFactory = function (configuration?: Configuration, base
     return {
         /**
          * Provides host-specific diagnosis information
-         * @summary host-specific diagnosi
+         * @summary host-specific diagnosis
          * @param {string} system System identifier
          * @param {string} [remediation] Remediation identifier (uuid)
          * @param {string} [branchId] Branch ID passed by satellite
@@ -1419,7 +1419,7 @@ export const DiagnosisApiFactory = function (configuration?: Configuration, base
 export class DiagnosisApi extends BaseAPI {
     /**
      * Provides host-specific diagnosis information
-     * @summary host-specific diagnosi
+     * @summary host-specific diagnosis
      * @param {string} system System identifier
      * @param {string} [remediation] Remediation identifier (uuid)
      * @param {string} [branchId] Branch ID passed by satellite
@@ -1441,9 +1441,9 @@ export class DiagnosisApi extends BaseAPI {
 export const GeneratorApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Generates an Ansible Playbook based on input parameter
+         * Generates an Ansible Playbook based on input parameters
          * @summary Generate an Ansible Playbook
-         * @param {PlaybookDefinition} playbookDefinition 
+         * @param {PlaybookDefinition} playbookDefinition
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1463,7 +1463,7 @@ export const GeneratorApiAxiosParamCreator = function (configuration?: Configura
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1489,9 +1489,9 @@ export const GeneratorApiAxiosParamCreator = function (configuration?: Configura
 export const GeneratorApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Generates an Ansible Playbook based on input parameter
+         * Generates an Ansible Playbook based on input parameters
          * @summary Generate an Ansible Playbook
-         * @param {PlaybookDefinition} playbookDefinition 
+         * @param {PlaybookDefinition} playbookDefinition
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1512,9 +1512,9 @@ export const GeneratorApiFp = function(configuration?: Configuration) {
 export const GeneratorApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Generates an Ansible Playbook based on input parameter
+         * Generates an Ansible Playbook based on input parameters
          * @summary Generate an Ansible Playbook
-         * @param {PlaybookDefinition} playbookDefinition 
+         * @param {PlaybookDefinition} playbookDefinition
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1532,9 +1532,9 @@ export const GeneratorApiFactory = function (configuration?: Configuration, base
  */
 export class GeneratorApi extends BaseAPI {
     /**
-     * Generates an Ansible Playbook based on input parameter
+     * Generates an Ansible Playbook based on input parameters
      * @summary Generate an Ansible Playbook
-     * @param {PlaybookDefinition} playbookDefinition 
+     * @param {PlaybookDefinition} playbookDefinition
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GeneratorApi
@@ -1591,7 +1591,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1637,7 +1637,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1650,8 +1650,8 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Checks remediation for the existence of smart_managment flaged system
-         * @summary Check smart_managment system
+         * Checks remediation for the existence of smart_managment flaged systems
+         * @summary Check smart_managment systems
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1673,7 +1673,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1688,7 +1688,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
         /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1708,7 +1708,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1748,7 +1748,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1790,7 +1790,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1838,7 +1838,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1852,8 +1852,8 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
-         * @summary Bulk Delete Remediation
-         * @param {RemediationsList} remediationsList 
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1873,7 +1873,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -1891,7 +1891,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
-         * @summary Download Remediation
+         * @summary Download Remediations
          * @param {Array<string>} [selectedRemediations] Selected Remediations for download
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1912,7 +1912,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -1954,7 +1954,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2002,7 +2002,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2069,7 +2069,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2105,7 +2105,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2118,7 +2118,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc 
+         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -2141,7 +2141,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2155,7 +2155,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
-         * @summary Get Remediation Issue System
+         * @summary Get Remediation Issue Systems
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {number} [limit] Maximum number of results to return
@@ -2198,7 +2198,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2249,7 +2249,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2263,14 +2263,14 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * Provides information about Remediations, RBAC permission {remediations:remediation:read}
-         * @summary List Remediation
+         * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
-         * @param {boolean} [hideArchived] Hide archived playbook
-         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response 
+         * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2314,7 +2314,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2365,7 +2365,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             }
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -2381,7 +2381,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {PlaybookRunsInput} [playbookRunsInput] 
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2402,7 +2402,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2422,7 +2422,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2447,7 +2447,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2468,7 +2468,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
-         * @param {RemediationIssueIn} remediationIssueIn 
+         * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2498,7 +2498,7 @@ export const RemediationsApiAxiosParamCreator = function (configuration?: Config
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -2556,8 +2556,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Checks remediation for the existence of smart_managment flaged system
-         * @summary Check smart_managment system
+         * Checks remediation for the existence of smart_managment flaged systems
+         * @summary Check smart_managment systems
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2572,7 +2572,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
         /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2630,8 +2630,8 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
-         * @summary Bulk Delete Remediation
-         * @param {RemediationsList} remediationsList 
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2644,7 +2644,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
-         * @summary Download Remediation
+         * @summary Download Remediations
          * @param {Array<string>} [selectedRemediations] Selected Remediations for download
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2722,7 +2722,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc 
+         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -2737,7 +2737,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
-         * @summary Get Remediation Issue System
+         * @summary Get Remediation Issue Systems
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {number} [limit] Maximum number of results to return
@@ -2772,14 +2772,14 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
         },
         /**
          * Provides information about Remediations, RBAC permission {remediations:remediation:read}
-         * @summary List Remediation
+         * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
-         * @param {boolean} [hideArchived] Hide archived playbook
-         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response 
+         * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2811,7 +2811,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {PlaybookRunsInput} [playbookRunsInput] 
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2826,7 +2826,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2842,7 +2842,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
-         * @param {RemediationIssueIn} remediationIssueIn 
+         * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2887,8 +2887,8 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).cancelPlaybookRuns(id, playbookRunId, options).then((request) => request(axios, basePath));
         },
         /**
-         * Checks remediation for the existence of smart_managment flaged system
-         * @summary Check smart_managment system
+         * Checks remediation for the existence of smart_managment flaged systems
+         * @summary Check smart_managment systems
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2899,7 +2899,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
         /**
          * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
          * @summary Create Remediation
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2941,8 +2941,8 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
         },
         /**
          * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
-         * @summary Bulk Delete Remediation
-         * @param {RemediationsList} remediationsList 
+         * @summary Bulk Delete Remediations
+         * @param {RemediationsList} remediationsList
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2951,7 +2951,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
         },
         /**
          * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
-         * @summary Download Remediation
+         * @summary Download Remediations
          * @param {Array<string>} [selectedRemediations] Selected Remediations for download
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3009,7 +3009,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
             return RemediationsApiFp(configuration).getRemediation(id, options).then((request) => request(axios, basePath));
         },
         /**
-         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc 
+         * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
          * @summary Pre-flight check
          * @param {string} id Remediation identifier
          * @param {*} [options] Override http request option.
@@ -3020,7 +3020,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
         },
         /**
          * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
-         * @summary Get Remediation Issue System
+         * @summary Get Remediation Issue Systems
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
          * @param {number} [limit] Maximum number of results to return
@@ -3047,14 +3047,14 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
         },
         /**
          * Provides information about Remediations, RBAC permission {remediations:remediation:read}
-         * @summary List Remediation
+         * @summary List Remediations
          * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
          * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
          * @param {number} [limit] Maximum number of results to return
          * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
          * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
-         * @param {boolean} [hideArchived] Hide archived playbook
-         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response 
+         * @param {boolean} [hideArchived] Hide archived playbooks
+         * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3078,7 +3078,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Execute remediation, RBAC permission {remediations:remediation:execute}
          * @summary Execute remediation
          * @param {string} id Remediation identifier
-         * @param {PlaybookRunsInput} [playbookRunsInput] 
+         * @param {PlaybookRunsInput} [playbookRunsInput]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3089,7 +3089,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * Updates the given Remediation, RBAC permission {remediations:remediation:write}
          * @summary Update Remediation
          * @param {string} id Remediation identifier
-         * @param {RemediationInput} remediationInput 
+         * @param {RemediationInput} remediationInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3101,7 +3101,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @summary Update Remediation Issue
          * @param {string} id Remediation identifier
          * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
-         * @param {RemediationIssueIn} remediationIssueIn 
+         * @param {RemediationIssueIn} remediationIssueIn
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3147,8 +3147,8 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Checks remediation for the existence of smart_managment flaged system
-     * @summary Check smart_managment system
+     * Checks remediation for the existence of smart_managment flaged systems
+     * @summary Check smart_managment systems
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3161,7 +3161,7 @@ export class RemediationsApi extends BaseAPI {
     /**
      * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}
      * @summary Create Remediation
-     * @param {RemediationInput} remediationInput 
+     * @param {RemediationInput} remediationInput
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3211,8 +3211,8 @@ export class RemediationsApi extends BaseAPI {
 
     /**
      * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}
-     * @summary Bulk Delete Remediation
-     * @param {RemediationsList} remediationsList 
+     * @summary Bulk Delete Remediations
+     * @param {RemediationsList} remediationsList
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3223,7 +3223,7 @@ export class RemediationsApi extends BaseAPI {
 
     /**
      * Downloads a zip file containing selected Remediations, RBAC permission {remediations:remediation:read}
-     * @summary Download Remediation
+     * @summary Download Remediations
      * @param {Array<string>} [selectedRemediations] Selected Remediations for download
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3291,7 +3291,7 @@ export class RemediationsApi extends BaseAPI {
     }
 
     /**
-     * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc 
+     * Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
      * @summary Pre-flight check
      * @param {string} id Remediation identifier
      * @param {*} [options] Override http request option.
@@ -3304,7 +3304,7 @@ export class RemediationsApi extends BaseAPI {
 
     /**
      * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
-     * @summary Get Remediation Issue System
+     * @summary Get Remediation Issue Systems
      * @param {string} id Remediation identifier
      * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
      * @param {number} [limit] Maximum number of results to return
@@ -3335,14 +3335,14 @@ export class RemediationsApi extends BaseAPI {
 
     /**
      * Provides information about Remediations, RBAC permission {remediations:remediation:read}
-     * @summary List Remediation
+     * @summary List Remediations
      * @param {'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count'} [sort] Sort order
      * @param {string} [filter] Remediation name filter. If specified only remediations whose name matches the given string will be returned.
      * @param {number} [limit] Maximum number of results to return
      * @param {number} [offset] Indicates the starting position of the query relative to the complete set of items that match the query
      * @param {string} [system] System identifier. If specified only remediations that involve the given system will be returned.
-     * @param {boolean} [hideArchived] Hide archived playbook
-     * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response 
+     * @param {boolean} [hideArchived] Hide archived playbooks
+     * @param {Array<'name' | 'playbook_runs'>} [fieldsData] Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3370,7 +3370,7 @@ export class RemediationsApi extends BaseAPI {
      * Execute remediation, RBAC permission {remediations:remediation:execute}
      * @summary Execute remediation
      * @param {string} id Remediation identifier
-     * @param {PlaybookRunsInput} [playbookRunsInput] 
+     * @param {PlaybookRunsInput} [playbookRunsInput]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3383,7 +3383,7 @@ export class RemediationsApi extends BaseAPI {
      * Updates the given Remediation, RBAC permission {remediations:remediation:write}
      * @summary Update Remediation
      * @param {string} id Remediation identifier
-     * @param {RemediationInput} remediationInput 
+     * @param {RemediationInput} remediationInput
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3397,7 +3397,7 @@ export class RemediationsApi extends BaseAPI {
      * @summary Update Remediation Issue
      * @param {string} id Remediation identifier
      * @param {string} issue Issue identifier (e.g. &#x60;advisor:CVE_2017_6074_kernel|KERNEL_CVE_2017_6074&#x60;)
-     * @param {RemediationIssueIn} remediationIssueIn 
+     * @param {RemediationIssueIn} remediationIssueIn
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemediationsApi
@@ -3439,7 +3439,7 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -3452,9 +3452,9 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Provides information about resolutions available for the given issue
+         * Provides information about resolutions available for the given issues
          * @summary Resolution metadata (batch)
-         * @param {ResolutionsBatchInput} resolutionsBatchInput 
+         * @param {ResolutionsBatchInput} resolutionsBatchInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3474,7 +3474,7 @@ export const ResolutionsApiAxiosParamCreator = function (configuration?: Configu
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -3514,9 +3514,9 @@ export const ResolutionsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Provides information about resolutions available for the given issue
+         * Provides information about resolutions available for the given issues
          * @summary Resolution metadata (batch)
-         * @param {ResolutionsBatchInput} resolutionsBatchInput 
+         * @param {ResolutionsBatchInput} resolutionsBatchInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3547,9 +3547,9 @@ export const ResolutionsApiFactory = function (configuration?: Configuration, ba
             return ResolutionsApiFp(configuration).getResolutionsForIssue(issue, options).then((request) => request(axios, basePath));
         },
         /**
-         * Provides information about resolutions available for the given issue
+         * Provides information about resolutions available for the given issues
          * @summary Resolution metadata (batch)
-         * @param {ResolutionsBatchInput} resolutionsBatchInput 
+         * @param {ResolutionsBatchInput} resolutionsBatchInput
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3579,9 +3579,9 @@ export class ResolutionsApi extends BaseAPI {
     }
 
     /**
-     * Provides information about resolutions available for the given issue
+     * Provides information about resolutions available for the given issues
      * @summary Resolution metadata (batch)
-     * @param {ResolutionsBatchInput} resolutionsBatchInput 
+     * @param {ResolutionsBatchInput} resolutionsBatchInput
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResolutionsApi
@@ -3617,7 +3617,7 @@ export const VersionApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
 
-    
+
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;

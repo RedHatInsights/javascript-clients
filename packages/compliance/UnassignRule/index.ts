@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,29 +13,29 @@ import type {  } from '../types';
 
 export type UnassignRuleParams = {
   /**
-  * 
+  *
   * @type { any }
   * @memberof UnassignRuleApi
   */
-  policyId: any, 
+  policyId: any,
   /**
-  * 
+  *
   * @type { any }
   * @memberof UnassignRuleApi
   */
-  tailoringId: any, 
+  tailoringId: any,
   /**
-  * 
+  *
   * @type { any }
   * @memberof UnassignRuleApi
   */
-  id: any, 
+  id: any,
   /**
   * For internal use only
   * @type { any }
   * @memberof UnassignRuleApi
   */
-  xRHIDENTITY?: any, 
+  xRHIDENTITY?: any,
   options?: AxiosRequestConfig
 }
 
@@ -63,8 +63,8 @@ export const unassignRuleParamCreator = async (...config: ([UnassignRuleParams] 
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
-            ? xRHIDENTITY 
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+            ? xRHIDENTITY
             : JSON.stringify(xRHIDENTITY);
     }
 

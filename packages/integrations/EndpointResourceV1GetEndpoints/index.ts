@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,53 +13,53 @@ import type { EndpointPage } from '../types';
 
 export type EndpointResourceV1GetEndpointsParams = {
   /**
-  * Number of items per page. If the value is 0, it will return all element
+  * Number of items per page. If the value is 0, it will return all elements
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Page number. Starts at first page (0), if not specified starts at first page.
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  pageNumber?: number, 
+  pageNumber?: number,
   /**
-  * 
+  *
   * @type { boolean }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  active?: boolean, 
+  active?: boolean,
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  name?: string, 
+  name?: string,
   /**
-  * 
+  *
   * @type { number }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  sortBy?: string, 
+  sortBy?: string,
   /**
-  * 
+  *
   * @type { string }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  sortBy2?: string, 
+  sortBy2?: string,
   /**
-  * 
+  *
   * @type { Array<string> }
   * @memberof EndpointResourceV1GetEndpointsApi
   */
-  type?: Array<string>, 
+  type?: Array<string>,
   options?: AxiosRequestConfig
 }
 
@@ -68,7 +68,7 @@ const isEndpointResourceV1GetEndpointsObjectParams = (params: [EndpointResourceV
 }
 /**
 * Provides a list of endpoints. Use this endpoint to find specific endpoints.
-* @summary List endpoint
+* @summary List endpoints
 * @param {EndpointResourceV1GetEndpointsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

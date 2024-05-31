@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,29 +13,29 @@ import type { Tailoring, Tailoring200Response } from '../types';
 
 export type UpdateTailoringParams = {
   /**
-  * 
+  *
   * @type { any }
   * @memberof UpdateTailoringApi
   */
-  policyId: any, 
+  policyId: any,
   /**
-  * 
+  *
   * @type { any }
   * @memberof UpdateTailoringApi
   */
-  id: any, 
+  id: any,
   /**
   * For internal use only
   * @type { any }
   * @memberof UpdateTailoringApi
   */
-  xRHIDENTITY?: any, 
+  xRHIDENTITY?: any,
   /**
-  * 
+  *
   * @type { Tailoring }
   * @memberof UpdateTailoringApi
   */
-  tailoring?: Tailoring, 
+  tailoring?: Tailoring,
   options?: AxiosRequestConfig
 }
 
@@ -43,7 +43,7 @@ const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'id') && true && true
 }
 /**
-* Updates a Tailoring with the provided value_override
+* Updates a Tailoring with the provided value_overrides
 * @summary Update a Tailoring
 * @param {UpdateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
@@ -62,8 +62,8 @@ export const updateTailoringParamCreator = async (...config: ([UpdateTailoringPa
     const localVarQueryParameter = {} as any;
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
-            ? xRHIDENTITY 
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+            ? xRHIDENTITY
             : JSON.stringify(xRHIDENTITY);
     }
 

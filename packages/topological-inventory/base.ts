@@ -13,7 +13,7 @@
 
 
 import { Configuration } from "./configuration";
-// Some imports not used depending on template condition
+// Some imports not used depending on template conditions
 // @ts-ignore
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
@@ -33,7 +33,7 @@ export const COLLECTION_FORMATS = {
 /**
  *
  * @export
- * @interface RequestArg
+ * @interface RequestArgs
  */
 export interface RequestArgs {
     url: string;

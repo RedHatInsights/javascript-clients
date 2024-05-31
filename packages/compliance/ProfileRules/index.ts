@@ -1,8 +1,8 @@
 // @ts-ignore
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
 // @ts-ignore
-import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/common';
-import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/common';
+import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
+import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
 import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
@@ -13,47 +13,47 @@ import type { Errors, Rules200Response } from '../types';
 
 export type ProfileRulesParams = {
   /**
-  * 
+  *
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  securityGuideId: any, 
+  securityGuideId: any,
   /**
-  * 
+  *
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  profileId: any, 
+  profileId: any,
   /**
   * For internal use only
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  xRHIDENTITY?: any, 
+  xRHIDENTITY?: any,
   /**
   * Number of items to return per page
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  limit?: any, 
+  limit?: any,
   /**
   * Offset of first item of paginated response
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  offset?: any, 
+  offset?: any,
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  sortBy?: any, 
+  sortBy?: any,
   /**
   * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rules are searchable using attributes `title` and `severity`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof ProfileRulesApi
   */
-  filter?: any, 
+  filter?: any,
   options?: AxiosRequestConfig
 }
 
@@ -96,8 +96,8 @@ export const profileRulesParamCreator = async (...config: ([ProfileRulesParams] 
     }
 
     if (xRHIDENTITY != null) {
-        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string' 
-            ? xRHIDENTITY 
+        localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+            ? xRHIDENTITY
             : JSON.stringify(xRHIDENTITY);
     }
 
