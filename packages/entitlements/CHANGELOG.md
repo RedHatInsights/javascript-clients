@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.4.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-1.4.4...@redhat-cloud-services/entitlements-client-1.4.5) (2024-05-31)
+
+
+### Bug Fixes
+
+* apply fixed template import paths ([4d389ef](https://github.com/RedHatInsights/javascript-clients/commit/4d389ef15abf07a4ac24e6ff6656e39cb9789889))
+
 ## [1.4.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-1.4.3...@redhat-cloud-services/entitlements-client-1.4.4) (2024-05-28)
 
 ## [1.4.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-1.4.2...@redhat-cloud-services/entitlements-client-1.4.3) (2024-05-09)
