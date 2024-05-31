@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.4.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.4.1...@redhat-cloud-services/notifications-client-2.4.2) (2024-05-31)
+
+
+### Bug Fixes
+
+* apply fixed template import paths ([4d389ef](https://github.com/RedHatInsights/javascript-clients/commit/4d389ef15abf07a4ac24e6ff6656e39cb9789889))
+
 ## [2.4.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.4.0...@redhat-cloud-services/notifications-client-2.4.1) (2024-05-29)
 
 ## [2.4.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.3.2...@redhat-cloud-services/notifications-client-2.4.0) (2024-05-20)
