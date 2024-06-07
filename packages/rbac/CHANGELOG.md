@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-2.0.0...@redhat-cloud-services/rbac-client-2.1.0) (2024-06-07)
+
+
+### Features
+
+* convert rbac-client to new generator ([158f4a5](https://github.com/RedHatInsights/javascript-clients/commit/158f4a53bf23d9a7cd40a902df6a64cbfe37d7e0))
+
 ## [1.4.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-1.4.4...@redhat-cloud-services/rbac-client-1.4.5) (2024-05-31)
 
 
