@@ -23,6 +23,7 @@
     "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' npm run generate"
   },
   "dependencies": {
+    "@redhat-cloud-services/javascript-clients-shared": "^1.2.2",
     "axios": "^0.27.2",
     "tslib": "^2.6.2"
   }
