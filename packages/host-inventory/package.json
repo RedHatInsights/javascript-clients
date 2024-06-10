@@ -20,7 +20,6 @@
     "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/insights-host-inventory/master/swagger/api.spec.yaml' npm run generate"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "tslib": "^2.6.2"
   }
 }

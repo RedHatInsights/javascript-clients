@@ -24,7 +24,6 @@
     "generate:prod": "SPEC='http://cloud.redhat.com/api/remediations/v1/openapi.json' npm run generate && ./postProcess.sh"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "tslib": "^2.6.2"
   }
 }

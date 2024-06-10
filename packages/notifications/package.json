@@ -23,7 +23,6 @@
     "generate:prod": "SPEC='https://console.redhat.com/api/notifications/v1.0/openapi.json' npm run generate"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "tslib": "^2.6.2",
     "@redhat-cloud-services/javascript-clients-shared": "^1.2.2"
   }

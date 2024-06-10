@@ -28,7 +28,6 @@
     "generate:single": "npm run generate:prod && npm run doc"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
