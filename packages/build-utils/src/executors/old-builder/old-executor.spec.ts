@@ -4,6 +4,7 @@ import { ExecutorContext } from '@nx/devkit';
 
 jest.mock('fs', () => ({
   __esModule: true,
+  ...jest.requireActual('fs'),
   stat: (_path, cb) => cb(),
   mkdir: (_path, _options, cb) => cb(),
   copyFile: (_src, _dest, cb) => cb(),
@@ -19,6 +20,12 @@ jest.mock('child_process', () => ({
   __esModule: true,
   exec: (_command, cb) => cb(),
   execSync: () => undefined,
+}));
+
+jest.mock('@nx/devkit', () => ({
+  __esModule: true,
+  ...jest.requireActual('@nx/devkit'),
+  addDependenciesToPackageJson: () => {},
 }));
 
 const options: OldBuilderExecutorSchema = {

@@ -1,9 +1,22 @@
-import { ExecutorContext } from '@nx/devkit';
+import { addDependenciesToPackageJson, ExecutorContext, Tree, workspaceRoot } from '@nx/devkit';
 import { z } from 'zod';
-import { stat, mkdir, copyFile, unlink } from 'fs';
+import { chmodSync, copyFile, existsSync, lstatSync, mkdir, readFileSync, readdirSync, renameSync, stat, unlink, writeFileSync } from 'fs';
 import { copy } from 'fs-extra';
 import { promisify } from 'util';
 import { execSync } from 'child_process';
+
+// Typescript prevents us from importing the global package.json to check which dependencies we want shared
+// See https://github.com/microsoft/TypeScript/issues/9858
+const rawData = readFileSync(`${workspaceRoot}/package.json`, {
+  encoding: 'utf8',
+});
+const globalPackageJson = JSON.parse(rawData);
+const globalDependencies = globalPackageJson.dependencies;
+
+// Filters the globally hoisted dependencies to be added to the packages published package.json (outside NX scope)
+// TODO add tslib
+const sharedGlobalDependencies = (({ axios }) => ({ axios }))(globalDependencies);
+const sharedGlobalDevDependencies = {};
 
 const asyncStat = promisify(stat);
 const asyncMkdir = promisify(mkdir);
@@ -82,6 +95,22 @@ export default async function runExecutor(options: OldBuilderExecutorSchemaType,
   await copyFiles(currentProjectRoot, filesDest, filesList);
   await Promise.all([copyFolder(distSrc, distDest), copyFolder(docsSrc, docsDest)]);
   await removePackage(distDest);
+
+  // NX does not officially expose or document some utility classes such as FsTree which would make this easier
+  // See https://github.com/nrwl/nx/issues/16691
+  const tree: Tree = {
+    root: filesDest,
+    read: readFileSync,
+    write: writeFileSync,
+    exists: existsSync,
+    delete: (path) => unlink(path, () => {}),
+    rename: renameSync,
+    changePermissions: chmodSync,
+    isFile: (path) => lstatSync(path).isFile(),
+    children: readdirSync,
+    listChanges: () => [],
+  };
+  addDependenciesToPackageJson(tree, sharedGlobalDependencies, sharedGlobalDevDependencies, `${filesDest}/package.json`);
   return {
     success: true,
   };
