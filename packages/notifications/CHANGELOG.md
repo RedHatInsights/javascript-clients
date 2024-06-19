@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.4.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.4.2...@redhat-cloud-services/notifications-client-2.4.3) (2024-06-19)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.3`
 ## [2.4.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.4.1...@redhat-cloud-services/notifications-client-2.4.2) (2024-05-31)
 
 
