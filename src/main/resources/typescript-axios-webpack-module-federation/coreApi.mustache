@@ -20,14 +20,19 @@ import type { {{#imports}}{{classname}}{{^-last}}, {{/-last}}{{/imports}} } from
 export type {{operationIdCamelCase}}Params = {
   {{#allParams}}
   /**
-  * {{{description}}}
+{{#description}}
+  * {{description}}
+{{/description}}
+{{^description}}
+  *
+{{/description}}
   * @type {{=<% %>=}}{ <%={{ }}=%>{{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}{{=<% %>=}} }<%={{ }}=%>
   * @memberof {{classname}}
 {{#deprecated}}
   * @deprecated
 {{/deprecated}}
   */
-  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, 
+  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}},
   {{/allParams}}
   options?: AxiosRequestConfig
 }
