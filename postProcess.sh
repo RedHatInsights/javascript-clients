@@ -3,7 +3,7 @@
 # https://unix.stackexchange.com/questions/13711/differences-between-sed-on-mac-osx-and-other-standard-sed
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # remove trailing whitespace
-  sed -i '' 's/\s*$//' $1
+  sed -i '' 's/ *$//' $1
 
   # https://github.com/OpenAPITools/openapi-generator/issues/2154
   sed -i '' 's/OneOfResolutionsboolean/Resolutions \| boolean/' $1
