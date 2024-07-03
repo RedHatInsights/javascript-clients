@@ -126,7 +126,7 @@ WeeklyreportsubscriptionApi
 
 #### Defined in
 
-[api.ts:10735](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10735)
+[api.ts:10716](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10716)
 
 ___
 
@@ -154,4 +154,4 @@ WeeklyreportsubscriptionApi
 
 #### Defined in
 
-[api.ts:10745](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10745)
+[api.ts:10726](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10726)

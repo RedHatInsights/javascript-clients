@@ -28,7 +28,7 @@ PlaybookRunSystems
 
 #### Defined in
 
-[api.ts:591](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L591)
+[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L623)
 
 ___
 
@@ -42,7 +42,7 @@ PlaybookRunSystems
 
 #### Defined in
 
-[api.ts:579](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L579)
+[api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L611)
 
 ___
 
@@ -56,7 +56,7 @@ PlaybookRunSystems
 
 #### Defined in
 
-[api.ts:567](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L567)
+[api.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L599)
 
 ___
 
@@ -70,7 +70,7 @@ PlaybookRunSystems
 
 #### Defined in
 
-[api.ts:573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L573)
+[api.ts:605](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L605)
 
 ___
 
@@ -84,4 +84,4 @@ PlaybookRunSystems
 
 #### Defined in
 
-[api.ts:585](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L585)
+[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L617)

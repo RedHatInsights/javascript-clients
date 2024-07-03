@@ -27,7 +27,7 @@ PlaybookDefinition
 
 #### Defined in
 
-[api.ts:178](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L178)
+[api.ts:209](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L209)
 
 ___
 
@@ -41,4 +41,4 @@ PlaybookDefinition
 
 #### Defined in
 
-[api.ts:172](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L172)
+[api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L203)

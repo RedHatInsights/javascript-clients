@@ -37,7 +37,7 @@ Renames and re-exports [notificationResourceV1GetApplicationsFacetsParamCreator]
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L14)
+[NotificationResourceV1GetApplicationsFacets/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L14)
 
 ## Functions
 
@@ -59,10 +59,10 @@ Returns a list of configured applications that includes the application name, th
 
 **`Summary`**
 
-List configured application
+List configured applications
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L34)
+[NotificationResourceV1GetApplicationsFacets/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationsFacets/index.ts#L34)

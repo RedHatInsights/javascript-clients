@@ -24,4 +24,4 @@ RemediationIssueIn
 
 #### Defined in
 
-[api.ts:853](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L853)
+[api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L885)

@@ -38,7 +38,7 @@ Renames and re-exports [notificationResourceV1DeleteBehaviorGroupFromEventTypePa
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L14)
+[NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L14)
 
 ## Functions
 
@@ -66,4 +66,4 @@ Add a behavior group to an event type
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L40)
+[NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroupFromEventType/index.ts#L40)

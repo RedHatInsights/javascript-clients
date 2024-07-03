@@ -32,7 +32,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:487](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L487)
+[types/index.ts:655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L655)
 
 ___
 
@@ -46,7 +46,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:457](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L457)
+[types/index.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L625)
 
 ___
 
@@ -62,7 +62,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:493](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L493)
+[types/index.ts:661](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L661)
 
 ___
 
@@ -78,7 +78,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:481](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L481)
+[types/index.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L649)
 
 ___
 
@@ -94,7 +94,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:469](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L469)
+[types/index.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L637)
 
 ___
 
@@ -110,7 +110,7 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:475](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L475)
+[types/index.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L643)
 
 ___
 
@@ -124,4 +124,4 @@ RuleGroup
 
 #### Defined in
 
-[types/index.ts:463](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L463)
+[types/index.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L631)

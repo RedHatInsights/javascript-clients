@@ -28,7 +28,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1434)
+[types/index.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1532)
 
 ___
 
@@ -46,7 +46,7 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1440)
+[types/index.ts:1538](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1538)
 
 ___
 
@@ -60,4 +60,4 @@ PageDrawerEntryPayload
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1446](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1446)
+[types/index.ts:1544](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1544)

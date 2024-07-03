@@ -26,7 +26,7 @@ SecurityGuides200Response
 
 #### Defined in
 
-[types/index.ts:683](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L683)
+[types/index.ts:851](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L851)
 
 ___
 
@@ -40,7 +40,7 @@ SecurityGuides200Response
 
 #### Defined in
 
-[types/index.ts:677](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L677)
+[types/index.ts:845](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L845)
 
 ___
 
@@ -54,4 +54,4 @@ SecurityGuides200Response
 
 #### Defined in
 
-[types/index.ts:671](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L671)
+[types/index.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L839)

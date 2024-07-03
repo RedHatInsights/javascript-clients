@@ -26,4 +26,4 @@ Meta
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1315](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1315)
+[types/index.ts:1413](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1413)

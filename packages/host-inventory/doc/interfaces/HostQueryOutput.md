@@ -32,7 +32,7 @@ HostQueryOutput
 
 #### Defined in
 
-[api.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L957)
+[api.ts:950](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L950)
 
 ___
 
@@ -48,7 +48,7 @@ HostQueryOutput
 
 #### Defined in
 
-[api.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L963)
+[api.ts:956](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L956)
 
 ___
 
@@ -64,7 +64,7 @@ HostQueryOutput
 
 #### Defined in
 
-[api.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L969)
+[api.ts:962](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L962)
 
 ___
 
@@ -80,7 +80,7 @@ HostQueryOutput
 
 #### Defined in
 
-[api.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L981)
+[api.ts:974](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L974)
 
 ___
 
@@ -96,4 +96,4 @@ HostQueryOutput
 
 #### Defined in
 
-[api.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L975)
+[api.ts:968](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L968)

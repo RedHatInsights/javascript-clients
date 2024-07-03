@@ -4,8 +4,8 @@ import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'ax
 import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
 import type { Errors, System200Response } from '../types';
@@ -17,7 +17,7 @@ export type UnassignSystemParams = {
   * @type { any }
   * @memberof UnassignSystemApi
   */
-  id: any,
+  systemId: any,
   /**
   *
   * @type { any }
@@ -34,7 +34,7 @@ export type UnassignSystemParams = {
 }
 
 const isUnassignSystemObjectParams = (params: [UnassignSystemParams] | unknown[]): params is [UnassignSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }
 /**
 * Unassigns a System from a Policy
@@ -44,10 +44,10 @@ const isUnassignSystemObjectParams = (params: [UnassignSystemParams] | unknown[]
 * @throws {RequiredError}
 */
 export const unassignSystemParamCreator = async (...config: ([UnassignSystemParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUnassignSystemObjectParams(config) ? config[0] : ['id', 'policyId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UnassignSystemParams;
-    const { id, policyId, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/policies/{policy_id}/systems/{id}`
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+    const params = isUnassignSystemObjectParams(config) ? config[0] : ['systemId', 'policyId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UnassignSystemParams;
+    const { systemId, policyId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/policies/{policy_id}/systems/{system_id}`
+        .replace(`{${"system_id"}}`, encodeURIComponent(String(systemId)))
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

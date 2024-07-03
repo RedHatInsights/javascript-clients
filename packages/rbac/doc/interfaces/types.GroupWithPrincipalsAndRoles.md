@@ -6,7 +6,7 @@
 
 **`Export`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 ## Table of contents
 
@@ -28,7 +28,7 @@ GroupWithPrincipalsAndRole
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -42,7 +42,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -56,7 +56,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -70,7 +70,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -84,7 +84,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -98,7 +98,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 
@@ -112,7 +112,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipalsAndRole
+GroupWithPrincipalsAndRoles
 
 #### Defined in
 

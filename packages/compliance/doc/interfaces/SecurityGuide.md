@@ -32,7 +32,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:619](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L619)
+[types/index.ts:787](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L787)
 
 ___
 
@@ -46,7 +46,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:589](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L589)
+[types/index.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L757)
 
 ___
 
@@ -62,7 +62,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:625](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L625)
+[types/index.ts:793](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L793)
 
 ___
 
@@ -78,7 +78,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:601](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L601)
+[types/index.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L769)
 
 ___
 
@@ -94,7 +94,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:607](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L607)
+[types/index.ts:775](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L775)
 
 ___
 
@@ -108,7 +108,7 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:595](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L595)
+[types/index.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L763)
 
 ___
 
@@ -124,4 +124,4 @@ SecurityGuide
 
 #### Defined in
 
-[types/index.ts:613](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L613)
+[types/index.ts:781](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L781)

@@ -133,7 +133,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3201](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3201)
+[api.ts:3290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3290)
 
 ___
 
@@ -165,7 +165,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3212](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3212)
+[api.ts:3301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3301)
 
 ___
 
@@ -197,7 +197,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3223)
+[api.ts:3312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3312)
 
 ___
 
@@ -229,7 +229,7 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3234](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3234)
+[api.ts:3323](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3323)
 
 ___
 
@@ -262,4 +262,4 @@ AccountsStalenessApi
 
 #### Defined in
 
-[api.ts:3246](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3246)
+[api.ts:3335](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L3335)

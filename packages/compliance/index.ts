@@ -26,6 +26,10 @@ export { default as deletePolicy } from './DeletePolicy'
 
 
 // end of operations block
+export { default as deleteReport } from './DeleteReport'
+
+
+// end of operations block
 export { default as policies } from './Policies'
 
 
@@ -55,6 +59,22 @@ export { default as profiles } from './Profiles'
 
 // end of operations block
 export { default as report } from './Report'
+
+
+// end of operations block
+export { default as reportSystem } from './ReportSystem'
+
+
+// end of operations block
+export { default as reportSystems } from './ReportSystems'
+
+
+// end of operations block
+export { default as reportTestResult } from './ReportTestResult'
+
+
+// end of operations block
+export { default as reportTestResults } from './ReportTestResults'
 
 
 // end of operations block

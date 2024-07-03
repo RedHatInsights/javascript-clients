@@ -17,7 +17,7 @@ export type DeleteRoleParams = {
   * @type { string }
   * @memberof DeleteRoleApi
   */
-  uuid: string, 
+  uuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isDeleteRoleObjectParams = (params: [DeleteRoleParams] | unknown[]): param
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-* 
+*
 * @summary Delete a role in the tenant
 * @param {DeleteRoleParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -28,7 +28,7 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1233](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1233)
+[types/index.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1331)
 
 ___
 
@@ -42,7 +42,7 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1227](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1227)
+[types/index.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1325)
 
 ___
 
@@ -56,4 +56,4 @@ InternalApplicationUserPermission
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1239](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1239)
+[types/index.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1337)

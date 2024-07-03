@@ -6,6 +6,7 @@ AssignSystem/index.ts
 AssignSystems/index.ts
 CreatePolicy/index.ts
 DeletePolicy/index.ts
+DeleteReport/index.ts
 Policies/index.ts
 Policy/index.ts
 PolicySystems/index.ts
@@ -14,6 +15,10 @@ ProfileRule/index.ts
 ProfileRules/index.ts
 Profiles/index.ts
 Report/index.ts
+ReportSystem/index.ts
+ReportSystems/index.ts
+ReportTestResult/index.ts
+ReportTestResults/index.ts
 Reports/index.ts
 Rule/index.ts
 RuleGroup/index.ts

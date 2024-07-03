@@ -26,4 +26,4 @@ HostQueryOutputAllOf
 
 #### Defined in
 
-[api.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L994)
+[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L987)

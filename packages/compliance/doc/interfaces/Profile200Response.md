@@ -24,4 +24,4 @@ Profile200Response
 
 #### Defined in
 
-[types/index.ts:312](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L312)
+[types/index.ts:312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L312)

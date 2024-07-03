@@ -26,4 +26,4 @@ PreferencesInput
 
 #### Defined in
 
-[api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1100)
+[api.ts:1075](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1075)

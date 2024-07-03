@@ -24,4 +24,4 @@ System200ResponseData
 
 #### Defined in
 
-[types/index.ts:882](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L882)
+[types/index.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1056)

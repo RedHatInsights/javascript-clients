@@ -17,49 +17,49 @@ export type ListPermissionOptionsParams = {
   * @type { ListPermissionOptionsFieldEnum }
   * @memberof ListPermissionOptionsApi
   */
-  field: ListPermissionOptionsFieldEnum, 
+  field: ListPermissionOptionsFieldEnum,
   /**
   * Parameter for selecting the amount of data returned.
   * @type { number }
   * @memberof ListPermissionOptionsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListPermissionOptionsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
   * @type { string }
   * @memberof ListPermissionOptionsApi
   */
-  application?: string, 
+  application?: string,
   /**
   * Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
   * @type { string }
   * @memberof ListPermissionOptionsApi
   */
-  resourceType?: string, 
+  resourceType?: string,
   /**
   * Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
   * @type { string }
   * @memberof ListPermissionOptionsApi
   */
-  verb?: string, 
+  verb?: string,
   /**
   * If set to \'true\', this will exclude any permission option with a global allowance on the supplied \'?field=\' value of \'application\', \'resource_type\' or \'verb\'. The default is \'false\'.
   * @type { ListPermissionOptionsExcludeGlobalsEnum }
   * @memberof ListPermissionOptionsApi
   */
-  excludeGlobals?: ListPermissionOptionsExcludeGlobalsEnum, 
+  excludeGlobals?: ListPermissionOptionsExcludeGlobalsEnum,
   /**
   * If set to \'true\', this will exclude any permission with a role where the \'application\' is not in the role create allow list.
   * @type { ListPermissionOptionsAllowedOnlyEnum }
   * @memberof ListPermissionOptionsApi
   */
-  allowedOnly?: ListPermissionOptionsAllowedOnlyEnum, 
+  allowedOnly?: ListPermissionOptionsAllowedOnlyEnum,
   options?: AxiosRequestConfig
 }
 /**

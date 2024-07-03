@@ -24,4 +24,4 @@ ValueDefinition200Response
 
 #### Defined in
 
-[types/index.ts:1092](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1092)
+[types/index.ts:1358](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1358)

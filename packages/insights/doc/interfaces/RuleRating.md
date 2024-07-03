@@ -29,7 +29,7 @@ RuleRating
 
 #### Defined in
 
-[api.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1790)
+[api.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1765)
 
 ___
 
@@ -45,4 +45,4 @@ RuleRating
 
 #### Defined in
 
-[api.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1784)
+[api.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1759)

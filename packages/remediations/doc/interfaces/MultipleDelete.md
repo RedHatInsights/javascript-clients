@@ -16,7 +16,7 @@ MultipleDelete
 
 ### deleted\_count
 
-• `Optional` **deleted\_count**: `number`
+• **deleted\_count**: `number`
 
 Count of remediations deleted
 

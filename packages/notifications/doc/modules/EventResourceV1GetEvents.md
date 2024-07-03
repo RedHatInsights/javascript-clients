@@ -52,7 +52,7 @@ Renames and re-exports [eventResourceV1GetEventsParamCreator](EventResourceV1Get
 
 #### Defined in
 
-[packages/notifications/EventResourceV1GetEvents/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/EventResourceV1GetEvents/index.ts#L14)
+[EventResourceV1GetEvents/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/EventResourceV1GetEvents/index.ts#L14)
 
 ## Functions
 
@@ -74,10 +74,10 @@ Retrieves the event log entries. Use this endpoint to review a full history of t
 
 **`Summary`**
 
-Retrieve the event log entrie
+Retrieve the event log entries
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/EventResourceV1GetEvents/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/EventResourceV1GetEvents/index.ts#L124)
+[EventResourceV1GetEvents/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/EventResourceV1GetEvents/index.ts#L124)

@@ -28,7 +28,7 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1484)
+[types/index.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1582)
 
 ___
 
@@ -46,7 +46,7 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1490)
+[types/index.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1588)
 
 ___
 
@@ -60,4 +60,4 @@ PageEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1496](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1496)
+[types/index.ts:1594](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1594)

@@ -129,7 +129,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4808](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4808)
+[api.ts:4789](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4789)
 
 ___
 
@@ -158,7 +158,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4819](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4819)
+[api.ts:4800](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4800)
 
 ___
 
@@ -193,7 +193,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4836](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4836)
+[api.ts:4817](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4817)
 
 ___
 
@@ -222,7 +222,7 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4847](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4847)
+[api.ts:4828](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4828)
 
 ___
 
@@ -252,4 +252,4 @@ HostackApi
 
 #### Defined in
 
-[api.ts:4859](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4859)
+[api.ts:4840](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4840)

@@ -2783,7 +2783,7 @@ export const RemediationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'name' | 'playbook_runs'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationNameList | RemediationList>> {
+        async getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'name' | 'playbook_runs'>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RemediationList | RemediationNameList>> {
             const localVarAxiosArgs = await RemediationsApiAxiosParamCreator(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, fieldsData, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3058,7 +3058,7 @@ export const RemediationsApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'name' | 'playbook_runs'>, options?: any): AxiosPromise<RemediationNameList | RemediationList> {
+        getRemediations(sort?: 'updated_at' | '-updated_at' | 'name' | '-name' | 'system_count' | '-system_count' | 'issue_count' | '-issue_count', filter?: string, limit?: number, offset?: number, system?: string, hideArchived?: boolean, fieldsData?: Array<'name' | 'playbook_runs'>, options?: any): AxiosPromise<RemediationList | RemediationNameList> {
             return RemediationsApiFp(configuration).getRemediations(sort, filter, limit, offset, system, hideArchived, fieldsData, options).then((request) => request(axios, basePath));
         },
         /**

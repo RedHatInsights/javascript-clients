@@ -30,7 +30,7 @@ Bundle
 
 #### Defined in
 
-[packages/notifications/types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L416)
+[types/index.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L416)
 
 ___
 
@@ -44,7 +44,7 @@ Bundle
 
 #### Defined in
 
-[packages/notifications/types/index.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L440)
+[types/index.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L440)
 
 ___
 
@@ -58,7 +58,7 @@ Bundle
 
 #### Defined in
 
-[packages/notifications/types/index.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L428)
+[types/index.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L428)
 
 ___
 
@@ -72,7 +72,7 @@ Bundle
 
 #### Defined in
 
-[packages/notifications/types/index.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L434)
+[types/index.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L434)
 
 ___
 
@@ -86,4 +86,4 @@ Bundle
 
 #### Defined in
 
-[packages/notifications/types/index.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L422)
+[types/index.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L422)

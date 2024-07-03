@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1630](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1630)
+[types/index.ts:1728](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1728)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1631)
+[types/index.ts:1729](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1729)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1629)
+[types/index.ts:1727](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1727)

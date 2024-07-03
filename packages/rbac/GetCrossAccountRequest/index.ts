@@ -17,25 +17,25 @@ export type GetCrossAccountRequestParams = {
   * @type { string }
   * @memberof GetCrossAccountRequestApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Parameter for filtering resource by either a user\'s ID, or a client\'s org. The default value is target_org.
   * @type { GetCrossAccountRequestQueryByEnum }
   * @memberof GetCrossAccountRequestApi
   */
-  queryBy?: GetCrossAccountRequestQueryByEnum, 
+  queryBy?: GetCrossAccountRequestQueryByEnum,
   /**
   * Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by account number.
   * @type { string }
   * @memberof GetCrossAccountRequestApi
   */
-  account?: string, 
+  account?: string,
   /**
   * Parameter for filtering resource which have been approved.
   * @type { GetCrossAccountRequestApprovedOnlyEnum }
   * @memberof GetCrossAccountRequestApi
   */
-  approvedOnly?: GetCrossAccountRequestApprovedOnlyEnum, 
+  approvedOnly?: GetCrossAccountRequestApprovedOnlyEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -60,7 +60,7 @@ const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestPar
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true
 }
 /**
-* 
+*
 * @summary Get a cross account request
 * @param {GetCrossAccountRequestParams} config with all available params.
 * @param {*} [options] Override http request option.

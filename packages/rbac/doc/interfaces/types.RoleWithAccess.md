@@ -6,7 +6,7 @@
 
 **`Export`**
 
-RoleWithAcce
+RoleWithAccess
 
 ## Table of contents
 
@@ -36,7 +36,7 @@ RoleWithAcce
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -50,7 +50,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -64,7 +64,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -78,7 +78,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -92,7 +92,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -106,7 +106,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -120,7 +120,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -134,7 +134,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -148,7 +148,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -162,7 +162,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -176,7 +176,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -190,7 +190,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -204,7 +204,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -218,7 +218,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 
@@ -232,7 +232,7 @@ ___
 
 **`Memberof`**
 
-RoleWithAcce
+RoleWithAccess
 
 #### Defined in
 

@@ -34,11 +34,11 @@ Renames and re-exports [notificationResourceV1UpdateBehaviorGroupParamCreator](N
 | :------ | :------ | :------ |
 | `id` | `string` | The UUID of the behavior group to update **`Memberof`** NotificationResourceV1UpdateBehaviorGroupApi |
 | `options?` | `AxiosRequestConfig` | - |
-| `updateBehaviorGroupRequest` | [`UpdateBehaviorGroupRequest`](../interfaces/types.UpdateBehaviorGroupRequest.md) | New parameter **`Memberof`** NotificationResourceV1UpdateBehaviorGroupApi |
+| `updateBehaviorGroupRequest` | [`UpdateBehaviorGroupRequest`](../interfaces/types.UpdateBehaviorGroupRequest.md) | New parameters **`Memberof`** NotificationResourceV1UpdateBehaviorGroupApi |
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L14)
+[NotificationResourceV1UpdateBehaviorGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L14)
 
 ## Functions
 
@@ -66,4 +66,4 @@ Update a behavior group
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L40)
+[NotificationResourceV1UpdateBehaviorGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroup/index.ts#L40)

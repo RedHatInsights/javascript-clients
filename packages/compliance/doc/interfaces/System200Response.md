@@ -24,4 +24,4 @@ System200Response
 
 #### Defined in
 
-[types/index.ts:869](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L869)
+[types/index.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1043)

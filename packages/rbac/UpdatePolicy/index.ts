@@ -17,13 +17,13 @@ export type UpdatePolicyParams = {
   * @type { string }
   * @memberof UpdatePolicyApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Policy to update
   * @type { PolicyIn }
   * @memberof UpdatePolicyApi
   */
-  policyIn: PolicyIn, 
+  policyIn: PolicyIn,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isUpdatePolicyObjectParams = (params: [UpdatePolicyParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'policyIn')
 }
 /**
-* 
+*
 * @summary Update a policy in the tenant
 * @param {UpdatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

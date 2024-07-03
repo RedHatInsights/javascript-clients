@@ -20,7 +20,7 @@ EndpointPage
 
 ### data
 
-• **data**: [`Endpoint`](types.Endpoint.md)[]
+• **data**: [`EndpointDTO`](types.EndpointDTO.md)[]
 
 **`Memberof`**
 
@@ -28,7 +28,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:771](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L771)
+[types/index.ts:834](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L834)
 
 ___
 
@@ -46,7 +46,7 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L777)
+[types/index.ts:840](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L840)
 
 ___
 
@@ -60,4 +60,4 @@ EndpointPage
 
 #### Defined in
 
-[packages/integrations/types/index.ts:783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L783)
+[types/index.ts:846](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L846)

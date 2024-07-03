@@ -32,13 +32,13 @@ Renames and re-exports [endpointResourceV1UpdateEndpointParamCreator](EndpointRe
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `endpoint` | [`Endpoint`](../interfaces/types.Endpoint.md) | **`Memberof`** EndpointResourceV1UpdateEndpointApi |
+| `endpointDTO` | [`EndpointDTO`](../interfaces/types.EndpointDTO.md) | **`Memberof`** EndpointResourceV1UpdateEndpointApi |
 | `id` | `string` | **`Memberof`** EndpointResourceV1UpdateEndpointApi |
 | `options?` | `AxiosRequestConfig` | - |
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L14)
+[EndpointResourceV1UpdateEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L14)
 
 ## Functions
 
@@ -52,7 +52,7 @@ Updates the endpoint configuration. Use this to update an existing endpoint. Any
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`EndpointResourceV1UpdateEndpointParams`](EndpointResourceV1UpdateEndpoint.md#endpointresourcev1updateendpointparams)] \| [`string`, [`Endpoint`](../interfaces/types.Endpoint.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+| `...config` | [[`EndpointResourceV1UpdateEndpointParams`](EndpointResourceV1UpdateEndpoint.md#endpointresourcev1updateendpointparams)] \| [`string`, [`EndpointDTO`](../interfaces/types.EndpointDTO.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -66,4 +66,4 @@ Update an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)
+[EndpointResourceV1UpdateEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1UpdateEndpoint/index.ts#L40)

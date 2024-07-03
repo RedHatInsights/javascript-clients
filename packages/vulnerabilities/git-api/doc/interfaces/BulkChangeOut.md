@@ -25,7 +25,7 @@ BulkChangeOut
 
 #### Defined in
 
-[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L102)
+[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L108)
 
 ___
 
@@ -41,4 +41,4 @@ BulkChangeOut
 
 #### Defined in
 
-[api.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L108)
+[api.ts:102](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L102)

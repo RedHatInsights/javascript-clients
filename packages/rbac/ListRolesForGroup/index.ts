@@ -17,61 +17,61 @@ export type ListRolesForGroupParams = {
   * @type { string }
   * @memberof ListRolesForGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * If this is set to true, the result would be roles excluding the ones in the group
   * @type { boolean }
   * @memberof ListRolesForGroupApi
   */
-  exclude?: boolean, 
+  exclude?: boolean,
   /**
   * Parameter for filtering group roles by role `name` using string contains search.
   * @type { string }
   * @memberof ListRolesForGroupApi
   */
-  roleName?: string, 
+  roleName?: string,
   /**
   * Parameter for filtering group roles by role `display_name` using string contains search.
   * @type { string }
   * @memberof ListRolesForGroupApi
   */
-  roleDisplayName?: string, 
+  roleDisplayName?: string,
   /**
   * Parameter for filtering group roles by role `description` using string contains search.
   * @type { string }
   * @memberof ListRolesForGroupApi
   */
-  roleDescription?: string, 
+  roleDescription?: string,
   /**
   * Parameter for filtering group roles by system flag.
   * @type { boolean }
   * @memberof ListRolesForGroupApi
   */
-  roleSystem?: boolean, 
+  roleSystem?: boolean,
   /**
   * Parameter for filtering group roles by role `external_tenant` using string search.
   * @type { string }
   * @memberof ListRolesForGroupApi
   */
-  roleExternalTenant?: string, 
+  roleExternalTenant?: string,
   /**
   * Parameter for selecting the amount of data returned.
   * @type { number }
   * @memberof ListRolesForGroupApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListRolesForGroupApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for ordering roles by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-name
   * @type { ListRolesForGroupOrderByEnum }
   * @memberof ListRolesForGroupApi
   */
-  orderBy?: ListRolesForGroupOrderByEnum, 
+  orderBy?: ListRolesForGroupOrderByEnum,
   options?: AxiosRequestConfig
 }
 /**

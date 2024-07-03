@@ -13,6 +13,7 @@ System
 - [all\_pathway\_hits](System.md#all_pathway_hits)
 - [critical\_hits](System.md#critical_hits)
 - [display\_name](System.md#display_name)
+- [group\_name](System.md#group_name)
 - [hits](System.md#hits)
 - [important\_hits](System.md#important_hits)
 - [incident\_hits](System.md#incident_hits)
@@ -36,7 +37,7 @@ System
 
 #### Defined in
 
-[api.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2079)
+[api.ts:2054](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2054)
 
 ___
 
@@ -50,7 +51,7 @@ System
 
 #### Defined in
 
-[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2049)
+[api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2024)
 
 ___
 
@@ -64,7 +65,21 @@ System
 
 #### Defined in
 
-[api.ts:2025](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2025)
+[api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2000)
+
+___
+
+### group\_name
+
+• **group\_name**: `string`
+
+**`Memberof`**
+
+System
+
+#### Defined in
+
+[api.ts:2072](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2072)
 
 ___
 
@@ -78,7 +93,7 @@ System
 
 #### Defined in
 
-[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2043)
+[api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2018)
 
 ___
 
@@ -92,7 +107,7 @@ System
 
 #### Defined in
 
-[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2055)
+[api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2030)
 
 ___
 
@@ -106,7 +121,7 @@ System
 
 #### Defined in
 
-[api.ts:2073](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2073)
+[api.ts:2048](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2048)
 
 ___
 
@@ -120,7 +135,7 @@ System
 
 #### Defined in
 
-[api.ts:2031](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2031)
+[api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2006)
 
 ___
 
@@ -134,7 +149,7 @@ System
 
 #### Defined in
 
-[api.ts:2067](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2067)
+[api.ts:2042](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2042)
 
 ___
 
@@ -148,7 +163,7 @@ System
 
 #### Defined in
 
-[api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2061)
+[api.ts:2036](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2036)
 
 ___
 
@@ -162,7 +177,7 @@ System
 
 #### Defined in
 
-[api.ts:2085](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2085)
+[api.ts:2060](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2060)
 
 ___
 
@@ -176,7 +191,7 @@ System
 
 #### Defined in
 
-[api.ts:2091](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2091)
+[api.ts:2066](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2066)
 
 ___
 
@@ -190,7 +205,7 @@ System
 
 #### Defined in
 
-[api.ts:2037](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2037)
+[api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2012)
 
 ___
 
@@ -204,4 +219,4 @@ System
 
 #### Defined in
 
-[api.ts:2019](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2019)
+[api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1994)

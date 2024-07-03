@@ -136,7 +136,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9963](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9963)
+[api.ts:9944](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9944)
 
 ___
 
@@ -169,7 +169,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9975)
+[api.ts:9956](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9956)
 
 ___
 
@@ -203,7 +203,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:9991](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9991)
+[api.ts:9972](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9972)
 
 ___
 
@@ -237,7 +237,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:10004](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10004)
+[api.ts:9985](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9985)
 
 ___
 
@@ -266,7 +266,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:10015](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10015)
+[api.ts:9996](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9996)
 
 ___
 
@@ -295,7 +295,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:10026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10026)
+[api.ts:10007](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10007)
 
 ___
 
@@ -330,7 +330,7 @@ TopicApi
 
 #### Defined in
 
-[api.ts:10043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10043)
+[api.ts:10024](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10024)
 
 ___
 
@@ -364,4 +364,4 @@ TopicApi
 
 #### Defined in
 
-[api.ts:10056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10056)
+[api.ts:10037](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10037)

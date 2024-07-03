@@ -6,7 +6,7 @@
 
 **`Export`**
 
-PaginationLink
+PaginationLinks
 
 ## Table of contents
 
@@ -25,7 +25,7 @@ PaginationLink
 
 **`Memberof`**
 
-PaginationLink
+PaginationLinks
 
 #### Defined in
 
@@ -39,7 +39,7 @@ ___
 
 **`Memberof`**
 
-PaginationLink
+PaginationLinks
 
 #### Defined in
 
@@ -53,7 +53,7 @@ ___
 
 **`Memberof`**
 
-PaginationLink
+PaginationLinks
 
 #### Defined in
 
@@ -67,7 +67,7 @@ ___
 
 **`Memberof`**
 
-PaginationLink
+PaginationLinks
 
 #### Defined in
 

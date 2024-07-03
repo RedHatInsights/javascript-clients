@@ -6,7 +6,7 @@
 
 **`Export`**
 
-InternalRoleAcce
+InternalRoleAccess
 
 ## Table of contents
 
@@ -24,11 +24,11 @@ InternalRoleAcce
 
 **`Memberof`**
 
-InternalRoleAcce
+InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1264](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1264)
+[types/index.ts:1362](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1362)
 
 ___
 
@@ -38,11 +38,11 @@ ___
 
 **`Memberof`**
 
-InternalRoleAcce
+InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1252](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1252)
+[types/index.ts:1350](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1350)
 
 ___
 
@@ -52,8 +52,8 @@ ___
 
 **`Memberof`**
 
-InternalRoleAcce
+InternalRoleAccess
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1258](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1258)
+[types/index.ts:1356](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1356)

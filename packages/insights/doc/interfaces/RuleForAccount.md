@@ -51,7 +51,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1607)
+[api.ts:1582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1582)
 
 ___
 
@@ -65,7 +65,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1613)
+[api.ts:1588](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1588)
 
 ___
 
@@ -79,7 +79,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1583)
+[api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1558)
 
 ___
 
@@ -93,7 +93,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1595)
+[api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1570)
 
 ___
 
@@ -107,7 +107,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1601)
+[api.ts:1576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1576)
 
 ___
 
@@ -121,7 +121,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1667)
+[api.ts:1642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1642)
 
 ___
 
@@ -135,7 +135,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1715)
+[api.ts:1690](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1690)
 
 ___
 
@@ -149,7 +149,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1619)
+[api.ts:1594](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1594)
 
 ___
 
@@ -163,7 +163,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1685](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1685)
+[api.ts:1660](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1660)
 
 ___
 
@@ -177,7 +177,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1625)
+[api.ts:1600](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1600)
 
 ___
 
@@ -191,7 +191,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1679)
+[api.ts:1654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1654)
 
 ___
 
@@ -207,7 +207,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1631)
+[api.ts:1606](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1606)
 
 ___
 
@@ -221,7 +221,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1727](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1727)
+[api.ts:1702](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1702)
 
 ___
 
@@ -235,7 +235,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1643](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1643)
+[api.ts:1618](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1618)
 
 ___
 
@@ -249,7 +249,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1655)
+[api.ts:1630](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1630)
 
 ___
 
@@ -263,7 +263,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1721)
+[api.ts:1696](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1696)
 
 ___
 
@@ -277,7 +277,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1673)
+[api.ts:1648](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1648)
 
 ___
 
@@ -291,7 +291,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1649](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1649)
+[api.ts:1624](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1624)
 
 ___
 
@@ -305,7 +305,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1691](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1691)
+[api.ts:1666](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1666)
 
 ___
 
@@ -319,7 +319,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1703](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1703)
+[api.ts:1678](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1678)
 
 ___
 
@@ -335,7 +335,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1577](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1577)
+[api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1552)
 
 ___
 
@@ -349,7 +349,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1697](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1697)
+[api.ts:1672](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1672)
 
 ___
 
@@ -363,7 +363,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1661)
+[api.ts:1636](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1636)
 
 ___
 
@@ -377,7 +377,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1637)
+[api.ts:1612](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1612)
 
 ___
 
@@ -391,7 +391,7 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1709](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1709)
+[api.ts:1684](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1684)
 
 ___
 
@@ -405,4 +405,4 @@ RuleForAccount
 
 #### Defined in
 
-[api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1589)
+[api.ts:1564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1564)

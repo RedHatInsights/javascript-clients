@@ -48,11 +48,11 @@ Renames and re-exports [listGroupsParamCreator](ListGroups.md#listgroupsparamcre
 | `options?` | `AxiosRequestConfig` | - |
 | `orderBy?` | [`ListGroupsOrderByEnum`](../enums/ListGroups.ListGroupsOrderByEnum.md) | Parameter for ordering groups by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-name **`Memberof`** ListGroupsApi |
 | `platformDefault?` | `boolean` | An optional flag to return either platform default or non-platform default groups. **`Memberof`** ListGroupsApi |
-| `roleDiscriminator?` | [`ListGroupsRoleDiscriminatorEnum`](../enums/ListGroups.ListGroupsRoleDiscriminatorEnum.md) | Discriminator that works with role_names to indicate matching all/any of the role name **`Memberof`** ListGroupsApi |
+| `roleDiscriminator?` | [`ListGroupsRoleDiscriminatorEnum`](../enums/ListGroups.ListGroupsRoleDiscriminatorEnum.md) | Discriminator that works with role_names to indicate matching all/any of the role names **`Memberof`** ListGroupsApi |
 | `roleNames?` | `string`[] | List of role name to filter for groups. It is exact match but case-insensitive **`Memberof`** ListGroupsApi |
 | `scope?` | [`ListGroupsScopeEnum`](../enums/ListGroups.ListGroupsScopeEnum.md) | Parameter for filtering resource by scope. **`Memberof`** ListGroupsApi |
 | `system?` | `boolean` | An optional flag to return either system or non-system groups. **`Memberof`** ListGroupsApi |
-| `username?` | `string` | A username for a principal to filter for group **`Memberof`** ListGroupsApi |
+| `username?` | `string` | A username for a principal to filter for groups **`Memberof`** ListGroupsApi |
 | `uuid?` | `string`[] | A list of UUIDs to filter listed groups. **`Memberof`** ListGroupsApi |
 
 #### Defined in

@@ -17,7 +17,7 @@ export type DeleteGroupParams = {
   * @type { string }
   * @memberof DeleteGroupApi
   */
-  uuid: string, 
+  uuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isDeleteGroupObjectParams = (params: [DeleteGroupParams] | unknown[]): par
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-* 
+*
 * @summary Delete a group in the tenant
 * @param {DeleteGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

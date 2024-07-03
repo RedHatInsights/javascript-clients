@@ -17,7 +17,7 @@ export type DeletePolicyParams = {
   * @type { string }
   * @memberof DeletePolicyApi
   */
-  uuid: string, 
+  uuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isDeletePolicyObjectParams = (params: [DeletePolicyParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-* 
+*
 * @summary Delete a policy in the tenant
 * @param {DeletePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

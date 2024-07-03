@@ -17,7 +17,7 @@ export type GetGroupParams = {
   * @type { string }
   * @memberof GetGroupApi
   */
-  uuid: string, 
+  uuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-* 
+*
 * @summary Get a group in the tenant
 * @param {GetGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

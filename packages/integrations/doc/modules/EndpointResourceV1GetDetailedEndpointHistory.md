@@ -38,7 +38,7 @@ Renames and re-exports [endpointResourceV1GetDetailedEndpointHistoryParamCreator
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L14)
+[EndpointResourceV1GetDetailedEndpointHistory/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L14)
 
 ## Functions
 
@@ -60,10 +60,10 @@ Retrieves extended information about the outcome of an event notification relate
 
 **`Summary`**
 
-Retrieve event notification detail
+Retrieve event notification details
 
 **`Throws`**
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)
+[EndpointResourceV1GetDetailedEndpointHistory/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetDetailedEndpointHistory/index.ts#L40)

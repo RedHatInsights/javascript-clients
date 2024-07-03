@@ -35,6 +35,7 @@ Renames and re-exports [notificationResourceV1GetEventTypesParamCreator](Notific
 | `applicationIds?` | `Set`\<`string`\> | **`Memberof`** NotificationResourceV1GetEventTypesApi |
 | `bundleId?` | `string` | **`Memberof`** NotificationResourceV1GetEventTypesApi |
 | `eventTypeName?` | `string` | **`Memberof`** NotificationResourceV1GetEventTypesApi |
+| `excludeMutedTypes?` | `boolean` | **`Memberof`** NotificationResourceV1GetEventTypesApi |
 | `limit?` | `number` | **`Memberof`** NotificationResourceV1GetEventTypesApi |
 | `offset?` | `number` | **`Memberof`** NotificationResourceV1GetEventTypesApi |
 | `options?` | `AxiosRequestConfig` | - |
@@ -44,7 +45,7 @@ Renames and re-exports [notificationResourceV1GetEventTypesParamCreator](Notific
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypes/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L14)
+[NotificationResourceV1GetEventTypes/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L14)
 
 ## Functions
 
@@ -52,13 +53,13 @@ Renames and re-exports [notificationResourceV1GetEventTypesParamCreator](Notific
 
 ▸ **notificationResourceV1GetEventTypesParamCreator**(`...config`): `Promise`\<`RequestArgs`\>
 
-Lists all event types. You can filter the returned list by bundle or application name.
+Lists all event types. You can filter the returned list by bundle, application name, or unmuted types.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`NotificationResourceV1GetEventTypesParams`](NotificationResourceV1GetEventTypes.md#notificationresourcev1geteventtypesparams)] \| [`Set`\<`string`\>, `string`, `string`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+| `...config` | [[`NotificationResourceV1GetEventTypesParams`](NotificationResourceV1GetEventTypes.md#notificationresourcev1geteventtypesparams)] \| [`Set`\<`string`\>, `string`, `string`, `boolean`, `number`, `number`, `number`, `string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -66,10 +67,10 @@ Lists all event types. You can filter the returned list by bundle or application
 
 **`Summary`**
 
-List all event type
+List all event types
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypes/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L76)
+[NotificationResourceV1GetEventTypes/index.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypes/index.ts#L82)

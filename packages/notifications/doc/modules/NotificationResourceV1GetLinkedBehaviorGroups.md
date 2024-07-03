@@ -42,7 +42,7 @@ Renames and re-exports [notificationResourceV1GetLinkedBehaviorGroupsParamCreato
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L14)
+[NotificationResourceV1GetLinkedBehaviorGroups/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L14)
 
 ## Functions
 
@@ -70,4 +70,4 @@ List the behavior groups linked to an event type
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L64)
+[NotificationResourceV1GetLinkedBehaviorGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetLinkedBehaviorGroups/index.ts#L64)

@@ -37,7 +37,7 @@ Renames and re-exports [endpointResourceV1DisableEndpointParamCreator](EndpointR
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L14)
+[EndpointResourceV1DisableEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Disable an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)
+[EndpointResourceV1DisableEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DisableEndpoint/index.ts#L34)

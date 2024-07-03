@@ -410,23 +410,29 @@ export interface Report {
      */
     'assigned_system_count'?: any;
     /**
-     * The number of compliant Systems assigned to this Report
+     * The number of compliant Systems in this Report
      * @type {any}
      * @memberof Report
      */
     'compliant_system_count'?: any;
     /**
-     * Informs if the user has access to all the account\'s systems
+     * Informs if the user has access to all the Systems under the Report
      * @type {any}
      * @memberof Report
      */
     'all_systems_exposed'?: any;
     /**
-     * The number of unsupported Systems assigned to this Report
+     * The number of unsupported Systems in this Report
      * @type {any}
      * @memberof Report
      */
     'unsupported_system_count'?: any;
+    /**
+     * The number of Systems in this Report that have Test Results available
+     * @type {any}
+     * @memberof Report
+     */
+    'reported_system_count'?: any;
 }
 
 export const ReportTypeEnum = {
@@ -460,6 +466,31 @@ export interface Report200ResponseData {
      * @memberof Report200ResponseData
      */
     'schema'?: Report;
+}
+/**
+ *
+ * @export
+ * @interface ReportTestResults200Response
+ */
+export interface ReportTestResults200Response {
+    /**
+     *
+     * @type {Metadata}
+     * @memberof ReportTestResults200Response
+     */
+    'meta'?: Metadata;
+    /**
+     *
+     * @type {Links}
+     * @memberof ReportTestResults200Response
+     */
+    'links'?: Links;
+    /**
+     *
+     * @type {any}
+     * @memberof ReportTestResults200Response
+     */
+    'data'?: any;
 }
 /**
  *
@@ -838,7 +869,7 @@ export interface SupportedProfile {
      */
     'type'?: SupportedProfileTypeEnum;
     /**
-     * Identificator of the Profile
+     * Identificator of the latest supported Profile
      * @type {any}
      * @memberof SupportedProfile
      */
@@ -849,6 +880,12 @@ export interface SupportedProfile {
      * @memberof SupportedProfile
      */
     'title'?: any;
+    /**
+     * UUID of the latest Security Guide supporting this Profile
+     * @type {any}
+     * @memberof SupportedProfile
+     */
+    'security_guide_id'?: any;
     /**
      * Version of the latest Security Guide supporting this Profile
      * @type {any}
@@ -1165,6 +1202,92 @@ export interface Tailorings200Response {
      */
     'data'?: any;
 }
+/**
+ *
+ * @export
+ * @interface TestResult
+ */
+export interface TestResult {
+    /**
+     *
+     * @type {any}
+     * @memberof TestResult
+     */
+    'id'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof TestResult
+     */
+    'type'?: TestResultTypeEnum;
+    /**
+     * Display Name of the System
+     * @type {any}
+     * @memberof TestResult
+     */
+    'display_name'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof TestResult
+     */
+    'groups'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof TestResult
+     */
+    'tags'?: any;
+    /**
+     * UUID of the underlying System
+     * @type {any}
+     * @memberof TestResult
+     */
+    'system_id'?: any;
+    /**
+     * Major version of the Operating System
+     * @type {any}
+     * @memberof TestResult
+     */
+    'os_major_version'?: any;
+    /**
+     * Minor version of the Operating System
+     * @type {any}
+     * @memberof TestResult
+     */
+    'os_minor_version'?: any;
+    /**
+     * Whether the Test Result is compliant or not within a given Report.
+     * @type {any}
+     * @memberof TestResult
+     */
+    'compliant'?: any;
+    /**
+     * Whether the System is supported or not by a Profile within a given Policy.
+     * @type {any}
+     * @memberof TestResult
+     */
+    'supported'?: any;
+    /**
+     * Number of failed rules in the Test Result
+     * @type {any}
+     * @memberof TestResult
+     */
+    'failed_rule_count'?: any;
+    /**
+     * The date when the System has been reported a Test Result for the last time.
+     * @type {any}
+     * @memberof TestResult
+     */
+    'last_scanned'?: any;
+}
+
+export const TestResultTypeEnum = {
+    TestResult: 'test_result'
+} as const;
+
+export type TestResultTypeEnum = typeof TestResultTypeEnum[keyof typeof TestResultTypeEnum];
+
 /**
  *
  * @export

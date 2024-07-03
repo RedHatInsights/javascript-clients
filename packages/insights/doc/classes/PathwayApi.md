@@ -136,7 +136,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5931](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5931)
+[api.ts:5912](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5912)
 
 ___
 
@@ -169,7 +169,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5943](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5943)
+[api.ts:5924](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5924)
 
 ___
 
@@ -215,7 +215,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5968](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5968)
+[api.ts:5949](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5949)
 
 ___
 
@@ -254,7 +254,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:5986](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5986)
+[api.ts:5967](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5967)
 
 ___
 
@@ -295,13 +295,13 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:6006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6006)
+[api.ts:5987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L5987)
 
 ___
 
 ### pathwayRulesList
 
-▸ **pathwayRulesList**(`slug`, `category?`, `limit?`, `offset?`, `text?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedRuleList`](../interfaces/PaginatedRuleList.md), `any`\>\>
+▸ **pathwayRulesList**(`slug`, `category?`, `limit?`, `offset?`, `text?`, `options?`): `Promise`\<`AxiosResponse`\<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
 
 This view will retrieve/list in paginated format, all rules for a specific Pathway. This does not take into account acks or host asks. The Specific Pathway is requested by its slug
 
@@ -318,7 +318,7 @@ This view will retrieve/list in paginated format, all rules for a specific Pathw
 
 #### Returns
 
-`Promise`\<`AxiosResponse`\<[`PaginatedRuleList`](../interfaces/PaginatedRuleList.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`PaginatedRuleForAccountList`](../interfaces/PaginatedRuleForAccountList.md), `any`\>\>
 
 **`Summary`**
 
@@ -332,7 +332,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:6022](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6022)
+[api.ts:6003](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6003)
 
 ___
 
@@ -376,7 +376,7 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:6045](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6045)
+[api.ts:6026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6026)
 
 ___
 
@@ -410,4 +410,4 @@ PathwayApi
 
 #### Defined in
 
-[api.ts:6058](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6058)
+[api.ts:6039](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L6039)

@@ -31,7 +31,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L254)
+[types/index.ts:254](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L254)
 
 ___
 
@@ -45,7 +45,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L266)
+[types/index.ts:266](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L266)
 
 ___
 
@@ -59,7 +59,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L248)
+[types/index.ts:248](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L248)
 
 ___
 
@@ -73,7 +73,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L236)
+[types/index.ts:236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L236)
 
 ___
 
@@ -87,7 +87,7 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L242)
+[types/index.ts:242](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L242)
 
 ___
 
@@ -101,4 +101,4 @@ ApplicationDTO
 
 #### Defined in
 
-[packages/notifications/types/index.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L260)
+[types/index.ts:260](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L260)

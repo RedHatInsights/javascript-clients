@@ -36,7 +36,7 @@ System
 
 #### Defined in
 
-[types/index.ts:801](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L801)
+[types/index.ts:975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L975)
 
 ___
 
@@ -52,7 +52,7 @@ System
 
 #### Defined in
 
-[types/index.ts:789](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L789)
+[types/index.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L963)
 
 ___
 
@@ -66,7 +66,7 @@ System
 
 #### Defined in
 
-[types/index.ts:795](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L795)
+[types/index.ts:969](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L969)
 
 ___
 
@@ -80,7 +80,7 @@ System
 
 #### Defined in
 
-[types/index.ts:777](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L777)
+[types/index.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L951)
 
 ___
 
@@ -94,7 +94,7 @@ System
 
 #### Defined in
 
-[types/index.ts:825](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L825)
+[types/index.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L999)
 
 ___
 
@@ -110,7 +110,7 @@ System
 
 #### Defined in
 
-[types/index.ts:837](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L837)
+[types/index.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1011)
 
 ___
 
@@ -126,7 +126,7 @@ System
 
 #### Defined in
 
-[types/index.ts:843](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L843)
+[types/index.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1017)
 
 ___
 
@@ -142,7 +142,7 @@ System
 
 #### Defined in
 
-[types/index.ts:849](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L849)
+[types/index.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1023)
 
 ___
 
@@ -156,7 +156,7 @@ System
 
 #### Defined in
 
-[types/index.ts:807](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L807)
+[types/index.ts:981](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L981)
 
 ___
 
@@ -170,7 +170,7 @@ System
 
 #### Defined in
 
-[types/index.ts:813](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L813)
+[types/index.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L987)
 
 ___
 
@@ -184,7 +184,7 @@ System
 
 #### Defined in
 
-[types/index.ts:831](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L831)
+[types/index.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1005)
 
 ___
 
@@ -198,7 +198,7 @@ System
 
 #### Defined in
 
-[types/index.ts:783](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L783)
+[types/index.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L957)
 
 ___
 
@@ -212,4 +212,4 @@ System
 
 #### Defined in
 
-[types/index.ts:819](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L819)
+[types/index.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L993)

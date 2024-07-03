@@ -43,7 +43,7 @@ Renames and re-exports [endpointResourceV1GetEndpointHistoryParamCreator](Endpoi
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L14)
+[EndpointResourceV1GetEndpointHistory/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Renames and re-exports [endpointResourceV1GetEndpointHistoryParamCreator](Endpoi
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)
+[EndpointResourceV1GetEndpointHistory/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpointHistory/index.ts#L69)

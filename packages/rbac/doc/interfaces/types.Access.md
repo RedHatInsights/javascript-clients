@@ -6,7 +6,7 @@
 
 **`Export`**
 
-Acce
+Access
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ Acce
 
 **`Memberof`**
 
-Acce
+Access
 
 #### Defined in
 
@@ -37,7 +37,7 @@ ___
 
 **`Memberof`**
 
-Acce
+Access
 
 #### Defined in
 

@@ -6,7 +6,7 @@
 
 **`Export`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 ## Table of contents
 
@@ -29,7 +29,7 @@ CrossAccountRequestWithRole
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -43,7 +43,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -57,7 +57,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -71,7 +71,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -99,7 +99,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -113,7 +113,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 
@@ -127,7 +127,7 @@ ___
 
 **`Memberof`**
 
-CrossAccountRequestWithRole
+CrossAccountRequestWithRoles
 
 #### Defined in
 

@@ -38,7 +38,7 @@ Renames and re-exports [notificationResourceV1GetApplicationByNameAndBundleNameP
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L14)
+[NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L14)
 
 ## Functions
 
@@ -60,10 +60,10 @@ Retrieves an application by bundle and application names. Use this endpoint to  
 
 **`Summary`**
 
-Retrieve an application by bundle and application name
+Retrieve an application by bundle and application names
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L40)
+[NotificationResourceV1GetApplicationByNameAndBundleName/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetApplicationByNameAndBundleName/index.ts#L40)

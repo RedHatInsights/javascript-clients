@@ -34,7 +34,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1211](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1211)
+[api.ts:1240](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1240)
 
 ___
 
@@ -50,7 +50,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1217)
+[api.ts:1192](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1192)
 
 ___
 
@@ -66,7 +66,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1223)
+[api.ts:1198](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1198)
 
 ___
 
@@ -82,7 +82,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1229](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1229)
+[api.ts:1204](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1204)
 
 ___
 
@@ -98,7 +98,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1235](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1235)
+[api.ts:1210](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1210)
 
 ___
 
@@ -114,7 +114,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1241](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1241)
+[api.ts:1216](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1216)
 
 ___
 
@@ -130,7 +130,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1247)
+[api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1222)
 
 ___
 
@@ -146,7 +146,7 @@ Meta
 
 #### Defined in
 
-[api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1253)
+[api.ts:1228](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1228)
 
 ___
 
@@ -162,4 +162,4 @@ Meta
 
 #### Defined in
 
-[api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1259)
+[api.ts:1234](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1234)

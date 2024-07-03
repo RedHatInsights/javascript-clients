@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/notifications/types/index.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L960)
+[types/index.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1058)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L959)
+[types/index.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1057)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L957)
+[types/index.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1055)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:958](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L958)
+[types/index.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1056)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[packages/notifications/types/index.ts:961](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L961)
+[types/index.ts:1059](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1059)
