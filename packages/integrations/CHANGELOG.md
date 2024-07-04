@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.4.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.4.3...@redhat-cloud-services/integrations-client-2.4.4) (2024-07-04)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.4`
 ## [2.4.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.4.2...@redhat-cloud-services/integrations-client-2.4.3) (2024-06-19)
 
 ### Dependency Updates
