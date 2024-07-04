@@ -39,7 +39,7 @@ Renames and re-exports [notificationResourceV1GetEventTypesByNameAndBundleAndApp
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L14)
+[NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L14)
 
 ## Functions
 
@@ -61,10 +61,10 @@ Retrieves the details of an event type by specifying the bundle name, the applic
 
 **`Summary`**
 
-Retrieve an event type by bundle, application and event type name
+Retrieve an event type by bundle, application and event type names
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L46)
+[NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName/index.ts#L46)

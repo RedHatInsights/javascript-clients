@@ -36,7 +36,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:181](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L181)
+[types/index.ts:181](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L181)
 
 ___
 
@@ -52,7 +52,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:187](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L187)
+[types/index.ts:187](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L187)
 
 ___
 
@@ -68,7 +68,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:175](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L175)
+[types/index.ts:175](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L175)
 
 ___
 
@@ -82,7 +82,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:157](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L157)
+[types/index.ts:157](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L157)
 
 ___
 
@@ -98,7 +98,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:199](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L199)
+[types/index.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L199)
 
 ___
 
@@ -114,7 +114,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:193](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L193)
+[types/index.ts:193](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L193)
 
 ___
 
@@ -130,7 +130,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:211](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L211)
+[types/index.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L211)
 
 ___
 
@@ -146,7 +146,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:205](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L205)
+[types/index.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L205)
 
 ___
 
@@ -162,7 +162,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:169](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L169)
+[types/index.ts:169](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L169)
 
 ___
 
@@ -178,7 +178,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:217](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L217)
+[types/index.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L217)
 
 ___
 
@@ -192,4 +192,4 @@ Policy
 
 #### Defined in
 
-[types/index.ts:163](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L163)
+[types/index.ts:163](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L163)

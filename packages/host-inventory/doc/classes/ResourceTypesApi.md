@@ -132,7 +132,7 @@ ResourceTypesApi
 
 #### Defined in
 
-[api.ts:6060](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6060)
+[api.ts:6149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6149)
 
 ___
 
@@ -166,4 +166,4 @@ ResourceTypesApi
 
 #### Defined in
 
-[api.ts:6073](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6073)
+[api.ts:6162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6162)

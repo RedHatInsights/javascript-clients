@@ -30,7 +30,7 @@ Metadata
 
 #### Defined in
 
-[types/index.ts:119](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L119)
+[types/index.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L119)
 
 ___
 
@@ -46,7 +46,7 @@ Metadata
 
 #### Defined in
 
-[types/index.ts:101](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L101)
+[types/index.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L101)
 
 ___
 
@@ -62,7 +62,7 @@ Metadata
 
 #### Defined in
 
-[types/index.ts:107](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L107)
+[types/index.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L107)
 
 ___
 
@@ -78,7 +78,7 @@ Metadata
 
 #### Defined in
 
-[types/index.ts:113](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L113)
+[types/index.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L113)
 
 ___
 
@@ -94,4 +94,4 @@ Metadata
 
 #### Defined in
 
-[types/index.ts:95](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L95)
+[types/index.ts:95](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L95)

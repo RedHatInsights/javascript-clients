@@ -35,7 +35,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:80](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L80)
+[types/index.ts:80](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L80)
 
 ___
 
@@ -49,7 +49,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:86](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L86)
+[types/index.ts:86](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L86)
 
 ___
 
@@ -63,7 +63,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L110)
+[types/index.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L110)
 
 ___
 
@@ -77,7 +77,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L116)
+[types/index.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L116)
 
 ___
 
@@ -91,7 +91,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:62](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L62)
+[types/index.ts:62](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L62)
 
 ___
 
@@ -105,7 +105,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L74)
+[types/index.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L74)
 
 ___
 
@@ -119,7 +119,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L98)
+[types/index.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L98)
 
 ___
 
@@ -133,7 +133,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L104)
+[types/index.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L104)
 
 ___
 
@@ -147,7 +147,7 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L92)
+[types/index.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L92)
 
 ___
 
@@ -161,4 +161,4 @@ AggregationEmailTemplate
 
 #### Defined in
 
-[packages/integrations/types/index.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L68)
+[types/index.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L68)

@@ -128,4 +128,4 @@ VersionApi
 
 #### Defined in
 
-[api.ts:3519](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3519)
+[api.ts:3689](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3689)

@@ -6,7 +6,7 @@
 
 **`Export`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ GroupWithPrincipal
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 
@@ -41,7 +41,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 
@@ -69,7 +69,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 
@@ -83,7 +83,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 
@@ -97,7 +97,7 @@ ___
 
 **`Memberof`**
 
-GroupWithPrincipal
+GroupWithPrincipals
 
 #### Defined in
 

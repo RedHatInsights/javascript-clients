@@ -27,7 +27,7 @@ HostSystemProfileOut
 
 #### Defined in
 
-[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1007)
+[api.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1000)
 
 ___
 
@@ -41,4 +41,4 @@ HostSystemProfileOut
 
 #### Defined in
 
-[api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1013)
+[api.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1006)

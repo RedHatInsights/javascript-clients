@@ -24,4 +24,4 @@ SecurityGuide200Response
 
 #### Defined in
 
-[types/index.ts:645](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L645)
+[types/index.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L813)

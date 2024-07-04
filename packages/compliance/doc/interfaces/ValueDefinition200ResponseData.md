@@ -24,4 +24,4 @@ ValueDefinition200ResponseData
 
 #### Defined in
 
-[types/index.ts:1105](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1105)
+[types/index.ts:1371](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1371)

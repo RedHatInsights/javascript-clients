@@ -29,7 +29,7 @@ Links
 
 #### Defined in
 
-[types/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L64)
+[types/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L64)
 
 ___
 
@@ -45,7 +45,7 @@ Links
 
 #### Defined in
 
-[types/index.ts:70](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L70)
+[types/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L70)
 
 ___
 
@@ -61,7 +61,7 @@ Links
 
 #### Defined in
 
-[types/index.ts:82](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L82)
+[types/index.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L82)
 
 ___
 
@@ -77,4 +77,4 @@ Links
 
 #### Defined in
 
-[types/index.ts:76](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L76)
+[types/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L76)

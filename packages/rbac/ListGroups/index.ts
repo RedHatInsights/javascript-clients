@@ -17,85 +17,85 @@ export type ListGroupsParams = {
   * @type { number }
   * @memberof ListGroupsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListGroupsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for filtering resource by name using string contains search.
   * @type { string }
   * @memberof ListGroupsApi
   */
-  name?: string, 
+  name?: string,
   /**
   * Parameter for specifying the matching criteria for an object\'s name or display_name.
   * @type { ListGroupsNameMatchEnum }
   * @memberof ListGroupsApi
   */
-  nameMatch?: ListGroupsNameMatchEnum, 
+  nameMatch?: ListGroupsNameMatchEnum,
   /**
   * Parameter for filtering resource by scope.
   * @type { ListGroupsScopeEnum }
   * @memberof ListGroupsApi
   */
-  scope?: ListGroupsScopeEnum, 
+  scope?: ListGroupsScopeEnum,
   /**
-  * A username for a principal to filter for group
+  * A username for a principal to filter for groups
   * @type { string }
   * @memberof ListGroupsApi
   */
-  username?: string, 
+  username?: string,
   /**
   * A username for a principal to filter for groups where principal is not a member and can be added manually
   * @type { string }
   * @memberof ListGroupsApi
   */
-  excludeUsername?: string, 
+  excludeUsername?: string,
   /**
   * A list of UUIDs to filter listed groups.
   * @type { Array<string> }
   * @memberof ListGroupsApi
   */
-  uuid?: Array<string>, 
+  uuid?: Array<string>,
   /**
   * List of role name to filter for groups. It is exact match but case-insensitive
   * @type { Array<string> }
   * @memberof ListGroupsApi
   */
-  roleNames?: Array<string>, 
+  roleNames?: Array<string>,
   /**
-  * Discriminator that works with role_names to indicate matching all/any of the role name
+  * Discriminator that works with role_names to indicate matching all/any of the role names
   * @type { ListGroupsRoleDiscriminatorEnum }
   * @memberof ListGroupsApi
   */
-  roleDiscriminator?: ListGroupsRoleDiscriminatorEnum, 
+  roleDiscriminator?: ListGroupsRoleDiscriminatorEnum,
   /**
   * Parameter for ordering groups by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-name
   * @type { ListGroupsOrderByEnum }
   * @memberof ListGroupsApi
   */
-  orderBy?: ListGroupsOrderByEnum, 
+  orderBy?: ListGroupsOrderByEnum,
   /**
   * An optional flag to return either platform default or non-platform default groups.
   * @type { boolean }
   * @memberof ListGroupsApi
   */
-  platformDefault?: boolean, 
+  platformDefault?: boolean,
   /**
   * An optional flag to return either admin default or non-admin default groups.
   * @type { boolean }
   * @memberof ListGroupsApi
   */
-  adminDefault?: boolean, 
+  adminDefault?: boolean,
   /**
   * An optional flag to return either system or non-system groups.
   * @type { boolean }
   * @memberof ListGroupsApi
   */
-  system?: boolean, 
+  system?: boolean,
   options?: AxiosRequestConfig
 }
 /**

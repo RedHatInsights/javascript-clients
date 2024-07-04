@@ -26,7 +26,7 @@ Resolutions
 
 #### Defined in
 
-[api.ts:1127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1127)
+[api.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1197)
 
 ___
 
@@ -40,7 +40,7 @@ Resolutions
 
 #### Defined in
 
-[api.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1133)
+[api.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1203)
 
 ___
 
@@ -54,4 +54,4 @@ Resolutions
 
 #### Defined in
 
-[api.ts:1139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1139)
+[api.ts:1209](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1209)

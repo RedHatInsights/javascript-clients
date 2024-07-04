@@ -4,8 +4,8 @@ import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'ax
 import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
 import type {  } from '../types';
@@ -25,11 +25,11 @@ export type AssignRuleParams = {
   */
   tailoringId: any,
   /**
-  *
+  * UUID or ref_id
   * @type { any }
   * @memberof AssignRuleApi
   */
-  id: any,
+  ruleId: any,
   /**
   * For internal use only
   * @type { any }
@@ -40,7 +40,7 @@ export type AssignRuleParams = {
 }
 
 const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): params is [AssignRuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }
 /**
 * Assigns a Rule to a Tailoring
@@ -50,12 +50,12 @@ const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): param
 * @throws {RequiredError}
 */
 export const assignRuleParamCreator = async (...config: ([AssignRuleParams] | [any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isAssignRuleObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'id', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AssignRuleParams;
-    const { policyId, tailoringId, id, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{id}`
+    const params = isAssignRuleObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AssignRuleParams;
+    const { policyId, tailoringId, ruleId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rules/{rule_id}`
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
         .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+        .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'PATCH' as Method, ...options};

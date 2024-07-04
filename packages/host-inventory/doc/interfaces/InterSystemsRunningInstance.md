@@ -30,7 +30,7 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1051](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1051)
+[api.ts:1044](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1044)
 
 ___
 
@@ -46,7 +46,7 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1057](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1057)
+[api.ts:1050](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1050)
 
 ___
 
@@ -62,4 +62,4 @@ InterSystemsRunningInstance
 
 #### Defined in
 
-[api.ts:1063](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1063)
+[api.ts:1056](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1056)

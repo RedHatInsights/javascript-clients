@@ -24,4 +24,4 @@ Rule200Response
 
 #### Defined in
 
-[types/index.ts:431](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L431)
+[types/index.ts:599](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L599)

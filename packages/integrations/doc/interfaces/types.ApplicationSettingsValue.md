@@ -30,4 +30,4 @@ ApplicationSettingsValue
 
 #### Defined in
 
-[packages/integrations/types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L279)
+[types/index.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L279)

@@ -14,6 +14,7 @@ SupportedProfile
 - [os\_major\_version](SupportedProfile.md#os_major_version)
 - [os\_minor\_versions](SupportedProfile.md#os_minor_versions)
 - [ref\_id](SupportedProfile.md#ref_id)
+- [security\_guide\_id](SupportedProfile.md#security_guide_id)
 - [security\_guide\_version](SupportedProfile.md#security_guide_version)
 - [title](SupportedProfile.md#title)
 - [type](SupportedProfile.md#type)
@@ -30,7 +31,7 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:696](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L696)
+[types/index.ts:864](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L864)
 
 ___
 
@@ -46,7 +47,7 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:726](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L726)
+[types/index.ts:900](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L900)
 
 ___
 
@@ -62,7 +63,7 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:732](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L732)
+[types/index.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L906)
 
 ___
 
@@ -70,7 +71,7 @@ ___
 
 • `Optional` **ref\_id**: `any`
 
-Identificator of the Profile
+Identificator of the latest supported Profile
 
 **`Memberof`**
 
@@ -78,7 +79,23 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:708](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L708)
+[types/index.ts:876](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L876)
+
+___
+
+### security\_guide\_id
+
+• `Optional` **security\_guide\_id**: `any`
+
+UUID of the latest Security Guide supporting this Profile
+
+**`Memberof`**
+
+SupportedProfile
+
+#### Defined in
+
+[types/index.ts:888](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L888)
 
 ___
 
@@ -94,7 +111,7 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:720](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L720)
+[types/index.ts:894](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L894)
 
 ___
 
@@ -110,7 +127,7 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:714](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L714)
+[types/index.ts:882](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L882)
 
 ___
 
@@ -124,4 +141,4 @@ SupportedProfile
 
 #### Defined in
 
-[types/index.ts:702](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L702)
+[types/index.ts:870](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L870)

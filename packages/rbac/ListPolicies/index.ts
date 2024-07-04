@@ -17,43 +17,43 @@ export type ListPoliciesParams = {
   * @type { number }
   * @memberof ListPoliciesApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListPoliciesApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for filtering resource by name using string contains search.
   * @type { string }
   * @memberof ListPoliciesApi
   */
-  name?: string, 
+  name?: string,
   /**
   * Parameter for filtering resource by scope.
   * @type { ListPoliciesScopeEnum }
   * @memberof ListPoliciesApi
   */
-  scope?: ListPoliciesScopeEnum, 
+  scope?: ListPoliciesScopeEnum,
   /**
   * Parameter for filtering resource by group name using string contains search.
   * @type { string }
   * @memberof ListPoliciesApi
   */
-  groupName?: string, 
+  groupName?: string,
   /**
   * Parameter for filtering resource by group uuid using UUID exact match.
   * @type { string }
   * @memberof ListPoliciesApi
   */
-  groupUuid?: string, 
+  groupUuid?: string,
   /**
   * Parameter for ordering policies by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-name
   * @type { ListPoliciesOrderByEnum }
   * @memberof ListPoliciesApi
   */
-  orderBy?: ListPoliciesOrderByEnum, 
+  orderBy?: ListPoliciesOrderByEnum,
   options?: AxiosRequestConfig
 }
 /**

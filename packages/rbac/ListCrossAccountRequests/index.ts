@@ -17,49 +17,49 @@ export type ListCrossAccountRequestsParams = {
   * @type { number }
   * @memberof ListCrossAccountRequestsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListCrossAccountRequestsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for filtering resource by either a user\'s ID, or a client\'s org. The default value is target_org.
   * @type { ListCrossAccountRequestsQueryByEnum }
   * @memberof ListCrossAccountRequestsApi
   */
-  queryBy?: ListCrossAccountRequestsQueryByEnum, 
+  queryBy?: ListCrossAccountRequestsQueryByEnum,
   /**
   * Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by account number.
   * @type { string }
   * @memberof ListCrossAccountRequestsApi
   */
-  account?: string, 
+  account?: string,
   /**
   * Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by org id.
   * @type { string }
   * @memberof ListCrossAccountRequestsApi
   */
-  orgId?: string, 
+  orgId?: string,
   /**
   * Parameter for filtering resource which have been approved.
   * @type { ListCrossAccountRequestsApprovedOnlyEnum }
   * @memberof ListCrossAccountRequestsApi
   */
-  approvedOnly?: ListCrossAccountRequestsApprovedOnlyEnum, 
+  approvedOnly?: ListCrossAccountRequestsApprovedOnlyEnum,
   /**
   * Parameter for filtering resource based on status.
   * @type { ListCrossAccountRequestsStatusEnum }
   * @memberof ListCrossAccountRequestsApi
   */
-  status?: ListCrossAccountRequestsStatusEnum, 
+  status?: ListCrossAccountRequestsStatusEnum,
   /**
   * Parameter for ordering by field. For inverse ordering, use \'-\', e.g. ?order_by=-start_date.
   * @type { ListCrossAccountRequestsOrderByEnum }
   * @memberof ListCrossAccountRequestsApi
   */
-  orderBy?: ListCrossAccountRequestsOrderByEnum, 
+  orderBy?: ListCrossAccountRequestsOrderByEnum,
   options?: AxiosRequestConfig
 }
 /**

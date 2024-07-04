@@ -28,7 +28,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1759)
+[types/index.ts:1857](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1857)
 
 ___
 
@@ -42,7 +42,7 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1753](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1753)
+[types/index.ts:1851](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1851)
 
 ___
 
@@ -56,4 +56,4 @@ UpdateApplicationRequest
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1765](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1765)
+[types/index.ts:1863](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1863)

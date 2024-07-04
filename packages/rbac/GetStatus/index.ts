@@ -19,8 +19,8 @@ const isGetStatusObjectParams = (params: [GetStatusParams] | unknown[]): params 
   return params.length === 1
 }
 /**
-* 
-* @summary Obtain server statu
+*
+* @summary Obtain server status
 * @param {GetStatusParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

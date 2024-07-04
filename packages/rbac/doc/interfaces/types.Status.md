@@ -6,7 +6,7 @@
 
 **`Export`**
 
-Statu
+Status
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ Statu
 
 **`Memberof`**
 
-Statu
+Status
 
 #### Defined in
 
@@ -37,7 +37,7 @@ ___
 
 **`Memberof`**
 
-Statu
+Status
 
 #### Defined in
 

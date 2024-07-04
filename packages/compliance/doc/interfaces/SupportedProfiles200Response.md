@@ -26,7 +26,7 @@ SupportedProfiles200Response
 
 #### Defined in
 
-[types/index.ts:764](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L764)
+[types/index.ts:938](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L938)
 
 ___
 
@@ -40,7 +40,7 @@ SupportedProfiles200Response
 
 #### Defined in
 
-[types/index.ts:758](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L758)
+[types/index.ts:932](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L932)
 
 ___
 
@@ -54,4 +54,4 @@ SupportedProfiles200Response
 
 #### Defined in
 
-[types/index.ts:752](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L752)
+[types/index.ts:926](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L926)

@@ -17,7 +17,7 @@ export type CreateRoleParams = {
   * @type { RoleIn }
   * @memberof CreateRoleApi
   */
-  roleIn: RoleIn, 
+  roleIn: RoleIn,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): param
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'roleIn')
 }
 /**
-* 
+*
 * @summary Create a role for a tenant
 * @param {CreateRoleParams} config with all available params.
 * @param {*} [options] Override http request option.

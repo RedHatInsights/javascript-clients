@@ -6,7 +6,7 @@
 
 **`Export`**
 
-RequestSystemSubscriptionPropertie
+RequestSystemSubscriptionProperties
 
 ## Table of contents
 
@@ -23,11 +23,11 @@ RequestSystemSubscriptionPropertie
 
 **`Memberof`**
 
-RequestSystemSubscriptionPropertie
+RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1578](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1578)
+[types/index.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1676)
 
 ___
 
@@ -37,8 +37,8 @@ ___
 
 **`Memberof`**
 
-RequestSystemSubscriptionPropertie
+RequestSystemSubscriptionProperties
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1572)
+[types/index.ts:1670](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1670)

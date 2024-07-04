@@ -34,7 +34,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1931](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1931)
+[api.ts:1906](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1906)
 
 ___
 
@@ -48,7 +48,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1919](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1919)
+[api.ts:1894](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1894)
 
 ___
 
@@ -62,7 +62,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1925](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1925)
+[api.ts:1900](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1900)
 
 ___
 
@@ -76,7 +76,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1943](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1943)
+[api.ts:1918](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1918)
 
 ___
 
@@ -90,7 +90,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1949](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1949)
+[api.ts:1924](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1924)
 
 ___
 
@@ -104,7 +104,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1937](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1937)
+[api.ts:1912](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1912)
 
 ___
 
@@ -118,7 +118,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1907](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1907)
+[api.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1882)
 
 ___
 
@@ -132,7 +132,7 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1901](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1901)
+[api.ts:1876](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1876)
 
 ___
 
@@ -146,4 +146,4 @@ SettingDDF
 
 #### Defined in
 
-[api.ts:1913](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1913)
+[api.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1888)

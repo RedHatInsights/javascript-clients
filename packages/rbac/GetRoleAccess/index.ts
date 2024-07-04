@@ -17,19 +17,19 @@ export type GetRoleAccessParams = {
   * @type { string }
   * @memberof GetRoleAccessApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Parameter for selecting the amount of data returned.
   * @type { number }
   * @memberof GetRoleAccessApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof GetRoleAccessApi
   */
-  offset?: number, 
+  offset?: number,
   options?: AxiosRequestConfig
 }
 
@@ -37,7 +37,7 @@ const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]):
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
 }
 /**
-* 
+*
 * @summary Get access for a role in the tenant
 * @param {GetRoleAccessParams} config with all available params.
 * @param {*} [options] Override http request option.

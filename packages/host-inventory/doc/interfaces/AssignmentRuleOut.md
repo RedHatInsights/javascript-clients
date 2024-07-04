@@ -13,13 +13,13 @@ AssignmentRuleOut
 ### Properties
 
 - [account](AssignmentRuleOut.md#account)
-- [created\_on](AssignmentRuleOut.md#created_on)
+- [created](AssignmentRuleOut.md#created)
 - [description](AssignmentRuleOut.md#description)
 - [enabled](AssignmentRuleOut.md#enabled)
 - [filter](AssignmentRuleOut.md#filter)
 - [group\_id](AssignmentRuleOut.md#group_id)
 - [id](AssignmentRuleOut.md#id)
-- [modified\_on](AssignmentRuleOut.md#modified_on)
+- [modified](AssignmentRuleOut.md#modified)
 - [name](AssignmentRuleOut.md#name)
 - [org\_id](AssignmentRuleOut.md#org_id)
 
@@ -41,9 +41,9 @@ AssignmentRuleOut
 
 ___
 
-### created\_on
+### created
 
-• **created\_on**: `string`
+• **created**: `string`
 
 **`Memberof`**
 
@@ -125,9 +125,9 @@ AssignmentRuleOut
 
 ___
 
-### modified\_on
+### modified
 
-• **modified\_on**: `string`
+• **modified**: `string`
 
 **`Memberof`**
 

@@ -30,4 +30,4 @@ SettingsValuesByEventType
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1606](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1606)
+[types/index.ts:1704](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1704)

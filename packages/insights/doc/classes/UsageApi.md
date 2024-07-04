@@ -128,4 +128,4 @@ UsageApi
 
 #### Defined in
 
-[api.ts:10196](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10196)
+[api.ts:10177](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10177)

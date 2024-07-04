@@ -32,12 +32,12 @@ Renames and re-exports [endpointResourceV1CreateEndpointParamCreator](EndpointRe
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `endpoint` | [`Endpoint`](../interfaces/types.Endpoint.md) | **`Memberof`** EndpointResourceV1CreateEndpointApi |
+| `endpointDTO` | [`EndpointDTO`](../interfaces/types.EndpointDTO.md) | **`Memberof`** EndpointResourceV1CreateEndpointApi |
 | `options?` | `AxiosRequestConfig` | - |
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L14)
+[EndpointResourceV1CreateEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L14)
 
 ## Functions
 
@@ -51,7 +51,7 @@ Creates a new endpoint by providing data such as a description, a name, and the 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`EndpointResourceV1CreateEndpointParams`](EndpointResourceV1CreateEndpoint.md#endpointresourcev1createendpointparams)] \| [[`Endpoint`](../interfaces/types.Endpoint.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+| `...config` | [[`EndpointResourceV1CreateEndpointParams`](EndpointResourceV1CreateEndpoint.md#endpointresourcev1createendpointparams)] \| [[`EndpointDTO`](../interfaces/types.EndpointDTO.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -65,4 +65,4 @@ Create a new endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)
+[EndpointResourceV1CreateEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1CreateEndpoint/index.ts#L34)

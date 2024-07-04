@@ -17,61 +17,61 @@ export type ListPermissionsParams = {
   * @type { number }
   * @memberof ListPermissionsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListPermissionsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for ordering permissions by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-application
   * @type { ListPermissionsOrderByEnum }
   * @memberof ListPermissionsApi
   */
-  orderBy?: ListPermissionsOrderByEnum, 
+  orderBy?: ListPermissionsOrderByEnum,
   /**
   * Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
   * @type { string }
   * @memberof ListPermissionsApi
   */
-  application?: string, 
+  application?: string,
   /**
   * Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
   * @type { string }
   * @memberof ListPermissionsApi
   */
-  resourceType?: string, 
+  resourceType?: string,
   /**
   * Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
   * @type { string }
   * @memberof ListPermissionsApi
   */
-  verb?: string, 
+  verb?: string,
   /**
   * Partial match for the aggregate permission value name of a permission object.
   * @type { string }
   * @memberof ListPermissionsApi
   */
-  permission?: string, 
+  permission?: string,
   /**
   * If set to \'true\', this will exclude any permission with a global allowance on either \'application\', \'resource_type\' or \'verb\'. The default is \'false\'.
   * @type { ListPermissionsExcludeGlobalsEnum }
   * @memberof ListPermissionsApi
   */
-  excludeGlobals?: ListPermissionsExcludeGlobalsEnum, 
+  excludeGlobals?: ListPermissionsExcludeGlobalsEnum,
   /**
   * An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
   * @type { string }
   * @memberof ListPermissionsApi
   */
-  excludeRoles?: string, 
+  excludeRoles?: string,
   /**
   * If set to \'true\', this will exclude any permission with a role where the \'application\' is not in the role create allow list.
   * @type { ListPermissionsAllowedOnlyEnum }
   * @memberof ListPermissionsApi
   */
-  allowedOnly?: ListPermissionsAllowedOnlyEnum, 
+  allowedOnly?: ListPermissionsAllowedOnlyEnum,
   options?: AxiosRequestConfig
 }
 /**

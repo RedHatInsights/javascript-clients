@@ -31,7 +31,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1113)
+[api.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1088)
 
 ___
 
@@ -45,7 +45,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1125)
+[api.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1100)
 
 ___
 
@@ -59,7 +59,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1137)
+[api.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1112)
 
 ___
 
@@ -73,7 +73,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1131)
+[api.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1106)
 
 ___
 
@@ -87,7 +87,7 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1143)
+[api.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1118)
 
 ___
 
@@ -101,4 +101,4 @@ RenderedReport
 
 #### Defined in
 
-[api.ts:1119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1119)
+[api.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1094)

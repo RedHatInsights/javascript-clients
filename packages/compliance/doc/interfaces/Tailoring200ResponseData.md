@@ -24,4 +24,4 @@ Tailoring200ResponseData
 
 #### Defined in
 
-[types/index.ts:983](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L983)
+[types/index.ts:1163](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1163)

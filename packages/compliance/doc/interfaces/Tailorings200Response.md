@@ -26,7 +26,7 @@ Tailorings200Response
 
 #### Defined in
 
-[types/index.ts:1023](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1023)
+[types/index.ts:1203](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1203)
 
 ___
 
@@ -40,7 +40,7 @@ Tailorings200Response
 
 #### Defined in
 
-[types/index.ts:1017](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1017)
+[types/index.ts:1197](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1197)
 
 ___
 
@@ -54,4 +54,4 @@ Tailorings200Response
 
 #### Defined in
 
-[types/index.ts:1011](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1011)
+[types/index.ts:1191](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1191)

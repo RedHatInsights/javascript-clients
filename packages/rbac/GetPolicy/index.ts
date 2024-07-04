@@ -17,7 +17,7 @@ export type GetPolicyParams = {
   * @type { string }
   * @memberof GetPolicyApi
   */
-  uuid: string, 
+  uuid: string,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isGetPolicyObjectParams = (params: [GetPolicyParams] | unknown[]): params 
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-* 
+*
 * @summary Get a policy in the tenant
 * @param {GetPolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

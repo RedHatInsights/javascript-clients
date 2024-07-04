@@ -34,7 +34,6 @@
 - [DashboardCvesBySeverity0to39](interfaces/DashboardCvesBySeverity0to39.md)
 - [DashboardCvesBySeverity4to79](interfaces/DashboardCvesBySeverity4to79.md)
 - [DashboardCvesBySeverity8to10](interfaces/DashboardCvesBySeverity8to10.md)
-- [DashboardRecentCves](interfaces/DashboardRecentCves.md)
 - [DashboardRecentRules](interfaces/DashboardRecentRules.md)
 - [Errors](interfaces/Errors.md)
 - [ErrorsErrors](interfaces/ErrorsErrors.md)
@@ -43,9 +42,9 @@
 - [ExecutiveReportCvesBySeverity0to39](interfaces/ExecutiveReportCvesBySeverity0to39.md)
 - [ExecutiveReportCvesBySeverity4to79](interfaces/ExecutiveReportCvesBySeverity4to79.md)
 - [ExecutiveReportCvesBySeverity8to10](interfaces/ExecutiveReportCvesBySeverity8to10.md)
+- [ExecutiveReportRecentCves](interfaces/ExecutiveReportRecentCves.md)
 - [ExecutiveReportRulesBySeverity](interfaces/ExecutiveReportRulesBySeverity.md)
 - [ExecutiveReportRulesBySeverity1](interfaces/ExecutiveReportRulesBySeverity1.md)
-- [ExecutiveReportSystemCountPerType](interfaces/ExecutiveReportSystemCountPerType.md)
 - [ExecutiveReportTopCves](interfaces/ExecutiveReportTopCves.md)
 - [ExecutiveReportTopRules](interfaces/ExecutiveReportTopRules.md)
 - [InsightsRule](interfaces/InsightsRule.md)
@@ -62,6 +61,7 @@
 - [MetaSystemsAllOf](interfaces/MetaSystemsAllOf.md)
 - [MetaVulnerabilitiesOut](interfaces/MetaVulnerabilitiesOut.md)
 - [MetaVulnerabilitiesOutAllOf](interfaces/MetaVulnerabilitiesOutAllOf.md)
+- [MetaVulnerabilitiesOutAllOfSystemCountPerType](interfaces/MetaVulnerabilitiesOutAllOfSystemCountPerType.md)
 - [MitigatedSystemsIdsOut](interfaces/MitigatedSystemsIdsOut.md)
 - [MitigatedSystemsOut](interfaces/MitigatedSystemsOut.md)
 - [NotificationsOut](interfaces/NotificationsOut.md)
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[api.ts:1167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1167)
+[api.ts:1148](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L1148)
 
 ## Functions
 

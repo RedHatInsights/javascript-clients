@@ -146,4 +146,4 @@ TagsApi
 
 #### Defined in
 
-[api.ts:6838](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6838)
+[api.ts:6927](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L6927)

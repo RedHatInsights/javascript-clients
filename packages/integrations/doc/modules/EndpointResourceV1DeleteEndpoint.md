@@ -37,7 +37,7 @@ Renames and re-exports [endpointResourceV1DeleteEndpointParamCreator](EndpointRe
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L14)
+[EndpointResourceV1DeleteEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Delete an endpoint
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)
+[EndpointResourceV1DeleteEndpoint/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1DeleteEndpoint/index.ts#L34)

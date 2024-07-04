@@ -16,7 +16,7 @@ NoExecutors
 
 ### errors
 
-• `Optional` **errors**: \{ `[key: string]`: `object`;  }[]
+• **errors**: [`NoExecutorsErrors`](NoExecutorsErrors.md)[]
 
 **`Memberof`**
 

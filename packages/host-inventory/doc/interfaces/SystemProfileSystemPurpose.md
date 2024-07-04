@@ -30,7 +30,7 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2504)
+[api.ts:2561](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2561)
 
 ___
 
@@ -46,7 +46,7 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2510)
+[api.ts:2567](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2567)
 
 ___
 
@@ -62,4 +62,4 @@ SystemProfileSystemPurpose
 
 #### Defined in
 
-[api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2498)
+[api.ts:2555](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2555)

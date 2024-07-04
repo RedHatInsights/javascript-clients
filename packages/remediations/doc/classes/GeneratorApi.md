@@ -129,4 +129,4 @@ GeneratorApi
 
 #### Defined in
 
-[api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1472)
+[api.ts:1542](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1542)

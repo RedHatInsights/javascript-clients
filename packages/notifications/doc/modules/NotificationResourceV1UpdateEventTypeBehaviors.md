@@ -38,7 +38,7 @@ Renames and re-exports [notificationResourceV1UpdateEventTypeBehaviorsParamCreat
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L14)
+[NotificationResourceV1UpdateEventTypeBehaviors/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L14)
 
 ## Functions
 
@@ -66,4 +66,4 @@ Update the list of behavior groups for an event type
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L40)
+[NotificationResourceV1UpdateEventTypeBehaviors/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateEventTypeBehaviors/index.ts#L40)

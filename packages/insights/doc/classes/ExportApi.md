@@ -144,7 +144,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4316)
+[api.ts:4297](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4297)
 
 ___
 
@@ -188,7 +188,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4342)
+[api.ts:4323](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4323)
 
 ___
 
@@ -232,7 +232,7 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4368](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4368)
+[api.ts:4349](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4349)
 
 ___
 
@@ -266,4 +266,4 @@ ExportApi
 
 #### Defined in
 
-[api.ts:4384](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4384)
+[api.ts:4365](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L4365)

@@ -16,6 +16,7 @@ PlaybookExecutorStatus
 - [executor\_name](PlaybookExecutorStatus.md#executor_name)
 - [executor\_type](PlaybookExecutorStatus.md#executor_type)
 - [system\_count](PlaybookExecutorStatus.md#system_count)
+- [system\_ids](PlaybookExecutorStatus.md#system_ids)
 
 ## Properties
 
@@ -29,7 +30,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L301)
+[api.ts:338](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L338)
 
 ___
 
@@ -43,7 +44,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L271)
+[api.ts:302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L302)
 
 ___
 
@@ -57,7 +58,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L277)
+[api.ts:308](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L308)
 
 ___
 
@@ -71,7 +72,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L289)
+[api.ts:320](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L320)
 
 ___
 
@@ -85,7 +86,7 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L283)
+[api.ts:314](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L314)
 
 ___
 
@@ -99,4 +100,18 @@ PlaybookExecutorStatus
 
 #### Defined in
 
-[api.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L295)
+[api.ts:326](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L326)
+
+___
+
+### system\_ids
+
+• **system\_ids**: `string`[]
+
+**`Memberof`**
+
+PlaybookExecutorStatus
+
+#### Defined in
+
+[api.ts:332](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L332)

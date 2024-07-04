@@ -27,7 +27,7 @@ Application1
 
 #### Defined in
 
-[packages/notifications/types/index.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L223)
+[types/index.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L223)
 
 ___
 
@@ -41,4 +41,4 @@ Application1
 
 #### Defined in
 
-[packages/notifications/types/index.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L217)
+[types/index.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L217)

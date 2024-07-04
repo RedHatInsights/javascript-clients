@@ -27,7 +27,7 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1559)
+[types/index.ts:1657](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1657)
 
 ___
 
@@ -41,4 +41,4 @@ RequestDefaultBehaviorGroupPropertyList
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1553)
+[types/index.ts:1651](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1651)

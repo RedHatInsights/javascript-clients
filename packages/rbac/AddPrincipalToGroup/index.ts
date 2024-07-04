@@ -17,13 +17,13 @@ export type AddPrincipalToGroupParams = {
   * @type { string }
   * @memberof AddPrincipalToGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Principal to add to a group
   * @type { GroupPrincipalIn }
   * @memberof AddPrincipalToGroupApi
   */
-  groupPrincipalIn: GroupPrincipalIn, 
+  groupPrincipalIn: GroupPrincipalIn,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] |
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupPrincipalIn')
 }
 /**
-* 
+*
 * @summary Add a principal to a group in the tenant
 * @param {AddPrincipalToGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

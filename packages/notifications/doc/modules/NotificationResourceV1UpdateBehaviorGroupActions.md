@@ -38,7 +38,7 @@ Renames and re-exports [notificationResourceV1UpdateBehaviorGroupActionsParamCre
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L14)
+[NotificationResourceV1UpdateBehaviorGroupActions/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L14)
 
 ## Functions
 
@@ -60,10 +60,10 @@ Updates the list of actions to be executed in that particular behavior group aft
 
 **`Summary`**
 
-Update the list of behavior group action
+Update the list of behavior group actions
 
 **`Throws`**
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L40)
+[NotificationResourceV1UpdateBehaviorGroupActions/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1UpdateBehaviorGroupActions/index.ts#L40)

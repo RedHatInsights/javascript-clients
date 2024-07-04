@@ -31,7 +31,7 @@ Profile
 
 #### Defined in
 
-[types/index.ts:286](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L286)
+[types/index.ts:286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L286)
 
 ___
 
@@ -45,7 +45,7 @@ Profile
 
 #### Defined in
 
-[types/index.ts:262](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L262)
+[types/index.ts:262](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L262)
 
 ___
 
@@ -61,7 +61,7 @@ Profile
 
 #### Defined in
 
-[types/index.ts:274](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L274)
+[types/index.ts:274](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L274)
 
 ___
 
@@ -77,7 +77,7 @@ Profile
 
 #### Defined in
 
-[types/index.ts:280](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L280)
+[types/index.ts:280](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L280)
 
 ___
 
@@ -91,7 +91,7 @@ Profile
 
 #### Defined in
 
-[types/index.ts:268](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L268)
+[types/index.ts:268](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L268)
 
 ___
 
@@ -107,4 +107,4 @@ Profile
 
 #### Defined in
 
-[types/index.ts:292](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L292)
+[types/index.ts:292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L292)

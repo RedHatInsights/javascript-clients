@@ -26,7 +26,7 @@ PaginatedSubscriptionExcludedAccountList
 
 #### Defined in
 
-[api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L848)
+[api.ts:823](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L823)
 
 ___
 
@@ -40,7 +40,7 @@ PaginatedSubscriptionExcludedAccountList
 
 #### Defined in
 
-[api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L842)
+[api.ts:817](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L817)
 
 ___
 
@@ -54,4 +54,4 @@ PaginatedSubscriptionExcludedAccountList
 
 #### Defined in
 
-[api.ts:836](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L836)
+[api.ts:811](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L811)

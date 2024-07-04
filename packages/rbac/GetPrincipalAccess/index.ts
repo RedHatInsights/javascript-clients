@@ -17,37 +17,37 @@ export type GetPrincipalAccessParams = {
   * @type { string }
   * @memberof GetPrincipalAccessApi
   */
-  application: string, 
+  application: string,
   /**
   * Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
   * @type { string }
   * @memberof GetPrincipalAccessApi
   */
-  username?: string, 
+  username?: string,
   /**
   * Parameter for ordering roles by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-application
   * @type { GetPrincipalAccessOrderByEnum }
   * @memberof GetPrincipalAccessApi
   */
-  orderBy?: GetPrincipalAccessOrderByEnum, 
+  orderBy?: GetPrincipalAccessOrderByEnum,
   /**
   * Set the status of users to get back.
   * @type { GetPrincipalAccessStatusEnum }
   * @memberof GetPrincipalAccessApi
   */
-  status?: GetPrincipalAccessStatusEnum, 
+  status?: GetPrincipalAccessStatusEnum,
   /**
   * Parameter for selecting the amount of data returned.
   * @type { number }
   * @memberof GetPrincipalAccessApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof GetPrincipalAccessApi
   */
-  offset?: number, 
+  offset?: number,
   options?: AxiosRequestConfig
 }
 /**

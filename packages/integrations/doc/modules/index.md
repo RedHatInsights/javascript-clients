@@ -14,23 +14,26 @@
 - [Application1](index.md#application1)
 - [ApplicationDTO](index.md#applicationdto)
 - [ApplicationSettingsValue](index.md#applicationsettingsvalue)
-- [BasicAuthentication](index.md#basicauthentication)
+- [BasicAuthenticationDTO](index.md#basicauthenticationdto)
 - [BehaviorGroup](index.md#behaviorgroup)
 - [BehaviorGroupAction](index.md#behaviorgroupaction)
 - [BehaviorGroupActionId](index.md#behaviorgroupactionid)
 - [Bundle](index.md#bundle)
 - [BundleSettingsValue](index.md#bundlesettingsvalue)
-- [CamelProperties](index.md#camelproperties)
+- [CamelPropertiesDTO](index.md#camelpropertiesdto)
 - [CreateBehaviorGroupRequest](index.md#createbehaviorgrouprequest)
 - [CreateBehaviorGroupResponse](index.md#createbehaviorgroupresponse)
 - [CurrentStatus](index.md#currentstatus)
 - [DrawerEntryPayload](index.md#drawerentrypayload)
 - [DuplicateNameMigrationReport](index.md#duplicatenamemigrationreport)
 - [Endpoint](index.md#endpoint)
+- [EndpointDTO](index.md#endpointdto)
 - [EndpointPage](index.md#endpointpage)
 - [EndpointStatus](index.md#endpointstatus)
+- [EndpointStatusDTO](index.md#endpointstatusdto)
 - [EndpointTestRequest](index.md#endpointtestrequest)
 - [EndpointType](index.md#endpointtype)
+- [EndpointTypeDTO](index.md#endpointtypedto)
 - [Environment](index.md#environment)
 - [EventLogEntry](index.md#eventlogentry)
 - [EventLogEntryAction](index.md#eventlogentryaction)
@@ -61,13 +64,13 @@
 - [SettingsValuesByEventType](index.md#settingsvaluesbyeventtype)
 - [Status](index.md#status)
 - [SubscriptionType](index.md#subscriptiontype)
-- [SystemSubscriptionProperties](index.md#systemsubscriptionproperties)
+- [SystemSubscriptionPropertiesDTO](index.md#systemsubscriptionpropertiesdto)
 - [Template](index.md#template)
 - [TriggerDailyDigestRequest](index.md#triggerdailydigestrequest)
 - [UpdateApplicationRequest](index.md#updateapplicationrequest)
 - [UpdateBehaviorGroupRequest](index.md#updatebehaviorgrouprequest)
 - [UpdateNotificationDrawerStatus](index.md#updatenotificationdrawerstatus)
-- [WebhookProperties](index.md#webhookproperties)
+- [WebhookPropertiesDTO](index.md#webhookpropertiesdto)
 - [X509Certificate](index.md#x509certificate)
 - [endpointResourceV1CreateEndpoint](index.md#endpointresourcev1createendpoint)
 - [endpointResourceV1DeleteEndpoint](index.md#endpointresourcev1deleteendpoint)
@@ -81,20 +84,6 @@
 - [endpointResourceV1GetOrCreateEmailSubscriptionEndpoint](index.md#endpointresourcev1getorcreateemailsubscriptionendpoint)
 - [endpointResourceV1TestEndpoint](index.md#endpointresourcev1testendpoint)
 - [endpointResourceV1UpdateEndpoint](index.md#endpointresourcev1updateendpoint)
-
-### Classes
-
-- [BaseAPI](../classes/index.BaseAPI.md)
-- [RequiredError](../classes/index.RequiredError.md)
-
-### Interfaces
-
-- [RequestArgs](../interfaces/index.RequestArgs.md)
-
-### Variables
-
-- [BASE\_PATH](index.md#base_path)
-- [COLLECTION\_FORMATS](index.md#collection_formats)
 
 ## References
 
@@ -146,9 +135,9 @@ Re-exports [ApplicationSettingsValue](../interfaces/types.ApplicationSettingsVal
 
 ___
 
-### BasicAuthentication
+### BasicAuthenticationDTO
 
-Re-exports [BasicAuthentication](../interfaces/types.BasicAuthentication.md)
+Re-exports [BasicAuthenticationDTO](../interfaces/types.BasicAuthenticationDTO.md)
 
 ___
 
@@ -182,9 +171,9 @@ Re-exports [BundleSettingsValue](../interfaces/types.BundleSettingsValue.md)
 
 ___
 
-### CamelProperties
+### CamelPropertiesDTO
 
-Re-exports [CamelProperties](../interfaces/types.CamelProperties.md)
+Re-exports [CamelPropertiesDTO](../interfaces/types.CamelPropertiesDTO.md)
 
 ___
 
@@ -224,6 +213,12 @@ Re-exports [Endpoint](../interfaces/types.Endpoint.md)
 
 ___
 
+### EndpointDTO
+
+Re-exports [EndpointDTO](../interfaces/types.EndpointDTO.md)
+
+___
+
 ### EndpointPage
 
 Re-exports [EndpointPage](../interfaces/types.EndpointPage.md)
@@ -236,6 +231,12 @@ Re-exports [EndpointStatus](../enums/types.EndpointStatus.md)
 
 ___
 
+### EndpointStatusDTO
+
+Re-exports [EndpointStatusDTO](../enums/types.EndpointStatusDTO.md)
+
+___
+
 ### EndpointTestRequest
 
 Re-exports [EndpointTestRequest](../interfaces/types.EndpointTestRequest.md)
@@ -245,6 +246,12 @@ ___
 ### EndpointType
 
 Re-exports [EndpointType](../enums/types.EndpointType.md)
+
+___
+
+### EndpointTypeDTO
+
+Re-exports [EndpointTypeDTO](../enums/types.EndpointTypeDTO.md)
 
 ___
 
@@ -428,9 +435,9 @@ Re-exports [SubscriptionType](../enums/types.SubscriptionType.md)
 
 ___
 
-### SystemSubscriptionProperties
+### SystemSubscriptionPropertiesDTO
 
-Re-exports [SystemSubscriptionProperties](../interfaces/types.SystemSubscriptionProperties.md)
+Re-exports [SystemSubscriptionPropertiesDTO](../interfaces/types.SystemSubscriptionPropertiesDTO.md)
 
 ___
 
@@ -464,9 +471,9 @@ Re-exports [UpdateNotificationDrawerStatus](../interfaces/types.UpdateNotificati
 
 ___
 
-### WebhookProperties
+### WebhookPropertiesDTO
 
-Re-exports [WebhookProperties](../interfaces/types.WebhookProperties.md)
+Re-exports [WebhookPropertiesDTO](../interfaces/types.WebhookPropertiesDTO.md)
 
 ___
 
@@ -545,34 +552,3 @@ ___
 ### endpointResourceV1UpdateEndpoint
 
 Renames and re-exports [endpointResourceV1UpdateEndpointParamCreator](EndpointResourceV1UpdateEndpoint.md#endpointresourcev1updateendpointparamcreator)
-
-## Variables
-
-### BASE\_PATH
-
-• `Const` **BASE\_PATH**: `string`
-
-#### Defined in
-
-[packages/integrations/base.ts:22](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/base.ts#L22)
-
-___
-
-### COLLECTION\_FORMATS
-
-• `Const` **COLLECTION\_FORMATS**: `Object`
-
-**`Export`**
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `csv` | `string` |
-| `pipes` | `string` |
-| `ssv` | `string` |
-| `tsv` | `string` |
-
-#### Defined in
-
-[packages/integrations/base.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/base.ts#L28)

@@ -17,13 +17,13 @@ export type PatchCrossAccountRequestParams = {
   * @type { string }
   * @memberof PatchCrossAccountRequestApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Updates to CrossAccountRequest
   * @type { CrossAccountRequestPatch }
   * @memberof PatchCrossAccountRequestApi
   */
-  crossAccountRequestPatch: CrossAccountRequestPatch, 
+  crossAccountRequestPatch: CrossAccountRequestPatch,
   options?: AxiosRequestConfig
 }
 

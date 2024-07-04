@@ -3640,11 +3640,12 @@ export class NotificationResourceV1GetBundleFacetsApi extends BaseAPI {
 export const NotificationResourceV1GetEventTypesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Lists all event types. You can filter the returned list by bundle or application name.
+         * Lists all event types. You can filter the returned list by bundle, application name, or unmuted types.
          * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
+         * @param {boolean} [excludeMutedTypes]
          * @param {number} [limit]
          * @param {number} [offset]
          * @param {number} [pageNumber]
@@ -3653,7 +3654,7 @@ export const NotificationResourceV1GetEventTypesApiAxiosParamCreator = function 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationResourceV1GetEventTypes: async (applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        notificationResourceV1GetEventTypes: async (applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, excludeMutedTypes?: boolean, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/notifications/eventTypes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3676,6 +3677,10 @@ export const NotificationResourceV1GetEventTypesApiAxiosParamCreator = function 
 
             if (eventTypeName !== undefined) {
                 localVarQueryParameter['eventTypeName'] = eventTypeName;
+            }
+
+            if (excludeMutedTypes !== undefined) {
+                localVarQueryParameter['excludeMutedTypes'] = excludeMutedTypes;
             }
 
             if (limit !== undefined) {
@@ -3720,11 +3725,12 @@ export const NotificationResourceV1GetEventTypesApiFp = function(configuration?:
     const localVarAxiosParamCreator = NotificationResourceV1GetEventTypesApiAxiosParamCreator(configuration)
     return {
         /**
-         * Lists all event types. You can filter the returned list by bundle or application name.
+         * Lists all event types. You can filter the returned list by bundle, application name, or unmuted types.
          * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
+         * @param {boolean} [excludeMutedTypes]
          * @param {number} [limit]
          * @param {number} [offset]
          * @param {number} [pageNumber]
@@ -3733,8 +3739,8 @@ export const NotificationResourceV1GetEventTypesApiFp = function(configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PageEventType>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, limit, offset, pageNumber, sortBy, sortBy2, options);
+        async notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, excludeMutedTypes?: boolean, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PageEventType>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, excludeMutedTypes, limit, offset, pageNumber, sortBy, sortBy2, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3748,11 +3754,12 @@ export const NotificationResourceV1GetEventTypesApiFactory = function (configura
     const localVarFp = NotificationResourceV1GetEventTypesApiFp(configuration)
     return {
         /**
-         * Lists all event types. You can filter the returned list by bundle or application name.
+         * Lists all event types. You can filter the returned list by bundle, application name, or unmuted types.
          * @summary List all event types
          * @param {Set<string>} [applicationIds]
          * @param {string} [bundleId]
          * @param {string} [eventTypeName]
+         * @param {boolean} [excludeMutedTypes]
          * @param {number} [limit]
          * @param {number} [offset]
          * @param {number} [pageNumber]
@@ -3761,8 +3768,8 @@ export const NotificationResourceV1GetEventTypesApiFactory = function (configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: any): AxiosPromise<PageEventType> {
-            return localVarFp.notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, limit, offset, pageNumber, sortBy, sortBy2, options).then((request) => request(axios, basePath));
+        notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, excludeMutedTypes?: boolean, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: any): AxiosPromise<PageEventType> {
+            return localVarFp.notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, excludeMutedTypes, limit, offset, pageNumber, sortBy, sortBy2, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3775,11 +3782,12 @@ export const NotificationResourceV1GetEventTypesApiFactory = function (configura
  */
 export class NotificationResourceV1GetEventTypesApi extends BaseAPI {
     /**
-     * Lists all event types. You can filter the returned list by bundle or application name.
+     * Lists all event types. You can filter the returned list by bundle, application name, or unmuted types.
      * @summary List all event types
      * @param {Set<string>} [applicationIds]
      * @param {string} [bundleId]
      * @param {string} [eventTypeName]
+     * @param {boolean} [excludeMutedTypes]
      * @param {number} [limit]
      * @param {number} [offset]
      * @param {number} [pageNumber]
@@ -3789,8 +3797,8 @@ export class NotificationResourceV1GetEventTypesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotificationResourceV1GetEventTypesApi
      */
-    public notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: AxiosRequestConfig) {
-        return NotificationResourceV1GetEventTypesApiFp(this.configuration).notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, limit, offset, pageNumber, sortBy, sortBy2, options).then((request) => request(this.axios, this.basePath));
+    public notificationResourceV1GetEventTypes(applicationIds?: Set<string>, bundleId?: string, eventTypeName?: string, excludeMutedTypes?: boolean, limit?: number, offset?: number, pageNumber?: number, sortBy?: string, sortBy2?: string, options?: AxiosRequestConfig) {
+        return NotificationResourceV1GetEventTypesApiFp(this.configuration).notificationResourceV1GetEventTypes(applicationIds, bundleId, eventTypeName, excludeMutedTypes, limit, offset, pageNumber, sortBy, sortBy2, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

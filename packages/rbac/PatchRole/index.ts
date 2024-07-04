@@ -17,13 +17,13 @@ export type PatchRoleParams = {
   * @type { string }
   * @memberof PatchRoleApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Patch to a role
   * @type { RolePatch }
   * @memberof PatchRoleApi
   */
-  rolePatch?: RolePatch, 
+  rolePatch?: RolePatch,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params 
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }
 /**
-* 
+*
 * @summary Patch a role in the tenant
 * @param {PatchRoleParams} config with all available params.
 * @param {*} [options] Override http request option.

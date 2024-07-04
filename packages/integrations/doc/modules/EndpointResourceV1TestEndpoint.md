@@ -38,7 +38,7 @@ Renames and re-exports [endpointResourceV1TestEndpointParamCreator](EndpointReso
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L14)
+[EndpointResourceV1TestEndpoint/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L14)
 
 ## Functions
 
@@ -66,4 +66,4 @@ Generate a test notification
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)
+[EndpointResourceV1TestEndpoint/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1TestEndpoint/index.ts#L40)

@@ -25,7 +25,7 @@ ResolutionRisk
 
 #### Defined in
 
-[api.ts:1261](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1261)
+[api.ts:1236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1236)
 
 ___
 
@@ -39,4 +39,4 @@ ResolutionRisk
 
 #### Defined in
 
-[api.ts:1267](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1267)
+[api.ts:1242](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1242)

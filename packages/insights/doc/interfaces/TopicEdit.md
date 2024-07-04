@@ -31,7 +31,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2294](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2294)
+[api.ts:2275](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2275)
 
 ___
 
@@ -45,7 +45,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2312)
+[api.ts:2293](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2293)
 
 ___
 
@@ -59,7 +59,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2306)
+[api.ts:2287](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2287)
 
 ___
 
@@ -73,7 +73,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2282](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2282)
+[api.ts:2263](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2263)
 
 ___
 
@@ -89,7 +89,7 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2288](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2288)
+[api.ts:2269](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2269)
 
 ___
 
@@ -103,4 +103,4 @@ TopicEdit
 
 #### Defined in
 
-[api.ts:2300](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2300)
+[api.ts:2281](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2281)

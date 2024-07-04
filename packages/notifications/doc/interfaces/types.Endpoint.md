@@ -36,7 +36,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L696)
+[types/index.ts:684](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L684)
 
 ___
 
@@ -50,7 +50,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L720)
+[types/index.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L708)
 
 ___
 
@@ -64,7 +64,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L726)
+[types/index.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L714)
 
 ___
 
@@ -78,7 +78,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:708](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L708)
+[types/index.ts:696](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L696)
 
 ___
 
@@ -92,7 +92,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:714](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L714)
+[types/index.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L702)
 
 ___
 
@@ -106,7 +106,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L744)
+[types/index.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L732)
 
 ___
 
@@ -120,7 +120,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L738)
+[types/index.ts:726](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L726)
 
 ___
 
@@ -134,7 +134,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:732](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L732)
+[types/index.ts:720](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L720)
 
 ___
 
@@ -148,13 +148,13 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:756](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L756)
+[types/index.ts:744](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L744)
 
 ___
 
 ### type
 
-• **type**: [`EndpointType`](../enums/types.EndpointType.md)
+• `Optional` **type**: [`EndpointType`](../enums/types.EndpointType.md)
 
 **`Memberof`**
 
@@ -162,7 +162,7 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:750](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L750)
+[types/index.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L738)
 
 ___
 
@@ -176,4 +176,4 @@ Endpoint
 
 #### Defined in
 
-[packages/notifications/types/index.ts:702](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L702)
+[types/index.ts:690](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L690)

@@ -4,8 +4,8 @@ import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'ax
 import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
 import type { Errors, ValueDefinition200Response } from '../types';
@@ -23,7 +23,7 @@ export type ValueDefinitionParams = {
   * @type { any }
   * @memberof ValueDefinitionApi
   */
-  id: any,
+  valueDefinitionId: any,
   /**
   * For internal use only
   * @type { any }
@@ -34,7 +34,7 @@ export type ValueDefinitionParams = {
 }
 
 const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown[]): params is [ValueDefinitionParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'valueDefinitionId') && true
 }
 /**
 * Returns a Value Definition
@@ -44,11 +44,11 @@ const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown
 * @throws {RequiredError}
 */
 export const valueDefinitionParamCreator = async (...config: ([ValueDefinitionParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isValueDefinitionObjectParams(config) ? config[0] : ['securityGuideId', 'id', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionParams;
-    const { securityGuideId, id, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/security_guides/{security_guide_id}/value_definitions/{id}`
+    const params = isValueDefinitionObjectParams(config) ? config[0] : ['securityGuideId', 'valueDefinitionId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionParams;
+    const { securityGuideId, valueDefinitionId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/security_guides/{security_guide_id}/value_definitions/{value_definition_id}`
         .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+        .replace(`{${"value_definition_id"}}`, encodeURIComponent(String(valueDefinitionId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

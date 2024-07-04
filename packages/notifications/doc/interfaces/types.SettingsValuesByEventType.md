@@ -30,4 +30,4 @@ SettingsValuesByEventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1606](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1606)
+[types/index.ts:1704](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1704)

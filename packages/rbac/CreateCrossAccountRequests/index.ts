@@ -17,7 +17,7 @@ export type CreateCrossAccountRequestsParams = {
   * @type { CrossAccountRequestIn }
   * @memberof CreateCrossAccountRequestsApi
   */
-  crossAccountRequestIn: CrossAccountRequestIn, 
+  crossAccountRequestIn: CrossAccountRequestIn,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isCreateCrossAccountRequestsObjectParams = (params: [CreateCrossAccountReq
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestIn')
 }
 /**
-* 
+*
 * @summary Create a cross account request
 * @param {CreateCrossAccountRequestsParams} config with all available params.
 * @param {*} [options] Override http request option.

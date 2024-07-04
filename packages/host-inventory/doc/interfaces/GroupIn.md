@@ -8,12 +8,6 @@ Data of a single group belonging to an account.
 
 GroupIn
 
-## Hierarchy
-
-- [`GroupInAllOf`](GroupInAllOf.md)
-
-  ↳ **`GroupIn`**
-
 ## Table of contents
 
 ### Properties
@@ -31,15 +25,11 @@ A comma-separated list of host IDs that belong to the group.
 
 **`Memberof`**
 
-GroupInAllOf
-
-#### Inherited from
-
-[GroupInAllOf](GroupInAllOf.md).[host_ids](GroupInAllOf.md#host_ids)
+GroupIn
 
 #### Defined in
 
-[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L553)
+[api.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L546)
 
 ___
 
@@ -51,12 +41,8 @@ A group’s human-readable name.
 
 **`Memberof`**
 
-GroupInAllOf
-
-#### Inherited from
-
-[GroupInAllOf](GroupInAllOf.md).[name](GroupInAllOf.md#name)
+GroupIn
 
 #### Defined in
 
-[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L547)
+[api.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L540)

@@ -139,7 +139,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4207)
+[api.ts:4296](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4296)
 
 ___
 
@@ -176,7 +176,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4223)
+[api.ts:4312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4312)
 
 ___
 
@@ -213,7 +213,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4239](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4239)
+[api.ts:4328](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4328)
 
 ___
 
@@ -246,7 +246,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4251](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4251)
+[api.ts:4340](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4340)
 
 ___
 
@@ -279,7 +279,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4263](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4263)
+[api.ts:4352](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4352)
 
 ___
 
@@ -312,7 +312,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4275](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4275)
+[api.ts:4364](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4364)
 
 ___
 
@@ -349,7 +349,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4291](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4291)
+[api.ts:4380](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4380)
 
 ___
 
@@ -386,7 +386,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4307](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4307)
+[api.ts:4396](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4396)
 
 ___
 
@@ -420,7 +420,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4320](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4320)
+[api.ts:4409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4409)
 
 ___
 
@@ -454,7 +454,7 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4333](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4333)
+[api.ts:4422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4422)
 
 ___
 
@@ -488,4 +488,4 @@ GroupsApi
 
 #### Defined in
 
-[api.ts:4346](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4346)
+[api.ts:4435](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L4435)
