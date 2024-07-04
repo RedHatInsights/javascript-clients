@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/notifications-client",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
