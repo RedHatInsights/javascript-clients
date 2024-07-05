@@ -56,7 +56,7 @@ Renames and re-exports [getStatusParamCreator](GetStatus.md#getstatusparamcreato
 
 **`Summary`**
 
-Obtain server statu
+Obtain server status
 
 **`Throws`**
 

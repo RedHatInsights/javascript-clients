@@ -24,4 +24,4 @@ RuleGroup200ResponseData
 
 #### Defined in
 
-[types/index.ts:526](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L526)
+[types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L694)

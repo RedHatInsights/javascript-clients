@@ -62,7 +62,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2290)
+[api.ts:2296](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2296)
 
 ___
 
@@ -78,7 +78,7 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2296](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2296)
+[api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2302)
 
 ___
 
@@ -94,4 +94,4 @@ PlaybookTemplateData
 
 #### Defined in
 
-[api.ts:2302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2302)
+[api.ts:2290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L2290)

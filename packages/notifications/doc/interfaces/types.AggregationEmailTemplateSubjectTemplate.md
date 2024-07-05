@@ -31,7 +31,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L131)
+[types/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L131)
 
 ___
 
@@ -45,7 +45,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L161)
+[types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L161)
 
 ___
 
@@ -59,7 +59,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L155)
+[types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L155)
 
 ___
 
@@ -73,7 +73,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L143)
+[types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L143)
 
 ___
 
@@ -87,7 +87,7 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L149)
+[types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L149)
 
 ___
 
@@ -101,4 +101,4 @@ AggregationEmailTemplateSubjectTemplate
 
 #### Defined in
 
-[packages/notifications/types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L137)
+[types/index.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L137)

@@ -30,7 +30,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L440)
+[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L472)
 
 ___
 
@@ -44,7 +44,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:434](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L434)
+[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L466)
 
 ___
 
@@ -58,7 +58,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L422)
+[api.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L454)
 
 ___
 
@@ -72,7 +72,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L416)
+[api.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L448)
 
 ___
 
@@ -86,7 +86,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:428](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L428)
+[api.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L460)
 
 ___
 
@@ -100,7 +100,7 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L452)
+[api.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L484)
 
 ___
 
@@ -114,4 +114,4 @@ PlaybookRunExecutorDetails
 
 #### Defined in
 
-[api.ts:446](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L446)
+[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L478)

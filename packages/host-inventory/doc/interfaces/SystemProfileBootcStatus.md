@@ -13,7 +13,6 @@ SystemProfileBootcStatus
 ### Properties
 
 - [booted](SystemProfileBootcStatus.md#booted)
-- [cachedUpdate](SystemProfileBootcStatus.md#cachedupdate)
 - [rollback](SystemProfileBootcStatus.md#rollback)
 - [staged](SystemProfileBootcStatus.md#staged)
 
@@ -29,21 +28,7 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2043)
-
-___
-
-### cachedUpdate
-
-• `Optional` **cachedUpdate**: [`SystemProfileBootcStatusBooted`](SystemProfileBootcStatusBooted.md)
-
-**`Memberof`**
-
-SystemProfileBootcStatus
-
-#### Defined in
-
-[api.ts:2049](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2049)
+[api.ts:2081](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2081)
 
 ___
 
@@ -57,7 +42,7 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2055](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2055)
+[api.ts:2087](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2087)
 
 ___
 
@@ -71,4 +56,4 @@ SystemProfileBootcStatus
 
 #### Defined in
 
-[api.ts:2061](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2061)
+[api.ts:2093](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L2093)

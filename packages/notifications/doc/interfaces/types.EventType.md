@@ -36,7 +36,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1014)
+[types/index.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1112)
 
 ___
 
@@ -50,7 +50,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1008)
+[types/index.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1106)
 
 ___
 
@@ -64,7 +64,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:996](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L996)
+[types/index.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1094)
 
 ___
 
@@ -78,7 +78,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L990)
+[types/index.ts:1088](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1088)
 
 ___
 
@@ -92,7 +92,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1002)
+[types/index.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1100)
 
 ___
 
@@ -106,7 +106,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L978)
+[types/index.ts:1076](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1076)
 
 ___
 
@@ -120,7 +120,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L984)
+[types/index.ts:1082](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1082)
 
 ___
 
@@ -134,7 +134,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1038)
+[types/index.ts:1136](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1136)
 
 ___
 
@@ -148,7 +148,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1026)
+[types/index.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1124)
 
 ___
 
@@ -162,7 +162,7 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1032)
+[types/index.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1130)
 
 ___
 
@@ -176,4 +176,4 @@ EventType
 
 #### Defined in
 
-[packages/notifications/types/index.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1020)
+[types/index.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/types/index.ts#L1118)

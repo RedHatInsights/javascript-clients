@@ -33,7 +33,7 @@ Renames and re-exports [endpointResourceV1GetEndpointsParamCreator](EndpointReso
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `active?` | `boolean` | **`Memberof`** EndpointResourceV1GetEndpointsApi |
-| `limit?` | `number` | Number of items per page. If the value is 0, it will return all element **`Memberof`** EndpointResourceV1GetEndpointsApi |
+| `limit?` | `number` | Number of items per page. If the value is 0, it will return all elements **`Memberof`** EndpointResourceV1GetEndpointsApi |
 | `name?` | `string` | **`Memberof`** EndpointResourceV1GetEndpointsApi |
 | `offset?` | `number` | **`Memberof`** EndpointResourceV1GetEndpointsApi |
 | `options?` | `AxiosRequestConfig` | - |
@@ -44,7 +44,7 @@ Renames and re-exports [endpointResourceV1GetEndpointsParamCreator](EndpointReso
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L14)
+[EndpointResourceV1GetEndpoints/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L14)
 
 ## Functions
 
@@ -66,10 +66,10 @@ Provides a list of endpoints. Use this endpoint to find specific endpoints.
 
 **`Summary`**
 
-List endpoint
+List endpoints
 
 **`Throws`**
 
 #### Defined in
 
-[packages/integrations/EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)
+[EndpointResourceV1GetEndpoints/index.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/EndpointResourceV1GetEndpoints/index.ts#L76)

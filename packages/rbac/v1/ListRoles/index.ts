@@ -17,79 +17,79 @@ export type ListRolesParams = {
   * @type { number }
   * @memberof ListRolesApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListRolesApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for filtering resource by name using string contains search.
   * @type { string }
   * @memberof ListRolesApi
   */
-  name?: string, 
+  name?: string,
   /**
   * Parameter for filtering resource by system flag.
   * @type { boolean }
   * @memberof ListRolesApi
   */
-  system?: boolean, 
+  system?: boolean,
   /**
   * Parameter for filtering resource by display_name using string contains search.
   * @type { string }
   * @memberof ListRolesApi
   */
-  displayName?: string, 
+  displayName?: string,
   /**
   * Parameter for specifying the matching criteria for an object\'s name or display_name.
   * @type { ListRolesNameMatchEnum }
   * @memberof ListRolesApi
   */
-  nameMatch?: ListRolesNameMatchEnum, 
+  nameMatch?: ListRolesNameMatchEnum,
   /**
   * Parameter for filtering resource by scope.
   * @type { ListRolesScopeEnum }
   * @memberof ListRolesApi
   */
-  scope?: ListRolesScopeEnum, 
+  scope?: ListRolesScopeEnum,
   /**
   * Parameter for ordering roles by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-name
   * @type { ListRolesOrderByEnum }
   * @memberof ListRolesApi
   */
-  orderBy?: ListRolesOrderByEnum, 
+  orderBy?: ListRolesOrderByEnum,
   /**
   * Parameter for add list of fields to display for roles.
   * @type { Array<ListRolesAddFieldsEnum> }
   * @memberof ListRolesApi
   */
-  addFields?: Array<ListRolesAddFieldsEnum>, 
+  addFields?: Array<ListRolesAddFieldsEnum>,
   /**
   * Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
   * @type { string }
   * @memberof ListRolesApi
   */
-  username?: string, 
+  username?: string,
   /**
   * The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
   * @type { string }
   * @memberof ListRolesApi
   */
-  application?: string, 
+  application?: string,
   /**
   * The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
   * @type { string }
   * @memberof ListRolesApi
   */
-  permission?: string, 
+  permission?: string,
   /**
   * Parameter for filtering roles by external tenant name using string search.
   * @type { string }
   * @memberof ListRolesApi
   */
-  externalTenant?: string, 
+  externalTenant?: string,
   options?: AxiosRequestConfig
 }
 /**

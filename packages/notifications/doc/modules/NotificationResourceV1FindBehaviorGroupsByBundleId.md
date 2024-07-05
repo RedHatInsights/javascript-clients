@@ -37,7 +37,7 @@ Renames and re-exports [notificationResourceV1FindBehaviorGroupsByBundleIdParamC
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L14)
+[NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ List behavior groups in a bundle
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L34)
+[NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1FindBehaviorGroupsByBundleId/index.ts#L34)

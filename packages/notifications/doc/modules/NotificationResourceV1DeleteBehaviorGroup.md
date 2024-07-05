@@ -37,7 +37,7 @@ Renames and re-exports [notificationResourceV1DeleteBehaviorGroupParamCreator](N
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L14)
+[NotificationResourceV1DeleteBehaviorGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Delete a behavior group
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L34)
+[NotificationResourceV1DeleteBehaviorGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1DeleteBehaviorGroup/index.ts#L34)

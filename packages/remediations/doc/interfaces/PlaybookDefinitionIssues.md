@@ -26,7 +26,7 @@ PlaybookDefinitionIssues
 
 #### Defined in
 
-[api.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L191)
+[api.ts:222](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L222)
 
 ___
 
@@ -40,7 +40,7 @@ PlaybookDefinitionIssues
 
 #### Defined in
 
-[api.ts:203](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L203)
+[api.ts:234](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L234)
 
 ___
 
@@ -54,4 +54,4 @@ PlaybookDefinitionIssues
 
 #### Defined in
 
-[api.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L197)
+[api.ts:228](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L228)

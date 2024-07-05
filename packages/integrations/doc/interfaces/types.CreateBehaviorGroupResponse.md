@@ -31,7 +31,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L564)
+[types/index.ts:552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L552)
 
 ___
 
@@ -45,7 +45,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:588](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L588)
+[types/index.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L576)
 
 ___
 
@@ -59,7 +59,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L570)
+[types/index.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L558)
 
 ___
 
@@ -73,7 +73,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L576)
+[types/index.ts:564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L564)
 
 ___
 
@@ -87,7 +87,7 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L582)
+[types/index.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L570)
 
 ___
 
@@ -101,4 +101,4 @@ CreateBehaviorGroupResponse
 
 #### Defined in
 
-[packages/integrations/types/index.ts:558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L558)
+[types/index.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L546)

@@ -32,7 +32,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:671](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L671)
+[api.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L664)
 
 ___
 
@@ -48,7 +48,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:677](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L677)
+[api.ts:670](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L670)
 
 ___
 
@@ -64,7 +64,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:683](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L683)
+[api.ts:676](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L676)
 
 ___
 
@@ -80,7 +80,7 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:695](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L695)
+[api.ts:688](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L688)
 
 ___
 
@@ -96,4 +96,4 @@ GroupQueryOutput
 
 #### Defined in
 
-[api.ts:689](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L689)
+[api.ts:682](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L682)

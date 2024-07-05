@@ -184,13 +184,13 @@ export interface AssignmentRuleOut {
      * @type {string}
      * @memberof AssignmentRuleOut
      */
-    created_on: string;
+    created: string;
     /**
      *
      * @type {string}
      * @memberof AssignmentRuleOut
      */
-    modified_on: string;
+    modified: string;
 }
 /**
  * A paginated assignment-rule search query result with assignment-rule entries and their Inventory metadata.
@@ -531,24 +531,17 @@ export interface FactSet {
  * @export
  * @interface GroupIn
  */
-export interface GroupIn extends GroupInAllOf {
-}
-/**
- *
- * @export
- * @interface GroupInAllOf
- */
-export interface GroupInAllOf {
+export interface GroupIn {
     /**
      * A group’s human-readable name.
      * @type {string}
-     * @memberof GroupInAllOf
+     * @memberof GroupIn
      */
     name?: string;
     /**
      * A comma-separated list of host IDs that belong to the group.
      * @type {Array<string>}
-     * @memberof GroupInAllOf
+     * @memberof GroupIn
      */
     host_ids?: Array<string> | null;
 }
@@ -1416,7 +1409,7 @@ export interface ResourceTypesQueryOutputAllOf {
  * Account Staleness UID
  * @export
  */
-export type StalenessId = string;
+export type StalenessId = SystemDefaultId | string;
 
 /**
  * Data of a single account staleness.
@@ -1424,47 +1417,40 @@ export type StalenessId = string;
  * @interface StalenessIn
  */
 export interface StalenessIn {
-}
-/**
- *
- * @export
- * @interface StalenessInAnyOf
- */
-export interface StalenessInAnyOf {
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     conventional_time_to_stale?: number;
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     conventional_time_to_stale_warning?: number;
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     conventional_time_to_delete?: number;
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     immutable_time_to_stale?: number;
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     immutable_time_to_stale_warning?: number;
     /**
      *
      * @type {number}
-     * @memberof StalenessInAnyOf
+     * @memberof StalenessIn
      */
     immutable_time_to_delete?: number;
 }
@@ -1476,64 +1462,95 @@ export interface StalenessInAnyOf {
 export interface StalenessOutput {
     /**
      *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_time_to_stale: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_time_to_stale_warning: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    conventional_time_to_delete: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_time_to_stale: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_time_to_stale_warning: number;
+    /**
+     *
+     * @type {number}
+     * @memberof StalenessOutput
+     */
+    immutable_time_to_delete: number;
+    /**
+     *
      * @type {StalenessId}
      * @memberof StalenessOutput
      */
-    id?: StalenessId;
+    id: StalenessId;
     /**
      * The Org ID of the tenant that owns the host.
      * @type {string}
      * @memberof StalenessOutput
      */
-    org_id?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    conventional_time_to_stale?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    conventional_time_to_stale_warning?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    conventional_time_to_delete?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    immutable_time_to_stale?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    immutable_time_to_stale_warning?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof StalenessOutput
-     */
-    immutable_time_to_delete?: number;
+    org_id: string;
     /**
      * A timestamp when the entry was created.
      * @type {string}
      * @memberof StalenessOutput
      */
-    created_at?: string;
+    created: string | null;
     /**
      * A timestamp when the entry was last updated.
      * @type {string}
      * @memberof StalenessOutput
      */
-    updated_at?: string;
+    updated: string | null;
+}
+/**
+ *
+ * @export
+ * @interface StalenessOutputAllOf
+ */
+export interface StalenessOutputAllOf {
+    /**
+     *
+     * @type {StalenessId}
+     * @memberof StalenessOutputAllOf
+     */
+    id: StalenessId;
+    /**
+     * The Org ID of the tenant that owns the host.
+     * @type {string}
+     * @memberof StalenessOutputAllOf
+     */
+    org_id: string;
+    /**
+     * A timestamp when the entry was created.
+     * @type {string}
+     * @memberof StalenessOutputAllOf
+     */
+    created: string | null;
+    /**
+     * A timestamp when the entry was last updated.
+     * @type {string}
+     * @memberof StalenessOutputAllOf
+     */
+    updated: string | null;
 }
 /**
  *
@@ -1560,6 +1577,15 @@ export interface StructuredTag {
      */
     value?: string | null;
 }
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export enum SystemDefaultId {
+    SystemDefault = 'system_default'
+}
+
 /**
  * Representation of the system profile fields
  * @export
@@ -1968,6 +1994,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     conversions?: SystemProfileConversions;
+    /**
+     *
+     * @type {SystemProfileThirdPartyServices}
+     * @memberof SystemProfile
+     */
+    third_party_services?: SystemProfileThirdPartyServices;
 }
 
 /**
@@ -2608,6 +2640,38 @@ export enum SystemProfileSystemdStateEnum {
     Stopping = 'stopping'
 }
 
+/**
+ * Object containing information about system facts of third party services
+ * @export
+ * @interface SystemProfileThirdPartyServices
+ */
+export interface SystemProfileThirdPartyServices {
+    /**
+     *
+     * @type {SystemProfileThirdPartyServicesCrowdstrike}
+     * @memberof SystemProfileThirdPartyServices
+     */
+    crowdstrike?: SystemProfileThirdPartyServicesCrowdstrike;
+}
+/**
+ * Object containing information about CrowdStrike system facts
+ * @export
+ * @interface SystemProfileThirdPartyServicesCrowdstrike
+ */
+export interface SystemProfileThirdPartyServicesCrowdstrike {
+    /**
+     * CrowdStrike Falcon Agent ID
+     * @type {string}
+     * @memberof SystemProfileThirdPartyServicesCrowdstrike
+     */
+    falcon_aid?: string;
+    /**
+     * CrowdStrike Falcon Sensor backend
+     * @type {string}
+     * @memberof SystemProfileThirdPartyServicesCrowdstrike
+     */
+    falcon_backend?: string;
+}
 /**
  * Representation of one yum repository
  * @export

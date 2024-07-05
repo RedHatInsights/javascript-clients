@@ -24,4 +24,4 @@ SecurityGuide200ResponseData
 
 #### Defined in
 
-[types/index.ts:658](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L658)
+[types/index.ts:826](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L826)

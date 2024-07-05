@@ -130,7 +130,7 @@ ResolutionsApi
 
 #### Defined in
 
-[api.ts:3407](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3407)
+[api.ts:3577](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3577)
 
 ___
 
@@ -163,4 +163,4 @@ ResolutionsApi
 
 #### Defined in
 
-[api.ts:3419](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3419)
+[api.ts:3589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3589)

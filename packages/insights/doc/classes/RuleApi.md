@@ -133,7 +133,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7443](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7443)
+[api.ts:7424](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7424)
 
 ___
 
@@ -164,7 +164,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7456](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7456)
+[api.ts:7437](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7437)
 
 ___
 
@@ -217,7 +217,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7491)
+[api.ts:7472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7472)
 
 ___
 
@@ -248,7 +248,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7504)
+[api.ts:7485](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7485)
 
 ___
 
@@ -277,7 +277,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7515](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7515)
+[api.ts:7496](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7496)
 
 ___
 
@@ -300,7 +300,7 @@ List systems affected by this rule with additional information about each system
 | `limit?` | `number` | Number of results to return per page. |
 | `name?` | `string` | Search for systems that include this in their display name |
 | `offset?` | `number` | The initial index from which to return the results. |
-| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
+| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"`` \| ``"9.5"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` \| ``"-impacted_date"`` \| ``"impacted_date"`` | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `options?` | `any` | Override http request option. |
@@ -317,7 +317,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7537](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7537)
+[api.ts:7518](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7518)
 
 ___
 
@@ -339,7 +339,7 @@ List all systems affected by this rule.  All systems owned by the user\'s accoun
 | `format?` | ``"csv"`` \| ``"json"`` |  |
 | `groups?` | `string`[] | List of Inventory host group names |
 | `name?` | `string` | Search for systems that include this in their display name |
-| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
+| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"`` \| ``"9.5"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | (``"-display_name"`` \| ``"-last_seen"`` \| ``"display_name"`` \| ``"last_seen"`` \| ``"-stale_at"`` \| ``"-system_uuid"`` \| ``"-updated"`` \| ``"stale_at"`` \| ``"system_uuid"`` \| ``"updated"``)[] | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
@@ -357,7 +357,7 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7559)
+[api.ts:7540](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7540)
 
 ___
 
@@ -387,4 +387,4 @@ RuleApi
 
 #### Defined in
 
-[api.ts:7571](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7571)
+[api.ts:7552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L7552)

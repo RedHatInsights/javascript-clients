@@ -132,7 +132,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:452](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L452)
+[api.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L447)
 
 ___
 
@@ -165,7 +165,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:464](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L464)
+[api.ts:459](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L459)
 
 ___
 
@@ -198,13 +198,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:476](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L476)
+[api.ts:471](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L471)
 
 ___
 
 ### getProfiles
 
-▸ **getProfiles**(`limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
+▸ **getProfiles**(`sortBy?`, `limit?`, `offset?`, `options?`): `Promise`\<`AxiosResponse`\<[`InlineResponse200`](../interfaces/InlineResponse200.md), `any`\>\>
 
 Retrieve a paginated array of profiles for the identified account. The URL query parameters \'limit\' and \'offset\' can be used to paginate the results. The default value of \'limit\' is 50. The default value of \'offset\' is 0.
 
@@ -212,6 +212,7 @@ Retrieve a paginated array of profiles for the identified account. The URL query
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `sortBy?` | ``"created_at"`` \| ``"created_at:asc"`` \| ``"created_at:desc"`` |  |
 | `limit?` | `number` |  |
 | `offset?` | `number` |  |
 | `options?` | `any` | Override http request option. |
@@ -232,4 +233,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:489](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L489)
+[api.ts:485](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L485)

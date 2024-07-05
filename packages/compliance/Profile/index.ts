@@ -4,8 +4,8 @@ import type { AxiosPromise, AxiosInstance, AxiosRequestConfig, Method } from 'ax
 import { COLLECTION_FORMATS, RequiredError, AuthTypeEnum, DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 import type { RequestArgs } from '@redhat-cloud-services/javascript-clients-shared/dist/common';
 // @ts-ignore
-import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/base';
-import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
+import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/base';
+import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
 import type { Errors, Profile200Response } from '../types';
@@ -19,11 +19,11 @@ export type ProfileParams = {
   */
   securityGuideId: any,
   /**
-  *
+  * UUID or ref_id
   * @type { any }
   * @memberof ProfileApi
   */
-  id: any,
+  profileId: any,
   /**
   * For internal use only
   * @type { any }
@@ -34,7 +34,7 @@ export type ProfileParams = {
 }
 
 const isProfileObjectParams = (params: [ProfileParams] | unknown[]): params is [ProfileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && true
 }
 /**
 * Returns a Profile
@@ -44,11 +44,11 @@ const isProfileObjectParams = (params: [ProfileParams] | unknown[]): params is [
 * @throws {RequiredError}
 */
 export const profileParamCreator = async (...config: ([ProfileParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isProfileObjectParams(config) ? config[0] : ['securityGuideId', 'id', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileParams;
-    const { securityGuideId, id, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/security_guides/{security_guide_id}/profiles/{id}`
+    const params = isProfileObjectParams(config) ? config[0] : ['securityGuideId', 'profileId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileParams;
+    const { securityGuideId, profileId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}`
         .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
-        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+        .replace(`{${"profile_id"}}`, encodeURIComponent(String(profileId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

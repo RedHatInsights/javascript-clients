@@ -42,7 +42,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1014](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1014)
+[api.ts:989](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L989)
 
 ___
 
@@ -56,7 +56,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L972)
+[api.ts:947](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L947)
 
 ___
 
@@ -70,7 +70,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1032](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1032)
+[api.ts:1007](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1007)
 
 ___
 
@@ -84,7 +84,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L966)
+[api.ts:941](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L941)
 
 ___
 
@@ -98,7 +98,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1008](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1008)
+[api.ts:983](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L983)
 
 ___
 
@@ -112,7 +112,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:990](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L990)
+[api.ts:965](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L965)
 
 ___
 
@@ -126,7 +126,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1038](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1038)
+[api.ts:1013](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1013)
 
 ___
 
@@ -140,7 +140,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:996](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L996)
+[api.ts:971](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L971)
 
 ___
 
@@ -154,7 +154,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1026)
+[api.ts:1001](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1001)
 
 ___
 
@@ -168,7 +168,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1050](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1050)
+[api.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1025)
 
 ___
 
@@ -182,7 +182,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1044](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1044)
+[api.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1019)
 
 ___
 
@@ -196,7 +196,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L960)
+[api.ts:935](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L935)
 
 ___
 
@@ -210,7 +210,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:984](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L984)
+[api.ts:959](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L959)
 
 ___
 
@@ -224,7 +224,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1002](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1002)
+[api.ts:977](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L977)
 
 ___
 
@@ -238,7 +238,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:1020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1020)
+[api.ts:995](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L995)
 
 ___
 
@@ -252,7 +252,7 @@ Pathway
 
 #### Defined in
 
-[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L978)
+[api.ts:953](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L953)
 
 ___
 
@@ -266,4 +266,4 @@ Pathway
 
 #### Defined in
 
-[api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L954)
+[api.ts:929](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L929)

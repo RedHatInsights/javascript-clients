@@ -126,7 +126,7 @@ UserPreferencesApi
 
 #### Defined in
 
-[api.ts:10369](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10369)
+[api.ts:10350](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10350)
 
 ___
 
@@ -154,4 +154,4 @@ UserPreferencesApi
 
 #### Defined in
 
-[api.ts:10379](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10379)
+[api.ts:10360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L10360)

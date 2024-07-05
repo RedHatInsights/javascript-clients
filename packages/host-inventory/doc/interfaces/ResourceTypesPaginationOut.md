@@ -25,7 +25,7 @@ ResourceTypesPaginationOut
 
 #### Defined in
 
-[api.ts:1374](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1374)
+[api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1367)
 
 ___
 
@@ -39,4 +39,4 @@ ResourceTypesPaginationOut
 
 #### Defined in
 
-[api.ts:1368](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1368)
+[api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/host-inventory/api.ts#L1361)

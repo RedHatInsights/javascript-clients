@@ -44,7 +44,7 @@ DashboardCvesBySeverity8to10
 
 #### Defined in
 
-[api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L654)
+[api.ts:660](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L660)
 
 ___
 
@@ -60,4 +60,4 @@ DashboardCvesBySeverity8to10
 
 #### Defined in
 
-[api.ts:660](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L660)
+[api.ts:654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L654)

@@ -24,4 +24,4 @@ ResolutionsBatchInput
 
 #### Defined in
 
-[api.ts:1152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1152)
+[api.ts:1222](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1222)

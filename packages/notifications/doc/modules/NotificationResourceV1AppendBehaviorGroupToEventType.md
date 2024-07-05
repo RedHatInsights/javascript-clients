@@ -38,7 +38,7 @@ Renames and re-exports [notificationResourceV1AppendBehaviorGroupToEventTypePara
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L14)
+[NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L14)
 
 ## Functions
 
@@ -64,4 +64,4 @@ Add a behavior group to the given event type.
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L40)
+[NotificationResourceV1AppendBehaviorGroupToEventType/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1AppendBehaviorGroupToEventType/index.ts#L40)

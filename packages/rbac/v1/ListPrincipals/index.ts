@@ -17,67 +17,67 @@ export type ListPrincipalsParams = {
   * @type { number }
   * @memberof ListPrincipalsApi
   */
-  limit?: number, 
+  limit?: number,
   /**
   * Parameter for selecting the offset of data.
   * @type { number }
   * @memberof ListPrincipalsApi
   */
-  offset?: number, 
+  offset?: number,
   /**
   * Parameter for specifying the matching criteria for an object\'s name and/or email. Currently, match_criteria of partial searches for a username/email using \"starts with\" pattern.
   * @type { ListPrincipalsMatchCriteriaEnum }
   * @memberof ListPrincipalsApi
   */
-  matchCriteria?: ListPrincipalsMatchCriteriaEnum, 
+  matchCriteria?: ListPrincipalsMatchCriteriaEnum,
   /**
   * Comma separated usernames of principals to get. If match_criteria is specified, only the first username will be picked up for search.
   * @type { string }
   * @memberof ListPrincipalsApi
   */
-  usernames?: string, 
+  usernames?: string,
   /**
   * The sort order of the query, either ascending or descending. Defaults to ascending.
   * @type { ListPrincipalsSortOrderEnum }
   * @memberof ListPrincipalsApi
   */
-  sortOrder?: ListPrincipalsSortOrderEnum, 
+  sortOrder?: ListPrincipalsSortOrderEnum,
   /**
   * E-mail address of principal to search for. Could be combined with match_criteria for searching.
   * @type { string }
   * @memberof ListPrincipalsApi
   */
-  email?: string, 
+  email?: string,
   /**
   * Set the status of users to get back.
   * @type { ListPrincipalsStatusEnum }
   * @memberof ListPrincipalsApi
   */
-  status?: ListPrincipalsStatusEnum, 
+  status?: ListPrincipalsStatusEnum,
   /**
   * Get only admin users within an account. Setting this would ignore the parameters: usernames, email
   * @type { boolean }
   * @memberof ListPrincipalsApi
   */
-  adminOnly?: boolean, 
+  adminOnly?: boolean,
   /**
   * Parameter for ordering principals by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-username
   * @type { ListPrincipalsOrderByEnum }
   * @memberof ListPrincipalsApi
   */
-  orderBy?: ListPrincipalsOrderByEnum, 
+  orderBy?: ListPrincipalsOrderByEnum,
   /**
   * Parameter for optionally returning only usernames for principals, bypassing a call to IT.
   * @type { boolean }
   * @memberof ListPrincipalsApi
   */
-  usernameOnly?: boolean, 
+  usernameOnly?: boolean,
   /**
   * Parameter for selecting the type of principal to be returned.
   * @type { ListPrincipalsTypeEnum }
   * @memberof ListPrincipalsApi
   */
-  type?: ListPrincipalsTypeEnum, 
+  type?: ListPrincipalsTypeEnum,
   options?: AxiosRequestConfig
 }
 /**

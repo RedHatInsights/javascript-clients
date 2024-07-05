@@ -17,7 +17,7 @@ export type CreatePoliciesParams = {
   * @type { PolicyIn }
   * @memberof CreatePoliciesApi
   */
-  policyIn: PolicyIn, 
+  policyIn: PolicyIn,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isCreatePoliciesObjectParams = (params: [CreatePoliciesParams] | unknown[]
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyIn')
 }
 /**
-* 
+*
 * @summary Create a policy in a tenant
 * @param {CreatePoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.

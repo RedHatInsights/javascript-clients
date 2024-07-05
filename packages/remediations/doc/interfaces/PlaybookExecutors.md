@@ -28,7 +28,7 @@ PlaybookExecutors
 
 #### Defined in
 
-[api.ts:354](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L354)
+[api.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L386)
 
 ___
 
@@ -42,7 +42,7 @@ PlaybookExecutors
 
 #### Defined in
 
-[api.ts:330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L330)
+[api.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L362)
 
 ___
 
@@ -56,7 +56,7 @@ PlaybookExecutors
 
 #### Defined in
 
-[api.ts:336](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L336)
+[api.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L368)
 
 ___
 
@@ -70,7 +70,7 @@ PlaybookExecutors
 
 #### Defined in
 
-[api.ts:342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L342)
+[api.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L374)
 
 ___
 
@@ -84,4 +84,4 @@ PlaybookExecutors
 
 #### Defined in
 
-[api.ts:348](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L348)
+[api.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L380)

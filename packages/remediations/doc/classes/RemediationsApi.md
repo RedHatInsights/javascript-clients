@@ -28,6 +28,7 @@ RemediationsApi
 
 ### Methods
 
+- [bulkGetRemediationPlaybook](RemediationsApi.md#bulkgetremediationplaybook)
 - [cancelPlaybookRuns](RemediationsApi.md#cancelplaybookruns)
 - [checkExecutable](RemediationsApi.md#checkexecutable)
 - [createRemediation](RemediationsApi.md#createremediation)
@@ -119,6 +120,42 @@ BaseAPI.configuration
 
 ## Methods
 
+### bulkGetRemediationPlaybook
+
+▸ **bulkGetRemediationPlaybook**(`id`, `requestBody`, `satOrg?`, `localhost?`, `options?`): `Promise`\<`AxiosResponse`\<`string`, `any`\>\>
+
+Fetch Ansible Playbook - for use with large list of target systems, RBAC permission {remediations:remediation:read}
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | Remediation identifier |
+| `requestBody` | `string`[] | Array of system inventory identifiers. |
+| `satOrg?` | `string` | Organization ID passed by satellite |
+| `localhost?` | `boolean` | Flag for localhost playbook generation |
+| `options?` | `any` | Override http request option. |
+
+#### Returns
+
+`Promise`\<`AxiosResponse`\<`string`, `any`\>\>
+
+**`Summary`**
+
+Fetch Remediation Plan Playbook
+
+**`Throws`**
+
+**`Memberof`**
+
+RemediationsApi
+
+#### Defined in
+
+[api.ts:3132](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3132)
+
+___
+
 ### cancelPlaybookRuns
 
 ▸ **cancelPlaybookRuns**(`id`, `playbookRunId`, `options?`): `Promise`\<`AxiosResponse`\<`object`, `any`\>\>
@@ -149,7 +186,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L2975)
+[api.ts:3145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3145)
 
 ___
 
@@ -182,7 +219,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L2987)
+[api.ts:3157](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3157)
 
 ___
 
@@ -215,7 +252,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:2999](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L2999)
+[api.ts:3169](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3169)
 
 ___
 
@@ -248,7 +285,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3011](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3011)
+[api.ts:3181](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3181)
 
 ___
 
@@ -282,7 +319,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3024](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3024)
+[api.ts:3194](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3194)
 
 ___
 
@@ -317,7 +354,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3038](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3038)
+[api.ts:3208](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3208)
 
 ___
 
@@ -350,7 +387,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3050](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3050)
+[api.ts:3220](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3220)
 
 ___
 
@@ -383,7 +420,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3062](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3062)
+[api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3232)
 
 ___
 
@@ -417,7 +454,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3075](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3075)
+[api.ts:3245](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3245)
 
 ___
 
@@ -452,7 +489,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3089)
+[api.ts:3259](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3259)
 
 ___
 
@@ -491,7 +528,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3107)
+[api.ts:3277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3277)
 
 ___
 
@@ -524,7 +561,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3119)
+[api.ts:3289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3289)
 
 ___
 
@@ -532,7 +569,7 @@ ___
 
 ▸ **getRemediationConnectionStatus**(`id`, `options?`): `Promise`\<`AxiosResponse`\<[`RemediationConnectionStatus`](../interfaces/RemediationConnectionStatus.md), `any`\>\>
 
-Get satellite connection status for a given host, RBAC permission {remediations:remediation:execute}
+Get connection status for remediation plan targets, RBAC permission {remediations:remediation:execute}  Returns an array of the following objects:  - One object for all systems belonging to a unique satellite organization - One object for all direct-connected systems in each of the status categories:    - connected   - disconnected   - no_rhc
 
 #### Parameters
 
@@ -557,7 +594,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3131)
+[api.ts:3301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3301)
 
 ___
 
@@ -594,7 +631,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3147](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3147)
+[api.ts:3317](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3317)
 
 ___
 
@@ -630,13 +667,13 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3162)
+[api.ts:3332](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3332)
 
 ___
 
 ### getRemediations
 
-▸ **getRemediations**(`sort?`, `filter?`, `limit?`, `offset?`, `system?`, `hideArchived?`, `fieldsData?`, `options?`): `Promise`\<`AxiosResponse`\<[`RemediationList`](../interfaces/RemediationList.md), `any`\>\>
+▸ **getRemediations**(`sort?`, `filter?`, `limit?`, `offset?`, `system?`, `hideArchived?`, `fieldsData?`, `options?`): `Promise`\<`AxiosResponse`\<[`RemediationList`](../interfaces/RemediationList.md) \| [`RemediationNameList`](../interfaces/RemediationNameList.md), `any`\>\>
 
 Provides information about Remediations, RBAC permission {remediations:remediation:read}
 
@@ -650,12 +687,12 @@ Provides information about Remediations, RBAC permission {remediations:remediati
 | `offset?` | `number` | Indicates the starting position of the query relative to the complete set of items that match the query |
 | `system?` | `string` | System identifier. If specified only remediations that involve the given system will be returned. |
 | `hideArchived?` | `boolean` | Hide archived playbooks |
-| `fieldsData?` | ``"playbook_runs"``[] | Add playbook run data to the response |
+| `fieldsData?` | (``"name"`` \| ``"playbook_runs"``)[] | Include specified items - name: list all remediation plan names in organization (cannot be combined with other fields) - playbook_runs: include playbook run data in the response |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
 
-`Promise`\<`AxiosResponse`\<[`RemediationList`](../interfaces/RemediationList.md), `any`\>\>
+`Promise`\<`AxiosResponse`\<[`RemediationList`](../interfaces/RemediationList.md) \| [`RemediationNameList`](../interfaces/RemediationNameList.md), `any`\>\>
 
 **`Summary`**
 
@@ -669,7 +706,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3180](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3180)
+[api.ts:3350](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3350)
 
 ___
 
@@ -705,7 +742,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3195](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3195)
+[api.ts:3365](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3365)
 
 ___
 
@@ -739,7 +776,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3208](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3208)
+[api.ts:3378](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3378)
 
 ___
 
@@ -773,7 +810,7 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3221](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3221)
+[api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3391)
 
 ___
 
@@ -808,4 +845,4 @@ RemediationsApi
 
 #### Defined in
 
-[api.ts:3235](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3235)
+[api.ts:3405](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L3405)

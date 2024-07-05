@@ -17,13 +17,13 @@ export type UpdateRoleParams = {
   * @type { string }
   * @memberof UpdateRoleApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Update to a role
   * @type { RoleWithAccess }
   * @memberof UpdateRoleApi
   */
-  roleWithAccess: RoleWithAccess, 
+  roleWithAccess: RoleWithAccess,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): param
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'roleWithAccess')
 }
 /**
-* 
+*
 * @summary Update a role in the tenant
 * @param {UpdateRoleParams} config with all available params.
 * @param {*} [options] Override http request option.

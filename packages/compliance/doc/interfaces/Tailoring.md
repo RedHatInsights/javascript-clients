@@ -14,6 +14,7 @@ Tailoring
 - [os\_major\_version](Tailoring.md#os_major_version)
 - [os\_minor\_version](Tailoring.md#os_minor_version)
 - [profile\_id](Tailoring.md#profile_id)
+- [security\_guide\_id](Tailoring.md#security_guide_id)
 - [type](Tailoring.md#type)
 - [value\_overrides](Tailoring.md#value_overrides)
 
@@ -29,7 +30,7 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:920](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L920)
+[types/index.ts:1094](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1094)
 
 ___
 
@@ -45,7 +46,7 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:938](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L938)
+[types/index.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1118)
 
 ___
 
@@ -61,7 +62,7 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:944](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L944)
+[types/index.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1124)
 
 ___
 
@@ -77,7 +78,23 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:932](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L932)
+[types/index.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1106)
+
+___
+
+### security\_guide\_id
+
+• `Optional` **security\_guide\_id**: `any`
+
+Identificator of the Security Guide that contains the parent Profile
+
+**`Memberof`**
+
+Tailoring
+
+#### Defined in
+
+[types/index.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1112)
 
 ___
 
@@ -91,7 +108,7 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:926](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L926)
+[types/index.ts:1100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1100)
 
 ___
 
@@ -107,4 +124,4 @@ Tailoring
 
 #### Defined in
 
-[types/index.ts:950](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L950)
+[types/index.ts:1130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1130)

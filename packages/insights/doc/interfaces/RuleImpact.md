@@ -25,7 +25,7 @@ RuleImpact
 
 #### Defined in
 
-[api.ts:1746](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1746)
+[api.ts:1721](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1721)
 
 ___
 
@@ -39,4 +39,4 @@ RuleImpact
 
 #### Defined in
 
-[api.ts:1740](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1740)
+[api.ts:1715](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L1715)

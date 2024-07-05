@@ -37,7 +37,7 @@ Renames and re-exports [orgConfigResourceV1SaveDailyDigestTimePreferenceParamCre
 
 #### Defined in
 
-[packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L14)
+[OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Set the daily digest time
 
 #### Defined in
 
-[packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)
+[OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts#L34)

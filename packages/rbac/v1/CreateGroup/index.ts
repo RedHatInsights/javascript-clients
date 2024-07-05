@@ -17,7 +17,7 @@ export type CreateGroupParams = {
   * @type { Group }
   * @memberof CreateGroupApi
   */
-  group: Group, 
+  group: Group,
   options?: AxiosRequestConfig
 }
 
@@ -25,7 +25,7 @@ const isCreateGroupObjectParams = (params: [CreateGroupParams] | unknown[]): par
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'group')
 }
 /**
-* 
+*
 * @summary Create a group in a tenant
 * @param {CreateGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

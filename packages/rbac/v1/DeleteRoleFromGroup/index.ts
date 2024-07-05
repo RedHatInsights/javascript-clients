@@ -17,13 +17,13 @@ export type DeleteRoleFromGroupParams = {
   * @type { string }
   * @memberof DeleteRoleFromGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * A comma separated list of role UUIDs for roles to remove from the group
   * @type { string }
   * @memberof DeleteRoleFromGroupApi
   */
-  roles: string, 
+  roles: string,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] |
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'roles')
 }
 /**
-* 
+*
 * @summary Remove a role from a group in the tenant
 * @param {DeleteRoleFromGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

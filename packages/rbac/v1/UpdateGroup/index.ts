@@ -17,13 +17,13 @@ export type UpdateGroupParams = {
   * @type { string }
   * @memberof UpdateGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Group to update in tenant
   * @type { Group }
   * @memberof UpdateGroupApi
   */
-  group: Group, 
+  group: Group,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): par
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'group')
 }
 /**
-* 
+*
 * @summary Update a group in the tenant
 * @param {UpdateGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

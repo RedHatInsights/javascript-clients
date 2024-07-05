@@ -48,7 +48,7 @@ Renames and re-exports [getPrincipalsFromGroupParamCreator](GetPrincipalsFromGro
 | `serviceAccountDescription?` | `string` | Parameter for filtering the service accounts by their description. **`Memberof`** GetPrincipalsFromGroupApi |
 | `serviceAccountName?` | `string` | Parameter for filtering the service accounts by their name. **`Memberof`** GetPrincipalsFromGroupApi |
 | `usernameOnly?` | `boolean` | Parameter for optionally returning only usernames for principals, bypassing a call to IT. **`Memberof`** GetPrincipalsFromGroupApi |
-| `uuid` | `string` | ID of group from which to get principal **`Memberof`** GetPrincipalsFromGroupApi |
+| `uuid` | `string` | ID of group from which to get principals **`Memberof`** GetPrincipalsFromGroupApi |
 
 #### Defined in
 

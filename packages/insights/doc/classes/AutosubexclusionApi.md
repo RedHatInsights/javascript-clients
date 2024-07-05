@@ -128,7 +128,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3605](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3605)
+[api.ts:3586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3586)
 
 ___
 
@@ -157,7 +157,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3616](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3616)
+[api.ts:3597](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3597)
 
 ___
 
@@ -187,7 +187,7 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3628](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3628)
+[api.ts:3609](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3609)
 
 ___
 
@@ -216,4 +216,4 @@ AutosubexclusionApi
 
 #### Defined in
 
-[api.ts:3639](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3639)
+[api.ts:3620](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L3620)

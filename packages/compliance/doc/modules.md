@@ -19,6 +19,11 @@
 - [Profile200Response](interfaces/Profile200Response.md)
 - [Profile200ResponseData](interfaces/Profile200ResponseData.md)
 - [Profiles200Response](interfaces/Profiles200Response.md)
+- [Report](interfaces/Report.md)
+- [Report200Response](interfaces/Report200Response.md)
+- [Report200ResponseData](interfaces/Report200ResponseData.md)
+- [ReportTestResults200Response](interfaces/ReportTestResults200Response.md)
+- [Reports200Response](interfaces/Reports200Response.md)
 - [Rule](interfaces/Rule.md)
 - [Rule200Response](interfaces/Rule200Response.md)
 - [Rule200ResponseData](interfaces/Rule200ResponseData.md)
@@ -42,6 +47,7 @@
 - [Tailoring200ResponseData](interfaces/Tailoring200ResponseData.md)
 - [TailoringFile](interfaces/TailoringFile.md)
 - [Tailorings200Response](interfaces/Tailorings200Response.md)
+- [TestResult](interfaces/TestResult.md)
 - [ValueDefinition](interfaces/ValueDefinition.md)
 - [ValueDefinition200Response](interfaces/ValueDefinition200Response.md)
 - [ValueDefinition200ResponseData](interfaces/ValueDefinition200ResponseData.md)
@@ -51,24 +57,28 @@
 
 - [PolicyTypeEnum](modules.md#policytypeenum)
 - [ProfileTypeEnum](modules.md#profiletypeenum)
+- [ReportTypeEnum](modules.md#reporttypeenum)
 - [RuleGroupTypeEnum](modules.md#rulegrouptypeenum)
 - [RuleTypeEnum](modules.md#ruletypeenum)
 - [SecurityGuideTypeEnum](modules.md#securityguidetypeenum)
 - [SupportedProfileTypeEnum](modules.md#supportedprofiletypeenum)
 - [SystemTypeEnum](modules.md#systemtypeenum)
 - [TailoringTypeEnum](modules.md#tailoringtypeenum)
+- [TestResultTypeEnum](modules.md#testresulttypeenum)
 - [ValueDefinitionTypeEnum](modules.md#valuedefinitiontypeenum)
 
 ### Variables
 
 - [PolicyTypeEnum](modules.md#policytypeenum-1)
 - [ProfileTypeEnum](modules.md#profiletypeenum-1)
+- [ReportTypeEnum](modules.md#reporttypeenum-1)
 - [RuleGroupTypeEnum](modules.md#rulegrouptypeenum-1)
 - [RuleTypeEnum](modules.md#ruletypeenum-1)
 - [SecurityGuideTypeEnum](modules.md#securityguidetypeenum-1)
 - [SupportedProfileTypeEnum](modules.md#supportedprofiletypeenum-1)
 - [SystemTypeEnum](modules.md#systemtypeenum-1)
 - [TailoringTypeEnum](modules.md#tailoringtypeenum-1)
+- [TestResultTypeEnum](modules.md#testresulttypeenum-1)
 - [ValueDefinitionTypeEnum](modules.md#valuedefinitiontypeenum-1)
 
 ### Functions
@@ -79,6 +89,7 @@
 - [assignSystems](modules.md#assignsystems)
 - [createPolicy](modules.md#createpolicy)
 - [deletePolicy](modules.md#deletepolicy)
+- [deleteReport](modules.md#deletereport)
 - [policies](modules.md#policies)
 - [policy](modules.md#policy)
 - [policySystems](modules.md#policysystems)
@@ -86,6 +97,12 @@
 - [profileRule](modules.md#profilerule)
 - [profileRules](modules.md#profilerules)
 - [profiles](modules.md#profiles)
+- [report](modules.md#report)
+- [reportSystem](modules.md#reportsystem)
+- [reportSystems](modules.md#reportsystems)
+- [reportTestResult](modules.md#reporttestresult)
+- [reportTestResults](modules.md#reporttestresults)
+- [reports](modules.md#reports)
 - [rule](modules.md#rule)
 - [ruleGroup](modules.md#rulegroup)
 - [ruleGroups](modules.md#rulegroups)
@@ -104,6 +121,7 @@
 - [unassignRule](modules.md#unassignrule)
 - [unassignSystem](modules.md#unassignsystem)
 - [updatePolicy](modules.md#updatepolicy)
+- [updateTailoring](modules.md#updatetailoring)
 - [valueDefinition](modules.md#valuedefinition)
 - [valueDefinitions](modules.md#valuedefinitions)
 
@@ -115,9 +133,9 @@
 
 #### Defined in
 
-[types/index.ts:220](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
+[types/index.ts:220](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
 
-[types/index.ts:224](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
+[types/index.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
 
 ___
 
@@ -127,9 +145,21 @@ ___
 
 #### Defined in
 
-[types/index.ts:295](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
+[types/index.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
 
-[types/index.ts:299](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
+[types/index.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
+
+___
+
+### ReportTypeEnum
+
+Ƭ **ReportTypeEnum**: typeof [`ReportTypeEnum`](modules.md#reporttypeenum-1)[keyof typeof [`ReportTypeEnum`](modules.md#reporttypeenum-1)]
+
+#### Defined in
+
+[types/index.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L438)
+
+[types/index.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L442)
 
 ___
 
@@ -139,9 +169,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:496](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L496)
+[types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L664)
 
-[types/index.ts:500](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L500)
+[types/index.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L668)
 
 ___
 
@@ -151,9 +181,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:414](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L414)
+[types/index.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L582)
 
-[types/index.ts:418](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L418)
+[types/index.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L586)
 
 ___
 
@@ -163,9 +193,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:628](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L628)
+[types/index.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L796)
 
-[types/index.ts:632](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L632)
+[types/index.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L800)
 
 ___
 
@@ -175,9 +205,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:735](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L735)
+[types/index.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L909)
 
-[types/index.ts:739](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L739)
+[types/index.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L913)
 
 ___
 
@@ -187,9 +217,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:852](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L852)
+[types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1026)
 
-[types/index.ts:856](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L856)
+[types/index.ts:1030](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1030)
 
 ___
 
@@ -199,9 +229,21 @@ ___
 
 #### Defined in
 
-[types/index.ts:953](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L953)
+[types/index.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1133)
 
-[types/index.ts:957](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L957)
+[types/index.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1137)
+
+___
+
+### TestResultTypeEnum
+
+Ƭ **TestResultTypeEnum**: typeof [`TestResultTypeEnum`](modules.md#testresulttypeenum-1)[keyof typeof [`TestResultTypeEnum`](modules.md#testresulttypeenum-1)]
+
+#### Defined in
+
+[types/index.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1285)
+
+[types/index.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1289)
 
 ___
 
@@ -211,9 +253,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:1075](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1075)
+[types/index.ts:1341](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1341)
 
-[types/index.ts:1079](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1079)
+[types/index.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1345)
 
 ## Variables
 
@@ -229,9 +271,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:220](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
+[types/index.ts:220](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L220)
 
-[types/index.ts:224](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
+[types/index.ts:224](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L224)
 
 ___
 
@@ -247,9 +289,27 @@ ___
 
 #### Defined in
 
-[types/index.ts:295](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
+[types/index.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L295)
 
-[types/index.ts:299](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
+[types/index.ts:299](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L299)
+
+___
+
+### ReportTypeEnum
+
+• `Const` **ReportTypeEnum**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `Report` | ``"report"`` |
+
+#### Defined in
+
+[types/index.ts:438](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L438)
+
+[types/index.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L442)
 
 ___
 
@@ -265,9 +325,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:496](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L496)
+[types/index.ts:664](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L664)
 
-[types/index.ts:500](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L500)
+[types/index.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L668)
 
 ___
 
@@ -283,9 +343,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:414](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L414)
+[types/index.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L582)
 
-[types/index.ts:418](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L418)
+[types/index.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L586)
 
 ___
 
@@ -301,9 +361,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:628](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L628)
+[types/index.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L796)
 
-[types/index.ts:632](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L632)
+[types/index.ts:800](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L800)
 
 ___
 
@@ -319,9 +379,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:735](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L735)
+[types/index.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L909)
 
-[types/index.ts:739](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L739)
+[types/index.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L913)
 
 ___
 
@@ -337,9 +397,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:852](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L852)
+[types/index.ts:1026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1026)
 
-[types/index.ts:856](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L856)
+[types/index.ts:1030](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1030)
 
 ___
 
@@ -355,9 +415,27 @@ ___
 
 #### Defined in
 
-[types/index.ts:953](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L953)
+[types/index.ts:1133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1133)
 
-[types/index.ts:957](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L957)
+[types/index.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1137)
+
+___
+
+### TestResultTypeEnum
+
+• `Const` **TestResultTypeEnum**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `TestResult` | ``"test_result"`` |
+
+#### Defined in
+
+[types/index.ts:1285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1285)
+
+[types/index.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1289)
 
 ___
 
@@ -373,9 +451,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:1075](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1075)
+[types/index.ts:1341](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1341)
 
-[types/index.ts:1079](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1079)
+[types/index.ts:1345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1345)
 
 ## Functions
 
@@ -403,7 +481,7 @@ Assign a Rule to a Tailoring
 
 #### Defined in
 
-[AssignRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignRule/index.ts#L52)
+[AssignRule/index.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/AssignRule/index.ts#L52)
 
 ___
 
@@ -433,7 +511,7 @@ Bulk assign Rules to a Tailoring
 
 #### Defined in
 
-[AssignRules/index.ts:53](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignRules/index.ts#L53)
+[AssignRules/index.ts:53](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/AssignRules/index.ts#L53)
 
 ___
 
@@ -461,7 +539,7 @@ Assign a System to a Policy
 
 #### Defined in
 
-[AssignSystem/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignSystem/index.ts#L46)
+[AssignSystem/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/AssignSystem/index.ts#L46)
 
 ___
 
@@ -491,7 +569,7 @@ Bulk assign Systems to a Policy
 
 #### Defined in
 
-[AssignSystems/index.ts:47](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/AssignSystems/index.ts#L47)
+[AssignSystems/index.ts:47](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/AssignSystems/index.ts#L47)
 
 ___
 
@@ -519,7 +597,7 @@ Create a Policy
 
 #### Defined in
 
-[CreatePolicy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/CreatePolicy/index.ts#L40)
+[CreatePolicy/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/CreatePolicy/index.ts#L40)
 
 ___
 
@@ -547,7 +625,35 @@ Delete a Policy
 
 #### Defined in
 
-[DeletePolicy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/DeletePolicy/index.ts#L40)
+[DeletePolicy/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/DeletePolicy/index.ts#L40)
+
+___
+
+### deleteReport
+
+▸ **deleteReport**(`...config`): `Promise`\<`RequestArgs`\>
+
+Deletes a Report results
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`DeleteReportParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Delete a Report results
+
+**`Throws`**
+
+#### Defined in
+
+DeleteReport/index.ts:40
 
 ___
 
@@ -575,7 +681,7 @@ Request Policies
 
 #### Defined in
 
-[Policies/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Policies/index.ts#L58)
+[Policies/index.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Policies/index.ts#L58)
 
 ___
 
@@ -603,7 +709,7 @@ Request a Policy
 
 #### Defined in
 
-[Policy/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Policy/index.ts#L40)
+[Policy/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Policy/index.ts#L40)
 
 ___
 
@@ -631,7 +737,7 @@ Request Systems assigned to a Policy
 
 #### Defined in
 
-[PolicySystems/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/PolicySystems/index.ts#L64)
+[PolicySystems/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/PolicySystems/index.ts#L64)
 
 ___
 
@@ -659,7 +765,7 @@ Request a Profile
 
 #### Defined in
 
-[Profile/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Profile/index.ts#L46)
+[Profile/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Profile/index.ts#L46)
 
 ___
 
@@ -687,7 +793,7 @@ Request a Rule assigned to a Profile
 
 #### Defined in
 
-[ProfileRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ProfileRule/index.ts#L52)
+[ProfileRule/index.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/ProfileRule/index.ts#L52)
 
 ___
 
@@ -715,7 +821,7 @@ Request Rules assigned to a Profile
 
 #### Defined in
 
-[ProfileRules/index.ts:70](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ProfileRules/index.ts#L70)
+[ProfileRules/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/ProfileRules/index.ts#L70)
 
 ___
 
@@ -743,7 +849,175 @@ Request Profiles
 
 #### Defined in
 
-[Profiles/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Profiles/index.ts#L64)
+[Profiles/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Profiles/index.ts#L64)
+
+___
+
+### report
+
+▸ **report**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Report
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Report
+
+**`Throws`**
+
+#### Defined in
+
+[Report/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Report/index.ts#L40)
+
+___
+
+### reportSystem
+
+▸ **reportSystem**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a System under a Report
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportSystemParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a System
+
+**`Throws`**
+
+#### Defined in
+
+ReportSystem/index.ts:46
+
+___
+
+### reportSystems
+
+▸ **reportSystems**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Systems assigned to a Report
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportSystemsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Systems assigned to a Report
+
+**`Throws`**
+
+#### Defined in
+
+ReportSystems/index.ts:64
+
+___
+
+### reportTestResult
+
+▸ **reportTestResult**(`...config`): `Promise`\<`RequestArgs`\>
+
+Returns a Test Result under a Report
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportTestResultParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request a Test Result
+
+**`Throws`**
+
+#### Defined in
+
+ReportTestResult/index.ts:46
+
+___
+
+### reportTestResults
+
+▸ **reportTestResults**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Test Results under a Report
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportTestResultsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Test Results under a Report
+
+**`Throws`**
+
+#### Defined in
+
+ReportTestResults/index.ts:64
+
+___
+
+### reports
+
+▸ **reports**(`...config`): `Promise`\<`RequestArgs`\>
+
+Lists Reports
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`any`, `any`, `any`, `any`, `any`, `AxiosRequestConfig`\<`any`\>] \| [`ReportsParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Request Reports
+
+**`Throws`**
+
+#### Defined in
+
+[Reports/index.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Reports/index.ts#L58)
 
 ___
 
@@ -771,7 +1045,7 @@ Request a Rule
 
 #### Defined in
 
-[Rule/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Rule/index.ts#L46)
+[Rule/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Rule/index.ts#L46)
 
 ___
 
@@ -799,7 +1073,7 @@ Request a Rule Group
 
 #### Defined in
 
-[RuleGroup/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/RuleGroup/index.ts#L46)
+[RuleGroup/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/RuleGroup/index.ts#L46)
 
 ___
 
@@ -827,7 +1101,7 @@ Request Rule Groups
 
 #### Defined in
 
-[RuleGroups/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/RuleGroups/index.ts#L64)
+[RuleGroups/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/RuleGroups/index.ts#L64)
 
 ___
 
@@ -855,7 +1129,7 @@ Request Rules
 
 #### Defined in
 
-[Rules/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Rules/index.ts#L64)
+[Rules/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Rules/index.ts#L64)
 
 ___
 
@@ -883,7 +1157,7 @@ Request a Security Guide
 
 #### Defined in
 
-[SecurityGuide/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuide/index.ts#L40)
+[SecurityGuide/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/SecurityGuide/index.ts#L40)
 
 ___
 
@@ -911,7 +1185,7 @@ Request the Rule Tree of a Security Guide
 
 #### Defined in
 
-[SecurityGuideRuleTree/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuideRuleTree/index.ts#L40)
+[SecurityGuideRuleTree/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/SecurityGuideRuleTree/index.ts#L40)
 
 ___
 
@@ -939,7 +1213,7 @@ Request Security Guides
 
 #### Defined in
 
-[SecurityGuides/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SecurityGuides/index.ts#L58)
+[SecurityGuides/index.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/SecurityGuides/index.ts#L58)
 
 ___
 
@@ -967,7 +1241,7 @@ Request Supported Profiles
 
 #### Defined in
 
-[SupportedProfiles/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SupportedProfiles/index.ts#L58)
+[SupportedProfiles/index.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/SupportedProfiles/index.ts#L58)
 
 ___
 
@@ -995,7 +1269,7 @@ Request a System
 
 #### Defined in
 
-[System/index.ts:40](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/System/index.ts#L40)
+[System/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/System/index.ts#L40)
 
 ___
 
@@ -1023,7 +1297,7 @@ Request Systems
 
 #### Defined in
 
-[Systems/index.ts:58](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Systems/index.ts#L58)
+[Systems/index.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Systems/index.ts#L58)
 
 ___
 
@@ -1051,7 +1325,7 @@ Request Policies assigned to a System
 
 #### Defined in
 
-[SystemsPolicies/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/SystemsPolicies/index.ts#L64)
+[SystemsPolicies/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/SystemsPolicies/index.ts#L64)
 
 ___
 
@@ -1079,7 +1353,7 @@ Request a Tailoring
 
 #### Defined in
 
-[Tailoring/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Tailoring/index.ts#L46)
+[Tailoring/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Tailoring/index.ts#L46)
 
 ___
 
@@ -1107,7 +1381,7 @@ Request a Tailoring file
 
 #### Defined in
 
-[TailoringFile/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/TailoringFile/index.ts#L46)
+[TailoringFile/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/TailoringFile/index.ts#L46)
 
 ___
 
@@ -1135,7 +1409,7 @@ Request Rules assigned to a Tailoring
 
 #### Defined in
 
-[TailoringRules/index.ts:70](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/TailoringRules/index.ts#L70)
+[TailoringRules/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/TailoringRules/index.ts#L70)
 
 ___
 
@@ -1163,7 +1437,7 @@ Request Tailorings
 
 #### Defined in
 
-[Tailorings/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/Tailorings/index.ts#L64)
+[Tailorings/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/Tailorings/index.ts#L64)
 
 ___
 
@@ -1191,7 +1465,7 @@ Unassign a Rule from a Tailoring
 
 #### Defined in
 
-[UnassignRule/index.ts:52](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UnassignRule/index.ts#L52)
+[UnassignRule/index.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/UnassignRule/index.ts#L52)
 
 ___
 
@@ -1219,7 +1493,7 @@ Unassign a System from a Policy
 
 #### Defined in
 
-[UnassignSystem/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UnassignSystem/index.ts#L46)
+[UnassignSystem/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/UnassignSystem/index.ts#L46)
 
 ___
 
@@ -1247,7 +1521,35 @@ Update a Policy
 
 #### Defined in
 
-[UpdatePolicy/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/UpdatePolicy/index.ts#L46)
+[UpdatePolicy/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/UpdatePolicy/index.ts#L46)
+
+___
+
+### updateTailoring
+
+▸ **updateTailoring**(`...config`): `Promise`\<`RequestArgs`\>
+
+Updates a Tailoring with the provided value_overrides
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`UpdateTailoringParams`] \| [`any`, `any`, `any`, [`Tailoring`](interfaces/Tailoring.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Update a Tailoring
+
+**`Throws`**
+
+#### Defined in
+
+[UpdateTailoring/index.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/UpdateTailoring/index.ts#L52)
 
 ___
 
@@ -1275,7 +1577,7 @@ Request a Value Definition
 
 #### Defined in
 
-[ValueDefinition/index.ts:46](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ValueDefinition/index.ts#L46)
+[ValueDefinition/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/ValueDefinition/index.ts#L46)
 
 ___
 
@@ -1303,4 +1605,4 @@ Request Value Definitions
 
 #### Defined in
 
-[ValueDefinitions/index.ts:64](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/ValueDefinitions/index.ts#L64)
+[ValueDefinitions/index.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/ValueDefinitions/index.ts#L64)

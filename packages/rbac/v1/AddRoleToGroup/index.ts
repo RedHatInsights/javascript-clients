@@ -17,13 +17,13 @@ export type AddRoleToGroupParams = {
   * @type { string }
   * @memberof AddRoleToGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Role to add to a group
   * @type { GroupRoleIn }
   * @memberof AddRoleToGroupApi
   */
-  groupRoleIn: GroupRoleIn, 
+  groupRoleIn: GroupRoleIn,
   options?: AxiosRequestConfig
 }
 
@@ -31,7 +31,7 @@ const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupRoleIn')
 }
 /**
-* 
+*
 * @summary Add a role to a group in the tenant
 * @param {AddRoleToGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

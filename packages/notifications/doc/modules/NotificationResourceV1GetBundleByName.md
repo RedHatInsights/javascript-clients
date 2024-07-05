@@ -37,7 +37,7 @@ Renames and re-exports [notificationResourceV1GetBundleByNameParamCreator](Notif
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetBundleByName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L14)
+[NotificationResourceV1GetBundleByName/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Retrieve a bundle by name
 
 #### Defined in
 
-[packages/notifications/NotificationResourceV1GetBundleByName/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L34)
+[NotificationResourceV1GetBundleByName/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/NotificationResourceV1GetBundleByName/index.ts#L34)

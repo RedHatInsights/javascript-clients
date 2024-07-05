@@ -26,7 +26,7 @@ RuleGroups200Response
 
 #### Defined in
 
-[types/index.ts:551](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L551)
+[types/index.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L719)
 
 ___
 
@@ -40,7 +40,7 @@ RuleGroups200Response
 
 #### Defined in
 
-[types/index.ts:545](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L545)
+[types/index.ts:713](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L713)
 
 ___
 
@@ -54,4 +54,4 @@ RuleGroups200Response
 
 #### Defined in
 
-[types/index.ts:539](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L539)
+[types/index.ts:707](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L707)

@@ -6,7 +6,7 @@
 
 **`Export`**
 
-CurrentStatu
+CurrentStatus
 
 ## Table of contents
 
@@ -24,11 +24,11 @@ CurrentStatu
 
 **`Memberof`**
 
-CurrentStatu
+CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L613)
+[types/index.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L601)
 
 ___
 
@@ -38,11 +38,11 @@ ___
 
 **`Memberof`**
 
-CurrentStatu
+CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L607)
+[types/index.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L595)
 
 ___
 
@@ -52,8 +52,8 @@ ___
 
 **`Memberof`**
 
-CurrentStatu
+CurrentStatus
 
 #### Defined in
 
-[packages/integrations/types/index.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L601)
+[types/index.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L589)

@@ -32,7 +32,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1072](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1072)
+[types/index.ts:1338](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1338)
 
 ___
 
@@ -48,7 +48,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1066](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1066)
+[types/index.ts:1332](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1332)
 
 ___
 
@@ -62,7 +62,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1036](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1036)
+[types/index.ts:1302](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1302)
 
 ___
 
@@ -78,7 +78,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1048](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1048)
+[types/index.ts:1314](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1314)
 
 ___
 
@@ -94,7 +94,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1054](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1054)
+[types/index.ts:1320](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1320)
 
 ___
 
@@ -108,7 +108,7 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1042](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1042)
+[types/index.ts:1308](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1308)
 
 ___
 
@@ -124,4 +124,4 @@ ValueDefinition
 
 #### Defined in
 
-[types/index.ts:1060](https://github.com/AsToNlele/javascript-clients/blob/main/packages/compliance/types/index.ts#L1060)
+[types/index.ts:1326](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/compliance/types/index.ts#L1326)

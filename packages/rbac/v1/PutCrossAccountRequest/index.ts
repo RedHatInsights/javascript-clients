@@ -17,13 +17,13 @@ export type PutCrossAccountRequestParams = {
   * @type { string }
   * @memberof PutCrossAccountRequestApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Updates to CrossAccountRequest
   * @type { CrossAccountRequestUpdateIn }
   * @memberof PutCrossAccountRequestApi
   */
-  crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn, 
+  crossAccountRequestUpdateIn: CrossAccountRequestUpdateIn,
   options?: AxiosRequestConfig
 }
 

@@ -17,13 +17,13 @@ export type GetRoleParams = {
   * @type { string }
   * @memberof GetRoleApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * Parameter for filtering resource by scope.
   * @type { GetRoleScopeEnum }
   * @memberof GetRoleApi
   */
-  scope?: GetRoleScopeEnum, 
+  scope?: GetRoleScopeEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -40,7 +40,7 @@ const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }
 /**
-* 
+*
 * @summary Get a role in the tenant
 * @param {GetRoleParams} config with all available params.
 * @param {*} [options] Override http request option.

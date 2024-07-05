@@ -17,19 +17,19 @@ export type DeletePrincipalFromGroupParams = {
   * @type { string }
   * @memberof DeletePrincipalFromGroupApi
   */
-  uuid: string, 
+  uuid: string,
   /**
   * A comma separated list of usernames for principals to remove from the group
   * @type { string }
   * @memberof DeletePrincipalFromGroupApi
   */
-  usernames?: string, 
+  usernames?: string,
   /**
   * A comma separated list of usernames for service accounts to remove from the group
   * @type { string }
   * @memberof DeletePrincipalFromGroupApi
   */
-  serviceAccounts?: string, 
+  serviceAccounts?: string,
   options?: AxiosRequestConfig
 }
 
@@ -37,7 +37,7 @@ const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGrou
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
 }
 /**
-* 
+*
 * @summary Remove a principal from a group in the tenant
 * @param {DeletePrincipalFromGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

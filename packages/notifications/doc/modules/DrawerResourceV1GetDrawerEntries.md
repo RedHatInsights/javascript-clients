@@ -47,7 +47,7 @@ Renames and re-exports [drawerResourceV1GetDrawerEntriesParamCreator](DrawerReso
 
 #### Defined in
 
-[packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L14)
+[DrawerResourceV1GetDrawerEntries/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L14)
 
 ## Functions
 
@@ -75,4 +75,4 @@ Retrieve drawer notifications entries.
 
 #### Defined in
 
-[packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L94)
+[DrawerResourceV1GetDrawerEntries/index.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1GetDrawerEntries/index.ts#L94)

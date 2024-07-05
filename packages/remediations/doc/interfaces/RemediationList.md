@@ -26,7 +26,7 @@ RemediationList
 
 #### Defined in
 
-[api.ts:916](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L916)
+[api.ts:948](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L948)
 
 ___
 
@@ -40,7 +40,7 @@ RemediationList
 
 #### Defined in
 
-[api.ts:928](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L928)
+[api.ts:960](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L960)
 
 ___
 
@@ -54,4 +54,4 @@ RemediationList
 
 #### Defined in
 
-[api.ts:922](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L922)
+[api.ts:954](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L954)

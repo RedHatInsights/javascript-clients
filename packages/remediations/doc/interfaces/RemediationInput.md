@@ -27,7 +27,7 @@ RemediationInput
 
 #### Defined in
 
-[api.ts:759](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L759)
+[api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L791)
 
 ___
 
@@ -43,7 +43,7 @@ RemediationInput
 
 #### Defined in
 
-[api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L747)
+[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L779)
 
 ___
 
@@ -59,13 +59,13 @@ RemediationInput
 
 #### Defined in
 
-[api.ts:753](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L753)
+[api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L785)
 
 ___
 
 ### name
 
-• `Optional` **name**: ``null`` \| `string`
+• `Optional` **name**: `string`
 
 **`Memberof`**
 
@@ -73,4 +73,4 @@ RemediationInput
 
 #### Defined in
 
-[api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L741)
+[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L773)

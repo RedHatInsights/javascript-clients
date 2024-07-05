@@ -124,7 +124,7 @@ Returns systems with their hit count and last upload time.  Results can be sorte
 | `limit?` | `number` | Number of results to return per page. |
 | `offset?` | `number` | The initial index from which to return the results. |
 | `pathway?` | `string` | Display systems with rule hits for this Pathway |
-| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"``)[] | Display only systems with these versions of RHEL |
+| `rhelVersion?` | (``"6.0"`` \| ``"6.1"`` \| ``"6.10"`` \| ``"6.2"`` \| ``"6.3"`` \| ``"6.4"`` \| ``"6.5"`` \| ``"6.6"`` \| ``"6.7"`` \| ``"6.8"`` \| ``"6.9"`` \| ``"7.0"`` \| ``"7.1"`` \| ``"7.10"`` \| ``"7.2"`` \| ``"7.3"`` \| ``"7.4"`` \| ``"7.5"`` \| ``"7.6"`` \| ``"7.7"`` \| ``"7.8"`` \| ``"7.9"`` \| ``"8.0"`` \| ``"8.1"`` \| ``"8.10"`` \| ``"8.2"`` \| ``"8.3"`` \| ``"8.4"`` \| ``"8.5"`` \| ``"8.6"`` \| ``"8.7"`` \| ``"8.8"`` \| ``"8.9"`` \| ``"9.0"`` \| ``"9.1"`` \| ``"9.2"`` \| ``"9.3"`` \| ``"9.4"`` \| ``"9.5"``)[] | Display only systems with these versions of RHEL |
 | `sort?` | ``"-critical_hits"`` \| ``"-display_name"`` \| ``"-group_name"`` \| ``"-hits"`` \| ``"-important_hits"`` \| ``"-last_seen"`` \| ``"-low_hits"`` \| ``"-moderate_hits"`` \| ``"-rhel_version"`` \| ``"critical_hits"`` \| ``"display_name"`` \| ``"group_name"`` \| ``"hits"`` \| ``"important_hits"`` \| ``"last_seen"`` \| ``"low_hits"`` \| ``"moderate_hits"`` \| ``"rhel_version"`` | Order by this field |
 | `tags?` | `string`[] | Tags have a namespace, key and value in the form namespace/key&#x3D;value |
 | `updateMethod?` | (``"dnfyum"`` \| ``"ostree"``)[] | Search for systems with this updater type |
@@ -142,7 +142,7 @@ SystemApi
 
 #### Defined in
 
-[api.ts:9066](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9066)
+[api.ts:9047](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9047)
 
 ___
 
@@ -177,7 +177,7 @@ SystemApi
 
 #### Defined in
 
-[api.ts:9083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9083)
+[api.ts:9064](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9064)
 
 ___
 
@@ -213,7 +213,7 @@ SystemApi
 
 #### Defined in
 
-[api.ts:9101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9101)
+[api.ts:9082](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9082)
 
 ___
 
@@ -246,4 +246,4 @@ SystemApi
 
 #### Defined in
 
-[api.ts:9113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9113)
+[api.ts:9094](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L9094)

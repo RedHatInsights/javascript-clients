@@ -29,7 +29,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1778)
+[types/index.ts:1876](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1876)
 
 ___
 
@@ -43,7 +43,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1796)
+[types/index.ts:1894](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1894)
 
 ___
 
@@ -57,7 +57,7 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1784)
+[types/index.ts:1882](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1882)
 
 ___
 
@@ -71,4 +71,4 @@ UpdateBehaviorGroupRequest
 
 #### Defined in
 
-[packages/integrations/types/index.ts:1790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1790)
+[types/index.ts:1888](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/integrations/types/index.ts#L1888)

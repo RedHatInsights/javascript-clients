@@ -37,7 +37,7 @@ Renames and re-exports [drawerResourceV1UpdateNotificationReadStatusParamCreator
 
 #### Defined in
 
-[packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L14)
+[DrawerResourceV1UpdateNotificationReadStatus/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L14)
 
 ## Functions
 
@@ -65,4 +65,4 @@ Update drawer notifications status.
 
 #### Defined in
 
-[packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L34)
+[DrawerResourceV1UpdateNotificationReadStatus/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/notifications/DrawerResourceV1UpdateNotificationReadStatus/index.ts#L34)

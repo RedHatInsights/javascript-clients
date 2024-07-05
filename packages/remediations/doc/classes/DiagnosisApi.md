@@ -131,4 +131,4 @@ DiagnosisApi
 
 #### Defined in
 
-[api.ts:1360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1360)
+[api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/remediations/api.ts#L1430)

@@ -33,7 +33,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L785)
+[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L778)
 
 ___
 
@@ -49,7 +49,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L791)
+[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L772)
 
 ___
 
@@ -63,13 +63,13 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L797)
+[api.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L814)
 
 ___
 
 ### recent\_cves
 
-• **recent\_cves**: [`DashboardRecentCves`](DashboardRecentCves.md)
+• **recent\_cves**: [`ExecutiveReportRecentCves`](ExecutiveReportRecentCves.md)
 
 **`Memberof`**
 
@@ -77,7 +77,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L803)
+[api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L784)
 
 ___
 
@@ -91,7 +91,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L809)
+[api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L790)
 
 ___
 
@@ -107,7 +107,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L815)
+[api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L796)
 
 ___
 
@@ -123,13 +123,13 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L821)
+[api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L766)
 
 ___
 
 ### system\_count\_per\_type
 
-• `Optional` **system\_count\_per\_type**: [`ExecutiveReportSystemCountPerType`](ExecutiveReportSystemCountPerType.md)
+• `Optional` **system\_count\_per\_type**: [`MetaVulnerabilitiesOutAllOfSystemCountPerType`](MetaVulnerabilitiesOutAllOfSystemCountPerType.md)
 
 **`Memberof`**
 
@@ -137,7 +137,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L827)
+[api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L760)
 
 ___
 
@@ -151,7 +151,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L833)
+[api.ts:802](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L802)
 
 ___
 
@@ -165,4 +165,4 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:839](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L839)
+[api.ts:808](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/api.ts#L808)

@@ -26,4 +26,4 @@ Usage
 
 #### Defined in
 
-[api.ts:2325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2325)
+[api.ts:2306](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/insights/api.ts#L2306)
