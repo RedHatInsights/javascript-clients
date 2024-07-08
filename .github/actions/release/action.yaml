@@ -29,6 +29,9 @@ runs:
       run: |
         git config user.name "${{ inputs.gh_name }}"
         git config user.email "${{ inputs.gh_email }}"
+    - name: Generate clients
+      shell: bash
+      run: npm run generate
     - name: Build
       shell: bash
       run: npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client

@@ -47,7 +47,9 @@ jobs:
       - uses: './.github/actions/node-cache'
       - name: Install deps
         run: npm i
-      - name: Build affected
+      - name: Generate clients
+        run: npm run generate
+      - name: Build affected clients
         run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:
     runs-on: ubuntu-latest
