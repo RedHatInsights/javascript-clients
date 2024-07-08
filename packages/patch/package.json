@@ -7,7 +7,7 @@
   "scripts": {
     "doc": "typedoc",
     "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://cloud.redhat.com/api/patch/v1/openapi.json' npm run generate"
+    "generate:prod": "SPEC='https://cloud.redhat.com/api/patch/v3/openapi.json' npm run generate"
   },
   "publishConfig": {
     "access": "public"
