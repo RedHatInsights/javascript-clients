@@ -91,6 +91,7 @@
     "prettier": "^3.1.0",
     "react-refresh": "^0.10.0",
     "replace-json-property": "^1.9.0",
+    "request": "^2.88.2",
     "swc-loader": "^0.2.3",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
@@ -101,6 +102,7 @@
     "url-loader": "^4.1.1",
     "verdaccio": "^5.0.4",
     "webpack-merge": "^5.10.0",
+    "yaml": "^1.8.3",
     "zod": "^3.22.4"
   }
 }
