@@ -27,7 +27,7 @@ Group
 
 #### Defined in
 
-[types/index.ts:788](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L788)
+types/index.ts:788
 
 ___
 
@@ -41,4 +41,4 @@ Group
 
 #### Defined in
 
-[types/index.ts:782](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L782)
+types/index.ts:782

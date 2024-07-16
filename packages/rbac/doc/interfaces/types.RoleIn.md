@@ -29,7 +29,7 @@ RoleIn
 
 #### Defined in
 
-[types/index.ts:1629](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1629)
+types/index.ts:1629
 
 ___
 
@@ -43,7 +43,7 @@ RoleIn
 
 #### Defined in
 
-[types/index.ts:1623](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1623)
+types/index.ts:1623
 
 ___
 
@@ -57,7 +57,7 @@ RoleIn
 
 #### Defined in
 
-[types/index.ts:1617](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1617)
+types/index.ts:1617
 
 ___
 
@@ -71,4 +71,4 @@ RoleIn
 
 #### Defined in
 
-[types/index.ts:1611](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1611)
+types/index.ts:1611

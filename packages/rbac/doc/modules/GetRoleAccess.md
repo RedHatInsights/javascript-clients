@@ -39,7 +39,7 @@ Renames and re-exports [getRoleAccessParamCreator](GetRoleAccess.md#getroleacces
 
 #### Defined in
 
-[GetRoleAccess/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetRoleAccess/index.ts#L14)
+GetRoleAccess/index.ts:14
 
 ## Functions
 
@@ -65,4 +65,4 @@ Get access for a role in the tenant
 
 #### Defined in
 
-[GetRoleAccess/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetRoleAccess/index.ts#L46)
+GetRoleAccess/index.ts:46

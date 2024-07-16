@@ -57,7 +57,7 @@ Renames and re-exports [listGroupsParamCreator](ListGroups.md#listgroupsparamcre
 
 #### Defined in
 
-[ListGroups/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListGroups/index.ts#L14)
+ListGroups/index.ts:14
 
 ## Functions
 
@@ -85,4 +85,4 @@ List the groups for a tenant
 
 #### Defined in
 
-[ListGroups/index.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListGroups/index.ts#L150)
+ListGroups/index.ts:150

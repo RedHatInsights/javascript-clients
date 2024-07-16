@@ -34,7 +34,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:380](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L380)
+types/index.ts:380
 
 ___
 
@@ -48,7 +48,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:368](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L368)
+types/index.ts:368
 
 ___
 
@@ -62,7 +62,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:344](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L344)
+types/index.ts:344
 
 ___
 
@@ -76,7 +76,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:386](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L386)
+types/index.ts:386
 
 ___
 
@@ -90,7 +90,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:362](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L362)
+types/index.ts:362
 
 ___
 
@@ -104,7 +104,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:374](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L374)
+types/index.ts:374
 
 ___
 
@@ -118,7 +118,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:350](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L350)
+types/index.ts:350
 
 ___
 
@@ -132,7 +132,7 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:356](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L356)
+types/index.ts:356
 
 ___
 
@@ -146,4 +146,4 @@ CrossAccountRequestDetailByUseId
 
 #### Defined in
 
-[types/index.ts:392](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L392)
+types/index.ts:392

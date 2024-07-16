@@ -2671,6 +2671,12 @@ export interface SystemProfileThirdPartyServicesCrowdstrike {
      * @memberof SystemProfileThirdPartyServicesCrowdstrike
      */
     falcon_backend?: string;
+    /**
+     * CrowdStrike running Falcon Sensor version
+     * @type {string}
+     * @memberof SystemProfileThirdPartyServicesCrowdstrike
+     */
+    falcon_version?: string;
 }
 /**
  * Representation of one yum repository

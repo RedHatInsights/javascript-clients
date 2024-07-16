@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[GetRole/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetRole/index.ts#L34)
+GetRole/index.ts:34
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[GetRole/index.ts:35](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetRole/index.ts#L35)
+GetRole/index.ts:35

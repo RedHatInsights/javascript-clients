@@ -28,7 +28,7 @@ GroupPrincipalInPrincipalsInner
 
 #### Defined in
 
-[types/index.ts:918](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L918)
+types/index.ts:918
 
 ___
 
@@ -42,7 +42,7 @@ GroupPrincipalInPrincipalsInner
 
 #### Defined in
 
-[types/index.ts:912](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L912)
+types/index.ts:912
 
 ___
 
@@ -56,4 +56,4 @@ GroupPrincipalInPrincipalsInner
 
 #### Defined in
 
-[types/index.ts:906](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L906)
+types/index.ts:906

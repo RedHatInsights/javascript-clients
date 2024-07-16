@@ -28,4 +28,4 @@ ErrorNotFound
 
 #### Defined in
 
-[types/index.ts:738](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L738)
+types/index.ts:738

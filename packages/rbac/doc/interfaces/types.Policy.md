@@ -27,7 +27,7 @@ Policy
 
 #### Defined in
 
-[types/index.ts:1243](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1243)
+types/index.ts:1243
 
 ___
 
@@ -41,4 +41,4 @@ Policy
 
 #### Defined in
 
-[types/index.ts:1237](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1237)
+types/index.ts:1237

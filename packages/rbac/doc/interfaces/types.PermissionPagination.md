@@ -28,7 +28,7 @@ PermissionPagination
 
 #### Defined in
 
-[types/index.ts:1224](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1224)
+types/index.ts:1224
 
 ___
 
@@ -42,7 +42,7 @@ PermissionPagination
 
 #### Defined in
 
-[types/index.ts:1218](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1218)
+types/index.ts:1218
 
 ___
 
@@ -56,4 +56,4 @@ PermissionPagination
 
 #### Defined in
 
-[types/index.ts:1212](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1212)
+types/index.ts:1212

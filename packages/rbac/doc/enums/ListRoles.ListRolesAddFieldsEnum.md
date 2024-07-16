@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[ListRoles/index.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRoles/index.ts#L131)
+ListRoles/index.ts:131
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[ListRoles/index.ts:129](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRoles/index.ts#L129)
+ListRoles/index.ts:129
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[ListRoles/index.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRoles/index.ts#L130)
+ListRoles/index.ts:130

@@ -26,4 +26,4 @@ GroupRoleIn
 
 #### Defined in
 
-[types/index.ts:938](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L938)
+types/index.ts:938

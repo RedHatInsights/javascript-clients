@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[ListPrincipals/index.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L116)
+ListPrincipals/index.ts:116

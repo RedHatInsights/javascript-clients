@@ -38,7 +38,7 @@ Renames and re-exports [addPrincipalToGroupParamCreator](AddPrincipalToGroup.md#
 
 #### Defined in
 
-[AddPrincipalToGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/AddPrincipalToGroup/index.ts#L14)
+AddPrincipalToGroup/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Add a principal to a group in the tenant
 
 #### Defined in
 
-[AddPrincipalToGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/AddPrincipalToGroup/index.ts#L40)
+AddPrincipalToGroup/index.ts:40

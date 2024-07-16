@@ -72,6 +72,7 @@
 - [RolePagination](index.md#rolepagination)
 - [RolePaginationDynamic](index.md#rolepaginationdynamic)
 - [RolePatch](index.md#rolepatch)
+- [RolePut](index.md#roleput)
 - [RoleWithAccess](index.md#rolewithaccess)
 - [ServiceAccount](index.md#serviceaccount)
 - [ServiceAccountIn](index.md#serviceaccountin)
@@ -511,6 +512,12 @@ ___
 ### RolePatch
 
 Re-exports [RolePatch](../interfaces/types.RolePatch.md)
+
+___
+
+### RolePut
+
+Re-exports [RolePut](../interfaces/types.RolePut.md)
 
 ___
 

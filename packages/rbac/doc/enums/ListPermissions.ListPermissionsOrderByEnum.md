@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[ListPermissions/index.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L82)
+ListPermissions/index.ts:82
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[ListPermissions/index.ts:85](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L85)
+ListPermissions/index.ts:85
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[ListPermissions/index.ts:83](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L83)
+ListPermissions/index.ts:83
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[ListPermissions/index.ts:84](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L84)
+ListPermissions/index.ts:84

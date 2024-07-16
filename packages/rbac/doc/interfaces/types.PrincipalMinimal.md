@@ -26,4 +26,4 @@ PrincipalMinimal
 
 #### Defined in
 
-[types/index.ts:1429](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1429)
+types/index.ts:1429

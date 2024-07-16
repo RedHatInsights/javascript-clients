@@ -45,7 +45,7 @@ Renames and re-exports [getCrossAccountRequestParamCreator](GetCrossAccountReque
 
 #### Defined in
 
-[GetCrossAccountRequest/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetCrossAccountRequest/index.ts#L14)
+GetCrossAccountRequest/index.ts:14
 
 ## Functions
 
@@ -71,4 +71,4 @@ Get a cross account request
 
 #### Defined in
 
-[GetCrossAccountRequest/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetCrossAccountRequest/index.ts#L69)
+GetCrossAccountRequest/index.ts:69

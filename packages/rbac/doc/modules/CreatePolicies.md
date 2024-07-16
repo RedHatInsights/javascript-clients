@@ -37,7 +37,7 @@ Renames and re-exports [createPoliciesParamCreator](CreatePolicies.md#createpoli
 
 #### Defined in
 
-[CreatePolicies/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreatePolicies/index.ts#L14)
+CreatePolicies/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Create a policy in a tenant
 
 #### Defined in
 
-[CreatePolicies/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreatePolicies/index.ts#L34)
+CreatePolicies/index.ts:34

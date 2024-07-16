@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[ListGroups/index.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListGroups/index.ts#L107)
+ListGroups/index.ts:107
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[ListGroups/index.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListGroups/index.ts#L106)
+ListGroups/index.ts:106

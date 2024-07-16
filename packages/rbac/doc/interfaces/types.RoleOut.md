@@ -39,7 +39,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1684](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1684)
+types/index.ts:1684
 
 ___
 
@@ -53,7 +53,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1708](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1708)
+types/index.ts:1708
 
 ___
 
@@ -67,7 +67,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1690](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1690)
+types/index.ts:1690
 
 ___
 
@@ -81,7 +81,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1666](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1666)
+types/index.ts:1666
 
 ___
 
@@ -95,7 +95,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1654](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1654)
+types/index.ts:1654
 
 ___
 
@@ -109,7 +109,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1648](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1648)
+types/index.ts:1648
 
 ___
 
@@ -123,7 +123,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1714](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1714)
+types/index.ts:1714
 
 ___
 
@@ -137,7 +137,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1720)
+types/index.ts:1720
 
 ___
 
@@ -151,7 +151,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1672](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1672)
+types/index.ts:1672
 
 ___
 
@@ -165,7 +165,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1642)
+types/index.ts:1642
 
 ___
 
@@ -179,7 +179,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1702](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1702)
+types/index.ts:1702
 
 ___
 
@@ -193,7 +193,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1678](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1678)
+types/index.ts:1678
 
 ___
 
@@ -207,7 +207,7 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1696](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1696)
+types/index.ts:1696
 
 ___
 
@@ -221,4 +221,4 @@ RoleOut
 
 #### Defined in
 
-[types/index.ts:1660](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1660)
+types/index.ts:1660

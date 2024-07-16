@@ -33,7 +33,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1448)
+types/index.ts:1448
 
 ___
 
@@ -47,7 +47,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1478)
+types/index.ts:1478
 
 ___
 
@@ -61,7 +61,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1454](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1454)
+types/index.ts:1454
 
 ___
 
@@ -75,7 +75,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1466)
+types/index.ts:1466
 
 ___
 
@@ -89,7 +89,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1472)
+types/index.ts:1472
 
 ___
 
@@ -103,7 +103,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1460)
+types/index.ts:1460
 
 ___
 
@@ -117,7 +117,7 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1442)
+types/index.ts:1442
 
 ___
 
@@ -131,4 +131,4 @@ PrincipalOut
 
 #### Defined in
 
-[types/index.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1484)
+types/index.ts:1484

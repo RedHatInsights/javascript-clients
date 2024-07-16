@@ -26,4 +26,4 @@ ResourceDefinition
 
 #### Defined in
 
-[types/index.ts:1528](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1528)
+types/index.ts:1528

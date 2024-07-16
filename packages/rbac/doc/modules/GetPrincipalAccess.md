@@ -47,7 +47,7 @@ Renames and re-exports [getPrincipalAccessParamCreator](GetPrincipalAccess.md#ge
 
 #### Defined in
 
-[GetPrincipalAccess/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalAccess/index.ts#L14)
+GetPrincipalAccess/index.ts:14
 
 ## Functions
 
@@ -75,4 +75,4 @@ Get the permitted access for a principal in the tenant (defaults to principal fr
 
 #### Defined in
 
-[GetPrincipalAccess/index.ts:84](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalAccess/index.ts#L84)
+GetPrincipalAccess/index.ts:84

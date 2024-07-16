@@ -30,7 +30,7 @@ Permission
 
 #### Defined in
 
-[types/index.ts:1150](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1150)
+types/index.ts:1150
 
 ___
 
@@ -44,7 +44,7 @@ Permission
 
 #### Defined in
 
-[types/index.ts:1174](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1174)
+types/index.ts:1174
 
 ___
 
@@ -58,7 +58,7 @@ Permission
 
 #### Defined in
 
-[types/index.ts:1168](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1168)
+types/index.ts:1168
 
 ___
 
@@ -72,7 +72,7 @@ Permission
 
 #### Defined in
 
-[types/index.ts:1156](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1156)
+types/index.ts:1156
 
 ___
 
@@ -86,4 +86,4 @@ Permission
 
 #### Defined in
 
-[types/index.ts:1162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1162)
+types/index.ts:1162

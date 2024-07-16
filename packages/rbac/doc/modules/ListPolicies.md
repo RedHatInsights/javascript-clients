@@ -48,7 +48,7 @@ Renames and re-exports [listPoliciesParamCreator](ListPolicies.md#listpoliciespa
 
 #### Defined in
 
-[ListPolicies/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPolicies/index.ts#L14)
+ListPolicies/index.ts:14
 
 ## Functions
 
@@ -76,4 +76,4 @@ List the policies in the tenant
 
 #### Defined in
 
-[ListPolicies/index.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPolicies/index.ts#L88)
+ListPolicies/index.ts:88

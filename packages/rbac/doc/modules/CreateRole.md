@@ -37,7 +37,7 @@ Renames and re-exports [createRoleParamCreator](CreateRole.md#createroleparamcre
 
 #### Defined in
 
-[CreateRole/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreateRole/index.ts#L14)
+CreateRole/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Create a role for a tenant
 
 #### Defined in
 
-[CreateRole/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreateRole/index.ts#L34)
+CreateRole/index.ts:34

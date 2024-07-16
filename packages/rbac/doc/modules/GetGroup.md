@@ -37,7 +37,7 @@ Renames and re-exports [getGroupParamCreator](GetGroup.md#getgroupparamcreator)
 
 #### Defined in
 
-[GetGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetGroup/index.ts#L14)
+GetGroup/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Get a group in the tenant
 
 #### Defined in
 
-[GetGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetGroup/index.ts#L34)
+GetGroup/index.ts:34

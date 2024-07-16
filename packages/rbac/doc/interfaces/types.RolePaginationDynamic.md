@@ -28,7 +28,7 @@ RolePaginationDynamic
 
 #### Defined in
 
-[types/index.ts:1879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1879)
+types/index.ts:1879
 
 ___
 
@@ -42,7 +42,7 @@ RolePaginationDynamic
 
 #### Defined in
 
-[types/index.ts:1873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1873)
+types/index.ts:1873
 
 ___
 
@@ -56,4 +56,4 @@ RolePaginationDynamic
 
 #### Defined in
 
-[types/index.ts:1867](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1867)
+types/index.ts:1867

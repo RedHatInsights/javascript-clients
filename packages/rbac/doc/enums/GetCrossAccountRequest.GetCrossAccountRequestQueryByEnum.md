@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[GetCrossAccountRequest/index.ts:47](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetCrossAccountRequest/index.ts#L47)
+GetCrossAccountRequest/index.ts:47
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[GetCrossAccountRequest/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetCrossAccountRequest/index.ts#L46)
+GetCrossAccountRequest/index.ts:46

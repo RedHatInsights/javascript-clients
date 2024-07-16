@@ -32,7 +32,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1037](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1037)
+types/index.ts:1037
 
 ___
 
@@ -46,7 +46,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1025](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1025)
+types/index.ts:1025
 
 ___
 
@@ -60,7 +60,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1043](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1043)
+types/index.ts:1043
 
 ___
 
@@ -74,7 +74,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1019](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1019)
+types/index.ts:1019
 
 ___
 
@@ -88,7 +88,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1049](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1049)
+types/index.ts:1049
 
 ___
 
@@ -102,7 +102,7 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1055](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1055)
+types/index.ts:1055
 
 ___
 
@@ -116,4 +116,4 @@ GroupWithPrincipalsAndRoles
 
 #### Defined in
 
-[types/index.ts:1031](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1031)
+types/index.ts:1031

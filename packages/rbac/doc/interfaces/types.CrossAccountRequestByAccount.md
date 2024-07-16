@@ -35,7 +35,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:167](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L167)
+types/index.ts:167
 
 ___
 
@@ -49,7 +49,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:197](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L197)
+types/index.ts:197
 
 ___
 
@@ -63,7 +63,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:179](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L179)
+types/index.ts:179
 
 ___
 
@@ -77,7 +77,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:185](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L185)
+types/index.ts:185
 
 ___
 
@@ -91,7 +91,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:191](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L191)
+types/index.ts:191
 
 ___
 
@@ -105,7 +105,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L143)
+types/index.ts:143
 
 ___
 
@@ -119,7 +119,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:173](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L173)
+types/index.ts:173
 
 ___
 
@@ -133,7 +133,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:161](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L161)
+types/index.ts:161
 
 ___
 
@@ -147,7 +147,7 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L149)
+types/index.ts:149
 
 ___
 
@@ -161,4 +161,4 @@ CrossAccountRequestByAccount
 
 #### Defined in
 
-[types/index.ts:155](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L155)
+types/index.ts:155

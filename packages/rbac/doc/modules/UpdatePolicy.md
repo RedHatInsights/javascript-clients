@@ -38,7 +38,7 @@ Renames and re-exports [updatePolicyParamCreator](UpdatePolicy.md#updatepolicypa
 
 #### Defined in
 
-[UpdatePolicy/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdatePolicy/index.ts#L14)
+UpdatePolicy/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Update a policy in the tenant
 
 #### Defined in
 
-[UpdatePolicy/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdatePolicy/index.ts#L40)
+UpdatePolicy/index.ts:40

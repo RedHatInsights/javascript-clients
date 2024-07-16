@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[ListPolicies/index.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPolicies/index.ts#L74)
+ListPolicies/index.ts:74
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[ListPolicies/index.ts:73](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPolicies/index.ts#L73)
+ListPolicies/index.ts:73

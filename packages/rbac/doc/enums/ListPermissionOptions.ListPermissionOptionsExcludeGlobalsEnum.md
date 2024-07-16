@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L81)
+ListPermissionOptions/index.ts:81
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:80](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L80)
+ListPermissionOptions/index.ts:80

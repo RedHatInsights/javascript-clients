@@ -40,7 +40,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:2001](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2001)
+types/index.ts:2032
 
 ___
 
@@ -54,7 +54,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1959](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1959)
+types/index.ts:1990
 
 ___
 
@@ -68,7 +68,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1983](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1983)
+types/index.ts:2014
 
 ___
 
@@ -82,7 +82,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1965](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1965)
+types/index.ts:1996
 
 ___
 
@@ -96,7 +96,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1941](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1941)
+types/index.ts:1972
 
 ___
 
@@ -110,7 +110,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1929](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1929)
+types/index.ts:1960
 
 ___
 
@@ -124,7 +124,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1923](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1923)
+types/index.ts:1954
 
 ___
 
@@ -138,7 +138,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1989](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1989)
+types/index.ts:2020
 
 ___
 
@@ -152,7 +152,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1995](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1995)
+types/index.ts:2026
 
 ___
 
@@ -166,7 +166,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1947](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1947)
+types/index.ts:1978
 
 ___
 
@@ -180,7 +180,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1917](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1917)
+types/index.ts:1948
 
 ___
 
@@ -194,7 +194,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1977](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1977)
+types/index.ts:2008
 
 ___
 
@@ -208,7 +208,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1953](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1953)
+types/index.ts:1984
 
 ___
 
@@ -222,7 +222,7 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1971](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1971)
+types/index.ts:2002
 
 ___
 
@@ -236,4 +236,4 @@ RoleWithAccess
 
 #### Defined in
 
-[types/index.ts:1935](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1935)
+types/index.ts:1966

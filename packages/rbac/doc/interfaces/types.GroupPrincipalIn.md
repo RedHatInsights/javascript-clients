@@ -26,4 +26,4 @@ GroupPrincipalIn
 
 #### Defined in
 
-[types/index.ts:893](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L893)
+types/index.ts:893

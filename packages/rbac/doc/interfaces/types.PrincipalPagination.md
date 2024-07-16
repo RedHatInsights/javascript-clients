@@ -28,7 +28,7 @@ PrincipalPagination
 
 #### Defined in
 
-[types/index.ts:1509](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1509)
+types/index.ts:1509
 
 ___
 
@@ -42,7 +42,7 @@ PrincipalPagination
 
 #### Defined in
 
-[types/index.ts:1503](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1503)
+types/index.ts:1503
 
 ___
 
@@ -56,4 +56,4 @@ PrincipalPagination
 
 #### Defined in
 
-[types/index.ts:1497](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1497)
+types/index.ts:1497

@@ -50,7 +50,7 @@ Renames and re-exports [listRolesForGroupParamCreator](ListRolesForGroup.md#list
 
 #### Defined in
 
-[ListRolesForGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRolesForGroup/index.ts#L14)
+ListRolesForGroup/index.ts:14
 
 ## Functions
 
@@ -78,4 +78,4 @@ List the roles for a group in the tenant
 
 #### Defined in
 
-[ListRolesForGroup/index.ts:99](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRolesForGroup/index.ts#L99)
+ListRolesForGroup/index.ts:99

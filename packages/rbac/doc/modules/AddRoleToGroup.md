@@ -38,7 +38,7 @@ Renames and re-exports [addRoleToGroupParamCreator](AddRoleToGroup.md#addroletog
 
 #### Defined in
 
-[AddRoleToGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/AddRoleToGroup/index.ts#L14)
+AddRoleToGroup/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Add a role to a group in the tenant
 
 #### Defined in
 
-[AddRoleToGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/AddRoleToGroup/index.ts#L40)
+AddRoleToGroup/index.ts:40

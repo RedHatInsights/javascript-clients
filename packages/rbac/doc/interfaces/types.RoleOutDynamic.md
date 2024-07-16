@@ -42,7 +42,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1829](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1829)
+types/index.ts:1829
 
 ___
 
@@ -56,7 +56,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1775](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1775)
+types/index.ts:1775
 
 ___
 
@@ -70,7 +70,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1799](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1799)
+types/index.ts:1799
 
 ___
 
@@ -84,7 +84,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1781](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1781)
+types/index.ts:1781
 
 ___
 
@@ -98,7 +98,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1757](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1757)
+types/index.ts:1757
 
 ___
 
@@ -112,7 +112,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1745)
+types/index.ts:1745
 
 ___
 
@@ -126,7 +126,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1739](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1739)
+types/index.ts:1739
 
 ___
 
@@ -140,7 +140,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1817](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1817)
+types/index.ts:1817
 
 ___
 
@@ -154,7 +154,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1823](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1823)
+types/index.ts:1823
 
 ___
 
@@ -168,7 +168,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1811](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1811)
+types/index.ts:1811
 
 ___
 
@@ -182,7 +182,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1805](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1805)
+types/index.ts:1805
 
 ___
 
@@ -196,7 +196,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1763](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1763)
+types/index.ts:1763
 
 ___
 
@@ -210,7 +210,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1733)
+types/index.ts:1733
 
 ___
 
@@ -224,7 +224,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1793](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1793)
+types/index.ts:1793
 
 ___
 
@@ -238,7 +238,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1769](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1769)
+types/index.ts:1769
 
 ___
 
@@ -252,7 +252,7 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1787](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1787)
+types/index.ts:1787
 
 ___
 
@@ -266,4 +266,4 @@ RoleOutDynamic
 
 #### Defined in
 
-[types/index.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1751)
+types/index.ts:1751

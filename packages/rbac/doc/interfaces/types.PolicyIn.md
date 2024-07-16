@@ -29,7 +29,7 @@ PolicyIn
 
 #### Defined in
 
-[types/index.ts:1311](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1311)
+types/index.ts:1311
 
 ___
 
@@ -43,7 +43,7 @@ PolicyIn
 
 #### Defined in
 
-[types/index.ts:1317](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1317)
+types/index.ts:1317
 
 ___
 
@@ -57,7 +57,7 @@ PolicyIn
 
 #### Defined in
 
-[types/index.ts:1305](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1305)
+types/index.ts:1305
 
 ___
 
@@ -71,4 +71,4 @@ PolicyIn
 
 #### Defined in
 
-[types/index.ts:1323](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1323)
+types/index.ts:1323

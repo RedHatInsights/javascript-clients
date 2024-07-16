@@ -51,7 +51,7 @@ Renames and re-exports [listCrossAccountRequestsParamCreator](ListCrossAccountRe
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L14)
+ListCrossAccountRequests/index.ts:14
 
 ## Functions
 
@@ -79,4 +79,4 @@ List the cross account requests for a user or account
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L118)
+ListCrossAccountRequests/index.ts:118

@@ -39,7 +39,7 @@ Renames and re-exports [deletePrincipalFromGroupParamCreator](DeletePrincipalFro
 
 #### Defined in
 
-[DeletePrincipalFromGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeletePrincipalFromGroup/index.ts#L14)
+DeletePrincipalFromGroup/index.ts:14
 
 ## Functions
 
@@ -65,4 +65,4 @@ Remove a principal from a group in the tenant
 
 #### Defined in
 
-[DeletePrincipalFromGroup/index.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeletePrincipalFromGroup/index.ts#L46)
+DeletePrincipalFromGroup/index.ts:46

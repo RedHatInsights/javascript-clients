@@ -52,7 +52,7 @@ Renames and re-exports [listPermissionsParamCreator](ListPermissions.md#listperm
 
 #### Defined in
 
-[ListPermissions/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L14)
+ListPermissions/index.ts:14
 
 ## Functions
 
@@ -80,4 +80,4 @@ List the permissions for a tenant
 
 #### Defined in
 
-[ListPermissions/index.ts:117](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissions/index.ts#L117)
+ListPermissions/index.ts:117

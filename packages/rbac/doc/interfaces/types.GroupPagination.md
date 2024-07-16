@@ -28,7 +28,7 @@ GroupPagination
 
 #### Defined in
 
-[types/index.ts:880](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L880)
+types/index.ts:880
 
 ___
 
@@ -42,7 +42,7 @@ GroupPagination
 
 #### Defined in
 
-[types/index.ts:874](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L874)
+types/index.ts:874
 
 ___
 
@@ -56,4 +56,4 @@ GroupPagination
 
 #### Defined in
 
-[types/index.ts:868](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L868)
+types/index.ts:868

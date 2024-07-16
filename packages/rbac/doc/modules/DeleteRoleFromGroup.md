@@ -38,7 +38,7 @@ Renames and re-exports [deleteRoleFromGroupParamCreator](DeleteRoleFromGroup.md#
 
 #### Defined in
 
-[DeleteRoleFromGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteRoleFromGroup/index.ts#L14)
+DeleteRoleFromGroup/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Remove a role from a group in the tenant
 
 #### Defined in
 
-[DeleteRoleFromGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteRoleFromGroup/index.ts#L40)
+DeleteRoleFromGroup/index.ts:40

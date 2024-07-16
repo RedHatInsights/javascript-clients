@@ -28,7 +28,7 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[types/index.ts:1541](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1541)
+types/index.ts:1541
 
 ___
 
@@ -42,7 +42,7 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[types/index.ts:1547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1547)
+types/index.ts:1547
 
 ___
 
@@ -56,4 +56,4 @@ ResourceDefinitionFilter
 
 #### Defined in
 
-[types/index.ts:1553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1553)
+types/index.ts:1553

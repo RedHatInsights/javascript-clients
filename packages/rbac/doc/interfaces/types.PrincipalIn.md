@@ -26,4 +26,4 @@ PrincipalIn
 
 #### Defined in
 
-[types/index.ts:1416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1416)
+types/index.ts:1416

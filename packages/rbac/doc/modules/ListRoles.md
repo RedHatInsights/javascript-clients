@@ -56,7 +56,7 @@ Renames and re-exports [listRolesParamCreator](ListRoles.md#listrolesparamcreato
 
 #### Defined in
 
-[ListRoles/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRoles/index.ts#L14)
+ListRoles/index.ts:14
 
 ## Functions
 
@@ -84,4 +84,4 @@ List the roles for a tenant
 
 #### Defined in
 
-[ListRoles/index.ts:145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListRoles/index.ts#L145)
+ListRoles/index.ts:145

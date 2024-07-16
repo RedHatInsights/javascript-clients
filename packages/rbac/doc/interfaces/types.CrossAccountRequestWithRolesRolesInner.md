@@ -28,7 +28,7 @@ CrossAccountRequestWithRolesRolesInner
 
 #### Defined in
 
-[types/index.ts:662](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L662)
+types/index.ts:662
 
 ___
 
@@ -42,7 +42,7 @@ CrossAccountRequestWithRolesRolesInner
 
 #### Defined in
 
-[types/index.ts:656](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L656)
+types/index.ts:656
 
 ___
 
@@ -56,4 +56,4 @@ CrossAccountRequestWithRolesRolesInner
 
 #### Defined in
 
-[types/index.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L668)
+types/index.ts:668

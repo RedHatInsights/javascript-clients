@@ -28,7 +28,7 @@ AdditionalGroup
 
 #### Defined in
 
-[types/index.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L75)
+types/index.ts:75
 
 ___
 
@@ -42,7 +42,7 @@ AdditionalGroup
 
 #### Defined in
 
-[types/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L69)
+types/index.ts:69
 
 ___
 
@@ -56,4 +56,4 @@ AdditionalGroup
 
 #### Defined in
 
-[types/index.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L81)
+types/index.ts:81

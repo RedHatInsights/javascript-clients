@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L70)
+ListPermissionOptions/index.ts:70
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L71)
+ListPermissionOptions/index.ts:71
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:72](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L72)
+ListPermissionOptions/index.ts:72

@@ -26,4 +26,4 @@ Error403
 
 #### Defined in
 
-[types/index.ts:681](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L681)
+types/index.ts:681

@@ -28,7 +28,7 @@ PolicyPagination
 
 #### Defined in
 
-[types/index.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1348)
+types/index.ts:1348
 
 ___
 
@@ -42,7 +42,7 @@ PolicyPagination
 
 #### Defined in
 
-[types/index.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1342)
+types/index.ts:1342
 
 ___
 
@@ -56,4 +56,4 @@ PolicyPagination
 
 #### Defined in
 
-[types/index.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1336)
+types/index.ts:1336

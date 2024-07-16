@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[GetPrincipalsFromGroup/index.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalsFromGroup/index.ts#L88)
+GetPrincipalsFromGroup/index.ts:88

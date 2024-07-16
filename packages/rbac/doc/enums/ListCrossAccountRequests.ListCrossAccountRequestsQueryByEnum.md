@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:71](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L71)
+ListCrossAccountRequests/index.ts:71
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L70)
+ListCrossAccountRequests/index.ts:70

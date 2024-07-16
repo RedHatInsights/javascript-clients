@@ -8,49 +8,41 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RoleWithAccess } from '../types';
+import type { PolicyExtended } from '../types';
 
 
-export type UpdateRoleParams = {
+export type GetPolicyParams = {
   /**
-  * ID of role to update
+  * ID of policy to get
   * @type { string }
-  * @memberof UpdateRoleApi
+  * @memberof GetPolicyApi
   */
   uuid: string,
-  /**
-  * Update to a role
-  * @type { RoleWithAccess }
-  * @memberof UpdateRoleApi
-  */
-  roleWithAccess: RoleWithAccess,
   options?: AxiosRequestConfig
 }
 
-const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'roleWithAccess')
+const isGetPolicyObjectParams = (params: [GetPolicyParams] | unknown[]): params is [GetPolicyParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
 *
-* @summary Update a role in the tenant
-* @param {UpdateRoleParams} config with all available params.
+* @summary Get a policy in the tenant
+* @param {GetPolicyParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RoleWithAccess, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'roleWithAccess', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
-    const { uuid, roleWithAccess, options = {} } = params;
-    const localVarPath = `/roles/{uuid}/`
+export const getPolicyParamCreator = async (...config: ([GetPolicyParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isGetPolicyObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPolicyParams;
+    const { uuid, options = {} } = params;
+    const localVarPath = `/policies/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
 
-
-    localVarHeaderParameter['Content-Type'] = 'application/json';
 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
@@ -58,7 +50,6 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: roleWithAccess,
         auth:[
         {
         // authentication basic_auth required
@@ -69,4 +60,4 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     };
 }
 
-export default updateRoleParamCreator;
+export default getPolicyParamCreator;

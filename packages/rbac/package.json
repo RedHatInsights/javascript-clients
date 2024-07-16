@@ -19,7 +19,7 @@
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
     "doc": "typedoc",
-    "generate:v1": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i 'https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' --custom-generator=../../target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation -o ./v1/ --skip-validate-spec --enable-post-process-file",
+    "generate:v1": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i 'https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' --custom-generator=../../target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation -o ./ --skip-validate-spec --enable-post-process-file",
     "generate:v2": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i 'https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json' --custom-generator=../../target/typescript-axios-webpack-module-federation-openapi-generator-1.0.0.jar -g typescript-axios-webpack-module-federation -o ./v2/ --skip-validate-spec --enable-post-process-file",
     "generate:prod": "npm run generate:v1 && npm run generate:v2"
   },

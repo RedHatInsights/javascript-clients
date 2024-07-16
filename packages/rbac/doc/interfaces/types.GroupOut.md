@@ -35,7 +35,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:855](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L855)
+types/index.ts:855
 
 ___
 
@@ -49,7 +49,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:819](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L819)
+types/index.ts:819
 
 ___
 
@@ -63,7 +63,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:807](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L807)
+types/index.ts:807
 
 ___
 
@@ -77,7 +77,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:825](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L825)
+types/index.ts:825
 
 ___
 
@@ -91,7 +91,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:801](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L801)
+types/index.ts:801
 
 ___
 
@@ -105,7 +105,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:849](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L849)
+types/index.ts:849
 
 ___
 
@@ -119,7 +119,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:831](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L831)
+types/index.ts:831
 
 ___
 
@@ -133,7 +133,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:837](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L837)
+types/index.ts:837
 
 ___
 
@@ -147,7 +147,7 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:843](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L843)
+types/index.ts:843
 
 ___
 
@@ -161,4 +161,4 @@ GroupOut
 
 #### Defined in
 
-[types/index.ts:813](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L813)
+types/index.ts:813

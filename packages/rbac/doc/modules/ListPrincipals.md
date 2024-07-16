@@ -55,7 +55,7 @@ Renames and re-exports [listPrincipalsParamCreator](ListPrincipals.md#listprinci
 
 #### Defined in
 
-[ListPrincipals/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L14)
+ListPrincipals/index.ts:14
 
 ## Functions
 
@@ -83,4 +83,4 @@ List the principals for a tenant
 
 #### Defined in
 
-[ListPrincipals/index.ts:139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L139)
+ListPrincipals/index.ts:139

@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[GetPrincipalsFromGroup/index.ts:96](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalsFromGroup/index.ts#L96)
+GetPrincipalsFromGroup/index.ts:96
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[GetPrincipalsFromGroup/index.ts:97](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalsFromGroup/index.ts#L97)
+GetPrincipalsFromGroup/index.ts:97

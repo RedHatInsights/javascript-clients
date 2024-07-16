@@ -27,7 +27,7 @@ Status
 
 #### Defined in
 
-[types/index.ts:2146](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2146)
+types/index.ts:2177
 
 ___
 
@@ -41,4 +41,4 @@ Status
 
 #### Defined in
 
-[types/index.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2152)
+types/index.ts:2183

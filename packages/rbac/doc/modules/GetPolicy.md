@@ -37,7 +37,7 @@ Renames and re-exports [getPolicyParamCreator](GetPolicy.md#getpolicyparamcreato
 
 #### Defined in
 
-[GetPolicy/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPolicy/index.ts#L14)
+GetPolicy/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Get a policy in the tenant
 
 #### Defined in
 
-[GetPolicy/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPolicy/index.ts#L34)
+GetPolicy/index.ts:34

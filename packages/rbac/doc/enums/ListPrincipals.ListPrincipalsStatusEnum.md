@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[ListPrincipals/index.ts:108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L108)
+ListPrincipals/index.ts:108
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[ListPrincipals/index.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L107)
+ListPrincipals/index.ts:107
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[ListPrincipals/index.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L106)
+ListPrincipals/index.ts:106

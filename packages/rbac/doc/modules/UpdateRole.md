@@ -33,12 +33,12 @@ Renames and re-exports [updateRoleParamCreator](UpdateRole.md#updateroleparamcre
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `options?` | `AxiosRequestConfig` | - |
-| `roleWithAccess` | [`RoleWithAccess`](../interfaces/types.RoleWithAccess.md) | Update to a role **`Memberof`** UpdateRoleApi |
+| `rolePut` | [`RolePut`](../interfaces/types.RolePut.md) | Update to a role **`Memberof`** UpdateRoleApi |
 | `uuid` | `string` | ID of role to update **`Memberof`** UpdateRoleApi |
 
 #### Defined in
 
-[UpdateRole/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdateRole/index.ts#L14)
+UpdateRole/index.ts:14
 
 ## Functions
 
@@ -50,7 +50,7 @@ Renames and re-exports [updateRoleParamCreator](UpdateRole.md#updateroleparamcre
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...config` | [[`UpdateRoleParams`](UpdateRole.md#updateroleparams)] \| [`string`, [`RoleWithAccess`](../interfaces/types.RoleWithAccess.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+| `...config` | [[`UpdateRoleParams`](UpdateRole.md#updateroleparams)] \| [`string`, [`RolePut`](../interfaces/types.RolePut.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
@@ -64,4 +64,4 @@ Update a role in the tenant
 
 #### Defined in
 
-[UpdateRole/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdateRole/index.ts#L40)
+UpdateRole/index.ts:40

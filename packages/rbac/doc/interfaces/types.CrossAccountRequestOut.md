@@ -34,7 +34,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L478)
+types/index.ts:478
 
 ___
 
@@ -48,7 +48,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L466)
+types/index.ts:466
 
 ___
 
@@ -62,7 +62,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L442)
+types/index.ts:442
 
 ___
 
@@ -76,7 +76,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L484)
+types/index.ts:484
 
 ___
 
@@ -90,7 +90,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L460)
+types/index.ts:460
 
 ___
 
@@ -104,7 +104,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L472)
+types/index.ts:472
 
 ___
 
@@ -118,7 +118,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:448](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L448)
+types/index.ts:448
 
 ___
 
@@ -132,7 +132,7 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:454](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L454)
+types/index.ts:454
 
 ___
 
@@ -146,4 +146,4 @@ CrossAccountRequestOut
 
 #### Defined in
 
-[types/index.ts:490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L490)
+types/index.ts:490

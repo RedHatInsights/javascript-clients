@@ -27,7 +27,7 @@ Access
 
 #### Defined in
 
-[types/index.ts:12](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L12)
+types/index.ts:12
 
 ___
 
@@ -41,4 +41,4 @@ Access
 
 #### Defined in
 
-[types/index.ts:18](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L18)
+types/index.ts:18

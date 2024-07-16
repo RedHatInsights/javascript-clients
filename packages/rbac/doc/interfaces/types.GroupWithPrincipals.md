@@ -31,7 +31,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:994](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L994)
+types/index.ts:994
 
 ___
 
@@ -45,7 +45,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:982](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L982)
+types/index.ts:982
 
 ___
 
@@ -59,7 +59,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:1000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1000)
+types/index.ts:1000
 
 ___
 
@@ -73,7 +73,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:976](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L976)
+types/index.ts:976
 
 ___
 
@@ -87,7 +87,7 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:1006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1006)
+types/index.ts:1006
 
 ___
 
@@ -101,4 +101,4 @@ GroupWithPrincipals
 
 #### Defined in
 
-[types/index.ts:988](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L988)
+types/index.ts:988

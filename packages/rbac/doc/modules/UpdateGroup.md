@@ -38,7 +38,7 @@ Renames and re-exports [updateGroupParamCreator](UpdateGroup.md#updategroupparam
 
 #### Defined in
 
-[UpdateGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdateGroup/index.ts#L14)
+UpdateGroup/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Update a group in the tenant
 
 #### Defined in
 
-[UpdateGroup/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/UpdateGroup/index.ts#L40)
+UpdateGroup/index.ts:40

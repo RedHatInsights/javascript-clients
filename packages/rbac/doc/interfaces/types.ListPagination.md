@@ -27,7 +27,7 @@ ListPagination
 
 #### Defined in
 
-[types/index.ts:1074](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1074)
+types/index.ts:1074
 
 ___
 
@@ -41,4 +41,4 @@ ListPagination
 
 #### Defined in
 
-[types/index.ts:1068](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1068)
+types/index.ts:1068

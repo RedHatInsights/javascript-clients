@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L79)
+ListCrossAccountRequests/index.ts:79

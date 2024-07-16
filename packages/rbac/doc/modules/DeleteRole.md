@@ -37,7 +37,7 @@ Renames and re-exports [deleteRoleParamCreator](DeleteRole.md#deleteroleparamcre
 
 #### Defined in
 
-[DeleteRole/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteRole/index.ts#L14)
+DeleteRole/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Delete a role in the tenant
 
 #### Defined in
 
-[DeleteRole/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteRole/index.ts#L34)
+DeleteRole/index.ts:34

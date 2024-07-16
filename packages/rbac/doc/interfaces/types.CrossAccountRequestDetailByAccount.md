@@ -36,7 +36,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:307](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L307)
+types/index.ts:307
 
 ___
 
@@ -50,7 +50,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:331](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L331)
+types/index.ts:331
 
 ___
 
@@ -64,7 +64,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L295)
+types/index.ts:295
 
 ___
 
@@ -78,7 +78,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:319](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L319)
+types/index.ts:319
 
 ___
 
@@ -92,7 +92,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L325)
+types/index.ts:325
 
 ___
 
@@ -106,7 +106,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L271)
+types/index.ts:271
 
 ___
 
@@ -120,7 +120,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:313](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L313)
+types/index.ts:313
 
 ___
 
@@ -134,7 +134,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L289)
+types/index.ts:289
 
 ___
 
@@ -148,7 +148,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L301)
+types/index.ts:301
 
 ___
 
@@ -162,7 +162,7 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L277)
+types/index.ts:277
 
 ___
 
@@ -176,4 +176,4 @@ CrossAccountRequestDetailByAccount
 
 #### Defined in
 
-[types/index.ts:283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L283)
+types/index.ts:283

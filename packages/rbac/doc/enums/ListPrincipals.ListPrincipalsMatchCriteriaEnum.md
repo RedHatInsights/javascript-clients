@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[ListPrincipals/index.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L89)
+ListPrincipals/index.ts:89
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[ListPrincipals/index.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPrincipals/index.ts#L88)
+ListPrincipals/index.ts:88

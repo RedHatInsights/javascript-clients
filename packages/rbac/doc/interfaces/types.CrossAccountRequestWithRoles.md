@@ -33,7 +33,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L637)
+types/index.ts:637
 
 ___
 
@@ -47,7 +47,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L625)
+types/index.ts:625
 
 ___
 
@@ -61,7 +61,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L601)
+types/index.ts:601
 
 ___
 
@@ -75,7 +75,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L643)
+types/index.ts:643
 
 ___
 
@@ -89,7 +89,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L619)
+types/index.ts:619
 
 ___
 
@@ -103,7 +103,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L631)
+types/index.ts:631
 
 ___
 
@@ -117,7 +117,7 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L607)
+types/index.ts:607
 
 ___
 
@@ -131,4 +131,4 @@ CrossAccountRequestWithRoles
 
 #### Defined in
 
-[types/index.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L613)
+types/index.ts:613

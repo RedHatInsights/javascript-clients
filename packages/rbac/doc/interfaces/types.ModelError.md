@@ -26,4 +26,4 @@ ModelError
 
 #### Defined in
 
-[types/index.ts:1093](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1093)
+types/index.ts:1093

@@ -28,7 +28,7 @@ RolePatch
 
 #### Defined in
 
-[types/index.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1904)
+types/index.ts:1904
 
 ___
 
@@ -42,7 +42,7 @@ RolePatch
 
 #### Defined in
 
-[types/index.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1898)
+types/index.ts:1898
 
 ___
 
@@ -56,4 +56,4 @@ RolePatch
 
 #### Defined in
 
-[types/index.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1892)
+types/index.ts:1892

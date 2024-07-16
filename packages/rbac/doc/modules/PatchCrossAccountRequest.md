@@ -38,7 +38,7 @@ Renames and re-exports [patchCrossAccountRequestParamCreator](PatchCrossAccountR
 
 #### Defined in
 
-[PatchCrossAccountRequest/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/PatchCrossAccountRequest/index.ts#L14)
+PatchCrossAccountRequest/index.ts:14
 
 ## Functions
 
@@ -66,4 +66,4 @@ Patch a cross account request
 
 #### Defined in
 
-[PatchCrossAccountRequest/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/PatchCrossAccountRequest/index.ts#L40)
+PatchCrossAccountRequest/index.ts:40

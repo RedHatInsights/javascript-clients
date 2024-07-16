@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[GetPrincipalAccess/index.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalAccess/index.ts#L70)
+GetPrincipalAccess/index.ts:70
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[GetPrincipalAccess/index.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalAccess/index.ts#L69)
+GetPrincipalAccess/index.ts:69
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[GetPrincipalAccess/index.ts:68](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalAccess/index.ts#L68)
+GetPrincipalAccess/index.ts:68

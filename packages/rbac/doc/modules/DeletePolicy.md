@@ -37,7 +37,7 @@ Renames and re-exports [deletePolicyParamCreator](DeletePolicy.md#deletepolicypa
 
 #### Defined in
 
-[DeletePolicy/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeletePolicy/index.ts#L14)
+DeletePolicy/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Delete a policy in the tenant
 
 #### Defined in
 
-[DeletePolicy/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeletePolicy/index.ts#L34)
+DeletePolicy/index.ts:34

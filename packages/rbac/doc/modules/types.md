@@ -61,6 +61,7 @@
 - [RolePagination](../interfaces/types.RolePagination.md)
 - [RolePaginationDynamic](../interfaces/types.RolePaginationDynamic.md)
 - [RolePatch](../interfaces/types.RolePatch.md)
+- [RolePut](../interfaces/types.RolePut.md)
 - [RoleWithAccess](../interfaces/types.RoleWithAccess.md)
 - [ServiceAccount](../interfaces/types.ServiceAccount.md)
 - [ServiceAccountIn](../interfaces/types.ServiceAccountIn.md)
@@ -104,7 +105,7 @@
 
 #### Defined in
 
-[types/index.ts:258](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L258)
+types/index.ts:258
 
 ___
 
@@ -116,7 +117,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:521](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L521)
+types/index.ts:521
 
 ___
 
@@ -126,9 +127,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L555)
+types/index.ts:555
 
-[types/index.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L563)
+types/index.ts:563
 
 ___
 
@@ -140,7 +141,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:769](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L769)
+types/index.ts:769
 
 ___
 
@@ -150,9 +151,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L921)
+types/index.ts:921
 
-[types/index.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L925)
+types/index.ts:925
 
 ___
 
@@ -164,7 +165,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1080](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1080)
+types/index.ts:1080
 
 ___
 
@@ -176,7 +177,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1403)
+types/index.ts:1403
 
 ___
 
@@ -188,7 +189,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1515](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1515)
+types/index.ts:1515
 
 ___
 
@@ -198,9 +199,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1556)
+types/index.ts:1556
 
-[types/index.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1561)
+types/index.ts:1561
 
 ___
 
@@ -212,7 +213,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1567](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1567)
+types/index.ts:1567
 
 ___
 
@@ -224,7 +225,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1573)
+types/index.ts:1573
 
 ___
 
@@ -234,9 +235,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2079)
+types/index.ts:2110
 
-[types/index.ts:2083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2083)
+types/index.ts:2114
 
 ___
 
@@ -246,9 +247,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:2053](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2053)
+types/index.ts:2084
 
-[types/index.ts:2057](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2057)
+types/index.ts:2088
 
 ## Variables
 
@@ -268,9 +269,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:555](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L555)
+types/index.ts:555
 
-[types/index.ts:563](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L563)
+types/index.ts:563
 
 ___
 
@@ -286,9 +287,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L921)
+types/index.ts:921
 
-[types/index.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L925)
+types/index.ts:925
 
 ___
 
@@ -305,9 +306,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:1556](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1556)
+types/index.ts:1556
 
-[types/index.ts:1561](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1561)
+types/index.ts:1561
 
 ___
 
@@ -323,9 +324,9 @@ ___
 
 #### Defined in
 
-[types/index.ts:2079](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2079)
+types/index.ts:2110
 
-[types/index.ts:2083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2083)
+types/index.ts:2114
 
 ___
 
@@ -341,6 +342,6 @@ ___
 
 #### Defined in
 
-[types/index.ts:2053](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2053)
+types/index.ts:2084
 
-[types/index.ts:2057](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2057)
+types/index.ts:2088

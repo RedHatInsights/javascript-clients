@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L88)
+ListCrossAccountRequests/index.ts:88
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:90](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L90)
+ListCrossAccountRequests/index.ts:90
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:89](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L89)
+ListCrossAccountRequests/index.ts:89
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:91](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L91)
+ListCrossAccountRequests/index.ts:91
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[ListCrossAccountRequests/index.ts:87](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListCrossAccountRequests/index.ts#L87)
+ListCrossAccountRequests/index.ts:87

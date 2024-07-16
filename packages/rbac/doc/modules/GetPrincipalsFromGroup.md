@@ -52,7 +52,7 @@ Renames and re-exports [getPrincipalsFromGroupParamCreator](GetPrincipalsFromGro
 
 #### Defined in
 
-[GetPrincipalsFromGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalsFromGroup/index.ts#L14)
+GetPrincipalsFromGroup/index.ts:14
 
 ## Functions
 
@@ -80,4 +80,4 @@ Get a list of principals from a group in the tenant
 
 #### Defined in
 
-[GetPrincipalsFromGroup/index.ts:111](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetPrincipalsFromGroup/index.ts#L111)
+GetPrincipalsFromGroup/index.ts:111

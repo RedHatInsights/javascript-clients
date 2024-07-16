@@ -32,7 +32,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L118)
+types/index.ts:118
 
 ___
 
@@ -46,7 +46,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L130)
+types/index.ts:130
 
 ___
 
@@ -60,7 +60,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L94)
+types/index.ts:94
 
 ___
 
@@ -74,7 +74,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L124)
+types/index.ts:124
 
 ___
 
@@ -88,7 +88,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L112)
+types/index.ts:112
 
 ___
 
@@ -102,7 +102,7 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L100)
+types/index.ts:100
 
 ___
 
@@ -116,4 +116,4 @@ CrossAccountRequest
 
 #### Defined in
 
-[types/index.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L106)
+types/index.ts:106

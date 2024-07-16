@@ -28,7 +28,7 @@ GroupRolesPagination
 
 #### Defined in
 
-[types/index.ts:963](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L963)
+types/index.ts:963
 
 ___
 
@@ -42,7 +42,7 @@ GroupRolesPagination
 
 #### Defined in
 
-[types/index.ts:957](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L957)
+types/index.ts:957
 
 ___
 
@@ -56,4 +56,4 @@ GroupRolesPagination
 
 #### Defined in
 
-[types/index.ts:951](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L951)
+types/index.ts:951

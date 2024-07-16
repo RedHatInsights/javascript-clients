@@ -37,7 +37,7 @@ Renames and re-exports [createGroupParamCreator](CreateGroup.md#creategroupparam
 
 #### Defined in
 
-[CreateGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreateGroup/index.ts#L14)
+CreateGroup/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Create a group in a tenant
 
 #### Defined in
 
-[CreateGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/CreateGroup/index.ts#L34)
+CreateGroup/index.ts:34

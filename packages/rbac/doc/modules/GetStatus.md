@@ -36,7 +36,7 @@ Renames and re-exports [getStatusParamCreator](GetStatus.md#getstatusparamcreato
 
 #### Defined in
 
-[GetStatus/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetStatus/index.ts#L14)
+GetStatus/index.ts:14
 
 ## Functions
 
@@ -62,4 +62,4 @@ Obtain server status
 
 #### Defined in
 
-[GetStatus/index.ts:28](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/GetStatus/index.ts#L28)
+GetStatus/index.ts:28

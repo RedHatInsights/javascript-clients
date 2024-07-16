@@ -37,7 +37,7 @@ Renames and re-exports [deleteGroupParamCreator](DeleteGroup.md#deletegroupparam
 
 #### Defined in
 
-[DeleteGroup/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteGroup/index.ts#L14)
+DeleteGroup/index.ts:14
 
 ## Functions
 
@@ -63,4 +63,4 @@ Delete a group in the tenant
 
 #### Defined in
 
-[DeleteGroup/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/DeleteGroup/index.ts#L34)
+DeleteGroup/index.ts:34

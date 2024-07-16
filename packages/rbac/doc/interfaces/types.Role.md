@@ -28,7 +28,7 @@ Role
 
 #### Defined in
 
-[types/index.ts:1598](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1598)
+types/index.ts:1598
 
 ___
 
@@ -42,7 +42,7 @@ Role
 
 #### Defined in
 
-[types/index.ts:1592](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1592)
+types/index.ts:1592
 
 ___
 
@@ -56,4 +56,4 @@ Role
 
 #### Defined in
 
-[types/index.ts:1586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1586)
+types/index.ts:1586

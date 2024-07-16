@@ -50,7 +50,7 @@ Renames and re-exports [listPermissionOptionsParamCreator](ListPermissionOptions
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L14)
+ListPermissionOptions/index.ts:14
 
 ## Functions
 
@@ -78,4 +78,4 @@ List the available options for fields of permissions for a tenant
 
 #### Defined in
 
-[ListPermissionOptions/index.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/ListPermissionOptions/index.ts#L104)
+ListPermissionOptions/index.ts:104

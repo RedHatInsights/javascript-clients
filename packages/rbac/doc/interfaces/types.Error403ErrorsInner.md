@@ -28,7 +28,7 @@ Error403ErrorsInner
 
 #### Defined in
 
-[types/index.ts:694](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L694)
+types/index.ts:694
 
 ___
 
@@ -42,7 +42,7 @@ Error403ErrorsInner
 
 #### Defined in
 
-[types/index.ts:700](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L700)
+types/index.ts:700
 
 ___
 
@@ -56,4 +56,4 @@ Error403ErrorsInner
 
 #### Defined in
 
-[types/index.ts:706](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L706)
+types/index.ts:706

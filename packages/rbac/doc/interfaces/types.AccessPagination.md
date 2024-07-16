@@ -28,7 +28,7 @@ AccessPagination
 
 #### Defined in
 
-[types/index.ts:43](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L43)
+types/index.ts:43
 
 ___
 
@@ -42,7 +42,7 @@ AccessPagination
 
 #### Defined in
 
-[types/index.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L37)
+types/index.ts:37
 
 ___
 
@@ -56,4 +56,4 @@ AccessPagination
 
 #### Defined in
 
-[types/index.ts:31](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L31)
+types/index.ts:31

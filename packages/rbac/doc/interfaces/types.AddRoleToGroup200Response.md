@@ -26,4 +26,4 @@ AddRoleToGroup200Response
 
 #### Defined in
 
-[types/index.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L56)
+types/index.ts:56

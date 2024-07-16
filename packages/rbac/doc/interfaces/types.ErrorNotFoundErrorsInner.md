@@ -30,7 +30,7 @@ ErrorNotFoundErrorsInner
 
 #### Defined in
 
-[types/index.ts:751](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L751)
+types/index.ts:751
 
 ___
 
@@ -46,7 +46,7 @@ ErrorNotFoundErrorsInner
 
 #### Defined in
 
-[types/index.ts:763](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L763)
+types/index.ts:763
 
 ___
 
@@ -62,4 +62,4 @@ ErrorNotFoundErrorsInner
 
 #### Defined in
 
-[types/index.ts:757](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L757)
+types/index.ts:757

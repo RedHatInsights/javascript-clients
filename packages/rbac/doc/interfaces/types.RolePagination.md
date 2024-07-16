@@ -28,7 +28,7 @@ RolePagination
 
 #### Defined in
 
-[types/index.ts:1854](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1854)
+types/index.ts:1854
 
 ___
 
@@ -42,7 +42,7 @@ RolePagination
 
 #### Defined in
 
-[types/index.ts:1848](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1848)
+types/index.ts:1848
 
 ___
 
@@ -56,4 +56,4 @@ RolePagination
 
 #### Defined in
 
-[types/index.ts:1842](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1842)
+types/index.ts:1842

@@ -32,7 +32,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1274](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1274)
+types/index.ts:1274
 
 ___
 
@@ -46,7 +46,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1262](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1262)
+types/index.ts:1262
 
 ___
 
@@ -60,7 +60,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1286)
+types/index.ts:1286
 
 ___
 
@@ -74,7 +74,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1280](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1280)
+types/index.ts:1280
 
 ___
 
@@ -88,7 +88,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1256](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1256)
+types/index.ts:1256
 
 ___
 
@@ -102,7 +102,7 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1292](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1292)
+types/index.ts:1292
 
 ___
 
@@ -116,4 +116,4 @@ PolicyExtended
 
 #### Defined in
 
-[types/index.ts:1268](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1268)
+types/index.ts:1268

@@ -2069,7 +2069,7 @@ export interface System {
      * @type {string}
      * @memberof System
      */
-    group_name: string;
+    group_name: string | null;
 }
 /**
  * RHN-based system types classified by role and product code.

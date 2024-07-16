@@ -27,7 +27,7 @@ ErrorErrorsInner
 
 #### Defined in
 
-[types/index.ts:719](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L719)
+types/index.ts:719
 
 ___
 
@@ -41,4 +41,4 @@ ErrorErrorsInner
 
 #### Defined in
 
-[types/index.ts:725](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L725)
+types/index.ts:725

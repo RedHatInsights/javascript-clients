@@ -38,7 +38,7 @@ Renames and re-exports [patchRoleParamCreator](PatchRole.md#patchroleparamcreato
 
 #### Defined in
 
-[PatchRole/index.ts:14](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/PatchRole/index.ts#L14)
+PatchRole/index.ts:14
 
 ## Functions
 
@@ -64,4 +64,4 @@ Patch a role in the tenant
 
 #### Defined in
 
-[PatchRole/index.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/PatchRole/index.ts#L40)
+PatchRole/index.ts:40

@@ -29,7 +29,7 @@ PaginationLinks
 
 #### Defined in
 
-[types/index.ts:1106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1106)
+types/index.ts:1106
 
 ___
 
@@ -43,7 +43,7 @@ PaginationLinks
 
 #### Defined in
 
-[types/index.ts:1124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1124)
+types/index.ts:1124
 
 ___
 
@@ -57,7 +57,7 @@ PaginationLinks
 
 #### Defined in
 
-[types/index.ts:1118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1118)
+types/index.ts:1118
 
 ___
 
@@ -71,4 +71,4 @@ PaginationLinks
 
 #### Defined in
 
-[types/index.ts:1112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1112)
+types/index.ts:1112

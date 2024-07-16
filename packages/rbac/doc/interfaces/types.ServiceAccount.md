@@ -32,7 +32,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2026](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2026)
+types/index.ts:2057
 
 ___
 
@@ -46,7 +46,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2038](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2038)
+types/index.ts:2069
 
 ___
 
@@ -60,7 +60,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2032](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2032)
+types/index.ts:2063
 
 ___
 
@@ -74,7 +74,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2044](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2044)
+types/index.ts:2075
 
 ___
 
@@ -88,7 +88,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2050](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2050)
+types/index.ts:2081
 
 ___
 
@@ -102,7 +102,7 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2020](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2020)
+types/index.ts:2051
 
 ___
 
@@ -116,4 +116,4 @@ ServiceAccount
 
 #### Defined in
 
-[types/index.ts:2014](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2014)
+types/index.ts:2045

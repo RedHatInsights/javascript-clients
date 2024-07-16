@@ -29,7 +29,7 @@ CrossAccountRequestPatch
 
 #### Defined in
 
-[types/index.ts:540](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L540)
+types/index.ts:540
 
 ___
 
@@ -43,7 +43,7 @@ CrossAccountRequestPatch
 
 #### Defined in
 
-[types/index.ts:546](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L546)
+types/index.ts:546
 
 ___
 
@@ -57,7 +57,7 @@ CrossAccountRequestPatch
 
 #### Defined in
 
-[types/index.ts:534](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L534)
+types/index.ts:534
 
 ___
 
@@ -71,4 +71,4 @@ CrossAccountRequestPatch
 
 #### Defined in
 
-[types/index.ts:552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L552)
+types/index.ts:552

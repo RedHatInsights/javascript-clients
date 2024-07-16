@@ -26,4 +26,4 @@ PaginationMeta
 
 #### Defined in
 
-[types/index.ts:1137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L1137)
+types/index.ts:1137
