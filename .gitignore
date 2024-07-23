@@ -43,3 +43,7 @@ packages/**/package-lock.json
 target/*
 !target/typescript-axios-webpack-module-federation-openapi-generator-*
 target/typescript-axios-webpack-module-federation-openapi-generator-*-tests*
+
+# Maven target folder (jars)
+/target/*
+
