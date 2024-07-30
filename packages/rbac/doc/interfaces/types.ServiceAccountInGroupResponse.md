@@ -34,7 +34,7 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[types/index.ts:2108](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2108)
+[types/index.ts:2139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2139)
 
 ___
 
@@ -50,7 +50,7 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[types/index.ts:2102](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2102)
+[types/index.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2133)
 
 ___
 
@@ -64,4 +64,4 @@ ServiceAccountInGroupResponse
 
 #### Defined in
 
-[types/index.ts:2096](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2096)
+[types/index.ts:2127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2127)

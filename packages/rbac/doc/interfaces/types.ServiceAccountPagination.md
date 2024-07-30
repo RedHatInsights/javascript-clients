@@ -28,7 +28,7 @@ ServiceAccountPagination
 
 #### Defined in
 
-[types/index.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2133)
+[types/index.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2164)
 
 ___
 
@@ -42,7 +42,7 @@ ServiceAccountPagination
 
 #### Defined in
 
-[types/index.ts:2127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2127)
+[types/index.ts:2158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2158)
 
 ___
 
@@ -56,4 +56,4 @@ ServiceAccountPagination
 
 #### Defined in
 
-[types/index.ts:2121](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2121)
+[types/index.ts:2152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2152)

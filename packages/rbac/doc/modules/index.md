@@ -72,6 +72,7 @@
 - [RolePagination](index.md#rolepagination)
 - [RolePaginationDynamic](index.md#rolepaginationdynamic)
 - [RolePatch](index.md#rolepatch)
+- [RolePut](index.md#roleput)
 - [RoleWithAccess](index.md#rolewithaccess)
 - [ServiceAccount](index.md#serviceaccount)
 - [ServiceAccountIn](index.md#serviceaccountin)
@@ -115,6 +116,11 @@
 - [updateGroup](index.md#updategroup)
 - [updatePolicy](index.md#updatepolicy)
 - [updateRole](index.md#updaterole)
+- [workspacesCreate](index.md#workspacescreate)
+- [workspacesDelete](index.md#workspacesdelete)
+- [workspacesPatch](index.md#workspacespatch)
+- [workspacesRead](index.md#workspacesread)
+- [workspacesUpdate](index.md#workspacesupdate)
 
 ## References
 
@@ -514,6 +520,12 @@ Re-exports [RolePatch](../interfaces/types.RolePatch.md)
 
 ___
 
+### RolePut
+
+Re-exports [RolePut](../interfaces/types.RolePut.md)
+
+___
+
 ### RoleWithAccess
 
 Re-exports [RoleWithAccess](../interfaces/types.RoleWithAccess.md)
@@ -769,3 +781,33 @@ ___
 ### updateRole
 
 Renames and re-exports [updateRoleParamCreator](UpdateRole.md#updateroleparamcreator)
+
+___
+
+### workspacesCreate
+
+Renames and re-exports [workspacesCreateParamCreator](v2_WorkspacesCreate.md#workspacescreateparamcreator)
+
+___
+
+### workspacesDelete
+
+Renames and re-exports [workspacesDeleteParamCreator](v2_WorkspacesDelete.md#workspacesdeleteparamcreator)
+
+___
+
+### workspacesPatch
+
+Renames and re-exports [workspacesPatchParamCreator](v2_WorkspacesPatch.md#workspacespatchparamcreator)
+
+___
+
+### workspacesRead
+
+Renames and re-exports [workspacesReadParamCreator](v2_WorkspacesRead.md#workspacesreadparamcreator)
+
+___
+
+### workspacesUpdate
+
+Renames and re-exports [workspacesUpdateParamCreator](v2_WorkspacesUpdate.md#workspacesupdateparamcreator)

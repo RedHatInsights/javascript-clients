@@ -1931,6 +1931,37 @@ export interface RolePatch {
 /**
  *
  * @export
+ * @interface RolePut
+ */
+export interface RolePut {
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'display_name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'description'?: string;
+    /**
+     * List of access permissions. This array can be empty.
+     * @type {Array<Access>}
+     * @memberof RolePut
+     */
+    'access': Array<Access>;
+}
+/**
+ *
+ * @export
  * @interface RoleWithAccess
  */
 export interface RoleWithAccess {
@@ -6871,15 +6902,15 @@ export const UpdateRoleApiAxiosParamCreator = function (configuration?: Configur
          *
          * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a role
+         * @param {RolePut} rolePut Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRole: async (uuid: string, roleWithAccess: RoleWithAccess, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        updateRole: async (uuid: string, rolePut: RolePut, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('updateRole', 'uuid', uuid)
-            // verify required parameter 'roleWithAccess' is not null or undefined
-            assertParamExists('updateRole', 'roleWithAccess', roleWithAccess)
+            // verify required parameter 'rolePut' is not null or undefined
+            assertParamExists('updateRole', 'rolePut', rolePut)
             const localVarPath = `/roles/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -6904,7 +6935,7 @@ export const UpdateRoleApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(roleWithAccess, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(rolePut, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -6925,12 +6956,12 @@ export const UpdateRoleApiFp = function(configuration?: Configuration) {
          *
          * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a role
+         * @param {RolePut} rolePut Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.updateRole(uuid, roleWithAccess, options);
+        async updateRole(uuid: string, rolePut: RolePut, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateRole(uuid, rolePut, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6947,12 +6978,12 @@ export const UpdateRoleApiFactory = function (configuration?: Configuration, bas
          *
          * @summary Update a role in the tenant
          * @param {string} uuid ID of role to update
-         * @param {RoleWithAccess} roleWithAccess Update to a role
+         * @param {RolePut} rolePut Update to a role
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: any): AxiosPromise<void> {
-            return localVarFp.updateRole(uuid, roleWithAccess, options).then((request) => request(axios, basePath));
+        updateRole(uuid: string, rolePut: RolePut, options?: any): AxiosPromise<void> {
+            return localVarFp.updateRole(uuid, rolePut, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6968,13 +6999,13 @@ export class UpdateRoleApi extends BaseAPI {
      *
      * @summary Update a role in the tenant
      * @param {string} uuid ID of role to update
-     * @param {RoleWithAccess} roleWithAccess Update to a role
+     * @param {RolePut} rolePut Update to a role
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UpdateRoleApi
      */
-    public updateRole(uuid: string, roleWithAccess: RoleWithAccess, options?: AxiosRequestConfig) {
-        return UpdateRoleApiFp(this.configuration).updateRole(uuid, roleWithAccess, options).then((request) => request(this.axios, this.basePath));
+    public updateRole(uuid: string, rolePut: RolePut, options?: AxiosRequestConfig) {
+        return UpdateRoleApiFp(this.configuration).updateRole(uuid, rolePut, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

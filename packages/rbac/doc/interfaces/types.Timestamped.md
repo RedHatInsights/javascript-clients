@@ -27,7 +27,7 @@ Timestamped
 
 #### Defined in
 
-[types/index.ts:2165](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2165)
+[types/index.ts:2196](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2196)
 
 ___
 
@@ -41,4 +41,4 @@ Timestamped
 
 #### Defined in
 
-[types/index.ts:2171](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2171)
+[types/index.ts:2202](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/rbac/types/index.ts#L2202)

@@ -134,3 +134,20 @@ export { default as updateRole } from './UpdateRole'
 
 
 // end of operations block
+export { default as workspacesCreate } from './v2/WorkspacesCreate'
+
+
+// end of operations block
+export { default as workspacesDelete } from './v2/WorkspacesDelete'
+
+
+// end of operations block
+export { default as workspacesPatch } from './v2/WorkspacesPatch'
+
+
+// end of operations block
+export { default as workspacesRead } from './v2/WorkspacesRead'
+
+
+// end of operations block
+export { default as workspacesUpdate } from './v2/WorkspacesUpdate'
