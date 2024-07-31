@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
-    "doc": "typedoc",
-    "generate": "node generateClients.js",
-    "generate:prod": "npm run generate && node combineIndex.js"
+    "doc": "typedoc"
   },
   "dependencies": {
     "@redhat-cloud-services/javascript-clients-shared": "^1.2.2",

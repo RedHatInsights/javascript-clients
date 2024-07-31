@@ -14,14 +14,24 @@ We are using Java to install and build this generator. Please install Java and p
 * When you have dependencies installed you can run build anytime you change something in the generator `npm run build:generator`
 
 ### Creating a new client
-Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
-
-**IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly. Also, don't forget to update your packages's README with the correct install and usage information.**
+Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you. After client creation, add your client info to `clients.json`. A client entry should look like the following:
+```
+{
+  "name": "rbac",
+  "generator": "fed-mod",
+  "postProcess": true,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json" },
+    { "v2": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/v2/openapi.v2.yaml" }
+  ]
+},
+```
+where `generator` can be either the `default` one from OpenAPI or the custom `fed-mod` generator which is described below (newly made clients should use `fed-mod` when possible), `postProcess` is a legacy setting for older clients (leave `false` for new clients), and `specs` contains the locations of your clients OpenAPI specs ('default' will export all your endpoints at the root level of the client e.g. some-client/dist/SomeEndpoint and any key other than `default` will export to that path e.g. some-client/dist/v2/SomeEndpoint).
 
 ### Generating and Building clients
 
 From the root javascript-clients folder:
-* To generate all clients run `npm run generate` -- The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To generate all clients run `npm run generate`
 * To build clients and generate their dist to be published run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
 
 ### Custom Module Federation Generator
