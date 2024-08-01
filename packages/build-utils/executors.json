@@ -5,6 +5,11 @@
       "schema": "./src/executors/builder/schema.json",
       "description": "builder executor"
     },
+    "client-generator": {
+      "implementation": "./src/executors/client-generator/client-generator",
+      "schema": "./src/executors/client-generator/schema.json",
+      "description": "client-generator"
+    },
     "old-builder": {
       "implementation": "./src/executors/old-builder/old-executor",
       "schema": "./src/executors/old-builder/schema.json",

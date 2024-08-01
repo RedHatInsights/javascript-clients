@@ -4,6 +4,12 @@
   "sourceRoot": "packages/rbac",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "client": "packages/rbac/client.json"
+      }
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
