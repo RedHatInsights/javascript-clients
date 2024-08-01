@@ -1,0 +1,8 @@
+{
+  "name": "integrations",
+  "generator": "fed-mod",
+  "postProcess": true,
+  "specs": [
+    { "default": "https://console.redhat.com/api/integrations/v1.0/openapi.json" }
+  ]
+}

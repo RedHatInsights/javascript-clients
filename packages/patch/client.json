@@ -1,0 +1,8 @@
+{
+  "name": "patch",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://console.redhat.com/api/patch/v3/openapi.json" }
+  ]
+}

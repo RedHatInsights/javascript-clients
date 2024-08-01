@@ -1,0 +1,8 @@
+{
+  "name": "notifications",
+  "generator": "fed-mod",
+  "postProcess": true,
+  "specs": [
+    { "default": "https://console.redhat.com/api/notifications/v1.0/openapi.json" }
+  ]
+}

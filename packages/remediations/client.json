@@ -1,0 +1,8 @@
+{
+  "name": "remediations",
+  "generator": "openapi",
+  "postProcess": true,
+  "specs": [
+    { "default": "http://cloud.redhat.com/api/remediations/v1/openapi.json" }
+  ]
+}

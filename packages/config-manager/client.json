@@ -1,0 +1,8 @@
+{
+  "name": "config-manager",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/config-manager/master/internal/http/v2/openapi.json" }
+  ]
+}

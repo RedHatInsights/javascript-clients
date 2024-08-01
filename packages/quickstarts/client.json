@@ -1,0 +1,8 @@
+{
+  "name": "quickstarts",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/quickstarts/main/spec/openapi.yaml" }
+  ]
+}

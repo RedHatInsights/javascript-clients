@@ -1,0 +1,8 @@
+{
+  "name": "insights",
+  "generator": "openapi",
+  "postProcess": true,
+  "specs": [
+    { "default": "https://cloud.redhat.com/api/insights/v1/openapi.json" }
+  ]
+}

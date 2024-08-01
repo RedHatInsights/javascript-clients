@@ -1,0 +1,8 @@
+{
+  "name": "topological-inventory",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/topological_inventory-api/master/public/doc/openapi-3-v1.0.json" }
+  ]
+}

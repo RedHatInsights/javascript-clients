@@ -1,0 +1,8 @@
+{
+  "name": "policies",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://cloud.redhat.com/api/policies/v1/openapi.json" }
+  ]
+}

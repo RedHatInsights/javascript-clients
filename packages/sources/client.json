@@ -1,0 +1,8 @@
+{
+  "name": "sources",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/sources-api/master/public/doc/openapi-3-v1.0.json" }
+  ]
+}

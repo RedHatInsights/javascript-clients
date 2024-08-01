@@ -1,0 +1,8 @@
+{
+  "name": "host-inventory",
+  "generator": "openapi",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://raw.githubusercontent.com/RedHatInsights/insights-host-inventory/master/swagger/api.spec.yaml" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "compliance",
+  "generator": "fed-mod",
+  "postProcess": false,
+  "specs": [
+    { "default": "https://cloud.redhat.com/api/compliance/v2/openapi.json" }
+  ]
+}
