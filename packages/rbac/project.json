@@ -4,6 +4,15 @@
   "sourceRoot": "packages/rbac",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "specs": {
+          "default": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json",
+          "v2": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/v2/openapi.v2.yaml"
+        }
+      }
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {

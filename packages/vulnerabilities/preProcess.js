@@ -17,7 +17,7 @@ request(PRODSPEC || null, (error, response, body) => {
         paths[url][attr]["operationId"] = paths[url][attr][methodNameField];
       });
     });
-    fs.writeFileSync(SPEC, JSON.stringify(spec_json));
+    fs.writeFileSync(path.join(__dirname, SPEC), JSON.stringify(spec_json));
     console.log(SPEC);
   } else {
     process.exit(1);

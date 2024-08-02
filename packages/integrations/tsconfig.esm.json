@@ -14,7 +14,7 @@
         "dom"
     ]
   },
-  "include": ["*.ts"],
+  "include": ["*.ts", "**/*.ts"],
   "exclude": [
     "dist",
     "node_modules",

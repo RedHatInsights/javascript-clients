@@ -4,6 +4,15 @@
   "sourceRoot": "packages/config-manager",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "legacyGenerator": true,
+        "specs": {
+          "default": "https://raw.githubusercontent.com/RedHatInsights/config-manager/master/internal/http/v2/openapi.json"
+        }
+      }
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {

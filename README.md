@@ -16,12 +16,40 @@ We are using Java to install and build this generator. Please install Java and p
 ### Creating a new client
 Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
 
-**IMPORTANT! Ensure the `SPEC` URL in you `generate:prod` script in the `package.json` matches your spec correctly. Also, don't forget to update your packages's README with the correct install and usage information.**
+### Specifying your OpenAPI spec locations
+After client creation, add your OpenAPI spec locations as an object entries in your client's `project.json` NX configuration for the `client-generator` executor. The `client-generator` supports multiple spec entries. Entries should follow the pattern below.
+```
+{
+  "name": "@redhat-cloud-services/CLIENTNAME-client",
+  ...
+  "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "specs": {
+          "default": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/openapi.json",
+          "v2": "https://raw.githubusercontent.com/RedHatInsights/insights-rbac/master/docs/source/specs/v2/openapi.v2.yaml"
+        }
+      }
+    },
+    ...
+  }
+}
+```
+where the `specs` object keys are the directories to export your endpoints and the corresponding key values as the location to the spec itself. For keys, `default` will export all your endpoints at the root level of the client and any key other than `default` will export to that path instead. An example import for the above `default` spec entry as well as the `v2` spec entry can be seen in the following examples
+
+default:
+
+`import { SomeEndpoint } from @redhat-cloud-services/some-client/dist/SomeEndpoint` 
+
+v2:
+
+`import { SomeV2Endpoint } from @redhat-cloud-services/some-client/dist/v2/SomeV2Endpoint`
 
 ### Generating and Building clients
 
 From the root javascript-clients folder:
-* To generate all clients run `npm run generate` -- The command **must** be run with git origin set to the upstream repository (**RedHatInsights/javascript-clients**) - this way the correct docs and references are generated.
+* To generate all clients run `npm run generate` -- NX will run through our `client-generator` executor located in `@redhat-cloud-services/build-utils` to execute the `openapi-generator-cli` command to generate your client based off of the specs defined in your client's `openapi-spec.json`.
 * To build clients and generate their dist to be published run `npm run build` -- NX will only build packages when it detects that a change has been made to the client (otherwise it will reference the cache). After a client has been built, our `builder` (located in `packages/build-utils`) will move each client's `dist` into a top-level `dist` for publishing. Use `npx nx run-many --skip-nx-cache -t build --exclude=@redhat-cloud-services/CLIENTNAME-client` if you wish to build all clients regardless of whether or not a change has been made.
 
 ### Custom Module Federation Generator

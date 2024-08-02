@@ -4,6 +4,16 @@
   "sourceRoot": "packages/remediations",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "postProcess": "./postProcess.sh",
+        "legacyGenerator": true,
+        "specs": {
+          "default": "http://cloud.redhat.com/api/remediations/v1/openapi.json"
+        }
+      }
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {

@@ -4,6 +4,21 @@
   "sourceRoot": "packages/vulnerabilities",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "postProcess": "./postProcess.sh",
+        "legacyGenerator": true,
+        "specs": {
+          "default": "apiSpec.json",
+          "git-api": "apiSpec.json"
+        }
+      },
+      "dependsOn": ["preGenerate"]
+    },
+    "preGenerate": {
+      "command": "node packages/vulnerabilities/preProcess.js 'https://console.redhat.com/api/vulnerability/v1/openapi.json'"
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {

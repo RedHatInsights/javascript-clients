@@ -8,6 +8,6 @@
     "target": "ES5",
     "rootDir": "./",
   },
-  "include": ["*.ts"],
-  "exclude": ["jest.config.ts"]
+  "include": ["*.ts", "**/*.ts"],
+  "exclude": ["jest.config.ts", "dist"]
 }
