@@ -1906,6 +1906,37 @@ export interface RolePatch {
 /**
  *
  * @export
+ * @interface RolePut
+ */
+export interface RolePut {
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'display_name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RolePut
+     */
+    'description'?: string;
+    /**
+     * List of access permissions. This array can be empty.
+     * @type {Array<Access>}
+     * @memberof RolePut
+     */
+    'access': Array<Access>;
+}
+/**
+ *
+ * @export
  * @interface RoleWithAccess
  */
 export interface RoleWithAccess {

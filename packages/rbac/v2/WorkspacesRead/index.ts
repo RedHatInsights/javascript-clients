@@ -8,49 +8,41 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RolePut } from '../types';
+import type { ProblemsProblem403, ProblemsProblem404, WorkspacesCreate401Response, WorkspacesCreate500Response, WorkspacesReadWorkspaceResponse } from '../types';
 
 
-export type UpdateRoleParams = {
+export type WorkspacesReadParams = {
   /**
-  * ID of role to update
+  * Unique identification
   * @type { string }
-  * @memberof UpdateRoleApi
+  * @memberof WorkspacesReadApi
   */
   uuid: string,
-  /**
-  * Update to a role
-  * @type { RolePut }
-  * @memberof UpdateRoleApi
-  */
-  rolePut: RolePut,
   options?: AxiosRequestConfig
 }
 
-const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'rolePut')
+const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]): params is [WorkspacesReadParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }
 /**
-*
-* @summary Update a role in the tenant
-* @param {UpdateRoleParams} config with all available params.
+* Get a workspace in tenant
+* @summary Get a workspace in tenant
+* @param {WorkspacesReadParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'rolePut', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
-    const { uuid, rolePut, options = {} } = params;
-    const localVarPath = `/roles/{uuid}/`
+export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesReadObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
+    const { uuid, options = {} } = params;
+    const localVarPath = `/workspaces/{uuid}`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
 
-
-    localVarHeaderParameter['Content-Type'] = 'application/json';
 
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
@@ -58,15 +50,7 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: rolePut,
-        auth:[
-        {
-        // authentication basic_auth required
-        // http basic authentication required
-        authType: AuthTypeEnum.Basic,
-        }
-        ]
     };
 }
 
-export default updateRoleParamCreator;
+export default workspacesReadParamCreator;
