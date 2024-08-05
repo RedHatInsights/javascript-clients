@@ -20,12 +20,7 @@
   "scripts": {
     "doc:production": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out doc --exclude \"**/git-api/*.ts\" --gitRevision main index.ts",
     "doc:git-api": "typedoc --plugin typedoc-plugin-markdown --theme markdown --out git-api/doc --gitRevision main ./git-api/index.ts",
-    "doc": "npm run doc:git-api; npm run doc:production",
-    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o $OUTPUT --skip-validate-spec --enable-post-process-file",
-    "generate:production": "OUTPUT=. SPEC=$(node preProcess.js 'https://console.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",
-    "generate:git-api": "OUTPUT=git-api SPEC=$(node preProcess.js 'https://console.redhat.com/api/vulnerability/v1/openapi.json') npm run generate",
-    "generate:prod": "npm run generate:git-api && npm run generate:production && ./postProcess.sh",
-    "generate:single": "npm run generate:prod && npm run doc"
+    "doc": "npm run doc:git-api; npm run doc:production"
   },
   "dependencies": {
     "axios": "^0.27.2",

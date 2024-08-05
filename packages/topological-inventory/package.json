@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/topological-inventory#readme",
   "scripts": {
-    "doc": "typedoc",
-    "generate": "TS_POST_PROCESS_FILE='../../postProcess.sh' openapi-generator-cli generate -i $SPEC -g typescript-axios -o . --skip-validate-spec --enable-post-process-file",
-    "generate:prod": "SPEC='https://raw.githubusercontent.com/RedHatInsights/topological_inventory-api/master/public/doc/openapi-3-v1.0.json' npm run generate"
+    "doc": "typedoc"
   },
   "dependencies": {
     "axios": "^0.27.2",

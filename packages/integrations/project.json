@@ -4,6 +4,14 @@
   "sourceRoot": "packages/integrations",
   "projectType": "library",
   "targets": {
+    "generate": {
+      "executor": "@redhat-cloud-services/build-utils:client-generator",
+      "options": {
+        "specs": {
+          "default": "https://console.redhat.com/api/integrations/v1.0/openapi.json"
+        }
+      }
+    },
     "build": {
       "executor": "@redhat-cloud-services/build-utils:old-builder",
       "options": {
