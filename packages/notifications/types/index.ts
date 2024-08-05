@@ -654,25 +654,6 @@ export interface DrawerEntryPayload {
 /**
  *
  * @export
- * @interface DuplicateNameMigrationReport
- */
-export interface DuplicateNameMigrationReport {
-    /**
-     *
-     * @type {number}
-     * @memberof DuplicateNameMigrationReport
-     */
-    'updatedIntegrations'?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof DuplicateNameMigrationReport
-     */
-    'updatedBehaviorGroups'?: number;
-}
-/**
- *
- * @export
  * @interface Endpoint
  */
 export interface Endpoint {

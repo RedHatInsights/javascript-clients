@@ -48,6 +48,8 @@ jobs:
       - name: Install deps
         run: npm i
       - name: Build affected
+        env:
+          NX_SKIP_NX_CACHE: true
         run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:
     runs-on: ubuntu-latest
