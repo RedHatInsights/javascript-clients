@@ -8,43 +8,42 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RolePut } from '../types';
+import type { ProblemsProblem403, WorkspacesCreate401Response, WorkspacesCreate500Response, WorkspacesPatchWorkspaceRequest, WorkspacesPatchWorkspaceResponse, WorkspacesUpdate400Response } from '../types';
 
 
-export type UpdateRoleParams = {
+export type WorkspacesPatchParams = {
   /**
-  * ID of role to update
+  * Unique identification
   * @type { string }
-  * @memberof UpdateRoleApi
+  * @memberof WorkspacesPatchApi
   */
   uuid: string,
   /**
-  * Update to a role
-  * @type { RolePut }
-  * @memberof UpdateRoleApi
+  *
+  * @type { WorkspacesPatchWorkspaceRequest }
+  * @memberof WorkspacesPatchApi
   */
-  rolePut: RolePut,
+  workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest,
   options?: AxiosRequestConfig
 }
 
-const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'rolePut')
+const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown[]): params is [WorkspacesPatchParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'workspacesPatchWorkspaceRequest')
 }
 /**
 *
-* @summary Update a role in the tenant
-* @param {UpdateRoleParams} config with all available params.
+* @param {WorkspacesPatchParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'rolePut', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
-    const { uuid, rolePut, options = {} } = params;
-    const localVarPath = `/roles/{uuid}/`
+export const workspacesPatchParamCreator = async (...config: ([WorkspacesPatchParams] | [string, WorkspacesPatchWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesPatchObjectParams(config) ? config[0] : ['uuid', 'workspacesPatchWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesPatchParams;
+    const { uuid, workspacesPatchWorkspaceRequest, options = {} } = params;
+    const localVarPath = `/workspaces/{uuid}`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PUT' as Method, ...options};
+    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -58,15 +57,8 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: rolePut,
-        auth:[
-        {
-        // authentication basic_auth required
-        // http basic authentication required
-        authType: AuthTypeEnum.Basic,
-        }
-        ]
+        serializeData: workspacesPatchWorkspaceRequest,
     };
 }
 
-export default updateRoleParamCreator;
+export default workspacesPatchParamCreator;
