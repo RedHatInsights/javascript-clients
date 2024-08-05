@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.5.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.4.5...@redhat-cloud-services/integrations-client-2.5.0) (2024-08-05)
+
+
+### Features
+
+* add client-generator executor for all clients ([#269](https://github.com/RedHatInsights/javascript-clients/issues/269)) ([dc4b6a9](https://github.com/RedHatInsights/javascript-clients/commit/dc4b6a91dd47e5407812157f0b8efde22eb22ef1))
+
 ## [2.4.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.4.4...@redhat-cloud-services/integrations-client-2.4.5) (2024-08-05)
 
 ## [2.4.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.4.3...@redhat-cloud-services/integrations-client-2.4.4) (2024-07-04)
