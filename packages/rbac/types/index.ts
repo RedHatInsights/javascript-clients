@@ -915,7 +915,7 @@ export interface GroupPrincipalInPrincipalsInner {
      * @type {string}
      * @memberof GroupPrincipalInPrincipalsInner
      */
-    'clientID': string;
+    'clientId': string;
 }
 
 export const GroupPrincipalInPrincipalsInnerTypeEnum = {
@@ -2054,7 +2054,7 @@ export interface ServiceAccount {
      * @type {string}
      * @memberof ServiceAccount
      */
-    'clientID': string;
+    'clientId': string;
     /**
      *
      * @type {string}
@@ -2104,7 +2104,7 @@ export interface ServiceAccountIn {
      * @type {string}
      * @memberof ServiceAccountIn
      */
-    'clientID': string;
+    'clientId': string;
 }
 
 export const ServiceAccountInTypeEnum = {
