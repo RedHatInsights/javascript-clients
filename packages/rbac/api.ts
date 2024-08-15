@@ -940,7 +940,7 @@ export interface GroupPrincipalInPrincipalsInner {
      * @type {string}
      * @memberof GroupPrincipalInPrincipalsInner
      */
-    'clientID': string;
+    'clientId': string;
 }
 
 export const GroupPrincipalInPrincipalsInnerTypeEnum = {
@@ -2079,7 +2079,7 @@ export interface ServiceAccount {
      * @type {string}
      * @memberof ServiceAccount
      */
-    'clientID': string;
+    'clientId': string;
     /**
      *
      * @type {string}
@@ -2129,7 +2129,7 @@ export interface ServiceAccountIn {
      * @type {string}
      * @memberof ServiceAccountIn
      */
-    'clientID': string;
+    'clientId': string;
 }
 
 export const ServiceAccountInTypeEnum = {
@@ -3157,7 +3157,7 @@ export const DeletePrincipalFromGroupApiAxiosParamCreator = function (configurat
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
-         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of client IDs for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3215,7 +3215,7 @@ export const DeletePrincipalFromGroupApiFp = function(configuration?: Configurat
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
-         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of client IDs for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3238,7 +3238,7 @@ export const DeletePrincipalFromGroupApiFactory = function (configuration?: Conf
          * @summary Remove a principal from a group in the tenant
          * @param {string} uuid ID of group to update
          * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
-         * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
+         * @param {string} [serviceAccounts] A comma separated list of client IDs for service accounts to remove from the group
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3260,7 +3260,7 @@ export class DeletePrincipalFromGroupApi extends BaseAPI {
      * @summary Remove a principal from a group in the tenant
      * @param {string} uuid ID of group to update
      * @param {string} [usernames] A comma separated list of usernames for principals to remove from the group
-     * @param {string} [serviceAccounts] A comma separated list of usernames for service accounts to remove from the group
+     * @param {string} [serviceAccounts] A comma separated list of client IDs for service accounts to remove from the group
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DeletePrincipalFromGroupApi

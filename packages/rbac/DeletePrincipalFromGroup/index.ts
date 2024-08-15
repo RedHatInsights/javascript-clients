@@ -25,7 +25,7 @@ export type DeletePrincipalFromGroupParams = {
   */
   usernames?: string,
   /**
-  * A comma separated list of usernames for service accounts to remove from the group
+  * A comma separated list of client IDs for service accounts to remove from the group
   * @type { string }
   * @memberof DeletePrincipalFromGroupApi
   */
