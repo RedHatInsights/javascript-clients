@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
+      - uses: nrwl/nx-set-shas@v4
       # cache node modules for all jobs to use
       - uses: './.github/actions/node-cache'
       # cache cypress runner
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
+      - uses: nrwl/nx-set-shas4
       - uses: './.github/actions/node-cache'
       - name: Install deps
         run: npm i
