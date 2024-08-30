@@ -34,7 +34,7 @@ const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unkno
 export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
     const { uuid, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}`
+    const localVarPath = `/workspaces/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

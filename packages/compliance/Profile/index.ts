@@ -19,7 +19,7 @@ export type ProfileParams = {
   */
   securityGuideId: any,
   /**
-  * UUID or ref_id
+  * UUID or a ref_id with \'.\' characters replaced with \'-\'
   * @type { any }
   * @memberof ProfileApi
   */

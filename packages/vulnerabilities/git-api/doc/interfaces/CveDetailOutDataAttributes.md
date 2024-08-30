@@ -40,7 +40,7 @@ CveDetailOutDataAttributes
 
 ### advisories\_list
 
-• **advisories\_list**: ``null`` \| (`string` \| `object`)[]
+• **advisories\_list**: ``null`` \| `string`[]
 
 List of advisory names or detailed advisory information
 

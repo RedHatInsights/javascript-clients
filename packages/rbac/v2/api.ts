@@ -594,7 +594,7 @@ export const WorkspacesCreateApiAxiosParamCreator = function (configuration?: Co
         workspacesCreate: async (workspacesBasicWorkspace: WorkspacesBasicWorkspace, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'workspacesBasicWorkspace' is not null or undefined
             assertParamExists('workspacesCreate', 'workspacesBasicWorkspace', workspacesBasicWorkspace)
-            const localVarPath = `/workspaces`;
+            const localVarPath = `/workspaces/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -702,7 +702,7 @@ export const WorkspacesDeleteApiAxiosParamCreator = function (configuration?: Co
         workspacesDelete: async (uuid: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('workspacesDelete', 'uuid', uuid)
-            const localVarPath = `/workspaces/{uuid}`
+            const localVarPath = `/workspaces/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -810,7 +810,7 @@ export const WorkspacesPatchApiAxiosParamCreator = function (configuration?: Con
             assertParamExists('workspacesPatch', 'uuid', uuid)
             // verify required parameter 'workspacesPatchWorkspaceRequest' is not null or undefined
             assertParamExists('workspacesPatch', 'workspacesPatchWorkspaceRequest', workspacesPatchWorkspaceRequest)
-            const localVarPath = `/workspaces/{uuid}`
+            const localVarPath = `/workspaces/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -919,7 +919,7 @@ export const WorkspacesReadApiAxiosParamCreator = function (configuration?: Conf
         workspacesRead: async (uuid: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('workspacesRead', 'uuid', uuid)
-            const localVarPath = `/workspaces/{uuid}`
+            const localVarPath = `/workspaces/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1028,7 +1028,7 @@ export const WorkspacesUpdateApiAxiosParamCreator = function (configuration?: Co
             assertParamExists('workspacesUpdate', 'uuid', uuid)
             // verify required parameter 'workspacesUpdateWorkspaceRequest' is not null or undefined
             assertParamExists('workspacesUpdate', 'workspacesUpdateWorkspaceRequest', workspacesUpdateWorkspaceRequest)
-            const localVarPath = `/workspaces/{uuid}`
+            const localVarPath = `/workspaces/{uuid}/`
                 .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

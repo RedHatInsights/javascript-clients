@@ -8,81 +8,52 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Errors, ReportTestResults200Response } from '../types';
+import type {  } from '../types';
 
 
-export type ReportTestResultsParams = {
+export type ReportTestResultsOSParams = {
   /**
   *
   * @type { any }
-  * @memberof ReportTestResultsApi
+  * @memberof ReportTestResultsOSApi
   */
   reportId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof ReportTestResultsApi
+  * @memberof ReportTestResultsOSApi
   */
   xRHIDENTITY?: any,
   /**
-  * Number of items to return per page
-  * @type { any }
-  * @memberof ReportTestResultsApi
-  */
-  limit?: any,
-  /**
-  * Offset of first item of paginated response
-  * @type { any }
-  * @memberof ReportTestResultsApi
-  */
-  offset?: any,
-  /**
-  * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
-  * @type { any }
-  * @memberof ReportTestResultsApi
-  */
-  sortBy?: any,
-  /**
   * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Test Results are searchable using attributes `score`, `supported`, `system_id`, `display_name`, `os_minor_version`, `security_guide_version`, `compliant`, `group_name`, and `failed_rule_severity`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
-  * @memberof ReportTestResultsApi
+  * @memberof ReportTestResultsOSApi
   */
   filter?: any,
   options?: AxiosRequestConfig
 }
 
-const isReportTestResultsObjectParams = (params: [ReportTestResultsParams] | unknown[]): params is [ReportTestResultsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true
+const isReportTestResultsOSObjectParams = (params: [ReportTestResultsOSParams] | unknown[]): params is [ReportTestResultsOSParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true
 }
 /**
-* Lists Test Results under a Report
-* @summary Request Test Results under a Report
-* @param {ReportTestResultsParams} config with all available params.
+* This feature is exclusively used by the frontend
+* @summary Request the list of available OS versions
+* @param {ReportTestResultsOSParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const reportTestResultsParamCreator = async (...config: ([ReportTestResultsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isReportTestResultsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsParams;
-    const { reportId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
-    const localVarPath = `/reports/{report_id}/test_results`
+export const reportTestResultsOSParamCreator = async (...config: ([ReportTestResultsOSParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportTestResultsOSObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsOSParams;
+    const { reportId, xRHIDENTITY, filter, options = {} } = params;
+    const localVarPath = `/reports/{report_id}/test_results/os_versions`
         .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
-
-    if (limit !== undefined) {
-        localVarQueryParameter['limit'] = limit;
-    }
-
-    if (offset !== undefined) {
-        localVarQueryParameter['offset'] = offset;
-    }
-
-    if (sortBy !== undefined) {
-        localVarQueryParameter['sort_by'] = sortBy;
-    }
 
     if (filter !== undefined) {
         localVarQueryParameter['filter'] = filter;
@@ -105,4 +76,4 @@ export const reportTestResultsParamCreator = async (...config: ([ReportTestResul
     };
 }
 
-export default reportTestResultsParamCreator;
+export default reportTestResultsOSParamCreator;

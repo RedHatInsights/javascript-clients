@@ -1996,6 +1996,12 @@ export interface SystemProfile {
     conversions?: SystemProfileConversions;
     /**
      *
+     * @type {SystemProfileRhelAi}
+     * @memberof SystemProfile
+     */
+    rhel_ai?: SystemProfileRhelAi;
+    /**
+     *
      * @type {SystemProfileThirdPartyServices}
      * @memberof SystemProfile
      */
@@ -2454,6 +2460,31 @@ export interface SystemProfileOperatingSystemOutValue {
     minor?: number | null;
 }
 /**
+ * Object containing information about RHEL AI
+ * @export
+ * @interface SystemProfileRhelAi
+ */
+export interface SystemProfileRhelAi {
+    /**
+     * RHEL AI VARIANT
+     * @type {string}
+     * @memberof SystemProfileRhelAi
+     */
+    variant?: string;
+    /**
+     * RHEL AI VERSION ID
+     * @type {string}
+     * @memberof SystemProfileRhelAi
+     */
+    rhel_ai_version_id?: string;
+    /**
+     * Model name of Nvidia GPUs in the GPU index order
+     * @type {Array<string>}
+     * @memberof SystemProfileRhelAi
+     */
+    nvidia_gpu_models?: Array<string>;
+}
+/**
  * Object for subscription-manager details
  * @export
  * @interface SystemProfileRhsm
@@ -2671,6 +2702,12 @@ export interface SystemProfileThirdPartyServicesCrowdstrike {
      * @memberof SystemProfileThirdPartyServicesCrowdstrike
      */
     falcon_backend?: string;
+    /**
+     * CrowdStrike running Falcon Sensor version
+     * @type {string}
+     * @memberof SystemProfileThirdPartyServicesCrowdstrike
+     */
+    falcon_version?: string;
 }
 /**
  * Representation of one yum repository
@@ -2885,7 +2922,7 @@ export interface YumRepo {
 export const AccountsStalenessApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create account staleness record. Required permissions: inventory:TODO:write
+         * Create account staleness record. Required permissions: staleness:staleness:write
          * @summary Create account staleness record
          * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -2941,7 +2978,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
          * @summary Delete an account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2988,7 +3025,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3035,7 +3072,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3082,7 +3119,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Update account staleness record. Required permissions: inventory:staleness:write
+         * Update account staleness record. Required permissions: staleness:staleness:write
          * @summary Update account staleness record
          * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -3147,7 +3184,7 @@ export const AccountsStalenessApiAxiosParamCreator = function (configuration?: C
 export const AccountsStalenessApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create account staleness record. Required permissions: inventory:TODO:write
+         * Create account staleness record. Required permissions: staleness:staleness:write
          * @summary Create account staleness record
          * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -3161,7 +3198,7 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
          * @summary Delete an account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3174,7 +3211,7 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3187,7 +3224,7 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3200,7 +3237,7 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
             };
         },
         /**
-         * Update account staleness record. Required permissions: inventory:staleness:write
+         * Update account staleness record. Required permissions: staleness:staleness:write
          * @summary Update account staleness record
          * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -3223,7 +3260,7 @@ export const AccountsStalenessApiFp = function(configuration?: Configuration) {
 export const AccountsStalenessApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Create account staleness record. Required permissions: inventory:TODO:write
+         * Create account staleness record. Required permissions: staleness:staleness:write
          * @summary Create account staleness record
          * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -3233,7 +3270,7 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
             return AccountsStalenessApiFp(configuration).apiStalenessCreateStaleness(stalenessIn, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+         * Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
          * @summary Delete an account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3242,7 +3279,7 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
             return AccountsStalenessApiFp(configuration).apiStalenessDeleteStaleness(options).then((request) => request(axios, basePath));
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3251,7 +3288,7 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
             return AccountsStalenessApiFp(configuration).apiStalenessGetDefaultStaleness(options).then((request) => request(axios, basePath));
         },
         /**
-         * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+         * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
          * @summary Read the entire list of account staleness
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3260,7 +3297,7 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
             return AccountsStalenessApiFp(configuration).apiStalenessGetStaleness(options).then((request) => request(axios, basePath));
         },
         /**
-         * Update account staleness record. Required permissions: inventory:staleness:write
+         * Update account staleness record. Required permissions: staleness:staleness:write
          * @summary Update account staleness record
          * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
          * @param {*} [options] Override http request option.
@@ -3280,7 +3317,7 @@ export const AccountsStalenessApiFactory = function (configuration?: Configurati
  */
 export class AccountsStalenessApi extends BaseAPI {
     /**
-     * Create account staleness record. Required permissions: inventory:TODO:write
+     * Create account staleness record. Required permissions: staleness:staleness:write
      * @summary Create account staleness record
      * @param {StalenessIn} stalenessIn Data required to create a record for a account staleness.
      * @param {*} [options] Override http request option.
@@ -3292,7 +3329,7 @@ export class AccountsStalenessApi extends BaseAPI {
     }
 
     /**
-     * Delete an account staleness <br /><br /> Required permissions: inventory:staleness:write
+     * Delete an account staleness <br /><br /> Required permissions: staleness:staleness:write
      * @summary Delete an account staleness
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3303,7 +3340,7 @@ export class AccountsStalenessApi extends BaseAPI {
     }
 
     /**
-     * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+     * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
      * @summary Read the entire list of account staleness
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3314,7 +3351,7 @@ export class AccountsStalenessApi extends BaseAPI {
     }
 
     /**
-     * Read the entire list of all accounts staleness available. Required permissions: inventory:TODO:read
+     * Read the entire list of all accounts staleness available. Required permissions: staleness:staleness:read
      * @summary Read the entire list of account staleness
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3325,7 +3362,7 @@ export class AccountsStalenessApi extends BaseAPI {
     }
 
     /**
-     * Update account staleness record. Required permissions: inventory:staleness:write
+     * Update account staleness record. Required permissions: staleness:staleness:write
      * @summary Update account staleness record
      * @param {StalenessIn} stalenessIn Data required to update a record for a account staleness.
      * @param {*} [options] Override http request option.

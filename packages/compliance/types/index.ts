@@ -404,31 +404,37 @@ export interface Report {
      */
     'profile_title'?: any;
     /**
-     * The number of Systems assigned to this Report
+     * Describes percentage of compliant systems
+     * @type {any}
+     * @memberof Report
+     */
+    'percent_compliant'?: any;
+    /**
+     * The number of Systems assigned to this Report. Not visible under the Systems endpoint.
      * @type {any}
      * @memberof Report
      */
     'assigned_system_count'?: any;
     /**
-     * The number of compliant Systems in this Report
+     * The number of compliant Systems in this Report. Inconsistent under the Systems endpoint.
      * @type {any}
      * @memberof Report
      */
     'compliant_system_count'?: any;
     /**
-     * Informs if the user has access to all the Systems under the Report
+     * Informs if the user has access to all the Systems under the Report. \\                             Inconsistent under the Systems endpoint.
      * @type {any}
      * @memberof Report
      */
     'all_systems_exposed'?: any;
     /**
-     * The number of unsupported Systems in this Report
+     * The number of unsupported Systems in this Report. \\                             Inconsistent under the Systems endpoint.
      * @type {any}
      * @memberof Report
      */
     'unsupported_system_count'?: any;
     /**
-     * The number of Systems in this Report that have Test Results available
+     * The number of Systems in this Report that have Test Results available. \\                             Inconsistent under the Systems endpoint.
      * @type {any}
      * @memberof Report
      */
@@ -466,6 +472,57 @@ export interface Report200ResponseData {
      * @memberof Report200ResponseData
      */
     'schema'?: Report;
+}
+/**
+ *
+ * @export
+ * @interface ReportRuleResults200Response
+ */
+export interface ReportRuleResults200Response {
+    /**
+     *
+     * @type {Metadata}
+     * @memberof ReportRuleResults200Response
+     */
+    'meta'?: Metadata;
+    /**
+     *
+     * @type {Links}
+     * @memberof ReportRuleResults200Response
+     */
+    'links'?: Links;
+    /**
+     *
+     * @type {any}
+     * @memberof ReportRuleResults200Response
+     */
+    'data'?: any;
+}
+/**
+ *
+ * @export
+ * @interface ReportStats200Response
+ */
+export interface ReportStats200Response {
+    /**
+     *
+     * @type {ReportStats200ResponseData}
+     * @memberof ReportStats200Response
+     */
+    'data'?: ReportStats200ResponseData;
+}
+/**
+ *
+ * @export
+ * @interface ReportStats200ResponseData
+ */
+export interface ReportStats200ResponseData {
+    /**
+     *
+     * @type {any}
+     * @memberof ReportStats200ResponseData
+     */
+    'schema'?: any;
 }
 /**
  *
@@ -571,6 +628,12 @@ export interface Rule {
      * @memberof Rule
      */
     'severity'?: any;
+    /**
+     * Whether or not a remediation is available for the given rule.
+     * @type {any}
+     * @memberof Rule
+     */
+    'remediation_available'?: any;
     /**
      * The idenfitier of the remediation associated to this rule, only available under profiles.
      * @type {any}
@@ -718,6 +781,105 @@ export interface RuleGroups200Response {
      */
     'data'?: any;
 }
+/**
+ *
+ * @export
+ * @interface RuleResult
+ */
+export interface RuleResult {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'id'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'type'?: RuleResultTypeEnum;
+    /**
+     * Status of the Rule Result
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'result'?: RuleResultResultEnum;
+    /**
+     * UUID of the affected Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'rule_id'?: any;
+    /**
+     * UUID of the affected System
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'system_id'?: any;
+    /**
+     * Identificator of the Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'ref_id'?: any;
+    /**
+     * Short title of the Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'title'?: any;
+    /**
+     * Rationale of the Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'rationale'?: any;
+    /**
+     * Longer description of the Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'description'?: any;
+    /**
+     * The original sorting precedence of the Rule in the Security Guide
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'precedence'?: any;
+    /**
+     * The severity of the Rule
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'severity'?: any;
+    /**
+     * The idenfitier of the remediation associated to this rule, only available under profiles.
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'remediation_issue_id'?: any;
+}
+
+export const RuleResultTypeEnum = {
+    Rule: 'rule'
+} as const;
+
+export type RuleResultTypeEnum = typeof RuleResultTypeEnum[keyof typeof RuleResultTypeEnum];
+export const RuleResultResultEnum = {
+    Pass: 'pass',
+    Fail: 'fail',
+    Error: 'error',
+    Unknown: 'unknown',
+    Fixed: 'fixed',
+    Notapplicable: 'notapplicable',
+    Notchecked: 'notchecked',
+    Informational: 'informational',
+    Notselected: 'notselected'
+} as const;
+
+export type RuleResultResultEnum = typeof RuleResultResultEnum[keyof typeof RuleResultResultEnum];
+
 /**
  *
  * @export
@@ -1110,6 +1272,12 @@ export interface Tailoring {
      * @memberof Tailoring
      */
     'security_guide_id'?: any;
+    /**
+     * Version of the Security Guide that contains the parent Profile
+     * @type {any}
+     * @memberof Tailoring
+     */
+    'security_guide_version'?: any;
     /**
      * Major version of the Operating System that the Tailoring covers
      * @type {any}

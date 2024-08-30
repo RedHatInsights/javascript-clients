@@ -8,74 +8,45 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Errors, Systems200Response } from '../types';
+import type {  } from '../types';
 
 
-export type SystemsParams = {
+export type SecurityGuidesOSParams = {
   /**
   * For internal use only
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SecurityGuidesOSApi
   */
   xRHIDENTITY?: any,
   /**
-  * Number of items to return per page
-  * @type { any }
-  * @memberof SystemsApi
-  */
-  limit?: any,
-  /**
-  * Offset of first item of paginated response
-  * @type { any }
-  * @memberof SystemsApi
-  */
-  offset?: any,
-  /**
-  * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
-  * @type { any }
-  * @memberof SystemsApi
-  */
-  sortBy?: any,
-  /**
   * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_major_version`, `os_minor_version`, `assigned_or_scanned`, `never_reported`, `group_name`, `policies`, and `profile_ref_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SecurityGuidesOSApi
   */
   filter?: any,
   options?: AxiosRequestConfig
 }
 
-const isSystemsObjectParams = (params: [SystemsParams] | unknown[]): params is [SystemsParams] => {
-  return params.length === 1 && true && true && true && true && true
+const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unknown[]): params is [SecurityGuidesOSParams] => {
+  return params.length === 1 && true && true
 }
 /**
-* Lists Systems
-* @summary Request Systems
-* @param {SystemsParams} config with all available params.
+* This feature is exclusively used by the frontend
+* @summary Request the list of available OS versions
+* @param {SecurityGuidesOSParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const systemsParamCreator = async (...config: ([SystemsParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSystemsObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemsParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
-    const localVarPath = `/systems`;
+export const securityGuidesOSParamCreator = async (...config: ([SecurityGuidesOSParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isSecurityGuidesOSObjectParams(config) ? config[0] : ['xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesOSParams;
+    const { xRHIDENTITY, filter, options = {} } = params;
+    const localVarPath = `/security_guides/os_versions`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
-
-    if (limit !== undefined) {
-        localVarQueryParameter['limit'] = limit;
-    }
-
-    if (offset !== undefined) {
-        localVarQueryParameter['offset'] = offset;
-    }
-
-    if (sortBy !== undefined) {
-        localVarQueryParameter['sort_by'] = sortBy;
-    }
 
     if (filter !== undefined) {
         localVarQueryParameter['filter'] = filter;
@@ -98,4 +69,4 @@ export const systemsParamCreator = async (...config: ([SystemsParams] | [any, an
     };
 }
 
-export default systemsParamCreator;
+export default securityGuidesOSParamCreator;
