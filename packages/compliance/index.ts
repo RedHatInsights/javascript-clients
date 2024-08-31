@@ -42,6 +42,10 @@ export { default as policySystems } from './PolicySystems'
 
 
 // end of operations block
+export { default as policySystemsOS } from './PolicySystemsOS'
+
+
+// end of operations block
 export { default as profile } from './Profile'
 
 
@@ -62,6 +66,14 @@ export { default as report } from './Report'
 
 
 // end of operations block
+export { default as reportRuleResults } from './ReportRuleResults'
+
+
+// end of operations block
+export { default as reportStats } from './ReportStats'
+
+
+// end of operations block
 export { default as reportSystem } from './ReportSystem'
 
 
@@ -70,11 +82,19 @@ export { default as reportSystems } from './ReportSystems'
 
 
 // end of operations block
+export { default as reportSystemsOS } from './ReportSystemsOS'
+
+
+// end of operations block
 export { default as reportTestResult } from './ReportTestResult'
 
 
 // end of operations block
 export { default as reportTestResults } from './ReportTestResults'
+
+
+// end of operations block
+export { default as reportTestResultsOS } from './ReportTestResultsOS'
 
 
 // end of operations block
@@ -110,6 +130,10 @@ export { default as securityGuides } from './SecurityGuides'
 
 
 // end of operations block
+export { default as securityGuidesOS } from './SecurityGuidesOS'
+
+
+// end of operations block
 export { default as supportedProfiles } from './SupportedProfiles'
 
 
@@ -118,7 +142,15 @@ export { default as system } from './System'
 
 
 // end of operations block
+export { default as systemReports } from './SystemReports'
+
+
+// end of operations block
 export { default as systems } from './Systems'
+
+
+// end of operations block
+export { default as systemsOS } from './SystemsOS'
 
 
 // end of operations block

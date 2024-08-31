@@ -34,7 +34,7 @@ const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]
 export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isWorkspacesReadObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
     const { uuid, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}`
+    const localVarPath = `/workspaces/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

@@ -8,57 +8,64 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Errors, Systems200Response } from '../types';
+import type { Errors, Reports200Response } from '../types';
 
 
-export type SystemsParams = {
+export type SystemReportsParams = {
+  /**
+  *
+  * @type { any }
+  * @memberof SystemReportsApi
+  */
+  systemId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SystemReportsApi
   */
   xRHIDENTITY?: any,
   /**
   * Number of items to return per page
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SystemReportsApi
   */
   limit?: any,
   /**
   * Offset of first item of paginated response
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SystemReportsApi
   */
   offset?: any,
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SystemReportsApi
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_major_version`, `os_minor_version`, `assigned_or_scanned`, `never_reported`, `group_name`, `policies`, and `profile_ref_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Reports are searchable using attributes `title`, `os_major_version`, and `with_reported_systems`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof SystemReportsApi
   */
   filter?: any,
   options?: AxiosRequestConfig
 }
 
-const isSystemsObjectParams = (params: [SystemsParams] | unknown[]): params is [SystemsParams] => {
-  return params.length === 1 && true && true && true && true && true
+const isSystemReportsObjectParams = (params: [SystemReportsParams] | unknown[]): params is [SystemReportsParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true
 }
 /**
-* Lists Systems
-* @summary Request Systems
-* @param {SystemsParams} config with all available params.
+* Lists Reports
+* @summary Request Reports
+* @param {SystemReportsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemsParamCreator = async (...config: ([SystemsParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSystemsObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemsParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
-    const localVarPath = `/systems`;
+export const systemReportsParamCreator = async (...config: ([SystemReportsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isSystemReportsObjectParams(config) ? config[0] : ['systemId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemReportsParams;
+    const { systemId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+    const localVarPath = `/systems/{system_id}/reports`
+        .replace(`{${"system_id"}}`, encodeURIComponent(String(systemId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -98,4 +105,4 @@ export const systemsParamCreator = async (...config: ([SystemsParams] | [any, an
     };
 }
 
-export default systemsParamCreator;
+export default systemReportsParamCreator;

@@ -39,7 +39,7 @@ const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown
 export const workspacesPatchParamCreator = async (...config: ([WorkspacesPatchParams] | [string, WorkspacesPatchWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isWorkspacesPatchObjectParams(config) ? config[0] : ['uuid', 'workspacesPatchWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesPatchParams;
     const { uuid, workspacesPatchWorkspaceRequest, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}`
+    const localVarPath = `/workspaces/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

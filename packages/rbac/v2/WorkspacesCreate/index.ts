@@ -34,7 +34,7 @@ const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unkno
 export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreateParams] | [WorkspacesBasicWorkspace, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isWorkspacesCreateObjectParams(config) ? config[0] : ['workspacesBasicWorkspace', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesCreateParams;
     const { workspacesBasicWorkspace, options = {} } = params;
-    const localVarPath = `/workspaces`;
+    const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'POST' as Method, ...options};

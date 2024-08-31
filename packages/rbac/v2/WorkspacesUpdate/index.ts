@@ -40,7 +40,7 @@ const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unkno
 export const workspacesUpdateParamCreator = async (...config: ([WorkspacesUpdateParams] | [string, WorkspacesUpdateWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isWorkspacesUpdateObjectParams(config) ? config[0] : ['uuid', 'workspacesUpdateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesUpdateParams;
     const { uuid, workspacesUpdateWorkspaceRequest, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}`
+    const localVarPath = `/workspaces/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

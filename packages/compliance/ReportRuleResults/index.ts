@@ -8,57 +8,71 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Errors, Systems200Response } from '../types';
+import type { Errors, ReportRuleResults200Response } from '../types';
 
 
-export type SystemsParams = {
+export type ReportRuleResultsParams = {
+  /**
+  *
+  * @type { any }
+  * @memberof ReportRuleResultsApi
+  */
+  testResultId: any,
+  /**
+  *
+  * @type { any }
+  * @memberof ReportRuleResultsApi
+  */
+  reportId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof ReportRuleResultsApi
   */
   xRHIDENTITY?: any,
   /**
   * Number of items to return per page
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof ReportRuleResultsApi
   */
   limit?: any,
   /**
   * Offset of first item of paginated response
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof ReportRuleResultsApi
   */
   offset?: any,
   /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof ReportRuleResultsApi
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_major_version`, `os_minor_version`, `assigned_or_scanned`, `never_reported`, `group_name`, `policies`, and `profile_ref_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Rule Results are searchable using attributes `result`, `title`, `severity`, and `remediation_available`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
-  * @memberof SystemsApi
+  * @memberof ReportRuleResultsApi
   */
   filter?: any,
   options?: AxiosRequestConfig
 }
 
-const isSystemsObjectParams = (params: [SystemsParams] | unknown[]): params is [SystemsParams] => {
-  return params.length === 1 && true && true && true && true && true
+const isReportRuleResultsObjectParams = (params: [ReportRuleResultsParams] | unknown[]): params is [ReportRuleResultsParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true
 }
 /**
-* Lists Systems
-* @summary Request Systems
-* @param {SystemsParams} config with all available params.
+* Lists Rule Results under a Report
+* @summary Request Rule Results under a Report
+* @param {ReportRuleResultsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemsParamCreator = async (...config: ([SystemsParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSystemsObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemsParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
-    const localVarPath = `/systems`;
+export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResultsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportRuleResultsObjectParams(config) ? config[0] : ['testResultId', 'reportId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportRuleResultsParams;
+    const { testResultId, reportId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+    const localVarPath = `/reports/{report_id}/test_results/{test_result_id}/rule_results`
+        .replace(`{${"test_result_id"}}`, encodeURIComponent(String(testResultId)))
+        .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -98,4 +112,4 @@ export const systemsParamCreator = async (...config: ([SystemsParams] | [any, an
     };
 }
 
-export default systemsParamCreator;
+export default reportRuleResultsParamCreator;

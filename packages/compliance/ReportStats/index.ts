@@ -8,54 +8,41 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Errors, Rule200Response } from '../types';
+import type { Errors, ReportStats200Response } from '../types';
 
 
-export type ProfileRuleParams = {
+export type ReportStatsParams = {
   /**
   *
   * @type { any }
-  * @memberof ProfileRuleApi
+  * @memberof ReportStatsApi
   */
-  securityGuideId: any,
-  /**
-  *
-  * @type { any }
-  * @memberof ProfileRuleApi
-  */
-  profileId: any,
-  /**
-  * UUID or a ref_id with \'.\' characters replaced with \'-\'
-  * @type { any }
-  * @memberof ProfileRuleApi
-  */
-  ruleId: any,
+  reportId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof ProfileRuleApi
+  * @memberof ReportStatsApi
   */
   xRHIDENTITY?: any,
   options?: AxiosRequestConfig
 }
 
-const isProfileRuleObjectParams = (params: [ProfileRuleParams] | unknown[]): params is [ProfileRuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+const isReportStatsObjectParams = (params: [ReportStatsParams] | unknown[]): params is [ReportStatsParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
-* Returns a Rule assigned to a Profile
-* @summary Request a Rule assigned to a Profile
-* @param {ProfileRuleParams} config with all available params.
+* Returns detailed stats for a Report
+* @summary Request detailed stats for a Report
+* @param {ReportStatsParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const profileRuleParamCreator = async (...config: ([ProfileRuleParams] | [any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isProfileRuleObjectParams(config) ? config[0] : ['securityGuideId', 'profileId', 'ruleId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileRuleParams;
-    const { securityGuideId, profileId, ruleId, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}/rules/{rule_id}`
-        .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
-        .replace(`{${"profile_id"}}`, encodeURIComponent(String(profileId)))
-        .replace(`{${"rule_id"}}`, encodeURIComponent(String(ruleId)));
+export const reportStatsParamCreator = async (...config: ([ReportStatsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportStatsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportStatsParams;
+    const { reportId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/reports/{report_id}/stats`
+        .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -79,4 +66,4 @@ export const profileRuleParamCreator = async (...config: ([ProfileRuleParams] | 
     };
 }
 
-export default profileRuleParamCreator;
+export default reportStatsParamCreator;
