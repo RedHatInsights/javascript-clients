@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.2.0...@redhat-cloud-services/compliance-client-0.2.1) (2024-08-31)
+
 ## [0.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.1.7...@redhat-cloud-services/compliance-client-0.2.0) (2024-08-05)
 
 
