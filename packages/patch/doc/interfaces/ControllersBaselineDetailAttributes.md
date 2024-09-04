@@ -11,8 +11,11 @@ ControllersBaselineDetailAttributes
 ### Properties
 
 - [config](ControllersBaselineDetailAttributes.md#config)
+- [creator](ControllersBaselineDetailAttributes.md#creator)
 - [description](ControllersBaselineDetailAttributes.md#description)
+- [last\_edited](ControllersBaselineDetailAttributes.md#last_edited)
 - [name](ControllersBaselineDetailAttributes.md#name)
+- [published](ControllersBaselineDetailAttributes.md#published)
 
 ## Properties
 
@@ -26,7 +29,21 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L403)
+types/index.ts:655
+
+___
+
+### creator
+
+• `Optional` **creator**: `string`
+
+**`Memberof`**
+
+ControllersBaselineDetailAttributes
+
+#### Defined in
+
+types/index.ts:661
 
 ___
 
@@ -40,7 +57,21 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L409)
+types/index.ts:667
+
+___
+
+### last\_edited
+
+• `Optional` **last\_edited**: `string`
+
+**`Memberof`**
+
+ControllersBaselineDetailAttributes
+
+#### Defined in
+
+types/index.ts:673
 
 ___
 
@@ -56,4 +87,18 @@ ControllersBaselineDetailAttributes
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L415)
+types/index.ts:679
+
+___
+
+### published
+
+• `Optional` **published**: `string`
+
+**`Memberof`**
+
+ControllersBaselineDetailAttributes
+
+#### Defined in
+
+types/index.ts:685

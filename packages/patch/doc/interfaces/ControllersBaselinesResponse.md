@@ -28,7 +28,7 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:586](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L586)
+types/index.ts:1110
 
 ___
 
@@ -42,13 +42,13 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:592](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L592)
+types/index.ts:1116
 
 ___
 
 ### meta
 
-• `Optional` **meta**: [`ControllersListMeta`](ControllersListMeta.md)
+• `Optional` **meta**: [`ControllersBaselinesMeta`](ControllersBaselinesMeta.md)
 
 **`Memberof`**
 
@@ -56,4 +56,4 @@ ControllersBaselinesResponse
 
 #### Defined in
 
-[api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L598)
+types/index.ts:1122

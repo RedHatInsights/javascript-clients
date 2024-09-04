@@ -26,7 +26,7 @@ ControllersAdvisoryItem
 
 #### Defined in
 
-[api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L273)
+types/index.ts:264
 
 ___
 
@@ -40,7 +40,7 @@ ControllersAdvisoryItem
 
 #### Defined in
 
-[api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L279)
+types/index.ts:270
 
 ___
 
@@ -54,4 +54,4 @@ ControllersAdvisoryItem
 
 #### Defined in
 
-[api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L285)
+types/index.ts:276

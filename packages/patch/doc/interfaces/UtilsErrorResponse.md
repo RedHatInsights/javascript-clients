@@ -24,4 +24,4 @@ UtilsErrorResponse
 
 #### Defined in
 
-[api.ts:1796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1796)
+types/index.ts:3416

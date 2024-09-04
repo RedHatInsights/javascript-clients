@@ -24,4 +24,4 @@ ControllersBaselineDetailResponse
 
 #### Defined in
 
-[api.ts:453](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L453)
+types/index.ts:723

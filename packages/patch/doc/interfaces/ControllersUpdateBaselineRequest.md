@@ -27,7 +27,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1733](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1733)
+types/index.ts:3353
 
 ___
 
@@ -43,7 +43,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1739](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1739)
+types/index.ts:3359
 
 ___
 
@@ -63,7 +63,7 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1745](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1745)
+types/index.ts:3365
 
 ___
 
@@ -79,4 +79,4 @@ ControllersUpdateBaselineRequest
 
 #### Defined in
 
-[api.ts:1751](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1751)
+types/index.ts:3371

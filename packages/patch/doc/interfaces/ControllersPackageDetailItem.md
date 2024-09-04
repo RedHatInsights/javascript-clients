@@ -26,7 +26,7 @@ ControllersPackageDetailItem
 
 #### Defined in
 
-[api.ts:804](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L804)
+types/index.ts:1442
 
 ___
 
@@ -40,7 +40,7 @@ ControllersPackageDetailItem
 
 #### Defined in
 
-[api.ts:810](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L810)
+types/index.ts:1448
 
 ___
 
@@ -54,4 +54,4 @@ ControllersPackageDetailItem
 
 #### Defined in
 
-[api.ts:816](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L816)
+types/index.ts:1454

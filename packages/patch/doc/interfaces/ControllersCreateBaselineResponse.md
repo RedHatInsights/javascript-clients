@@ -26,4 +26,4 @@ ControllersCreateBaselineResponse
 
 #### Defined in
 
-[api.ts:642](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L642)
+types/index.ts:1166

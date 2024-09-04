@@ -12,10 +12,12 @@ ControllersSystemPackageInline
 
 - [description](ControllersSystemPackageInline.md#description)
 - [evra](ControllersSystemPackageInline.md#evra)
-- [latest\_evra](ControllersSystemPackageInline.md#latest_evra)
+- [latest\_applicable](ControllersSystemPackageInline.md#latest_applicable)
+- [latest\_installable](ControllersSystemPackageInline.md#latest_installable)
 - [name](ControllersSystemPackageInline.md#name)
 - [summary](ControllersSystemPackageInline.md#summary)
 - [updatable](ControllersSystemPackageInline.md#updatable)
+- [update\_status](ControllersSystemPackageInline.md#update_status)
 
 ## Properties
 
@@ -29,7 +31,7 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1583)
+types/index.ts:2698
 
 ___
 
@@ -43,13 +45,13 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1589)
+types/index.ts:2704
 
 ___
 
-### latest\_evra
+### latest\_applicable
 
-• `Optional` **latest\_evra**: `string`
+• `Optional` **latest\_applicable**: `string`
 
 **`Memberof`**
 
@@ -57,7 +59,21 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1595)
+types/index.ts:2710
+
+___
+
+### latest\_installable
+
+• `Optional` **latest\_installable**: `string`
+
+**`Memberof`**
+
+ControllersSystemPackageInline
+
+#### Defined in
+
+types/index.ts:2716
 
 ___
 
@@ -71,7 +87,7 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1601)
+types/index.ts:2722
 
 ___
 
@@ -85,7 +101,7 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1607)
+types/index.ts:2728
 
 ___
 
@@ -99,4 +115,18 @@ ControllersSystemPackageInline
 
 #### Defined in
 
-[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1613)
+types/index.ts:2734
+
+___
+
+### update\_status
+
+• `Optional` **update\_status**: `string`
+
+**`Memberof`**
+
+ControllersSystemPackageInline
+
+#### Defined in
+
+types/index.ts:2740

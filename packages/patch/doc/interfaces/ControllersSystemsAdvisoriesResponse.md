@@ -11,6 +11,8 @@ ControllersSystemsAdvisoriesResponse
 ### Properties
 
 - [data](ControllersSystemsAdvisoriesResponse.md#data)
+- [links](ControllersSystemsAdvisoriesResponse.md#links)
+- [meta](ControllersSystemsAdvisoriesResponse.md#meta)
 
 ## Properties
 
@@ -28,4 +30,32 @@ ControllersSystemsAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1695](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1695)
+types/index.ts:2904
+
+___
+
+### links
+
+• `Optional` **links**: [`ControllersLinks`](ControllersLinks.md)
+
+**`Memberof`**
+
+ControllersSystemsAdvisoriesResponse
+
+#### Defined in
+
+types/index.ts:2910
+
+___
+
+### meta
+
+• `Optional` **meta**: [`ControllersListMeta`](ControllersListMeta.md)
+
+**`Memberof`**
+
+ControllersSystemsAdvisoriesResponse
+
+#### Defined in
+
+types/index.ts:2916

@@ -28,7 +28,7 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1083](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1083)
+types/index.ts:1775
 
 ___
 
@@ -42,7 +42,7 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1089)
+types/index.ts:1781
 
 ___
 
@@ -56,4 +56,4 @@ ControllersSystemAdvisoriesResponse
 
 #### Defined in
 
-[api.ts:1095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1095)
+types/index.ts:1787

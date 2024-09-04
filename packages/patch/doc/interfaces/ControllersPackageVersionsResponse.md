@@ -26,7 +26,7 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:966](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L966)
+types/index.ts:1658
 
 ___
 
@@ -40,7 +40,7 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:972](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L972)
+types/index.ts:1664
 
 ___
 
@@ -54,4 +54,4 @@ ControllersPackageVersionsResponse
 
 #### Defined in
 
-[api.ts:978](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L978)
+types/index.ts:1670

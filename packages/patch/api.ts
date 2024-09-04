@@ -1,4 +1,5 @@
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Patchman-engine API
  * API of the Patch application on [console.redhat.com](https://console.redhat.com)  Syntax of the `filter[name]` query parameters is described in  [Filters documentation](https://github.com/RedHatInsights/patchman-engine/wiki/API-custom-filters)
@@ -12,12 +13,15 @@
  */
 
 
-import * as globalImportUrl from 'url';
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
+// @ts-ignore
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  *
@@ -30,67 +34,67 @@ export interface ControllersAdvisoriesDBLookup {
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    advisory_type_name?: string;
+    'advisory_type_name'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    applicable_systems?: number;
+    'applicable_systems'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    cve_count?: number;
+    'cve_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    installable_systems?: number;
+    'installable_systems'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    public_date?: string;
+    'public_date'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    reboot_required?: boolean;
+    'reboot_required'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    release_versions?: Array<string>;
+    'release_versions'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    severity?: number;
+    'severity'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoriesDBLookup
      */
-    synopsis?: string;
+    'synopsis'?: string;
 }
 /**
  *
@@ -103,19 +107,19 @@ export interface ControllersAdvisoriesResponse {
      * @type {Array<ControllersAdvisoryItem>}
      * @memberof ControllersAdvisoriesResponse
      */
-    data?: Array<ControllersAdvisoryItem>;
+    'data'?: Array<ControllersAdvisoryItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersAdvisoriesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersAdvisoriesResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -128,19 +132,19 @@ export interface ControllersAdvisoriesSystemsResponse {
      * @type {{ [key: string]: Array<string>; }}
      * @memberof ControllersAdvisoriesSystemsResponse
      */
-    data?: { [key: string]: Array<string>; };
+    'data'?: { [key: string]: Array<string>; };
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersAdvisoriesSystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersAdvisoriesSystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -153,85 +157,85 @@ export interface ControllersAdvisoryDetailAttributes {
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    advisory_type_name?: string;
+    'advisory_type_name'?: string;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    cves?: Array<string>;
+    'cves'?: Array<string>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    fixes?: string;
+    'fixes'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    modified_date?: string;
+    'modified_date'?: string;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    packages?: Array<string>;
+    'packages'?: Array<string>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    public_date?: string;
+    'public_date'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    reboot_required?: boolean;
+    'reboot_required'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    references?: Array<string>;
+    'references'?: Array<string>;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    release_versions?: Array<string>;
+    'release_versions'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    severity?: number;
+    'severity'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    solution?: string;
+    'solution'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    synopsis?: string;
+    'synopsis'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailAttributes
      */
-    topic?: string;
+    'topic'?: string;
 }
 /**
  *
@@ -244,19 +248,19 @@ export interface ControllersAdvisoryDetailItem {
      * @type {ControllersAdvisoryDetailAttributes}
      * @memberof ControllersAdvisoryDetailItem
      */
-    attributes?: ControllersAdvisoryDetailAttributes;
+    'attributes'?: ControllersAdvisoryDetailAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryDetailItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -269,7 +273,7 @@ export interface ControllersAdvisoryDetailResponse {
      * @type {ControllersAdvisoryDetailItem}
      * @memberof ControllersAdvisoryDetailResponse
      */
-    data?: ControllersAdvisoryDetailItem;
+    'data'?: ControllersAdvisoryDetailItem;
 }
 /**
  *
@@ -282,19 +286,19 @@ export interface ControllersAdvisoryItem {
      * @type {ControllersAdvisoryItemAttributes}
      * @memberof ControllersAdvisoryItem
      */
-    attributes?: ControllersAdvisoryItemAttributes;
+    'attributes'?: ControllersAdvisoryItemAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -307,61 +311,61 @@ export interface ControllersAdvisoryItemAttributes {
      * @type {string}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    advisory_type_name?: string;
+    'advisory_type_name'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    applicable_systems?: number;
+    'applicable_systems'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    cve_count?: number;
+    'cve_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    installable_systems?: number;
+    'installable_systems'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    public_date?: string;
+    'public_date'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    reboot_required?: boolean;
+    'reboot_required'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    release_versions?: Array<string>;
+    'release_versions'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    severity?: number;
+    'severity'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisoryItemAttributes
      */
-    synopsis?: string;
+    'synopsis'?: string;
 }
 /**
  *
@@ -374,115 +378,115 @@ export interface ControllersAdvisorySystemDBLookup {
      * @type {number}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    built_pkgcache?: boolean;
+    'built_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    created?: string;
+    'created'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    culled_timestamp?: string;
+    'culled_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    stale?: boolean;
+    'stale'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    stale_timestamp?: string;
+    'stale_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    stale_warning_timestamp?: string;
+    'stale_warning_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    status?: string;
+    'status'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemDBLookup
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
 }
 /**
  *
@@ -495,19 +499,19 @@ export interface ControllersAdvisorySystemItem {
      * @type {ControllersAdvisorySystemItemAttributes}
      * @memberof ControllersAdvisorySystemItem
      */
-    attributes?: ControllersAdvisorySystemItemAttributes;
+    'attributes'?: ControllersAdvisorySystemItemAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -520,109 +524,109 @@ export interface ControllersAdvisorySystemItemAttributes {
      * @type {number}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    built_pkgcache?: boolean;
+    'built_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    created?: string;
+    'created'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    culled_timestamp?: string;
+    'culled_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    stale?: boolean;
+    'stale'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    stale_timestamp?: string;
+    'stale_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    stale_warning_timestamp?: string;
+    'stale_warning_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    status?: string;
+    'status'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersAdvisorySystemItemAttributes
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
 }
 /**
  *
@@ -635,19 +639,19 @@ export interface ControllersAdvisorySystemsResponse {
      * @type {Array<ControllersAdvisorySystemItem>}
      * @memberof ControllersAdvisorySystemsResponse
      */
-    data?: Array<ControllersAdvisorySystemItem>;
+    'data'?: Array<ControllersAdvisorySystemItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersAdvisorySystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersAdvisorySystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -660,7 +664,7 @@ export interface ControllersBaselineConfig {
      * @type {string}
      * @memberof ControllersBaselineConfig
      */
-    to_time?: string;
+    'to_time'?: string;
 }
 /**
  *
@@ -669,41 +673,41 @@ export interface ControllersBaselineConfig {
  */
 export interface ControllersBaselineDetailAttributes {
     /**
-     * Baseline config
+     *
      * @type {ControllersBaselineConfig}
      * @memberof ControllersBaselineDetailAttributes
      */
-    config?: ControllersBaselineConfig;
+    'config'?: ControllersBaselineConfig;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineDetailAttributes
      */
-    creator?: string;
+    'creator'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineDetailAttributes
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineDetailAttributes
      */
-    last_edited?: string;
+    'last_edited'?: string;
     /**
      * Baseline name
      * @type {string}
      * @memberof ControllersBaselineDetailAttributes
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineDetailAttributes
      */
-    published?: string;
+    'published'?: string;
 }
 /**
  *
@@ -712,23 +716,23 @@ export interface ControllersBaselineDetailAttributes {
  */
 export interface ControllersBaselineDetailItem {
     /**
-     * Additional baseline attributes
+     *
      * @type {ControllersBaselineDetailAttributes}
      * @memberof ControllersBaselineDetailItem
      */
-    attributes?: ControllersBaselineDetailAttributes;
+    'attributes'?: ControllersBaselineDetailAttributes;
     /**
      * Baseline ID
      * @type {number}
      * @memberof ControllersBaselineDetailItem
      */
-    id?: number;
+    'id'?: number;
     /**
      * Document type name
      * @type {string}
      * @memberof ControllersBaselineDetailItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -741,7 +745,7 @@ export interface ControllersBaselineDetailResponse {
      * @type {ControllersBaselineDetailItem}
      * @memberof ControllersBaselineDetailResponse
      */
-    data?: ControllersBaselineDetailItem;
+    'data'?: ControllersBaselineDetailItem;
 }
 /**
  *
@@ -750,23 +754,23 @@ export interface ControllersBaselineDetailResponse {
  */
 export interface ControllersBaselineItem {
     /**
-     * Additional baseline attributes
+     *
      * @type {ControllersBaselineItemAttributes}
      * @memberof ControllersBaselineItem
      */
-    attributes?: ControllersBaselineItemAttributes;
+    'attributes'?: ControllersBaselineItemAttributes;
     /**
      * Unique baseline id
      * @type {number}
      * @memberof ControllersBaselineItem
      */
-    id?: number;
+    'id'?: number;
     /**
      * Document type name
      * @type {string}
      * @memberof ControllersBaselineItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -779,31 +783,31 @@ export interface ControllersBaselineItemAttributes {
      * @type {string}
      * @memberof ControllersBaselineItemAttributes
      */
-    creator?: string;
+    'creator'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineItemAttributes
      */
-    last_edited?: string;
+    'last_edited'?: string;
     /**
      * Baseline name
      * @type {string}
      * @memberof ControllersBaselineItemAttributes
      */
-    name?: string;
+    'name'?: string;
     /**
      * Created and updated dates
      * @type {string}
      * @memberof ControllersBaselineItemAttributes
      */
-    published?: string;
+    'published'?: string;
     /**
      * Count of the systems associated with the baseline
      * @type {number}
      * @memberof ControllersBaselineItemAttributes
      */
-    systems?: number;
+    'systems'?: number;
 }
 /**
  *
@@ -816,85 +820,85 @@ export interface ControllersBaselineSystemAttributes {
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      * Baseline system display name
      * @type {string}
      * @memberof ControllersBaselineSystemAttributes
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersBaselineSystemAttributes
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemAttributes
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemAttributes
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemAttributes
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemAttributes
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersBaselineSystemAttributes
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
 }
 /**
  *
@@ -903,23 +907,23 @@ export interface ControllersBaselineSystemAttributes {
  */
 export interface ControllersBaselineSystemItem {
     /**
-     * Additional baseline system attributes
+     *
      * @type {ControllersBaselineSystemAttributes}
      * @memberof ControllersBaselineSystemItem
      */
-    attributes?: ControllersBaselineSystemAttributes;
+    'attributes'?: ControllersBaselineSystemAttributes;
     /**
      * Baseline system inventory ID (uuid format)
      * @type {string}
      * @memberof ControllersBaselineSystemItem
      */
-    inventory_id?: string;
+    'inventory_id'?: string;
     /**
      * Document type name
      * @type {string}
      * @memberof ControllersBaselineSystemItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -932,91 +936,91 @@ export interface ControllersBaselineSystemsDBLookup {
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      * Baseline system display name
      * @type {string}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersBaselineSystemsDBLookup
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
 }
 /**
  *
@@ -1029,7 +1033,7 @@ export interface ControllersBaselineSystemsRemoveRequest {
      * @type {Array<string>}
      * @memberof ControllersBaselineSystemsRemoveRequest
      */
-    inventory_ids?: Array<string>;
+    'inventory_ids'?: Array<string>;
 }
 /**
  *
@@ -1042,19 +1046,19 @@ export interface ControllersBaselineSystemsResponse {
      * @type {Array<ControllersBaselineSystemItem>}
      * @memberof ControllersBaselineSystemsResponse
      */
-    data?: Array<ControllersBaselineSystemItem>;
+    'data'?: Array<ControllersBaselineSystemItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersBaselineSystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersBaselineSystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -1067,55 +1071,55 @@ export interface ControllersBaselinesMeta {
      * @type {Array<string>}
      * @memberof ControllersBaselinesMeta
      */
-    creators?: Array<string>;
+    'creators'?: Array<string>;
     /**
      * Used filters
      * @type {{ [key: string]: ControllersFilterData; }}
      * @memberof ControllersBaselinesMeta
      */
-    filter?: { [key: string]: ControllersFilterData; };
+    'filter'?: { [key: string]: ControllersFilterData; };
     /**
      * Show whether customer has some registered systems
      * @type {boolean}
      * @memberof ControllersBaselinesMeta
      */
-    has_systems?: boolean;
+    'has_systems'?: boolean;
     /**
      * Used response limit (page size) - pagination
      * @type {number}
      * @memberof ControllersBaselinesMeta
      */
-    limit?: number;
+    'limit'?: number;
     /**
      * Used response offset - pagination
      * @type {number}
      * @memberof ControllersBaselinesMeta
      */
-    offset?: number;
+    'offset'?: number;
     /**
      * Used search terms
      * @type {string}
      * @memberof ControllersBaselinesMeta
      */
-    search?: string;
+    'search'?: string;
     /**
      * Used sorting fields
      * @type {Array<string>}
      * @memberof ControllersBaselinesMeta
      */
-    sort?: Array<string>;
+    'sort'?: Array<string>;
     /**
      * Some subtotals used by some endpoints
      * @type {{ [key: string]: number; }}
      * @memberof ControllersBaselinesMeta
      */
-    subtotals?: { [key: string]: number; };
+    'subtotals'?: { [key: string]: number; };
     /**
      * Total items count to return
      * @type {number}
      * @memberof ControllersBaselinesMeta
      */
-    total_items?: number;
+    'total_items'?: number;
 }
 /**
  *
@@ -1128,19 +1132,19 @@ export interface ControllersBaselinesResponse {
      * @type {Array<ControllersBaselineItem>}
      * @memberof ControllersBaselinesResponse
      */
-    data?: Array<ControllersBaselineItem>;
+    'data'?: Array<ControllersBaselineItem>;
     /**
-     * Pagination links
+     *
      * @type {ControllersLinks}
      * @memberof ControllersBaselinesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
-     * Generic response fields (pagination params, filters etc.)
+     *
      * @type {ControllersBaselinesMeta}
      * @memberof ControllersBaselinesResponse
      */
-    meta?: ControllersBaselinesMeta;
+    'meta'?: ControllersBaselinesMeta;
 }
 /**
  *
@@ -1149,29 +1153,29 @@ export interface ControllersBaselinesResponse {
  */
 export interface ControllersCreateBaselineRequest {
     /**
-     * Baseline config to filter applicable advisories and package updates for the associated systems (optional).
+     *
      * @type {ControllersBaselineConfig}
      * @memberof ControllersCreateBaselineRequest
      */
-    config?: ControllersBaselineConfig;
+    'config'?: ControllersBaselineConfig;
     /**
      * Description of the baseline (optional).
      * @type {string}
      * @memberof ControllersCreateBaselineRequest
      */
-    description?: string;
+    'description'?: string;
     /**
      * Inventory IDs list of systems to associate with this baseline (optional).
      * @type {Array<string>}
      * @memberof ControllersCreateBaselineRequest
      */
-    inventory_ids?: Array<string>;
+    'inventory_ids'?: Array<string>;
     /**
      * Baseline name
      * @type {string}
      * @memberof ControllersCreateBaselineRequest
      */
-    name?: string;
+    'name'?: string;
 }
 /**
  *
@@ -1184,7 +1188,7 @@ export interface ControllersCreateBaselineResponse {
      * @type {number}
      * @memberof ControllersCreateBaselineResponse
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
 }
 /**
  *
@@ -1197,7 +1201,7 @@ export interface ControllersDeleteBaselineResponse {
      * @type {number}
      * @memberof ControllersDeleteBaselineResponse
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
 }
 /**
  *
@@ -1210,13 +1214,13 @@ export interface ControllersFilterData {
      * @type {string}
      * @memberof ControllersFilterData
      */
-    op?: string;
+    'op'?: string;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersFilterData
      */
-    values?: Array<string>;
+    'values'?: Array<string>;
 }
 /**
  *
@@ -1229,7 +1233,7 @@ export interface ControllersIDPlain {
      * @type {string}
      * @memberof ControllersIDPlain
      */
-    id?: string;
+    'id'?: string;
 }
 /**
  *
@@ -1242,13 +1246,13 @@ export interface ControllersIDSatelliteManaged {
      * @type {string}
      * @memberof ControllersIDSatelliteManaged
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersIDSatelliteManaged
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
 }
 /**
  *
@@ -1261,13 +1265,13 @@ export interface ControllersIDStatus {
      * @type {string}
      * @memberof ControllersIDStatus
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersIDStatus
      */
-    status?: string;
+    'status'?: string;
 }
 /**
  *
@@ -1280,13 +1284,13 @@ export interface ControllersIDsPlainResponse {
      * @type {Array<ControllersIDPlain>}
      * @memberof ControllersIDsPlainResponse
      */
-    data?: Array<ControllersIDPlain>;
+    'data'?: Array<ControllersIDPlain>;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersIDsPlainResponse
      */
-    ids?: Array<string>;
+    'ids'?: Array<string>;
 }
 /**
  *
@@ -1299,13 +1303,13 @@ export interface ControllersIDsSatelliteManagedResponse {
      * @type {Array<ControllersIDSatelliteManaged>}
      * @memberof ControllersIDsSatelliteManagedResponse
      */
-    data?: Array<ControllersIDSatelliteManaged>;
+    'data'?: Array<ControllersIDSatelliteManaged>;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersIDsSatelliteManagedResponse
      */
-    ids?: Array<string>;
+    'ids'?: Array<string>;
 }
 /**
  *
@@ -1318,13 +1322,13 @@ export interface ControllersIDsStatusResponse {
      * @type {Array<ControllersIDStatus>}
      * @memberof ControllersIDsStatusResponse
      */
-    data?: Array<ControllersIDStatus>;
+    'data'?: Array<ControllersIDStatus>;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersIDsStatusResponse
      */
-    ids?: Array<string>;
+    'ids'?: Array<string>;
 }
 /**
  *
@@ -1337,25 +1341,25 @@ export interface ControllersLinks {
      * @type {string}
      * @memberof ControllersLinks
      */
-    first?: string;
+    'first'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersLinks
      */
-    last?: string;
+    'last'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersLinks
      */
-    next?: string;
+    'next'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersLinks
      */
-    previous?: string;
+    'previous'?: string;
 }
 /**
  *
@@ -1368,49 +1372,49 @@ export interface ControllersListMeta {
      * @type {{ [key: string]: ControllersFilterData; }}
      * @memberof ControllersListMeta
      */
-    filter?: { [key: string]: ControllersFilterData; };
+    'filter'?: { [key: string]: ControllersFilterData; };
     /**
      * Show whether customer has some registered systems
      * @type {boolean}
      * @memberof ControllersListMeta
      */
-    has_systems?: boolean;
+    'has_systems'?: boolean;
     /**
      * Used response limit (page size) - pagination
      * @type {number}
      * @memberof ControllersListMeta
      */
-    limit?: number;
+    'limit'?: number;
     /**
      * Used response offset - pagination
      * @type {number}
      * @memberof ControllersListMeta
      */
-    offset?: number;
+    'offset'?: number;
     /**
      * Used search terms
      * @type {string}
      * @memberof ControllersListMeta
      */
-    search?: string;
+    'search'?: string;
     /**
      * Used sorting fields
      * @type {Array<string>}
      * @memberof ControllersListMeta
      */
-    sort?: Array<string>;
+    'sort'?: Array<string>;
     /**
      * Some subtotals used by some endpoints
      * @type {{ [key: string]: number; }}
      * @memberof ControllersListMeta
      */
-    subtotals?: { [key: string]: number; };
+    'subtotals'?: { [key: string]: number; };
     /**
      * Total items count to return
      * @type {number}
      * @memberof ControllersListMeta
      */
-    total_items?: number;
+    'total_items'?: number;
 }
 /**
  *
@@ -1423,31 +1427,31 @@ export interface ControllersPackageDetailAttributes {
      * @type {string}
      * @memberof ControllersPackageDetailAttributes
      */
-    advisory_id?: string;
+    'advisory_id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailAttributes
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailAttributes
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailAttributes
      */
-    summary?: string;
+    'summary'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailAttributes
      */
-    version?: string;
+    'version'?: string;
 }
 /**
  *
@@ -1460,19 +1464,19 @@ export interface ControllersPackageDetailItem {
      * @type {ControllersPackageDetailAttributes}
      * @memberof ControllersPackageDetailItem
      */
-    attributes?: ControllersPackageDetailAttributes;
+    'attributes'?: ControllersPackageDetailAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageDetailItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -1485,7 +1489,7 @@ export interface ControllersPackageDetailResponse {
      * @type {ControllersPackageDetailItem}
      * @memberof ControllersPackageDetailResponse
      */
-    data?: ControllersPackageDetailItem;
+    'data'?: ControllersPackageDetailItem;
 }
 /**
  *
@@ -1498,31 +1502,31 @@ export interface ControllersPackageItem {
      * @type {string}
      * @memberof ControllersPackageItem
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageItem
      */
-    summary?: string;
+    'summary'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersPackageItem
      */
-    systems_applicable?: number;
+    'systems_applicable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersPackageItem
      */
-    systems_installable?: number;
+    'systems_installable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersPackageItem
      */
-    systems_installed?: number;
+    'systems_installed'?: number;
 }
 /**
  *
@@ -1535,97 +1539,97 @@ export interface ControllersPackageSystemItem {
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    available_evra?: string;
+    'available_evra'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersPackageSystemItem
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersPackageSystemItem
      */
-    baseline_uptodate?: boolean;
+    'baseline_uptodate'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersPackageSystemItem
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    installed_evra?: string;
+    'installed_evra'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersPackageSystemItem
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersPackageSystemItem
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersPackageSystemItem
      */
-    updatable?: boolean;
+    'updatable'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersPackageSystemItem
      */
-    update_status?: string;
+    'update_status'?: string;
 }
 /**
  *
@@ -1638,19 +1642,19 @@ export interface ControllersPackageSystemsResponse {
      * @type {Array<ControllersPackageSystemItem>}
      * @memberof ControllersPackageSystemsResponse
      */
-    data?: Array<ControllersPackageSystemItem>;
+    'data'?: Array<ControllersPackageSystemItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersPackageSystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersPackageSystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -1663,7 +1667,7 @@ export interface ControllersPackageVersionItem {
      * @type {string}
      * @memberof ControllersPackageVersionItem
      */
-    evra?: string;
+    'evra'?: string;
 }
 /**
  *
@@ -1676,19 +1680,19 @@ export interface ControllersPackageVersionsResponse {
      * @type {Array<ControllersPackageVersionItem>}
      * @memberof ControllersPackageVersionsResponse
      */
-    data?: Array<ControllersPackageVersionItem>;
+    'data'?: Array<ControllersPackageVersionItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersPackageVersionsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersPackageVersionsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -1701,19 +1705,19 @@ export interface ControllersPackagesResponse {
      * @type {Array<ControllersPackageItem>}
      * @memberof ControllersPackagesResponse
      */
-    data?: Array<ControllersPackageItem>;
+    'data'?: Array<ControllersPackageItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersPackagesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersPackagesResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -1726,61 +1730,61 @@ export interface ControllersSystemAdvisoriesDBLookup {
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    advisory_type_name?: string;
+    'advisory_type_name'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    cve_count?: number;
+    'cve_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    public_date?: string;
+    'public_date'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    reboot_required?: boolean;
+    'reboot_required'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    release_versions?: Array<string>;
+    'release_versions'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    severity?: number;
+    'severity'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    status?: string;
+    'status'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoriesDBLookup
      */
-    synopsis?: string;
+    'synopsis'?: string;
 }
 /**
  *
@@ -1793,19 +1797,19 @@ export interface ControllersSystemAdvisoriesResponse {
      * @type {Array<ControllersSystemAdvisoryItem>}
      * @memberof ControllersSystemAdvisoriesResponse
      */
-    data?: Array<ControllersSystemAdvisoryItem>;
+    'data'?: Array<ControllersSystemAdvisoryItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersSystemAdvisoriesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersSystemAdvisoriesResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -1818,19 +1822,19 @@ export interface ControllersSystemAdvisoryItem {
      * @type {ControllersSystemAdvisoryItemAttributes}
      * @memberof ControllersSystemAdvisoryItem
      */
-    attributes?: ControllersSystemAdvisoryItemAttributes;
+    'attributes'?: ControllersSystemAdvisoryItemAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -1843,55 +1847,55 @@ export interface ControllersSystemAdvisoryItemAttributes {
      * @type {string}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    advisory_type_name?: string;
+    'advisory_type_name'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    cve_count?: number;
+    'cve_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    public_date?: string;
+    'public_date'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    reboot_required?: boolean;
+    'reboot_required'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    release_versions?: Array<string>;
+    'release_versions'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    severity?: number;
+    'severity'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    status?: string;
+    'status'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemAdvisoryItemAttributes
      */
-    synopsis?: string;
+    'synopsis'?: string;
 }
 /**
  *
@@ -1904,211 +1908,211 @@ export interface ControllersSystemDBLookup {
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    arch?: string;
+    'arch'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemDBLookup
      */
-    built_pkgcache?: boolean;
+    'built_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    created?: string;
+    'created'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    culled_timestamp?: string;
+    'culled_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersSystemDBLookup
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    last_evaluation?: string;
+    'last_evaluation'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    other_count?: number;
+    'other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    packages_applicable?: number;
+    'packages_applicable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    packages_installable?: number;
+    'packages_installable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    packages_installed?: number;
+    'packages_installed'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    rhba_count?: number;
+    'rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    rhea_count?: number;
+    'rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemDBLookup
      */
-    rhsa_count?: number;
+    'rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemDBLookup
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemDBLookup
      */
-    stale?: boolean;
+    'stale'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    stale_timestamp?: string;
+    'stale_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    stale_warning_timestamp?: string;
+    'stale_warning_timestamp'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersSystemDBLookup
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemDBLookup
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
 }
 /**
  *
@@ -2121,7 +2125,7 @@ export interface ControllersSystemDetailResponse {
      * @type {ControllersSystemItemExtended}
      * @memberof ControllersSystemDetailResponse
      */
-    data?: ControllersSystemItemExtended;
+    'data'?: ControllersSystemItemExtended;
 }
 /**
  *
@@ -2134,13 +2138,13 @@ export interface ControllersSystemGroup {
      * @type {string}
      * @memberof ControllersSystemGroup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemGroup
      */
-    name?: string;
+    'name'?: string;
 }
 /**
  *
@@ -2153,19 +2157,19 @@ export interface ControllersSystemItem {
      * @type {ControllersSystemItemAttributes}
      * @memberof ControllersSystemItem
      */
-    attributes?: ControllersSystemItemAttributes;
+    'attributes'?: ControllersSystemItemAttributes;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItem
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -2178,205 +2182,205 @@ export interface ControllersSystemItemAttributes {
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    arch?: string;
+    'arch'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributes
      */
-    built_pkgcache?: boolean;
+    'built_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    created?: string;
+    'created'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    culled_timestamp?: string;
+    'culled_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersSystemItemAttributes
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    last_evaluation?: string;
+    'last_evaluation'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    other_count?: number;
+    'other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    packages_applicable?: number;
+    'packages_applicable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    packages_installable?: number;
+    'packages_installable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    packages_installed?: number;
+    'packages_installed'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    rhba_count?: number;
+    'rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    rhea_count?: number;
+    'rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributes
      */
-    rhsa_count?: number;
+    'rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributes
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributes
      */
-    stale?: boolean;
+    'stale'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    stale_timestamp?: string;
+    'stale_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    stale_warning_timestamp?: string;
+    'stale_warning_timestamp'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersSystemItemAttributes
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributes
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
 }
 /**
  *
@@ -2389,247 +2393,247 @@ export interface ControllersSystemItemAttributesExtended {
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    arch?: string;
+    'arch'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    baseline_name?: string;
+    'baseline_name'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    baseline_uptodate?: boolean;
+    'baseline_uptodate'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    built_pkgcache?: boolean;
+    'built_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    created?: string;
+    'created'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    culled_timestamp?: string;
+    'culled_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    insights_id?: string;
+    'insights_id'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    last_evaluation?: string;
+    'last_evaluation'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    os_major?: string;
+    'os_major'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    os_minor?: string;
+    'os_minor'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    os_name?: string;
+    'os_name'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    other_count?: number;
+    'other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    packages_applicable?: number;
+    'packages_applicable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    packages_installable?: number;
+    'packages_installable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    packages_installed?: number;
+    'packages_installed'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    packages_updatable?: number;
+    'packages_updatable'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    rhba_count?: number;
+    'rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    rhea_count?: number;
+    'rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    rhsa_count?: number;
+    'rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    satellite_managed?: boolean;
+    'satellite_managed'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    stale?: boolean;
+    'stale'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    stale_timestamp?: string;
+    'stale_timestamp'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    stale_warning_timestamp?: string;
+    'stale_warning_timestamp'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    template_name?: string;
+    'template_name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    template_uuid?: string;
+    'template_uuid'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemItemAttributesExtended
      */
-    third_party?: boolean;
+    'third_party'?: boolean;
 }
 /**
  *
@@ -2642,19 +2646,19 @@ export interface ControllersSystemItemExtended {
      * @type {ControllersSystemItemAttributesExtended}
      * @memberof ControllersSystemItemExtended
      */
-    attributes?: ControllersSystemItemAttributesExtended;
+    'attributes'?: ControllersSystemItemAttributesExtended;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemExtended
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemItemExtended
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -2667,43 +2671,43 @@ export interface ControllersSystemPackageData {
      * @type {string}
      * @memberof ControllersSystemPackageData
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageData
      */
-    evra?: string;
+    'evra'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageData
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageData
      */
-    summary?: string;
+    'summary'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemPackageData
      */
-    updatable?: boolean;
+    'updatable'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageData
      */
-    update_status?: string;
+    'update_status'?: string;
     /**
      *
      * @type {Array<ModelsPackageUpdate>}
      * @memberof ControllersSystemPackageData
      */
-    updates?: Array<ModelsPackageUpdate>;
+    'updates'?: Array<ModelsPackageUpdate>;
 }
 /**
  *
@@ -2716,49 +2720,49 @@ export interface ControllersSystemPackageInline {
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    evra?: string;
+    'evra'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    latest_applicable?: string;
+    'latest_applicable'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    latest_installable?: string;
+    'latest_installable'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    summary?: string;
+    'summary'?: string;
     /**
      *
      * @type {boolean}
      * @memberof ControllersSystemPackageInline
      */
-    updatable?: boolean;
+    'updatable'?: boolean;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemPackageInline
      */
-    update_status?: string;
+    'update_status'?: string;
 }
 /**
  *
@@ -2771,19 +2775,19 @@ export interface ControllersSystemPackageResponse {
      * @type {Array<ControllersSystemPackageData>}
      * @memberof ControllersSystemPackageResponse
      */
-    data?: Array<ControllersSystemPackageData>;
+    'data'?: Array<ControllersSystemPackageData>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersSystemPackageResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersSystemPackageResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -2796,19 +2800,19 @@ export interface ControllersSystemTag {
      * @type {string}
      * @memberof ControllersSystemTag
      */
-    key?: string;
+    'key'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemTag
      */
-    namespace?: string;
+    'namespace'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersSystemTag
      */
-    value?: string;
+    'value'?: string;
 }
 /**
  *
@@ -2821,13 +2825,13 @@ export interface ControllersSystemTagItem {
      * @type {number}
      * @memberof ControllersSystemTagItem
      */
-    count?: number;
+    'count'?: number;
     /**
      *
      * @type {ControllersSystemTag}
      * @memberof ControllersSystemTagItem
      */
-    tag?: ControllersSystemTag;
+    'tag'?: ControllersSystemTag;
 }
 /**
  *
@@ -2840,19 +2844,19 @@ export interface ControllersSystemTagsResponse {
      * @type {Array<ControllersSystemTagItem>}
      * @memberof ControllersSystemTagsResponse
      */
-    data?: Array<ControllersSystemTagItem>;
+    'data'?: Array<ControllersSystemTagItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersSystemTagsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersSystemTagsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -2865,7 +2869,7 @@ export interface ControllersSystemVmaasJSONResponse {
      * @type {VmaasUpdatesV3Request}
      * @memberof ControllersSystemVmaasJSONResponse
      */
-    data?: VmaasUpdatesV3Request;
+    'data'?: VmaasUpdatesV3Request;
 }
 /**
  *
@@ -2878,7 +2882,7 @@ export interface ControllersSystemYumUpdatesResponse {
      * @type {VmaasUpdatesV3Response}
      * @memberof ControllersSystemYumUpdatesResponse
      */
-    data?: VmaasUpdatesV3Response;
+    'data'?: VmaasUpdatesV3Response;
 }
 /**
  *
@@ -2891,25 +2895,25 @@ export interface ControllersSystemsAdvisoriesRequest {
      * @type {Array<string>}
      * @memberof ControllersSystemsAdvisoriesRequest
      */
-    advisories?: Array<string>;
+    'advisories'?: Array<string>;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemsAdvisoriesRequest
      */
-    limit?: number;
+    'limit'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersSystemsAdvisoriesRequest
      */
-    offset?: number;
+    'offset'?: number;
     /**
      *
      * @type {Array<string>}
      * @memberof ControllersSystemsAdvisoriesRequest
      */
-    systems?: Array<string>;
+    'systems'?: Array<string>;
 }
 /**
  *
@@ -2922,19 +2926,19 @@ export interface ControllersSystemsAdvisoriesResponse {
      * @type {{ [key: string]: Array<string>; }}
      * @memberof ControllersSystemsAdvisoriesResponse
      */
-    data?: { [key: string]: Array<string>; };
+    'data'?: { [key: string]: Array<string>; };
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersSystemsAdvisoriesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersSystemsAdvisoriesResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -2947,19 +2951,19 @@ export interface ControllersSystemsResponse {
      * @type {Array<ControllersSystemItem>}
      * @memberof ControllersSystemsResponse
      */
-    data?: Array<ControllersSystemItem>;
+    'data'?: Array<ControllersSystemItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersSystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersSystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -2968,23 +2972,23 @@ export interface ControllersSystemsResponse {
  */
 export interface ControllersTemplateItem {
     /**
-     * Additional template attributes
+     *
      * @type {ControllersTemplateItemAttributes}
      * @memberof ControllersTemplateItem
      */
-    attributes?: ControllersTemplateItemAttributes;
+    'attributes'?: ControllersTemplateItemAttributes;
     /**
      * Unique template id
      * @type {string}
      * @memberof ControllersTemplateItem
      */
-    id?: string;
+    'id'?: string;
     /**
      * Document type name
      * @type {string}
      * @memberof ControllersTemplateItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -2997,31 +3001,31 @@ export interface ControllersTemplateItemAttributes {
      * @type {string}
      * @memberof ControllersTemplateItemAttributes
      */
-    creator?: string;
+    'creator'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateItemAttributes
      */
-    last_edited?: string;
+    'last_edited'?: string;
     /**
      * Template name
      * @type {string}
      * @memberof ControllersTemplateItemAttributes
      */
-    name?: string;
+    'name'?: string;
     /**
      * Created and updated dates
      * @type {string}
      * @memberof ControllersTemplateItemAttributes
      */
-    published?: string;
+    'published'?: string;
     /**
      * Count of the systems associated with the template
      * @type {number}
      * @memberof ControllersTemplateItemAttributes
      */
-    systems?: number;
+    'systems'?: number;
 }
 /**
  *
@@ -3034,85 +3038,85 @@ export interface ControllersTemplateSystemAttributes {
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemAttributes
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersTemplateSystemAttributes
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemAttributes
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemAttributes
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemAttributes
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemAttributes
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersTemplateSystemAttributes
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
 }
 /**
  *
@@ -3125,19 +3129,19 @@ export interface ControllersTemplateSystemItem {
      * @type {ControllersTemplateSystemAttributes}
      * @memberof ControllersTemplateSystemItem
      */
-    attributes?: ControllersTemplateSystemAttributes;
+    'attributes'?: ControllersTemplateSystemAttributes;
     /**
      * Template system inventory ID (uuid format)
      * @type {string}
      * @memberof ControllersTemplateSystemItem
      */
-    inventory_id?: string;
+    'inventory_id'?: string;
     /**
      * Document type name
      * @type {string}
      * @memberof ControllersTemplateSystemItem
      */
-    type?: string;
+    'type'?: string;
 }
 /**
  *
@@ -3150,91 +3154,91 @@ export interface ControllersTemplateSystemsDBLookup {
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    applicable_other_count?: number;
+    'applicable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    applicable_rhba_count?: number;
+    'applicable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    applicable_rhea_count?: number;
+    'applicable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    applicable_rhsa_count?: number;
+    'applicable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      *
      * @type {Array<ControllersSystemGroup>}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    groups?: Array<ControllersSystemGroup>;
+    'groups'?: Array<ControllersSystemGroup>;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    installable_other_count?: number;
+    'installable_other_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    installable_rhba_count?: number;
+    'installable_rhba_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    installable_rhea_count?: number;
+    'installable_rhea_count'?: number;
     /**
      *
      * @type {number}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    installable_rhsa_count?: number;
+    'installable_rhsa_count'?: number;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    last_upload?: string;
+    'last_upload'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    os?: string;
+    'os'?: string;
     /**
      *
      * @type {string}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    rhsm?: string;
+    'rhsm'?: string;
     /**
      *
      * @type {Array<ControllersSystemTag>}
      * @memberof ControllersTemplateSystemsDBLookup
      */
-    tags?: Array<ControllersSystemTag>;
+    'tags'?: Array<ControllersSystemTag>;
 }
 /**
  *
@@ -3247,19 +3251,19 @@ export interface ControllersTemplateSystemsResponse {
      * @type {Array<ControllersTemplateSystemItem>}
      * @memberof ControllersTemplateSystemsResponse
      */
-    data?: Array<ControllersTemplateSystemItem>;
+    'data'?: Array<ControllersTemplateSystemItem>;
     /**
      *
      * @type {ControllersLinks}
      * @memberof ControllersTemplateSystemsResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
      *
      * @type {ControllersListMeta}
      * @memberof ControllersTemplateSystemsResponse
      */
-    meta?: ControllersListMeta;
+    'meta'?: ControllersListMeta;
 }
 /**
  *
@@ -3272,7 +3276,7 @@ export interface ControllersTemplateSystemsUpdateRequest {
      * @type {Array<string>}
      * @memberof ControllersTemplateSystemsUpdateRequest
      */
-    systems?: Array<string>;
+    'systems'?: Array<string>;
 }
 /**
  *
@@ -3285,55 +3289,55 @@ export interface ControllersTemplatesMeta {
      * @type {Array<string>}
      * @memberof ControllersTemplatesMeta
      */
-    creators?: Array<string>;
+    'creators'?: Array<string>;
     /**
      * Used filters
      * @type {{ [key: string]: ControllersFilterData; }}
      * @memberof ControllersTemplatesMeta
      */
-    filter?: { [key: string]: ControllersFilterData; };
+    'filter'?: { [key: string]: ControllersFilterData; };
     /**
      * Show whether customer has some registered systems
      * @type {boolean}
      * @memberof ControllersTemplatesMeta
      */
-    has_systems?: boolean;
+    'has_systems'?: boolean;
     /**
      * Used response limit (page size) - pagination
      * @type {number}
      * @memberof ControllersTemplatesMeta
      */
-    limit?: number;
+    'limit'?: number;
     /**
      * Used response offset - pagination
      * @type {number}
      * @memberof ControllersTemplatesMeta
      */
-    offset?: number;
+    'offset'?: number;
     /**
      * Used search terms
      * @type {string}
      * @memberof ControllersTemplatesMeta
      */
-    search?: string;
+    'search'?: string;
     /**
      * Used sorting fields
      * @type {Array<string>}
      * @memberof ControllersTemplatesMeta
      */
-    sort?: Array<string>;
+    'sort'?: Array<string>;
     /**
      * Some subtotals used by some endpoints
      * @type {{ [key: string]: number; }}
      * @memberof ControllersTemplatesMeta
      */
-    subtotals?: { [key: string]: number; };
+    'subtotals'?: { [key: string]: number; };
     /**
      * Total items count to return
      * @type {number}
      * @memberof ControllersTemplatesMeta
      */
-    total_items?: number;
+    'total_items'?: number;
 }
 /**
  *
@@ -3346,19 +3350,19 @@ export interface ControllersTemplatesResponse {
      * @type {Array<ControllersTemplateItem>}
      * @memberof ControllersTemplatesResponse
      */
-    data?: Array<ControllersTemplateItem>;
+    'data'?: Array<ControllersTemplateItem>;
     /**
-     * Pagination links
+     *
      * @type {ControllersLinks}
      * @memberof ControllersTemplatesResponse
      */
-    links?: ControllersLinks;
+    'links'?: ControllersLinks;
     /**
-     * Generic response fields (pagination params, filters etc.)
+     *
      * @type {ControllersTemplatesMeta}
      * @memberof ControllersTemplatesResponse
      */
-    meta?: ControllersTemplatesMeta;
+    'meta'?: ControllersTemplatesMeta;
 }
 /**
  *
@@ -3367,29 +3371,29 @@ export interface ControllersTemplatesResponse {
  */
 export interface ControllersUpdateBaselineRequest {
     /**
-     * Updated baseline config (optional)
+     *
      * @type {ControllersBaselineConfig}
      * @memberof ControllersUpdateBaselineRequest
      */
-    config?: ControllersBaselineConfig;
+    'config'?: ControllersBaselineConfig;
     /**
      * Description of the baseline (optional).
      * @type {string}
      * @memberof ControllersUpdateBaselineRequest
      */
-    description?: string;
+    'description'?: string;
     /**
      * Map of inventories to add to (true) or remove (false) from given baseline (optional)
      * @type {{ [key: string]: boolean; }}
      * @memberof ControllersUpdateBaselineRequest
      */
-    inventory_ids?: { [key: string]: boolean; };
+    'inventory_ids'?: { [key: string]: boolean; };
     /**
      * Updated baseline name (optional)
      * @type {string}
      * @memberof ControllersUpdateBaselineRequest
      */
-    name?: string;
+    'name'?: string;
 }
 /**
  *
@@ -3402,7 +3406,7 @@ export interface ControllersUpdateBaselineResponse {
      * @type {number}
      * @memberof ControllersUpdateBaselineResponse
      */
-    baseline_id?: number;
+    'baseline_id'?: number;
 }
 /**
  *
@@ -3415,13 +3419,13 @@ export interface ModelsPackageUpdate {
      * @type {string}
      * @memberof ModelsPackageUpdate
      */
-    evra?: string;
+    'evra'?: string;
     /**
      *
      * @type {string}
      * @memberof ModelsPackageUpdate
      */
-    status?: string;
+    'status'?: string;
 }
 /**
  *
@@ -3434,7 +3438,7 @@ export interface UtilsErrorResponse {
      * @type {string}
      * @memberof UtilsErrorResponse
      */
-    error?: string;
+    'error'?: string;
 }
 /**
  *
@@ -3447,67 +3451,67 @@ export interface VmaasUpdatesV3Request {
      * @type {string}
      * @memberof VmaasUpdatesV3Request
      */
-    basearch?: string;
+    'basearch'?: string;
     /**
      * VMaaS will check package_list and return error if we provide package_list without epochs
      * @type {boolean}
      * @memberof VmaasUpdatesV3Request
      */
-    epoch_required?: boolean;
+    'epoch_required'?: boolean;
     /**
      *
      * @type {boolean}
      * @memberof VmaasUpdatesV3Request
      */
-    latest_only?: boolean;
+    'latest_only'?: boolean;
     /**
      *
      * @type {Array<VmaasUpdatesV3RequestModulesList>}
      * @memberof VmaasUpdatesV3Request
      */
-    modules_list?: Array<VmaasUpdatesV3RequestModulesList>;
+    'modules_list'?: Array<VmaasUpdatesV3RequestModulesList>;
     /**
      * Search for updates of unknown package EVRAs.
      * @type {boolean}
      * @memberof VmaasUpdatesV3Request
      */
-    optimistic_updates?: boolean;
+    'optimistic_updates'?: boolean;
     /**
      *
      * @type {Array<string>}
      * @memberof VmaasUpdatesV3Request
      */
-    package_list?: Array<string>;
+    'package_list'?: Array<string>;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3Request
      */
-    releasever?: string;
+    'releasever'?: string;
     /**
      *
      * @type {Array<string>}
      * @memberof VmaasUpdatesV3Request
      */
-    repository_list?: Array<string>;
+    'repository_list'?: Array<string>;
     /**
      *
      * @type {Array<string>}
      * @memberof VmaasUpdatesV3Request
      */
-    repository_paths?: Array<string>;
+    'repository_paths'?: Array<string>;
     /**
      *
      * @type {boolean}
      * @memberof VmaasUpdatesV3Request
      */
-    security_only?: boolean;
+    'security_only'?: boolean;
     /**
      * Include content from \\\"third party\\\" repositories into the response, disabled by default.
      * @type {boolean}
      * @memberof VmaasUpdatesV3Request
      */
-    third_party?: boolean;
+    'third_party'?: boolean;
 }
 /**
  *
@@ -3520,13 +3524,13 @@ export interface VmaasUpdatesV3RequestModulesList {
      * @type {string}
      * @memberof VmaasUpdatesV3RequestModulesList
      */
-    module_name?: string;
+    'module_name'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3RequestModulesList
      */
-    module_stream?: string;
+    'module_stream'?: string;
 }
 /**
  *
@@ -3539,43 +3543,43 @@ export interface VmaasUpdatesV3Response {
      * @type {string}
      * @memberof VmaasUpdatesV3Response
      */
-    basearch?: string;
+    'basearch'?: string;
     /**
      *
      * @type {boolean}
      * @memberof VmaasUpdatesV3Response
      */
-    build_pkgcache?: boolean;
+    'build_pkgcache'?: boolean;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3Response
      */
-    last_change?: string;
+    'last_change'?: string;
     /**
      *
      * @type {Array<VmaasUpdatesV3RequestModulesList>}
      * @memberof VmaasUpdatesV3Response
      */
-    modules_list?: Array<VmaasUpdatesV3RequestModulesList>;
+    'modules_list'?: Array<VmaasUpdatesV3RequestModulesList>;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3Response
      */
-    releasever?: string;
+    'releasever'?: string;
     /**
      *
      * @type {Array<string>}
      * @memberof VmaasUpdatesV3Response
      */
-    repository_list?: Array<string>;
+    'repository_list'?: Array<string>;
     /**
      *
      * @type {{ [key: string]: VmaasUpdatesV3ResponseUpdateList; }}
      * @memberof VmaasUpdatesV3Response
      */
-    update_list?: { [key: string]: VmaasUpdatesV3ResponseUpdateList; };
+    'update_list'?: { [key: string]: VmaasUpdatesV3ResponseUpdateList; };
 }
 /**
  *
@@ -3588,43 +3592,43 @@ export interface VmaasUpdatesV3ResponseAvailableUpdates {
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    basearch?: string;
+    'basearch'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    erratum?: string;
+    'erratum'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    evra?: string;
+    'evra'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    _package?: string;
+    'package'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    package_name?: string;
+    'package_name'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    releasever?: string;
+    'releasever'?: string;
     /**
      *
      * @type {string}
      * @memberof VmaasUpdatesV3ResponseAvailableUpdates
      */
-    repository?: string;
+    'repository'?: string;
 }
 /**
  *
@@ -3637,14 +3641,14 @@ export interface VmaasUpdatesV3ResponseUpdateList {
      * @type {Array<VmaasUpdatesV3ResponseAvailableUpdates>}
      * @memberof VmaasUpdatesV3ResponseUpdateList
      */
-    available_updates?: Array<VmaasUpdatesV3ResponseAvailableUpdates>;
+    'available_updates'?: Array<VmaasUpdatesV3ResponseAvailableUpdates>;
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * BaselineDeleteApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const BaselineDeleteApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Delete a baseline
@@ -3653,43 +3657,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        baselineDelete: async (baselineId: number, options: any = {}): Promise<RequestArgs> => {
+        baselineDelete: async (baselineId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling baselineDelete.');
-            }
+            assertParamExists('baselineDelete', 'baselineId', baselineId)
             const localVarPath = `/baselines/{baseline_id}`
                 .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * BaselineDeleteApi - functional programming interface
+ * @export
+ */
+export const BaselineDeleteApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = BaselineDeleteApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Delete a baseline
+         * @summary Delete a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async baselineDelete(baselineId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersDeleteBaselineResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.baselineDelete(baselineId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * BaselineDeleteApi - factory interface
+ * @export
+ */
+export const BaselineDeleteApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = BaselineDeleteApiFp(configuration)
+    return {
+        /**
+         * Delete a baseline
+         * @summary Delete a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        baselineDelete(baselineId: number, options?: any): AxiosPromise<ControllersDeleteBaselineResponse> {
+            return localVarFp.baselineDelete(baselineId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * BaselineDeleteApi - object-oriented interface
+ * @export
+ * @class BaselineDeleteApi
+ * @extends {BaseAPI}
+ */
+export class BaselineDeleteApi extends BaseAPI {
+    /**
+     * Delete a baseline
+     * @summary Delete a baseline
+     * @param {number} baselineId Baseline ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BaselineDeleteApi
+     */
+    public baselineDelete(baselineId: number, options?: AxiosRequestConfig) {
+        return BaselineDeleteApiFp(this.configuration).baselineDelete(baselineId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * CreateBaselineApi - axios parameter creator
+ * @export
+ */
+export const CreateBaselineApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Create a baseline for my set of systems. System cannot be satellite managed.
          * @summary Create a baseline for my set of systems
@@ -3697,46 +3766,110 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createBaseline: async (body: ControllersCreateBaselineRequest, options: any = {}): Promise<RequestArgs> => {
+        createBaseline: async (body: ControllersCreateBaselineRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling createBaseline.');
-            }
+            assertParamExists('createBaseline', 'body', body)
             const localVarPath = `/baselines`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * CreateBaselineApi - functional programming interface
+ * @export
+ */
+export const CreateBaselineApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateBaselineApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Create a baseline for my set of systems. System cannot be satellite managed.
+         * @summary Create a baseline for my set of systems
+         * @param {ControllersCreateBaselineRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createBaseline(body: ControllersCreateBaselineRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersCreateBaselineResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createBaseline(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateBaselineApi - factory interface
+ * @export
+ */
+export const CreateBaselineApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateBaselineApiFp(configuration)
+    return {
+        /**
+         * Create a baseline for my set of systems. System cannot be satellite managed.
+         * @summary Create a baseline for my set of systems
+         * @param {ControllersCreateBaselineRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createBaseline(body: ControllersCreateBaselineRequest, options?: any): AxiosPromise<ControllersCreateBaselineResponse> {
+            return localVarFp.createBaseline(body, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * CreateBaselineApi - object-oriented interface
+ * @export
+ * @class CreateBaselineApi
+ * @extends {BaseAPI}
+ */
+export class CreateBaselineApi extends BaseAPI {
+    /**
+     * Create a baseline for my set of systems. System cannot be satellite managed.
+     * @summary Create a baseline for my set of systems
+     * @param {ControllersCreateBaselineRequest} body Request body
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateBaselineApi
+     */
+    public createBaseline(body: ControllersCreateBaselineRequest, options?: AxiosRequestConfig) {
+        return CreateBaselineApiFp(this.configuration).createBaseline(body, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeletesystemApi - axios parameter creator
+ * @export
+ */
+export const DeletesystemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Delete system by inventory id
          * @summary Delete system by inventory id
@@ -3744,43 +3877,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deletesystem: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
+        deletesystem: async (inventoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling deletesystem.');
-            }
+            assertParamExists('deletesystem', 'inventoryId', inventoryId)
             const localVarPath = `/systems/{inventory_id}`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DeletesystemApi - functional programming interface
+ * @export
+ */
+export const DeletesystemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeletesystemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Delete system by inventory id
+         * @summary Delete system by inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deletesystem(inventoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deletesystem(inventoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeletesystemApi - factory interface
+ * @export
+ */
+export const DeletesystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeletesystemApiFp(configuration)
+    return {
+        /**
+         * Delete system by inventory id
+         * @summary Delete system by inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deletesystem(inventoryId: string, options?: any): AxiosPromise<void> {
+            return localVarFp.deletesystem(inventoryId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DeletesystemApi - object-oriented interface
+ * @export
+ * @class DeletesystemApi
+ * @extends {BaseAPI}
+ */
+export class DeletesystemApi extends BaseAPI {
+    /**
+     * Delete system by inventory id
+     * @summary Delete system by inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeletesystemApi
+     */
+    public deletesystem(inventoryId: string, options?: AxiosRequestConfig) {
+        return DeletesystemApiFp(this.configuration).deletesystem(inventoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DetailAdvisoryApi - axios parameter creator
+ * @export
+ */
+export const DetailAdvisoryApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me details an advisory by given advisory name
          * @summary Show me details an advisory by given advisory name
@@ -3788,43 +3986,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        detailAdvisory: async (advisoryId: string, options: any = {}): Promise<RequestArgs> => {
+        detailAdvisory: async (advisoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'advisoryId' is not null or undefined
-            if (advisoryId === null || advisoryId === undefined) {
-                throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling detailAdvisory.');
-            }
+            assertParamExists('detailAdvisory', 'advisoryId', advisoryId)
             const localVarPath = `/advisories/{advisory_id}`
                 .replace(`{${"advisory_id"}}`, encodeURIComponent(String(advisoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DetailAdvisoryApi - functional programming interface
+ * @export
+ */
+export const DetailAdvisoryApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DetailAdvisoryApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me details an advisory by given advisory name
+         * @summary Show me details an advisory by given advisory name
+         * @param {string} advisoryId Advisory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async detailAdvisory(advisoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoryDetailResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.detailAdvisory(advisoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DetailAdvisoryApi - factory interface
+ * @export
+ */
+export const DetailAdvisoryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DetailAdvisoryApiFp(configuration)
+    return {
+        /**
+         * Show me details an advisory by given advisory name
+         * @summary Show me details an advisory by given advisory name
+         * @param {string} advisoryId Advisory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        detailAdvisory(advisoryId: string, options?: any): AxiosPromise<ControllersAdvisoryDetailResponse> {
+            return localVarFp.detailAdvisory(advisoryId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DetailAdvisoryApi - object-oriented interface
+ * @export
+ * @class DetailAdvisoryApi
+ * @extends {BaseAPI}
+ */
+export class DetailAdvisoryApi extends BaseAPI {
+    /**
+     * Show me details an advisory by given advisory name
+     * @summary Show me details an advisory by given advisory name
+     * @param {string} advisoryId Advisory ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DetailAdvisoryApi
+     */
+    public detailAdvisory(advisoryId: string, options?: AxiosRequestConfig) {
+        return DetailAdvisoryApiFp(this.configuration).detailAdvisory(advisoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DetailBaselineApi - axios parameter creator
+ * @export
+ */
+export const DetailBaselineApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show baseline detail by given baseline ID
          * @summary Show baseline detail by given baseline ID
@@ -3832,43 +4095,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        detailBaseline: async (baselineId: string, options: any = {}): Promise<RequestArgs> => {
+        detailBaseline: async (baselineId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling detailBaseline.');
-            }
+            assertParamExists('detailBaseline', 'baselineId', baselineId)
             const localVarPath = `/baselines/{baseline_id}`
                 .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DetailBaselineApi - functional programming interface
+ * @export
+ */
+export const DetailBaselineApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DetailBaselineApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show baseline detail by given baseline ID
+         * @summary Show baseline detail by given baseline ID
+         * @param {string} baselineId Baseline ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async detailBaseline(baselineId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselineDetailResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.detailBaseline(baselineId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DetailBaselineApi - factory interface
+ * @export
+ */
+export const DetailBaselineApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DetailBaselineApiFp(configuration)
+    return {
+        /**
+         * Show baseline detail by given baseline ID
+         * @summary Show baseline detail by given baseline ID
+         * @param {string} baselineId Baseline ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        detailBaseline(baselineId: string, options?: any): AxiosPromise<ControllersBaselineDetailResponse> {
+            return localVarFp.detailBaseline(baselineId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DetailBaselineApi - object-oriented interface
+ * @export
+ * @class DetailBaselineApi
+ * @extends {BaseAPI}
+ */
+export class DetailBaselineApi extends BaseAPI {
+    /**
+     * Show baseline detail by given baseline ID
+     * @summary Show baseline detail by given baseline ID
+     * @param {string} baselineId Baseline ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DetailBaselineApi
+     */
+    public detailBaseline(baselineId: string, options?: AxiosRequestConfig) {
+        return DetailBaselineApiFp(this.configuration).detailBaseline(baselineId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DetailSystemApi - axios parameter creator
+ * @export
+ */
+export const DetailSystemApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me details about a system by given inventory id
          * @summary Show me details about a system by given inventory id
@@ -3876,43 +4204,108 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        detailSystem: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
+        detailSystem: async (inventoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling detailSystem.');
-            }
+            assertParamExists('detailSystem', 'inventoryId', inventoryId)
             const localVarPath = `/systems/{inventory_id}`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DetailSystemApi - functional programming interface
+ * @export
+ */
+export const DetailSystemApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DetailSystemApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me details about a system by given inventory id
+         * @summary Show me details about a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async detailSystem(inventoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemDetailResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.detailSystem(inventoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DetailSystemApi - factory interface
+ * @export
+ */
+export const DetailSystemApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DetailSystemApiFp(configuration)
+    return {
+        /**
+         * Show me details about a system by given inventory id
+         * @summary Show me details about a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        detailSystem(inventoryId: string, options?: any): AxiosPromise<ControllersSystemDetailResponse> {
+            return localVarFp.detailSystem(inventoryId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DetailSystemApi - object-oriented interface
+ * @export
+ * @class DetailSystemApi
+ * @extends {BaseAPI}
+ */
+export class DetailSystemApi extends BaseAPI {
+    /**
+     * Show me details about a system by given inventory id
+     * @summary Show me details about a system by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DetailSystemApi
+     */
+    public detailSystem(inventoryId: string, options?: AxiosRequestConfig) {
+        return DetailSystemApiFp(this.configuration).detailSystem(inventoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportAdvisoriesApi - axios parameter creator
+ * @export
+ */
+export const ExportAdvisoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Export applicable advisories for all my systems. Export endpoints are not paginated.
          * @summary Export applicable advisories for all my systems
@@ -3928,24 +4321,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportAdvisories: async (search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options: any = {}): Promise<RequestArgs> => {
+        exportAdvisories: async (search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/export/advisories`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -3985,17 +4375,111 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportAdvisoriesApi - functional programming interface
+ * @export
+ */
+export const ExportAdvisoriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportAdvisoriesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Export applicable advisories for all my systems. Export endpoints are not paginated.
+         * @summary Export applicable advisories for all my systems
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersAdvisoriesDBLookup>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportAdvisoriesApi - factory interface
+ * @export
+ */
+export const ExportAdvisoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportAdvisoriesApiFp(configuration)
+    return {
+        /**
+         * Export applicable advisories for all my systems. Export endpoints are not paginated.
+         * @summary Export applicable advisories for all my systems
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any): AxiosPromise<Array<ControllersAdvisoriesDBLookup>> {
+            return localVarFp.exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportAdvisoriesApi - object-oriented interface
+ * @export
+ * @class ExportAdvisoriesApi
+ * @extends {BaseAPI}
+ */
+export class ExportAdvisoriesApi extends BaseAPI {
+    /**
+     * Export applicable advisories for all my systems. Export endpoints are not paginated.
+     * @summary Export applicable advisories for all my systems
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {string} [filterApplicableSystems] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportAdvisoriesApi
+     */
+    public exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: AxiosRequestConfig) {
+        return ExportAdvisoriesApiFp(this.configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportAdvisorySystemsApi - axios parameter creator
+ * @export
+ */
+export const ExportAdvisorySystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Export systems for my account. Export endpoints are not paginated.
          * @summary Export systems for my account
@@ -4016,29 +4500,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportAdvisorySystems: async (advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        exportAdvisorySystems: async (advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'advisoryId' is not null or undefined
-            if (advisoryId === null || advisoryId === undefined) {
-                throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling exportAdvisorySystems.');
-            }
+            assertParamExists('exportAdvisorySystems', 'advisoryId', advisoryId)
             const localVarPath = `/export/advisories/{advisory_id}/systems`
                 .replace(`{${"advisory_id"}}`, encodeURIComponent(String(advisoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -4094,17 +4573,126 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportAdvisorySystemsApi - functional programming interface
+ * @export
+ */
+export const ExportAdvisorySystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportAdvisorySystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Export systems for my account. Export endpoints are not paginated.
+         * @summary Export systems for my account
+         * @param {string} advisoryId Advisory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterStale] Filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterOs] Filter OS version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersAdvisorySystemDBLookup>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportAdvisorySystemsApi - factory interface
+ * @export
+ */
+export const ExportAdvisorySystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportAdvisorySystemsApiFp(configuration)
+    return {
+        /**
+         * Export systems for my account. Export endpoints are not paginated.
+         * @summary Export systems for my account
+         * @param {string} advisoryId Advisory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterStale] Filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterOs] Filter OS version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersAdvisorySystemDBLookup>> {
+            return localVarFp.exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportAdvisorySystemsApi - object-oriented interface
+ * @export
+ * @class ExportAdvisorySystemsApi
+ * @extends {BaseAPI}
+ */
+export class ExportAdvisorySystemsApi extends BaseAPI {
+    /**
+     * Export systems for my account. Export endpoints are not paginated.
+     * @summary Export systems for my account
+     * @param {string} advisoryId Advisory ID
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterStale] Filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {string} [filterOs] Filter OS version
+     * @param {Array<string>} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportAdvisorySystemsApi
+     */
+    public exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: AxiosRequestConfig) {
+        return ExportAdvisorySystemsApiFp(this.configuration).exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportBaselineSystemsApi - axios parameter creator
+ * @export
+ */
+export const ExportBaselineSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Export systems applicable to a baseline. Export endpoints are not paginated.
          * @summary Export systems belonging to a baseline
@@ -4123,29 +4711,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportBaselineSystems: async (baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        exportBaselineSystems: async (baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling exportBaselineSystems.');
-            }
+            assertParamExists('exportBaselineSystems', 'baselineId', baselineId)
             const localVarPath = `/export/baselines/{baseline_id}/systems`
                 .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -4193,17 +4776,120 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportBaselineSystemsApi - functional programming interface
+ * @export
+ */
+export const ExportBaselineSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportBaselineSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Export systems applicable to a baseline. Export endpoints are not paginated.
+         * @summary Export systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersBaselineSystemsDBLookup>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportBaselineSystemsApi - factory interface
+ * @export
+ */
+export const ExportBaselineSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportBaselineSystemsApiFp(configuration)
+    return {
+        /**
+         * Export systems applicable to a baseline. Export endpoints are not paginated.
+         * @summary Export systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<Array<ControllersBaselineSystemsDBLookup>> {
+            return localVarFp.exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportBaselineSystemsApi - object-oriented interface
+ * @export
+ * @class ExportBaselineSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ExportBaselineSystemsApi extends BaseAPI {
+    /**
+     * Export systems applicable to a baseline. Export endpoints are not paginated.
+     * @summary Export systems belonging to a baseline
+     * @param {number} baselineId Baseline ID
+     * @param {string} [search] Find matching text
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterOs] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportBaselineSystemsApi
+     */
+    public exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ExportBaselineSystemsApiFp(this.configuration).exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportPackageSystemsApi - axios parameter creator
+ * @export
+ */
+export const ExportPackageSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all my systems which have a package installed. Export endpoints are not paginated.
          * @summary Show me all my systems which have a package installed
@@ -4219,29 +4905,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportPackageSystems: async (packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        exportPackageSystems: async (packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'packageName' is not null or undefined
-            if (packageName === null || packageName === undefined) {
-                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling exportPackageSystems.');
-            }
+            assertParamExists('exportPackageSystems', 'packageName', packageName)
             const localVarPath = `/export/packages/{package_name}/systems`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (filterGroupName) {
                 localVarQueryParameter['filter[group_name]'] = filterGroupName;
@@ -4277,21 +4958,115 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportPackageSystemsApi - functional programming interface
+ * @export
+ */
+export const ExportPackageSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportPackageSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed. Export endpoints are not paginated.
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersPackageSystemItem>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportPackageSystemsApi - factory interface
+ * @export
+ */
+export const ExportPackageSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportPackageSystemsApiFp(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed. Export endpoints are not paginated.
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersPackageSystemItem>> {
+            return localVarFp.exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportPackageSystemsApi - object-oriented interface
+ * @export
+ * @class ExportPackageSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ExportPackageSystemsApi extends BaseAPI {
+    /**
+     * Show me all my systems which have a package installed. Export endpoints are not paginated.
+     * @summary Show me all my systems which have a package installed
+     * @param {string} packageName Package name
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {Array<string>} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportPackageSystemsApi
+     */
+    public exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: AxiosRequestConfig) {
+        return ExportPackageSystemsApiFp(this.configuration).exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportPackagesApi - axios parameter creator
+ * @export
+ */
+export const ExportPackagesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all installed packages across my systems. Export endpoints are not paginated.
          * @summary Show me all installed packages across my systems
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
+         * @param {ExportPackagesSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterName] Filter
          * @param {string} [filterSystemsInstalled] Filter
@@ -4301,24 +5076,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportPackages: async (sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options: any = {}): Promise<RequestArgs> => {
+        exportPackages: async (sort?: ExportPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/export/packages`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (sort !== undefined) {
                 localVarQueryParameter['sort'] = sort;
@@ -4350,17 +5122,116 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportPackagesApi - functional programming interface
+ * @export
+ */
+export const ExportPackagesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportPackagesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all installed packages across my systems. Export endpoints are not paginated.
+         * @summary Show me all installed packages across my systems
+         * @param {ExportPackagesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsInstallable] Filter
+         * @param {string} [filterSystemsApplicable] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportPackages(sort?: ExportPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersPackageItem>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportPackagesApi - factory interface
+ * @export
+ */
+export const ExportPackagesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportPackagesApiFp(configuration)
+    return {
+        /**
+         * Show me all installed packages across my systems. Export endpoints are not paginated.
+         * @summary Show me all installed packages across my systems
+         * @param {ExportPackagesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsInstallable] Filter
+         * @param {string} [filterSystemsApplicable] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportPackages(sort?: ExportPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: any): AxiosPromise<Array<ControllersPackageItem>> {
+            return localVarFp.exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportPackagesApi - object-oriented interface
+ * @export
+ * @class ExportPackagesApi
+ * @extends {BaseAPI}
+ */
+export class ExportPackagesApi extends BaseAPI {
+    /**
+     * Show me all installed packages across my systems. Export endpoints are not paginated.
+     * @summary Show me all installed packages across my systems
+     * @param {ExportPackagesSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterSystemsInstalled] Filter
+     * @param {string} [filterSystemsInstallable] Filter
+     * @param {string} [filterSystemsApplicable] Filter
+     * @param {string} [filterSummary] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportPackagesApi
+     */
+    public exportPackages(sort?: ExportPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: AxiosRequestConfig) {
+        return ExportPackagesApiFp(this.configuration).exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ExportPackagesSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    SystemsInstalled: 'systems_installed',
+    SystemsInstallable: 'systems_installable',
+    SystemsApplicable: 'systems_applicable'
+} as const;
+export type ExportPackagesSortEnum = typeof ExportPackagesSortEnum[keyof typeof ExportPackagesSortEnum];
+
+
+/**
+ * ExportSystemAdvisoriesApi - axios parameter creator
+ * @export
+ */
+export const ExportSystemAdvisoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Export applicable advisories for all my systems. Export endpoints are not paginated.
          * @summary Export applicable advisories for all my systems
@@ -4376,29 +5247,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystemAdvisories: async (inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: any = {}): Promise<RequestArgs> => {
+        exportSystemAdvisories: async (inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling exportSystemAdvisories.');
-            }
+            assertParamExists('exportSystemAdvisories', 'inventoryId', inventoryId)
             const localVarPath = `/export/systems/{inventory_id}/advisories`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -4434,17 +5300,111 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportSystemAdvisoriesApi - functional programming interface
+ * @export
+ */
+export const ExportSystemAdvisoriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportSystemAdvisoriesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Export applicable advisories for all my systems. Export endpoints are not paginated.
+         * @summary Export applicable advisories for all my systems
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemAdvisoriesDBLookup>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportSystemAdvisoriesApi - factory interface
+ * @export
+ */
+export const ExportSystemAdvisoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportSystemAdvisoriesApiFp(configuration)
+    return {
+        /**
+         * Export applicable advisories for all my systems. Export endpoints are not paginated.
+         * @summary Export applicable advisories for all my systems
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<Array<ControllersSystemAdvisoriesDBLookup>> {
+            return localVarFp.exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportSystemAdvisoriesApi - object-oriented interface
+ * @export
+ * @class ExportSystemAdvisoriesApi
+ * @extends {BaseAPI}
+ */
+export class ExportSystemAdvisoriesApi extends BaseAPI {
+    /**
+     * Export applicable advisories for all my systems. Export endpoints are not paginated.
+     * @summary Export applicable advisories for all my systems
+     * @param {string} inventoryId Inventory ID
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportSystemAdvisoriesApi
+     */
+    public exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig) {
+        return ExportSystemAdvisoriesApiFp(this.configuration).exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportSystemPackagesApi - axios parameter creator
+ * @export
+ */
+export const ExportSystemPackagesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
          * @summary Show me details about a system packages by given inventory id
@@ -4458,29 +5418,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystemPackages: async (inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options: any = {}): Promise<RequestArgs> => {
+        exportSystemPackages: async (inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling exportSystemPackages.');
-            }
+            assertParamExists('exportSystemPackages', 'inventoryId', inventoryId)
             const localVarPath = `/export/systems/{inventory_id}/packages`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -4508,17 +5463,105 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportSystemPackagesApi - functional programming interface
+ * @export
+ */
+export const ExportSystemPackagesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportSystemPackagesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
+         * @summary Show me details about a system packages by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterEvra] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {boolean} [filterUpdatable] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemPackageInline>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportSystemPackagesApi - factory interface
+ * @export
+ */
+export const ExportSystemPackagesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportSystemPackagesApiFp(configuration)
+    return {
+        /**
+         * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
+         * @summary Show me details about a system packages by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterEvra] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {boolean} [filterUpdatable] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any): AxiosPromise<Array<ControllersSystemPackageInline>> {
+            return localVarFp.exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportSystemPackagesApi - object-oriented interface
+ * @export
+ * @class ExportSystemPackagesApi
+ * @extends {BaseAPI}
+ */
+export class ExportSystemPackagesApi extends BaseAPI {
+    /**
+     * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
+     * @summary Show me details about a system packages by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterEvra] Filter
+     * @param {string} [filterSummary] Filter
+     * @param {boolean} [filterUpdatable] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportSystemPackagesApi
+     */
+    public exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: AxiosRequestConfig) {
+        return ExportSystemPackagesApiFp(this.configuration).exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ExportSystemsApi - axios parameter creator
+ * @export
+ */
+export const ExportSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Export systems for my account. Export endpoints are not paginated.
          * @summary Export systems for my account
@@ -4560,24 +5603,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exportSystems: async (search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        exportSystems: async (search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/export/systems`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
@@ -4721,17 +5761,189 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ExportSystemsApi - functional programming interface
+ * @export
+ */
+export const ExportSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExportSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Export systems for my account. Export endpoints are not paginated.
+         * @summary Export systems for my account
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterArch] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemDBLookup>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExportSystemsApi - factory interface
+ * @export
+ */
+export const ExportSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExportSystemsApiFp(configuration)
+    return {
+        /**
+         * Export systems for my account. Export endpoints are not paginated.
+         * @summary Export systems for my account
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterArch] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersSystemDBLookup>> {
+            return localVarFp.exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExportSystemsApi - object-oriented interface
+ * @export
+ * @class ExportSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ExportSystemsApi extends BaseAPI {
+    /**
+     * Export systems for my account. Export endpoints are not paginated.
+     * @summary Export systems for my account
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterLastEvaluation] Filter
+     * @param {string} [filterLastUpload] Filter
+     * @param {string} [filterRhsaCount] Filter
+     * @param {string} [filterRhbaCount] Filter
+     * @param {string} [filterRheaCount] Filter
+     * @param {string} [filterOtherCount] Filter
+     * @param {string} [filterInstallableRhsaCount] Filter
+     * @param {string} [filterInstallableRhbaCount] Filter
+     * @param {string} [filterInstallableRheaCount] Filter
+     * @param {string} [filterInstallableOtherCount] Filter
+     * @param {string} [filterApplicableRhsaCount] Filter
+     * @param {string} [filterApplicableRhbaCount] Filter
+     * @param {string} [filterApplicableRheaCount] Filter
+     * @param {string} [filterApplicableOtherCount] Filter
+     * @param {string} [filterStale] Filter
+     * @param {string} [filterPackagesInstalled] Filter
+     * @param {string} [filterPackagesInstallable] Filter
+     * @param {string} [filterPackagesApplicable] Filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {string} [filterBaselineName] Filter
+     * @param {string} [filterArch] Filter
+     * @param {string} [filterOs] Filter OS version
+     * @param {string} [filterOsname] Filter OS name
+     * @param {string} [filterOsmajor] Filter OS major version
+     * @param {string} [filterOsminor] Filter OS minor version
+     * @param {Array<string>} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExportSystemsApi
+     */
+    public exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: AxiosRequestConfig) {
+        return ExportSystemsApiFp(this.configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * LatestPackageApi - axios parameter creator
+ * @export
+ */
+export const LatestPackageApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me metadata of selected package
          * @summary Show me metadata of selected package
@@ -4739,49 +5951,114 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        latestPackage: async (packageName: string, options: any = {}): Promise<RequestArgs> => {
+        latestPackage: async (packageName: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'packageName' is not null or undefined
-            if (packageName === null || packageName === undefined) {
-                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling latestPackage.');
-            }
+            assertParamExists('latestPackage', 'packageName', packageName)
             const localVarPath = `/packages/{package_name}`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * LatestPackageApi - functional programming interface
+ * @export
+ */
+export const LatestPackageApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = LatestPackageApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me metadata of selected package
+         * @summary Show me metadata of selected package
+         * @param {string} packageName package_name - latest, nevra - exact version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async latestPackage(packageName: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageDetailResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.latestPackage(packageName, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * LatestPackageApi - factory interface
+ * @export
+ */
+export const LatestPackageApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = LatestPackageApiFp(configuration)
+    return {
+        /**
+         * Show me metadata of selected package
+         * @summary Show me metadata of selected package
+         * @param {string} packageName package_name - latest, nevra - exact version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        latestPackage(packageName: string, options?: any): AxiosPromise<ControllersPackageDetailResponse> {
+            return localVarFp.latestPackage(packageName, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * LatestPackageApi - object-oriented interface
+ * @export
+ * @class LatestPackageApi
+ * @extends {BaseAPI}
+ */
+export class LatestPackageApi extends BaseAPI {
+    /**
+     * Show me metadata of selected package
+     * @summary Show me metadata of selected package
+     * @param {string} packageName package_name - latest, nevra - exact version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LatestPackageApi
+     */
+    public latestPackage(packageName: string, options?: AxiosRequestConfig) {
+        return LatestPackageApiFp(this.configuration).latestPackage(packageName, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListAdvisoriesApi - axios parameter creator
+ * @export
+ */
+export const ListAdvisoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems'} [sort] Sort field
+         * @param {ListAdvisoriesSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDescription] Filter
@@ -4802,24 +6079,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisories: async (limit?: number, offset?: number, sort?: 'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listAdvisories: async (limit?: number, offset?: number, sort?: ListAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/advisories`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -4903,23 +6177,163 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListAdvisoriesApi - functional programming interface
+ * @export
+ */
+export const ListAdvisoriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListAdvisoriesApiAxiosParamCreator(configuration)
+    return {
         /**
          * Show me all applicable advisories for all my systems
          * @summary Show me all applicable advisories for all my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems'} [sort] Sort field
+         * @param {ListAdvisoriesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterInstallableSystems] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAdvisories(limit?: number, offset?: number, sort?: ListAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListAdvisoriesApi - factory interface
+ * @export
+ */
+export const ListAdvisoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListAdvisoriesApiFp(configuration)
+    return {
+        /**
+         * Show me all applicable advisories for all my systems
+         * @summary Show me all applicable advisories for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisoriesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterInstallableSystems] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAdvisories(limit?: number, offset?: number, sort?: ListAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersAdvisoriesResponse> {
+            return localVarFp.listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListAdvisoriesApi - object-oriented interface
+ * @export
+ * @class ListAdvisoriesApi
+ * @extends {BaseAPI}
+ */
+export class ListAdvisoriesApi extends BaseAPI {
+    /**
+     * Show me all applicable advisories for all my systems
+     * @summary Show me all applicable advisories for all my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListAdvisoriesSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {string} [filterInstallableSystems] Filter
+     * @param {string} [filterApplicableSystems] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListAdvisoriesApi
+     */
+    public listAdvisories(limit?: number, offset?: number, sort?: ListAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListAdvisoriesApiFp(this.configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListAdvisoriesSortEnum = {
+    Id: 'id',
+    AdvisoryTypeName: 'advisory_type_name',
+    Synopsis: 'synopsis',
+    PublicDate: 'public_date',
+    Severity: 'severity',
+    InstallableSystems: 'installable_systems',
+    ApplicableSystems: 'applicable_systems'
+} as const;
+export type ListAdvisoriesSortEnum = typeof ListAdvisoriesSortEnum[keyof typeof ListAdvisoriesSortEnum];
+
+
+/**
+ * ListAdvisoriesIdsApi - axios parameter creator
+ * @export
+ */
+export const ListAdvisoriesIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me all applicable advisories for all my systems
+         * @summary Show me all applicable advisories for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisoriesIdsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDescription] Filter
@@ -4941,24 +6355,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisoriesIds: async (limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listAdvisoriesIds: async (limit?: number, offset?: number, sort?: ListAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ids/advisories`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5046,24 +6457,166 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListAdvisoriesIdsApi - functional programming interface
+ * @export
+ */
+export const ListAdvisoriesIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListAdvisoriesIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all applicable advisories for all my systems
+         * @summary Show me all applicable advisories for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisoriesIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterInstallableSystems] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAdvisoriesIds(limit?: number, offset?: number, sort?: ListAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsPlainResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListAdvisoriesIdsApi - factory interface
+ * @export
+ */
+export const ListAdvisoriesIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListAdvisoriesIdsApiFp(configuration)
+    return {
+        /**
+         * Show me all applicable advisories for all my systems
+         * @summary Show me all applicable advisories for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisoriesIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {string} [filterInstallableSystems] Filter
+         * @param {string} [filterApplicableSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAdvisoriesIds(limit?: number, offset?: number, sort?: ListAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsPlainResponse> {
+            return localVarFp.listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListAdvisoriesIdsApi - object-oriented interface
+ * @export
+ * @class ListAdvisoriesIdsApi
+ * @extends {BaseAPI}
+ */
+export class ListAdvisoriesIdsApi extends BaseAPI {
+    /**
+     * Show me all applicable advisories for all my systems
+     * @summary Show me all applicable advisories for all my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListAdvisoriesIdsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {string} [filterInstallableSystems] Filter
+     * @param {string} [filterApplicableSystems] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListAdvisoriesIdsApi
+     */
+    public listAdvisoriesIds(limit?: number, offset?: number, sort?: ListAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListAdvisoriesIdsApiFp(this.configuration).listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListAdvisoriesIdsSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    AdvisoryType: 'advisory_type',
+    Synopsis: 'synopsis',
+    PublicDate: 'public_date',
+    ApplicableSystems: 'applicable_systems'
+} as const;
+export type ListAdvisoriesIdsSortEnum = typeof ListAdvisoriesIdsSortEnum[keyof typeof ListAdvisoriesIdsSortEnum];
+
+
+/**
+ * ListAdvisorySystemsApi - axios parameter creator
+ * @export
+ */
+export const ListAdvisorySystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me systems on which the given advisory is applicable
          * @summary Show me systems on which the given advisory is applicable
          * @param {string} advisoryId Advisory ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
+         * @param {ListAdvisorySystemsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
@@ -5084,29 +6637,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystems: async (advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listAdvisorySystems: async (advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'advisoryId' is not null or undefined
-            if (advisoryId === null || advisoryId === undefined) {
-                throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling listAdvisorySystems.');
-            }
+            assertParamExists('listAdvisorySystems', 'advisoryId', advisoryId)
             const localVarPath = `/advisories/{advisory_id}/systems`
                 .replace(`{${"advisory_id"}}`, encodeURIComponent(String(advisoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5190,24 +6738,170 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListAdvisorySystemsApi - functional programming interface
+ * @export
+ */
+export const ListAdvisorySystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListAdvisorySystemsApiAxiosParamCreator(configuration)
+    return {
         /**
          * Show me systems on which the given advisory is applicable
          * @summary Show me systems on which the given advisory is applicable
          * @param {string} advisoryId Advisory ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache'} [sort] Sort field
+         * @param {ListAdvisorySystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterStatus] Filter
+         * @param {string} [filterTemplate] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListAdvisorySystemsApi - factory interface
+ * @export
+ */
+export const ListAdvisorySystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListAdvisorySystemsApiFp(configuration)
+    return {
+        /**
+         * Show me systems on which the given advisory is applicable
+         * @summary Show me systems on which the given advisory is applicable
+         * @param {string} advisoryId Advisory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisorySystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterStatus] Filter
+         * @param {string} [filterTemplate] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
+            return localVarFp.listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListAdvisorySystemsApi - object-oriented interface
+ * @export
+ * @class ListAdvisorySystemsApi
+ * @extends {BaseAPI}
+ */
+export class ListAdvisorySystemsApi extends BaseAPI {
+    /**
+     * Show me systems on which the given advisory is applicable
+     * @summary Show me systems on which the given advisory is applicable
+     * @param {string} advisoryId Advisory ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListAdvisorySystemsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterStale] Filter
+     * @param {string} [filterStatus] Filter
+     * @param {string} [filterTemplate] Filter
+     * @param {string} [filterOs] Filter OS version
+     * @param {string} [filterSatelliteManaged] Filter
+     * @param {string} [filterBuiltPkgcache] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListAdvisorySystemsApi
+     */
+    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListAdvisorySystemsApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListAdvisorySystemsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    LastEvaluation: 'last_evaluation',
+    LastUpload: 'last_upload',
+    Stale: 'stale',
+    Status: 'status',
+    Template: 'template',
+    Groups: 'groups',
+    SatelliteManaged: 'satellite_managed',
+    BuiltPkgcache: 'built_pkgcache'
+} as const;
+export type ListAdvisorySystemsSortEnum = typeof ListAdvisorySystemsSortEnum[keyof typeof ListAdvisorySystemsSortEnum];
+
+
+/**
+ * ListAdvisorySystemsIdsApi - axios parameter creator
+ * @export
+ */
+export const ListAdvisorySystemsIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me systems on which the given advisory is applicable
+         * @summary Show me systems on which the given advisory is applicable
+         * @param {string} advisoryId Advisory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisorySystemsIdsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterInsightsId] Filter
@@ -5240,29 +6934,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAdvisorySystemsIds: async (advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache', search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listAdvisorySystemsIds: async (advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsIdsSortEnum, search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'advisoryId' is not null or undefined
-            if (advisoryId === null || advisoryId === undefined) {
-                throw new RequiredError('advisoryId','Required parameter advisoryId was null or undefined when calling listAdvisorySystemsIds.');
-            }
+            assertParamExists('listAdvisorySystemsIds', 'advisoryId', advisoryId)
             const localVarPath = `/ids/advisories/{advisory_id}/systems`
                 .replace(`{${"advisory_id"}}`, encodeURIComponent(String(advisoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5394,23 +7083,206 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListAdvisorySystemsIdsApi - functional programming interface
+ * @export
+ */
+export const ListAdvisorySystemsIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListAdvisorySystemsIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me systems on which the given advisory is applicable
+         * @summary Show me systems on which the given advisory is applicable
+         * @param {string} advisoryId Advisory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisorySystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterInsightsId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterOsname] Filter
+         * @param {string} [filterOsminor] Filter
+         * @param {string} [filterOsmajor] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsIdsSortEnum, search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListAdvisorySystemsIdsApi - factory interface
+ * @export
+ */
+export const ListAdvisorySystemsIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListAdvisorySystemsIdsApiFp(configuration)
+    return {
+        /**
+         * Show me systems on which the given advisory is applicable
+         * @summary Show me systems on which the given advisory is applicable
+         * @param {string} advisoryId Advisory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListAdvisorySystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterInsightsId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterOsname] Filter
+         * @param {string} [filterOsminor] Filter
+         * @param {string} [filterOsmajor] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsIdsSortEnum, search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
+            return localVarFp.listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListAdvisorySystemsIdsApi - object-oriented interface
+ * @export
+ * @class ListAdvisorySystemsIdsApi
+ * @extends {BaseAPI}
+ */
+export class ListAdvisorySystemsIdsApi extends BaseAPI {
+    /**
+     * Show me systems on which the given advisory is applicable
+     * @summary Show me systems on which the given advisory is applicable
+     * @param {string} advisoryId Advisory ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListAdvisorySystemsIdsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterInsightsId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterLastEvaluation] Filter
+     * @param {string} [filterLastUpload] Filter
+     * @param {string} [filterRhsaCount] Filter
+     * @param {string} [filterRhbaCount] Filter
+     * @param {string} [filterRheaCount] Filter
+     * @param {string} [filterOtherCount] Filter
+     * @param {string} [filterSatelliteManaged] Filter
+     * @param {string} [filterStale] Filter
+     * @param {string} [filterStaleTimestamp] Filter
+     * @param {string} [filterStaleWarningTimestamp] Filter
+     * @param {string} [filterCulledTimestamp] Filter
+     * @param {string} [filterCreated] Filter
+     * @param {string} [filterOsname] Filter
+     * @param {string} [filterOsminor] Filter
+     * @param {string} [filterOsmajor] Filter
+     * @param {string} [filterOs] Filter OS version
+     * @param {string} [filterBuiltPkgcache] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListAdvisorySystemsIdsApi
+     */
+    public listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: ListAdvisorySystemsIdsSortEnum, search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListAdvisorySystemsIdsApiFp(this.configuration).listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListAdvisorySystemsIdsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    LastEvaluation: 'last_evaluation',
+    LastUpload: 'last_upload',
+    RhsaCount: 'rhsa_count',
+    RhbaCount: 'rhba_count',
+    RheaCount: 'rhea_count',
+    OtherCount: 'other_count',
+    SatelliteManaged: 'satellite_managed',
+    Stale: 'stale',
+    BuiltPkgcache: 'built_pkgcache'
+} as const;
+export type ListAdvisorySystemsIdsSortEnum = typeof ListAdvisorySystemsIdsSortEnum[keyof typeof ListAdvisorySystemsIdsSortEnum];
+
+
+/**
+ * ListBaselineApi - axios parameter creator
+ * @export
+ */
+export const ListBaselineApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all baselines for all my systems
          * @summary Show me all baselines for all my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator'} [sort] Sort field
+         * @param {ListBaselineSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterName] Filter
@@ -5419,24 +7291,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listBaseline: async (limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator', search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        listBaseline: async (limit?: number, offset?: number, sort?: ListBaselineSortEnum, search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/baselines`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5472,24 +7341,127 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListBaselineApi - functional programming interface
+ * @export
+ */
+export const ListBaselineApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListBaselineApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all baselines for all my systems
+         * @summary Show me all baselines for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listBaseline(limit?: number, offset?: number, sort?: ListBaselineSortEnum, search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselinesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListBaselineApi - factory interface
+ * @export
+ */
+export const ListBaselineApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListBaselineApiFp(configuration)
+    return {
+        /**
+         * Show me all baselines for all my systems
+         * @summary Show me all baselines for all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystems] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listBaseline(limit?: number, offset?: number, sort?: ListBaselineSortEnum, search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersBaselinesResponse> {
+            return localVarFp.listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListBaselineApi - object-oriented interface
+ * @export
+ * @class ListBaselineApi
+ * @extends {BaseAPI}
+ */
+export class ListBaselineApi extends BaseAPI {
+    /**
+     * Show me all baselines for all my systems
+     * @summary Show me all baselines for all my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListBaselineSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterName] Filter
+     * @param {string} [filterSystems] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListBaselineApi
+     */
+    public listBaseline(limit?: number, offset?: number, sort?: ListBaselineSortEnum, search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: AxiosRequestConfig) {
+        return ListBaselineApiFp(this.configuration).listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListBaselineSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    Systems: 'systems',
+    Published: 'published',
+    LastEdited: 'last_edited',
+    Creator: 'creator'
+} as const;
+export type ListBaselineSortEnum = typeof ListBaselineSortEnum[keyof typeof ListBaselineSortEnum];
+
+
+/**
+ * ListBaselineSystemsApi - axios parameter creator
+ * @export
+ */
+export const ListBaselineSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all systems applicable to a baseline
          * @summary Show me all systems belonging to a baseline
          * @param {number} baselineId Baseline ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups'} [sort] Sort field
+         * @param {ListBaselineSystemsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterOs] Filter
@@ -5504,29 +7476,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listBaselineSystems: async (baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listBaselineSystems: async (baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling listBaselineSystems.');
-            }
+            assertParamExists('listBaselineSystems', 'baselineId', baselineId)
             const localVarPath = `/baselines/{baseline_id}/systems`
                 .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5586,24 +7553,155 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListBaselineSystemsApi - functional programming interface
+ * @export
+ */
+export const ListBaselineSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListBaselineSystemsApiAxiosParamCreator(configuration)
+    return {
         /**
          * Show me all systems applicable to a baseline
          * @summary Show me all systems belonging to a baseline
          * @param {number} baselineId Baseline ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload'} [sort] Sort field
+         * @param {ListBaselineSystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselineSystemsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListBaselineSystemsApi - factory interface
+ * @export
+ */
+export const ListBaselineSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListBaselineSystemsApiFp(configuration)
+    return {
+        /**
+         * Show me all systems applicable to a baseline
+         * @summary Show me all systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersBaselineSystemsResponse> {
+            return localVarFp.listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListBaselineSystemsApi - object-oriented interface
+ * @export
+ * @class ListBaselineSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ListBaselineSystemsApi extends BaseAPI {
+    /**
+     * Show me all systems applicable to a baseline
+     * @summary Show me all systems belonging to a baseline
+     * @param {number} baselineId Baseline ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListBaselineSystemsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterOs] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListBaselineSystemsApi
+     */
+    public listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListBaselineSystemsApiFp(this.configuration).listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListBaselineSystemsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    Os: 'os',
+    InstallableRhsaCount: 'installable_rhsa_count',
+    InstallableRhbaCount: 'installable_rhba_count',
+    InstallableRheaCount: 'installable_rhea_count',
+    InstallableOtherCount: 'installable_other_count',
+    ApplicableRhsaCount: 'applicable_rhsa_count',
+    ApplicableRhbaCount: 'applicable_rhba_count',
+    ApplicableRheaCount: 'applicable_rhea_count',
+    ApplicableOtherCount: 'applicable_other_count',
+    LastUpload: 'last_upload',
+    Groups: 'groups'
+} as const;
+export type ListBaselineSystemsSortEnum = typeof ListBaselineSystemsSortEnum[keyof typeof ListBaselineSystemsSortEnum];
+
+
+/**
+ * ListBaselineSystemsIdsApi - axios parameter creator
+ * @export
+ */
+export const ListBaselineSystemsIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me all systems applicable to a baseline
+         * @summary Show me all systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSystemsIdsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterDisplayName] Filter
          * @param {string} [filterOs] Filter
@@ -5611,29 +7709,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listBaselineSystemsIds: async (baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options: any = {}): Promise<RequestArgs> => {
+        listBaselineSystemsIds: async (baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsIdsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling listBaselineSystemsIds.');
-            }
+            assertParamExists('listBaselineSystemsIds', 'baselineId', baselineId)
             const localVarPath = `/ids/baselines/{baseline_id}/systems`
                 .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5665,23 +7758,132 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListBaselineSystemsIdsApi - functional programming interface
+ * @export
+ */
+export const ListBaselineSystemsIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListBaselineSystemsIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all systems applicable to a baseline
+         * @summary Show me all systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsIdsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsPlainResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListBaselineSystemsIdsApi - factory interface
+ * @export
+ */
+export const ListBaselineSystemsIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListBaselineSystemsIdsApiFp(configuration)
+    return {
+        /**
+         * Show me all systems applicable to a baseline
+         * @summary Show me all systems belonging to a baseline
+         * @param {number} baselineId Baseline ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListBaselineSystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterOs] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsIdsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersIDsPlainResponse> {
+            return localVarFp.listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListBaselineSystemsIdsApi - object-oriented interface
+ * @export
+ * @class ListBaselineSystemsIdsApi
+ * @extends {BaseAPI}
+ */
+export class ListBaselineSystemsIdsApi extends BaseAPI {
+    /**
+     * Show me all systems applicable to a baseline
+     * @summary Show me all systems belonging to a baseline
+     * @param {number} baselineId Baseline ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListBaselineSystemsIdsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterOs] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListBaselineSystemsIdsApi
+     */
+    public listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: ListBaselineSystemsIdsSortEnum, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: AxiosRequestConfig) {
+        return ListBaselineSystemsIdsApiFp(this.configuration).listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListBaselineSystemsIdsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    Os: 'os',
+    InstallableRhsaCount: 'installable_rhsa_count',
+    InstallableRhbaCount: 'installable_rhba_count',
+    InstallableRheaCount: 'installable_rhea_count',
+    InstallableOtherCount: 'installable_other_count',
+    ApplicableRhsaCount: 'applicable_rhsa_count',
+    ApplicableRhbaCount: 'applicable_rhba_count',
+    ApplicableRheaCount: 'applicable_rhea_count',
+    ApplicableOtherCount: 'applicable_other_count',
+    LastUpload: 'last_upload'
+} as const;
+export type ListBaselineSystemsIdsSortEnum = typeof ListBaselineSystemsIdsSortEnum[keyof typeof ListBaselineSystemsIdsSortEnum];
+
+
+/**
+ * ListPackagesApi - axios parameter creator
+ * @export
+ */
+export const ListPackagesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all installed packages across my systems
          * @summary Show me all installed packages across my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
+         * @param {ListPackagesSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterName] Filter
          * @param {string} [filterSystemsInstalled] Filter
@@ -5699,24 +7901,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listPackages: async (limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listPackages: async (limit?: number, offset?: number, sort?: ListPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/packages/`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5788,24 +7987,153 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListPackagesApi - functional programming interface
+ * @export
+ */
+export const ListPackagesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListPackagesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all installed packages across my systems
+         * @summary Show me all installed packages across my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListPackagesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsInstallable] Filter
+         * @param {string} [filterSystemsApplicable] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listPackages(limit?: number, offset?: number, sort?: ListPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackagesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListPackagesApi - factory interface
+ * @export
+ */
+export const ListPackagesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListPackagesApiFp(configuration)
+    return {
+        /**
+         * Show me all installed packages across my systems
+         * @summary Show me all installed packages across my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListPackagesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterName] Filter
+         * @param {string} [filterSystemsInstalled] Filter
+         * @param {string} [filterSystemsInstallable] Filter
+         * @param {string} [filterSystemsApplicable] Filter
+         * @param {string} [filterSummary] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPackages(limit?: number, offset?: number, sort?: ListPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersPackagesResponse> {
+            return localVarFp.listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListPackagesApi - object-oriented interface
+ * @export
+ * @class ListPackagesApi
+ * @extends {BaseAPI}
+ */
+export class ListPackagesApi extends BaseAPI {
+    /**
+     * Show me all installed packages across my systems
+     * @summary Show me all installed packages across my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListPackagesSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterSystemsInstalled] Filter
+     * @param {string} [filterSystemsInstallable] Filter
+     * @param {string} [filterSystemsApplicable] Filter
+     * @param {string} [filterSummary] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListPackagesApi
+     */
+    public listPackages(limit?: number, offset?: number, sort?: ListPackagesSortEnum, search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListPackagesApiFp(this.configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListPackagesSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    SystemsInstalled: 'systems_installed',
+    SystemsInstallable: 'systems_installable',
+    SystemsApplicable: 'systems_applicable'
+} as const;
+export type ListPackagesSortEnum = typeof ListPackagesSortEnum[keyof typeof ListPackagesSortEnum];
+
+
+/**
+ * ListSystemAdvisoriesApi - axios parameter creator
+ * @export
+ */
+export const ListSystemAdvisoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me advisories for a system by given inventory id
          * @summary Show me advisories for a system by given inventory id
          * @param {string} inventoryId Inventory ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
+         * @param {ListSystemAdvisoriesSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDescription] Filter
@@ -5817,29 +8145,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemAdvisories: async (inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: any = {}): Promise<RequestArgs> => {
+        listSystemAdvisories: async (inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling listSystemAdvisories.');
-            }
+            assertParamExists('listSystemAdvisories', 'inventoryId', inventoryId)
             const localVarPath = `/systems/{inventory_id}/advisories`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5887,24 +8210,32 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListSystemAdvisoriesApi - functional programming interface
+ * @export
+ */
+export const ListSystemAdvisoriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSystemAdvisoriesApiAxiosParamCreator(configuration)
+    return {
         /**
          * Show me advisories for a system by given inventory id
          * @summary Show me advisories for a system by given inventory id
          * @param {string} inventoryId Inventory ID
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
+         * @param {ListSystemAdvisoriesSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDescription] Filter
@@ -5916,29 +8247,130 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemAdvisoriesIds: async (inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: any = {}): Promise<RequestArgs> => {
+        async listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemAdvisoriesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSystemAdvisoriesApi - factory interface
+ * @export
+ */
+export const ListSystemAdvisoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSystemAdvisoriesApiFp(configuration)
+    return {
+        /**
+         * Show me advisories for a system by given inventory id
+         * @summary Show me advisories for a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemAdvisoriesSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<ControllersSystemAdvisoriesResponse> {
+            return localVarFp.listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSystemAdvisoriesApi - object-oriented interface
+ * @export
+ * @class ListSystemAdvisoriesApi
+ * @extends {BaseAPI}
+ */
+export class ListSystemAdvisoriesApi extends BaseAPI {
+    /**
+     * Show me advisories for a system by given inventory id
+     * @summary Show me advisories for a system by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListSystemAdvisoriesSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSystemAdvisoriesApi
+     */
+    public listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig) {
+        return ListSystemAdvisoriesApiFp(this.configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListSystemAdvisoriesSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    Type: 'type',
+    Synopsis: 'synopsis',
+    PublicDate: 'public_date'
+} as const;
+export type ListSystemAdvisoriesSortEnum = typeof ListSystemAdvisoriesSortEnum[keyof typeof ListSystemAdvisoriesSortEnum];
+
+
+/**
+ * ListSystemAdvisoriesIdsApi - axios parameter creator
+ * @export
+ */
+export const ListSystemAdvisoriesIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me advisories for a system by given inventory id
+         * @summary Show me advisories for a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemAdvisoriesIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystemAdvisoriesIds: async (inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling listSystemAdvisoriesIds.');
-            }
+            assertParamExists('listSystemAdvisoriesIds', 'inventoryId', inventoryId)
             const localVarPath = `/ids/systems/{inventory_id}/advisories`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -5986,44 +8418,155 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListSystemAdvisoriesIdsApi - functional programming interface
+ * @export
+ */
+export const ListSystemAdvisoriesIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSystemAdvisoriesIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me advisories for a system by given inventory id
+         * @summary Show me advisories for a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemAdvisoriesIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSystemAdvisoriesIdsApi - factory interface
+ * @export
+ */
+export const ListSystemAdvisoriesIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSystemAdvisoriesIdsApiFp(configuration)
+    return {
+        /**
+         * Show me advisories for a system by given inventory id
+         * @summary Show me advisories for a system by given inventory id
+         * @param {string} inventoryId Inventory ID
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemAdvisoriesIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDescription] Filter
+         * @param {string} [filterPublicDate] Filter
+         * @param {string} [filterSynopsis] Filter
+         * @param {string} [filterAdvisoryType] Filter
+         * @param {string} [filterAdvisoryTypeName] Filter
+         * @param {string} [filterSeverity] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
+            return localVarFp.listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSystemAdvisoriesIdsApi - object-oriented interface
+ * @export
+ * @class ListSystemAdvisoriesIdsApi
+ * @extends {BaseAPI}
+ */
+export class ListSystemAdvisoriesIdsApi extends BaseAPI {
+    /**
+     * Show me advisories for a system by given inventory id
+     * @summary Show me advisories for a system by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListSystemAdvisoriesIdsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterPublicDate] Filter
+     * @param {string} [filterSynopsis] Filter
+     * @param {string} [filterAdvisoryType] Filter
+     * @param {string} [filterAdvisoryTypeName] Filter
+     * @param {string} [filterSeverity] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSystemAdvisoriesIdsApi
+     */
+    public listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: ListSystemAdvisoriesIdsSortEnum, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: AxiosRequestConfig) {
+        return ListSystemAdvisoriesIdsApiFp(this.configuration).listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListSystemAdvisoriesIdsSortEnum = {
+    Id: 'id',
+    Name: 'name',
+    Type: 'type',
+    Synopsis: 'synopsis',
+    PublicDate: 'public_date'
+} as const;
+export type ListSystemAdvisoriesIdsSortEnum = typeof ListSystemAdvisoriesIdsSortEnum[keyof typeof ListSystemAdvisoriesIdsSortEnum];
+
+
+/**
+ * ListSystemTagsApi - axios parameter creator
+ * @export
+ */
+export const ListSystemTagsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me systems tags applicable to this application
          * @summary Show me systems tags applicable to this application
-         * @param {'tag' | 'count'} [sort] Sort field
+         * @param {ListSystemTagsSortEnum} [sort] Sort field
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemTags: async (sort?: 'tag' | 'count', limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+        listSystemTags: async (sort?: ListSystemTagsSortEnum, limit?: number, offset?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/tags`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (sort !== undefined) {
                 localVarQueryParameter['sort'] = sort;
@@ -6039,23 +8582,107 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListSystemTagsApi - functional programming interface
+ * @export
+ */
+export const ListSystemTagsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSystemTagsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me systems tags applicable to this application
+         * @summary Show me systems tags applicable to this application
+         * @param {ListSystemTagsSortEnum} [sort] Sort field
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSystemTags(sort?: ListSystemTagsSortEnum, limit?: number, offset?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemTagsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSystemTags(sort, limit, offset, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSystemTagsApi - factory interface
+ * @export
+ */
+export const ListSystemTagsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSystemTagsApiFp(configuration)
+    return {
+        /**
+         * Show me systems tags applicable to this application
+         * @summary Show me systems tags applicable to this application
+         * @param {ListSystemTagsSortEnum} [sort] Sort field
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystemTags(sort?: ListSystemTagsSortEnum, limit?: number, offset?: number, options?: any): AxiosPromise<ControllersSystemTagsResponse> {
+            return localVarFp.listSystemTags(sort, limit, offset, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSystemTagsApi - object-oriented interface
+ * @export
+ * @class ListSystemTagsApi
+ * @extends {BaseAPI}
+ */
+export class ListSystemTagsApi extends BaseAPI {
+    /**
+     * Show me systems tags applicable to this application
+     * @summary Show me systems tags applicable to this application
+     * @param {ListSystemTagsSortEnum} [sort] Sort field
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSystemTagsApi
+     */
+    public listSystemTags(sort?: ListSystemTagsSortEnum, limit?: number, offset?: number, options?: AxiosRequestConfig) {
+        return ListSystemTagsApiFp(this.configuration).listSystemTags(sort, limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListSystemTagsSortEnum = {
+    Tag: 'tag',
+    Count: 'count'
+} as const;
+export type ListSystemTagsSortEnum = typeof ListSystemTagsSortEnum[keyof typeof ListSystemTagsSortEnum];
+
+
+/**
+ * ListSystemsApi - axios parameter creator
+ * @export
+ */
+export const ListSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all my systems
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
+         * @param {ListSystemsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
@@ -6100,24 +8727,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystems: async (limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listSystems: async (limit?: number, offset?: number, sort?: ListSystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6297,23 +8921,241 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListSystemsApi - functional programming interface
+ * @export
+ */
+export const ListSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSystemsApiAxiosParamCreator(configuration)
+    return {
         /**
          * Show me all my systems
          * @summary Show me all my systems
          * @param {number} [limit] Limit for paging
          * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
+         * @param {ListSystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {string} [filterArch] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSystems(limit?: number, offset?: number, sort?: ListSystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSystemsApi - factory interface
+ * @export
+ */
+export const ListSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSystemsApiFp(configuration)
+    return {
+        /**
+         * Show me all my systems
+         * @summary Show me all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {string} [filterArch] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystems(limit?: number, offset?: number, sort?: ListSystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
+            return localVarFp.listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSystemsApi - object-oriented interface
+ * @export
+ * @class ListSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ListSystemsApi extends BaseAPI {
+    /**
+     * Show me all my systems
+     * @summary Show me all my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListSystemsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterLastEvaluation] Filter
+     * @param {string} [filterLastUpload] Filter
+     * @param {string} [filterRhsaCount] Filter
+     * @param {string} [filterRhbaCount] Filter
+     * @param {string} [filterRheaCount] Filter
+     * @param {string} [filterOtherCount] Filter
+     * @param {string} [filterInstallableRhsaCount] Filter
+     * @param {string} [filterInstallableRhbaCount] Filter
+     * @param {string} [filterInstallableRheaCount] Filter
+     * @param {string} [filterInstallableOtherCount] Filter
+     * @param {string} [filterApplicableRhsaCount] Filter
+     * @param {string} [filterApplicableRhbaCount] Filter
+     * @param {string} [filterApplicableRheaCount] Filter
+     * @param {string} [filterApplicableOtherCount] Filter
+     * @param {string} [filterStale] Filter
+     * @param {string} [filterPackagesInstalled] Filter
+     * @param {string} [filterPackagesInstallable] Filter
+     * @param {string} [filterPackagesApplicable] Filter
+     * @param {string} [filterStaleTimestamp] Filter
+     * @param {string} [filterStaleWarningTimestamp] Filter
+     * @param {string} [filterCulledTimestamp] Filter
+     * @param {string} [filterCreated] Filter
+     * @param {string} [filterBaselineName] Filter
+     * @param {string} [filterSatelliteManaged] Filter
+     * @param {string} [filterBuiltPkgcache] Filter
+     * @param {string} [filterArch] Filter
+     * @param {string} [filterOs] Filter OS version
+     * @param {string} [filterOsname] Filter OS name
+     * @param {string} [filterOsmajor] Filter OS major version
+     * @param {string} [filterOsminor] Filter OS minor version
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSystemsApi
+     */
+    public listSystems(limit?: number, offset?: number, sort?: ListSystemsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListSystemsApiFp(this.configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListSystemsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    LastUpload: 'last_upload',
+    RhsaCount: 'rhsa_count',
+    RhbaCount: 'rhba_count',
+    RheaCount: 'rhea_count',
+    OtherCount: 'other_count',
+    Stale: 'stale',
+    PackagesInstalled: 'packages_installed',
+    BaselineName: 'baseline_name',
+    Groups: 'groups',
+    SatelliteManaged: 'satellite_managed',
+    BuiltPkgcache: 'built_pkgcache'
+} as const;
+export type ListSystemsSortEnum = typeof ListSystemsSortEnum[keyof typeof ListSystemsSortEnum];
+
+
+/**
+ * ListSystemsIdsApi - axios parameter creator
+ * @export
+ */
+export const ListSystemsIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me all my systems
+         * @summary Show me all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemsIdsSortEnum} [sort] Sort field
          * @param {string} [search] Find matching text
          * @param {string} [filterId] Filter
          * @param {string} [filterDisplayName] Filter
@@ -6358,24 +9200,21 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSystemsIds: async (limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
+        listSystemsIds: async (limit?: number, offset?: number, sort?: ListSystemsIdsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ids/systems`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6555,17 +9394,234 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * ListSystemsIdsApi - functional programming interface
+ * @export
+ */
+export const ListSystemsIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSystemsIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all my systems
+         * @summary Show me all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {string} [filterArch] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSystemsIds(limit?: number, offset?: number, sort?: ListSystemsIdsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsSatelliteManagedResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSystemsIdsApi - factory interface
+ * @export
+ */
+export const ListSystemsIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSystemsIdsApiFp(configuration)
+    return {
+        /**
+         * Show me all my systems
+         * @summary Show me all my systems
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {ListSystemsIdsSortEnum} [sort] Sort field
+         * @param {string} [search] Find matching text
+         * @param {string} [filterId] Filter
+         * @param {string} [filterDisplayName] Filter
+         * @param {string} [filterLastEvaluation] Filter
+         * @param {string} [filterLastUpload] Filter
+         * @param {string} [filterRhsaCount] Filter
+         * @param {string} [filterRhbaCount] Filter
+         * @param {string} [filterRheaCount] Filter
+         * @param {string} [filterOtherCount] Filter
+         * @param {string} [filterInstallableRhsaCount] Filter
+         * @param {string} [filterInstallableRhbaCount] Filter
+         * @param {string} [filterInstallableRheaCount] Filter
+         * @param {string} [filterInstallableOtherCount] Filter
+         * @param {string} [filterApplicableRhsaCount] Filter
+         * @param {string} [filterApplicableRhbaCount] Filter
+         * @param {string} [filterApplicableRheaCount] Filter
+         * @param {string} [filterApplicableOtherCount] Filter
+         * @param {string} [filterStale] Filter
+         * @param {string} [filterPackagesInstalled] Filter
+         * @param {string} [filterPackagesInstallable] Filter
+         * @param {string} [filterPackagesApplicable] Filter
+         * @param {string} [filterStaleTimestamp] Filter
+         * @param {string} [filterStaleWarningTimestamp] Filter
+         * @param {string} [filterCulledTimestamp] Filter
+         * @param {string} [filterCreated] Filter
+         * @param {string} [filterBaselineName] Filter
+         * @param {string} [filterOs] Filter OS version
+         * @param {string} [filterOsname] Filter OS name
+         * @param {string} [filterOsmajor] Filter OS major version
+         * @param {string} [filterOsminor] Filter OS minor version
+         * @param {string} [filterSatelliteManaged] Filter
+         * @param {string} [filterBuiltPkgcache] Filter
+         * @param {string} [filterArch] Filter
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSystemsIds(limit?: number, offset?: number, sort?: ListSystemsIdsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsSatelliteManagedResponse> {
+            return localVarFp.listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSystemsIdsApi - object-oriented interface
+ * @export
+ * @class ListSystemsIdsApi
+ * @extends {BaseAPI}
+ */
+export class ListSystemsIdsApi extends BaseAPI {
+    /**
+     * Show me all my systems
+     * @summary Show me all my systems
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {ListSystemsIdsSortEnum} [sort] Sort field
+     * @param {string} [search] Find matching text
+     * @param {string} [filterId] Filter
+     * @param {string} [filterDisplayName] Filter
+     * @param {string} [filterLastEvaluation] Filter
+     * @param {string} [filterLastUpload] Filter
+     * @param {string} [filterRhsaCount] Filter
+     * @param {string} [filterRhbaCount] Filter
+     * @param {string} [filterRheaCount] Filter
+     * @param {string} [filterOtherCount] Filter
+     * @param {string} [filterInstallableRhsaCount] Filter
+     * @param {string} [filterInstallableRhbaCount] Filter
+     * @param {string} [filterInstallableRheaCount] Filter
+     * @param {string} [filterInstallableOtherCount] Filter
+     * @param {string} [filterApplicableRhsaCount] Filter
+     * @param {string} [filterApplicableRhbaCount] Filter
+     * @param {string} [filterApplicableRheaCount] Filter
+     * @param {string} [filterApplicableOtherCount] Filter
+     * @param {string} [filterStale] Filter
+     * @param {string} [filterPackagesInstalled] Filter
+     * @param {string} [filterPackagesInstallable] Filter
+     * @param {string} [filterPackagesApplicable] Filter
+     * @param {string} [filterStaleTimestamp] Filter
+     * @param {string} [filterStaleWarningTimestamp] Filter
+     * @param {string} [filterCulledTimestamp] Filter
+     * @param {string} [filterCreated] Filter
+     * @param {string} [filterBaselineName] Filter
+     * @param {string} [filterOs] Filter OS version
+     * @param {string} [filterOsname] Filter OS name
+     * @param {string} [filterOsmajor] Filter OS major version
+     * @param {string} [filterOsminor] Filter OS minor version
+     * @param {string} [filterSatelliteManaged] Filter
+     * @param {string} [filterBuiltPkgcache] Filter
+     * @param {string} [filterArch] Filter
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSystemsIdsApi
+     */
+    public listSystemsIds(limit?: number, offset?: number, sort?: ListSystemsIdsSortEnum, search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ListSystemsIdsApiFp(this.configuration).listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const ListSystemsIdsSortEnum = {
+    Id: 'id',
+    DisplayName: 'display_name',
+    LastUpload: 'last_upload',
+    RhsaCount: 'rhsa_count',
+    RhbaCount: 'rhba_count',
+    RheaCount: 'rhea_count',
+    OtherCount: 'other_count',
+    Stale: 'stale',
+    PackagesInstalled: 'packages_installed',
+    BaselineName: 'baseline_name',
+    SatelliteManaged: 'satellite_managed',
+    BuiltPkgcache: 'built_pkgcache'
+} as const;
+export type ListSystemsIdsSortEnum = typeof ListSystemsIdsSortEnum[keyof typeof ListSystemsIdsSortEnum];
+
+
+/**
+ * PackageSystemsApi - axios parameter creator
+ * @export
+ */
+export const PackageSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all my systems which have a package installed
          * @summary Show me all my systems which have a package installed
@@ -6585,29 +9641,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageSystems: async (packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options: any = {}): Promise<RequestArgs> => {
+        packageSystems: async (packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'packageName' is not null or undefined
-            if (packageName === null || packageName === undefined) {
-                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling packageSystems.');
-            }
+            assertParamExists('packageSystems', 'packageName', packageName)
             const localVarPath = `/packages/{package_name}/systems`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6659,17 +9710,123 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PackageSystemsApi - functional programming interface
+ * @export
+ */
+export const PackageSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PackageSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+         * @param {boolean} [filterUpdatable] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PackageSystemsApi - factory interface
+ * @export
+ */
+export const PackageSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PackageSystemsApiFp(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+         * @param {boolean} [filterUpdatable] Filter
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
+            return localVarFp.packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PackageSystemsApi - object-oriented interface
+ * @export
+ * @class PackageSystemsApi
+ * @extends {BaseAPI}
+ */
+export class PackageSystemsApi extends BaseAPI {
+    /**
+     * Show me all my systems which have a package installed
+     * @summary Show me all my systems which have a package installed
+     * @param {string} packageName Package name
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+     * @param {boolean} [filterUpdatable] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PackageSystemsApi
+     */
+    public packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: AxiosRequestConfig) {
+        return PackageSystemsApiFp(this.configuration).packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PackageSystemsIdsApi - axios parameter creator
+ * @export
+ */
+export const PackageSystemsIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all my systems which have a package installed
          * @summary Show me all my systems which have a package installed
@@ -6688,29 +9845,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageSystemsIds: async (packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options: any = {}): Promise<RequestArgs> => {
+        packageSystemsIds: async (packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'packageName' is not null or undefined
-            if (packageName === null || packageName === undefined) {
-                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling packageSystemsIds.');
-            }
+            assertParamExists('packageSystemsIds', 'packageName', packageName)
             const localVarPath = `/ids/packages/{package_name}/systems`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6758,17 +9910,120 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PackageSystemsIdsApi - functional programming interface
+ * @export
+ */
+export const PackageSystemsIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PackageSystemsIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PackageSystemsIdsApi - factory interface
+ * @export
+ */
+export const PackageSystemsIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PackageSystemsIdsApiFp(configuration)
+    return {
+        /**
+         * Show me all my systems which have a package installed
+         * @summary Show me all my systems which have a package installed
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
+            return localVarFp.packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PackageSystemsIdsApi - object-oriented interface
+ * @export
+ * @class PackageSystemsIdsApi
+ * @extends {BaseAPI}
+ */
+export class PackageSystemsIdsApi extends BaseAPI {
+    /**
+     * Show me all my systems which have a package installed
+     * @summary Show me all my systems which have a package installed
+     * @param {string} packageName Package name
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PackageSystemsIdsApi
+     */
+    public packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: AxiosRequestConfig) {
+        return PackageSystemsIdsApiFp(this.configuration).packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PackageVersionsApi - axios parameter creator
+ * @export
+ */
+export const PackageVersionsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me all package versions installed on some system
          * @summary Show me all package versions installed on some system
@@ -6778,29 +10033,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        packageVersions: async (packageName: string, limit?: number, offset?: number, options: any = {}): Promise<RequestArgs> => {
+        packageVersions: async (packageName: string, limit?: number, offset?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'packageName' is not null or undefined
-            if (packageName === null || packageName === undefined) {
-                throw new RequiredError('packageName','Required parameter packageName was null or undefined when calling packageVersions.');
-            }
+            assertParamExists('packageVersions', 'packageName', packageName)
             const localVarPath = `/packages/{package_name}/versions`
                 .replace(`{${"package_name"}}`, encodeURIComponent(String(packageName)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6812,17 +10062,93 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PackageVersionsApi - functional programming interface
+ * @export
+ */
+export const PackageVersionsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PackageVersionsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me all package versions installed on some system
+         * @summary Show me all package versions installed on some system
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async packageVersions(packageName: string, limit?: number, offset?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageVersionsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.packageVersions(packageName, limit, offset, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PackageVersionsApi - factory interface
+ * @export
+ */
+export const PackageVersionsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PackageVersionsApiFp(configuration)
+    return {
+        /**
+         * Show me all package versions installed on some system
+         * @summary Show me all package versions installed on some system
+         * @param {string} packageName Package name
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        packageVersions(packageName: string, limit?: number, offset?: number, options?: any): AxiosPromise<ControllersPackageVersionsResponse> {
+            return localVarFp.packageVersions(packageName, limit, offset, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PackageVersionsApi - object-oriented interface
+ * @export
+ * @class PackageVersionsApi
+ * @extends {BaseAPI}
+ */
+export class PackageVersionsApi extends BaseAPI {
+    /**
+     * Show me all package versions installed on some system
+     * @summary Show me all package versions installed on some system
+     * @param {string} packageName Package name
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PackageVersionsApi
+     */
+    public packageVersions(packageName: string, limit?: number, offset?: number, options?: AxiosRequestConfig) {
+        return PackageVersionsApiFp(this.configuration).packageVersions(packageName, limit, offset, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * RemoveBaselineSystemsApi - axios parameter creator
+ * @export
+ */
+export const RemoveBaselineSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Remove systems from baseline
          * @summary Remove systems from baseline
@@ -6830,46 +10156,110 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        removeBaselineSystems: async (body: ControllersBaselineSystemsRemoveRequest, options: any = {}): Promise<RequestArgs> => {
+        removeBaselineSystems: async (body: ControllersBaselineSystemsRemoveRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling removeBaselineSystems.');
-            }
+            assertParamExists('removeBaselineSystems', 'body', body)
             const localVarPath = `/baselines/systems/remove`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
 
 
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * RemoveBaselineSystemsApi - functional programming interface
+ * @export
+ */
+export const RemoveBaselineSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RemoveBaselineSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Remove systems from baseline
+         * @summary Remove systems from baseline
+         * @param {ControllersBaselineSystemsRemoveRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.removeBaselineSystems(body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RemoveBaselineSystemsApi - factory interface
+ * @export
+ */
+export const RemoveBaselineSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RemoveBaselineSystemsApiFp(configuration)
+    return {
+        /**
+         * Remove systems from baseline
+         * @summary Remove systems from baseline
+         * @param {ControllersBaselineSystemsRemoveRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: any): AxiosPromise<void> {
+            return localVarFp.removeBaselineSystems(body, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * RemoveBaselineSystemsApi - object-oriented interface
+ * @export
+ * @class RemoveBaselineSystemsApi
+ * @extends {BaseAPI}
+ */
+export class RemoveBaselineSystemsApi extends BaseAPI {
+    /**
+     * Remove systems from baseline
+     * @summary Remove systems from baseline
+     * @param {ControllersBaselineSystemsRemoveRequest} body Request body
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RemoveBaselineSystemsApi
+     */
+    public removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: AxiosRequestConfig) {
+        return RemoveBaselineSystemsApiFp(this.configuration).removeBaselineSystems(body, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * SystemPackagesApi - axios parameter creator
+ * @export
+ */
+export const SystemPackagesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Show me details about a system packages by given inventory id
          * @summary Show me details about a system packages by given inventory id
@@ -6886,29 +10276,24 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemPackages: async (inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options: any = {}): Promise<RequestArgs> => {
+        systemPackages: async (inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling systemPackages.');
-            }
+            assertParamExists('systemPackages', 'inventoryId', inventoryId)
             const localVarPath = `/systems/{inventory_id}/packages`
                 .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
 
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
@@ -6948,349 +10333,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Show me system\'s json request for VMaaS
-         * @summary Show me system\'s json request for VMaaS
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        systemVmaasJson: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling systemVmaasJson.');
-            }
-            const localVarPath = `/systems/{inventory_id}/vmaas_json`
-                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Show me system\'s yum_updates (client side evaluation data)
-         * @summary Show me system\'s yum_updates (client side evaluation data)
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        systemYumUpdates: async (inventoryId: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'inventoryId' is not null or undefined
-            if (inventoryId === null || inventoryId === undefined) {
-                throw new RequiredError('inventoryId','Required parameter inventoryId was null or undefined when calling systemYumUpdates.');
-            }
-            const localVarPath = `/systems/{inventory_id}/yum_updates`
-                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Update a baseline for my set of systems. System cannot be satellite managed.
-         * @summary Update a baseline for my set of systems
-         * @param {number} baselineId Baseline ID
-         * @param {ControllersUpdateBaselineRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateBaseline: async (baselineId: number, body: ControllersUpdateBaselineRequest, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'baselineId' is not null or undefined
-            if (baselineId === null || baselineId === undefined) {
-                throw new RequiredError('baselineId','Required parameter baselineId was null or undefined when calling updateBaseline.');
-            }
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling updateBaseline.');
-            }
-            const localVarPath = `/baselines/{baseline_id}`
-                .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * View advisory-system pairs for selected systems and installable advisories
-         * @summary View advisory-system pairs for selected systems and installable advisories
-         * @param {ControllersSystemsAdvisoriesRequest} body Request body
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        viewAdvisoriesSystems: async (body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling viewAdvisoriesSystems.');
-            }
-            const localVarPath = `/views/advisories/systems`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags;
-            }
-
-            if (filterGroupName) {
-                localVarQueryParameter['filter[group_name]'] = filterGroupName;
-            }
-
-            if (filterSystemProfileSapSystem !== undefined) {
-                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
-            }
-
-            if (filterSystemProfileSapSids) {
-                localVarQueryParameter['filter[system_profile][sap_sids]'] = filterSystemProfileSapSids;
-            }
-
-            if (filterSystemProfileAnsible !== undefined) {
-                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
-            }
-
-            if (filterSystemProfileAnsibleControllerVersion !== undefined) {
-                localVarQueryParameter['filter[system_profile][ansible][controller_version]'] = filterSystemProfileAnsibleControllerVersion;
-            }
-
-            if (filterSystemProfileMssql !== undefined) {
-                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
-            }
-
-            if (filterSystemProfileMssqlVersion !== undefined) {
-                localVarQueryParameter['filter[system_profile][mssql][version]'] = filterSystemProfileMssqlVersion;
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * View system-advisory pairs for selected systems and installable advisories
-         * @summary View system-advisory pairs for selected systems and installable advisories
-         * @param {ControllersSystemsAdvisoriesRequest} body Request body
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        viewSystemsAdvisories: async (body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'body' is not null or undefined
-            if (body === null || body === undefined) {
-                throw new RequiredError('body','Required parameter body was null or undefined when calling viewSystemsAdvisories.');
-            }
-            const localVarPath = `/views/systems/advisories`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication RhIdentity required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-rh-identity")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-rh-identity"] = localVarApiKeyValue;
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (tags) {
-                localVarQueryParameter['tags'] = tags;
-            }
-
-            if (filterGroupName) {
-                localVarQueryParameter['filter[group_name]'] = filterGroupName;
-            }
-
-            if (filterSystemProfileSapSystem !== undefined) {
-                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
-            }
-
-            if (filterSystemProfileSapSids) {
-                localVarQueryParameter['filter[system_profile][sap_sids]'] = filterSystemProfileSapSids;
-            }
-
-            if (filterSystemProfileAnsible !== undefined) {
-                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
-            }
-
-            if (filterSystemProfileAnsibleControllerVersion !== undefined) {
-                localVarQueryParameter['filter[system_profile][ansible][controller_version]'] = filterSystemProfileAnsibleControllerVersion;
-            }
-
-            if (filterSystemProfileMssql !== undefined) {
-                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
-            }
-
-            if (filterSystemProfileMssqlVersion !== undefined) {
-                localVarQueryParameter['filter[system_profile][mssql][version]'] = filterSystemProfileMssqlVersion;
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
@@ -7298,823 +10346,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * SystemPackagesApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
+export const SystemPackagesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemPackagesApiAxiosParamCreator(configuration)
     return {
-        /**
-         * Delete a baseline
-         * @summary Delete a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async baselineDelete(baselineId: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersDeleteBaselineResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).baselineDelete(baselineId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Create a baseline for my set of systems. System cannot be satellite managed.
-         * @summary Create a baseline for my set of systems
-         * @param {ControllersCreateBaselineRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createBaseline(body: ControllersCreateBaselineRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersCreateBaselineResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createBaseline(body, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Delete system by inventory id
-         * @summary Delete system by inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deletesystem(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deletesystem(inventoryId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me details an advisory by given advisory name
-         * @summary Show me details an advisory by given advisory name
-         * @param {string} advisoryId Advisory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async detailAdvisory(advisoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoryDetailResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).detailAdvisory(advisoryId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show baseline detail by given baseline ID
-         * @summary Show baseline detail by given baseline ID
-         * @param {string} baselineId Baseline ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async detailBaseline(baselineId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselineDetailResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).detailBaseline(baselineId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me details about a system by given inventory id
-         * @summary Show me details about a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async detailSystem(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemDetailResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).detailSystem(inventoryId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Export applicable advisories for all my systems. Export endpoints are not paginated.
-         * @summary Export applicable advisories for all my systems
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersAdvisoriesDBLookup>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Export systems for my account. Export endpoints are not paginated.
-         * @summary Export systems for my account
-         * @param {string} advisoryId Advisory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterStale] Filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterOs] Filter OS version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersAdvisorySystemDBLookup>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Export systems applicable to a baseline. Export endpoints are not paginated.
-         * @summary Export systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersBaselineSystemsDBLookup>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all my systems which have a package installed. Export endpoints are not paginated.
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersPackageSystemItem>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all installed packages across my systems. Export endpoints are not paginated.
-         * @summary Show me all installed packages across my systems
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystemsInstalled] Filter
-         * @param {string} [filterSystemsInstallable] Filter
-         * @param {string} [filterSystemsApplicable] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportPackages(sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersPackageItem>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Export applicable advisories for all my systems. Export endpoints are not paginated.
-         * @summary Export applicable advisories for all my systems
-         * @param {string} inventoryId Inventory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemAdvisoriesDBLookup>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
-         * @summary Show me details about a system packages by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterEvra] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {boolean} [filterUpdatable] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemPackageInline>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Export systems for my account. Export endpoints are not paginated.
-         * @summary Export systems for my account
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterArch] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ControllersSystemDBLookup>>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me metadata of selected package
-         * @summary Show me metadata of selected package
-         * @param {string} packageName package_name - latest, nevra - exact version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async latestPackage(packageName: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageDetailResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).latestPackage(packageName, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all applicable advisories for all my systems
-         * @summary Show me all applicable advisories for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterInstallableSystems] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all applicable advisories for all my systems
-         * @summary Show me all applicable advisories for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterInstallableSystems] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listAdvisoriesIds(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsPlainResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me systems on which the given advisory is applicable
-         * @summary Show me systems on which the given advisory is applicable
-         * @param {string} advisoryId Advisory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterStatus] Filter
-         * @param {string} [filterTemplate] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisorySystemsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me systems on which the given advisory is applicable
-         * @summary Show me systems on which the given advisory is applicable
-         * @param {string} advisoryId Advisory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterInsightsId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterOsname] Filter
-         * @param {string} [filterOsminor] Filter
-         * @param {string} [filterOsmajor] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache', search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all baselines for all my systems
-         * @summary Show me all baselines for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listBaseline(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator', search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselinesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all systems applicable to a baseline
-         * @summary Show me all systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersBaselineSystemsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all systems applicable to a baseline
-         * @summary Show me all systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsPlainResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all installed packages across my systems
-         * @summary Show me all installed packages across my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystemsInstalled] Filter
-         * @param {string} [filterSystemsInstallable] Filter
-         * @param {string} [filterSystemsApplicable] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackagesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me advisories for a system by given inventory id
-         * @summary Show me advisories for a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemAdvisoriesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me advisories for a system by given inventory id
-         * @summary Show me advisories for a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me systems tags applicable to this application
-         * @summary Show me systems tags applicable to this application
-         * @param {'tag' | 'count'} [sort] Sort field
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSystemTags(sort?: 'tag' | 'count', limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemTagsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSystemTags(sort, limit, offset, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all my systems
-         * @summary Show me all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {string} [filterArch] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all my systems
-         * @summary Show me all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {string} [filterArch] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSystemsIds(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsSatelliteManagedResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all my systems which have a package installed
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-         * @param {boolean} [filterUpdatable] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageSystemsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all my systems which have a package installed
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersIDsStatusResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me all package versions installed on some system
-         * @summary Show me all package versions installed on some system
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async packageVersions(packageName: string, limit?: number, offset?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersPackageVersionsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).packageVersions(packageName, limit, offset, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Remove systems from baseline
-         * @summary Remove systems from baseline
-         * @param {ControllersBaselineSystemsRemoveRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).removeBaselineSystems(body, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
         /**
          * Show me details about a system packages by given inventory id
          * @summary Show me details about a system packages by given inventory id
@@ -8131,797 +10368,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemPackages(inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemPackageResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me system\'s json request for VMaaS
-         * @summary Show me system\'s json request for VMaaS
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async systemVmaasJson(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemVmaasJSONResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).systemVmaasJson(inventoryId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Show me system\'s yum_updates (client side evaluation data)
-         * @summary Show me system\'s yum_updates (client side evaluation data)
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async systemYumUpdates(inventoryId: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemYumUpdatesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).systemYumUpdates(inventoryId, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Update a baseline for my set of systems. System cannot be satellite managed.
-         * @summary Update a baseline for my set of systems
-         * @param {number} baselineId Baseline ID
-         * @param {ControllersUpdateBaselineRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updateBaseline(baselineId: number, body: ControllersUpdateBaselineRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersUpdateBaselineResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateBaseline(baselineId, body, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * View advisory-system pairs for selected systems and installable advisories
-         * @summary View advisory-system pairs for selected systems and installable advisories
-         * @param {ControllersSystemsAdvisoriesRequest} body Request body
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async viewAdvisoriesSystems(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesSystemsResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * View system-advisory pairs for selected systems and installable advisories
-         * @summary View system-advisory pairs for selected systems and installable advisories
-         * @param {ControllersSystemsAdvisoriesRequest} body Request body
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async viewSystemsAdvisories(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsAdvisoriesResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
+        async systemPackages(inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemPackageResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * DefaultApi - factory interface
+ * SystemPackagesApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const SystemPackagesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemPackagesApiFp(configuration)
     return {
-        /**
-         * Delete a baseline
-         * @summary Delete a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        baselineDelete(baselineId: number, options?: any): AxiosPromise<ControllersDeleteBaselineResponse> {
-            return DefaultApiFp(configuration).baselineDelete(baselineId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Create a baseline for my set of systems. System cannot be satellite managed.
-         * @summary Create a baseline for my set of systems
-         * @param {ControllersCreateBaselineRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createBaseline(body: ControllersCreateBaselineRequest, options?: any): AxiosPromise<ControllersCreateBaselineResponse> {
-            return DefaultApiFp(configuration).createBaseline(body, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Delete system by inventory id
-         * @summary Delete system by inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deletesystem(inventoryId: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deletesystem(inventoryId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me details an advisory by given advisory name
-         * @summary Show me details an advisory by given advisory name
-         * @param {string} advisoryId Advisory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        detailAdvisory(advisoryId: string, options?: any): AxiosPromise<ControllersAdvisoryDetailResponse> {
-            return DefaultApiFp(configuration).detailAdvisory(advisoryId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show baseline detail by given baseline ID
-         * @summary Show baseline detail by given baseline ID
-         * @param {string} baselineId Baseline ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        detailBaseline(baselineId: string, options?: any): AxiosPromise<ControllersBaselineDetailResponse> {
-            return DefaultApiFp(configuration).detailBaseline(baselineId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me details about a system by given inventory id
-         * @summary Show me details about a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        detailSystem(inventoryId: string, options?: any): AxiosPromise<ControllersSystemDetailResponse> {
-            return DefaultApiFp(configuration).detailSystem(inventoryId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Export applicable advisories for all my systems. Export endpoints are not paginated.
-         * @summary Export applicable advisories for all my systems
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any): AxiosPromise<Array<ControllersAdvisoriesDBLookup>> {
-            return DefaultApiFp(configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Export systems for my account. Export endpoints are not paginated.
-         * @summary Export systems for my account
-         * @param {string} advisoryId Advisory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterStale] Filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterOs] Filter OS version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersAdvisorySystemDBLookup>> {
-            return DefaultApiFp(configuration).exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Export systems applicable to a baseline. Export endpoints are not paginated.
-         * @summary Export systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<Array<ControllersBaselineSystemsDBLookup>> {
-            return DefaultApiFp(configuration).exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all my systems which have a package installed. Export endpoints are not paginated.
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersPackageSystemItem>> {
-            return DefaultApiFp(configuration).exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all installed packages across my systems. Export endpoints are not paginated.
-         * @summary Show me all installed packages across my systems
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystemsInstalled] Filter
-         * @param {string} [filterSystemsInstallable] Filter
-         * @param {string} [filterSystemsApplicable] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportPackages(sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: any): AxiosPromise<Array<ControllersPackageItem>> {
-            return DefaultApiFp(configuration).exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Export applicable advisories for all my systems. Export endpoints are not paginated.
-         * @summary Export applicable advisories for all my systems
-         * @param {string} inventoryId Inventory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<Array<ControllersSystemAdvisoriesDBLookup>> {
-            return DefaultApiFp(configuration).exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
-         * @summary Show me details about a system packages by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterEvra] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {boolean} [filterUpdatable] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any): AxiosPromise<Array<ControllersSystemPackageInline>> {
-            return DefaultApiFp(configuration).exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Export systems for my account. Export endpoints are not paginated.
-         * @summary Export systems for my account
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterArch] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: any): AxiosPromise<Array<ControllersSystemDBLookup>> {
-            return DefaultApiFp(configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me metadata of selected package
-         * @summary Show me metadata of selected package
-         * @param {string} packageName package_name - latest, nevra - exact version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        latestPackage(packageName: string, options?: any): AxiosPromise<ControllersPackageDetailResponse> {
-            return DefaultApiFp(configuration).latestPackage(packageName, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all applicable advisories for all my systems
-         * @summary Show me all applicable advisories for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterInstallableSystems] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersAdvisoriesResponse> {
-            return DefaultApiFp(configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all applicable advisories for all my systems
-         * @summary Show me all applicable advisories for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {string} [filterInstallableSystems] Filter
-         * @param {string} [filterApplicableSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAdvisoriesIds(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsPlainResponse> {
-            return DefaultApiFp(configuration).listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me systems on which the given advisory is applicable
-         * @summary Show me systems on which the given advisory is applicable
-         * @param {string} advisoryId Advisory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterStatus] Filter
-         * @param {string} [filterTemplate] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersAdvisorySystemsResponse> {
-            return DefaultApiFp(configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me systems on which the given advisory is applicable
-         * @summary Show me systems on which the given advisory is applicable
-         * @param {string} advisoryId Advisory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterInsightsId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterOsname] Filter
-         * @param {string} [filterOsminor] Filter
-         * @param {string} [filterOsmajor] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache', search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
-            return DefaultApiFp(configuration).listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all baselines for all my systems
-         * @summary Show me all baselines for all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystems] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listBaseline(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator', search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersBaselinesResponse> {
-            return DefaultApiFp(configuration).listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all systems applicable to a baseline
-         * @summary Show me all systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersBaselineSystemsResponse> {
-            return DefaultApiFp(configuration).listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all systems applicable to a baseline
-         * @summary Show me all systems belonging to a baseline
-         * @param {number} baselineId Baseline ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterOs] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: any): AxiosPromise<ControllersIDsPlainResponse> {
-            return DefaultApiFp(configuration).listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all installed packages across my systems
-         * @summary Show me all installed packages across my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterName] Filter
-         * @param {string} [filterSystemsInstalled] Filter
-         * @param {string} [filterSystemsInstallable] Filter
-         * @param {string} [filterSystemsApplicable] Filter
-         * @param {string} [filterSummary] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersPackagesResponse> {
-            return DefaultApiFp(configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me advisories for a system by given inventory id
-         * @summary Show me advisories for a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<ControllersSystemAdvisoriesResponse> {
-            return DefaultApiFp(configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me advisories for a system by given inventory id
-         * @summary Show me advisories for a system by given inventory id
-         * @param {string} inventoryId Inventory ID
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDescription] Filter
-         * @param {string} [filterPublicDate] Filter
-         * @param {string} [filterSynopsis] Filter
-         * @param {string} [filterAdvisoryType] Filter
-         * @param {string} [filterAdvisoryTypeName] Filter
-         * @param {string} [filterSeverity] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
-            return DefaultApiFp(configuration).listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me systems tags applicable to this application
-         * @summary Show me systems tags applicable to this application
-         * @param {'tag' | 'count'} [sort] Sort field
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSystemTags(sort?: 'tag' | 'count', limit?: number, offset?: number, options?: any): AxiosPromise<ControllersSystemTagsResponse> {
-            return DefaultApiFp(configuration).listSystemTags(sort, limit, offset, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all my systems
-         * @summary Show me all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {string} [filterArch] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersSystemsResponse> {
-            return DefaultApiFp(configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all my systems
-         * @summary Show me all my systems
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-         * @param {string} [search] Find matching text
-         * @param {string} [filterId] Filter
-         * @param {string} [filterDisplayName] Filter
-         * @param {string} [filterLastEvaluation] Filter
-         * @param {string} [filterLastUpload] Filter
-         * @param {string} [filterRhsaCount] Filter
-         * @param {string} [filterRhbaCount] Filter
-         * @param {string} [filterRheaCount] Filter
-         * @param {string} [filterOtherCount] Filter
-         * @param {string} [filterInstallableRhsaCount] Filter
-         * @param {string} [filterInstallableRhbaCount] Filter
-         * @param {string} [filterInstallableRheaCount] Filter
-         * @param {string} [filterInstallableOtherCount] Filter
-         * @param {string} [filterApplicableRhsaCount] Filter
-         * @param {string} [filterApplicableRhbaCount] Filter
-         * @param {string} [filterApplicableRheaCount] Filter
-         * @param {string} [filterApplicableOtherCount] Filter
-         * @param {string} [filterStale] Filter
-         * @param {string} [filterPackagesInstalled] Filter
-         * @param {string} [filterPackagesInstallable] Filter
-         * @param {string} [filterPackagesApplicable] Filter
-         * @param {string} [filterStaleTimestamp] Filter
-         * @param {string} [filterStaleWarningTimestamp] Filter
-         * @param {string} [filterCulledTimestamp] Filter
-         * @param {string} [filterCreated] Filter
-         * @param {string} [filterBaselineName] Filter
-         * @param {string} [filterOs] Filter OS version
-         * @param {string} [filterOsname] Filter OS name
-         * @param {string} [filterOsmajor] Filter OS major version
-         * @param {string} [filterOsminor] Filter OS minor version
-         * @param {string} [filterSatelliteManaged] Filter
-         * @param {string} [filterBuiltPkgcache] Filter
-         * @param {string} [filterArch] Filter
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSystemsIds(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersIDsSatelliteManagedResponse> {
-            return DefaultApiFp(configuration).listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all my systems which have a package installed
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-         * @param {boolean} [filterUpdatable] Filter
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: any): AxiosPromise<ControllersPackageSystemsResponse> {
-            return DefaultApiFp(configuration).packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all my systems which have a package installed
-         * @summary Show me all my systems which have a package installed
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {Array<string>} [tags] Tag filter
-         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-         * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: any): AxiosPromise<ControllersIDsStatusResponse> {
-            return DefaultApiFp(configuration).packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Show me all package versions installed on some system
-         * @summary Show me all package versions installed on some system
-         * @param {string} packageName Package name
-         * @param {number} [limit] Limit for paging
-         * @param {number} [offset] Offset for paging
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        packageVersions(packageName: string, limit?: number, offset?: number, options?: any): AxiosPromise<ControllersPackageVersionsResponse> {
-            return DefaultApiFp(configuration).packageVersions(packageName, limit, offset, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * Remove systems from baseline
-         * @summary Remove systems from baseline
-         * @param {ControllersBaselineSystemsRemoveRequest} body Request body
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).removeBaselineSystems(body, options).then((request) => request(axios, basePath));
-        },
         /**
          * Show me details about a system packages by given inventory id
          * @summary Show me details about a system packages by given inventory id
@@ -8939,8 +10399,116 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         systemPackages(inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options?: any): AxiosPromise<ControllersSystemPackageResponse> {
-            return DefaultApiFp(configuration).systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options).then((request) => request(axios, basePath));
+            return localVarFp.systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * SystemPackagesApi - object-oriented interface
+ * @export
+ * @class SystemPackagesApi
+ * @extends {BaseAPI}
+ */
+export class SystemPackagesApi extends BaseAPI {
+    /**
+     * Show me details about a system packages by given inventory id
+     * @summary Show me details about a system packages by given inventory id
+     * @param {string} inventoryId Inventory ID
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {string} [search] Find matching text
+     * @param {string} [filterName] Filter
+     * @param {string} [filterDescription] Filter
+     * @param {string} [filterEvra] Filter
+     * @param {string} [filterSummary] Filter
+     * @param {boolean} [filterUpdatable] Filter
+     * @param {string} [filterUpdateStatus] Filter
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemPackagesApi
+     */
+    public systemPackages(inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options?: AxiosRequestConfig) {
+        return SystemPackagesApiFp(this.configuration).systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * SystemVmaasJsonApi - axios parameter creator
+ * @export
+ */
+export const SystemVmaasJsonApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me system\'s json request for VMaaS
+         * @summary Show me system\'s json request for VMaaS
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemVmaasJson: async (inventoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'inventoryId' is not null or undefined
+            assertParamExists('systemVmaasJson', 'inventoryId', inventoryId)
+            const localVarPath = `/systems/{inventory_id}/vmaas_json`
+                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SystemVmaasJsonApi - functional programming interface
+ * @export
+ */
+export const SystemVmaasJsonApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemVmaasJsonApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me system\'s json request for VMaaS
+         * @summary Show me system\'s json request for VMaaS
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemVmaasJson(inventoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemVmaasJSONResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systemVmaasJson(inventoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SystemVmaasJsonApi - factory interface
+ * @export
+ */
+export const SystemVmaasJsonApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemVmaasJsonApiFp(configuration)
+    return {
         /**
          * Show me system\'s json request for VMaaS
          * @summary Show me system\'s json request for VMaaS
@@ -8949,8 +10517,107 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         systemVmaasJson(inventoryId: string, options?: any): AxiosPromise<ControllersSystemVmaasJSONResponse> {
-            return DefaultApiFp(configuration).systemVmaasJson(inventoryId, options).then((request) => request(axios, basePath));
+            return localVarFp.systemVmaasJson(inventoryId, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * SystemVmaasJsonApi - object-oriented interface
+ * @export
+ * @class SystemVmaasJsonApi
+ * @extends {BaseAPI}
+ */
+export class SystemVmaasJsonApi extends BaseAPI {
+    /**
+     * Show me system\'s json request for VMaaS
+     * @summary Show me system\'s json request for VMaaS
+     * @param {string} inventoryId Inventory ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemVmaasJsonApi
+     */
+    public systemVmaasJson(inventoryId: string, options?: AxiosRequestConfig) {
+        return SystemVmaasJsonApiFp(this.configuration).systemVmaasJson(inventoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * SystemYumUpdatesApi - axios parameter creator
+ * @export
+ */
+export const SystemYumUpdatesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Show me system\'s yum_updates (client side evaluation data)
+         * @summary Show me system\'s yum_updates (client side evaluation data)
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        systemYumUpdates: async (inventoryId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'inventoryId' is not null or undefined
+            assertParamExists('systemYumUpdates', 'inventoryId', inventoryId)
+            const localVarPath = `/systems/{inventory_id}/yum_updates`
+                .replace(`{${"inventory_id"}}`, encodeURIComponent(String(inventoryId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SystemYumUpdatesApi - functional programming interface
+ * @export
+ */
+export const SystemYumUpdatesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SystemYumUpdatesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Show me system\'s yum_updates (client side evaluation data)
+         * @summary Show me system\'s yum_updates (client side evaluation data)
+         * @param {string} inventoryId Inventory ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async systemYumUpdates(inventoryId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemYumUpdatesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systemYumUpdates(inventoryId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SystemYumUpdatesApi - factory interface
+ * @export
+ */
+export const SystemYumUpdatesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SystemYumUpdatesApiFp(configuration)
+    return {
         /**
          * Show me system\'s yum_updates (client side evaluation data)
          * @summary Show me system\'s yum_updates (client side evaluation data)
@@ -8959,8 +10626,114 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         systemYumUpdates(inventoryId: string, options?: any): AxiosPromise<ControllersSystemYumUpdatesResponse> {
-            return DefaultApiFp(configuration).systemYumUpdates(inventoryId, options).then((request) => request(axios, basePath));
+            return localVarFp.systemYumUpdates(inventoryId, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * SystemYumUpdatesApi - object-oriented interface
+ * @export
+ * @class SystemYumUpdatesApi
+ * @extends {BaseAPI}
+ */
+export class SystemYumUpdatesApi extends BaseAPI {
+    /**
+     * Show me system\'s yum_updates (client side evaluation data)
+     * @summary Show me system\'s yum_updates (client side evaluation data)
+     * @param {string} inventoryId Inventory ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SystemYumUpdatesApi
+     */
+    public systemYumUpdates(inventoryId: string, options?: AxiosRequestConfig) {
+        return SystemYumUpdatesApiFp(this.configuration).systemYumUpdates(inventoryId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * UpdateBaselineApi - axios parameter creator
+ * @export
+ */
+export const UpdateBaselineApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Update a baseline for my set of systems. System cannot be satellite managed.
+         * @summary Update a baseline for my set of systems
+         * @param {number} baselineId Baseline ID
+         * @param {ControllersUpdateBaselineRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateBaseline: async (baselineId: number, body: ControllersUpdateBaselineRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'baselineId' is not null or undefined
+            assertParamExists('updateBaseline', 'baselineId', baselineId)
+            // verify required parameter 'body' is not null or undefined
+            assertParamExists('updateBaseline', 'body', body)
+            const localVarPath = `/baselines/{baseline_id}`
+                .replace(`{${"baseline_id"}}`, encodeURIComponent(String(baselineId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdateBaselineApi - functional programming interface
+ * @export
+ */
+export const UpdateBaselineApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdateBaselineApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Update a baseline for my set of systems. System cannot be satellite managed.
+         * @summary Update a baseline for my set of systems
+         * @param {number} baselineId Baseline ID
+         * @param {ControllersUpdateBaselineRequest} body Request body
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updateBaseline(baselineId: number, body: ControllersUpdateBaselineRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersUpdateBaselineResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateBaseline(baselineId, body, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdateBaselineApi - factory interface
+ * @export
+ */
+export const UpdateBaselineApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdateBaselineApiFp(configuration)
+    return {
         /**
          * Update a baseline for my set of systems. System cannot be satellite managed.
          * @summary Update a baseline for my set of systems
@@ -8970,8 +10743,170 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateBaseline(baselineId: number, body: ControllersUpdateBaselineRequest, options?: any): AxiosPromise<ControllersUpdateBaselineResponse> {
-            return DefaultApiFp(configuration).updateBaseline(baselineId, body, options).then((request) => request(axios, basePath));
+            return localVarFp.updateBaseline(baselineId, body, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * UpdateBaselineApi - object-oriented interface
+ * @export
+ * @class UpdateBaselineApi
+ * @extends {BaseAPI}
+ */
+export class UpdateBaselineApi extends BaseAPI {
+    /**
+     * Update a baseline for my set of systems. System cannot be satellite managed.
+     * @summary Update a baseline for my set of systems
+     * @param {number} baselineId Baseline ID
+     * @param {ControllersUpdateBaselineRequest} body Request body
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UpdateBaselineApi
+     */
+    public updateBaseline(baselineId: number, body: ControllersUpdateBaselineRequest, options?: AxiosRequestConfig) {
+        return UpdateBaselineApiFp(this.configuration).updateBaseline(baselineId, body, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ViewAdvisoriesSystemsApi - axios parameter creator
+ * @export
+ */
+export const ViewAdvisoriesSystemsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * View advisory-system pairs for selected systems and installable advisories
+         * @summary View advisory-system pairs for selected systems and installable advisories
+         * @param {ControllersSystemsAdvisoriesRequest} body Request body
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        viewAdvisoriesSystems: async (body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'body' is not null or undefined
+            assertParamExists('viewAdvisoriesSystems', 'body', body)
+            const localVarPath = `/views/advisories/systems`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (filterGroupName) {
+                localVarQueryParameter['filter[group_name]'] = filterGroupName;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSids) {
+                localVarQueryParameter['filter[system_profile][sap_sids]'] = filterSystemProfileSapSids;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileAnsibleControllerVersion !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible][controller_version]'] = filterSystemProfileAnsibleControllerVersion;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
+            if (filterSystemProfileMssqlVersion !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql][version]'] = filterSystemProfileMssqlVersion;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ViewAdvisoriesSystemsApi - functional programming interface
+ * @export
+ */
+export const ViewAdvisoriesSystemsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ViewAdvisoriesSystemsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * View advisory-system pairs for selected systems and installable advisories
+         * @summary View advisory-system pairs for selected systems and installable advisories
+         * @param {ControllersSystemsAdvisoriesRequest} body Request body
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async viewAdvisoriesSystems(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersAdvisoriesSystemsResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ViewAdvisoriesSystemsApi - factory interface
+ * @export
+ */
+export const ViewAdvisoriesSystemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ViewAdvisoriesSystemsApiFp(configuration)
+    return {
         /**
          * View advisory-system pairs for selected systems and installable advisories
          * @summary View advisory-system pairs for selected systems and installable advisories
@@ -8990,8 +10925,179 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         viewAdvisoriesSystems(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersAdvisoriesSystemsResponse> {
-            return DefaultApiFp(configuration).viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+            return localVarFp.viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ViewAdvisoriesSystemsApi - object-oriented interface
+ * @export
+ * @class ViewAdvisoriesSystemsApi
+ * @extends {BaseAPI}
+ */
+export class ViewAdvisoriesSystemsApi extends BaseAPI {
+    /**
+     * View advisory-system pairs for selected systems and installable advisories
+     * @summary View advisory-system pairs for selected systems and installable advisories
+     * @param {ControllersSystemsAdvisoriesRequest} body Request body
+     * @param {number} [limit] Limit for paging
+     * @param {number} [offset] Offset for paging
+     * @param {Array<string>} [tags] Tag filter
+     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ViewAdvisoriesSystemsApi
+     */
+    public viewAdvisoriesSystems(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ViewAdvisoriesSystemsApiFp(this.configuration).viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ViewSystemsAdvisoriesApi - axios parameter creator
+ * @export
+ */
+export const ViewSystemsAdvisoriesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * View system-advisory pairs for selected systems and installable advisories
+         * @summary View system-advisory pairs for selected systems and installable advisories
+         * @param {ControllersSystemsAdvisoriesRequest} body Request body
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        viewSystemsAdvisories: async (body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'body' is not null or undefined
+            assertParamExists('viewSystemsAdvisories', 'body', body)
+            const localVarPath = `/views/systems/advisories`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication RhIdentity required
+            await setApiKeyToObject(localVarHeaderParameter, "x-rh-identity", configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (tags) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
+            if (filterGroupName) {
+                localVarQueryParameter['filter[group_name]'] = filterGroupName;
+            }
+
+            if (filterSystemProfileSapSystem !== undefined) {
+                localVarQueryParameter['filter[system_profile][sap_system]'] = filterSystemProfileSapSystem;
+            }
+
+            if (filterSystemProfileSapSids) {
+                localVarQueryParameter['filter[system_profile][sap_sids]'] = filterSystemProfileSapSids;
+            }
+
+            if (filterSystemProfileAnsible !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible]'] = filterSystemProfileAnsible;
+            }
+
+            if (filterSystemProfileAnsibleControllerVersion !== undefined) {
+                localVarQueryParameter['filter[system_profile][ansible][controller_version]'] = filterSystemProfileAnsibleControllerVersion;
+            }
+
+            if (filterSystemProfileMssql !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql]'] = filterSystemProfileMssql;
+            }
+
+            if (filterSystemProfileMssqlVersion !== undefined) {
+                localVarQueryParameter['filter[system_profile][mssql][version]'] = filterSystemProfileMssqlVersion;
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ViewSystemsAdvisoriesApi - functional programming interface
+ * @export
+ */
+export const ViewSystemsAdvisoriesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ViewSystemsAdvisoriesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * View system-advisory pairs for selected systems and installable advisories
+         * @summary View system-advisory pairs for selected systems and installable advisories
+         * @param {ControllersSystemsAdvisoriesRequest} body Request body
+         * @param {number} [limit] Limit for paging
+         * @param {number} [offset] Offset for paging
+         * @param {Array<string>} [tags] Tag filter
+         * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
+         * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
+         * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
+         * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
+         * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
+         * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
+         * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async viewSystemsAdvisories(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ControllersSystemsAdvisoriesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ViewSystemsAdvisoriesApi - factory interface
+ * @export
+ */
+export const ViewSystemsAdvisoriesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ViewSystemsAdvisoriesApiFp(configuration)
+    return {
         /**
          * View system-advisory pairs for selected systems and installable advisories
          * @summary View system-advisory pairs for selected systems and installable advisories
@@ -9010,846 +11116,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         viewSystemsAdvisories(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any): AxiosPromise<ControllersSystemsAdvisoriesResponse> {
-            return DefaultApiFp(configuration).viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
+            return localVarFp.viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * ViewSystemsAdvisoriesApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class ViewSystemsAdvisoriesApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
-    /**
-     * Delete a baseline
-     * @summary Delete a baseline
-     * @param {number} baselineId Baseline ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public baselineDelete(baselineId: number, options?: any) {
-        return DefaultApiFp(this.configuration).baselineDelete(baselineId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Create a baseline for my set of systems. System cannot be satellite managed.
-     * @summary Create a baseline for my set of systems
-     * @param {ControllersCreateBaselineRequest} body Request body
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createBaseline(body: ControllersCreateBaselineRequest, options?: any) {
-        return DefaultApiFp(this.configuration).createBaseline(body, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Delete system by inventory id
-     * @summary Delete system by inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deletesystem(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).deletesystem(inventoryId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me details an advisory by given advisory name
-     * @summary Show me details an advisory by given advisory name
-     * @param {string} advisoryId Advisory ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public detailAdvisory(advisoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).detailAdvisory(advisoryId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show baseline detail by given baseline ID
-     * @summary Show baseline detail by given baseline ID
-     * @param {string} baselineId Baseline ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public detailBaseline(baselineId: string, options?: any) {
-        return DefaultApiFp(this.configuration).detailBaseline(baselineId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me details about a system by given inventory id
-     * @summary Show me details about a system by given inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public detailSystem(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).detailSystem(inventoryId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Export applicable advisories for all my systems. Export endpoints are not paginated.
-     * @summary Export applicable advisories for all my systems
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryType] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {string} [filterApplicableSystems] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportAdvisories(search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterApplicableSystems?: string, options?: any) {
-        return DefaultApiFp(this.configuration).exportAdvisories(search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Export systems for my account. Export endpoints are not paginated.
-     * @summary Export systems for my account
-     * @param {string} advisoryId Advisory ID
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterStale] Filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {string} [filterOs] Filter OS version
-     * @param {Array<string>} [tags] Tag filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportAdvisorySystems(advisoryId: string, search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterOs?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).exportAdvisorySystems(advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Export systems applicable to a baseline. Export endpoints are not paginated.
-     * @summary Export systems belonging to a baseline
-     * @param {number} baselineId Baseline ID
-     * @param {string} [search] Find matching text
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterOs] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportBaselineSystems(baselineId: number, search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).exportBaselineSystems(baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all my systems which have a package installed. Export endpoints are not paginated.
-     * @summary Show me all my systems which have a package installed
-     * @param {string} packageName Package name
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {Array<string>} [tags] Tag filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportPackageSystems(packageName: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).exportPackageSystems(packageName, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, tags, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all installed packages across my systems. Export endpoints are not paginated.
-     * @summary Show me all installed packages across my systems
-     * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterName] Filter
-     * @param {string} [filterSystemsInstalled] Filter
-     * @param {string} [filterSystemsInstallable] Filter
-     * @param {string} [filterSystemsApplicable] Filter
-     * @param {string} [filterSummary] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportPackages(sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, options?: any) {
-        return DefaultApiFp(this.configuration).exportPackages(sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Export applicable advisories for all my systems. Export endpoints are not paginated.
-     * @summary Export applicable advisories for all my systems
-     * @param {string} inventoryId Inventory ID
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryType] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportSystemAdvisories(inventoryId: string, search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any) {
-        return DefaultApiFp(this.configuration).exportSystemAdvisories(inventoryId, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me details about a system packages by given inventory id. Export endpoints are not paginated.
-     * @summary Show me details about a system packages by given inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {string} [search] Find matching text
-     * @param {string} [filterName] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterEvra] Filter
-     * @param {string} [filterSummary] Filter
-     * @param {boolean} [filterUpdatable] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportSystemPackages(inventoryId: string, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).exportSystemPackages(inventoryId, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Export systems for my account. Export endpoints are not paginated.
-     * @summary Export systems for my account
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterLastEvaluation] Filter
-     * @param {string} [filterLastUpload] Filter
-     * @param {string} [filterRhsaCount] Filter
-     * @param {string} [filterRhbaCount] Filter
-     * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterOtherCount] Filter
-     * @param {string} [filterInstallableRhsaCount] Filter
-     * @param {string} [filterInstallableRhbaCount] Filter
-     * @param {string} [filterInstallableRheaCount] Filter
-     * @param {string} [filterInstallableOtherCount] Filter
-     * @param {string} [filterApplicableRhsaCount] Filter
-     * @param {string} [filterApplicableRhbaCount] Filter
-     * @param {string} [filterApplicableRheaCount] Filter
-     * @param {string} [filterApplicableOtherCount] Filter
-     * @param {string} [filterStale] Filter
-     * @param {string} [filterPackagesInstalled] Filter
-     * @param {string} [filterPackagesInstallable] Filter
-     * @param {string} [filterPackagesApplicable] Filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {string} [filterBaselineName] Filter
-     * @param {string} [filterArch] Filter
-     * @param {string} [filterOs] Filter OS version
-     * @param {string} [filterOsname] Filter OS name
-     * @param {string} [filterOsmajor] Filter OS major version
-     * @param {string} [filterOsminor] Filter OS minor version
-     * @param {Array<string>} [tags] Tag filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public exportSystems(search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterBaselineName?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).exportSystems(search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterBaselineName, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me metadata of selected package
-     * @summary Show me metadata of selected package
-     * @param {string} packageName package_name - latest, nevra - exact version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public latestPackage(packageName: string, options?: any) {
-        return DefaultApiFp(this.configuration).latestPackage(packageName, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all applicable advisories for all my systems
-     * @summary Show me all applicable advisories for all my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {string} [filterInstallableSystems] Filter
-     * @param {string} [filterApplicableSystems] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAdvisories(limit?: number, offset?: number, sort?: 'id' | 'advisory_type_name' | 'synopsis' | 'public_date' | 'severity' | 'installable_systems' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisories(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all applicable advisories for all my systems
-     * @summary Show me all applicable advisories for all my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryType] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {string} [filterInstallableSystems] Filter
-     * @param {string} [filterApplicableSystems] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAdvisoriesIds(limit?: number, offset?: number, sort?: 'id' | 'name' | 'advisory_type' | 'synopsis' | 'public_date' | 'applicable_systems', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, filterInstallableSystems?: string, filterApplicableSystems?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisoriesIds(limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterInstallableSystems, filterApplicableSystems, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me systems on which the given advisory is applicable
-     * @summary Show me systems on which the given advisory is applicable
-     * @param {string} advisoryId Advisory ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterStale] Filter
-     * @param {string} [filterStatus] Filter
-     * @param {string} [filterTemplate] Filter
-     * @param {string} [filterOs] Filter OS version
-     * @param {string} [filterSatelliteManaged] Filter
-     * @param {string} [filterBuiltPkgcache] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAdvisorySystems(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'stale' | 'status' | 'template' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterStale?: string, filterStatus?: string, filterTemplate?: string, filterOs?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisorySystems(advisoryId, limit, offset, sort, search, filterId, filterDisplayName, filterStale, filterStatus, filterTemplate, filterOs, filterSatelliteManaged, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me systems on which the given advisory is applicable
-     * @summary Show me systems on which the given advisory is applicable
-     * @param {string} advisoryId Advisory ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterInsightsId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterLastEvaluation] Filter
-     * @param {string} [filterLastUpload] Filter
-     * @param {string} [filterRhsaCount] Filter
-     * @param {string} [filterRhbaCount] Filter
-     * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterOtherCount] Filter
-     * @param {string} [filterSatelliteManaged] Filter
-     * @param {string} [filterStale] Filter
-     * @param {string} [filterStaleTimestamp] Filter
-     * @param {string} [filterStaleWarningTimestamp] Filter
-     * @param {string} [filterCulledTimestamp] Filter
-     * @param {string} [filterCreated] Filter
-     * @param {string} [filterOsname] Filter
-     * @param {string} [filterOsminor] Filter
-     * @param {string} [filterOsmajor] Filter
-     * @param {string} [filterOs] Filter OS version
-     * @param {string} [filterBuiltPkgcache] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAdvisorySystemsIds(advisoryId: string, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_evaluation' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'satellite_managed' | 'stale' | 'built_pkgcache', search?: string, filterId?: string, filterInsightsId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterSatelliteManaged?: string, filterStale?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterOsname?: string, filterOsminor?: string, filterOsmajor?: string, filterOs?: string, filterBuiltPkgcache?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listAdvisorySystemsIds(advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all baselines for all my systems
-     * @summary Show me all baselines for all my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterName] Filter
-     * @param {string} [filterSystems] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listBaseline(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems' | 'published' | 'last_edited' | 'creator', search?: string, filterId?: string, filterName?: string, filterSystems?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listBaseline(limit, offset, sort, search, filterId, filterName, filterSystems, tags, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all systems applicable to a baseline
-     * @summary Show me all systems belonging to a baseline
-     * @param {number} baselineId Baseline ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterOs] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listBaselineSystems(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload' | 'groups', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listBaselineSystems(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all systems applicable to a baseline
-     * @summary Show me all systems belonging to a baseline
-     * @param {number} baselineId Baseline ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterOs] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listBaselineSystemsIds(baselineId: number, limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'os' | 'installable_rhsa_count' | 'installable_rhba_count' | 'installable_rhea_count' | 'installable_other_count' | 'applicable_rhsa_count' | 'applicable_rhba_count' | 'applicable_rhea_count' | 'applicable_other_count' | 'last_upload', search?: string, filterDisplayName?: string, filterOs?: string, tags?: Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listBaselineSystemsIds(baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all installed packages across my systems
-     * @summary Show me all installed packages across my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterName] Filter
-     * @param {string} [filterSystemsInstalled] Filter
-     * @param {string} [filterSystemsInstallable] Filter
-     * @param {string} [filterSystemsApplicable] Filter
-     * @param {string} [filterSummary] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listPackages(limit?: number, offset?: number, sort?: 'id' | 'name' | 'systems_installed' | 'systems_installable' | 'systems_applicable', search?: string, filterName?: string, filterSystemsInstalled?: string, filterSystemsInstallable?: string, filterSystemsApplicable?: string, filterSummary?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listPackages(limit, offset, sort, search, filterName, filterSystemsInstalled, filterSystemsInstallable, filterSystemsApplicable, filterSummary, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me advisories for a system by given inventory id
-     * @summary Show me advisories for a system by given inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryType] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSystemAdvisories(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystemAdvisories(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me advisories for a system by given inventory id
-     * @summary Show me advisories for a system by given inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'name' | 'type' | 'synopsis' | 'public_date'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterPublicDate] Filter
-     * @param {string} [filterSynopsis] Filter
-     * @param {string} [filterAdvisoryType] Filter
-     * @param {string} [filterAdvisoryTypeName] Filter
-     * @param {string} [filterSeverity] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSystemAdvisoriesIds(inventoryId: string, limit?: number, offset?: number, sort?: 'id' | 'name' | 'type' | 'synopsis' | 'public_date', search?: string, filterId?: string, filterDescription?: string, filterPublicDate?: string, filterSynopsis?: string, filterAdvisoryType?: string, filterAdvisoryTypeName?: string, filterSeverity?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystemAdvisoriesIds(inventoryId, limit, offset, sort, search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me systems tags applicable to this application
-     * @summary Show me systems tags applicable to this application
-     * @param {'tag' | 'count'} [sort] Sort field
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSystemTags(sort?: 'tag' | 'count', limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).listSystemTags(sort, limit, offset, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all my systems
-     * @summary Show me all my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterLastEvaluation] Filter
-     * @param {string} [filterLastUpload] Filter
-     * @param {string} [filterRhsaCount] Filter
-     * @param {string} [filterRhbaCount] Filter
-     * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterOtherCount] Filter
-     * @param {string} [filterInstallableRhsaCount] Filter
-     * @param {string} [filterInstallableRhbaCount] Filter
-     * @param {string} [filterInstallableRheaCount] Filter
-     * @param {string} [filterInstallableOtherCount] Filter
-     * @param {string} [filterApplicableRhsaCount] Filter
-     * @param {string} [filterApplicableRhbaCount] Filter
-     * @param {string} [filterApplicableRheaCount] Filter
-     * @param {string} [filterApplicableOtherCount] Filter
-     * @param {string} [filterStale] Filter
-     * @param {string} [filterPackagesInstalled] Filter
-     * @param {string} [filterPackagesInstallable] Filter
-     * @param {string} [filterPackagesApplicable] Filter
-     * @param {string} [filterStaleTimestamp] Filter
-     * @param {string} [filterStaleWarningTimestamp] Filter
-     * @param {string} [filterCulledTimestamp] Filter
-     * @param {string} [filterCreated] Filter
-     * @param {string} [filterBaselineName] Filter
-     * @param {string} [filterSatelliteManaged] Filter
-     * @param {string} [filterBuiltPkgcache] Filter
-     * @param {string} [filterArch] Filter
-     * @param {string} [filterOs] Filter OS version
-     * @param {string} [filterOsname] Filter OS name
-     * @param {string} [filterOsmajor] Filter OS major version
-     * @param {string} [filterOsminor] Filter OS minor version
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSystems(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'groups' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystems(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterSatelliteManaged, filterBuiltPkgcache, filterArch, filterOs, filterOsname, filterOsmajor, filterOsminor, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all my systems
-     * @summary Show me all my systems
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache'} [sort] Sort field
-     * @param {string} [search] Find matching text
-     * @param {string} [filterId] Filter
-     * @param {string} [filterDisplayName] Filter
-     * @param {string} [filterLastEvaluation] Filter
-     * @param {string} [filterLastUpload] Filter
-     * @param {string} [filterRhsaCount] Filter
-     * @param {string} [filterRhbaCount] Filter
-     * @param {string} [filterRheaCount] Filter
-     * @param {string} [filterOtherCount] Filter
-     * @param {string} [filterInstallableRhsaCount] Filter
-     * @param {string} [filterInstallableRhbaCount] Filter
-     * @param {string} [filterInstallableRheaCount] Filter
-     * @param {string} [filterInstallableOtherCount] Filter
-     * @param {string} [filterApplicableRhsaCount] Filter
-     * @param {string} [filterApplicableRhbaCount] Filter
-     * @param {string} [filterApplicableRheaCount] Filter
-     * @param {string} [filterApplicableOtherCount] Filter
-     * @param {string} [filterStale] Filter
-     * @param {string} [filterPackagesInstalled] Filter
-     * @param {string} [filterPackagesInstallable] Filter
-     * @param {string} [filterPackagesApplicable] Filter
-     * @param {string} [filterStaleTimestamp] Filter
-     * @param {string} [filterStaleWarningTimestamp] Filter
-     * @param {string} [filterCulledTimestamp] Filter
-     * @param {string} [filterCreated] Filter
-     * @param {string} [filterBaselineName] Filter
-     * @param {string} [filterOs] Filter OS version
-     * @param {string} [filterOsname] Filter OS name
-     * @param {string} [filterOsmajor] Filter OS major version
-     * @param {string} [filterOsminor] Filter OS minor version
-     * @param {string} [filterSatelliteManaged] Filter
-     * @param {string} [filterBuiltPkgcache] Filter
-     * @param {string} [filterArch] Filter
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSystemsIds(limit?: number, offset?: number, sort?: 'id' | 'display_name' | 'last_upload' | 'rhsa_count' | 'rhba_count' | 'rhea_count' | 'other_count' | 'stale' | 'packages_installed' | 'baseline_name' | 'satellite_managed' | 'built_pkgcache', search?: string, filterId?: string, filterDisplayName?: string, filterLastEvaluation?: string, filterLastUpload?: string, filterRhsaCount?: string, filterRhbaCount?: string, filterRheaCount?: string, filterOtherCount?: string, filterInstallableRhsaCount?: string, filterInstallableRhbaCount?: string, filterInstallableRheaCount?: string, filterInstallableOtherCount?: string, filterApplicableRhsaCount?: string, filterApplicableRhbaCount?: string, filterApplicableRheaCount?: string, filterApplicableOtherCount?: string, filterStale?: string, filterPackagesInstalled?: string, filterPackagesInstallable?: string, filterPackagesApplicable?: string, filterStaleTimestamp?: string, filterStaleWarningTimestamp?: string, filterCulledTimestamp?: string, filterCreated?: string, filterBaselineName?: string, filterOs?: string, filterOsname?: string, filterOsmajor?: string, filterOsminor?: string, filterSatelliteManaged?: string, filterBuiltPkgcache?: string, filterArch?: string, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).listSystemsIds(limit, offset, sort, search, filterId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterInstallableRhsaCount, filterInstallableRhbaCount, filterInstallableRheaCount, filterInstallableOtherCount, filterApplicableRhsaCount, filterApplicableRhbaCount, filterApplicableRheaCount, filterApplicableOtherCount, filterStale, filterPackagesInstalled, filterPackagesInstallable, filterPackagesApplicable, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterBaselineName, filterOs, filterOsname, filterOsmajor, filterOsminor, filterSatelliteManaged, filterBuiltPkgcache, filterArch, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all my systems which have a package installed
-     * @summary Show me all my systems which have a package installed
-     * @param {string} packageName Package name
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-     * @param {boolean} [filterUpdatable] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public packageSystems(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, filterUpdatable?: boolean, options?: any) {
-        return DefaultApiFp(this.configuration).packageSystems(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, filterUpdatable, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all my systems which have a package installed
-     * @summary Show me all my systems which have a package installed
-     * @param {string} packageName Package name
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {string} [filterSatelliteManaged] Filter systems managed by satellite
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public packageSystemsIds(packageName: string, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, filterSatelliteManaged?: string, options?: any) {
-        return DefaultApiFp(this.configuration).packageSystemsIds(packageName, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterSatelliteManaged, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me all package versions installed on some system
-     * @summary Show me all package versions installed on some system
-     * @param {string} packageName Package name
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public packageVersions(packageName: string, limit?: number, offset?: number, options?: any) {
-        return DefaultApiFp(this.configuration).packageVersions(packageName, limit, offset, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Remove systems from baseline
-     * @summary Remove systems from baseline
-     * @param {ControllersBaselineSystemsRemoveRequest} body Request body
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public removeBaselineSystems(body: ControllersBaselineSystemsRemoveRequest, options?: any) {
-        return DefaultApiFp(this.configuration).removeBaselineSystems(body, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me details about a system packages by given inventory id
-     * @summary Show me details about a system packages by given inventory id
-     * @param {string} inventoryId Inventory ID
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {string} [search] Find matching text
-     * @param {string} [filterName] Filter
-     * @param {string} [filterDescription] Filter
-     * @param {string} [filterEvra] Filter
-     * @param {string} [filterSummary] Filter
-     * @param {boolean} [filterUpdatable] Filter
-     * @param {string} [filterUpdateStatus] Filter
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public systemPackages(inventoryId: string, limit?: number, offset?: number, search?: string, filterName?: string, filterDescription?: string, filterEvra?: string, filterSummary?: string, filterUpdatable?: boolean, filterUpdateStatus?: string, options?: any) {
-        return DefaultApiFp(this.configuration).systemPackages(inventoryId, limit, offset, search, filterName, filterDescription, filterEvra, filterSummary, filterUpdatable, filterUpdateStatus, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me system\'s json request for VMaaS
-     * @summary Show me system\'s json request for VMaaS
-     * @param {string} inventoryId Inventory ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public systemVmaasJson(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).systemVmaasJson(inventoryId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Show me system\'s yum_updates (client side evaluation data)
-     * @summary Show me system\'s yum_updates (client side evaluation data)
-     * @param {string} inventoryId Inventory ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public systemYumUpdates(inventoryId: string, options?: any) {
-        return DefaultApiFp(this.configuration).systemYumUpdates(inventoryId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Update a baseline for my set of systems. System cannot be satellite managed.
-     * @summary Update a baseline for my set of systems
-     * @param {number} baselineId Baseline ID
-     * @param {ControllersUpdateBaselineRequest} body Request body
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateBaseline(baselineId: number, body: ControllersUpdateBaselineRequest, options?: any) {
-        return DefaultApiFp(this.configuration).updateBaseline(baselineId, body, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * View advisory-system pairs for selected systems and installable advisories
-     * @summary View advisory-system pairs for selected systems and installable advisories
-     * @param {ControllersSystemsAdvisoriesRequest} body Request body
-     * @param {number} [limit] Limit for paging
-     * @param {number} [offset] Offset for paging
-     * @param {Array<string>} [tags] Tag filter
-     * @param {Array<string>} [filterGroupName] Filter systems by inventory groups
-     * @param {string} [filterSystemProfileSapSystem] Filter only SAP systems
-     * @param {Array<string>} [filterSystemProfileSapSids] Filter systems by their SAP SIDs
-     * @param {string} [filterSystemProfileAnsible] Filter systems by ansible
-     * @param {string} [filterSystemProfileAnsibleControllerVersion] Filter systems by ansible version
-     * @param {string} [filterSystemProfileMssql] Filter systems by mssql version
-     * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public viewAdvisoriesSystems(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).viewAdvisoriesSystems(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class ViewSystemsAdvisoriesApi extends BaseAPI {
     /**
      * View system-advisory pairs for selected systems and installable advisories
      * @summary View system-advisory pairs for selected systems and installable advisories
@@ -9866,12 +11144,12 @@ export class DefaultApi extends BaseAPI {
      * @param {string} [filterSystemProfileMssqlVersion] Filter systems by mssql version
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof ViewSystemsAdvisoriesApi
      */
-    public viewSystemsAdvisories(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: any) {
-        return DefaultApiFp(this.configuration).viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
+    public viewSystemsAdvisories(body: ControllersSystemsAdvisoriesRequest, limit?: number, offset?: number, tags?: Array<string>, filterGroupName?: Array<string>, filterSystemProfileSapSystem?: string, filterSystemProfileSapSids?: Array<string>, filterSystemProfileAnsible?: string, filterSystemProfileAnsibleControllerVersion?: string, filterSystemProfileMssql?: string, filterSystemProfileMssqlVersion?: string, options?: AxiosRequestConfig) {
+        return ViewSystemsAdvisoriesApiFp(this.configuration).viewSystemsAdvisories(body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options).then((request) => request(this.axios, this.basePath));
     }
-
 }
+
 
 

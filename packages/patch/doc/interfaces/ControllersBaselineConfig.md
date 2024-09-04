@@ -26,4 +26,4 @@ ControllersBaselineConfig
 
 #### Defined in
 
-[api.ts:390](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L390)
+types/index.ts:642

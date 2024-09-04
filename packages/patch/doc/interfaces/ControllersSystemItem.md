@@ -26,7 +26,7 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1364](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1364)
+types/index.ts:2135
 
 ___
 
@@ -40,7 +40,7 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1370](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1370)
+types/index.ts:2141
 
 ___
 
@@ -54,4 +54,4 @@ ControllersSystemItem
 
 #### Defined in
 
-[api.ts:1376](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1376)
+types/index.ts:2147

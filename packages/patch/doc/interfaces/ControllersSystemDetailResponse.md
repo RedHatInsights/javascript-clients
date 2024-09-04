@@ -16,7 +16,7 @@ ControllersSystemDetailResponse
 
 ### data
 
-• `Optional` **data**: [`ControllersSystemItem`](ControllersSystemItem.md)
+• `Optional` **data**: [`ControllersSystemItemExtended`](ControllersSystemItemExtended.md)
 
 **`Memberof`**
 
@@ -24,4 +24,4 @@ ControllersSystemDetailResponse
 
 #### Defined in
 
-[api.ts:1194](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1194)
+types/index.ts:2103

@@ -10,24 +10,10 @@ ModelsPackageUpdate
 
 ### Properties
 
-- [advisory](ModelsPackageUpdate.md#advisory)
 - [evra](ModelsPackageUpdate.md#evra)
+- [status](ModelsPackageUpdate.md#status)
 
 ## Properties
-
-### advisory
-
-• `Optional` **advisory**: `string`
-
-**`Memberof`**
-
-ModelsPackageUpdate
-
-#### Defined in
-
-[api.ts:1777](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1777)
-
-___
 
 ### evra
 
@@ -39,4 +25,18 @@ ModelsPackageUpdate
 
 #### Defined in
 
-[api.ts:1783](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1783)
+types/index.ts:3397
+
+___
+
+### status
+
+• `Optional` **status**: `string`
+
+**`Memberof`**
+
+ModelsPackageUpdate
+
+#### Defined in
+
+types/index.ts:3403
