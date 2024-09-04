@@ -28,7 +28,7 @@ Source
 
 #### Defined in
 
-[api.ts:3109](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3109)
+types/index.ts:3094
 
 ___
 
@@ -44,7 +44,7 @@ Source
 
 #### Defined in
 
-[api.ts:3115](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3115)
+types/index.ts:3100
 
 ___
 
@@ -58,7 +58,7 @@ Source
 
 #### Defined in
 
-[api.ts:3121](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3121)
+types/index.ts:3106
 
 ___
 
@@ -72,7 +72,7 @@ Source
 
 #### Defined in
 
-[api.ts:3127](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3127)
+types/index.ts:3112
 
 ___
 
@@ -86,4 +86,4 @@ Source
 
 #### Defined in
 
-[api.ts:3133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3133)
+types/index.ts:3118

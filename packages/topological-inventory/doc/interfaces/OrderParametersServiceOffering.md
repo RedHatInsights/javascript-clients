@@ -28,7 +28,7 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2095](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2095)
+types/index.ts:2080
 
 ___
 
@@ -44,7 +44,7 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2089](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2089)
+types/index.ts:2074
 
 ___
 
@@ -60,4 +60,4 @@ OrderParametersServiceOffering
 
 #### Defined in
 
-[api.ts:2101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2101)
+types/index.ts:2086

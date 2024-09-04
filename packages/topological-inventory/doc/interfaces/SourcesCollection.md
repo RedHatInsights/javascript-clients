@@ -26,7 +26,7 @@ SourcesCollection
 
 #### Defined in
 
-[api.ts:3244](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3244)
+types/index.ts:3229
 
 ___
 
@@ -40,7 +40,7 @@ SourcesCollection
 
 #### Defined in
 
-[api.ts:3238](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3238)
+types/index.ts:3223
 
 ___
 
@@ -54,4 +54,4 @@ SourcesCollection
 
 #### Defined in
 
-[api.ts:3232](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3232)
+types/index.ts:3217

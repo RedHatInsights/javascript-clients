@@ -26,7 +26,7 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1960](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1960)
+types/index.ts:1945
 
 ___
 
@@ -40,7 +40,7 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1954](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1954)
+types/index.ts:1939
 
 ___
 
@@ -54,4 +54,4 @@ NetworksCollection
 
 #### Defined in
 
-[api.ts:1948](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1948)
+types/index.ts:1933

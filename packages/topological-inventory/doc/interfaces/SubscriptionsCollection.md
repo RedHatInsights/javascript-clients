@@ -26,7 +26,7 @@ SubscriptionsCollection
 
 #### Defined in
 
-[api.ts:3458](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3458)
+types/index.ts:3443
 
 ___
 
@@ -40,7 +40,7 @@ SubscriptionsCollection
 
 #### Defined in
 
-[api.ts:3452](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3452)
+types/index.ts:3437
 
 ___
 
@@ -54,4 +54,4 @@ SubscriptionsCollection
 
 #### Defined in
 
-[api.ts:3446](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3446)
+types/index.ts:3431

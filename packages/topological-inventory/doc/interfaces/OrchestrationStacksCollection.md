@@ -26,7 +26,7 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2076](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2076)
+types/index.ts:2061
 
 ___
 
@@ -40,7 +40,7 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2070](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2070)
+types/index.ts:2055
 
 ___
 
@@ -54,4 +54,4 @@ OrchestrationStacksCollection
 
 #### Defined in
 
-[api.ts:2064](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2064)
+types/index.ts:2049

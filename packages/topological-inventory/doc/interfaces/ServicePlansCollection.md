@@ -26,7 +26,7 @@ ServicePlansCollection
 
 #### Defined in
 
-[api.ts:3096](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3096)
+types/index.ts:3081
 
 ___
 
@@ -40,7 +40,7 @@ ServicePlansCollection
 
 #### Defined in
 
-[api.ts:3090](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3090)
+types/index.ts:3075
 
 ___
 
@@ -54,4 +54,4 @@ ServicePlansCollection
 
 #### Defined in
 
-[api.ts:3084](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3084)
+types/index.ts:3069

@@ -35,7 +35,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2542](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2542)
+types/index.ts:2527
 
 ___
 
@@ -49,7 +49,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2548](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2548)
+types/index.ts:2533
 
 ___
 
@@ -63,7 +63,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2554](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2554)
+types/index.ts:2539
 
 ___
 
@@ -77,7 +77,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2560](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2560)
+types/index.ts:2545
 
 ___
 
@@ -93,7 +93,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2566](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2566)
+types/index.ts:2551
 
 ___
 
@@ -107,7 +107,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2572)
+types/index.ts:2557
 
 ___
 
@@ -121,7 +121,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2578](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2578)
+types/index.ts:2563
 
 ___
 
@@ -135,7 +135,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2584](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2584)
+types/index.ts:2569
 
 ___
 
@@ -151,7 +151,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2590](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2590)
+types/index.ts:2575
 
 ___
 
@@ -165,7 +165,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2596](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2596)
+types/index.ts:2581
 
 ___
 
@@ -179,7 +179,7 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2602](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2602)
+types/index.ts:2587
 
 ___
 
@@ -193,4 +193,4 @@ ServiceInventory
 
 #### Defined in
 
-[api.ts:2608](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2608)
+types/index.ts:2593

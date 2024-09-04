@@ -26,7 +26,7 @@ TasksCollection
 
 #### Defined in
 
-[api.ts:3637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3637)
+types/index.ts:3622
 
 ___
 
@@ -40,7 +40,7 @@ TasksCollection
 
 #### Defined in
 
-[api.ts:3631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3631)
+types/index.ts:3616
 
 ___
 
@@ -54,4 +54,4 @@ TasksCollection
 
 #### Defined in
 
-[api.ts:3625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3625)
+types/index.ts:3610

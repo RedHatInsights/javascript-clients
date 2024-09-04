@@ -26,7 +26,7 @@ ServiceInstancesCollection
 
 #### Defined in
 
-[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2504)
+types/index.ts:2489
 
 ___
 
@@ -40,7 +40,7 @@ ServiceInstancesCollection
 
 #### Defined in
 
-[api.ts:2498](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2498)
+types/index.ts:2483
 
 ___
 
@@ -54,4 +54,4 @@ ServiceInstancesCollection
 
 #### Defined in
 
-[api.ts:2492](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2492)
+types/index.ts:2477

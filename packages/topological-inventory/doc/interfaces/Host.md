@@ -41,7 +41,7 @@ Host
 
 #### Defined in
 
-[api.ts:1430](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1430)
+types/index.ts:1422
 
 ___
 
@@ -57,7 +57,7 @@ Host
 
 #### Defined in
 
-[api.ts:1436](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1436)
+types/index.ts:1428
 
 ___
 
@@ -71,7 +71,7 @@ Host
 
 #### Defined in
 
-[api.ts:1442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1442)
+types/index.ts:1434
 
 ___
 
@@ -85,7 +85,7 @@ Host
 
 #### Defined in
 
-[api.ts:1448](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1448)
+types/index.ts:1440
 
 ___
 
@@ -99,7 +99,7 @@ Host
 
 #### Defined in
 
-[api.ts:1454](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1454)
+types/index.ts:1446
 
 ___
 
@@ -113,7 +113,7 @@ Host
 
 #### Defined in
 
-[api.ts:1460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1460)
+types/index.ts:1452
 
 ___
 
@@ -127,7 +127,7 @@ Host
 
 #### Defined in
 
-[api.ts:1466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1466)
+types/index.ts:1458
 
 ___
 
@@ -143,7 +143,7 @@ Host
 
 #### Defined in
 
-[api.ts:1472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1472)
+types/index.ts:1464
 
 ___
 
@@ -157,7 +157,7 @@ Host
 
 #### Defined in
 
-[api.ts:1478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1478)
+types/index.ts:1470
 
 ___
 
@@ -171,7 +171,7 @@ Host
 
 #### Defined in
 
-[api.ts:1484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1484)
+types/index.ts:1476
 
 ___
 
@@ -185,7 +185,7 @@ Host
 
 #### Defined in
 
-[api.ts:1490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1490)
+types/index.ts:1482
 
 ___
 
@@ -199,7 +199,7 @@ Host
 
 #### Defined in
 
-[api.ts:1496](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1496)
+types/index.ts:1488
 
 ___
 
@@ -213,7 +213,7 @@ Host
 
 #### Defined in
 
-[api.ts:1502](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1502)
+types/index.ts:1494
 
 ___
 
@@ -227,7 +227,7 @@ Host
 
 #### Defined in
 
-[api.ts:1508](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1508)
+types/index.ts:1500
 
 ___
 
@@ -243,7 +243,7 @@ Host
 
 #### Defined in
 
-[api.ts:1514](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1514)
+types/index.ts:1506
 
 ___
 
@@ -257,7 +257,7 @@ Host
 
 #### Defined in
 
-[api.ts:1520](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1520)
+types/index.ts:1512
 
 ___
 
@@ -271,7 +271,7 @@ Host
 
 #### Defined in
 
-[api.ts:1526](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1526)
+types/index.ts:1518
 
 ___
 
@@ -285,4 +285,4 @@ Host
 
 #### Defined in
 
-[api.ts:1532](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1532)
+types/index.ts:1524

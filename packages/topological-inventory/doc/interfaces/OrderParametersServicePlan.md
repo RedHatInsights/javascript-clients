@@ -27,7 +27,7 @@ OrderParametersServicePlan
 
 #### Defined in
 
-[api.ts:2120](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2120)
+types/index.ts:2105
 
 ___
 
@@ -43,4 +43,4 @@ OrderParametersServicePlan
 
 #### Defined in
 
-[api.ts:2114](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2114)
+types/index.ts:2099

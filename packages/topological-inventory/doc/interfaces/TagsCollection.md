@@ -26,7 +26,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3557](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3557)
+types/index.ts:3542
 
 ___
 
@@ -40,7 +40,7 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3551](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3551)
+types/index.ts:3536
 
 ___
 
@@ -54,4 +54,4 @@ TagsCollection
 
 #### Defined in
 
-[api.ts:3545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3545)
+types/index.ts:3530

@@ -28,7 +28,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:1392](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1392)
+types/index.ts:1384
 
 ___
 
@@ -44,7 +44,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:1386](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1386)
+types/index.ts:1378
 
 ___
 
@@ -60,4 +60,4 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:1398](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1398)
+types/index.ts:1390

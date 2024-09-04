@@ -41,7 +41,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2969](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2969)
+types/index.ts:2954
 
 ___
 
@@ -55,7 +55,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2975](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2975)
+types/index.ts:2960
 
 ___
 
@@ -69,7 +69,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2981](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2981)
+types/index.ts:2966
 
 ___
 
@@ -83,7 +83,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2987)
+types/index.ts:2972
 
 ___
 
@@ -99,7 +99,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2993](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2993)
+types/index.ts:2978
 
 ___
 
@@ -115,7 +115,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:2999](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2999)
+types/index.ts:2984
 
 ___
 
@@ -129,7 +129,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3005](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3005)
+types/index.ts:2990
 
 ___
 
@@ -143,7 +143,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3011](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3011)
+types/index.ts:2996
 
 ___
 
@@ -157,7 +157,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3017](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3017)
+types/index.ts:3002
 
 ___
 
@@ -173,7 +173,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3023](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3023)
+types/index.ts:3008
 
 ___
 
@@ -187,7 +187,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3029](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3029)
+types/index.ts:3014
 
 ___
 
@@ -201,7 +201,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3035](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3035)
+types/index.ts:3020
 
 ___
 
@@ -217,7 +217,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3041](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3041)
+types/index.ts:3026
 
 ___
 
@@ -231,7 +231,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3047](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3047)
+types/index.ts:3032
 
 ___
 
@@ -247,7 +247,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3053](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3053)
+types/index.ts:3038
 
 ___
 
@@ -263,7 +263,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3059](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3059)
+types/index.ts:3044
 
 ___
 
@@ -277,7 +277,7 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3065](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3065)
+types/index.ts:3050
 
 ___
 
@@ -291,4 +291,4 @@ ServicePlan
 
 #### Defined in
 
-[api.ts:3071](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3071)
+types/index.ts:3056

@@ -37,7 +37,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L377)
+types/index.ts:369
 
 ___
 
@@ -53,7 +53,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:383](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L383)
+types/index.ts:375
 
 ___
 
@@ -69,7 +69,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L389)
+types/index.ts:381
 
 ___
 
@@ -83,7 +83,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:395](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L395)
+types/index.ts:387
 
 ___
 
@@ -99,7 +99,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:401](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L401)
+types/index.ts:393
 
 ___
 
@@ -113,7 +113,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:407](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L407)
+types/index.ts:399
 
 ___
 
@@ -127,7 +127,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:413](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L413)
+types/index.ts:405
 
 ___
 
@@ -141,7 +141,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:419](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L419)
+types/index.ts:411
 
 ___
 
@@ -155,7 +155,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:425](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L425)
+types/index.ts:417
 
 ___
 
@@ -169,7 +169,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:431](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L431)
+types/index.ts:423
 
 ___
 
@@ -183,7 +183,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:437](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L437)
+types/index.ts:429
 
 ___
 
@@ -199,7 +199,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:443](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L443)
+types/index.ts:435
 
 ___
 
@@ -213,7 +213,7 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:449](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L449)
+types/index.ts:441
 
 ___
 
@@ -227,4 +227,4 @@ ContainerGroup
 
 #### Defined in
 
-[api.ts:455](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L455)
+types/index.ts:447

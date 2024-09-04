@@ -32,7 +32,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3146](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3146)
+types/index.ts:3131
 
 ___
 
@@ -46,7 +46,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3152)
+types/index.ts:3137
 
 ___
 
@@ -60,7 +60,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3158)
+types/index.ts:3143
 
 ___
 
@@ -76,7 +76,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3164)
+types/index.ts:3149
 
 ___
 
@@ -90,7 +90,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3170](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3170)
+types/index.ts:3155
 
 ___
 
@@ -104,7 +104,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3176](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3176)
+types/index.ts:3161
 
 ___
 
@@ -120,7 +120,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3182](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3182)
+types/index.ts:3167
 
 ___
 
@@ -134,7 +134,7 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3188](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3188)
+types/index.ts:3173
 
 ___
 
@@ -148,4 +148,4 @@ SourceRegion
 
 #### Defined in
 
-[api.ts:3194](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3194)
+types/index.ts:3179

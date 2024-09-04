@@ -40,7 +40,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1583](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1583)
+types/index.ts:1562
 
 ___
 
@@ -54,7 +54,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1589)
+types/index.ts:1568
 
 ___
 
@@ -68,7 +68,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1595](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1595)
+types/index.ts:1574
 
 ___
 
@@ -84,7 +84,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1601)
+types/index.ts:1580
 
 ___
 
@@ -98,7 +98,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1607)
+types/index.ts:1586
 
 ___
 
@@ -112,7 +112,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1613)
+types/index.ts:1592
 
 ___
 
@@ -126,7 +126,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1619](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1619)
+types/index.ts:1598
 
 ___
 
@@ -142,7 +142,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1625)
+types/index.ts:1604
 
 ___
 
@@ -158,7 +158,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1631)
+types/index.ts:1610
 
 ___
 
@@ -172,7 +172,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1637)
+types/index.ts:1616
 
 ___
 
@@ -186,7 +186,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1643](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1643)
+types/index.ts:1622
 
 ___
 
@@ -202,7 +202,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1649](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1649)
+types/index.ts:1628
 
 ___
 
@@ -216,7 +216,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1655)
+types/index.ts:1634
 
 ___
 
@@ -232,7 +232,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1661](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1661)
+types/index.ts:1640
 
 ___
 
@@ -248,7 +248,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1667](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1667)
+types/index.ts:1646
 
 ___
 
@@ -264,7 +264,7 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1673](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1673)
+types/index.ts:1652
 
 ___
 
@@ -278,4 +278,4 @@ Ipaddress
 
 #### Defined in
 
-[api.ts:1679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1679)
+types/index.ts:1658

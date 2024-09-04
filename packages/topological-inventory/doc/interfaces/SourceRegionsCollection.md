@@ -26,7 +26,7 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3219](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3219)
+types/index.ts:3204
 
 ___
 
@@ -40,7 +40,7 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3213](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3213)
+types/index.ts:3198
 
 ___
 
@@ -54,4 +54,4 @@ SourceRegionsCollection
 
 #### Defined in
 
-[api.ts:3207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3207)
+types/index.ts:3192

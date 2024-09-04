@@ -30,7 +30,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2754](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2754)
+types/index.ts:2739
 
 ___
 
@@ -46,7 +46,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2760](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2760)
+types/index.ts:2745
 
 ___
 
@@ -62,7 +62,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2766)
+types/index.ts:2751
 
 ___
 
@@ -76,7 +76,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2772)
+types/index.ts:2757
 
 ___
 
@@ -92,7 +92,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2778)
+types/index.ts:2763
 
 ___
 
@@ -106,7 +106,7 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2784)
+types/index.ts:2769
 
 ___
 
@@ -120,4 +120,4 @@ ServiceOfferingIcon
 
 #### Defined in
 
-[api.ts:2790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2790)
+types/index.ts:2775

@@ -16,7 +16,7 @@ ErrorNotFound
 
 ### errors
 
-• `Optional` **errors**: [`ErrorNotFoundErrors`](ErrorNotFoundErrors.md)[]
+• `Optional` **errors**: [`ErrorNotFoundErrorsInner`](ErrorNotFoundErrorsInner.md)[]
 
 **`Memberof`**
 
@@ -24,4 +24,4 @@ ErrorNotFound
 
 #### Defined in
 
-[api.ts:1244](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1244)
+types/index.ts:1236

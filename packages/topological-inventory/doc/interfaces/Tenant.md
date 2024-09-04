@@ -27,7 +27,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:3662](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3662)
+types/index.ts:3647
 
 ___
 
@@ -41,7 +41,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:3668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3668)
+types/index.ts:3653
 
 ___
 
@@ -57,7 +57,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:3650](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3650)
+types/index.ts:3635
 
 ___
 
@@ -71,4 +71,4 @@ Tenant
 
 #### Defined in
 
-[api.ts:3656](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3656)
+types/index.ts:3641

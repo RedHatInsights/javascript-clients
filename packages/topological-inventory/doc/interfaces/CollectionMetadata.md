@@ -26,7 +26,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:273](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L273)
+types/index.ts:265
 
 ___
 
@@ -40,7 +40,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L279)
+types/index.ts:271
 
 ___
 
@@ -54,4 +54,4 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L285)
+types/index.ts:277

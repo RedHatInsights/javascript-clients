@@ -26,7 +26,7 @@ HostsCollection
 
 #### Defined in
 
-[api.ts:1557](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1557)
+types/index.ts:1549
 
 ___
 
@@ -40,7 +40,7 @@ HostsCollection
 
 #### Defined in
 
-[api.ts:1551](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1551)
+types/index.ts:1543
 
 ___
 
@@ -54,4 +54,4 @@ HostsCollection
 
 #### Defined in
 
-[api.ts:1545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1545)
+types/index.ts:1537

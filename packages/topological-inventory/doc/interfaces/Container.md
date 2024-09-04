@@ -35,7 +35,7 @@ Container
 
 #### Defined in
 
-[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L298)
+types/index.ts:290
 
 ___
 
@@ -51,7 +51,7 @@ Container
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L304)
+types/index.ts:296
 
 ___
 
@@ -67,7 +67,7 @@ Container
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L310)
+types/index.ts:302
 
 ___
 
@@ -81,7 +81,7 @@ Container
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L316)
+types/index.ts:308
 
 ___
 
@@ -95,7 +95,7 @@ Container
 
 #### Defined in
 
-[api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L322)
+types/index.ts:314
 
 ___
 
@@ -109,7 +109,7 @@ Container
 
 #### Defined in
 
-[api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L328)
+types/index.ts:320
 
 ___
 
@@ -125,7 +125,7 @@ Container
 
 #### Defined in
 
-[api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L334)
+types/index.ts:326
 
 ___
 
@@ -139,7 +139,7 @@ Container
 
 #### Defined in
 
-[api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L340)
+types/index.ts:332
 
 ___
 
@@ -153,7 +153,7 @@ Container
 
 #### Defined in
 
-[api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L346)
+types/index.ts:338
 
 ___
 
@@ -167,7 +167,7 @@ Container
 
 #### Defined in
 
-[api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L352)
+types/index.ts:344
 
 ___
 
@@ -181,7 +181,7 @@ Container
 
 #### Defined in
 
-[api.ts:358](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L358)
+types/index.ts:350
 
 ___
 
@@ -195,4 +195,4 @@ Container
 
 #### Defined in
 
-[api.ts:364](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L364)
+types/index.ts:356

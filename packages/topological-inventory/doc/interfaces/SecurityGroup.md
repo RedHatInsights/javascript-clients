@@ -39,7 +39,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2133](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2133)
+types/index.ts:2118
 
 ___
 
@@ -53,7 +53,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2139](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2139)
+types/index.ts:2124
 
 ___
 
@@ -67,7 +67,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2145](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2145)
+types/index.ts:2130
 
 ___
 
@@ -81,7 +81,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2151](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2151)
+types/index.ts:2136
 
 ___
 
@@ -97,7 +97,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2157](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2157)
+types/index.ts:2142
 
 ___
 
@@ -111,7 +111,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2163](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2163)
+types/index.ts:2148
 
 ___
 
@@ -125,7 +125,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2169](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2169)
+types/index.ts:2154
 
 ___
 
@@ -141,7 +141,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2175](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2175)
+types/index.ts:2160
 
 ___
 
@@ -157,7 +157,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2181](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2181)
+types/index.ts:2166
 
 ___
 
@@ -171,7 +171,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2187](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2187)
+types/index.ts:2172
 
 ___
 
@@ -185,7 +185,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2193](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2193)
+types/index.ts:2178
 
 ___
 
@@ -201,7 +201,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2199](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2199)
+types/index.ts:2184
 
 ___
 
@@ -215,7 +215,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2205](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2205)
+types/index.ts:2190
 
 ___
 
@@ -231,7 +231,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2211](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2211)
+types/index.ts:2196
 
 ___
 
@@ -247,7 +247,7 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2217)
+types/index.ts:2202
 
 ___
 
@@ -261,4 +261,4 @@ SecurityGroup
 
 #### Defined in
 
-[api.ts:2223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2223)
+types/index.ts:2208

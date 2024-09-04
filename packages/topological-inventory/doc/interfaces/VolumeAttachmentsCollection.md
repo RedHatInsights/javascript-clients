@@ -26,7 +26,7 @@ VolumeAttachmentsCollection
 
 #### Defined in
 
-[api.ts:4015](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L4015)
+types/index.ts:4000
 
 ___
 
@@ -40,7 +40,7 @@ VolumeAttachmentsCollection
 
 #### Defined in
 
-[api.ts:4009](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L4009)
+types/index.ts:3994
 
 ___
 
@@ -54,4 +54,4 @@ VolumeAttachmentsCollection
 
 #### Defined in
 
-[api.ts:4003](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L4003)
+types/index.ts:3988

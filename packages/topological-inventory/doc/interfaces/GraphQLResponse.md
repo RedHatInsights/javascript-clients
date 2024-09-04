@@ -27,7 +27,7 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:1411](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1411)
+types/index.ts:1403
 
 ___
 
@@ -43,4 +43,4 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:1417](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1417)
+types/index.ts:1409

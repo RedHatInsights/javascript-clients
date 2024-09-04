@@ -26,7 +26,7 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2248](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2248)
+types/index.ts:2233
 
 ___
 
@@ -40,7 +40,7 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2242](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2242)
+types/index.ts:2227
 
 ___
 
@@ -54,4 +54,4 @@ SecurityGroupsCollection
 
 #### Defined in
 
-[api.ts:2236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2236)
+types/index.ts:2221

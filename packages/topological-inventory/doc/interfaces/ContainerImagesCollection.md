@@ -26,7 +26,7 @@ ContainerImagesCollection
 
 #### Defined in
 
-[api.ts:584](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L584)
+types/index.ts:576
 
 ___
 
@@ -40,7 +40,7 @@ ContainerImagesCollection
 
 #### Defined in
 
-[api.ts:578](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L578)
+types/index.ts:570
 
 ___
 
@@ -54,4 +54,4 @@ ContainerImagesCollection
 
 #### Defined in
 
-[api.ts:572](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L572)
+types/index.ts:564

@@ -35,7 +35,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:138](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L138)
+types/index.ts:130
 
 ___
 
@@ -49,7 +49,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:144](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L144)
+types/index.ts:136
 
 ___
 
@@ -63,7 +63,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L150)
+types/index.ts:142
 
 ___
 
@@ -79,7 +79,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:156](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L156)
+types/index.ts:148
 
 ___
 
@@ -93,7 +93,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L162)
+types/index.ts:154
 
 ___
 
@@ -107,7 +107,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L168)
+types/index.ts:160
 
 ___
 
@@ -121,7 +121,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L174)
+types/index.ts:166
 
 ___
 
@@ -135,7 +135,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L180)
+types/index.ts:172
 
 ___
 
@@ -151,7 +151,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L186)
+types/index.ts:178
 
 ___
 
@@ -165,7 +165,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L192)
+types/index.ts:184
 
 ___
 
@@ -179,7 +179,7 @@ Cluster
 
 #### Defined in
 
-[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L198)
+types/index.ts:190
 
 ___
 
@@ -193,4 +193,4 @@ Cluster
 
 #### Defined in
 
-[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L204)
+types/index.ts:196
