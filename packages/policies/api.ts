@@ -13,13 +13,15 @@
  */
 
 
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  *
@@ -46,6 +48,8 @@ export interface Fact {
      */
     'type'?: FactType;
 }
+
+
 /**
  *
  * @export
@@ -245,206 +249,10 @@ export interface UserPreferences {
 }
 
 /**
- * BasePathFillerServiceApi - axios parameter creator
+ * DeletePoliciesByIdApi - axios parameter creator
  * @export
  */
-export const BasePathFillerServiceApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Just a filler to have a defined return code for the base path
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        get: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * BasePathFillerServiceApi - functional programming interface
- * @export
- */
-export const BasePathFillerServiceApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = BasePathFillerServiceApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @summary Just a filler to have a defined return code for the base path
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async get(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.get(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * BasePathFillerServiceApi - factory interface
- * @export
- */
-export const BasePathFillerServiceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = BasePathFillerServiceApiFp(configuration)
-    return {
-        /**
-         *
-         * @summary Just a filler to have a defined return code for the base path
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        get(options?: any): AxiosPromise<void> {
-            return localVarFp.get(options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * BasePathFillerServiceApi - object-oriented interface
- * @export
- * @class BasePathFillerServiceApi
- * @extends {BaseAPI}
- */
-export class BasePathFillerServiceApi extends BaseAPI {
-    /**
-     *
-     * @summary Just a filler to have a defined return code for the base path
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BasePathFillerServiceApi
-     */
-    public get(options?: AxiosRequestConfig) {
-        return BasePathFillerServiceApiFp(this.configuration).get(options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-/**
- * FactServiceApi - axios parameter creator
- * @export
- */
-export const FactServiceApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         *
-         * @summary Retrieve a list of fact (keys) along with their data types
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getFacts: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/facts`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * FactServiceApi - functional programming interface
- * @export
- */
-export const FactServiceApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = FactServiceApiAxiosParamCreator(configuration)
-    return {
-        /**
-         *
-         * @summary Retrieve a list of fact (keys) along with their data types
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getFacts(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Fact>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getFacts(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-    }
-};
-
-/**
- * FactServiceApi - factory interface
- * @export
- */
-export const FactServiceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = FactServiceApiFp(configuration)
-    return {
-        /**
-         *
-         * @summary Retrieve a list of fact (keys) along with their data types
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getFacts(options?: any): AxiosPromise<Array<Fact>> {
-            return localVarFp.getFacts(options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * FactServiceApi - object-oriented interface
- * @export
- * @class FactServiceApi
- * @extends {BaseAPI}
- */
-export class FactServiceApi extends BaseAPI {
-    /**
-     *
-     * @summary Retrieve a list of fact (keys) along with their data types
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof FactServiceApi
-     */
-    public getFacts(options?: AxiosRequestConfig) {
-        return FactServiceApiFp(this.configuration).getFacts(options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-/**
- * PolicyCrudServiceApi - axios parameter creator
- * @export
- */
-export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: Configuration) {
+export const DeletePoliciesByIdApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -480,6 +288,78 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DeletePoliciesByIdApi - functional programming interface
+ * @export
+ */
+export const DeletePoliciesByIdApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeletePoliciesByIdApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Delete a single policy for a customer by its id
+         * @param {string} id UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deletePoliciesById(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePoliciesById(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeletePoliciesByIdApi - factory interface
+ * @export
+ */
+export const DeletePoliciesByIdApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeletePoliciesByIdApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Delete a single policy for a customer by its id
+         * @param {string} id UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deletePoliciesById(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.deletePoliciesById(id, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DeletePoliciesByIdApi - object-oriented interface
+ * @export
+ * @class DeletePoliciesByIdApi
+ * @extends {BaseAPI}
+ */
+export class DeletePoliciesByIdApi extends BaseAPI {
+    /**
+     *
+     * @summary Delete a single policy for a customer by its id
+     * @param {string} id UUID of the policy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeletePoliciesByIdApi
+     */
+    public deletePoliciesById(id: string, options?: AxiosRequestConfig) {
+        return DeletePoliciesByIdApiFp(this.configuration).deletePoliciesById(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeletePoliciesIdsApi - axios parameter creator
+ * @export
+ */
+export const DeletePoliciesIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
@@ -514,22 +394,292 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * DeletePoliciesIdsApi - functional programming interface
+ * @export
+ */
+export const DeletePoliciesIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeletePoliciesIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
+         * @param {Array<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deletePoliciesIds(requestBody?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePoliciesIds(requestBody, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeletePoliciesIdsApi - factory interface
+ * @export
+ */
+export const DeletePoliciesIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeletePoliciesIdsApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
+         * @param {Array<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deletePoliciesIds(requestBody?: Array<string>, options?: any): AxiosPromise<Array<string>> {
+            return localVarFp.deletePoliciesIds(requestBody, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * DeletePoliciesIdsApi - object-oriented interface
+ * @export
+ * @class DeletePoliciesIdsApi
+ * @extends {BaseAPI}
+ */
+export class DeletePoliciesIdsApi extends BaseAPI {
+    /**
+     *
+     * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
+     * @param {Array<string>} [requestBody]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeletePoliciesIdsApi
+     */
+    public deletePoliciesIds(requestBody?: Array<string>, options?: AxiosRequestConfig) {
+        return DeletePoliciesIdsApiFp(this.configuration).deletePoliciesIds(requestBody, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GetApi - axios parameter creator
+ * @export
+ */
+export const GetApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Just a filler to have a defined return code for the base path
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        get: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GetApi - functional programming interface
+ * @export
+ */
+export const GetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Just a filler to have a defined return code for the base path
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async get(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.get(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetApi - factory interface
+ * @export
+ */
+export const GetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Just a filler to have a defined return code for the base path
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        get(options?: any): AxiosPromise<void> {
+            return localVarFp.get(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetApi - object-oriented interface
+ * @export
+ * @class GetApi
+ * @extends {BaseAPI}
+ */
+export class GetApi extends BaseAPI {
+    /**
+     *
+     * @summary Just a filler to have a defined return code for the base path
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetApi
+     */
+    public get(options?: AxiosRequestConfig) {
+        return GetApiFp(this.configuration).get(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GetFactsApi - axios parameter creator
+ * @export
+ */
+export const GetFactsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Retrieve a list of fact (keys) along with their data types
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getFacts: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/facts`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GetFactsApi - functional programming interface
+ * @export
+ */
+export const GetFactsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetFactsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve a list of fact (keys) along with their data types
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getFacts(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Fact>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getFacts(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetFactsApi - factory interface
+ * @export
+ */
+export const GetFactsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetFactsApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve a list of fact (keys) along with their data types
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getFacts(options?: any): AxiosPromise<Array<Fact>> {
+            return localVarFp.getFacts(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetFactsApi - object-oriented interface
+ * @export
+ * @class GetFactsApi
+ * @extends {BaseAPI}
+ */
+export class GetFactsApi extends BaseAPI {
+    /**
+     *
+     * @summary Retrieve a list of fact (keys) along with their data types
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetFactsApi
+     */
+    public getFacts(options?: AxiosRequestConfig) {
+        return GetFactsApiFp(this.configuration).getFacts(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GetPoliciesApi - axios parameter creator
+ * @export
+ */
+export const GetPoliciesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Return all policies for a given account
          * @param {number} [offset] Page number, starts 0, if not specified uses 0.
          * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
-         * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+         * @param {GetPoliciesSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesSortDirectionEnum} [sortDirection] Sort direction used
          * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+         * @param {GetPoliciesFilteropNameEnum} [filteropName] Operations used with the filter
          * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {GetPoliciesFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPolicies: async (offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPolicies: async (offset?: number, limit?: number, sortColumn?: GetPoliciesSortColumnEnum, sortDirection?: GetPoliciesSortDirectionEnum, filterName?: string, filteropName?: GetPoliciesFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesFilterIsEnabledEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -589,6 +739,149 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * GetPoliciesApi - functional programming interface
+ * @export
+ */
+export const GetPoliciesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetPoliciesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Return all policies for a given account
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
+         * @param {GetPoliciesSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesSortDirectionEnum} [sortDirection] Sort direction used
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {GetPoliciesFilteropNameEnum} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {GetPoliciesFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getPolicies(offset?: number, limit?: number, sortColumn?: GetPoliciesSortColumnEnum, sortDirection?: GetPoliciesSortDirectionEnum, filterName?: string, filteropName?: GetPoliciesFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesFilterIsEnabledEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfPolicy>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetPoliciesApi - factory interface
+ * @export
+ */
+export const GetPoliciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetPoliciesApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Return all policies for a given account
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
+         * @param {GetPoliciesSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesSortDirectionEnum} [sortDirection] Sort direction used
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {GetPoliciesFilteropNameEnum} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {GetPoliciesFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPolicies(offset?: number, limit?: number, sortColumn?: GetPoliciesSortColumnEnum, sortDirection?: GetPoliciesSortDirectionEnum, filterName?: string, filteropName?: GetPoliciesFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesFilterIsEnabledEnum, options?: any): AxiosPromise<PagedResponseOfPolicy> {
+            return localVarFp.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetPoliciesApi - object-oriented interface
+ * @export
+ * @class GetPoliciesApi
+ * @extends {BaseAPI}
+ */
+export class GetPoliciesApi extends BaseAPI {
+    /**
+     *
+     * @summary Return all policies for a given account
+     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+     * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
+     * @param {GetPoliciesSortColumnEnum} [sortColumn] Column to sort the results by
+     * @param {GetPoliciesSortDirectionEnum} [sortDirection] Sort direction used
+     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+     * @param {GetPoliciesFilteropNameEnum} [filteropName] Operations used with the filter
+     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+     * @param {GetPoliciesFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+     * @param {GetPoliciesFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetPoliciesApi
+     */
+    public getPolicies(offset?: number, limit?: number, sortColumn?: GetPoliciesSortColumnEnum, sortDirection?: GetPoliciesSortDirectionEnum, filterName?: string, filteropName?: GetPoliciesFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesFilterIsEnabledEnum, options?: AxiosRequestConfig) {
+        return GetPoliciesApiFp(this.configuration).getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const GetPoliciesSortColumnEnum = {
+    Name: 'name',
+    Description: 'description',
+    IsEnabled: 'is_enabled',
+    Mtime: 'mtime',
+    LastTriggered: 'last_triggered'
+} as const;
+export type GetPoliciesSortColumnEnum = typeof GetPoliciesSortColumnEnum[keyof typeof GetPoliciesSortColumnEnum];
+/**
+ * @export
+ */
+export const GetPoliciesSortDirectionEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetPoliciesSortDirectionEnum = typeof GetPoliciesSortDirectionEnum[keyof typeof GetPoliciesSortDirectionEnum];
+/**
+ * @export
+ */
+export const GetPoliciesFilteropNameEnum = {
+    Equal: 'equal',
+    Like: 'like',
+    Ilike: 'ilike',
+    NotEqual: 'not_equal'
+} as const;
+export type GetPoliciesFilteropNameEnum = typeof GetPoliciesFilteropNameEnum[keyof typeof GetPoliciesFilteropNameEnum];
+/**
+ * @export
+ */
+export const GetPoliciesFilteropDescriptionEnum = {
+    Equal: 'equal',
+    Like: 'like',
+    Ilike: 'ilike',
+    NotEqual: 'not_equal'
+} as const;
+export type GetPoliciesFilteropDescriptionEnum = typeof GetPoliciesFilteropDescriptionEnum[keyof typeof GetPoliciesFilteropDescriptionEnum];
+/**
+ * @export
+ */
+export const GetPoliciesFilterIsEnabledEnum = {
+    True: 'true',
+    False: 'false'
+} as const;
+export type GetPoliciesFilterIsEnabledEnum = typeof GetPoliciesFilterIsEnabledEnum[keyof typeof GetPoliciesFilterIsEnabledEnum];
+
+
+/**
+ * GetPoliciesByIdApi - axios parameter creator
+ * @export
+ */
+export const GetPoliciesByIdApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Retrieve a single policy for a customer by its id
@@ -623,6 +916,78 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * GetPoliciesByIdApi - functional programming interface
+ * @export
+ */
+export const GetPoliciesByIdApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetPoliciesByIdApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve a single policy for a customer by its id
+         * @param {string} id UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getPoliciesById(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policy>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesById(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetPoliciesByIdApi - factory interface
+ * @export
+ */
+export const GetPoliciesByIdApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetPoliciesByIdApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve a single policy for a customer by its id
+         * @param {string} id UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPoliciesById(id: string, options?: any): AxiosPromise<Policy> {
+            return localVarFp.getPoliciesById(id, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetPoliciesByIdApi - object-oriented interface
+ * @export
+ * @class GetPoliciesByIdApi
+ * @extends {BaseAPI}
+ */
+export class GetPoliciesByIdApi extends BaseAPI {
+    /**
+     *
+     * @summary Retrieve a single policy for a customer by its id
+     * @param {string} id UUID of the policy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetPoliciesByIdApi
+     */
+    public getPoliciesById(id: string, options?: AxiosRequestConfig) {
+        return GetPoliciesByIdApiFp(this.configuration).getPoliciesById(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GetPoliciesByIdHistoryTriggerApi - axios parameter creator
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Retrieve the trigger history of a single policy
@@ -630,15 +995,15 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
          * @param {number} [offset] Page number, starts 0, if not specified uses 0.
          * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
          * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
+         * @param {GetPoliciesByIdHistoryTriggerFilteropNameEnum} [filteropName] Operations used with the name filter
          * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
-         * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
+         * @param {GetPoliciesByIdHistoryTriggerFilteropIdEnum} [filteropId] Operations used with the name filter
+         * @param {GetPoliciesByIdHistoryTriggerSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesByIdHistoryTriggerSortDirectionEnum} [sortDirection] Sort direction used
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesByIdHistoryTrigger: async (id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPoliciesByIdHistoryTrigger: async (id: string, offset?: number, limit?: number, filterName?: string, filteropName?: GetPoliciesByIdHistoryTriggerFilteropNameEnum, filterId?: string, filteropId?: GetPoliciesByIdHistoryTriggerFilteropIdEnum, sortColumn?: GetPoliciesByIdHistoryTriggerSortColumnEnum, sortDirection?: GetPoliciesByIdHistoryTriggerSortDirectionEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('getPoliciesByIdHistoryTrigger', 'id', id)
             const localVarPath = `/policies/{id}/history/trigger`
@@ -697,18 +1062,148 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * GetPoliciesByIdHistoryTriggerApi - functional programming interface
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetPoliciesByIdHistoryTriggerApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve the trigger history of a single policy
+         * @param {string} id UUID of the policy
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
+         * @param {GetPoliciesByIdHistoryTriggerFilteropNameEnum} [filteropName] Operations used with the name filter
+         * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
+         * @param {GetPoliciesByIdHistoryTriggerFilteropIdEnum} [filteropId] Operations used with the name filter
+         * @param {GetPoliciesByIdHistoryTriggerSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesByIdHistoryTriggerSortDirectionEnum} [sortDirection] Sort direction used
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: GetPoliciesByIdHistoryTriggerFilteropNameEnum, filterId?: string, filteropId?: GetPoliciesByIdHistoryTriggerFilteropIdEnum, sortColumn?: GetPoliciesByIdHistoryTriggerSortColumnEnum, sortDirection?: GetPoliciesByIdHistoryTriggerSortDirectionEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfHistoryItem>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetPoliciesByIdHistoryTriggerApi - factory interface
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetPoliciesByIdHistoryTriggerApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Retrieve the trigger history of a single policy
+         * @param {string} id UUID of the policy
+         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
+         * @param {GetPoliciesByIdHistoryTriggerFilteropNameEnum} [filteropName] Operations used with the name filter
+         * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
+         * @param {GetPoliciesByIdHistoryTriggerFilteropIdEnum} [filteropId] Operations used with the name filter
+         * @param {GetPoliciesByIdHistoryTriggerSortColumnEnum} [sortColumn] Column to sort the results by
+         * @param {GetPoliciesByIdHistoryTriggerSortDirectionEnum} [sortDirection] Sort direction used
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: GetPoliciesByIdHistoryTriggerFilteropNameEnum, filterId?: string, filteropId?: GetPoliciesByIdHistoryTriggerFilteropIdEnum, sortColumn?: GetPoliciesByIdHistoryTriggerSortColumnEnum, sortDirection?: GetPoliciesByIdHistoryTriggerSortDirectionEnum, options?: any): AxiosPromise<PagedResponseOfHistoryItem> {
+            return localVarFp.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetPoliciesByIdHistoryTriggerApi - object-oriented interface
+ * @export
+ * @class GetPoliciesByIdHistoryTriggerApi
+ * @extends {BaseAPI}
+ */
+export class GetPoliciesByIdHistoryTriggerApi extends BaseAPI {
+    /**
+     *
+     * @summary Retrieve the trigger history of a single policy
+     * @param {string} id UUID of the policy
+     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
+     * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
+     * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
+     * @param {GetPoliciesByIdHistoryTriggerFilteropNameEnum} [filteropName] Operations used with the name filter
+     * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
+     * @param {GetPoliciesByIdHistoryTriggerFilteropIdEnum} [filteropId] Operations used with the name filter
+     * @param {GetPoliciesByIdHistoryTriggerSortColumnEnum} [sortColumn] Column to sort the results by
+     * @param {GetPoliciesByIdHistoryTriggerSortDirectionEnum} [sortDirection] Sort direction used
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetPoliciesByIdHistoryTriggerApi
+     */
+    public getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: GetPoliciesByIdHistoryTriggerFilteropNameEnum, filterId?: string, filteropId?: GetPoliciesByIdHistoryTriggerFilteropIdEnum, sortColumn?: GetPoliciesByIdHistoryTriggerSortColumnEnum, sortDirection?: GetPoliciesByIdHistoryTriggerSortDirectionEnum, options?: AxiosRequestConfig) {
+        return GetPoliciesByIdHistoryTriggerApiFp(this.configuration).getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerFilteropNameEnum = {
+    Equal: 'equal',
+    Like: 'like',
+    NotEqual: 'not_equal'
+} as const;
+export type GetPoliciesByIdHistoryTriggerFilteropNameEnum = typeof GetPoliciesByIdHistoryTriggerFilteropNameEnum[keyof typeof GetPoliciesByIdHistoryTriggerFilteropNameEnum];
+/**
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerFilteropIdEnum = {
+    Equal: 'equal',
+    NotEqual: 'not_equal',
+    Like: 'like'
+} as const;
+export type GetPoliciesByIdHistoryTriggerFilteropIdEnum = typeof GetPoliciesByIdHistoryTriggerFilteropIdEnum[keyof typeof GetPoliciesByIdHistoryTriggerFilteropIdEnum];
+/**
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerSortColumnEnum = {
+    HostName: 'hostName',
+    Ctime: 'ctime'
+} as const;
+export type GetPoliciesByIdHistoryTriggerSortColumnEnum = typeof GetPoliciesByIdHistoryTriggerSortColumnEnum[keyof typeof GetPoliciesByIdHistoryTriggerSortColumnEnum];
+/**
+ * @export
+ */
+export const GetPoliciesByIdHistoryTriggerSortDirectionEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetPoliciesByIdHistoryTriggerSortDirectionEnum = typeof GetPoliciesByIdHistoryTriggerSortDirectionEnum[keyof typeof GetPoliciesByIdHistoryTriggerSortDirectionEnum];
+
+
+/**
+ * GetPoliciesIdsApi - axios parameter creator
+ * @export
+ */
+export const GetPoliciesIdsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Return all policy ids for a given account after applying the filters
          * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
+         * @param {GetPoliciesIdsFilteropNameEnum} [filteropName] Operations used with the filter
          * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {GetPoliciesIdsFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesIdsFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPoliciesIds: async (filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getPoliciesIds: async (filterName?: string, filteropName?: GetPoliciesIdsFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesIdsFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesIdsFilterIsEnabledEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies/ids`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -752,6 +1247,118 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * GetPoliciesIdsApi - functional programming interface
+ * @export
+ */
+export const GetPoliciesIdsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetPoliciesIdsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Return all policy ids for a given account after applying the filters
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {GetPoliciesIdsFilteropNameEnum} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {GetPoliciesIdsFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesIdsFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getPoliciesIds(filterName?: string, filteropName?: GetPoliciesIdsFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesIdsFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesIdsFilterIsEnabledEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetPoliciesIdsApi - factory interface
+ * @export
+ */
+export const GetPoliciesIdsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetPoliciesIdsApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Return all policy ids for a given account after applying the filters
+         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+         * @param {GetPoliciesIdsFilteropNameEnum} [filteropName] Operations used with the filter
+         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+         * @param {GetPoliciesIdsFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+         * @param {GetPoliciesIdsFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getPoliciesIds(filterName?: string, filteropName?: GetPoliciesIdsFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesIdsFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesIdsFilterIsEnabledEnum, options?: any): AxiosPromise<Array<string>> {
+            return localVarFp.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GetPoliciesIdsApi - object-oriented interface
+ * @export
+ * @class GetPoliciesIdsApi
+ * @extends {BaseAPI}
+ */
+export class GetPoliciesIdsApi extends BaseAPI {
+    /**
+     *
+     * @summary Return all policy ids for a given account after applying the filters
+     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
+     * @param {GetPoliciesIdsFilteropNameEnum} [filteropName] Operations used with the filter
+     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
+     * @param {GetPoliciesIdsFilteropDescriptionEnum} [filteropDescription] Operations used with the filter
+     * @param {GetPoliciesIdsFilterIsEnabledEnum} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetPoliciesIdsApi
+     */
+    public getPoliciesIds(filterName?: string, filteropName?: GetPoliciesIdsFilteropNameEnum, filterDescription?: string, filteropDescription?: GetPoliciesIdsFilteropDescriptionEnum, filterIsEnabled?: GetPoliciesIdsFilterIsEnabledEnum, options?: AxiosRequestConfig) {
+        return GetPoliciesIdsApiFp(this.configuration).getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+/**
+ * @export
+ */
+export const GetPoliciesIdsFilteropNameEnum = {
+    Equal: 'equal',
+    Like: 'like',
+    Ilike: 'ilike',
+    NotEqual: 'not_equal'
+} as const;
+export type GetPoliciesIdsFilteropNameEnum = typeof GetPoliciesIdsFilteropNameEnum[keyof typeof GetPoliciesIdsFilteropNameEnum];
+/**
+ * @export
+ */
+export const GetPoliciesIdsFilteropDescriptionEnum = {
+    Equal: 'equal',
+    Like: 'like',
+    Ilike: 'ilike',
+    NotEqual: 'not_equal'
+} as const;
+export type GetPoliciesIdsFilteropDescriptionEnum = typeof GetPoliciesIdsFilteropDescriptionEnum[keyof typeof GetPoliciesIdsFilteropDescriptionEnum];
+/**
+ * @export
+ */
+export const GetPoliciesIdsFilterIsEnabledEnum = {
+    True: 'true',
+    False: 'false'
+} as const;
+export type GetPoliciesIdsFilterIsEnabledEnum = typeof GetPoliciesIdsFilterIsEnabledEnum[keyof typeof GetPoliciesIdsFilterIsEnabledEnum];
+
+
+/**
+ * PostPoliciesApi - axios parameter creator
+ * @export
+ */
+export const PostPoliciesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Validate (and possibly persist) a passed policy for the given account
@@ -791,6 +1398,81 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PostPoliciesApi - functional programming interface
+ * @export
+ */
+export const PostPoliciesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostPoliciesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Validate (and possibly persist) a passed policy for the given account
+         * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postPolicies(alsoStore?: boolean, policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postPolicies(alsoStore, policy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostPoliciesApi - factory interface
+ * @export
+ */
+export const PostPoliciesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostPoliciesApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Validate (and possibly persist) a passed policy for the given account
+         * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPolicies(alsoStore?: boolean, policy?: Policy, options?: any): AxiosPromise<void> {
+            return localVarFp.postPolicies(alsoStore, policy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PostPoliciesApi - object-oriented interface
+ * @export
+ * @class PostPoliciesApi
+ * @extends {BaseAPI}
+ */
+export class PostPoliciesApi extends BaseAPI {
+    /**
+     *
+     * @summary Validate (and possibly persist) a passed policy for the given account
+     * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
+     * @param {Policy} [policy]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostPoliciesApi
+     */
+    public postPolicies(alsoStore?: boolean, policy?: Policy, options?: AxiosRequestConfig) {
+        return PostPoliciesApiFp(this.configuration).postPolicies(alsoStore, policy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PostPoliciesByIdEnabledApi - axios parameter creator
+ * @export
+ */
+export const PostPoliciesByIdEnabledApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Enable/disable a policy
@@ -830,6 +1512,81 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PostPoliciesByIdEnabledApi - functional programming interface
+ * @export
+ */
+export const PostPoliciesByIdEnabledApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostPoliciesByIdEnabledApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Enable/disable a policy
+         * @param {string} id ID of the Policy
+         * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesByIdEnabled(id, enabled, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostPoliciesByIdEnabledApi - factory interface
+ * @export
+ */
+export const PostPoliciesByIdEnabledApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostPoliciesByIdEnabledApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Enable/disable a policy
+         * @param {string} id ID of the Policy
+         * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: any): AxiosPromise<void> {
+            return localVarFp.postPoliciesByIdEnabled(id, enabled, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PostPoliciesByIdEnabledApi - object-oriented interface
+ * @export
+ * @class PostPoliciesByIdEnabledApi
+ * @extends {BaseAPI}
+ */
+export class PostPoliciesByIdEnabledApi extends BaseAPI {
+    /**
+     *
+     * @summary Enable/disable a policy
+     * @param {string} id ID of the Policy
+     * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostPoliciesByIdEnabledApi
+     */
+    public postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: AxiosRequestConfig) {
+        return PostPoliciesByIdEnabledApiFp(this.configuration).postPoliciesByIdEnabled(id, enabled, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PostPoliciesIdsEnabledApi - axios parameter creator
+ * @export
+ */
+export const PostPoliciesIdsEnabledApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Enable/disable policies identified by list of uuid in body
@@ -869,6 +1626,81 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PostPoliciesIdsEnabledApi - functional programming interface
+ * @export
+ */
+export const PostPoliciesIdsEnabledApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostPoliciesIdsEnabledApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Enable/disable policies identified by list of uuid in body
+         * @param {boolean} [enabled]
+         * @param {Array<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesIdsEnabled(enabled, requestBody, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostPoliciesIdsEnabledApi - factory interface
+ * @export
+ */
+export const PostPoliciesIdsEnabledApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostPoliciesIdsEnabledApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Enable/disable policies identified by list of uuid in body
+         * @param {boolean} [enabled]
+         * @param {Array<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: any): AxiosPromise<Array<string>> {
+            return localVarFp.postPoliciesIdsEnabled(enabled, requestBody, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PostPoliciesIdsEnabledApi - object-oriented interface
+ * @export
+ * @class PostPoliciesIdsEnabledApi
+ * @extends {BaseAPI}
+ */
+export class PostPoliciesIdsEnabledApi extends BaseAPI {
+    /**
+     *
+     * @summary Enable/disable policies identified by list of uuid in body
+     * @param {boolean} [enabled]
+     * @param {Array<string>} [requestBody]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostPoliciesIdsEnabledApi
+     */
+    public postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: AxiosRequestConfig) {
+        return PostPoliciesIdsEnabledApiFp(this.configuration).postPoliciesIdsEnabled(enabled, requestBody, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PostPoliciesValidateApi - axios parameter creator
+ * @export
+ */
+export const PostPoliciesValidateApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Validates a Policy condition
@@ -903,6 +1735,78 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PostPoliciesValidateApi - functional programming interface
+ * @export
+ */
+export const PostPoliciesValidateApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostPoliciesValidateApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Validates a Policy condition
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postPoliciesValidate(policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Msg>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesValidate(policy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostPoliciesValidateApi - factory interface
+ * @export
+ */
+export const PostPoliciesValidateApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostPoliciesValidateApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Validates a Policy condition
+         * @param {Policy} [policy]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPoliciesValidate(policy?: Policy, options?: any): AxiosPromise<Msg> {
+            return localVarFp.postPoliciesValidate(policy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PostPoliciesValidateApi - object-oriented interface
+ * @export
+ * @class PostPoliciesValidateApi
+ * @extends {BaseAPI}
+ */
+export class PostPoliciesValidateApi extends BaseAPI {
+    /**
+     *
+     * @summary Validates a Policy condition
+     * @param {Policy} [policy]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostPoliciesValidateApi
+     */
+    public postPoliciesValidate(policy?: Policy, options?: AxiosRequestConfig) {
+        return PostPoliciesValidateApiFp(this.configuration).postPoliciesValidate(policy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PostPoliciesValidateNameApi - axios parameter creator
+ * @export
+ */
+export const PostPoliciesValidateNameApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Validates the Policy.name and verifies if it is unique.
@@ -944,6 +1848,81 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * PostPoliciesValidateNameApi - functional programming interface
+ * @export
+ */
+export const PostPoliciesValidateNameApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostPoliciesValidateNameApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Validates the Policy.name and verifies if it is unique.
+         * @param {string} body
+         * @param {string} [id] UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postPoliciesValidateName(body: string, id?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Msg>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesValidateName(body, id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostPoliciesValidateNameApi - factory interface
+ * @export
+ */
+export const PostPoliciesValidateNameApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostPoliciesValidateNameApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Validates the Policy.name and verifies if it is unique.
+         * @param {string} body
+         * @param {string} [id] UUID of the policy
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postPoliciesValidateName(body: string, id?: string, options?: any): AxiosPromise<Msg> {
+            return localVarFp.postPoliciesValidateName(body, id, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PostPoliciesValidateNameApi - object-oriented interface
+ * @export
+ * @class PostPoliciesValidateNameApi
+ * @extends {BaseAPI}
+ */
+export class PostPoliciesValidateNameApi extends BaseAPI {
+    /**
+     *
+     * @summary Validates the Policy.name and verifies if it is unique.
+     * @param {string} body
+     * @param {string} [id] UUID of the policy
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostPoliciesValidateNameApi
+     */
+    public postPoliciesValidateName(body: string, id?: string, options?: AxiosRequestConfig) {
+        return PostPoliciesValidateNameApiFp(this.configuration).postPoliciesValidateName(body, id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PutPoliciesByPolicyIdApi - axios parameter creator
+ * @export
+ */
+export const PutPoliciesByPolicyIdApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Update a single policy for a customer by its id
@@ -991,157 +1970,12 @@ export const PolicyCrudServiceApiAxiosParamCreator = function (configuration?: C
 };
 
 /**
- * PolicyCrudServiceApi - functional programming interface
+ * PutPoliciesByPolicyIdApi - functional programming interface
  * @export
  */
-export const PolicyCrudServiceApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = PolicyCrudServiceApiAxiosParamCreator(configuration)
+export const PutPoliciesByPolicyIdApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PutPoliciesByPolicyIdApiAxiosParamCreator(configuration)
     return {
-        /**
-         *
-         * @summary Delete a single policy for a customer by its id
-         * @param {string} id UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deletePoliciesById(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePoliciesById(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
-         * @param {Array<string>} [requestBody]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deletePoliciesIds(requestBody?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.deletePoliciesIds(requestBody, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Return all policies for a given account
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
-         * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfPolicy>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Retrieve a single policy for a customer by its id
-         * @param {string} id UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getPoliciesById(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policy>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesById(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Retrieve the trigger history of a single policy
-         * @param {string} id UUID of the policy
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
-         * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
-         * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagedResponseOfHistoryItem>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Return all policy ids for a given account after applying the filters
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Validate (and possibly persist) a passed policy for the given account
-         * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postPolicies(alsoStore?: boolean, policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.postPolicies(alsoStore, policy, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Enable/disable a policy
-         * @param {string} id ID of the Policy
-         * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesByIdEnabled(id, enabled, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Enable/disable policies identified by list of uuid in body
-         * @param {boolean} [enabled]
-         * @param {Array<string>} [requestBody]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesIdsEnabled(enabled, requestBody, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Validates a Policy condition
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postPoliciesValidate(policy?: Policy, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Msg>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesValidate(policy, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Validates the Policy.name and verifies if it is unique.
-         * @param {string} body
-         * @param {string} [id] UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postPoliciesValidateName(body: string, id?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Msg>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.postPoliciesValidateName(body, id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
         /**
          *
          * @summary Update a single policy for a customer by its id
@@ -1159,146 +1993,12 @@ export const PolicyCrudServiceApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * PolicyCrudServiceApi - factory interface
+ * PutPoliciesByPolicyIdApi - factory interface
  * @export
  */
-export const PolicyCrudServiceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = PolicyCrudServiceApiFp(configuration)
+export const PutPoliciesByPolicyIdApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PutPoliciesByPolicyIdApiFp(configuration)
     return {
-        /**
-         *
-         * @summary Delete a single policy for a customer by its id
-         * @param {string} id UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deletePoliciesById(id: string, options?: any): AxiosPromise<void> {
-            return localVarFp.deletePoliciesById(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
-         * @param {Array<string>} [requestBody]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deletePoliciesIds(requestBody?: Array<string>, options?: any): AxiosPromise<Array<string>> {
-            return localVarFp.deletePoliciesIds(requestBody, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Return all policies for a given account
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
-         * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: any): AxiosPromise<PagedResponseOfPolicy> {
-            return localVarFp.getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Retrieve a single policy for a customer by its id
-         * @param {string} id UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPoliciesById(id: string, options?: any): AxiosPromise<Policy> {
-            return localVarFp.getPoliciesById(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Retrieve the trigger history of a single policy
-         * @param {string} id UUID of the policy
-         * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-         * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-         * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
-         * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-         * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
-         * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
-         * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: any): AxiosPromise<PagedResponseOfHistoryItem> {
-            return localVarFp.getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Return all policy ids for a given account after applying the filters
-         * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-         * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-         * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-         * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: any): AxiosPromise<Array<string>> {
-            return localVarFp.getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Validate (and possibly persist) a passed policy for the given account
-         * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postPolicies(alsoStore?: boolean, policy?: Policy, options?: any): AxiosPromise<void> {
-            return localVarFp.postPolicies(alsoStore, policy, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Enable/disable a policy
-         * @param {string} id ID of the Policy
-         * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: any): AxiosPromise<void> {
-            return localVarFp.postPoliciesByIdEnabled(id, enabled, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Enable/disable policies identified by list of uuid in body
-         * @param {boolean} [enabled]
-         * @param {Array<string>} [requestBody]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: any): AxiosPromise<Array<string>> {
-            return localVarFp.postPoliciesIdsEnabled(enabled, requestBody, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Validates a Policy condition
-         * @param {Policy} [policy]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postPoliciesValidate(policy?: Policy, options?: any): AxiosPromise<Msg> {
-            return localVarFp.postPoliciesValidate(policy, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Validates the Policy.name and verifies if it is unique.
-         * @param {string} body
-         * @param {string} [id] UUID of the policy
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postPoliciesValidateName(body: string, id?: string, options?: any): AxiosPromise<Msg> {
-            return localVarFp.postPoliciesValidateName(body, id, options).then((request) => request(axios, basePath));
-        },
         /**
          *
          * @summary Update a single policy for a customer by its id
@@ -1315,168 +2015,12 @@ export const PolicyCrudServiceApiFactory = function (configuration?: Configurati
 };
 
 /**
- * PolicyCrudServiceApi - object-oriented interface
+ * PutPoliciesByPolicyIdApi - object-oriented interface
  * @export
- * @class PolicyCrudServiceApi
+ * @class PutPoliciesByPolicyIdApi
  * @extends {BaseAPI}
  */
-export class PolicyCrudServiceApi extends BaseAPI {
-    /**
-     *
-     * @summary Delete a single policy for a customer by its id
-     * @param {string} id UUID of the policy
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public deletePoliciesById(id: string, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).deletePoliciesById(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
-     * @param {Array<string>} [requestBody]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public deletePoliciesIds(requestBody?: Array<string>, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).deletePoliciesIds(requestBody, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Return all policies for a given account
-     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-     * @param {number} [limit] Number of items per page, if not specified uses 50. -1 can be used to specify an unlimited page, when specified it ignores the offset
-     * @param {'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered'} [sortColumn] Column to sort the results by
-     * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-     * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public getPolicies(offset?: number, limit?: number, sortColumn?: 'name' | 'description' | 'is_enabled' | 'mtime' | 'last_triggered', sortDirection?: 'asc' | 'desc', filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPolicies(offset, limit, sortColumn, sortDirection, filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Retrieve a single policy for a customer by its id
-     * @param {string} id UUID of the policy
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public getPoliciesById(id: string, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPoliciesById(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Retrieve the trigger history of a single policy
-     * @param {string} id UUID of the policy
-     * @param {number} [offset] Page number, starts 0, if not specified uses 0.
-     * @param {number} [limit] Number of items per page, if not specified uses 50. Maximum value is 200.
-     * @param {string} [filterName] Filtering history entries by the host name depending on the Filter operator used.
-     * @param {'equal' | 'like' | 'not_equal'} [filteropName] Operations used with the name filter
-     * @param {string} [filterId] Filtering history entries by the id depending on the Filter operator used.
-     * @param {'equal' | 'not_equal' | 'like'} [filteropId] Operations used with the name filter
-     * @param {'hostName' | 'ctime'} [sortColumn] Column to sort the results by
-     * @param {'asc' | 'desc'} [sortDirection] Sort direction used
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public getPoliciesByIdHistoryTrigger(id: string, offset?: number, limit?: number, filterName?: string, filteropName?: 'equal' | 'like' | 'not_equal', filterId?: string, filteropId?: 'equal' | 'not_equal' | 'like', sortColumn?: 'hostName' | 'ctime', sortDirection?: 'asc' | 'desc', options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPoliciesByIdHistoryTrigger(id, offset, limit, filterName, filteropName, filterId, filteropId, sortColumn, sortDirection, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Return all policy ids for a given account after applying the filters
-     * @param {string} [filterName] Filtering policies by the name depending on the Filter operator used.
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropName] Operations used with the filter
-     * @param {string} [filterDescription] Filtering policies by the description depending on the Filter operator used.
-     * @param {'equal' | 'like' | 'ilike' | 'not_equal'} [filteropDescription] Operations used with the filter
-     * @param {'true' | 'false'} [filterIsEnabled] Filtering policies by the is_enabled field.Defaults to true if no operand is given.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public getPoliciesIds(filterName?: string, filteropName?: 'equal' | 'like' | 'ilike' | 'not_equal', filterDescription?: string, filteropDescription?: 'equal' | 'like' | 'ilike' | 'not_equal', filterIsEnabled?: 'true' | 'false', options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).getPoliciesIds(filterName, filteropName, filterDescription, filteropDescription, filterIsEnabled, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Validate (and possibly persist) a passed policy for the given account
-     * @param {boolean} [alsoStore] If passed and set to true, the passed policy is also persisted (if it is valid)
-     * @param {Policy} [policy]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public postPolicies(alsoStore?: boolean, policy?: Policy, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).postPolicies(alsoStore, policy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Enable/disable a policy
-     * @param {string} id ID of the Policy
-     * @param {boolean} [enabled] Should the policy be enabled (true) or disabled (false, default)
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public postPoliciesByIdEnabled(id: string, enabled?: boolean, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).postPoliciesByIdEnabled(id, enabled, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Enable/disable policies identified by list of uuid in body
-     * @param {boolean} [enabled]
-     * @param {Array<string>} [requestBody]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public postPoliciesIdsEnabled(enabled?: boolean, requestBody?: Array<string>, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).postPoliciesIdsEnabled(enabled, requestBody, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Validates a Policy condition
-     * @param {Policy} [policy]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public postPoliciesValidate(policy?: Policy, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).postPoliciesValidate(policy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Validates the Policy.name and verifies if it is unique.
-     * @param {string} body
-     * @param {string} [id] UUID of the policy
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
-     */
-    public postPoliciesValidateName(body: string, id?: string, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).postPoliciesValidateName(body, id, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class PutPoliciesByPolicyIdApi extends BaseAPI {
     /**
      *
      * @summary Update a single policy for a customer by its id
@@ -1485,11 +2029,12 @@ export class PolicyCrudServiceApi extends BaseAPI {
      * @param {Policy} [policy]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PolicyCrudServiceApi
+     * @memberof PutPoliciesByPolicyIdApi
      */
     public putPoliciesByPolicyId(policyId: string, dry?: boolean, policy?: Policy, options?: AxiosRequestConfig) {
-        return PolicyCrudServiceApiFp(this.configuration).putPoliciesByPolicyId(policyId, dry, policy, options).then((request) => request(this.axios, this.basePath));
+        return PutPoliciesByPolicyIdApiFp(this.configuration).putPoliciesByPolicyId(policyId, dry, policy, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
 
 

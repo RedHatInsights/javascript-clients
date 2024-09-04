@@ -26,7 +26,7 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L164)
+types/index.ts:143
 
 ___
 
@@ -44,7 +44,7 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L158)
+types/index.ts:137
 
 ___
 
@@ -58,4 +58,4 @@ PagedResponseOfPolicy
 
 #### Defined in
 
-[api.ts:152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L152)
+types/index.ts:131

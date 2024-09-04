@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L57)
+types/index.ts:36
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[api.ts:59](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L59)
+types/index.ts:38
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L58)
+types/index.ts:37
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[api.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L56)
+types/index.ts:35
