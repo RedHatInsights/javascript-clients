@@ -26,7 +26,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:360](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L360)
+types/index.ts:339
 
 ___
 
@@ -40,7 +40,7 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L366)
+types/index.ts:345
 
 ___
 
@@ -54,4 +54,4 @@ CollectionMetadata
 
 #### Defined in
 
-[api.ts:372](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L372)
+types/index.ts:351

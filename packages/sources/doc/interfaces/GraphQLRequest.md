@@ -28,7 +28,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:551](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L551)
+types/index.ts:530
 
 ___
 
@@ -44,7 +44,7 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:545](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L545)
+types/index.ts:524
 
 ___
 
@@ -60,4 +60,4 @@ GraphQLRequest
 
 #### Defined in
 
-[api.ts:557](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L557)
+types/index.ts:536

@@ -34,7 +34,7 @@ Source
 
 #### Defined in
 
-[api.ts:589](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L589)
+types/index.ts:574
 
 ___
 
@@ -48,7 +48,7 @@ Source
 
 #### Defined in
 
-[api.ts:595](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L595)
+types/index.ts:580
 
 ___
 
@@ -64,7 +64,7 @@ Source
 
 #### Defined in
 
-[api.ts:601](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L601)
+types/index.ts:586
 
 ___
 
@@ -78,7 +78,7 @@ Source
 
 #### Defined in
 
-[api.ts:607](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L607)
+types/index.ts:592
 
 ___
 
@@ -92,7 +92,7 @@ Source
 
 #### Defined in
 
-[api.ts:613](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L613)
+types/index.ts:598
 
 ___
 
@@ -106,7 +106,7 @@ Source
 
 #### Defined in
 
-[api.ts:619](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L619)
+types/index.ts:604
 
 ___
 
@@ -122,7 +122,7 @@ Source
 
 #### Defined in
 
-[api.ts:625](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L625)
+types/index.ts:610
 
 ___
 
@@ -136,7 +136,7 @@ Source
 
 #### Defined in
 
-[api.ts:631](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L631)
+types/index.ts:616
 
 ___
 
@@ -150,7 +150,7 @@ Source
 
 #### Defined in
 
-[api.ts:637](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L637)
+types/index.ts:622
 
 ___
 
@@ -164,7 +164,7 @@ Source
 
 #### Defined in
 
-[api.ts:643](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L643)
+types/index.ts:628
 
 ___
 
@@ -178,4 +178,4 @@ Source
 
 #### Defined in
 
-[api.ts:649](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L649)
+types/index.ts:634

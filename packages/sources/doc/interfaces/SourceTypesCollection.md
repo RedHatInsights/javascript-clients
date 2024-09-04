@@ -26,7 +26,7 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:729](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L729)
+types/index.ts:714
 
 ___
 
@@ -40,7 +40,7 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L723)
+types/index.ts:708
 
 ___
 
@@ -54,4 +54,4 @@ SourceTypesCollection
 
 #### Defined in
 
-[api.ts:717](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L717)
+types/index.ts:702

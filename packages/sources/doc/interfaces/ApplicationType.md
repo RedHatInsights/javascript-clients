@@ -31,7 +31,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:94](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L94)
+types/index.ts:73
 
 ___
 
@@ -45,7 +45,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L100)
+types/index.ts:79
 
 ___
 
@@ -59,7 +59,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:106](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L106)
+types/index.ts:85
 
 ___
 
@@ -75,7 +75,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:112](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L112)
+types/index.ts:91
 
 ___
 
@@ -89,7 +89,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:118](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L118)
+types/index.ts:97
 
 ___
 
@@ -103,7 +103,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:124](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L124)
+types/index.ts:103
 
 ___
 
@@ -117,7 +117,7 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:130](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L130)
+types/index.ts:109
 
 ___
 
@@ -131,4 +131,4 @@ ApplicationType
 
 #### Defined in
 
-[api.ts:136](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L136)
+types/index.ts:115

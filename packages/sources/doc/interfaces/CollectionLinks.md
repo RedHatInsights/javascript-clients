@@ -27,7 +27,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:329](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L329)
+types/index.ts:308
 
 ___
 
@@ -41,7 +41,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:335](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L335)
+types/index.ts:314
 
 ___
 
@@ -55,7 +55,7 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:341](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L341)
+types/index.ts:320
 
 ___
 
@@ -69,4 +69,4 @@ CollectionLinks
 
 #### Defined in
 
-[api.ts:347](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L347)
+types/index.ts:326

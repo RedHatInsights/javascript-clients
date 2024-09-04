@@ -10,11 +10,11 @@ Endpoint
 
 ### Properties
 
-- [\_default](Endpoint.md#_default)
 - [availability\_status](Endpoint.md#availability_status)
 - [availability\_status\_error](Endpoint.md#availability_status_error)
 - [certificate\_authority](Endpoint.md#certificate_authority)
 - [created\_at](Endpoint.md#created_at)
+- [default](Endpoint.md#default)
 - [host](Endpoint.md#host)
 - [id](Endpoint.md#id)
 - [path](Endpoint.md#path)
@@ -29,20 +29,6 @@ Endpoint
 
 ## Properties
 
-### \_default
-
-• `Optional` **\_default**: `boolean`
-
-**`Memberof`**
-
-Endpoint
-
-#### Defined in
-
-[api.ts:409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L409)
-
-___
-
 ### availability\_status
 
 • `Optional` **availability\_status**: `string`
@@ -53,7 +39,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L385)
+types/index.ts:364
 
 ___
 
@@ -67,7 +53,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L391)
+types/index.ts:370
 
 ___
 
@@ -83,7 +69,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:397](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L397)
+types/index.ts:376
 
 ___
 
@@ -97,7 +83,21 @@ Endpoint
 
 #### Defined in
 
-[api.ts:403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L403)
+types/index.ts:382
+
+___
+
+### default
+
+• `Optional` **default**: `boolean`
+
+**`Memberof`**
+
+Endpoint
+
+#### Defined in
+
+types/index.ts:388
 
 ___
 
@@ -113,7 +113,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:415](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L415)
+types/index.ts:394
 
 ___
 
@@ -129,7 +129,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:421](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L421)
+types/index.ts:400
 
 ___
 
@@ -145,7 +145,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:427](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L427)
+types/index.ts:406
 
 ___
 
@@ -161,7 +161,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:433](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L433)
+types/index.ts:412
 
 ___
 
@@ -177,7 +177,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:439](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L439)
+types/index.ts:418
 
 ___
 
@@ -191,7 +191,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:445](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L445)
+types/index.ts:424
 
 ___
 
@@ -207,7 +207,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:451](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L451)
+types/index.ts:430
 
 ___
 
@@ -223,7 +223,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:457](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L457)
+types/index.ts:436
 
 ___
 
@@ -237,7 +237,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:463](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L463)
+types/index.ts:442
 
 ___
 
@@ -251,7 +251,7 @@ Endpoint
 
 #### Defined in
 
-[api.ts:469](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L469)
+types/index.ts:448
 
 ___
 
@@ -267,4 +267,4 @@ Endpoint
 
 #### Defined in
 
-[api.ts:475](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L475)
+types/index.ts:454

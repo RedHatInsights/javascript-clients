@@ -26,7 +26,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L773)
+types/index.ts:758
 
 ___
 
@@ -40,7 +40,7 @@ Tenant
 
 #### Defined in
 
-[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L779)
+types/index.ts:764
 
 ___
 
@@ -54,4 +54,4 @@ Tenant
 
 #### Defined in
 
-[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L767)
+types/index.ts:752
