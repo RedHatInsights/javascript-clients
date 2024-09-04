@@ -27,7 +27,7 @@ ExecutiveReportCvesBySeverity0to39
 
 #### Defined in
 
-[api.ts:852](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L852)
+[api.ts:852](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L852)
 
 ___
 
@@ -43,4 +43,4 @@ ExecutiveReportCvesBySeverity0to39
 
 #### Defined in
 
-[api.ts:858](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L858)
+[api.ts:858](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L858)

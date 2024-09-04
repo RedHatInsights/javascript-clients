@@ -26,7 +26,7 @@ AffectedSystemsOut
 
 #### Defined in
 
-[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L58)
+[api.ts:58](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L58)
 
 ___
 
@@ -40,7 +40,7 @@ AffectedSystemsOut
 
 #### Defined in
 
-[api.ts:64](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L64)
+[api.ts:64](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L64)
 
 ___
 
@@ -54,4 +54,4 @@ AffectedSystemsOut
 
 #### Defined in
 
-[api.ts:70](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L70)
+[api.ts:70](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L70)

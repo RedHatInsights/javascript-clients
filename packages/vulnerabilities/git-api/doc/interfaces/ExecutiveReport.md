@@ -33,7 +33,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:778](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L778)
+[api.ts:778](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L778)
 
 ___
 
@@ -49,7 +49,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:772](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L772)
+[api.ts:772](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L772)
 
 ___
 
@@ -63,7 +63,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:814](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L814)
+[api.ts:814](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L814)
 
 ___
 
@@ -77,7 +77,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:784](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L784)
+[api.ts:784](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L784)
 
 ___
 
@@ -91,7 +91,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:790](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L790)
+[api.ts:790](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L790)
 
 ___
 
@@ -107,7 +107,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:796](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L796)
+[api.ts:796](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L796)
 
 ___
 
@@ -123,7 +123,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:766](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L766)
+[api.ts:766](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L766)
 
 ___
 
@@ -137,7 +137,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:760](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L760)
+[api.ts:760](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L760)
 
 ___
 
@@ -151,7 +151,7 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:802](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L802)
+[api.ts:802](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L802)
 
 ___
 
@@ -165,4 +165,4 @@ ExecutiveReport
 
 #### Defined in
 
-[api.ts:808](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L808)
+[api.ts:808](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L808)

@@ -25,6 +25,7 @@ ReportTestResult/index.ts
 ReportTestResults/index.ts
 ReportTestResultsOS/index.ts
 Reports/index.ts
+ReportsOS/index.ts
 Rule/index.ts
 RuleGroup/index.ts
 RuleGroups/index.ts
