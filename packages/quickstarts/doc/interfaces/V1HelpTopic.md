@@ -31,7 +31,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:162](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L162)
+types/index.ts:139
 
 ___
 
@@ -45,13 +45,13 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:168](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L168)
+types/index.ts:145
 
 ___
 
 ### deletedAt
 
-• `Optional` **deletedAt**: [`V1HelpTopicDeletedAt`](../modules.md#v1helptopicdeletedat)
+• `Optional` **deletedAt**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -59,7 +59,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L174)
+types/index.ts:151
 
 ___
 
@@ -73,7 +73,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L180)
+types/index.ts:157
 
 ___
 
@@ -87,7 +87,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L186)
+types/index.ts:163
 
 ___
 
@@ -101,7 +101,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:192](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L192)
+types/index.ts:169
 
 ___
 
@@ -115,7 +115,7 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:198](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L198)
+types/index.ts:175
 
 ___
 
@@ -129,4 +129,4 @@ V1HelpTopic
 
 #### Defined in
 
-[api.ts:204](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L204)
+types/index.ts:181

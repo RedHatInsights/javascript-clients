@@ -24,4 +24,4 @@ FavoritesGet200Response
 
 #### Defined in
 
-[api.ts:48](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L48)
+types/index.ts:25

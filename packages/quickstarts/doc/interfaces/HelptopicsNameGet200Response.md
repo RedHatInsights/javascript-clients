@@ -24,4 +24,4 @@ HelptopicsNameGet200Response
 
 #### Defined in
 
-[api.ts:74](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L74)
+types/index.ts:51

@@ -30,7 +30,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L113)
+types/index.ts:90
 
 ___
 
@@ -44,7 +44,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L119)
+types/index.ts:96
 
 ___
 
@@ -58,7 +58,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L125)
+types/index.ts:102
 
 ___
 
@@ -72,7 +72,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L131)
+types/index.ts:108
 
 ___
 
@@ -86,7 +86,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L137)
+types/index.ts:114
 
 ___
 
@@ -100,7 +100,7 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L143)
+types/index.ts:120
 
 ___
 
@@ -114,4 +114,4 @@ V1FavoriteQuickstart
 
 #### Defined in
 
-[api.ts:149](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L149)
+types/index.ts:126
