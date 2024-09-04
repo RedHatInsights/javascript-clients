@@ -28,7 +28,7 @@ DashboardCvesBySeverity0to39
 
 #### Defined in
 
-[api.ts:598](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L598)
+[api.ts:598](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L598)
 
 ___
 
@@ -44,7 +44,7 @@ DashboardCvesBySeverity0to39
 
 #### Defined in
 
-[api.ts:610](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L610)
+[api.ts:610](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L610)
 
 ___
 
@@ -60,4 +60,4 @@ DashboardCvesBySeverity0to39
 
 #### Defined in
 
-[api.ts:604](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L604)
+[api.ts:604](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L604)

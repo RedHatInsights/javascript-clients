@@ -26,4 +26,4 @@ MetaPermissions
 
 #### Defined in
 
-[api.ts:1823](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1823)
+[api.ts:1823](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1823)
