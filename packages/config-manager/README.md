@@ -1,5 +1,5 @@
-# Javascript client for Config Manager API
-If you want to use [RedHatInsights/config-manager](https://github.com/RedHatInsights/config-manager) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+# Javascript client for config-manager API
+If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with the service.
 
 ## Install
 NPM
@@ -18,20 +18,20 @@ This client is using typescript and axios. Types are distributed with this packa
 To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
 ```JS
 // api.js
-import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/config-manager-client';
-const instance = axios.create();
+import APIFactory from '@redhat-cloud-services/javascript-client-shared/dist/utils'; 
+import createEndpoint from '@redhat-cloud-services/config-manager-client/dist/endpointResourceV1CreateEndpoint';
+import enableEndpoint from '@redhat-cloud-services/config-manager-client/dist/endpointResourceV1EnableEndpoint';
 
 // BASE_PATH should be set in your constants file
-const configApi = new Configuration(undefined, BASE_PATH, instance);
-export configApi;
+const configManagerApi = APIFactory(BASE_PATH, undefined, { createEndpoint, enableEndpoint });
+export configMnagerApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/host-inventory-client';
+import { configManagerApi } from '@redhat-cloud-services/config-manager-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -50,8 +50,8 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const configApi = new Configuration(undefined, BASE_PATH, instance);
-export configApi;
+const configManagerApi = APIFactory(BASE_PATH, instance, { createEndpoint, enableEndpoint });
+export configManagerApi;
 ```
 
 ## Building

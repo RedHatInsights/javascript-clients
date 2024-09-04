@@ -33,7 +33,7 @@ Profile
 
 #### Defined in
 
-[api.ts:107](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L107)
+[types/index.ts:86](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L86)
 
 ___
 
@@ -49,7 +49,7 @@ Profile
 
 #### Defined in
 
-[api.ts:125](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L125)
+[types/index.ts:104](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L104)
 
 ___
 
@@ -65,7 +65,7 @@ Profile
 
 #### Defined in
 
-[api.ts:131](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L131)
+[types/index.ts:110](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L110)
 
 ___
 
@@ -81,7 +81,7 @@ Profile
 
 #### Defined in
 
-[api.ts:119](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L119)
+[types/index.ts:98](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L98)
 
 ___
 
@@ -97,7 +97,7 @@ Profile
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L101)
+[types/index.ts:80](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L80)
 
 ___
 
@@ -113,7 +113,7 @@ Profile
 
 #### Defined in
 
-[api.ts:137](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L137)
+[types/index.ts:116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L116)
 
 ___
 
@@ -129,7 +129,7 @@ Profile
 
 #### Defined in
 
-[api.ts:113](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L113)
+[types/index.ts:92](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L92)
 
 ___
 
@@ -145,4 +145,4 @@ Profile
 
 #### Defined in
 
-[api.ts:143](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L143)
+[types/index.ts:122](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/types/index.ts#L122)

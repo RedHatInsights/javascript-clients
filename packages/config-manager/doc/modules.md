@@ -4,115 +4,127 @@
 
 ## Table of contents
 
-### Classes
-
-- [Configuration](classes/Configuration.md)
-- [DefaultApi](classes/DefaultApi.md)
-
 ### Interfaces
 
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
-- [InlineObject](interfaces/InlineObject.md)
-- [InlineResponse200](interfaces/InlineResponse200.md)
+- [CreateProfileRequest](interfaces/CreateProfileRequest.md)
+- [GetProfiles200Response](interfaces/GetProfiles200Response.md)
 - [Profile](interfaces/Profile.md)
 
 ### Functions
 
-- [DefaultApiAxiosParamCreator](modules.md#defaultapiaxiosparamcreator)
-- [DefaultApiFactory](modules.md#defaultapifactory)
-- [DefaultApiFp](modules.md#defaultapifp)
+- [createProfile](modules.md#createprofile)
+- [getPlaybook](modules.md#getplaybook)
+- [getProfile](modules.md#getprofile)
+- [getProfiles](modules.md#getprofiles)
 
 ## Functions
 
-### DefaultApiAxiosParamCreator
+### createProfile
 
-▸ **DefaultApiAxiosParamCreator**(`configuration?`): `Object`
+▸ **createProfile**(`...config`): `Promise`\<`RequestArgs`\>
 
-DefaultApi - axios parameter creator
+Create and optionally activate a new profile.
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `createProfile` | (`inlineObject`: [`InlineObject`](interfaces/InlineObject.md), `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
-| `getPlaybook` | (`profileId`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
-| `getProfile` | (`id`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
-| `getProfiles` | (`sortBy?`: ``"created_at"`` \| ``"created_at:asc"`` \| ``"created_at:desc"``, `limit?`: `number`, `offset?`: `number`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:150](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L150)
-
-___
-
-### DefaultApiFactory
-
-▸ **DefaultApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-DefaultApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`CreateProfileParams`] \| [[`CreateProfileRequest`](interfaces/CreateProfileRequest.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `createProfile` | (`inlineObject`: [`InlineObject`](interfaces/InlineObject.md), `options?`: `any`) => `AxiosPromise`\<[`Profile`](interfaces/Profile.md)\> |
-| `getPlaybook` | (`profileId`: `string`, `options?`: `any`) => `AxiosPromise`\<`object`\> |
-| `getProfile` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<[`Profile`](interfaces/Profile.md)\> |
-| `getProfiles` | (`sortBy?`: ``"created_at"`` \| ``"created_at:asc"`` \| ``"created_at:desc"``, `limit?`: `number`, `offset?`: `number`, `options?`: `any`) => `AxiosPromise`\<[`InlineResponse200`](interfaces/InlineResponse200.md)\> |
+**`Summary`**
 
-**`Export`**
+Create a new profile
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:385](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L385)
+[CreateProfile/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/CreateProfile/index.ts#L34)
 
 ___
 
-### DefaultApiFp
+### getPlaybook
 
-▸ **DefaultApiFp**(`configuration?`): `Object`
+▸ **getPlaybook**(`...config`): `Promise`\<`RequestArgs`\>
 
-DefaultApi - functional programming interface
+Constructs and returns a Ansible playbook suitable to configure a host for the requested profile.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`GetPlaybookParams`] \| [`string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `createProfile` | (`inlineObject`: [`InlineObject`](interfaces/InlineObject.md), `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Profile`](interfaces/Profile.md)\>\> |
-| `getPlaybook` | (`profileId`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`object`\>\> |
-| `getProfile` | (`id`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Profile`](interfaces/Profile.md)\>\> |
-| `getProfiles` | (`sortBy?`: ``"created_at"`` \| ``"created_at:asc"`` \| ``"created_at:desc"``, `limit?`: `number`, `offset?`: `number`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`InlineResponse200`](interfaces/InlineResponse200.md)\>\> |
+**`Summary`**
 
-**`Export`**
+Retrieve an Ansible playbook for the requested profile
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:318](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/api.ts#L318)
+[GetPlaybook/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/GetPlaybook/index.ts#L34)
+
+___
+
+### getProfile
+
+▸ **getProfile**(`...config`): `Promise`\<`RequestArgs`\>
+
+Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`GetProfileParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Get a specific profile
+
+**`Throws`**
+
+#### Defined in
+
+[GetProfile/index.ts:34](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/GetProfile/index.ts#L34)
+
+___
+
+### getProfiles
+
+▸ **getProfiles**(`...config`): `Promise`\<`RequestArgs`\>
+
+Retrieve a paginated array of profiles for the identified account. The URL query parameters \'limit\' and \'offset\' can be used to paginate the results. The default value of \'limit\' is 50. The default value of \'offset\' is 0.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`GetProfilesParams`] \| [`GetProfilesSortByEnum`, `number`, `number`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Get a list of all profiles
+
+**`Throws`**
+
+#### Defined in
+
+[GetProfiles/index.ts:56](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/config-manager/GetProfiles/index.ts#L56)
