@@ -1188,6 +1188,31 @@ export interface EventTypeSettingsValue {
 /**
  *
  * @export
+ * @interface EventsReplayRequest
+ */
+export interface EventsReplayRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof EventsReplayRequest
+     */
+    'start_date': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventsReplayRequest
+     */
+    'end_date': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventsReplayRequest
+     */
+    'org_id'?: string;
+}
+/**
+ *
+ * @export
  * @interface Facet
  */
 export interface Facet {

@@ -25,7 +25,7 @@ ErrorsErrors
 
 #### Defined in
 
-[api.ts:741](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L741)
+[api.ts:741](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L741)
 
 ___
 
@@ -41,4 +41,4 @@ ErrorsErrors
 
 #### Defined in
 
-[api.ts:747](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L747)
+[api.ts:747](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L747)

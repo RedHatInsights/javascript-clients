@@ -102,6 +102,10 @@ export { default as reports } from './Reports'
 
 
 // end of operations block
+export { default as reportsOS } from './ReportsOS'
+
+
+// end of operations block
 export { default as rule } from './Rule'
 
 

@@ -629,6 +629,18 @@ export interface Rule {
      */
     'severity'?: any;
     /**
+     *
+     * @type {RuleIdentifier}
+     * @memberof Rule
+     */
+    'identifier'?: RuleIdentifier;
+    /**
+     * Array of the Rule References
+     * @type {any}
+     * @memberof Rule
+     */
+    'references'?: any;
+    /**
      * Whether or not a remediation is available for the given rule.
      * @type {any}
      * @memberof Rule
@@ -780,6 +792,25 @@ export interface RuleGroups200Response {
      * @memberof RuleGroups200Response
      */
     'data'?: any;
+}
+/**
+ * Identifier of the Rule
+ * @export
+ * @interface RuleIdentifier
+ */
+export interface RuleIdentifier {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleIdentifier
+     */
+    'label'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof RuleIdentifier
+     */
+    'system'?: any;
 }
 /**
  *
@@ -1430,6 +1461,12 @@ export interface TestResult {
      * @memberof TestResult
      */
     'compliant'?: any;
+    /**
+     * Compliance Score of the System within a given Report.
+     * @type {any}
+     * @memberof TestResult
+     */
+    'score'?: any;
     /**
      * Whether the System is supported or not by a Profile within a given Policy.
      * @type {any}

@@ -654,6 +654,18 @@ export interface Rule {
      */
     'severity'?: any;
     /**
+     *
+     * @type {RuleIdentifier}
+     * @memberof Rule
+     */
+    'identifier'?: RuleIdentifier;
+    /**
+     * Array of the Rule References
+     * @type {any}
+     * @memberof Rule
+     */
+    'references'?: any;
+    /**
      * Whether or not a remediation is available for the given rule.
      * @type {any}
      * @memberof Rule
@@ -805,6 +817,25 @@ export interface RuleGroups200Response {
      * @memberof RuleGroups200Response
      */
     'data'?: any;
+}
+/**
+ * Identifier of the Rule
+ * @export
+ * @interface RuleIdentifier
+ */
+export interface RuleIdentifier {
+    /**
+     *
+     * @type {any}
+     * @memberof RuleIdentifier
+     */
+    'label'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof RuleIdentifier
+     */
+    'system'?: any;
 }
 /**
  *
@@ -1455,6 +1486,12 @@ export interface TestResult {
      * @memberof TestResult
      */
     'compliant'?: any;
+    /**
+     * Compliance Score of the System within a given Report.
+     * @type {any}
+     * @memberof TestResult
+     */
+    'score'?: any;
     /**
      * Whether the System is supported or not by a Profile within a given Policy.
      * @type {any}
@@ -4841,6 +4878,126 @@ export class ReportsApi extends BaseAPI {
      */
     public reports(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
         return ReportsApiFp(this.configuration).reports(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ReportsOSApi - axios parameter creator
+ * @export
+ */
+export const ReportsOSApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Request the list of available OS versions
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        reportsOS: async (xRHIDENTITY?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/reports/os_versions`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ReportsOSApi - functional programming interface
+ * @export
+ */
+export const ReportsOSApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ReportsOSApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Request the list of available OS versions
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        async reportsOS(xRHIDENTITY?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reportsOS(xRHIDENTITY, filter, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ReportsOSApi - factory interface
+ * @export
+ */
+export const ReportsOSApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ReportsOSApiFp(configuration)
+    return {
+        /**
+         * This feature is exclusively used by the frontend
+         * @summary Request the list of available OS versions
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {*} [options] Override http request option.
+         * @deprecated
+         * @throws {RequiredError}
+         */
+        reportsOS(xRHIDENTITY?: any, filter?: any, options?: any): AxiosPromise<any> {
+            return localVarFp.reportsOS(xRHIDENTITY, filter, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ReportsOSApi - object-oriented interface
+ * @export
+ * @class ReportsOSApi
+ * @extends {BaseAPI}
+ */
+export class ReportsOSApi extends BaseAPI {
+    /**
+     * This feature is exclusively used by the frontend
+     * @summary Request the list of available OS versions
+     * @param {any} [xRHIDENTITY] For internal use only
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {*} [options] Override http request option.
+     * @deprecated
+     * @throws {RequiredError}
+     * @memberof ReportsOSApi
+     */
+    public reportsOS(xRHIDENTITY?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ReportsOSApiFp(this.configuration).reportsOS(xRHIDENTITY, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

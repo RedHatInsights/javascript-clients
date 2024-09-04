@@ -45,7 +45,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1355](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1355)
+[api.ts:1355](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1355)
 
 ___
 
@@ -61,7 +61,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1301](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1301)
+[api.ts:1301](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1301)
 
 ___
 
@@ -77,7 +77,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1253)
+[api.ts:1253](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1253)
 
 ___
 
@@ -93,7 +93,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1343](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1343)
+[api.ts:1343](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1343)
 
 ___
 
@@ -109,7 +109,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1349](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1349)
+[api.ts:1349](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1349)
 
 ___
 
@@ -125,7 +125,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1367)
+[api.ts:1367](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1367)
 
 ___
 
@@ -141,7 +141,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1361)
+[api.ts:1361](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1361)
 
 ___
 
@@ -157,7 +157,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1259](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1259)
+[api.ts:1259](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1259)
 
 ___
 
@@ -173,7 +173,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1265](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1265)
+[api.ts:1265](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1265)
 
 ___
 
@@ -189,7 +189,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1271](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1271)
+[api.ts:1271](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1271)
 
 ___
 
@@ -205,7 +205,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1277](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1277)
+[api.ts:1277](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1277)
 
 ___
 
@@ -221,7 +221,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1283](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1283)
+[api.ts:1283](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1283)
 
 ___
 
@@ -237,7 +237,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1331](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1331)
+[api.ts:1331](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1331)
 
 ___
 
@@ -253,7 +253,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1307](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1307)
+[api.ts:1307](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1307)
 
 ___
 
@@ -269,7 +269,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1337](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1337)
+[api.ts:1337](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1337)
 
 ___
 
@@ -285,7 +285,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1319](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1319)
+[api.ts:1319](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1319)
 
 ___
 
@@ -301,7 +301,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1325](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1325)
+[api.ts:1325](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1325)
 
 ___
 
@@ -317,7 +317,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1289](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1289)
+[api.ts:1289](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1289)
 
 ___
 
@@ -333,7 +333,7 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1313](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1313)
+[api.ts:1313](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1313)
 
 ___
 
@@ -349,4 +349,4 @@ MetaAffectedSystems
 
 #### Defined in
 
-[api.ts:1295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1295)
+[api.ts:1295](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1295)
