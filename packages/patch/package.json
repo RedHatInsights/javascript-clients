@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/patch#readme",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^0.28.0",
     "tslib": "^2.6.2"
   }
 }
