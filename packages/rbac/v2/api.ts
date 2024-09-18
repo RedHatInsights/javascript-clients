@@ -291,94 +291,6 @@ export interface WorkspacesBasicWorkspace {
 /**
  *
  * @export
- * @interface WorkspacesCreate401Response
- */
-export interface WorkspacesCreate401Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof WorkspacesCreate401Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof WorkspacesCreate401Response
-     */
-    'status'?: WorkspacesCreate401ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate401Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate401Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate401Response
-     */
-    'instance'?: string;
-}
-
-export const WorkspacesCreate401ResponseStatusEnum = {
-    NUMBER_401: 401
-} as const;
-
-export type WorkspacesCreate401ResponseStatusEnum = typeof WorkspacesCreate401ResponseStatusEnum[keyof typeof WorkspacesCreate401ResponseStatusEnum];
-
-/**
- *
- * @export
- * @interface WorkspacesCreate500Response
- */
-export interface WorkspacesCreate500Response {
-    /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof WorkspacesCreate500Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof WorkspacesCreate500Response
-     */
-    'status'?: WorkspacesCreate500ResponseStatusEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate500Response
-     */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate500Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesCreate500Response
-     */
-    'instance'?: string;
-}
-
-export const WorkspacesCreate500ResponseStatusEnum = {
-    NUMBER_500: 500
-} as const;
-
-export type WorkspacesCreate500ResponseStatusEnum = typeof WorkspacesCreate500ResponseStatusEnum[keyof typeof WorkspacesCreate500ResponseStatusEnum];
-
-/**
- *
- * @export
  * @interface WorkspacesCreateWorkspaceResponse
  */
 export interface WorkspacesCreateWorkspaceResponse {
@@ -394,6 +306,169 @@ export interface WorkspacesCreateWorkspaceResponse {
      * @memberof WorkspacesCreateWorkspaceResponse
      */
     'description'?: string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesList401Response
+ */
+export interface WorkspacesList401Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof WorkspacesList401Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkspacesList401Response
+     */
+    'status'?: WorkspacesList401ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList401Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList401Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList401Response
+     */
+    'instance'?: string;
+}
+
+export const WorkspacesList401ResponseStatusEnum = {
+    NUMBER_401: 401
+} as const;
+
+export type WorkspacesList401ResponseStatusEnum = typeof WorkspacesList401ResponseStatusEnum[keyof typeof WorkspacesList401ResponseStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface WorkspacesList500Response
+ */
+export interface WorkspacesList500Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof WorkspacesList500Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkspacesList500Response
+     */
+    'status'?: WorkspacesList500ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList500Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList500Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesList500Response
+     */
+    'instance'?: string;
+}
+
+export const WorkspacesList500ResponseStatusEnum = {
+    NUMBER_500: 500
+} as const;
+
+export type WorkspacesList500ResponseStatusEnum = typeof WorkspacesList500ResponseStatusEnum[keyof typeof WorkspacesList500ResponseStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface WorkspacesPagination
+ */
+export interface WorkspacesPagination {
+    /**
+     *
+     * @type {WorkspacesPaginationMeta}
+     * @memberof WorkspacesPagination
+     */
+    'meta': WorkspacesPaginationMeta;
+    /**
+     *
+     * @type {WorkspacesPaginationLinks}
+     * @memberof WorkspacesPagination
+     */
+    'links': WorkspacesPaginationLinks;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesPaginationLinks
+ */
+export interface WorkspacesPaginationLinks {
+    /**
+     * The first link in pagination
+     * @type {string}
+     * @memberof WorkspacesPaginationLinks
+     */
+    'first': string;
+    /**
+     * The next link in pagination
+     * @type {string}
+     * @memberof WorkspacesPaginationLinks
+     */
+    'next': string | null;
+    /**
+     * The previous link in pagination
+     * @type {string}
+     * @memberof WorkspacesPaginationLinks
+     */
+    'previous': string | null;
+    /**
+     * The last link in pagination
+     * @type {string}
+     * @memberof WorkspacesPaginationLinks
+     */
+    'last': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesPaginationMeta
+ */
+export interface WorkspacesPaginationMeta {
+    /**
+     * Total count of objects
+     * @type {number}
+     * @memberof WorkspacesPaginationMeta
+     */
+    'count': number;
+    /**
+     * Limit of returned objects
+     * @type {number}
+     * @memberof WorkspacesPaginationMeta
+     */
+    'limit': number;
+    /**
+     * Offset of returned objects
+     * @type {number}
+     * @memberof WorkspacesPaginationMeta
+     */
+    'offset': number;
 }
 /**
  *
@@ -551,7 +626,7 @@ export interface WorkspacesWorkspace {
      * @type {string}
      * @memberof WorkspacesWorkspace
      */
-    'parent'?: string;
+    'parent_id'?: string;
     /**
      * Workspace A
      * @type {string}
@@ -576,6 +651,31 @@ export interface WorkspacesWorkspace {
      * @memberof WorkspacesWorkspace
      */
     'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesWorkspaceListResponse
+ */
+export interface WorkspacesWorkspaceListResponse {
+    /**
+     *
+     * @type {WorkspacesPaginationMeta}
+     * @memberof WorkspacesWorkspaceListResponse
+     */
+    'meta': WorkspacesPaginationMeta;
+    /**
+     *
+     * @type {WorkspacesPaginationLinks}
+     * @memberof WorkspacesWorkspaceListResponse
+     */
+    'links': WorkspacesPaginationLinks;
+    /**
+     * List of workspaces
+     * @type {Array<WorkspacesWorkspace>}
+     * @memberof WorkspacesWorkspaceListResponse
+     */
+    'data': Array<WorkspacesWorkspace>;
 }
 
 /**
@@ -787,6 +887,105 @@ export class WorkspacesDeleteApi extends BaseAPI {
      */
     public workspacesDelete(uuid: string, options?: AxiosRequestConfig) {
         return WorkspacesDeleteApiFp(this.configuration).workspacesDelete(uuid, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * WorkspacesListApi - axios parameter creator
+ * @export
+ */
+export const WorkspacesListApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * List workspaces in a tenant
+         * @summary List workspaces in a tenant
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        workspacesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/workspaces/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WorkspacesListApi - functional programming interface
+ * @export
+ */
+export const WorkspacesListApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = WorkspacesListApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * List workspaces in a tenant
+         * @summary List workspaces in a tenant
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async workspacesList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesWorkspaceListResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesList(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * WorkspacesListApi - factory interface
+ * @export
+ */
+export const WorkspacesListApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = WorkspacesListApiFp(configuration)
+    return {
+        /**
+         * List workspaces in a tenant
+         * @summary List workspaces in a tenant
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        workspacesList(options?: any): AxiosPromise<WorkspacesWorkspaceListResponse> {
+            return localVarFp.workspacesList(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * WorkspacesListApi - object-oriented interface
+ * @export
+ * @class WorkspacesListApi
+ * @extends {BaseAPI}
+ */
+export class WorkspacesListApi extends BaseAPI {
+    /**
+     * List workspaces in a tenant
+     * @summary List workspaces in a tenant
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WorkspacesListApi
+     */
+    public workspacesList(options?: AxiosRequestConfig) {
+        return WorkspacesListApiFp(this.configuration).workspacesList(options).then((request) => request(this.axios, this.basePath));
     }
 }
 

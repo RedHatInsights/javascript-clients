@@ -18,19 +18,11 @@ export { default as createGroup } from './CreateGroup'
 
 
 // end of operations block
-export { default as createPolicies } from './CreatePolicies'
-
-
-// end of operations block
 export { default as createRole } from './CreateRole'
 
 
 // end of operations block
 export { default as deleteGroup } from './DeleteGroup'
-
-
-// end of operations block
-export { default as deletePolicy } from './DeletePolicy'
 
 
 // end of operations block
@@ -51,10 +43,6 @@ export { default as getCrossAccountRequest } from './GetCrossAccountRequest'
 
 // end of operations block
 export { default as getGroup } from './GetGroup'
-
-
-// end of operations block
-export { default as getPolicy } from './GetPolicy'
 
 
 // end of operations block
@@ -94,10 +82,6 @@ export { default as listPermissions } from './ListPermissions'
 
 
 // end of operations block
-export { default as listPolicies } from './ListPolicies'
-
-
-// end of operations block
 export { default as listPrincipals } from './ListPrincipals'
 
 
@@ -123,10 +107,6 @@ export { default as putCrossAccountRequest } from './PutCrossAccountRequest'
 
 // end of operations block
 export { default as updateGroup } from './UpdateGroup'
-
-
-// end of operations block
-export { default as updatePolicy } from './UpdatePolicy'
 
 
 // end of operations block
