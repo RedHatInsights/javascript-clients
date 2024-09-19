@@ -11,13 +11,21 @@ ControllersPackageSystemItem
 ### Properties
 
 - [available\_evra](ControllersPackageSystemItem.md#available_evra)
+- [baseline\_id](ControllersPackageSystemItem.md#baseline_id)
 - [baseline\_name](ControllersPackageSystemItem.md#baseline_name)
 - [baseline\_uptodate](ControllersPackageSystemItem.md#baseline_uptodate)
 - [display\_name](ControllersPackageSystemItem.md#display_name)
+- [groups](ControllersPackageSystemItem.md#groups)
 - [id](ControllersPackageSystemItem.md#id)
 - [installed\_evra](ControllersPackageSystemItem.md#installed_evra)
+- [os](ControllersPackageSystemItem.md#os)
+- [rhsm](ControllersPackageSystemItem.md#rhsm)
+- [satellite\_managed](ControllersPackageSystemItem.md#satellite_managed)
 - [tags](ControllersPackageSystemItem.md#tags)
+- [template\_name](ControllersPackageSystemItem.md#template_name)
+- [template\_uuid](ControllersPackageSystemItem.md#template_uuid)
 - [updatable](ControllersPackageSystemItem.md#updatable)
+- [update\_status](ControllersPackageSystemItem.md#update_status)
 
 ## Properties
 
@@ -31,7 +39,21 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:873](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L873)
+types/index.ts:1517
+
+___
+
+### baseline\_id
+
+• `Optional` **baseline\_id**: `number`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1523
 
 ___
 
@@ -45,7 +67,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:879](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L879)
+types/index.ts:1529
 
 ___
 
@@ -59,7 +81,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:885](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L885)
+types/index.ts:1535
 
 ___
 
@@ -73,7 +95,21 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:891](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L891)
+types/index.ts:1541
+
+___
+
+### groups
+
+• `Optional` **groups**: [`ControllersSystemGroup`](ControllersSystemGroup.md)[]
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1547
 
 ___
 
@@ -87,7 +123,7 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:897](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L897)
+types/index.ts:1553
 
 ___
 
@@ -101,7 +137,49 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:903](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L903)
+types/index.ts:1559
+
+___
+
+### os
+
+• `Optional` **os**: `string`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1565
+
+___
+
+### rhsm
+
+• `Optional` **rhsm**: `string`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1571
+
+___
+
+### satellite\_managed
+
+• `Optional` **satellite\_managed**: `boolean`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1577
 
 ___
 
@@ -115,7 +193,35 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L909)
+types/index.ts:1583
+
+___
+
+### template\_name
+
+• `Optional` **template\_name**: `string`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1589
+
+___
+
+### template\_uuid
+
+• `Optional` **template\_uuid**: `string`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1595
 
 ___
 
@@ -129,4 +235,18 @@ ControllersPackageSystemItem
 
 #### Defined in
 
-[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L915)
+types/index.ts:1601
+
+___
+
+### update\_status
+
+• `Optional` **update\_status**: `string`
+
+**`Memberof`**
+
+ControllersPackageSystemItem
+
+#### Defined in
+
+types/index.ts:1607

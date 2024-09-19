@@ -15,6 +15,7 @@ ControllersSystemPackageData
 - [name](ControllersSystemPackageData.md#name)
 - [summary](ControllersSystemPackageData.md#summary)
 - [updatable](ControllersSystemPackageData.md#updatable)
+- [update\_status](ControllersSystemPackageData.md#update_status)
 - [updates](ControllersSystemPackageData.md#updates)
 
 ## Properties
@@ -29,7 +30,7 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1540](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1540)
+types/index.ts:2649
 
 ___
 
@@ -43,7 +44,7 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1546](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1546)
+types/index.ts:2655
 
 ___
 
@@ -57,7 +58,7 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1552](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1552)
+types/index.ts:2661
 
 ___
 
@@ -71,7 +72,7 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1558](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1558)
+types/index.ts:2667
 
 ___
 
@@ -85,7 +86,21 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1564](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1564)
+types/index.ts:2673
+
+___
+
+### update\_status
+
+• `Optional` **update\_status**: `string`
+
+**`Memberof`**
+
+ControllersSystemPackageData
+
+#### Defined in
+
+types/index.ts:2679
 
 ___
 
@@ -99,4 +114,4 @@ ControllersSystemPackageData
 
 #### Defined in
 
-[api.ts:1570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1570)
+types/index.ts:2685

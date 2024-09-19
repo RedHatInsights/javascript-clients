@@ -11,6 +11,8 @@ ControllersSystemsAdvisoriesRequest
 ### Properties
 
 - [advisories](ControllersSystemsAdvisoriesRequest.md#advisories)
+- [limit](ControllersSystemsAdvisoriesRequest.md#limit)
+- [offset](ControllersSystemsAdvisoriesRequest.md#offset)
 - [systems](ControllersSystemsAdvisoriesRequest.md#systems)
 
 ## Properties
@@ -25,7 +27,35 @@ ControllersSystemsAdvisoriesRequest
 
 #### Defined in
 
-[api.ts:1676](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1676)
+types/index.ts:2873
+
+___
+
+### limit
+
+• `Optional` **limit**: `number`
+
+**`Memberof`**
+
+ControllersSystemsAdvisoriesRequest
+
+#### Defined in
+
+types/index.ts:2879
+
+___
+
+### offset
+
+• `Optional` **offset**: `number`
+
+**`Memberof`**
+
+ControllersSystemsAdvisoriesRequest
+
+#### Defined in
+
+types/index.ts:2885
 
 ___
 
@@ -39,4 +69,4 @@ ControllersSystemsAdvisoriesRequest
 
 #### Defined in
 
-[api.ts:1682](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1682)
+types/index.ts:2891

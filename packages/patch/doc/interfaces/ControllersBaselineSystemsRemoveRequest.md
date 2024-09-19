@@ -26,4 +26,4 @@ ControllersBaselineSystemsRemoveRequest
 
 #### Defined in
 
-[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L548)
+types/index.ts:1011

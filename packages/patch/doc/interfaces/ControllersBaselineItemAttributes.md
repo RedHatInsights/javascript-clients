@@ -10,10 +10,41 @@ ControllersBaselineItemAttributes
 
 ### Properties
 
+- [creator](ControllersBaselineItemAttributes.md#creator)
+- [last\_edited](ControllersBaselineItemAttributes.md#last_edited)
 - [name](ControllersBaselineItemAttributes.md#name)
+- [published](ControllersBaselineItemAttributes.md#published)
 - [systems](ControllersBaselineItemAttributes.md#systems)
 
 ## Properties
+
+### creator
+
+• `Optional` **creator**: `string`
+
+**`Memberof`**
+
+ControllersBaselineItemAttributes
+
+#### Defined in
+
+types/index.ts:761
+
+___
+
+### last\_edited
+
+• `Optional` **last\_edited**: `string`
+
+**`Memberof`**
+
+ControllersBaselineItemAttributes
+
+#### Defined in
+
+types/index.ts:767
+
+___
 
 ### name
 
@@ -27,7 +58,23 @@ ControllersBaselineItemAttributes
 
 #### Defined in
 
-[api.ts:491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L491)
+types/index.ts:773
+
+___
+
+### published
+
+• `Optional` **published**: `string`
+
+Created and updated dates
+
+**`Memberof`**
+
+ControllersBaselineItemAttributes
+
+#### Defined in
+
+types/index.ts:779
 
 ___
 
@@ -43,4 +90,4 @@ ControllersBaselineItemAttributes
 
 #### Defined in
 
-[api.ts:497](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L497)
+types/index.ts:785

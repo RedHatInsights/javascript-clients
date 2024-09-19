@@ -18,7 +18,7 @@ ControllersAdvisorySystemsResponse
 
 ### data
 
-• `Optional` **data**: [`ControllersSystemItem`](ControllersSystemItem.md)[]
+• `Optional` **data**: [`ControllersAdvisorySystemItem`](ControllersAdvisorySystemItem.md)[]
 
 **`Memberof`**
 
@@ -26,7 +26,7 @@ ControllersAdvisorySystemsResponse
 
 #### Defined in
 
-[api.ts:365](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L365)
+types/index.ts:617
 
 ___
 
@@ -40,7 +40,7 @@ ControllersAdvisorySystemsResponse
 
 #### Defined in
 
-[api.ts:371](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L371)
+types/index.ts:623
 
 ___
 
@@ -54,4 +54,4 @@ ControllersAdvisorySystemsResponse
 
 #### Defined in
 
-[api.ts:377](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L377)
+types/index.ts:629

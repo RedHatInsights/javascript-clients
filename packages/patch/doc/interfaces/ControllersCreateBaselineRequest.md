@@ -27,7 +27,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:611](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L611)
+types/index.ts:1135
 
 ___
 
@@ -43,7 +43,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:617](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L617)
+types/index.ts:1141
 
 ___
 
@@ -59,7 +59,7 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:623](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L623)
+types/index.ts:1147
 
 ___
 
@@ -75,4 +75,4 @@ ControllersCreateBaselineRequest
 
 #### Defined in
 
-[api.ts:629](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L629)
+types/index.ts:1153

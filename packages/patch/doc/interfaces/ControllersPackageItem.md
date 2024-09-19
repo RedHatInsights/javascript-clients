@@ -12,8 +12,9 @@ ControllersPackageItem
 
 - [name](ControllersPackageItem.md#name)
 - [summary](ControllersPackageItem.md#summary)
+- [systems\_applicable](ControllersPackageItem.md#systems_applicable)
+- [systems\_installable](ControllersPackageItem.md#systems_installable)
 - [systems\_installed](ControllersPackageItem.md#systems_installed)
-- [systems\_updatable](ControllersPackageItem.md#systems_updatable)
 
 ## Properties
 
@@ -27,7 +28,7 @@ ControllersPackageItem
 
 #### Defined in
 
-[api.ts:842](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L842)
+types/index.ts:1480
 
 ___
 
@@ -41,7 +42,35 @@ ControllersPackageItem
 
 #### Defined in
 
-[api.ts:848](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L848)
+types/index.ts:1486
+
+___
+
+### systems\_applicable
+
+• `Optional` **systems\_applicable**: `number`
+
+**`Memberof`**
+
+ControllersPackageItem
+
+#### Defined in
+
+types/index.ts:1492
+
+___
+
+### systems\_installable
+
+• `Optional` **systems\_installable**: `number`
+
+**`Memberof`**
+
+ControllersPackageItem
+
+#### Defined in
+
+types/index.ts:1498
 
 ___
 
@@ -55,18 +84,4 @@ ControllersPackageItem
 
 #### Defined in
 
-[api.ts:854](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L854)
-
-___
-
-### systems\_updatable
-
-• `Optional` **systems\_updatable**: `number`
-
-**`Memberof`**
-
-ControllersPackageItem
-
-#### Defined in
-
-[api.ts:860](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L860)
+types/index.ts:1504

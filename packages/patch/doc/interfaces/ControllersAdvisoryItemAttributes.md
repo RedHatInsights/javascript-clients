@@ -10,11 +10,11 @@ ControllersAdvisoryItemAttributes
 
 ### Properties
 
-- [advisory\_type](ControllersAdvisoryItemAttributes.md#advisory_type)
 - [advisory\_type\_name](ControllersAdvisoryItemAttributes.md#advisory_type_name)
 - [applicable\_systems](ControllersAdvisoryItemAttributes.md#applicable_systems)
 - [cve\_count](ControllersAdvisoryItemAttributes.md#cve_count)
 - [description](ControllersAdvisoryItemAttributes.md#description)
+- [installable\_systems](ControllersAdvisoryItemAttributes.md#installable_systems)
 - [public\_date](ControllersAdvisoryItemAttributes.md#public_date)
 - [reboot\_required](ControllersAdvisoryItemAttributes.md#reboot_required)
 - [release\_versions](ControllersAdvisoryItemAttributes.md#release_versions)
@@ -22,22 +22,6 @@ ControllersAdvisoryItemAttributes
 - [synopsis](ControllersAdvisoryItemAttributes.md#synopsis)
 
 ## Properties
-
-### advisory\_type
-
-• `Optional` **advisory\_type**: `number`
-
-Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
-
-**`Memberof`**
-
-ControllersAdvisoryItemAttributes
-
-#### Defined in
-
-[api.ts:298](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L298)
-
-___
 
 ### advisory\_type\_name
 
@@ -51,7 +35,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L304)
+types/index.ts:289
 
 ___
 
@@ -65,7 +49,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L310)
+types/index.ts:295
 
 ___
 
@@ -79,7 +63,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L316)
+types/index.ts:301
 
 ___
 
@@ -93,7 +77,21 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:322](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L322)
+types/index.ts:307
+
+___
+
+### installable\_systems
+
+• `Optional` **installable\_systems**: `number`
+
+**`Memberof`**
+
+ControllersAdvisoryItemAttributes
+
+#### Defined in
+
+types/index.ts:313
 
 ___
 
@@ -107,7 +105,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:328](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L328)
+types/index.ts:319
 
 ___
 
@@ -121,7 +119,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:334](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L334)
+types/index.ts:325
 
 ___
 
@@ -135,7 +133,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:340](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L340)
+types/index.ts:331
 
 ___
 
@@ -149,7 +147,7 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:346](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L346)
+types/index.ts:337
 
 ___
 
@@ -163,4 +161,4 @@ ControllersAdvisoryItemAttributes
 
 #### Defined in
 
-[api.ts:352](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L352)
+types/index.ts:343

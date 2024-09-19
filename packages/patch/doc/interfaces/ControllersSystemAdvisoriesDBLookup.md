@@ -10,7 +10,6 @@ ControllersSystemAdvisoriesDBLookup
 
 ### Properties
 
-- [advisory\_type](ControllersSystemAdvisoriesDBLookup.md#advisory_type)
 - [advisory\_type\_name](ControllersSystemAdvisoriesDBLookup.md#advisory_type_name)
 - [cve\_count](ControllersSystemAdvisoriesDBLookup.md#cve_count)
 - [description](ControllersSystemAdvisoriesDBLookup.md#description)
@@ -19,25 +18,10 @@ ControllersSystemAdvisoriesDBLookup
 - [reboot\_required](ControllersSystemAdvisoriesDBLookup.md#reboot_required)
 - [release\_versions](ControllersSystemAdvisoriesDBLookup.md#release_versions)
 - [severity](ControllersSystemAdvisoriesDBLookup.md#severity)
+- [status](ControllersSystemAdvisoriesDBLookup.md#status)
 - [synopsis](ControllersSystemAdvisoriesDBLookup.md#synopsis)
 
 ## Properties
-
-### advisory\_type
-
-• `Optional` **advisory\_type**: `number`
-
-Deprecated, not useful database ID (0 - unknown, 1 -, enhancement, 2 - bugfix, 3 - security, 4 - unspecified)
-
-**`Memberof`**
-
-ControllersSystemAdvisoriesDBLookup
-
-#### Defined in
-
-[api.ts:1016](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1016)
-
-___
 
 ### advisory\_type\_name
 
@@ -51,7 +35,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1022](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1022)
+types/index.ts:1708
 
 ___
 
@@ -65,7 +49,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1028](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1028)
+types/index.ts:1714
 
 ___
 
@@ -79,7 +63,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1034](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1034)
+types/index.ts:1720
 
 ___
 
@@ -93,7 +77,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1040](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1040)
+types/index.ts:1726
 
 ___
 
@@ -107,7 +91,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1046](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1046)
+types/index.ts:1732
 
 ___
 
@@ -121,7 +105,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1052](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1052)
+types/index.ts:1738
 
 ___
 
@@ -135,7 +119,7 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1058](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1058)
+types/index.ts:1744
 
 ___
 
@@ -149,7 +133,21 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1064](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1064)
+types/index.ts:1750
+
+___
+
+### status
+
+• `Optional` **status**: `string`
+
+**`Memberof`**
+
+ControllersSystemAdvisoriesDBLookup
+
+#### Defined in
+
+types/index.ts:1756
 
 ___
 
@@ -163,4 +161,4 @@ ControllersSystemAdvisoriesDBLookup
 
 #### Defined in
 
-[api.ts:1070](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1070)
+types/index.ts:1762

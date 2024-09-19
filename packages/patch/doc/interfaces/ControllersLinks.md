@@ -27,7 +27,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:687](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L687)
+types/index.ts:1319
 
 ___
 
@@ -41,7 +41,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:693](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L693)
+types/index.ts:1325
 
 ___
 
@@ -55,7 +55,7 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:699](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L699)
+types/index.ts:1331
 
 ___
 
@@ -69,4 +69,4 @@ ControllersLinks
 
 #### Defined in
 
-[api.ts:705](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L705)
+types/index.ts:1337

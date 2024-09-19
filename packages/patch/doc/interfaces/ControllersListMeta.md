@@ -11,6 +11,7 @@ ControllersListMeta
 ### Properties
 
 - [filter](ControllersListMeta.md#filter)
+- [has\_systems](ControllersListMeta.md#has_systems)
 - [limit](ControllersListMeta.md#limit)
 - [offset](ControllersListMeta.md#offset)
 - [search](ControllersListMeta.md#search)
@@ -36,7 +37,23 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:718](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L718)
+types/index.ts:1350
+
+___
+
+### has\_systems
+
+• `Optional` **has\_systems**: `boolean`
+
+Show whether customer has some registered systems
+
+**`Memberof`**
+
+ControllersListMeta
+
+#### Defined in
+
+types/index.ts:1356
 
 ___
 
@@ -52,7 +69,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:724](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L724)
+types/index.ts:1362
 
 ___
 
@@ -68,7 +85,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:730](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L730)
+types/index.ts:1368
 
 ___
 
@@ -84,7 +101,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:736](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L736)
+types/index.ts:1374
 
 ___
 
@@ -100,7 +117,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:742](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L742)
+types/index.ts:1380
 
 ___
 
@@ -120,7 +137,7 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:748](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L748)
+types/index.ts:1386
 
 ___
 
@@ -136,4 +153,4 @@ ControllersListMeta
 
 #### Defined in
 
-[api.ts:754](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L754)
+types/index.ts:1392

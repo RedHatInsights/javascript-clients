@@ -26,7 +26,7 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L466)
+types/index.ts:736
 
 ___
 
@@ -42,7 +42,7 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L472)
+types/index.ts:742
 
 ___
 
@@ -58,4 +58,4 @@ ControllersBaselineItem
 
 #### Defined in
 
-[api.ts:478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L478)
+types/index.ts:748

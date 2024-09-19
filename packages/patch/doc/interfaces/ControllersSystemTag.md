@@ -26,7 +26,7 @@ ControllersSystemTag
 
 #### Defined in
 
-[api.ts:1651](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1651)
+types/index.ts:2778
 
 ___
 
@@ -40,7 +40,7 @@ ControllersSystemTag
 
 #### Defined in
 
-[api.ts:1657](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1657)
+types/index.ts:2784
 
 ___
 
@@ -54,4 +54,4 @@ ControllersSystemTag
 
 #### Defined in
 
-[api.ts:1663](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1663)
+types/index.ts:2790

@@ -26,7 +26,7 @@ ControllersSystemsResponse
 
 #### Defined in
 
-[api.ts:1708](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1708)
+types/index.ts:2929
 
 ___
 
@@ -40,7 +40,7 @@ ControllersSystemsResponse
 
 #### Defined in
 
-[api.ts:1714](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1714)
+types/index.ts:2935
 
 ___
 
@@ -54,4 +54,4 @@ ControllersSystemsResponse
 
 #### Defined in
 
-[api.ts:1720](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L1720)
+types/index.ts:2941

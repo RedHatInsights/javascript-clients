@@ -25,7 +25,7 @@ ControllersFilterData
 
 #### Defined in
 
-[api.ts:668](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L668)
+types/index.ts:1192
 
 ___
 
@@ -39,4 +39,4 @@ ControllersFilterData
 
 #### Defined in
 
-[api.ts:674](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L674)
+types/index.ts:1198

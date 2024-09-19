@@ -24,4 +24,4 @@ ControllersPackageDetailResponse
 
 #### Defined in
 
-[api.ts:829](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/patch/api.ts#L829)
+types/index.ts:1467
