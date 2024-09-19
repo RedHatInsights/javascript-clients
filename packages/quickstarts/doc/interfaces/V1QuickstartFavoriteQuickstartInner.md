@@ -30,7 +30,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:321](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L321)
+types/index.ts:292
 
 ___
 
@@ -44,13 +44,13 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:327](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L327)
+types/index.ts:298
 
 ___
 
 ### deletedAt
 
-• `Optional` **deletedAt**: [`V1HelpTopicDeletedAt`](../modules.md#v1helptopicdeletedat)
+• `Optional` **deletedAt**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -58,7 +58,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:333](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L333)
+types/index.ts:304
 
 ___
 
@@ -72,7 +72,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L339)
+types/index.ts:310
 
 ___
 
@@ -86,7 +86,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L345)
+types/index.ts:316
 
 ___
 
@@ -100,7 +100,7 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:351](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L351)
+types/index.ts:322
 
 ___
 
@@ -114,4 +114,4 @@ V1QuickstartFavoriteQuickstartInner
 
 #### Defined in
 
-[api.ts:357](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L357)
+types/index.ts:328

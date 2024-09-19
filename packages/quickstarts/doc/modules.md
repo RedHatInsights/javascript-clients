@@ -4,15 +4,9 @@
 
 ## Table of contents
 
-### Classes
-
-- [Configuration](classes/Configuration.md)
-- [DefaultApi](classes/DefaultApi.md)
-
 ### Interfaces
 
 - [BadRequest](interfaces/BadRequest.md)
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [FavoritesGet200Response](interfaces/FavoritesGet200Response.md)
 - [HelptopicsGet200Response](interfaces/HelptopicsGet200Response.md)
 - [HelptopicsNameGet200Response](interfaces/HelptopicsNameGet200Response.md)
@@ -25,125 +19,167 @@
 - [V1QuickstartFavoriteQuickstartInner](interfaces/V1QuickstartFavoriteQuickstartInner.md)
 - [V1QuickstartProgress](interfaces/V1QuickstartProgress.md)
 
-### Type Aliases
-
-- [V1HelpTopicDeletedAt](modules.md#v1helptopicdeletedat)
-
 ### Functions
 
-- [DefaultApiAxiosParamCreator](modules.md#defaultapiaxiosparamcreator)
-- [DefaultApiFactory](modules.md#defaultapifactory)
-- [DefaultApiFp](modules.md#defaultapifp)
-
-## Type Aliases
-
-### V1HelpTopicDeletedAt
-
-Ƭ **V1HelpTopicDeletedAt**: ``null`` \| `string`
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:210](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L210)
+- [favoritesGet](modules.md#favoritesget)
+- [favoritesPost](modules.md#favoritespost)
+- [helptopicsGet](modules.md#helptopicsget)
+- [helptopicsNameGet](modules.md#helptopicsnameget)
+- [quickstartsGet](modules.md#quickstartsget)
+- [quickstartsIdGet](modules.md#quickstartsidget)
 
 ## Functions
 
-### DefaultApiAxiosParamCreator
+### favoritesGet
 
-▸ **DefaultApiAxiosParamCreator**(`configuration?`): `Object`
-
-DefaultApi - axios parameter creator
+▸ **favoritesGet**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `favoritesGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `helptopicsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `quickstartsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:389](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L389)
-
-___
-
-### DefaultApiFactory
-
-▸ **DefaultApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-DefaultApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`FavoritesGetParams`] \| [`AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `favoritesGet` | (`options?`: `any`) => `AxiosPromise`\<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\> |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `any`) => `AxiosPromise`\<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\> |
-| `helptopicsGet` | (`options?`: `any`) => `AxiosPromise`\<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\> |
-| `helptopicsNameGet` | (`options?`: `any`) => `AxiosPromise`\<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\> |
-| `quickstartsGet` | (`options?`: `any`) => `AxiosPromise`\<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\> |
-| `quickstartsIdGet` | (`options?`: `any`) => `AxiosPromise`\<[`V1Quickstart`](interfaces/V1Quickstart.md)\> |
+**`Summary`**
 
-**`Export`**
+Returns list of all favorites
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:653](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L653)
+FavoritesGet/index.ts:28
 
 ___
 
-### DefaultApiFp
+### favoritesPost
 
-▸ **DefaultApiFp**(`configuration?`): `Object`
-
-DefaultApi - functional programming interface
+▸ **favoritesPost**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`FavoritesPostParams`] \| [[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `favoritesGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`FavoritesGet200Response`](interfaces/FavoritesGet200Response.md)\>\> |
-| `favoritesPost` | (`v1FavoriteQuickstart?`: [`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`V1FavoriteQuickstart`](interfaces/V1FavoriteQuickstart.md)\>\> |
-| `helptopicsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`HelptopicsGet200Response`](interfaces/HelptopicsGet200Response.md)\>\> |
-| `helptopicsNameGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`HelptopicsNameGet200Response`](interfaces/HelptopicsNameGet200Response.md)\>\> |
-| `quickstartsGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`QuickstartsGet200Response`](interfaces/QuickstartsGet200Response.md)\>\> |
-| `quickstartsIdGet` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`V1Quickstart`](interfaces/V1Quickstart.md)\>\> |
+**`Summary`**
 
-**`Export`**
+Add a favorite
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L582)
+FavoritesPost/index.ts:34
+
+___
+
+### helptopicsGet
+
+▸ **helptopicsGet**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AxiosRequestConfig`\<`any`\>] \| [`HelptopicsGetParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Returns list of all help topics
+
+**`Throws`**
+
+#### Defined in
+
+HelptopicsGet/index.ts:28
+
+___
+
+### helptopicsNameGet
+
+▸ **helptopicsNameGet**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AxiosRequestConfig`\<`any`\>] \| [`HelptopicsNameGetParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Return a help topics set by topic name
+
+**`Throws`**
+
+#### Defined in
+
+HelptopicsNameGet/index.ts:28
+
+___
+
+### quickstartsGet
+
+▸ **quickstartsGet**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AxiosRequestConfig`\<`any`\>] \| [`QuickstartsGetParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Returns list of all quickstarts
+
+**`Throws`**
+
+#### Defined in
+
+QuickstartsGet/index.ts:28
+
+___
+
+### quickstartsIdGet
+
+▸ **quickstartsIdGet**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AxiosRequestConfig`\<`any`\>] \| [`QuickstartsIdGetParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Return a quickstarts by ID
+
+**`Throws`**
+
+#### Defined in
+
+QuickstartsIdGet/index.ts:28

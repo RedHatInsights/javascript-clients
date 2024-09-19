@@ -24,4 +24,4 @@ QuickstartsGet200Response
 
 #### Defined in
 
-[api.ts:100](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L100)
+types/index.ts:77

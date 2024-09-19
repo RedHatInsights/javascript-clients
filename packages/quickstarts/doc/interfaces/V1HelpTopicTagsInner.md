@@ -29,13 +29,13 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L223)
+types/index.ts:194
 
 ___
 
 ### deletedAt
 
-• `Optional` **deletedAt**: [`V1HelpTopicDeletedAt`](../modules.md#v1helptopicdeletedat)
+• `Optional` **deletedAt**: ``null`` \| `string`
 
 **`Memberof`**
 
@@ -43,7 +43,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L229)
+types/index.ts:200
 
 ___
 
@@ -57,7 +57,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L235)
+types/index.ts:206
 
 ___
 
@@ -71,7 +71,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L241)
+types/index.ts:212
 
 ___
 
@@ -85,7 +85,7 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L247)
+types/index.ts:218
 
 ___
 
@@ -99,4 +99,4 @@ V1HelpTopicTagsInner
 
 #### Defined in
 
-[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/quickstarts/api.ts#L253)
+types/index.ts:224

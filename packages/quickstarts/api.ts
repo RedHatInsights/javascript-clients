@@ -13,13 +13,15 @@
  */
 
 
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  *
@@ -168,10 +170,10 @@ export interface V1HelpTopic {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1HelpTopic
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {string}
@@ -204,12 +206,6 @@ export interface V1HelpTopic {
     'updatedAt'?: string;
 }
 /**
- * @type V1HelpTopicDeletedAt
- * @export
- */
-export type V1HelpTopicDeletedAt = null | string;
-
-/**
  *
  * @export
  * @interface V1HelpTopicTagsInner
@@ -223,10 +219,10 @@ export interface V1HelpTopicTagsInner {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1HelpTopicTagsInner
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {number}
@@ -272,10 +268,10 @@ export interface V1Quickstart {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1Quickstart
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {Array<V1QuickstartFavoriteQuickstartInner>}
@@ -327,10 +323,10 @@ export interface V1QuickstartFavoriteQuickstartInner {
     'createdAt'?: string;
     /**
      *
-     * @type {V1HelpTopicDeletedAt}
+     * @type {string}
      * @memberof V1QuickstartFavoriteQuickstartInner
      */
-    'deletedAt'?: V1HelpTopicDeletedAt;
+    'deletedAt'?: string | null;
     /**
      *
      * @type {boolean}
@@ -383,10 +379,10 @@ export interface V1QuickstartProgress {
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * FavoritesGetApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const FavoritesGetApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -418,6 +414,75 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * FavoritesGetApi - functional programming interface
+ * @export
+ */
+export const FavoritesGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = FavoritesGetApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all favorites
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async favoritesGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FavoritesGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.favoritesGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * FavoritesGetApi - factory interface
+ * @export
+ */
+export const FavoritesGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = FavoritesGetApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all favorites
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        favoritesGet(options?: any): AxiosPromise<FavoritesGet200Response> {
+            return localVarFp.favoritesGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * FavoritesGetApi - object-oriented interface
+ * @export
+ * @class FavoritesGetApi
+ * @extends {BaseAPI}
+ */
+export class FavoritesGetApi extends BaseAPI {
+    /**
+     *
+     * @summary Returns list of all favorites
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FavoritesGetApi
+     */
+    public favoritesGet(options?: AxiosRequestConfig) {
+        return FavoritesGetApiFp(this.configuration).favoritesGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * FavoritesPostApi - axios parameter creator
+ * @export
+ */
+export const FavoritesPostApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Add a favorite
@@ -452,6 +517,78 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * FavoritesPostApi - functional programming interface
+ * @export
+ */
+export const FavoritesPostApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = FavoritesPostApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Add a favorite
+         * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<V1FavoriteQuickstart>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.favoritesPost(v1FavoriteQuickstart, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * FavoritesPostApi - factory interface
+ * @export
+ */
+export const FavoritesPostApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = FavoritesPostApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Add a favorite
+         * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: any): AxiosPromise<V1FavoriteQuickstart> {
+            return localVarFp.favoritesPost(v1FavoriteQuickstart, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * FavoritesPostApi - object-oriented interface
+ * @export
+ * @class FavoritesPostApi
+ * @extends {BaseAPI}
+ */
+export class FavoritesPostApi extends BaseAPI {
+    /**
+     *
+     * @summary Add a favorite
+     * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FavoritesPostApi
+     */
+    public favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: AxiosRequestConfig) {
+        return FavoritesPostApiFp(this.configuration).favoritesPost(v1FavoriteQuickstart, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * HelptopicsGetApi - axios parameter creator
+ * @export
+ */
+export const HelptopicsGetApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Returns list of all help topics
@@ -482,6 +619,75 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * HelptopicsGetApi - functional programming interface
+ * @export
+ */
+export const HelptopicsGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = HelptopicsGetApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all help topics
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async helptopicsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * HelptopicsGetApi - factory interface
+ * @export
+ */
+export const HelptopicsGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = HelptopicsGetApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all help topics
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        helptopicsGet(options?: any): AxiosPromise<HelptopicsGet200Response> {
+            return localVarFp.helptopicsGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * HelptopicsGetApi - object-oriented interface
+ * @export
+ * @class HelptopicsGetApi
+ * @extends {BaseAPI}
+ */
+export class HelptopicsGetApi extends BaseAPI {
+    /**
+     *
+     * @summary Returns list of all help topics
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HelptopicsGetApi
+     */
+    public helptopicsGet(options?: AxiosRequestConfig) {
+        return HelptopicsGetApiFp(this.configuration).helptopicsGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * HelptopicsNameGetApi - axios parameter creator
+ * @export
+ */
+export const HelptopicsNameGetApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Return a help topics set by topic name
@@ -512,6 +718,75 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * HelptopicsNameGetApi - functional programming interface
+ * @export
+ */
+export const HelptopicsNameGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = HelptopicsNameGetApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Return a help topics set by topic name
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async helptopicsNameGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsNameGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsNameGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * HelptopicsNameGetApi - factory interface
+ * @export
+ */
+export const HelptopicsNameGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = HelptopicsNameGetApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Return a help topics set by topic name
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        helptopicsNameGet(options?: any): AxiosPromise<HelptopicsNameGet200Response> {
+            return localVarFp.helptopicsNameGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * HelptopicsNameGetApi - object-oriented interface
+ * @export
+ * @class HelptopicsNameGetApi
+ * @extends {BaseAPI}
+ */
+export class HelptopicsNameGetApi extends BaseAPI {
+    /**
+     *
+     * @summary Return a help topics set by topic name
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HelptopicsNameGetApi
+     */
+    public helptopicsNameGet(options?: AxiosRequestConfig) {
+        return HelptopicsNameGetApiFp(this.configuration).helptopicsNameGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * QuickstartsGetApi - axios parameter creator
+ * @export
+ */
+export const QuickstartsGetApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Returns list of all quickstarts
@@ -542,6 +817,75 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * QuickstartsGetApi - functional programming interface
+ * @export
+ */
+export const QuickstartsGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = QuickstartsGetApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all quickstarts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async quickstartsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuickstartsGet200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * QuickstartsGetApi - factory interface
+ * @export
+ */
+export const QuickstartsGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = QuickstartsGetApiFp(configuration)
+    return {
+        /**
+         *
+         * @summary Returns list of all quickstarts
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        quickstartsGet(options?: any): AxiosPromise<QuickstartsGet200Response> {
+            return localVarFp.quickstartsGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * QuickstartsGetApi - object-oriented interface
+ * @export
+ * @class QuickstartsGetApi
+ * @extends {BaseAPI}
+ */
+export class QuickstartsGetApi extends BaseAPI {
+    /**
+     *
+     * @summary Returns list of all quickstarts
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof QuickstartsGetApi
+     */
+    public quickstartsGet(options?: AxiosRequestConfig) {
+        return QuickstartsGetApiFp(this.configuration).quickstartsGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * QuickstartsIdGetApi - axios parameter creator
+ * @export
+ */
+export const QuickstartsIdGetApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          *
          * @summary Return a quickstarts by ID
@@ -576,63 +920,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * QuickstartsIdGetApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = DefaultApiAxiosParamCreator(configuration)
+export const QuickstartsIdGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = QuickstartsIdGetApiAxiosParamCreator(configuration)
     return {
-        /**
-         *
-         * @summary Returns list of all favorites
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async favoritesGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FavoritesGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.favoritesGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Add a favorite
-         * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<V1FavoriteQuickstart>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.favoritesPost(v1FavoriteQuickstart, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Returns list of all help topics
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async helptopicsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Return a help topics set by topic name
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async helptopicsNameGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelptopicsNameGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.helptopicsNameGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         *
-         * @summary Returns list of all quickstarts
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async quickstartsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuickstartsGet200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.quickstartsGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
         /**
          *
          * @summary Return a quickstarts by ID
@@ -647,58 +940,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * DefaultApi - factory interface
+ * QuickstartsIdGetApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = DefaultApiFp(configuration)
+export const QuickstartsIdGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = QuickstartsIdGetApiFp(configuration)
     return {
-        /**
-         *
-         * @summary Returns list of all favorites
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        favoritesGet(options?: any): AxiosPromise<FavoritesGet200Response> {
-            return localVarFp.favoritesGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Add a favorite
-         * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: any): AxiosPromise<V1FavoriteQuickstart> {
-            return localVarFp.favoritesPost(v1FavoriteQuickstart, options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Returns list of all help topics
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        helptopicsGet(options?: any): AxiosPromise<HelptopicsGet200Response> {
-            return localVarFp.helptopicsGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Return a help topics set by topic name
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        helptopicsNameGet(options?: any): AxiosPromise<HelptopicsNameGet200Response> {
-            return localVarFp.helptopicsNameGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         *
-         * @summary Returns list of all quickstarts
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        quickstartsGet(options?: any): AxiosPromise<QuickstartsGet200Response> {
-            return localVarFp.quickstartsGet(options).then((request) => request(axios, basePath));
-        },
         /**
          *
          * @summary Return a quickstarts by ID
@@ -712,78 +959,23 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * QuickstartsIdGetApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class QuickstartsIdGetApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
-    /**
-     *
-     * @summary Returns list of all favorites
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public favoritesGet(options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).favoritesGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Add a favorite
-     * @param {V1FavoriteQuickstart} [v1FavoriteQuickstart]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public favoritesPost(v1FavoriteQuickstart?: V1FavoriteQuickstart, options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).favoritesPost(v1FavoriteQuickstart, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Returns list of all help topics
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public helptopicsGet(options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).helptopicsGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Return a help topics set by topic name
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public helptopicsNameGet(options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).helptopicsNameGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Returns list of all quickstarts
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public quickstartsGet(options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).quickstartsGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class QuickstartsIdGetApi extends BaseAPI {
     /**
      *
      * @summary Return a quickstarts by ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof QuickstartsIdGetApi
      */
     public quickstartsIdGet(options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).quickstartsIdGet(options).then((request) => request(this.axios, this.basePath));
+        return QuickstartsIdGetApiFp(this.configuration).quickstartsIdGet(options).then((request) => request(this.axios, this.basePath));
     }
 }
+
 
 
