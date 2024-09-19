@@ -26,7 +26,7 @@ ContainersCollection
 
 #### Defined in
 
-[api.ts:1103](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1103)
+types/index.ts:1095
 
 ___
 
@@ -40,7 +40,7 @@ ContainersCollection
 
 #### Defined in
 
-[api.ts:1097](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1097)
+types/index.ts:1089
 
 ___
 
@@ -54,4 +54,4 @@ ContainersCollection
 
 #### Defined in
 
-[api.ts:1091](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1091)
+types/index.ts:1083

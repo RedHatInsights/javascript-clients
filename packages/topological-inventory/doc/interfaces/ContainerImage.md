@@ -35,7 +35,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:493](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L493)
+types/index.ts:485
 
 ___
 
@@ -49,7 +49,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:499](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L499)
+types/index.ts:491
 
 ___
 
@@ -65,7 +65,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:505](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L505)
+types/index.ts:497
 
 ___
 
@@ -79,7 +79,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:511](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L511)
+types/index.ts:503
 
 ___
 
@@ -93,7 +93,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:517](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L517)
+types/index.ts:509
 
 ___
 
@@ -107,7 +107,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:523](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L523)
+types/index.ts:515
 
 ___
 
@@ -121,7 +121,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:529](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L529)
+types/index.ts:521
 
 ___
 
@@ -135,7 +135,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:535](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L535)
+types/index.ts:527
 
 ___
 
@@ -151,7 +151,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:541](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L541)
+types/index.ts:533
 
 ___
 
@@ -165,7 +165,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:547](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L547)
+types/index.ts:539
 
 ___
 
@@ -179,7 +179,7 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:553](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L553)
+types/index.ts:545
 
 ___
 
@@ -193,4 +193,4 @@ ContainerImage
 
 #### Defined in
 
-[api.ts:559](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L559)
+types/index.ts:551

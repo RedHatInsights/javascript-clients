@@ -26,7 +26,7 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1373](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1373)
+types/index.ts:1365
 
 ___
 
@@ -40,7 +40,7 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1367)
+types/index.ts:1359
 
 ___
 
@@ -54,4 +54,4 @@ FlavorsCollection
 
 #### Defined in
 
-[api.ts:1361](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1361)
+types/index.ts:1353

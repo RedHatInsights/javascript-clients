@@ -7,7 +7,6 @@
     "generate": {
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
-        "legacyGenerator": true,
         "specs": {
           "default": "https://raw.githubusercontent.com/RedHatInsights/topological_inventory-api/master/public/doc/openapi-3-v1.0.json"
         }

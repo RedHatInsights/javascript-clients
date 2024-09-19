@@ -26,7 +26,7 @@ AvailabilitiesCollection
 
 #### Defined in
 
-[api.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L58)
+types/index.ts:50
 
 ___
 
@@ -40,7 +40,7 @@ AvailabilitiesCollection
 
 #### Defined in
 
-[api.ts:52](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L52)
+types/index.ts:44
 
 ___
 
@@ -54,4 +54,4 @@ AvailabilitiesCollection
 
 #### Defined in
 
-[api.ts:46](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L46)
+types/index.ts:38

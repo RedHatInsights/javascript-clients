@@ -26,7 +26,7 @@ ServiceOfferingIconsCollection
 
 #### Defined in
 
-[api.ts:2815](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2815)
+types/index.ts:2800
 
 ___
 
@@ -40,7 +40,7 @@ ServiceOfferingIconsCollection
 
 #### Defined in
 
-[api.ts:2809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2809)
+types/index.ts:2794
 
 ___
 
@@ -54,4 +54,4 @@ ServiceOfferingIconsCollection
 
 #### Defined in
 
-[api.ts:2803](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2803)
+types/index.ts:2788

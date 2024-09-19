@@ -26,4 +26,4 @@ AppliedInventoriesParametersServicePlan
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L33)
+types/index.ts:25

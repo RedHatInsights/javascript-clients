@@ -35,7 +35,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:987](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L987)
+types/index.ts:979
 
 ___
 
@@ -51,7 +51,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:993](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L993)
+types/index.ts:985
 
 ___
 
@@ -65,7 +65,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:999](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L999)
+types/index.ts:991
 
 ___
 
@@ -81,7 +81,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1005](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1005)
+types/index.ts:997
 
 ___
 
@@ -95,7 +95,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1011](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1011)
+types/index.ts:1003
 
 ___
 
@@ -109,7 +109,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1017](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1017)
+types/index.ts:1009
 
 ___
 
@@ -123,7 +123,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1023](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1023)
+types/index.ts:1015
 
 ___
 
@@ -137,7 +137,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1029](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1029)
+types/index.ts:1021
 
 ___
 
@@ -151,7 +151,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1035](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1035)
+types/index.ts:1027
 
 ___
 
@@ -167,7 +167,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1041](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1041)
+types/index.ts:1033
 
 ___
 
@@ -181,7 +181,7 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1047](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1047)
+types/index.ts:1039
 
 ___
 
@@ -195,4 +195,4 @@ ContainerTemplate
 
 #### Defined in
 
-[api.ts:1053](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1053)
+types/index.ts:1045

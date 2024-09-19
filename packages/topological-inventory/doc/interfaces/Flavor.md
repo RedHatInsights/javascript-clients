@@ -36,7 +36,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1276](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1276)
+types/index.ts:1268
 
 ___
 
@@ -52,7 +52,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1282](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1282)
+types/index.ts:1274
 
 ___
 
@@ -66,7 +66,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1288](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1288)
+types/index.ts:1280
 
 ___
 
@@ -82,7 +82,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1294](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1294)
+types/index.ts:1286
 
 ___
 
@@ -98,7 +98,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1300](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1300)
+types/index.ts:1292
 
 ___
 
@@ -112,7 +112,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1306](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1306)
+types/index.ts:1298
 
 ___
 
@@ -128,7 +128,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1312](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1312)
+types/index.ts:1304
 
 ___
 
@@ -142,7 +142,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1318](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1318)
+types/index.ts:1310
 
 ___
 
@@ -158,7 +158,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1324](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1324)
+types/index.ts:1316
 
 ___
 
@@ -172,7 +172,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1330)
+types/index.ts:1322
 
 ___
 
@@ -188,7 +188,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1336](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1336)
+types/index.ts:1328
 
 ___
 
@@ -202,7 +202,7 @@ Flavor
 
 #### Defined in
 
-[api.ts:1342](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1342)
+types/index.ts:1334
 
 ___
 
@@ -216,4 +216,4 @@ Flavor
 
 #### Defined in
 
-[api.ts:1348](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1348)
+types/index.ts:1340

@@ -37,7 +37,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:871](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L871)
+types/index.ts:863
 
 ___
 
@@ -53,7 +53,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:877](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L877)
+types/index.ts:869
 
 ___
 
@@ -67,7 +67,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:883](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L883)
+types/index.ts:875
 
 ___
 
@@ -83,7 +83,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:889](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L889)
+types/index.ts:881
 
 ___
 
@@ -97,7 +97,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:895](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L895)
+types/index.ts:887
 
 ___
 
@@ -111,7 +111,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:901](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L901)
+types/index.ts:893
 
 ___
 
@@ -125,7 +125,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:907](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L907)
+types/index.ts:899
 
 ___
 
@@ -139,7 +139,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:913](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L913)
+types/index.ts:905
 
 ___
 
@@ -153,7 +153,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:919](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L919)
+types/index.ts:911
 
 ___
 
@@ -169,7 +169,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:925](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L925)
+types/index.ts:917
 
 ___
 
@@ -183,7 +183,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:931](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L931)
+types/index.ts:923
 
 ___
 
@@ -197,7 +197,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:937](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L937)
+types/index.ts:929
 
 ___
 
@@ -211,7 +211,7 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:943](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L943)
+types/index.ts:935
 
 ___
 
@@ -225,4 +225,4 @@ ContainerResourceQuota
 
 #### Defined in
 
-[api.ts:949](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L949)
+types/index.ts:941

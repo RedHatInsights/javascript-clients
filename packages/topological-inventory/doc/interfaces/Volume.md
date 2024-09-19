@@ -40,7 +40,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3851](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3851)
+types/index.ts:3836
 
 ___
 
@@ -54,7 +54,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3857](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3857)
+types/index.ts:3842
 
 ___
 
@@ -68,7 +68,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3863](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3863)
+types/index.ts:3848
 
 ___
 
@@ -84,7 +84,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3869](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3869)
+types/index.ts:3854
 
 ___
 
@@ -98,7 +98,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3875](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3875)
+types/index.ts:3860
 
 ___
 
@@ -112,7 +112,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3881](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3881)
+types/index.ts:3866
 
 ___
 
@@ -128,7 +128,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3887](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3887)
+types/index.ts:3872
 
 ___
 
@@ -144,7 +144,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3893](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3893)
+types/index.ts:3878
 
 ___
 
@@ -158,7 +158,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3899](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3899)
+types/index.ts:3884
 
 ___
 
@@ -172,7 +172,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3905](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3905)
+types/index.ts:3890
 
 ___
 
@@ -188,7 +188,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3911](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3911)
+types/index.ts:3896
 
 ___
 
@@ -202,7 +202,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3917](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3917)
+types/index.ts:3902
 
 ___
 
@@ -218,7 +218,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3923](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3923)
+types/index.ts:3908
 
 ___
 
@@ -232,7 +232,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3929](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3929)
+types/index.ts:3914
 
 ___
 
@@ -248,7 +248,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3935](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3935)
+types/index.ts:3920
 
 ___
 
@@ -262,7 +262,7 @@ Volume
 
 #### Defined in
 
-[api.ts:3941](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3941)
+types/index.ts:3926
 
 ___
 
@@ -278,4 +278,4 @@ Volume
 
 #### Defined in
 
-[api.ts:3947](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3947)
+types/index.ts:3932

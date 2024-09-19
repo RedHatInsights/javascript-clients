@@ -26,7 +26,7 @@ NetworkAdaptersCollection
 
 #### Defined in
 
-[api.ts:1935](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1935)
+types/index.ts:1920
 
 ___
 
@@ -40,7 +40,7 @@ NetworkAdaptersCollection
 
 #### Defined in
 
-[api.ts:1929](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1929)
+types/index.ts:1914
 
 ___
 
@@ -54,4 +54,4 @@ NetworkAdaptersCollection
 
 #### Defined in
 
-[api.ts:1923](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1923)
+types/index.ts:1908

@@ -39,7 +39,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1820](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1820)
+types/index.ts:1805
 
 ___
 
@@ -53,7 +53,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1826](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1826)
+types/index.ts:1811
 
 ___
 
@@ -69,7 +69,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1832](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1832)
+types/index.ts:1817
 
 ___
 
@@ -83,7 +83,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1838](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1838)
+types/index.ts:1823
 
 ___
 
@@ -97,7 +97,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1844](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1844)
+types/index.ts:1829
 
 ___
 
@@ -113,7 +113,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1850](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1850)
+types/index.ts:1835
 
 ___
 
@@ -127,7 +127,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1856](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1856)
+types/index.ts:1841
 
 ___
 
@@ -141,7 +141,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1862](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1862)
+types/index.ts:1847
 
 ___
 
@@ -157,7 +157,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1868](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1868)
+types/index.ts:1853
 
 ___
 
@@ -171,7 +171,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1874](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1874)
+types/index.ts:1859
 
 ___
 
@@ -185,7 +185,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1880](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1880)
+types/index.ts:1865
 
 ___
 
@@ -201,7 +201,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1886](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1886)
+types/index.ts:1871
 
 ___
 
@@ -215,7 +215,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1892](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1892)
+types/index.ts:1877
 
 ___
 
@@ -231,7 +231,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1898](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1898)
+types/index.ts:1883
 
 ___
 
@@ -247,7 +247,7 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1904](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1904)
+types/index.ts:1889
 
 ___
 
@@ -261,4 +261,4 @@ NetworkAdapter
 
 #### Defined in
 
-[api.ts:1910](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1910)
+types/index.ts:1895

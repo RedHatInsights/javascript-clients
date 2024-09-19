@@ -39,7 +39,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1116](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1116)
+types/index.ts:1108
 
 ___
 
@@ -53,7 +53,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1122](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1122)
+types/index.ts:1114
 
 ___
 
@@ -67,7 +67,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1128](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1128)
+types/index.ts:1120
 
 ___
 
@@ -81,7 +81,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1134](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1134)
+types/index.ts:1126
 
 ___
 
@@ -95,7 +95,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1140](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1140)
+types/index.ts:1132
 
 ___
 
@@ -111,7 +111,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1146](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1146)
+types/index.ts:1138
 
 ___
 
@@ -125,7 +125,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1152](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1152)
+types/index.ts:1144
 
 ___
 
@@ -139,7 +139,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1158](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1158)
+types/index.ts:1150
 
 ___
 
@@ -153,7 +153,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1164)
+types/index.ts:1156
 
 ___
 
@@ -167,7 +167,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1170](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1170)
+types/index.ts:1162
 
 ___
 
@@ -181,7 +181,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1176](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1176)
+types/index.ts:1168
 
 ___
 
@@ -197,7 +197,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1182](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1182)
+types/index.ts:1174
 
 ___
 
@@ -211,7 +211,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1188](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1188)
+types/index.ts:1180
 
 ___
 
@@ -225,7 +225,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1194](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1194)
+types/index.ts:1186
 
 ___
 
@@ -239,7 +239,7 @@ Datastore
 
 #### Defined in
 
-[api.ts:1200](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1200)
+types/index.ts:1192
 
 ___
 
@@ -253,4 +253,4 @@ Datastore
 
 #### Defined in
 
-[api.ts:1206](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1206)
+types/index.ts:1198

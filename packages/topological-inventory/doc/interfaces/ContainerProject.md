@@ -36,7 +36,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:761](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L761)
+types/index.ts:753
 
 ___
 
@@ -50,7 +50,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:767](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L767)
+types/index.ts:759
 
 ___
 
@@ -64,7 +64,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:773](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L773)
+types/index.ts:765
 
 ___
 
@@ -80,7 +80,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:779](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L779)
+types/index.ts:771
 
 ___
 
@@ -94,7 +94,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:785](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L785)
+types/index.ts:777
 
 ___
 
@@ -108,7 +108,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:791](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L791)
+types/index.ts:783
 
 ___
 
@@ -122,7 +122,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:797](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L797)
+types/index.ts:789
 
 ___
 
@@ -136,7 +136,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:803](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L803)
+types/index.ts:795
 
 ___
 
@@ -150,7 +150,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:809](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L809)
+types/index.ts:801
 
 ___
 
@@ -166,7 +166,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:815](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L815)
+types/index.ts:807
 
 ___
 
@@ -180,7 +180,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:821](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L821)
+types/index.ts:813
 
 ___
 
@@ -194,7 +194,7 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:827](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L827)
+types/index.ts:819
 
 ___
 
@@ -208,4 +208,4 @@ ContainerProject
 
 #### Defined in
 
-[api.ts:833](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L833)
+types/index.ts:825

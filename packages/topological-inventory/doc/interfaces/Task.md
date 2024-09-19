@@ -31,7 +31,7 @@ Task
 
 #### Defined in
 
-[api.ts:3570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3570)
+types/index.ts:3555
 
 ___
 
@@ -45,7 +45,7 @@ Task
 
 #### Defined in
 
-[api.ts:3576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3576)
+types/index.ts:3561
 
 ___
 
@@ -59,7 +59,7 @@ Task
 
 #### Defined in
 
-[api.ts:3582](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3582)
+types/index.ts:3567
 
 ___
 
@@ -75,7 +75,7 @@ Task
 
 #### Defined in
 
-[api.ts:3588](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3588)
+types/index.ts:3573
 
 ___
 
@@ -89,7 +89,7 @@ Task
 
 #### Defined in
 
-[api.ts:3594](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3594)
+types/index.ts:3579
 
 ___
 
@@ -103,7 +103,7 @@ Task
 
 #### Defined in
 
-[api.ts:3600](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3600)
+types/index.ts:3585
 
 ___
 
@@ -117,7 +117,7 @@ Task
 
 #### Defined in
 
-[api.ts:3606](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3606)
+types/index.ts:3591
 
 ___
 
@@ -131,4 +131,4 @@ Task
 
 #### Defined in
 
-[api.ts:3612](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3612)
+types/index.ts:3597

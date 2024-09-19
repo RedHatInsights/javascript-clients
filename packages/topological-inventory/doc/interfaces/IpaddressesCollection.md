@@ -26,7 +26,7 @@ IpaddressesCollection
 
 #### Defined in
 
-[api.ts:1704](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1704)
+types/index.ts:1683
 
 ___
 
@@ -40,7 +40,7 @@ IpaddressesCollection
 
 #### Defined in
 
-[api.ts:1698](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1698)
+types/index.ts:1677
 
 ___
 
@@ -54,4 +54,4 @@ IpaddressesCollection
 
 #### Defined in
 
-[api.ts:1692](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1692)
+types/index.ts:1671

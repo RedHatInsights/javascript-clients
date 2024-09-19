@@ -31,7 +31,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3391](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3391)
+types/index.ts:3376
 
 ___
 
@@ -45,7 +45,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3397](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3397)
+types/index.ts:3382
 
 ___
 
@@ -61,7 +61,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3403](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3403)
+types/index.ts:3388
 
 ___
 
@@ -75,7 +75,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3409](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3409)
+types/index.ts:3394
 
 ___
 
@@ -89,7 +89,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3415](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3415)
+types/index.ts:3400
 
 ___
 
@@ -105,7 +105,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3421](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3421)
+types/index.ts:3406
 
 ___
 
@@ -119,7 +119,7 @@ Subscription
 
 #### Defined in
 
-[api.ts:3427](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3427)
+types/index.ts:3412
 
 ___
 
@@ -133,4 +133,4 @@ Subscription
 
 #### Defined in
 
-[api.ts:3433](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3433)
+types/index.ts:3418

@@ -30,7 +30,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3471](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3471)
+types/index.ts:3456
 
 ___
 
@@ -44,7 +44,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3477](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3477)
+types/index.ts:3462
 
 ___
 
@@ -60,7 +60,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3483](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3483)
+types/index.ts:3468
 
 ___
 
@@ -74,7 +74,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3489](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3489)
+types/index.ts:3474
 
 ___
 
@@ -88,7 +88,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3495](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3495)
+types/index.ts:3480
 
 ___
 
@@ -102,7 +102,7 @@ Tag
 
 #### Defined in
 
-[api.ts:3501](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3501)
+types/index.ts:3486
 
 ___
 
@@ -116,4 +116,4 @@ Tag
 
 #### Defined in
 
-[api.ts:3507](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L3507)
+types/index.ts:3492

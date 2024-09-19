@@ -26,7 +26,7 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2956](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2956)
+types/index.ts:2941
 
 ___
 
@@ -40,7 +40,7 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2950](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2950)
+types/index.ts:2935
 
 ___
 
@@ -54,4 +54,4 @@ ServiceOfferingsCollection
 
 #### Defined in
 
-[api.ts:2944](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2944)
+types/index.ts:2929

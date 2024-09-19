@@ -41,7 +41,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2261](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2261)
+types/index.ts:2246
 
 ___
 
@@ -55,7 +55,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2267](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2267)
+types/index.ts:2252
 
 ___
 
@@ -69,7 +69,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2273](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2273)
+types/index.ts:2258
 
 ___
 
@@ -85,7 +85,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2279](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2279)
+types/index.ts:2264
 
 ___
 
@@ -101,7 +101,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2285](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2285)
+types/index.ts:2270
 
 ___
 
@@ -115,7 +115,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2291](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2291)
+types/index.ts:2276
 
 ___
 
@@ -129,7 +129,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2297](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2297)
+types/index.ts:2282
 
 ___
 
@@ -145,7 +145,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2303](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2303)
+types/index.ts:2288
 
 ___
 
@@ -161,7 +161,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2309](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2309)
+types/index.ts:2294
 
 ___
 
@@ -177,7 +177,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2315](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2315)
+types/index.ts:2300
 
 ___
 
@@ -193,7 +193,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2321](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2321)
+types/index.ts:2306
 
 ___
 
@@ -207,7 +207,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2327](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2327)
+types/index.ts:2312
 
 ___
 
@@ -221,7 +221,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2333](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2333)
+types/index.ts:2318
 
 ___
 
@@ -237,7 +237,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2339](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2339)
+types/index.ts:2324
 
 ___
 
@@ -251,7 +251,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2345](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2345)
+types/index.ts:2330
 
 ___
 
@@ -267,7 +267,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2351](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2351)
+types/index.ts:2336
 
 ___
 
@@ -283,7 +283,7 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2357](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2357)
+types/index.ts:2342
 
 ___
 
@@ -297,4 +297,4 @@ ServiceInstance
 
 #### Defined in
 
-[api.ts:2363](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2363)
+types/index.ts:2348

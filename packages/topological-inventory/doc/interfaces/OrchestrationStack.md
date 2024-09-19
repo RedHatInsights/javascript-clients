@@ -37,7 +37,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1973](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1973)
+types/index.ts:1958
 
 ___
 
@@ -51,7 +51,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1979](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1979)
+types/index.ts:1964
 
 ___
 
@@ -67,7 +67,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1985](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1985)
+types/index.ts:1970
 
 ___
 
@@ -83,7 +83,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1991](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1991)
+types/index.ts:1976
 
 ___
 
@@ -97,7 +97,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:1997](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L1997)
+types/index.ts:1982
 
 ___
 
@@ -111,7 +111,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2003](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2003)
+types/index.ts:1988
 
 ___
 
@@ -127,7 +127,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2009](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2009)
+types/index.ts:1994
 
 ___
 
@@ -141,7 +141,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2015](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2015)
+types/index.ts:2000
 
 ___
 
@@ -155,7 +155,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2021](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2021)
+types/index.ts:2006
 
 ___
 
@@ -171,7 +171,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2027](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2027)
+types/index.ts:2012
 
 ___
 
@@ -185,7 +185,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2033](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2033)
+types/index.ts:2018
 
 ___
 
@@ -201,7 +201,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2039](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2039)
+types/index.ts:2024
 
 ___
 
@@ -217,7 +217,7 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2045](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2045)
+types/index.ts:2030
 
 ___
 
@@ -231,4 +231,4 @@ OrchestrationStack
 
 #### Defined in
 
-[api.ts:2051](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/topological-inventory/api.ts#L2051)
+types/index.ts:2036
