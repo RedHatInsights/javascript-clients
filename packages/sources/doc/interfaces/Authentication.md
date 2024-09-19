@@ -35,7 +35,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:199](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L199)
+types/index.ts:178
 
 ___
 
@@ -49,7 +49,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:205](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L205)
+types/index.ts:184
 
 ___
 
@@ -63,7 +63,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:211](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L211)
+types/index.ts:190
 
 ___
 
@@ -77,7 +77,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:217](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L217)
+types/index.ts:196
 
 ___
 
@@ -93,7 +93,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:223](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L223)
+types/index.ts:202
 
 ___
 
@@ -107,7 +107,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:229](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L229)
+types/index.ts:208
 
 ___
 
@@ -121,7 +121,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:235](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L235)
+types/index.ts:214
 
 ___
 
@@ -137,7 +137,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:241](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L241)
+types/index.ts:220
 
 ___
 
@@ -151,7 +151,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L247)
+types/index.ts:226
 
 ___
 
@@ -167,7 +167,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:253](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L253)
+types/index.ts:232
 
 ___
 
@@ -181,7 +181,7 @@ Authentication
 
 #### Defined in
 
-[api.ts:259](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L259)
+types/index.ts:238
 
 ___
 
@@ -195,4 +195,4 @@ Authentication
 
 #### Defined in
 
-[api.ts:265](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L265)
+types/index.ts:244

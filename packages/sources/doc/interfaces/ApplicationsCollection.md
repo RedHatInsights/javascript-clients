@@ -26,7 +26,7 @@ ApplicationsCollection
 
 #### Defined in
 
-[api.ts:186](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L186)
+types/index.ts:165
 
 ___
 
@@ -40,7 +40,7 @@ ApplicationsCollection
 
 #### Defined in
 
-[api.ts:180](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L180)
+types/index.ts:159
 
 ___
 
@@ -54,4 +54,4 @@ ApplicationsCollection
 
 #### Defined in
 
-[api.ts:174](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L174)
+types/index.ts:153

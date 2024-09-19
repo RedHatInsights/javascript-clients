@@ -27,7 +27,7 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:570](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L570)
+types/index.ts:549
 
 ___
 
@@ -43,4 +43,4 @@ GraphQLResponse
 
 #### Defined in
 
-[api.ts:576](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L576)
+types/index.ts:555

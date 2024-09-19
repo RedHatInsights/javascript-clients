@@ -26,7 +26,7 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:316](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L316)
+types/index.ts:295
 
 ___
 
@@ -40,7 +40,7 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L310)
+types/index.ts:289
 
 ___
 
@@ -54,4 +54,4 @@ AuthenticationsCollection
 
 #### Defined in
 
-[api.ts:304](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L304)
+types/index.ts:283

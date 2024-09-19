@@ -1,5 +1,5 @@
-# Javascript client for Sources API
-If you want to use [ManageIQ/sources-api](https://github.com/ManageIQ/sources-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+# Javascript client for sources API
+If you want to use [RedHatInsights/sources-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with the service.
 
 ## Install
 NPM
@@ -18,20 +18,20 @@ This client is using typescript and axios. Types are distributed with this packa
 To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
 ```JS
 // api.js
-import axios from 'axios';
-import { DefaultApi } from '@redhat-cloud-services/sources-client';
-const instance = axios.create();
+import APIFactory from '@redhat-cloud-services/javascript-client-shared/dist/utils'; 
+import createEndpoint from '@redhat-cloud-services/sources-client/dist/endpointResourceV1CreateEndpoint';
+import enableEndpoint from '@redhat-cloud-services/sources-client/dist/endpointResourceV1EnableEndpoint';
 
 // BASE_PATH should be set in your constants file
-const baseApi = new DefaultApi(undefined, BASE_PATH, instance);
-export baseApi;
+const sourcesApi = APIFactory(BASE_PATH, undefined, { createEndpoint, enableEndpoint });
+export configMnagerApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
 // api.js
 import axios from 'axios';
-import { DefaultApi } from '@redhat-cloud-services/catalog-client';
+import { sourcesApi } from '@redhat-cloud-services/sources-client';
 const instance = axios.create();
 
 // Request interceptor
@@ -50,8 +50,8 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const baseApi = new DefaultApi(undefined, BASE_PATH, instance);
-export baseApi;
+const sourcesApi = APIFactory(BASE_PATH, instance, { createEndpoint, enableEndpoint });
+export sourcesApi;
 ```
 
 ## Building
@@ -65,4 +65,3 @@ Run `nx test @redhat-cloud-services/sources-client` to execute the unit tests vi
 ## API documentation
 
 * [README](doc/README.md)
-

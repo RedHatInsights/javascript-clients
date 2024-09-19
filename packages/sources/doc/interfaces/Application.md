@@ -34,7 +34,7 @@ Application
 
 #### Defined in
 
-[api.ts:33](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L33)
+types/index.ts:12
 
 ___
 
@@ -48,7 +48,7 @@ Application
 
 #### Defined in
 
-[api.ts:39](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L39)
+types/index.ts:18
 
 ___
 
@@ -62,7 +62,7 @@ Application
 
 #### Defined in
 
-[api.ts:45](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L45)
+types/index.ts:24
 
 ___
 
@@ -76,7 +76,7 @@ Application
 
 #### Defined in
 
-[api.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L51)
+types/index.ts:30
 
 ___
 
@@ -90,7 +90,7 @@ Application
 
 #### Defined in
 
-[api.ts:57](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L57)
+types/index.ts:36
 
 ___
 
@@ -106,7 +106,7 @@ Application
 
 #### Defined in
 
-[api.ts:63](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L63)
+types/index.ts:42
 
 ___
 
@@ -122,7 +122,7 @@ Application
 
 #### Defined in
 
-[api.ts:69](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L69)
+types/index.ts:48
 
 ___
 
@@ -136,7 +136,7 @@ Application
 
 #### Defined in
 
-[api.ts:75](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L75)
+types/index.ts:54
 
 ___
 
@@ -150,4 +150,4 @@ Application
 
 #### Defined in
 
-[api.ts:81](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/sources/api.ts#L81)
+types/index.ts:60

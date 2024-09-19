@@ -1,4 +1,5 @@
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Sources
  * Sources
@@ -12,12 +13,15 @@
  */
 
 
-import * as globalImportUrl from 'url';
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
+// @ts-ignore
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  *
@@ -30,55 +34,55 @@ export interface Application {
      * @type {string}
      * @memberof Application
      */
-    application_type_id?: string;
+    'application_type_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Application
      */
-    availability_status?: string;
+    'availability_status'?: string;
     /**
      *
      * @type {string}
      * @memberof Application
      */
-    availability_status_error?: string;
+    'availability_status_error'?: string;
     /**
      *
      * @type {string}
      * @memberof Application
      */
-    created_at?: string;
+    'created_at'?: string;
     /**
      *
      * @type {object}
      * @memberof Application
      */
-    extra?: object;
+    'extra'?: object;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Application
      */
-    id?: string;
+    'id'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Application
      */
-    source_id?: string;
+    'source_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Application
      */
-    tenant?: string;
+    'tenant'?: string;
     /**
      *
      * @type {string}
      * @memberof Application
      */
-    updated_at?: string;
+    'updated_at'?: string;
 }
 /**
  *
@@ -91,49 +95,49 @@ export interface ApplicationType {
      * @type {string}
      * @memberof ApplicationType
      */
-    created_at?: string;
+    'created_at'?: string;
     /**
      *
      * @type {object}
      * @memberof ApplicationType
      */
-    dependent_applications?: object;
+    'dependent_applications'?: object;
     /**
      *
      * @type {string}
      * @memberof ApplicationType
      */
-    display_name?: string;
+    'display_name'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof ApplicationType
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof ApplicationType
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {object}
      * @memberof ApplicationType
      */
-    supported_authentication_types?: object;
+    'supported_authentication_types'?: object;
     /**
      *
      * @type {object}
      * @memberof ApplicationType
      */
-    supported_source_types?: object;
+    'supported_source_types'?: object;
     /**
      *
      * @type {string}
      * @memberof ApplicationType
      */
-    updated_at?: string;
+    'updated_at'?: string;
 }
 /**
  *
@@ -146,19 +150,19 @@ export interface ApplicationTypesCollection {
      * @type {CollectionMetadata}
      * @memberof ApplicationTypesCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof ApplicationTypesCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<ApplicationType>}
      * @memberof ApplicationTypesCollection
      */
-    data?: Array<ApplicationType>;
+    'data'?: Array<ApplicationType>;
 }
 /**
  *
@@ -171,19 +175,19 @@ export interface ApplicationsCollection {
      * @type {CollectionMetadata}
      * @memberof ApplicationsCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof ApplicationsCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<Application>}
      * @memberof ApplicationsCollection
      */
-    data?: Array<Application>;
+    'data'?: Array<Application>;
 }
 /**
  *
@@ -196,73 +200,73 @@ export interface Authentication {
      * @type {string}
      * @memberof Authentication
      */
-    authtype?: string;
+    'authtype'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    availability_status?: string;
+    'availability_status'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    availability_status_error?: string;
+    'availability_status_error'?: string;
     /**
      *
      * @type {AuthenticationExtra}
      * @memberof Authentication
      */
-    extra?: AuthenticationExtra;
+    'extra'?: AuthenticationExtra;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Authentication
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    password?: string;
+    'password'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Authentication
      */
-    resource_id?: string;
+    'resource_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    resource_type?: string;
+    'resource_type'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Authentication
      */
-    source_id?: string;
+    'source_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    tenant?: string;
+    'tenant'?: string;
     /**
      *
      * @type {string}
      * @memberof Authentication
      */
-    username?: string;
+    'username'?: string;
 }
 /**
  *
@@ -275,7 +279,7 @@ export interface AuthenticationExtra {
      * @type {AuthenticationExtraAzure}
      * @memberof AuthenticationExtra
      */
-    azure?: AuthenticationExtraAzure;
+    'azure'?: AuthenticationExtraAzure;
 }
 /**
  *
@@ -288,7 +292,7 @@ export interface AuthenticationExtraAzure {
      * @type {string}
      * @memberof AuthenticationExtraAzure
      */
-    tenant_id?: string;
+    'tenant_id'?: string;
 }
 /**
  *
@@ -301,19 +305,19 @@ export interface AuthenticationsCollection {
      * @type {CollectionMetadata}
      * @memberof AuthenticationsCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof AuthenticationsCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<Authentication>}
      * @memberof AuthenticationsCollection
      */
-    data?: Array<Authentication>;
+    'data'?: Array<Authentication>;
 }
 /**
  *
@@ -326,25 +330,25 @@ export interface CollectionLinks {
      * @type {string}
      * @memberof CollectionLinks
      */
-    first?: string;
+    'first'?: string;
     /**
      *
      * @type {string}
      * @memberof CollectionLinks
      */
-    last?: string;
+    'last'?: string;
     /**
      *
      * @type {string}
      * @memberof CollectionLinks
      */
-    next?: string;
+    'next'?: string;
     /**
      *
      * @type {string}
      * @memberof CollectionLinks
      */
-    prev?: string;
+    'prev'?: string;
 }
 /**
  *
@@ -357,19 +361,19 @@ export interface CollectionMetadata {
      * @type {number}
      * @memberof CollectionMetadata
      */
-    count?: number;
+    'count'?: number;
     /**
      *
      * @type {number}
      * @memberof CollectionMetadata
      */
-    limit?: number;
+    'limit'?: number;
     /**
      *
      * @type {number}
      * @memberof CollectionMetadata
      */
-    offset?: number;
+    'offset'?: number;
 }
 /**
  *
@@ -382,97 +386,97 @@ export interface Endpoint {
      * @type {string}
      * @memberof Endpoint
      */
-    availability_status?: string;
+    'availability_status'?: string;
     /**
      *
      * @type {string}
      * @memberof Endpoint
      */
-    availability_status_error?: string;
+    'availability_status_error'?: string;
     /**
      * Optional X.509 Certificate Authority
      * @type {string}
      * @memberof Endpoint
      */
-    certificate_authority?: string;
+    'certificate_authority'?: string;
     /**
      *
      * @type {string}
      * @memberof Endpoint
      */
-    created_at?: string;
+    'created_at'?: string;
     /**
      *
      * @type {boolean}
      * @memberof Endpoint
      */
-    _default?: boolean;
+    'default'?: boolean;
     /**
      * URI host component
      * @type {string}
      * @memberof Endpoint
      */
-    host?: string;
+    'host'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Endpoint
      */
-    id?: string;
+    'id'?: string;
     /**
      * URI path component
      * @type {string}
      * @memberof Endpoint
      */
-    path?: string;
+    'path'?: string;
     /**
      * URI port component
      * @type {number}
      * @memberof Endpoint
      */
-    port?: number;
+    'port'?: number;
     /**
      * Identifier of a receptor node
      * @type {string}
      * @memberof Endpoint
      */
-    receptor_node?: string;
+    'receptor_node'?: string;
     /**
      *
      * @type {string}
      * @memberof Endpoint
      */
-    role?: string;
+    'role'?: string;
     /**
      * URI scheme component
      * @type {string}
      * @memberof Endpoint
      */
-    scheme?: string;
+    'scheme'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Endpoint
      */
-    source_id?: string;
+    'source_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Endpoint
      */
-    tenant?: string;
+    'tenant'?: string;
     /**
      *
      * @type {string}
      * @memberof Endpoint
      */
-    updated_at?: string;
+    'updated_at'?: string;
     /**
      * Should SSL be verified
      * @type {boolean}
      * @memberof Endpoint
      */
-    verify_ssl?: boolean;
+    'verify_ssl'?: boolean;
 }
 /**
  *
@@ -485,19 +489,19 @@ export interface EndpointsCollection {
      * @type {CollectionMetadata}
      * @memberof EndpointsCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof EndpointsCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<Endpoint>}
      * @memberof EndpointsCollection
      */
-    data?: Array<Endpoint>;
+    'data'?: Array<Endpoint>;
 }
 /**
  *
@@ -507,29 +511,29 @@ export interface EndpointsCollection {
 export interface ErrorNotFound {
     /**
      *
-     * @type {Array<ErrorNotFoundErrors>}
+     * @type {Array<ErrorNotFoundErrorsInner>}
      * @memberof ErrorNotFound
      */
-    errors?: Array<ErrorNotFoundErrors>;
+    'errors'?: Array<ErrorNotFoundErrorsInner>;
 }
 /**
  *
  * @export
- * @interface ErrorNotFoundErrors
+ * @interface ErrorNotFoundErrorsInner
  */
-export interface ErrorNotFoundErrors {
+export interface ErrorNotFoundErrorsInner {
     /**
      *
      * @type {number}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundErrorsInner
      */
-    status?: number;
+    'status'?: number;
     /**
      *
      * @type {string}
-     * @memberof ErrorNotFoundErrors
+     * @memberof ErrorNotFoundErrorsInner
      */
-    detail?: string;
+    'detail'?: string;
 }
 /**
  *
@@ -542,19 +546,19 @@ export interface GraphQLRequest {
      * @type {string}
      * @memberof GraphQLRequest
      */
-    query: string;
+    'query': string;
     /**
      * If the Query contains several named operations, the operationName controls which one should be executed
      * @type {string}
      * @memberof GraphQLRequest
      */
-    operationName?: string;
+    'operationName'?: string;
     /**
      * Optional Query variables
      * @type {object}
      * @memberof GraphQLRequest
      */
-    variables?: object | null;
+    'variables'?: object | null;
 }
 /**
  *
@@ -567,14 +571,20 @@ export interface GraphQLResponse {
      * @type {object}
      * @memberof GraphQLResponse
      */
-    data?: object;
+    'data'?: object;
     /**
      * Errors resulting from the GraphQL query
      * @type {Array<object>}
      * @memberof GraphQLResponse
      */
-    errors?: Array<object>;
+    'errors'?: Array<object>;
 }
+/**
+ * @type ListApplicationTypesSortByParameter
+ * @export
+ */
+export type ListApplicationTypesSortByParameter = Array<string> | string;
+
 /**
  *
  * @export
@@ -586,67 +596,67 @@ export interface Source {
      * @type {string}
      * @memberof Source
      */
-    availability_status?: string;
+    'availability_status'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    created_at?: string;
+    'created_at'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Source
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    imported?: string;
+    'imported'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    source_ref?: string;
+    'source_ref'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof Source
      */
-    source_type_id?: string;
+    'source_type_id'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    tenant?: string;
+    'tenant'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    uid?: string;
+    'uid'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    updated_at?: string;
+    'updated_at'?: string;
     /**
      *
      * @type {string}
      * @memberof Source
      */
-    version?: string;
+    'version'?: string;
 }
 /**
  *
@@ -659,49 +669,49 @@ export interface SourceType {
      * @type {string}
      * @memberof SourceType
      */
-    created_at?: string;
+    'created_at'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    icon_url?: string;
+    'icon_url'?: string;
     /**
      * ID of the resource
      * @type {string}
      * @memberof SourceType
      */
-    id?: string;
+    'id'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    product_name?: string;
+    'product_name'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    schema?: string;
+    'schema'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    updated_at?: string;
+    'updated_at'?: string;
     /**
      *
      * @type {string}
      * @memberof SourceType
      */
-    vendor?: string;
+    'vendor'?: string;
 }
 /**
  *
@@ -714,19 +724,19 @@ export interface SourceTypesCollection {
      * @type {CollectionMetadata}
      * @memberof SourceTypesCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof SourceTypesCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<SourceType>}
      * @memberof SourceTypesCollection
      */
-    data?: Array<SourceType>;
+    'data'?: Array<SourceType>;
 }
 /**
  *
@@ -739,19 +749,19 @@ export interface SourcesCollection {
      * @type {CollectionMetadata}
      * @memberof SourcesCollection
      */
-    meta?: CollectionMetadata;
+    'meta'?: CollectionMetadata;
     /**
      *
      * @type {CollectionLinks}
      * @memberof SourcesCollection
      */
-    links?: CollectionLinks;
+    'links'?: CollectionLinks;
     /**
      *
      * @type {Array<Source>}
      * @memberof SourcesCollection
      */
-    data?: Array<Source>;
+    'data'?: Array<Source>;
 }
 /**
  *
@@ -764,26 +774,26 @@ export interface Tenant {
      * @type {string}
      * @memberof Tenant
      */
-    name?: string;
+    'name'?: string;
     /**
      *
      * @type {string}
      * @memberof Tenant
      */
-    description?: string;
+    'description'?: string;
     /**
      *
      * @type {string}
      * @memberof Tenant
      */
-    external_tenant?: string;
+    'external_tenant'?: string;
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * CheckAvailabilitySourceApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CheckAvailabilitySourceApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Checks Availability of a Source
@@ -792,1693 +802,34 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        checkAvailabilitySource: async (id: string, options: any = {}): Promise<RequestArgs> => {
+        checkAvailabilitySource: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling checkAvailabilitySource.');
-            }
+            assertParamExists('checkAvailabilitySource', 'id', id)
             const localVarPath = `/sources/{id}/check_availability`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
             // authentication UserSecurity required
             // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
+            setBasicAuthToObject(localVarRequestOptions, configuration)
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Application object
-         * @summary Create a new Application
-         * @param {Application} application Application attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApplication: async (application: Application, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'application' is not null or undefined
-            if (application === null || application === undefined) {
-                throw new RequiredError('application','Required parameter application was null or undefined when calling createApplication.');
-            }
-            const localVarPath = `/applications`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof application !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(application !== undefined ? application : {}) : (application || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Authentication object
-         * @summary Create a new Authentication
-         * @param {Authentication} authentication Authentication attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createAuthentication: async (authentication: Authentication, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'authentication' is not null or undefined
-            if (authentication === null || authentication === undefined) {
-                throw new RequiredError('authentication','Required parameter authentication was null or undefined when calling createAuthentication.');
-            }
-            const localVarPath = `/authentications`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof authentication !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(authentication !== undefined ? authentication : {}) : (authentication || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Endpoint object
-         * @summary Create a new Endpoint
-         * @param {Endpoint} endpoint Endpoint attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createEndpoint: async (endpoint: Endpoint, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'endpoint' is not null or undefined
-            if (endpoint === null || endpoint === undefined) {
-                throw new RequiredError('endpoint','Required parameter endpoint was null or undefined when calling createEndpoint.');
-            }
-            const localVarPath = `/endpoints`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof endpoint !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(endpoint !== undefined ? endpoint : {}) : (endpoint || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Creates a Source object
-         * @summary Create a new Source
-         * @param {Source} source Source attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createSource: async (source: Source, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'source' is not null or undefined
-            if (source === null || source === undefined) {
-                throw new RequiredError('source','Required parameter source was null or undefined when calling createSource.');
-            }
-            const localVarPath = `/sources`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof source !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(source !== undefined ? source : {}) : (source || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Application object
-         * @summary Delete an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteApplication: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteApplication.');
-            }
-            const localVarPath = `/applications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Authentication object
-         * @summary Delete an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteAuthentication: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Endpoint object
-         * @summary Delete an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteEndpoint: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Deletes a Source object
-         * @summary Delete an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        deleteSource: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteSource.');
-            }
-            const localVarPath = `/sources/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @summary Return this API document in JSON format
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getDocumentation: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/openapi.json`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for ApplicationType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplicationTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listApplicationTypeSources.');
-            }
-            const localVarPath = `/application_types/{id}/sources`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplicationTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/application_types`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApplications: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/applications`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listAuthentications: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/authentications`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Endpoint
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpointAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listEndpointAuthentications.');
-            }
-            const localVarPath = `/endpoints/{id}/authentications`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listEndpoints: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/endpoints`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceApplicationTypes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplicationTypes.');
-            }
-            const localVarPath = `/sources/{id}/application_types`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceApplications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceApplications.');
-            }
-            const localVarPath = `/sources/{id}/applications`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceAuthentications.');
-            }
-            const localVarPath = `/sources/{id}/authentications`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceEndpoints: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceEndpoints.');
-            }
-            const localVarPath = `/sources/{id}/endpoints`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling listSourceTypeSources.');
-            }
-            const localVarPath = `/source_types/{id}/sources`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSourceTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/source_types`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listSources: async (limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sources`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-            if (limit !== undefined) {
-                localVarQueryParameter['limit'] = limit;
-            }
-
-            if (offset !== undefined) {
-                localVarQueryParameter['offset'] = offset;
-            }
-
-            if (filter !== undefined) {
-                localVarQueryParameter['filter'] = filter;
-            }
-
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Performs a GraphQL Query
-         * @summary Perform a GraphQL Query
-         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        postGraphQL: async (graphQLRequest: GraphQLRequest, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'graphQLRequest' is not null or undefined
-            if (graphQLRequest === null || graphQLRequest === undefined) {
-                throw new RequiredError('graphQLRequest','Required parameter graphQLRequest was null or undefined when calling postGraphQL.');
-            }
-            const localVarPath = `/graphql`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof graphQLRequest !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(graphQLRequest !== undefined ? graphQLRequest : {}) : (graphQLRequest || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Application object
-         * @summary Show an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplication: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showApplication.');
-            }
-            const localVarPath = `/applications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a ApplicationType object
-         * @summary Show an existing ApplicationType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showApplicationType: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showApplicationType.');
-            }
-            const localVarPath = `/application_types/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Authentication object
-         * @summary Show an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showAuthentication: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Endpoint object
-         * @summary Show an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showEndpoint: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a Source object
-         * @summary Show an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showSource: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showSource.');
-            }
-            const localVarPath = `/sources/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Returns a SourceType object
-         * @summary Show an existing SourceType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        showSourceType: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling showSourceType.');
-            }
-            const localVarPath = `/source_types/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Application object
-         * @summary Update an existing Application
-         * @param {string} id ID of the resource
-         * @param {Application} application Application attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateApplication: async (id: string, application: Application, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateApplication.');
-            }
-            // verify required parameter 'application' is not null or undefined
-            if (application === null || application === undefined) {
-                throw new RequiredError('application','Required parameter application was null or undefined when calling updateApplication.');
-            }
-            const localVarPath = `/applications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof application !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(application !== undefined ? application : {}) : (application || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Authentication object
-         * @summary Update an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {Authentication} authentication Authentication attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateAuthentication: async (id: string, authentication: Authentication, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateAuthentication.');
-            }
-            // verify required parameter 'authentication' is not null or undefined
-            if (authentication === null || authentication === undefined) {
-                throw new RequiredError('authentication','Required parameter authentication was null or undefined when calling updateAuthentication.');
-            }
-            const localVarPath = `/authentications/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof authentication !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(authentication !== undefined ? authentication : {}) : (authentication || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Endpoint object
-         * @summary Update an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {Endpoint} endpoint Endpoint attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateEndpoint: async (id: string, endpoint: Endpoint, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateEndpoint.');
-            }
-            // verify required parameter 'endpoint' is not null or undefined
-            if (endpoint === null || endpoint === undefined) {
-                throw new RequiredError('endpoint','Required parameter endpoint was null or undefined when calling updateEndpoint.');
-            }
-            const localVarPath = `/endpoints/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof endpoint !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(endpoint !== undefined ? endpoint : {}) : (endpoint || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a Source object
-         * @summary Update an existing Source
-         * @param {string} id ID of the resource
-         * @param {Source} source Source attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        updateSource: async (id: string, source: Source, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateSource.');
-            }
-            // verify required parameter 'source' is not null or undefined
-            if (source === null || source === undefined) {
-                throw new RequiredError('source','Required parameter source was null or undefined when calling updateSource.');
-            }
-            const localVarPath = `/sources/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication UserSecurity required
-            // http basic authentication required
-            if (configuration && (configuration.username || configuration.password)) {
-                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
-            }
-
-
-
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof source !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(source !== undefined ? source : {}) : (source || "");
-
-            return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
@@ -2486,10 +837,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * CheckAvailabilitySourceApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
+export const CheckAvailabilitySourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CheckAvailabilitySourceApiAxiosParamCreator(configuration)
     return {
         /**
          * Checks Availability of a Source
@@ -2498,532 +850,19 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async checkAvailabilitySource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).checkAvailabilitySource(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Application object
-         * @summary Create a new Application
-         * @param {Application} application Application attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApplication(application: Application, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createApplication(application, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Authentication object
-         * @summary Create a new Authentication
-         * @param {Authentication} authentication Authentication attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createAuthentication(authentication: Authentication, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createAuthentication(authentication, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Endpoint object
-         * @summary Create a new Endpoint
-         * @param {Endpoint} endpoint Endpoint attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createEndpoint(endpoint: Endpoint, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createEndpoint(endpoint, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Creates a Source object
-         * @summary Create a new Source
-         * @param {Source} source Source attributes to create
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createSource(source: Source, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).createSource(source, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Application object
-         * @summary Delete an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deleteApplication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteApplication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Authentication object
-         * @summary Delete an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deleteAuthentication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteAuthentication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Endpoint object
-         * @summary Delete an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deleteEndpoint(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteEndpoint(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Deletes a Source object
-         * @summary Delete an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async deleteSource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).deleteSource(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         *
-         * @summary Return this API document in JSON format
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getDocumentation(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).getDocumentation(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for ApplicationType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplicationTypes(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listApplications(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listAuthentications(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Endpoint
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listEndpoints(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of ApplicationType objects
-         * @summary List ApplicationTypes for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Application objects
-         * @summary List Applications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Authentication objects
-         * @summary List Authentications for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Endpoint objects
-         * @summary List Endpoints for Source
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources for SourceType
-         * @param {string} id ID of the resource
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of SourceType objects
-         * @summary List SourceTypes
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSourceTypes(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns an array of Source objects
-         * @summary List Sources
-         * @param {number} [limit] The numbers of items to return per page.
-         * @param {number} [offset] The number of items to skip before starting to collect the result set.
-         * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).listSources(limit, offset, filter, sortBy, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Performs a GraphQL Query
-         * @summary Perform a GraphQL Query
-         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async postGraphQL(graphQLRequest: GraphQLRequest, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).postGraphQL(graphQLRequest, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Application object
-         * @summary Show an existing Application
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showApplication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showApplication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a ApplicationType object
-         * @summary Show an existing ApplicationType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showApplicationType(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationType>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showApplicationType(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Authentication object
-         * @summary Show an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showAuthentication(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showAuthentication(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Endpoint object
-         * @summary Show an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showEndpoint(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showEndpoint(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a Source object
-         * @summary Show an existing Source
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showSource(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSource(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Returns a SourceType object
-         * @summary Show an existing SourceType
-         * @param {string} id ID of the resource
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async showSourceType(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).showSourceType(id, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Application object
-         * @summary Update an existing Application
-         * @param {string} id ID of the resource
-         * @param {Application} application Application attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updateApplication(id: string, application: Application, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateApplication(id, application, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Authentication object
-         * @summary Update an existing Authentication
-         * @param {string} id ID of the resource
-         * @param {Authentication} authentication Authentication attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updateAuthentication(id: string, authentication: Authentication, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateAuthentication(id, authentication, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Endpoint object
-         * @summary Update an existing Endpoint
-         * @param {string} id ID of the resource
-         * @param {Endpoint} endpoint Endpoint attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updateEndpoint(id: string, endpoint: Endpoint, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateEndpoint(id, endpoint, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * Updates a Source object
-         * @summary Update an existing Source
-         * @param {string} id ID of the resource
-         * @param {Source} source Source attributes to update
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async updateSource(id: string, source: Source, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await DefaultApiAxiosParamCreator(configuration).updateSource(id, source, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
+        async checkAvailabilitySource(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.checkAvailabilitySource(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * DefaultApi - factory interface
+ * CheckAvailabilitySourceApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const CheckAvailabilitySourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CheckAvailabilitySourceApiFp(configuration)
     return {
         /**
          * Checks Availability of a Source
@@ -3033,8 +872,110 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         checkAvailabilitySource(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).checkAvailabilitySource(id, options).then((request) => request(axios, basePath));
+            return localVarFp.checkAvailabilitySource(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * CheckAvailabilitySourceApi - object-oriented interface
+ * @export
+ * @class CheckAvailabilitySourceApi
+ * @extends {BaseAPI}
+ */
+export class CheckAvailabilitySourceApi extends BaseAPI {
+    /**
+     * Checks Availability of a Source
+     * @summary Checks Availability of a Source
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CheckAvailabilitySourceApi
+     */
+    public checkAvailabilitySource(id: string, options?: AxiosRequestConfig) {
+        return CheckAvailabilitySourceApiFp(this.configuration).checkAvailabilitySource(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * CreateApplicationApi - axios parameter creator
+ * @export
+ */
+export const CreateApplicationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Creates a Application object
+         * @summary Create a new Application
+         * @param {Application} application Application attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApplication: async (application: Application, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'application' is not null or undefined
+            assertParamExists('createApplication', 'application', application)
+            const localVarPath = `/applications`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(application, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreateApplicationApi - functional programming interface
+ * @export
+ */
+export const CreateApplicationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateApplicationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Creates a Application object
+         * @summary Create a new Application
+         * @param {Application} application Application attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApplication(application: Application, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApplication(application, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateApplicationApi - factory interface
+ * @export
+ */
+export const CreateApplicationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateApplicationApiFp(configuration)
+    return {
         /**
          * Creates a Application object
          * @summary Create a new Application
@@ -3043,8 +984,110 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createApplication(application: Application, options?: any): AxiosPromise<Application> {
-            return DefaultApiFp(configuration).createApplication(application, options).then((request) => request(axios, basePath));
+            return localVarFp.createApplication(application, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * CreateApplicationApi - object-oriented interface
+ * @export
+ * @class CreateApplicationApi
+ * @extends {BaseAPI}
+ */
+export class CreateApplicationApi extends BaseAPI {
+    /**
+     * Creates a Application object
+     * @summary Create a new Application
+     * @param {Application} application Application attributes to create
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateApplicationApi
+     */
+    public createApplication(application: Application, options?: AxiosRequestConfig) {
+        return CreateApplicationApiFp(this.configuration).createApplication(application, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * CreateAuthenticationApi - axios parameter creator
+ * @export
+ */
+export const CreateAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Creates a Authentication object
+         * @summary Create a new Authentication
+         * @param {Authentication} authentication Authentication attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthentication: async (authentication: Authentication, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'authentication' is not null or undefined
+            assertParamExists('createAuthentication', 'authentication', authentication)
+            const localVarPath = `/authentications`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(authentication, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreateAuthenticationApi - functional programming interface
+ * @export
+ */
+export const CreateAuthenticationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateAuthenticationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Creates a Authentication object
+         * @summary Create a new Authentication
+         * @param {Authentication} authentication Authentication attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createAuthentication(authentication: Authentication, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthentication(authentication, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateAuthenticationApi - factory interface
+ * @export
+ */
+export const CreateAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateAuthenticationApiFp(configuration)
+    return {
         /**
          * Creates a Authentication object
          * @summary Create a new Authentication
@@ -3053,8 +1096,110 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createAuthentication(authentication: Authentication, options?: any): AxiosPromise<Authentication> {
-            return DefaultApiFp(configuration).createAuthentication(authentication, options).then((request) => request(axios, basePath));
+            return localVarFp.createAuthentication(authentication, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * CreateAuthenticationApi - object-oriented interface
+ * @export
+ * @class CreateAuthenticationApi
+ * @extends {BaseAPI}
+ */
+export class CreateAuthenticationApi extends BaseAPI {
+    /**
+     * Creates a Authentication object
+     * @summary Create a new Authentication
+     * @param {Authentication} authentication Authentication attributes to create
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateAuthenticationApi
+     */
+    public createAuthentication(authentication: Authentication, options?: AxiosRequestConfig) {
+        return CreateAuthenticationApiFp(this.configuration).createAuthentication(authentication, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * CreateEndpointApi - axios parameter creator
+ * @export
+ */
+export const CreateEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Creates a Endpoint object
+         * @summary Create a new Endpoint
+         * @param {Endpoint} endpoint Endpoint attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createEndpoint: async (endpoint: Endpoint, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'endpoint' is not null or undefined
+            assertParamExists('createEndpoint', 'endpoint', endpoint)
+            const localVarPath = `/endpoints`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(endpoint, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreateEndpointApi - functional programming interface
+ * @export
+ */
+export const CreateEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Creates a Endpoint object
+         * @summary Create a new Endpoint
+         * @param {Endpoint} endpoint Endpoint attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createEndpoint(endpoint: Endpoint, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createEndpoint(endpoint, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateEndpointApi - factory interface
+ * @export
+ */
+export const CreateEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateEndpointApiFp(configuration)
+    return {
         /**
          * Creates a Endpoint object
          * @summary Create a new Endpoint
@@ -3063,8 +1208,110 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createEndpoint(endpoint: Endpoint, options?: any): AxiosPromise<Endpoint> {
-            return DefaultApiFp(configuration).createEndpoint(endpoint, options).then((request) => request(axios, basePath));
+            return localVarFp.createEndpoint(endpoint, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * CreateEndpointApi - object-oriented interface
+ * @export
+ * @class CreateEndpointApi
+ * @extends {BaseAPI}
+ */
+export class CreateEndpointApi extends BaseAPI {
+    /**
+     * Creates a Endpoint object
+     * @summary Create a new Endpoint
+     * @param {Endpoint} endpoint Endpoint attributes to create
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateEndpointApi
+     */
+    public createEndpoint(endpoint: Endpoint, options?: AxiosRequestConfig) {
+        return CreateEndpointApiFp(this.configuration).createEndpoint(endpoint, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * CreateSourceApi - axios parameter creator
+ * @export
+ */
+export const CreateSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Creates a Source object
+         * @summary Create a new Source
+         * @param {Source} source Source attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createSource: async (source: Source, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'source' is not null or undefined
+            assertParamExists('createSource', 'source', source)
+            const localVarPath = `/sources`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(source, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreateSourceApi - functional programming interface
+ * @export
+ */
+export const CreateSourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateSourceApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Creates a Source object
+         * @summary Create a new Source
+         * @param {Source} source Source attributes to create
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createSource(source: Source, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createSource(source, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateSourceApi - factory interface
+ * @export
+ */
+export const CreateSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateSourceApiFp(configuration)
+    return {
         /**
          * Creates a Source object
          * @summary Create a new Source
@@ -3073,8 +1320,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         createSource(source: Source, options?: any): AxiosPromise<Source> {
-            return DefaultApiFp(configuration).createSource(source, options).then((request) => request(axios, basePath));
+            return localVarFp.createSource(source, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * CreateSourceApi - object-oriented interface
+ * @export
+ * @class CreateSourceApi
+ * @extends {BaseAPI}
+ */
+export class CreateSourceApi extends BaseAPI {
+    /**
+     * Creates a Source object
+     * @summary Create a new Source
+     * @param {Source} source Source attributes to create
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateSourceApi
+     */
+    public createSource(source: Source, options?: AxiosRequestConfig) {
+        return CreateSourceApiFp(this.configuration).createSource(source, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeleteApplicationApi - axios parameter creator
+ * @export
+ */
+export const DeleteApplicationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes a Application object
+         * @summary Delete an existing Application
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteApplication: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteApplication', 'id', id)
+            const localVarPath = `/applications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DeleteApplicationApi - functional programming interface
+ * @export
+ */
+export const DeleteApplicationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeleteApplicationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Deletes a Application object
+         * @summary Delete an existing Application
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteApplication(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteApplication(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeleteApplicationApi - factory interface
+ * @export
+ */
+export const DeleteApplicationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeleteApplicationApiFp(configuration)
+    return {
         /**
          * Deletes a Application object
          * @summary Delete an existing Application
@@ -3083,8 +1430,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteApplication(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteApplication(id, options).then((request) => request(axios, basePath));
+            return localVarFp.deleteApplication(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * DeleteApplicationApi - object-oriented interface
+ * @export
+ * @class DeleteApplicationApi
+ * @extends {BaseAPI}
+ */
+export class DeleteApplicationApi extends BaseAPI {
+    /**
+     * Deletes a Application object
+     * @summary Delete an existing Application
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeleteApplicationApi
+     */
+    public deleteApplication(id: string, options?: AxiosRequestConfig) {
+        return DeleteApplicationApiFp(this.configuration).deleteApplication(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeleteAuthenticationApi - axios parameter creator
+ * @export
+ */
+export const DeleteAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes a Authentication object
+         * @summary Delete an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteAuthentication: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteAuthentication', 'id', id)
+            const localVarPath = `/authentications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DeleteAuthenticationApi - functional programming interface
+ * @export
+ */
+export const DeleteAuthenticationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeleteAuthenticationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Deletes a Authentication object
+         * @summary Delete an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteAuthentication(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteAuthentication(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeleteAuthenticationApi - factory interface
+ * @export
+ */
+export const DeleteAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeleteAuthenticationApiFp(configuration)
+    return {
         /**
          * Deletes a Authentication object
          * @summary Delete an existing Authentication
@@ -3093,8 +1540,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteAuthentication(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteAuthentication(id, options).then((request) => request(axios, basePath));
+            return localVarFp.deleteAuthentication(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * DeleteAuthenticationApi - object-oriented interface
+ * @export
+ * @class DeleteAuthenticationApi
+ * @extends {BaseAPI}
+ */
+export class DeleteAuthenticationApi extends BaseAPI {
+    /**
+     * Deletes a Authentication object
+     * @summary Delete an existing Authentication
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeleteAuthenticationApi
+     */
+    public deleteAuthentication(id: string, options?: AxiosRequestConfig) {
+        return DeleteAuthenticationApiFp(this.configuration).deleteAuthentication(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeleteEndpointApi - axios parameter creator
+ * @export
+ */
+export const DeleteEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes a Endpoint object
+         * @summary Delete an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteEndpoint: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteEndpoint', 'id', id)
+            const localVarPath = `/endpoints/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DeleteEndpointApi - functional programming interface
+ * @export
+ */
+export const DeleteEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeleteEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Deletes a Endpoint object
+         * @summary Delete an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteEndpoint(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteEndpoint(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeleteEndpointApi - factory interface
+ * @export
+ */
+export const DeleteEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeleteEndpointApiFp(configuration)
+    return {
         /**
          * Deletes a Endpoint object
          * @summary Delete an existing Endpoint
@@ -3103,8 +1650,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteEndpoint(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteEndpoint(id, options).then((request) => request(axios, basePath));
+            return localVarFp.deleteEndpoint(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * DeleteEndpointApi - object-oriented interface
+ * @export
+ * @class DeleteEndpointApi
+ * @extends {BaseAPI}
+ */
+export class DeleteEndpointApi extends BaseAPI {
+    /**
+     * Deletes a Endpoint object
+     * @summary Delete an existing Endpoint
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeleteEndpointApi
+     */
+    public deleteEndpoint(id: string, options?: AxiosRequestConfig) {
+        return DeleteEndpointApiFp(this.configuration).deleteEndpoint(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * DeleteSourceApi - axios parameter creator
+ * @export
+ */
+export const DeleteSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Deletes a Source object
+         * @summary Delete an existing Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteSource: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteSource', 'id', id)
+            const localVarPath = `/sources/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DeleteSourceApi - functional programming interface
+ * @export
+ */
+export const DeleteSourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = DeleteSourceApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Deletes a Source object
+         * @summary Delete an existing Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteSource(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteSource(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * DeleteSourceApi - factory interface
+ * @export
+ */
+export const DeleteSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = DeleteSourceApiFp(configuration)
+    return {
         /**
          * Deletes a Source object
          * @summary Delete an existing Source
@@ -3113,8 +1760,103 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         deleteSource(id: string, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).deleteSource(id, options).then((request) => request(axios, basePath));
+            return localVarFp.deleteSource(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * DeleteSourceApi - object-oriented interface
+ * @export
+ * @class DeleteSourceApi
+ * @extends {BaseAPI}
+ */
+export class DeleteSourceApi extends BaseAPI {
+    /**
+     * Deletes a Source object
+     * @summary Delete an existing Source
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DeleteSourceApi
+     */
+    public deleteSource(id: string, options?: AxiosRequestConfig) {
+        return DeleteSourceApiFp(this.configuration).deleteSource(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GetDocumentationApi - axios parameter creator
+ * @export
+ */
+export const GetDocumentationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         *
+         * @summary Return this API document in JSON format
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getDocumentation: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/openapi.json`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GetDocumentationApi - functional programming interface
+ * @export
+ */
+export const GetDocumentationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GetDocumentationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         *
+         * @summary Return this API document in JSON format
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getDocumentation(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getDocumentation(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GetDocumentationApi - factory interface
+ * @export
+ */
+export const GetDocumentationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GetDocumentationApiFp(configuration)
+    return {
         /**
          *
          * @summary Return this API document in JSON format
@@ -3122,8 +1864,38 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         getDocumentation(options?: any): AxiosPromise<object> {
-            return DefaultApiFp(configuration).getDocumentation(options).then((request) => request(axios, basePath));
+            return localVarFp.getDocumentation(options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * GetDocumentationApi - object-oriented interface
+ * @export
+ * @class GetDocumentationApi
+ * @extends {BaseAPI}
+ */
+export class GetDocumentationApi extends BaseAPI {
+    /**
+     *
+     * @summary Return this API document in JSON format
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GetDocumentationApi
+     */
+    public getDocumentation(options?: AxiosRequestConfig) {
+        return GetDocumentationApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListApplicationTypeSourcesApi - axios parameter creator
+ * @export
+ */
+export const ListApplicationTypeSourcesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Source objects
          * @summary List Sources for ApplicationType
@@ -3131,52 +1903,546 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listApplicationTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listApplicationTypeSources', 'id', id)
+            const localVarPath = `/application_types/{id}/sources`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListApplicationTypeSourcesApi - functional programming interface
+ * @export
+ */
+export const ListApplicationTypeSourcesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListApplicationTypeSourcesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources for ApplicationType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApplicationTypeSources(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListApplicationTypeSourcesApi - factory interface
+ * @export
+ */
+export const ListApplicationTypeSourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListApplicationTypeSourcesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources for ApplicationType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<SourcesCollection> {
+            return localVarFp.listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListApplicationTypeSourcesApi - object-oriented interface
+ * @export
+ * @class ListApplicationTypeSourcesApi
+ * @extends {BaseAPI}
+ */
+export class ListApplicationTypeSourcesApi extends BaseAPI {
+    /**
+     * Returns an array of Source objects
+     * @summary List Sources for ApplicationType
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListApplicationTypeSourcesApi
+     */
+    public listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListApplicationTypeSourcesApiFp(this.configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListApplicationTypesApi - axios parameter creator
+ * @export
+ */
+export const ListApplicationTypesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of ApplicationType objects
          * @summary List ApplicationTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationTypesCollection> {
-            return DefaultApiFp(configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listApplicationTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/application_types`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListApplicationTypesApi - functional programming interface
+ * @export
+ */
+export const ListApplicationTypesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListApplicationTypesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApplicationTypes(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListApplicationTypesApi - factory interface
+ * @export
+ */
+export const ListApplicationTypesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListApplicationTypesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<ApplicationTypesCollection> {
+            return localVarFp.listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListApplicationTypesApi - object-oriented interface
+ * @export
+ * @class ListApplicationTypesApi
+ * @extends {BaseAPI}
+ */
+export class ListApplicationTypesApi extends BaseAPI {
+    /**
+     * Returns an array of ApplicationType objects
+     * @summary List ApplicationTypes
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListApplicationTypesApi
+     */
+    public listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListApplicationTypesApiFp(this.configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListApplicationsApi - axios parameter creator
+ * @export
+ */
+export const ListApplicationsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Application objects
          * @summary List Applications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationsCollection> {
-            return DefaultApiFp(configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listApplications: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/applications`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListApplicationsApi - functional programming interface
+ * @export
+ */
+export const ListApplicationsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListApplicationsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Application objects
+         * @summary List Applications
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listApplications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApplications(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListApplicationsApi - factory interface
+ * @export
+ */
+export const ListApplicationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListApplicationsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Application objects
+         * @summary List Applications
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApplications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<ApplicationsCollection> {
+            return localVarFp.listApplications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListApplicationsApi - object-oriented interface
+ * @export
+ * @class ListApplicationsApi
+ * @extends {BaseAPI}
+ */
+export class ListApplicationsApi extends BaseAPI {
+    /**
+     * Returns an array of Application objects
+     * @summary List Applications
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListApplicationsApi
+     */
+    public listApplications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListApplicationsApiFp(this.configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListAuthenticationsApi - axios parameter creator
+ * @export
+ */
+export const ListAuthenticationsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Authentication objects
          * @summary List Authentications
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
-            return DefaultApiFp(configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listAuthentications: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/authentications`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListAuthenticationsApi - functional programming interface
+ * @export
+ */
+export const ListAuthenticationsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListAuthenticationsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAuthentications(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListAuthenticationsApi - factory interface
+ * @export
+ */
+export const ListAuthenticationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListAuthenticationsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<AuthenticationsCollection> {
+            return localVarFp.listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListAuthenticationsApi - object-oriented interface
+ * @export
+ * @class ListAuthenticationsApi
+ * @extends {BaseAPI}
+ */
+export class ListAuthenticationsApi extends BaseAPI {
+    /**
+     * Returns an array of Authentication objects
+     * @summary List Authentications
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListAuthenticationsApi
+     */
+    public listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListAuthenticationsApiFp(this.configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListEndpointAuthenticationsApi - axios parameter creator
+ * @export
+ */
+export const ListEndpointAuthenticationsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Authentication objects
          * @summary List Authentications for Endpoint
@@ -3184,26 +2450,276 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
-            return DefaultApiFp(configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listEndpointAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listEndpointAuthentications', 'id', id)
+            const localVarPath = `/endpoints/{id}/authentications`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListEndpointAuthenticationsApi - functional programming interface
+ * @export
+ */
+export const ListEndpointAuthenticationsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListEndpointAuthenticationsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Endpoint
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listEndpointAuthentications(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListEndpointAuthenticationsApi - factory interface
+ * @export
+ */
+export const ListEndpointAuthenticationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListEndpointAuthenticationsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Endpoint
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<AuthenticationsCollection> {
+            return localVarFp.listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListEndpointAuthenticationsApi - object-oriented interface
+ * @export
+ * @class ListEndpointAuthenticationsApi
+ * @extends {BaseAPI}
+ */
+export class ListEndpointAuthenticationsApi extends BaseAPI {
+    /**
+     * Returns an array of Authentication objects
+     * @summary List Authentications for Endpoint
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListEndpointAuthenticationsApi
+     */
+    public listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListEndpointAuthenticationsApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListEndpointsApi - axios parameter creator
+ * @export
+ */
+export const ListEndpointsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<EndpointsCollection> {
-            return DefaultApiFp(configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listEndpoints: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/endpoints`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListEndpointsApi - functional programming interface
+ * @export
+ */
+export const ListEndpointsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListEndpointsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Endpoint objects
+         * @summary List Endpoints
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listEndpoints(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListEndpointsApi - factory interface
+ * @export
+ */
+export const ListEndpointsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListEndpointsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Endpoint objects
+         * @summary List Endpoints
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<EndpointsCollection> {
+            return localVarFp.listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListEndpointsApi - object-oriented interface
+ * @export
+ * @class ListEndpointsApi
+ * @extends {BaseAPI}
+ */
+export class ListEndpointsApi extends BaseAPI {
+    /**
+     * Returns an array of Endpoint objects
+     * @summary List Endpoints
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListEndpointsApi
+     */
+    public listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListEndpointsApiFp(this.configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceApplicationTypesApi - axios parameter creator
+ * @export
+ */
+export const ListSourceApplicationTypesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of ApplicationType objects
          * @summary List ApplicationTypes for Source
@@ -3211,13 +2727,141 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationTypesCollection> {
-            return DefaultApiFp(configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceApplicationTypes: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listSourceApplicationTypes', 'id', id)
+            const localVarPath = `/sources/{id}/application_types`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceApplicationTypesApi - functional programming interface
+ * @export
+ */
+export const ListSourceApplicationTypesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceApplicationTypesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationTypesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceApplicationTypes(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceApplicationTypesApi - factory interface
+ * @export
+ */
+export const ListSourceApplicationTypesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceApplicationTypesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of ApplicationType objects
+         * @summary List ApplicationTypes for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<ApplicationTypesCollection> {
+            return localVarFp.listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceApplicationTypesApi - object-oriented interface
+ * @export
+ * @class ListSourceApplicationTypesApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceApplicationTypesApi extends BaseAPI {
+    /**
+     * Returns an array of ApplicationType objects
+     * @summary List ApplicationTypes for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceApplicationTypesApi
+     */
+    public listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceApplicationTypesApiFp(this.configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceApplicationsApi - axios parameter creator
+ * @export
+ */
+export const ListSourceApplicationsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Application objects
          * @summary List Applications for Source
@@ -3225,13 +2869,141 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<ApplicationsCollection> {
-            return DefaultApiFp(configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceApplications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listSourceApplications', 'id', id)
+            const localVarPath = `/sources/{id}/applications`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceApplicationsApi - functional programming interface
+ * @export
+ */
+export const ListSourceApplicationsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceApplicationsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Application objects
+         * @summary List Applications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceApplications(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceApplicationsApi - factory interface
+ * @export
+ */
+export const ListSourceApplicationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceApplicationsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Application objects
+         * @summary List Applications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<ApplicationsCollection> {
+            return localVarFp.listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceApplicationsApi - object-oriented interface
+ * @export
+ * @class ListSourceApplicationsApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceApplicationsApi extends BaseAPI {
+    /**
+     * Returns an array of Application objects
+     * @summary List Applications for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceApplicationsApi
+     */
+    public listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceApplicationsApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceAuthenticationsApi - axios parameter creator
+ * @export
+ */
+export const ListSourceAuthenticationsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Authentication objects
          * @summary List Authentications for Source
@@ -3239,13 +3011,141 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<AuthenticationsCollection> {
-            return DefaultApiFp(configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceAuthentications: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listSourceAuthentications', 'id', id)
+            const localVarPath = `/sources/{id}/authentications`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceAuthenticationsApi - functional programming interface
+ * @export
+ */
+export const ListSourceAuthenticationsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceAuthenticationsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthenticationsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceAuthentications(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceAuthenticationsApi - factory interface
+ * @export
+ */
+export const ListSourceAuthenticationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceAuthenticationsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Authentication objects
+         * @summary List Authentications for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<AuthenticationsCollection> {
+            return localVarFp.listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceAuthenticationsApi - object-oriented interface
+ * @export
+ * @class ListSourceAuthenticationsApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceAuthenticationsApi extends BaseAPI {
+    /**
+     * Returns an array of Authentication objects
+     * @summary List Authentications for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceAuthenticationsApi
+     */
+    public listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceAuthenticationsApiFp(this.configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceEndpointsApi - axios parameter creator
+ * @export
+ */
+export const ListSourceEndpointsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Endpoint objects
          * @summary List Endpoints for Source
@@ -3253,13 +3153,141 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<EndpointsCollection> {
-            return DefaultApiFp(configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceEndpoints: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listSourceEndpoints', 'id', id)
+            const localVarPath = `/sources/{id}/endpoints`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceEndpointsApi - functional programming interface
+ * @export
+ */
+export const ListSourceEndpointsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceEndpointsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Endpoint objects
+         * @summary List Endpoints for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EndpointsCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceEndpoints(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceEndpointsApi - factory interface
+ * @export
+ */
+export const ListSourceEndpointsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceEndpointsApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Endpoint objects
+         * @summary List Endpoints for Source
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<EndpointsCollection> {
+            return localVarFp.listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceEndpointsApi - object-oriented interface
+ * @export
+ * @class ListSourceEndpointsApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceEndpointsApi extends BaseAPI {
+    /**
+     * Returns an array of Endpoint objects
+     * @summary List Endpoints for Source
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceEndpointsApi
+     */
+    public listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceEndpointsApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceTypeSourcesApi - axios parameter creator
+ * @export
+ */
+export const ListSourceTypeSourcesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Source objects
          * @summary List Sources for SourceType
@@ -3267,39 +3295,482 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceTypeSources: async (id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('listSourceTypeSources', 'id', id)
+            const localVarPath = `/source_types/{id}/sources`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceTypeSourcesApi - functional programming interface
+ * @export
+ */
+export const ListSourceTypeSourcesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceTypeSourcesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources for SourceType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceTypeSources(id, limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceTypeSourcesApi - factory interface
+ * @export
+ */
+export const ListSourceTypeSourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceTypeSourcesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources for SourceType
+         * @param {string} id ID of the resource
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<SourcesCollection> {
+            return localVarFp.listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceTypeSourcesApi - object-oriented interface
+ * @export
+ * @class ListSourceTypeSourcesApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceTypeSourcesApi extends BaseAPI {
+    /**
+     * Returns an array of Source objects
+     * @summary List Sources for SourceType
+     * @param {string} id ID of the resource
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceTypeSourcesApi
+     */
+    public listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceTypeSourcesApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourceTypesApi - axios parameter creator
+ * @export
+ */
+export const ListSourceTypesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of SourceType objects
          * @summary List SourceTypes
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourceTypesCollection> {
-            return DefaultApiFp(configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSourceTypes: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/source_types`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourceTypesApi - functional programming interface
+ * @export
+ */
+export const ListSourceTypesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourceTypesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of SourceType objects
+         * @summary List SourceTypes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceTypesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSourceTypes(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourceTypesApi - factory interface
+ * @export
+ */
+export const ListSourceTypesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourceTypesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of SourceType objects
+         * @summary List SourceTypes
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<SourceTypesCollection> {
+            return localVarFp.listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourceTypesApi - object-oriented interface
+ * @export
+ * @class ListSourceTypesApi
+ * @extends {BaseAPI}
+ */
+export class ListSourceTypesApi extends BaseAPI {
+    /**
+     * Returns an array of SourceType objects
+     * @summary List SourceTypes
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourceTypesApi
+     */
+    public listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourceTypesApiFp(this.configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ListSourcesApi - axios parameter creator
+ * @export
+ */
+export const ListSourcesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * Returns an array of Source objects
          * @summary List Sources
          * @param {number} [limit] The numbers of items to return per page.
          * @param {number} [offset] The number of items to skip before starting to collect the result set.
          * @param {object} [filter] Filter for querying collections.
-         * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any): AxiosPromise<SourcesCollection> {
-            return DefaultApiFp(configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        listSources: async (limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/sources`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if (filter !== undefined) {
+                localVarQueryParameter['filter'] = filter;
+            }
+
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
         },
+    }
+};
+
+/**
+ * ListSourcesApi - functional programming interface
+ * @export
+ */
+export const ListSourcesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ListSourcesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listSources(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourcesCollection>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listSources(limit, offset, filter, sortBy, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ListSourcesApi - factory interface
+ * @export
+ */
+export const ListSourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ListSourcesApiFp(configuration)
+    return {
+        /**
+         * Returns an array of Source objects
+         * @summary List Sources
+         * @param {number} [limit] The numbers of items to return per page.
+         * @param {number} [offset] The number of items to skip before starting to collect the result set.
+         * @param {object} [filter] Filter for querying collections.
+         * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listSources(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: any): AxiosPromise<SourcesCollection> {
+            return localVarFp.listSources(limit, offset, filter, sortBy, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ListSourcesApi - object-oriented interface
+ * @export
+ * @class ListSourcesApi
+ * @extends {BaseAPI}
+ */
+export class ListSourcesApi extends BaseAPI {
+    /**
+     * Returns an array of Source objects
+     * @summary List Sources
+     * @param {number} [limit] The numbers of items to return per page.
+     * @param {number} [offset] The number of items to skip before starting to collect the result set.
+     * @param {object} [filter] Filter for querying collections.
+     * @param {ListApplicationTypesSortByParameter} [sortBy] The list of attribute and order to sort the result set by.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ListSourcesApi
+     */
+    public listSources(limit?: number, offset?: number, filter?: object, sortBy?: ListApplicationTypesSortByParameter, options?: AxiosRequestConfig) {
+        return ListSourcesApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * PostGraphQLApi - axios parameter creator
+ * @export
+ */
+export const PostGraphQLApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postGraphQL: async (graphQLRequest: GraphQLRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'graphQLRequest' is not null or undefined
+            assertParamExists('postGraphQL', 'graphQLRequest', graphQLRequest)
+            const localVarPath = `/graphql`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(graphQLRequest, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PostGraphQLApi - functional programming interface
+ * @export
+ */
+export const PostGraphQLApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PostGraphQLApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Performs a GraphQL Query
+         * @summary Perform a GraphQL Query
+         * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postGraphQL(graphQLRequest: GraphQLRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GraphQLResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postGraphQL(graphQLRequest, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PostGraphQLApi - factory interface
+ * @export
+ */
+export const PostGraphQLApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PostGraphQLApiFp(configuration)
+    return {
         /**
          * Performs a GraphQL Query
          * @summary Perform a GraphQL Query
@@ -3308,8 +3779,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         postGraphQL(graphQLRequest: GraphQLRequest, options?: any): AxiosPromise<GraphQLResponse> {
-            return DefaultApiFp(configuration).postGraphQL(graphQLRequest, options).then((request) => request(axios, basePath));
+            return localVarFp.postGraphQL(graphQLRequest, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * PostGraphQLApi - object-oriented interface
+ * @export
+ * @class PostGraphQLApi
+ * @extends {BaseAPI}
+ */
+export class PostGraphQLApi extends BaseAPI {
+    /**
+     * Performs a GraphQL Query
+     * @summary Perform a GraphQL Query
+     * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PostGraphQLApi
+     */
+    public postGraphQL(graphQLRequest: GraphQLRequest, options?: AxiosRequestConfig) {
+        return PostGraphQLApiFp(this.configuration).postGraphQL(graphQLRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowApplicationApi - axios parameter creator
+ * @export
+ */
+export const ShowApplicationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Application object
+         * @summary Show an existing Application
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showApplication: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showApplication', 'id', id)
+            const localVarPath = `/applications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowApplicationApi - functional programming interface
+ * @export
+ */
+export const ShowApplicationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowApplicationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Application object
+         * @summary Show an existing Application
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showApplication(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Application>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showApplication(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowApplicationApi - factory interface
+ * @export
+ */
+export const ShowApplicationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowApplicationApiFp(configuration)
+    return {
         /**
          * Returns a Application object
          * @summary Show an existing Application
@@ -3318,8 +3889,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showApplication(id: string, options?: any): AxiosPromise<Application> {
-            return DefaultApiFp(configuration).showApplication(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showApplication(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowApplicationApi - object-oriented interface
+ * @export
+ * @class ShowApplicationApi
+ * @extends {BaseAPI}
+ */
+export class ShowApplicationApi extends BaseAPI {
+    /**
+     * Returns a Application object
+     * @summary Show an existing Application
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowApplicationApi
+     */
+    public showApplication(id: string, options?: AxiosRequestConfig) {
+        return ShowApplicationApiFp(this.configuration).showApplication(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowApplicationTypeApi - axios parameter creator
+ * @export
+ */
+export const ShowApplicationTypeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a ApplicationType object
+         * @summary Show an existing ApplicationType
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showApplicationType: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showApplicationType', 'id', id)
+            const localVarPath = `/application_types/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowApplicationTypeApi - functional programming interface
+ * @export
+ */
+export const ShowApplicationTypeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowApplicationTypeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a ApplicationType object
+         * @summary Show an existing ApplicationType
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showApplicationType(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApplicationType>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showApplicationType(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowApplicationTypeApi - factory interface
+ * @export
+ */
+export const ShowApplicationTypeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowApplicationTypeApiFp(configuration)
+    return {
         /**
          * Returns a ApplicationType object
          * @summary Show an existing ApplicationType
@@ -3328,8 +3999,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showApplicationType(id: string, options?: any): AxiosPromise<ApplicationType> {
-            return DefaultApiFp(configuration).showApplicationType(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showApplicationType(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowApplicationTypeApi - object-oriented interface
+ * @export
+ * @class ShowApplicationTypeApi
+ * @extends {BaseAPI}
+ */
+export class ShowApplicationTypeApi extends BaseAPI {
+    /**
+     * Returns a ApplicationType object
+     * @summary Show an existing ApplicationType
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowApplicationTypeApi
+     */
+    public showApplicationType(id: string, options?: AxiosRequestConfig) {
+        return ShowApplicationTypeApiFp(this.configuration).showApplicationType(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowAuthenticationApi - axios parameter creator
+ * @export
+ */
+export const ShowAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Authentication object
+         * @summary Show an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showAuthentication: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showAuthentication', 'id', id)
+            const localVarPath = `/authentications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowAuthenticationApi - functional programming interface
+ * @export
+ */
+export const ShowAuthenticationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowAuthenticationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Authentication object
+         * @summary Show an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showAuthentication(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Authentication>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showAuthentication(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowAuthenticationApi - factory interface
+ * @export
+ */
+export const ShowAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowAuthenticationApiFp(configuration)
+    return {
         /**
          * Returns a Authentication object
          * @summary Show an existing Authentication
@@ -3338,8 +4109,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showAuthentication(id: string, options?: any): AxiosPromise<Authentication> {
-            return DefaultApiFp(configuration).showAuthentication(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showAuthentication(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowAuthenticationApi - object-oriented interface
+ * @export
+ * @class ShowAuthenticationApi
+ * @extends {BaseAPI}
+ */
+export class ShowAuthenticationApi extends BaseAPI {
+    /**
+     * Returns a Authentication object
+     * @summary Show an existing Authentication
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowAuthenticationApi
+     */
+    public showAuthentication(id: string, options?: AxiosRequestConfig) {
+        return ShowAuthenticationApiFp(this.configuration).showAuthentication(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowEndpointApi - axios parameter creator
+ * @export
+ */
+export const ShowEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Endpoint object
+         * @summary Show an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showEndpoint: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showEndpoint', 'id', id)
+            const localVarPath = `/endpoints/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowEndpointApi - functional programming interface
+ * @export
+ */
+export const ShowEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Endpoint object
+         * @summary Show an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showEndpoint(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Endpoint>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showEndpoint(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowEndpointApi - factory interface
+ * @export
+ */
+export const ShowEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowEndpointApiFp(configuration)
+    return {
         /**
          * Returns a Endpoint object
          * @summary Show an existing Endpoint
@@ -3348,8 +4219,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showEndpoint(id: string, options?: any): AxiosPromise<Endpoint> {
-            return DefaultApiFp(configuration).showEndpoint(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showEndpoint(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowEndpointApi - object-oriented interface
+ * @export
+ * @class ShowEndpointApi
+ * @extends {BaseAPI}
+ */
+export class ShowEndpointApi extends BaseAPI {
+    /**
+     * Returns a Endpoint object
+     * @summary Show an existing Endpoint
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowEndpointApi
+     */
+    public showEndpoint(id: string, options?: AxiosRequestConfig) {
+        return ShowEndpointApiFp(this.configuration).showEndpoint(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowSourceApi - axios parameter creator
+ * @export
+ */
+export const ShowSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a Source object
+         * @summary Show an existing Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSource: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showSource', 'id', id)
+            const localVarPath = `/sources/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowSourceApi - functional programming interface
+ * @export
+ */
+export const ShowSourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowSourceApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a Source object
+         * @summary Show an existing Source
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showSource(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Source>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showSource(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowSourceApi - factory interface
+ * @export
+ */
+export const ShowSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowSourceApiFp(configuration)
+    return {
         /**
          * Returns a Source object
          * @summary Show an existing Source
@@ -3358,8 +4329,108 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSource(id: string, options?: any): AxiosPromise<Source> {
-            return DefaultApiFp(configuration).showSource(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showSource(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowSourceApi - object-oriented interface
+ * @export
+ * @class ShowSourceApi
+ * @extends {BaseAPI}
+ */
+export class ShowSourceApi extends BaseAPI {
+    /**
+     * Returns a Source object
+     * @summary Show an existing Source
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowSourceApi
+     */
+    public showSource(id: string, options?: AxiosRequestConfig) {
+        return ShowSourceApiFp(this.configuration).showSource(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * ShowSourceTypeApi - axios parameter creator
+ * @export
+ */
+export const ShowSourceTypeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns a SourceType object
+         * @summary Show an existing SourceType
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        showSourceType: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('showSourceType', 'id', id)
+            const localVarPath = `/source_types/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShowSourceTypeApi - functional programming interface
+ * @export
+ */
+export const ShowSourceTypeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ShowSourceTypeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns a SourceType object
+         * @summary Show an existing SourceType
+         * @param {string} id ID of the resource
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async showSourceType(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SourceType>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.showSourceType(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ShowSourceTypeApi - factory interface
+ * @export
+ */
+export const ShowSourceTypeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ShowSourceTypeApiFp(configuration)
+    return {
         /**
          * Returns a SourceType object
          * @summary Show an existing SourceType
@@ -3368,8 +4439,115 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         showSourceType(id: string, options?: any): AxiosPromise<SourceType> {
-            return DefaultApiFp(configuration).showSourceType(id, options).then((request) => request(axios, basePath));
+            return localVarFp.showSourceType(id, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * ShowSourceTypeApi - object-oriented interface
+ * @export
+ * @class ShowSourceTypeApi
+ * @extends {BaseAPI}
+ */
+export class ShowSourceTypeApi extends BaseAPI {
+    /**
+     * Returns a SourceType object
+     * @summary Show an existing SourceType
+     * @param {string} id ID of the resource
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShowSourceTypeApi
+     */
+    public showSourceType(id: string, options?: AxiosRequestConfig) {
+        return ShowSourceTypeApiFp(this.configuration).showSourceType(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * UpdateApplicationApi - axios parameter creator
+ * @export
+ */
+export const UpdateApplicationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates a Application object
+         * @summary Update an existing Application
+         * @param {string} id ID of the resource
+         * @param {Application} application Application attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateApplication: async (id: string, application: Application, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('updateApplication', 'id', id)
+            // verify required parameter 'application' is not null or undefined
+            assertParamExists('updateApplication', 'application', application)
+            const localVarPath = `/applications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(application, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdateApplicationApi - functional programming interface
+ * @export
+ */
+export const UpdateApplicationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdateApplicationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates a Application object
+         * @summary Update an existing Application
+         * @param {string} id ID of the resource
+         * @param {Application} application Application attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updateApplication(id: string, application: Application, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateApplication(id, application, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdateApplicationApi - factory interface
+ * @export
+ */
+export const UpdateApplicationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdateApplicationApiFp(configuration)
+    return {
         /**
          * Updates a Application object
          * @summary Update an existing Application
@@ -3379,8 +4557,116 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateApplication(id: string, application: Application, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateApplication(id, application, options).then((request) => request(axios, basePath));
+            return localVarFp.updateApplication(id, application, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * UpdateApplicationApi - object-oriented interface
+ * @export
+ * @class UpdateApplicationApi
+ * @extends {BaseAPI}
+ */
+export class UpdateApplicationApi extends BaseAPI {
+    /**
+     * Updates a Application object
+     * @summary Update an existing Application
+     * @param {string} id ID of the resource
+     * @param {Application} application Application attributes to update
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UpdateApplicationApi
+     */
+    public updateApplication(id: string, application: Application, options?: AxiosRequestConfig) {
+        return UpdateApplicationApiFp(this.configuration).updateApplication(id, application, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * UpdateAuthenticationApi - axios parameter creator
+ * @export
+ */
+export const UpdateAuthenticationApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates a Authentication object
+         * @summary Update an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {Authentication} authentication Authentication attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateAuthentication: async (id: string, authentication: Authentication, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('updateAuthentication', 'id', id)
+            // verify required parameter 'authentication' is not null or undefined
+            assertParamExists('updateAuthentication', 'authentication', authentication)
+            const localVarPath = `/authentications/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(authentication, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdateAuthenticationApi - functional programming interface
+ * @export
+ */
+export const UpdateAuthenticationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdateAuthenticationApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates a Authentication object
+         * @summary Update an existing Authentication
+         * @param {string} id ID of the resource
+         * @param {Authentication} authentication Authentication attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updateAuthentication(id: string, authentication: Authentication, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateAuthentication(id, authentication, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdateAuthenticationApi - factory interface
+ * @export
+ */
+export const UpdateAuthenticationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdateAuthenticationApiFp(configuration)
+    return {
         /**
          * Updates a Authentication object
          * @summary Update an existing Authentication
@@ -3390,8 +4676,116 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateAuthentication(id: string, authentication: Authentication, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateAuthentication(id, authentication, options).then((request) => request(axios, basePath));
+            return localVarFp.updateAuthentication(id, authentication, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * UpdateAuthenticationApi - object-oriented interface
+ * @export
+ * @class UpdateAuthenticationApi
+ * @extends {BaseAPI}
+ */
+export class UpdateAuthenticationApi extends BaseAPI {
+    /**
+     * Updates a Authentication object
+     * @summary Update an existing Authentication
+     * @param {string} id ID of the resource
+     * @param {Authentication} authentication Authentication attributes to update
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UpdateAuthenticationApi
+     */
+    public updateAuthentication(id: string, authentication: Authentication, options?: AxiosRequestConfig) {
+        return UpdateAuthenticationApiFp(this.configuration).updateAuthentication(id, authentication, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * UpdateEndpointApi - axios parameter creator
+ * @export
+ */
+export const UpdateEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates a Endpoint object
+         * @summary Update an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {Endpoint} endpoint Endpoint attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateEndpoint: async (id: string, endpoint: Endpoint, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('updateEndpoint', 'id', id)
+            // verify required parameter 'endpoint' is not null or undefined
+            assertParamExists('updateEndpoint', 'endpoint', endpoint)
+            const localVarPath = `/endpoints/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(endpoint, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdateEndpointApi - functional programming interface
+ * @export
+ */
+export const UpdateEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdateEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates a Endpoint object
+         * @summary Update an existing Endpoint
+         * @param {string} id ID of the resource
+         * @param {Endpoint} endpoint Endpoint attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updateEndpoint(id: string, endpoint: Endpoint, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateEndpoint(id, endpoint, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdateEndpointApi - factory interface
+ * @export
+ */
+export const UpdateEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdateEndpointApiFp(configuration)
+    return {
         /**
          * Updates a Endpoint object
          * @summary Update an existing Endpoint
@@ -3401,8 +4795,116 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateEndpoint(id: string, endpoint: Endpoint, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateEndpoint(id, endpoint, options).then((request) => request(axios, basePath));
+            return localVarFp.updateEndpoint(id, endpoint, options).then((request) => request(axios, basePath));
         },
+    };
+};
+
+/**
+ * UpdateEndpointApi - object-oriented interface
+ * @export
+ * @class UpdateEndpointApi
+ * @extends {BaseAPI}
+ */
+export class UpdateEndpointApi extends BaseAPI {
+    /**
+     * Updates a Endpoint object
+     * @summary Update an existing Endpoint
+     * @param {string} id ID of the resource
+     * @param {Endpoint} endpoint Endpoint attributes to update
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof UpdateEndpointApi
+     */
+    public updateEndpoint(id: string, endpoint: Endpoint, options?: AxiosRequestConfig) {
+        return UpdateEndpointApiFp(this.configuration).updateEndpoint(id, endpoint, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * UpdateSourceApi - axios parameter creator
+ * @export
+ */
+export const UpdateSourceApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates a Source object
+         * @summary Update an existing Source
+         * @param {string} id ID of the resource
+         * @param {Source} source Source attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateSource: async (id: string, source: Source, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('updateSource', 'id', id)
+            // verify required parameter 'source' is not null or undefined
+            assertParamExists('updateSource', 'source', source)
+            const localVarPath = `/sources/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserSecurity required
+            // http basic authentication required
+            setBasicAuthToObject(localVarRequestOptions, configuration)
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(source, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * UpdateSourceApi - functional programming interface
+ * @export
+ */
+export const UpdateSourceApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = UpdateSourceApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates a Source object
+         * @summary Update an existing Source
+         * @param {string} id ID of the resource
+         * @param {Source} source Source attributes to update
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async updateSource(id: string, source: Source, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.updateSource(id, source, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * UpdateSourceApi - factory interface
+ * @export
+ */
+export const UpdateSourceApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = UpdateSourceApiFp(configuration)
+    return {
         /**
          * Updates a Source object
          * @summary Update an existing Source
@@ -3412,462 +4914,18 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @throws {RequiredError}
          */
         updateSource(id: string, source: Source, options?: any): AxiosPromise<void> {
-            return DefaultApiFp(configuration).updateSource(id, source, options).then((request) => request(axios, basePath));
+            return localVarFp.updateSource(id, source, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * UpdateSourceApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class UpdateSourceApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
-    /**
-     * Checks Availability of a Source
-     * @summary Checks Availability of a Source
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public checkAvailabilitySource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).checkAvailabilitySource(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Creates a Application object
-     * @summary Create a new Application
-     * @param {Application} application Application attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createApplication(application: Application, options?: any) {
-        return DefaultApiFp(this.configuration).createApplication(application, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Creates a Authentication object
-     * @summary Create a new Authentication
-     * @param {Authentication} authentication Authentication attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createAuthentication(authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).createAuthentication(authentication, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Creates a Endpoint object
-     * @summary Create a new Endpoint
-     * @param {Endpoint} endpoint Endpoint attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createEndpoint(endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).createEndpoint(endpoint, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Creates a Source object
-     * @summary Create a new Source
-     * @param {Source} source Source attributes to create
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public createSource(source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).createSource(source, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Deletes a Application object
-     * @summary Delete an existing Application
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteApplication(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Deletes a Authentication object
-     * @summary Delete an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteAuthentication(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Deletes a Endpoint object
-     * @summary Delete an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteEndpoint(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Deletes a Source object
-     * @summary Delete an existing Source
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public deleteSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).deleteSource(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     *
-     * @summary Return this API document in JSON format
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public getDocumentation(options?: any) {
-        return DefaultApiFp(this.configuration).getDocumentation(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Source objects
-     * @summary List Sources for ApplicationType
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listApplicationTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of ApplicationType objects
-     * @summary List ApplicationTypes
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listApplicationTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplicationTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Application objects
-     * @summary List Applications
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listApplications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listApplications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listAuthentications(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listAuthentications(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications for Endpoint
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listEndpointAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpointAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Endpoint objects
-     * @summary List Endpoints
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listEndpoints(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listEndpoints(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of ApplicationType objects
-     * @summary List ApplicationTypes for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceApplicationTypes(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplicationTypes(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Application objects
-     * @summary List Applications for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceApplications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceApplications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Authentication objects
-     * @summary List Authentications for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceAuthentications(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceAuthentications(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Endpoint objects
-     * @summary List Endpoints for Source
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceEndpoints(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceEndpoints(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Source objects
-     * @summary List Sources for SourceType
-     * @param {string} id ID of the resource
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceTypeSources(id: string, limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypeSources(id, limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of SourceType objects
-     * @summary List SourceTypes
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSourceTypes(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSourceTypes(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns an array of Source objects
-     * @summary List Sources
-     * @param {number} [limit] The numbers of items to return per page.
-     * @param {number} [offset] The number of items to skip before starting to collect the result set.
-     * @param {object} [filter] Filter for querying collections.
-     * @param {string | Array<string>} [sortBy] The list of attribute and order to sort the result set by.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public listSources(limit?: number, offset?: number, filter?: object, sortBy?: string | Array<string>, options?: any) {
-        return DefaultApiFp(this.configuration).listSources(limit, offset, filter, sortBy, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Performs a GraphQL Query
-     * @summary Perform a GraphQL Query
-     * @param {GraphQLRequest} graphQLRequest GraphQL Query Request
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public postGraphQL(graphQLRequest: GraphQLRequest, options?: any) {
-        return DefaultApiFp(this.configuration).postGraphQL(graphQLRequest, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Application object
-     * @summary Show an existing Application
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showApplication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplication(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a ApplicationType object
-     * @summary Show an existing ApplicationType
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showApplicationType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showApplicationType(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Authentication object
-     * @summary Show an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showAuthentication(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showAuthentication(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Endpoint object
-     * @summary Show an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showEndpoint(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showEndpoint(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a Source object
-     * @summary Show an existing Source
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showSource(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSource(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Returns a SourceType object
-     * @summary Show an existing SourceType
-     * @param {string} id ID of the resource
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public showSourceType(id: string, options?: any) {
-        return DefaultApiFp(this.configuration).showSourceType(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Updates a Application object
-     * @summary Update an existing Application
-     * @param {string} id ID of the resource
-     * @param {Application} application Application attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateApplication(id: string, application: Application, options?: any) {
-        return DefaultApiFp(this.configuration).updateApplication(id, application, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Updates a Authentication object
-     * @summary Update an existing Authentication
-     * @param {string} id ID of the resource
-     * @param {Authentication} authentication Authentication attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateAuthentication(id: string, authentication: Authentication, options?: any) {
-        return DefaultApiFp(this.configuration).updateAuthentication(id, authentication, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * Updates a Endpoint object
-     * @summary Update an existing Endpoint
-     * @param {string} id ID of the resource
-     * @param {Endpoint} endpoint Endpoint attributes to update
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public updateEndpoint(id: string, endpoint: Endpoint, options?: any) {
-        return DefaultApiFp(this.configuration).updateEndpoint(id, endpoint, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class UpdateSourceApi extends BaseAPI {
     /**
      * Updates a Source object
      * @summary Update an existing Source
@@ -3875,12 +4933,12 @@ export class DefaultApi extends BaseAPI {
      * @param {Source} source Source attributes to update
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof UpdateSourceApi
      */
-    public updateSource(id: string, source: Source, options?: any) {
-        return DefaultApiFp(this.configuration).updateSource(id, source, options).then((request) => request(this.axios, this.basePath));
+    public updateSource(id: string, source: Source, options?: AxiosRequestConfig) {
+        return UpdateSourceApiFp(this.configuration).updateSource(id, source, options).then((request) => request(this.axios, this.basePath));
     }
-
 }
+
 
 
