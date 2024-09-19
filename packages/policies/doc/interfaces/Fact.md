@@ -26,7 +26,7 @@ Fact
 
 #### Defined in
 
-[api.ts:35](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L35)
+types/index.ts:12
 
 ___
 
@@ -40,7 +40,7 @@ Fact
 
 #### Defined in
 
-[api.ts:41](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L41)
+types/index.ts:18
 
 ___
 
@@ -54,4 +54,4 @@ Fact
 
 #### Defined in
 
-[api.ts:47](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L47)
+types/index.ts:24

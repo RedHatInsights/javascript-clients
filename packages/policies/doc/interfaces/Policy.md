@@ -34,7 +34,7 @@ Policy
 
 #### Defined in
 
-[api.ts:207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L207)
+types/index.ts:186
 
 ___
 
@@ -50,7 +50,7 @@ Policy
 
 #### Defined in
 
-[api.ts:201](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L201)
+types/index.ts:180
 
 ___
 
@@ -66,7 +66,7 @@ Policy
 
 #### Defined in
 
-[api.ts:219](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L219)
+types/index.ts:198
 
 ___
 
@@ -82,7 +82,7 @@ Policy
 
 #### Defined in
 
-[api.ts:189](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L189)
+types/index.ts:168
 
 ___
 
@@ -96,7 +96,7 @@ Policy
 
 #### Defined in
 
-[api.ts:177](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L177)
+types/index.ts:156
 
 ___
 
@@ -110,7 +110,7 @@ Policy
 
 #### Defined in
 
-[api.ts:195](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L195)
+types/index.ts:174
 
 ___
 
@@ -124,7 +124,7 @@ Policy
 
 #### Defined in
 
-[api.ts:225](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L225)
+types/index.ts:204
 
 ___
 
@@ -140,7 +140,7 @@ Policy
 
 #### Defined in
 
-[api.ts:213](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L213)
+types/index.ts:192
 
 ___
 
@@ -156,4 +156,4 @@ Policy
 
 #### Defined in
 
-[api.ts:183](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L183)
+types/index.ts:162

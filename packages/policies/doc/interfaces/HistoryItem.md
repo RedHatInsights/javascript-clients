@@ -30,7 +30,7 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:76](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L76)
+types/index.ts:55
 
 ___
 
@@ -46,7 +46,7 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:88](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L88)
+types/index.ts:67
 
 ___
 
@@ -62,4 +62,4 @@ HistoryItem
 
 #### Defined in
 
-[api.ts:82](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L82)
+types/index.ts:61

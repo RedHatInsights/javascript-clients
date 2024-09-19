@@ -24,4 +24,4 @@ Meta
 
 #### Defined in
 
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L101)
+types/index.ts:80

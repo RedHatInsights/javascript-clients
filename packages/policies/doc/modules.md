@@ -8,16 +8,8 @@
 
 - [FactType](enums/FactType.md)
 
-### Classes
-
-- [BasePathFillerServiceApi](classes/BasePathFillerServiceApi.md)
-- [Configuration](classes/Configuration.md)
-- [FactServiceApi](classes/FactServiceApi.md)
-- [PolicyCrudServiceApi](classes/PolicyCrudServiceApi.md)
-
 ### Interfaces
 
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [Fact](interfaces/Fact.md)
 - [HistoryItem](interfaces/HistoryItem.md)
 - [Meta](interfaces/Meta.md)
@@ -29,303 +21,381 @@
 
 ### Functions
 
-- [BasePathFillerServiceApiAxiosParamCreator](modules.md#basepathfillerserviceapiaxiosparamcreator)
-- [BasePathFillerServiceApiFactory](modules.md#basepathfillerserviceapifactory)
-- [BasePathFillerServiceApiFp](modules.md#basepathfillerserviceapifp)
-- [FactServiceApiAxiosParamCreator](modules.md#factserviceapiaxiosparamcreator)
-- [FactServiceApiFactory](modules.md#factserviceapifactory)
-- [FactServiceApiFp](modules.md#factserviceapifp)
-- [PolicyCrudServiceApiAxiosParamCreator](modules.md#policycrudserviceapiaxiosparamcreator)
-- [PolicyCrudServiceApiFactory](modules.md#policycrudserviceapifactory)
-- [PolicyCrudServiceApiFp](modules.md#policycrudserviceapifp)
+- [deletePoliciesById](modules.md#deletepoliciesbyid)
+- [deletePoliciesIds](modules.md#deletepoliciesids)
+- [get](modules.md#get)
+- [getFacts](modules.md#getfacts)
+- [getPolicies](modules.md#getpolicies)
+- [getPoliciesById](modules.md#getpoliciesbyid)
+- [getPoliciesByIdHistoryTrigger](modules.md#getpoliciesbyidhistorytrigger)
+- [getPoliciesIds](modules.md#getpoliciesids)
+- [postPolicies](modules.md#postpolicies)
+- [postPoliciesByIdEnabled](modules.md#postpoliciesbyidenabled)
+- [postPoliciesIdsEnabled](modules.md#postpoliciesidsenabled)
+- [postPoliciesValidate](modules.md#postpoliciesvalidate)
+- [postPoliciesValidateName](modules.md#postpoliciesvalidatename)
+- [putPoliciesByPolicyId](modules.md#putpoliciesbypolicyid)
 
 ## Functions
 
-### BasePathFillerServiceApiAxiosParamCreator
+### deletePoliciesById
 
-▸ **BasePathFillerServiceApiAxiosParamCreator**(`configuration?`): `Object`
-
-BasePathFillerServiceApi - axios parameter creator
+▸ **deletePoliciesById**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `get` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:251](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L251)
-
-___
-
-### BasePathFillerServiceApiFactory
-
-▸ **BasePathFillerServiceApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-BasePathFillerServiceApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`DeletePoliciesByIdParams`] \| [`string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `get` | (`options?`: `any`) => `AxiosPromise`\<`void`\> |
+**`Summary`**
 
-**`Export`**
+Delete a single policy for a customer by its id
 
-#### Defined in
-
-[api.ts:310](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L310)
-
-___
-
-### BasePathFillerServiceApiFp
-
-▸ **BasePathFillerServiceApiFp**(`configuration?`): `Object`
-
-BasePathFillerServiceApi - functional programming interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `get` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-
-**`Export`**
+**`Throws`**
 
 #### Defined in
 
-[api.ts:290](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L290)
+DeletePoliciesById/index.ts:34
 
 ___
 
-### FactServiceApiAxiosParamCreator
+### deletePoliciesIds
 
-▸ **FactServiceApiAxiosParamCreator**(`configuration?`): `Object`
-
-FactServiceApi - axios parameter creator
+▸ **deletePoliciesIds**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `getFacts` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:349](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L349)
-
-___
-
-### FactServiceApiFactory
-
-▸ **FactServiceApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-FactServiceApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`DeletePoliciesIdsParams`] \| [`string`[], `AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `getFacts` | (`options?`: `any`) => `AxiosPromise`\<[`Fact`](interfaces/Fact.md)[]\> |
+**`Summary`**
 
-**`Export`**
+Delete policies for a customer by the ids passed in the body. Result will be a list of deleted UUIDs
 
-#### Defined in
-
-[api.ts:408](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L408)
-
-___
-
-### FactServiceApiFp
-
-▸ **FactServiceApiFp**(`configuration?`): `Object`
-
-FactServiceApi - functional programming interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `getFacts` | (`options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Fact`](interfaces/Fact.md)[]\>\> |
-
-**`Export`**
+**`Throws`**
 
 #### Defined in
 
-[api.ts:388](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L388)
+DeletePoliciesIds/index.ts:34
 
 ___
 
-### PolicyCrudServiceApiAxiosParamCreator
+### get
 
-▸ **PolicyCrudServiceApiAxiosParamCreator**(`configuration?`): `Object`
-
-PolicyCrudServiceApi - axios parameter creator
+▸ **get**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `getPolicies` | (`offset?`: `number`, `limit?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `offset?`: `number`, `limit?`: `number`, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `getPoliciesIds` | (`filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:447](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L447)
-
-___
-
-### PolicyCrudServiceApiFactory
-
-▸ **PolicyCrudServiceApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-PolicyCrudServiceApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`GetParams`] \| [`AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `deletePoliciesById` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
-| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `any`) => `AxiosPromise`\<`string`[]\> |
-| `getPolicies` | (`offset?`: `number`, `limit?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `any`) => `AxiosPromise`\<[`PagedResponseOfPolicy`](interfaces/PagedResponseOfPolicy.md)\> |
-| `getPoliciesById` | (`id`: `string`, `options?`: `any`) => `AxiosPromise`\<[`Policy`](interfaces/Policy.md)\> |
-| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `offset?`: `number`, `limit?`: `number`, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `options?`: `any`) => `AxiosPromise`\<[`PagedResponseOfHistoryItem`](interfaces/PagedResponseOfHistoryItem.md)\> |
-| `getPoliciesIds` | (`filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `any`) => `AxiosPromise`\<`string`[]\> |
-| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `any`) => `AxiosPromise`\<`void`\> |
-| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `any`) => `AxiosPromise`\<`void`\> |
-| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `any`) => `AxiosPromise`\<`string`[]\> |
-| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `any`) => `AxiosPromise`\<[`Msg`](interfaces/Msg.md)\> |
-| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `any`) => `AxiosPromise`\<[`Msg`](interfaces/Msg.md)\> |
-| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `any`) => `AxiosPromise`\<[`Policy`](interfaces/Policy.md)\> |
+**`Summary`**
 
-**`Export`**
+Just a filler to have a defined return code for the base path
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:1165](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L1165)
+Get/index.ts:28
 
 ___
 
-### PolicyCrudServiceApiFp
+### getFacts
 
-▸ **PolicyCrudServiceApiFp**(`configuration?`): `Object`
-
-PolicyCrudServiceApi - functional programming interface
+▸ **getFacts**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`AxiosRequestConfig`\<`any`\>] \| [`GetFactsParams`] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `deletePoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-| `deletePoliciesIds` | (`requestBody?`: `string`[], `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`string`[]\>\> |
-| `getPolicies` | (`offset?`: `number`, `limit?`: `number`, `sortColumn?`: ``"name"`` \| ``"description"`` \| ``"is_enabled"`` \| ``"mtime"`` \| ``"last_triggered"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PagedResponseOfPolicy`](interfaces/PagedResponseOfPolicy.md)\>\> |
-| `getPoliciesById` | (`id`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Policy`](interfaces/Policy.md)\>\> |
-| `getPoliciesByIdHistoryTrigger` | (`id`: `string`, `offset?`: `number`, `limit?`: `number`, `filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `filterId?`: `string`, `filteropId?`: ``"equal"`` \| ``"like"`` \| ``"not_equal"``, `sortColumn?`: ``"hostName"`` \| ``"ctime"``, `sortDirection?`: ``"asc"`` \| ``"desc"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PagedResponseOfHistoryItem`](interfaces/PagedResponseOfHistoryItem.md)\>\> |
-| `getPoliciesIds` | (`filterName?`: `string`, `filteropName?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterDescription?`: `string`, `filteropDescription?`: ``"equal"`` \| ``"like"`` \| ``"ilike"`` \| ``"not_equal"``, `filterIsEnabled?`: ``"true"`` \| ``"false"``, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`string`[]\>\> |
-| `postPolicies` | (`alsoStore?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-| `postPoliciesByIdEnabled` | (`id`: `string`, `enabled?`: `boolean`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`void`\>\> |
-| `postPoliciesIdsEnabled` | (`enabled?`: `boolean`, `requestBody?`: `string`[], `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<`string`[]\>\> |
-| `postPoliciesValidate` | (`policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Msg`](interfaces/Msg.md)\>\> |
-| `postPoliciesValidateName` | (`body`: `string`, `id?`: `string`, `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Msg`](interfaces/Msg.md)\>\> |
-| `putPoliciesByPolicyId` | (`policyId`: `string`, `dry?`: `boolean`, `policy?`: [`Policy`](interfaces/Policy.md), `options?`: `AxiosRequestConfig`\<`any`\>) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Policy`](interfaces/Policy.md)\>\> |
+**`Summary`**
 
-**`Export`**
+Retrieve a list of fact (keys) along with their data types
+
+**`Throws`**
 
 #### Defined in
 
-[api.ts:997](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/policies/api.ts#L997)
+GetFacts/index.ts:28
+
+___
+
+### getPolicies
+
+▸ **getPolicies**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`GetPoliciesParams`] \| [`number`, `number`, `GetPoliciesSortColumnEnum`, `GetPoliciesSortDirectionEnum`, `string`, `GetPoliciesFilteropNameEnum`, `string`, `GetPoliciesFilteropDescriptionEnum`, `GetPoliciesFilterIsEnabledEnum`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Return all policies for a given account
+
+**`Throws`**
+
+#### Defined in
+
+GetPolicies/index.ts:134
+
+___
+
+### getPoliciesById
+
+▸ **getPoliciesById**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`string`, `AxiosRequestConfig`\<`any`\>] \| [`GetPoliciesByIdParams`] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Retrieve a single policy for a customer by its id
+
+**`Throws`**
+
+#### Defined in
+
+GetPoliciesById/index.ts:34
+
+___
+
+### getPoliciesByIdHistoryTrigger
+
+▸ **getPoliciesByIdHistoryTrigger**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`GetPoliciesByIdHistoryTriggerParams`] \| [`string`, `number`, `number`, `string`, `GetPoliciesByIdHistoryTriggerFilteropNameEnum`, `string`, `GetPoliciesByIdHistoryTriggerFilteropIdEnum`, `GetPoliciesByIdHistoryTriggerSortColumnEnum`, `GetPoliciesByIdHistoryTriggerSortDirectionEnum`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Retrieve the trigger history of a single policy
+
+**`Throws`**
+
+#### Defined in
+
+GetPoliciesByIdHistoryTrigger/index.ts:120
+
+___
+
+### getPoliciesIds
+
+▸ **getPoliciesIds**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`GetPoliciesIdsParams`] \| [`string`, `GetPoliciesIdsFilteropNameEnum`, `string`, `GetPoliciesIdsFilteropDescriptionEnum`, `GetPoliciesIdsFilterIsEnabledEnum`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Return all policy ids for a given account after applying the filters
+
+**`Throws`**
+
+#### Defined in
+
+GetPoliciesIds/index.ts:89
+
+___
+
+### postPolicies
+
+▸ **postPolicies**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PostPoliciesParams`] \| [`boolean`, [`Policy`](interfaces/Policy.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Validate (and possibly persist) a passed policy for the given account
+
+**`Throws`**
+
+#### Defined in
+
+PostPolicies/index.ts:40
+
+___
+
+### postPoliciesByIdEnabled
+
+▸ **postPoliciesByIdEnabled**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PostPoliciesByIdEnabledParams`] \| [`string`, `boolean`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Enable/disable a policy
+
+**`Throws`**
+
+#### Defined in
+
+PostPoliciesByIdEnabled/index.ts:40
+
+___
+
+### postPoliciesIdsEnabled
+
+▸ **postPoliciesIdsEnabled**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PostPoliciesIdsEnabledParams`] \| [`boolean`, `string`[], `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Enable/disable policies identified by list of uuid in body
+
+**`Throws`**
+
+#### Defined in
+
+PostPoliciesIdsEnabled/index.ts:40
+
+___
+
+### postPoliciesValidate
+
+▸ **postPoliciesValidate**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PostPoliciesValidateParams`] \| [[`Policy`](interfaces/Policy.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Validates a Policy condition
+
+**`Throws`**
+
+#### Defined in
+
+PostPoliciesValidate/index.ts:34
+
+___
+
+### postPoliciesValidateName
+
+▸ **postPoliciesValidateName**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PostPoliciesValidateNameParams`] \| [`string`, `string`, `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Validates the Policy.name and verifies if it is unique.
+
+**`Throws`**
+
+#### Defined in
+
+PostPoliciesValidateName/index.ts:40
+
+___
+
+### putPoliciesByPolicyId
+
+▸ **putPoliciesByPolicyId**(`...config`): `Promise`\<`RequestArgs`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...config` | [`PutPoliciesByPolicyIdParams`] \| [`string`, `boolean`, [`Policy`](interfaces/Policy.md), `AxiosRequestConfig`\<`any`\>] | with all available params. |
+
+#### Returns
+
+`Promise`\<`RequestArgs`\>
+
+**`Summary`**
+
+Update a single policy for a customer by its id
+
+**`Throws`**
+
+#### Defined in
+
+PutPoliciesByPolicyId/index.ts:46
