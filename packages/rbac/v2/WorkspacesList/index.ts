@@ -8,37 +8,30 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, ProblemsWorkspaceProblem400WorkspaceNotEmpty, WorkspacesList401Response, WorkspacesList500Response } from '../types';
+import type { ProblemsProblem403, WorkspacesList401Response, WorkspacesList500Response, WorkspacesWorkspaceListResponse } from '../types';
 
 
-export type WorkspacesDeleteParams = {
-  /**
-  * Unique identification
-  * @type { string }
-  * @memberof WorkspacesDeleteApi
-  */
-  uuid: string,
+export type WorkspacesListParams = {
   options?: AxiosRequestConfig
 }
 
-const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unknown[]): params is [WorkspacesDeleteParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
+  return params.length === 1
 }
 /**
-* Delete a workspace
-* @summary Delete the workspace
-* @param {WorkspacesDeleteParams} config with all available params.
+* List workspaces in a tenant
+* @summary List workspaces in a tenant
+* @param {WorkspacesListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
-    const { uuid, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}/`
-        .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { options = {} } = params;
+    const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'DELETE' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -53,4 +46,4 @@ export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDelete
     };
 }
 
-export default workspacesDeleteParamCreator;
+export default workspacesListParamCreator;

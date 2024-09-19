@@ -4,16 +4,13 @@ AddPrincipalToGroup/index.ts
 AddRoleToGroup/index.ts
 CreateCrossAccountRequests/index.ts
 CreateGroup/index.ts
-CreatePolicies/index.ts
 CreateRole/index.ts
 DeleteGroup/index.ts
-DeletePolicy/index.ts
 DeletePrincipalFromGroup/index.ts
 DeleteRole/index.ts
 DeleteRoleFromGroup/index.ts
 GetCrossAccountRequest/index.ts
 GetGroup/index.ts
-GetPolicy/index.ts
 GetPrincipalAccess/index.ts
 GetPrincipalsFromGroup/index.ts
 GetRole/index.ts
@@ -23,7 +20,6 @@ ListCrossAccountRequests/index.ts
 ListGroups/index.ts
 ListPermissionOptions/index.ts
 ListPermissions/index.ts
-ListPolicies/index.ts
 ListPrincipals/index.ts
 ListRoles/index.ts
 ListRolesForGroup/index.ts
@@ -31,7 +27,6 @@ PatchCrossAccountRequest/index.ts
 PatchRole/index.ts
 PutCrossAccountRequest/index.ts
 UpdateGroup/index.ts
-UpdatePolicy/index.ts
 UpdateRole/index.ts
 api.ts
 base.ts

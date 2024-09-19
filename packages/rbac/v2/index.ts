@@ -10,6 +10,10 @@ export { default as workspacesDelete } from './WorkspacesDelete'
 
 
 // end of operations block
+export { default as workspacesList } from './WorkspacesList'
+
+
+// end of operations block
 export { default as workspacesPatch } from './WorkspacesPatch'
 
 
