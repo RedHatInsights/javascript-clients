@@ -4,104 +4,36 @@
 
 ## Table of contents
 
-### Classes
-
-- [Configuration](classes/Configuration.md)
-- [ServicesApi](classes/ServicesApi.md)
-
 ### Interfaces
 
-- [ConfigurationParameters](interfaces/ConfigurationParameters.md)
 - [ServiceDetails](interfaces/ServiceDetails.md)
 
 ### Functions
 
-- [ServicesApiAxiosParamCreator](modules.md#servicesapiaxiosparamcreator)
-- [ServicesApiFactory](modules.md#servicesapifactory)
-- [ServicesApiFp](modules.md#servicesapifp)
+- [servicesGet](modules.md#servicesget)
 
 ## Functions
 
-### ServicesApiAxiosParamCreator
+### servicesGet
 
-▸ **ServicesApiAxiosParamCreator**(`configuration?`): `Object`
-
-ServicesApi - axios parameter creator
+▸ **servicesGet**(`...config`): `Promise`\<`RequestArgs`\>
 
 #### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
-
-**`Export`**
-
-#### Defined in
-
-[api.ts:40](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L40)
-
-___
-
-### ServicesApiFactory
-
-▸ **ServicesApiFactory**(`configuration?`, `basePath?`, `axios?`): `Object`
-
-ServicesApi - factory interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-| `basePath?` | `string` |
-| `axios?` | `AxiosInstance` |
+| `...config` | [`ServicesGetParams`] \| [`AxiosRequestConfig`\<`any`\>] | with all available params. |
 
 #### Returns
 
-`Object`
+`Promise`\<`RequestArgs`\>
 
-| Name | Type |
-| :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `AxiosPromise`\<\{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\> |
+**`Summary`**
 
-**`Export`**
+get a list of services a user is entitled to
 
-#### Defined in
-
-[api.ts:101](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L101)
-
-___
-
-### ServicesApiFp
-
-▸ **ServicesApiFp**(`configuration?`): `Object`
-
-ServicesApi - functional programming interface
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `configuration?` | [`Configuration`](classes/Configuration.md) |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `servicesGet` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<\{ `[key: string]`: [`ServiceDetails`](interfaces/ServiceDetails.md);  }\>\> |
-
-**`Export`**
+**`Throws`**
 
 #### Defined in
 
-[api.ts:79](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/entitlements/api.ts#L79)
+ServicesGet/index.ts:28

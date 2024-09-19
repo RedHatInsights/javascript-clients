@@ -1,4 +1,5 @@
-// tslint:disable
+/* tslint:disable */
+/* eslint-disable */
 /**
  * Entitlements
  * Service for determining subscriptions in cloud management [cloud.redhat.com](http://cloud.redhat.com/api/v1/entitlements)
@@ -12,12 +13,15 @@
  */
 
 
-import * as globalImportUrl from 'url';
-import { Configuration } from './configuration';
-import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
+import type { Configuration } from './configuration';
+import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
+import type { RequestArgs } from './base';
+// @ts-ignore
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
  *
@@ -30,14 +34,14 @@ export interface ServiceDetails {
      * @type {boolean}
      * @memberof ServiceDetails
      */
-    isEntitled?: boolean;
+    'isEntitled'?: boolean;
 }
 
 /**
- * ServicesApi - axios parameter creator
+ * ServicesGetApi - axios parameter creator
  * @export
  */
-export const ServicesApiAxiosParamCreator = function (configuration?: Configuration) {
+export const ServicesGetApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          *
@@ -45,27 +49,27 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        servicesGet: async (options: any = {}): Promise<RequestArgs> => {
+        servicesGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/services`;
-            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
+
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
 
 
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
-                url: globalImportUrl.format(localVarUrlObj),
+                url: toPathString(localVarUrlObj),
                 options: localVarRequestOptions,
             };
         },
@@ -73,10 +77,11 @@ export const ServicesApiAxiosParamCreator = function (configuration?: Configurat
 };
 
 /**
- * ServicesApi - functional programming interface
+ * ServicesGetApi - functional programming interface
  * @export
  */
-export const ServicesApiFp = function(configuration?: Configuration) {
+export const ServicesGetApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ServicesGetApiAxiosParamCreator(configuration)
     return {
         /**
          *
@@ -84,21 +89,19 @@ export const ServicesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async servicesGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: ServiceDetails; }>> {
-            const localVarAxiosArgs = await ServicesApiAxiosParamCreator(configuration).servicesGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
+        async servicesGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: ServiceDetails; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.servicesGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * ServicesApi - factory interface
+ * ServicesGetApi - factory interface
  * @export
  */
-export const ServicesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const ServicesGetApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ServicesGetApiFp(configuration)
     return {
         /**
          *
@@ -107,29 +110,29 @@ export const ServicesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         servicesGet(options?: any): AxiosPromise<{ [key: string]: ServiceDetails; }> {
-            return ServicesApiFp(configuration).servicesGet(options).then((request) => request(axios, basePath));
+            return localVarFp.servicesGet(options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * ServicesApi - object-oriented interface
+ * ServicesGetApi - object-oriented interface
  * @export
- * @class ServicesApi
+ * @class ServicesGetApi
  * @extends {BaseAPI}
  */
-export class ServicesApi extends BaseAPI {
+export class ServicesGetApi extends BaseAPI {
     /**
      *
      * @summary get a list of services a user is entitled to
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServicesApi
+     * @memberof ServicesGetApi
      */
-    public servicesGet(options?: any) {
-        return ServicesApiFp(this.configuration).servicesGet(options).then((request) => request(this.axios, this.basePath));
+    public servicesGet(options?: AxiosRequestConfig) {
+        return ServicesGetApiFp(this.configuration).servicesGet(options).then((request) => request(this.axios, this.basePath));
     }
-
 }
+
 
 
