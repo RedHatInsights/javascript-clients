@@ -295,6 +295,18 @@ export interface WorkspacesBasicWorkspace {
  */
 export interface WorkspacesCreateWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
@@ -306,6 +318,18 @@ export interface WorkspacesCreateWorkspaceResponse {
      * @memberof WorkspacesCreateWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -496,6 +520,18 @@ export interface WorkspacesPatchWorkspaceRequest {
  */
 export interface WorkspacesPatchWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
@@ -507,6 +543,61 @@ export interface WorkspacesPatchWorkspaceResponse {
      * @memberof WorkspacesPatchWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesRead200Response
+ */
+export interface WorkspacesRead200Response {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'parent_id'?: string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'modified': string;
 }
 /**
  *
@@ -515,6 +606,18 @@ export interface WorkspacesPatchWorkspaceResponse {
  */
 export interface WorkspacesReadWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
@@ -526,6 +629,67 @@ export interface WorkspacesReadWorkspaceResponse {
      * @memberof WorkspacesReadWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesReadWorkspaceWithAncestryResponse
+ */
+export interface WorkspacesReadWorkspaceWithAncestryResponse {
+    /**
+     *
+     * @type {Array<WorkspacesWorkspaceAncestor>}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'ancestry': Array<WorkspacesWorkspaceAncestor>;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'parent_id'?: string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -588,7 +752,13 @@ export interface WorkspacesUpdateWorkspaceRequest {
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceRequest
      */
-    'description'?: string;
+    'description': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceRequest
+     */
+    'parent_id': string;
 }
 /**
  *
@@ -596,6 +766,18 @@ export interface WorkspacesUpdateWorkspaceRequest {
  * @interface WorkspacesUpdateWorkspaceResponse
  */
 export interface WorkspacesUpdateWorkspaceResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'parent_id'?: string;
     /**
      * Workspace A
      * @type {string}
@@ -608,6 +790,18 @@ export interface WorkspacesUpdateWorkspaceResponse {
      * @memberof WorkspacesUpdateWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -651,6 +845,31 @@ export interface WorkspacesWorkspace {
      * @memberof WorkspacesWorkspace
      */
     'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesWorkspaceAncestor
+ */
+export interface WorkspacesWorkspaceAncestor {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'parent_id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'name': string;
 }
 /**
  *
@@ -901,10 +1120,12 @@ export const WorkspacesListApiAxiosParamCreator = function (configuration?: Conf
         /**
          * List workspaces in a tenant
          * @summary List workspaces in a tenant
+         * @param {number} [limit]
+         * @param {number} [offset]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        workspacesList: async (limit?: number, offset?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/workspaces/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -916,6 +1137,14 @@ export const WorkspacesListApiAxiosParamCreator = function (configuration?: Conf
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
 
 
 
@@ -941,11 +1170,13 @@ export const WorkspacesListApiFp = function(configuration?: Configuration) {
         /**
          * List workspaces in a tenant
          * @summary List workspaces in a tenant
+         * @param {number} [limit]
+         * @param {number} [offset]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesWorkspaceListResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesList(options);
+        async workspacesList(limit?: number, offset?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesWorkspaceListResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesList(limit, offset, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -961,11 +1192,13 @@ export const WorkspacesListApiFactory = function (configuration?: Configuration,
         /**
          * List workspaces in a tenant
          * @summary List workspaces in a tenant
+         * @param {number} [limit]
+         * @param {number} [offset]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesList(options?: any): AxiosPromise<WorkspacesWorkspaceListResponse> {
-            return localVarFp.workspacesList(options).then((request) => request(axios, basePath));
+        workspacesList(limit?: number, offset?: number, options?: any): AxiosPromise<WorkspacesWorkspaceListResponse> {
+            return localVarFp.workspacesList(limit, offset, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -980,12 +1213,14 @@ export class WorkspacesListApi extends BaseAPI {
     /**
      * List workspaces in a tenant
      * @summary List workspaces in a tenant
+     * @param {number} [limit]
+     * @param {number} [offset]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesListApi
      */
-    public workspacesList(options?: AxiosRequestConfig) {
-        return WorkspacesListApiFp(this.configuration).workspacesList(options).then((request) => request(this.axios, this.basePath));
+    public workspacesList(limit?: number, offset?: number, options?: AxiosRequestConfig) {
+        return WorkspacesListApiFp(this.configuration).workspacesList(limit, offset, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1112,10 +1347,11 @@ export const WorkspacesReadApiAxiosParamCreator = function (configuration?: Conf
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
          * @param {string} uuid Unique identification
+         * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesRead: async (uuid: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        workspacesRead: async (uuid: string, includeAncestry?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'uuid' is not null or undefined
             assertParamExists('workspacesRead', 'uuid', uuid)
             const localVarPath = `/workspaces/{uuid}/`
@@ -1130,6 +1366,10 @@ export const WorkspacesReadApiAxiosParamCreator = function (configuration?: Conf
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (includeAncestry !== undefined) {
+                localVarQueryParameter['include_ancestry'] = includeAncestry;
+            }
 
 
 
@@ -1156,11 +1396,12 @@ export const WorkspacesReadApiFp = function(configuration?: Configuration) {
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
          * @param {string} uuid Unique identification
+         * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesRead(uuid: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesReadWorkspaceResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesRead(uuid, options);
+        async workspacesRead(uuid: string, includeAncestry?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesRead200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesRead(uuid, includeAncestry, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1177,11 +1418,12 @@ export const WorkspacesReadApiFactory = function (configuration?: Configuration,
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
          * @param {string} uuid Unique identification
+         * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesRead(uuid: string, options?: any): AxiosPromise<WorkspacesReadWorkspaceResponse> {
-            return localVarFp.workspacesRead(uuid, options).then((request) => request(axios, basePath));
+        workspacesRead(uuid: string, includeAncestry?: boolean, options?: any): AxiosPromise<WorkspacesRead200Response> {
+            return localVarFp.workspacesRead(uuid, includeAncestry, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1197,12 +1439,13 @@ export class WorkspacesReadApi extends BaseAPI {
      * Get a workspace in tenant
      * @summary Get a workspace in tenant
      * @param {string} uuid Unique identification
+     * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesReadApi
      */
-    public workspacesRead(uuid: string, options?: AxiosRequestConfig) {
-        return WorkspacesReadApiFp(this.configuration).workspacesRead(uuid, options).then((request) => request(this.axios, this.basePath));
+    public workspacesRead(uuid: string, includeAncestry?: boolean, options?: AxiosRequestConfig) {
+        return WorkspacesReadApiFp(this.configuration).workspacesRead(uuid, includeAncestry, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

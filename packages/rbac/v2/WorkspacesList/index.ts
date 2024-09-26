@@ -12,11 +12,23 @@ import type { ProblemsProblem403, WorkspacesList401Response, WorkspacesList500Re
 
 
 export type WorkspacesListParams = {
+  /**
+  *
+  * @type { number }
+  * @memberof WorkspacesListApi
+  */
+  limit?: number,
+  /**
+  *
+  * @type { number }
+  * @memberof WorkspacesListApi
+  */
+  offset?: number,
   options?: AxiosRequestConfig
 }
 
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
-  return params.length === 1
+  return params.length === 1 && true && true
 }
 /**
 * List workspaces in a tenant
@@ -25,15 +37,23 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { options = {} } = params;
+export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (limit !== undefined) {
+        localVarQueryParameter['limit'] = limit;
+    }
+
+    if (offset !== undefined) {
+        localVarQueryParameter['offset'] = offset;
+    }
 
 
 

@@ -270,6 +270,18 @@ export interface WorkspacesBasicWorkspace {
  */
 export interface WorkspacesCreateWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
@@ -281,6 +293,18 @@ export interface WorkspacesCreateWorkspaceResponse {
      * @memberof WorkspacesCreateWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -471,6 +495,18 @@ export interface WorkspacesPatchWorkspaceRequest {
  */
 export interface WorkspacesPatchWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
@@ -482,6 +518,61 @@ export interface WorkspacesPatchWorkspaceResponse {
      * @memberof WorkspacesPatchWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesRead200Response
+ */
+export interface WorkspacesRead200Response {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'parent_id'?: string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesRead200Response
+     */
+    'modified': string;
 }
 /**
  *
@@ -490,6 +581,18 @@ export interface WorkspacesPatchWorkspaceResponse {
  */
 export interface WorkspacesReadWorkspaceResponse {
     /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'parent_id'?: string;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
@@ -501,6 +604,67 @@ export interface WorkspacesReadWorkspaceResponse {
      * @memberof WorkspacesReadWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesReadWorkspaceWithAncestryResponse
+ */
+export interface WorkspacesReadWorkspaceWithAncestryResponse {
+    /**
+     *
+     * @type {Array<WorkspacesWorkspaceAncestor>}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'ancestry': Array<WorkspacesWorkspaceAncestor>;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'parent_id'?: string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -563,7 +727,13 @@ export interface WorkspacesUpdateWorkspaceRequest {
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceRequest
      */
-    'description'?: string;
+    'description': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceRequest
+     */
+    'parent_id': string;
 }
 /**
  *
@@ -571,6 +741,18 @@ export interface WorkspacesUpdateWorkspaceRequest {
  * @interface WorkspacesUpdateWorkspaceResponse
  */
 export interface WorkspacesUpdateWorkspaceResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'parent_id'?: string;
     /**
      * Workspace A
      * @type {string}
@@ -583,6 +765,18 @@ export interface WorkspacesUpdateWorkspaceResponse {
      * @memberof WorkspacesUpdateWorkspaceResponse
      */
     'description'?: string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'created': string;
+    /**
+     * 2019-01-21T17:32:28Z
+     * @type {string}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'modified': string;
 }
 /**
  *
@@ -626,6 +820,31 @@ export interface WorkspacesWorkspace {
      * @memberof WorkspacesWorkspace
      */
     'modified': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesWorkspaceAncestor
+ */
+export interface WorkspacesWorkspaceAncestor {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'uuid': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'parent_id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesWorkspaceAncestor
+     */
+    'name': string;
 }
 /**
  *

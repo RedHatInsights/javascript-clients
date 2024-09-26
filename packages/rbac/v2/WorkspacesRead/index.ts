@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, ProblemsProblem404, WorkspacesList401Response, WorkspacesList500Response, WorkspacesReadWorkspaceResponse } from '../types';
+import type { ProblemsProblem403, ProblemsProblem404, WorkspacesList401Response, WorkspacesList500Response, WorkspacesRead200Response } from '../types';
 
 
 export type WorkspacesReadParams = {
@@ -18,11 +18,17 @@ export type WorkspacesReadParams = {
   * @memberof WorkspacesReadApi
   */
   uuid: string,
+  /**
+  * When true, the response will include the ancestry of the workspace.
+  * @type { boolean }
+  * @memberof WorkspacesReadApi
+  */
+  includeAncestry?: boolean,
   options?: AxiosRequestConfig
 }
 
 const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]): params is [WorkspacesReadParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }
 /**
 * Get a workspace in tenant
@@ -31,9 +37,9 @@ const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesReadObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
-    const { uuid, options = {} } = params;
+export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesReadObjectParams(config) ? config[0] : ['uuid', 'includeAncestry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
+    const { uuid, includeAncestry, options = {} } = params;
     const localVarPath = `/workspaces/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -41,6 +47,10 @@ export const workspacesReadParamCreator = async (...config: ([WorkspacesReadPara
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
+
+    if (includeAncestry !== undefined) {
+        localVarQueryParameter['include_ancestry'] = includeAncestry;
+    }
 
 
 
