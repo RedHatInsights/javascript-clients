@@ -48,7 +48,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2066](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2066)
+[api.ts:2066](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2066)
 
 ___
 
@@ -64,7 +64,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1994](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1994)
+[api.ts:1994](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1994)
 
 ___
 
@@ -80,7 +80,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2000](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2000)
+[api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2000)
 
 ___
 
@@ -96,7 +96,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2060](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2060)
+[api.ts:2060](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2060)
 
 ___
 
@@ -112,7 +112,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2006](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2006)
+[api.ts:2006](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2006)
 
 ___
 
@@ -128,7 +128,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2012](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2012)
+[api.ts:2012](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2012)
 
 ___
 
@@ -144,7 +144,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1982](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1982)
+[api.ts:1982](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1982)
 
 ___
 
@@ -160,7 +160,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1934](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1934)
+[api.ts:1934](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1934)
 
 ___
 
@@ -176,7 +176,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2030](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2030)
+[api.ts:2030](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2030)
 
 ___
 
@@ -192,7 +192,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1940](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1940)
+[api.ts:1940](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1940)
 
 ___
 
@@ -208,7 +208,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1946](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1946)
+[api.ts:1946](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1946)
 
 ___
 
@@ -224,7 +224,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1952](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1952)
+[api.ts:1952](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1952)
 
 ___
 
@@ -240,7 +240,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1958](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1958)
+[api.ts:1958](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1958)
 
 ___
 
@@ -256,7 +256,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1964](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1964)
+[api.ts:1964](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1964)
 
 ___
 
@@ -272,7 +272,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1988](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1988)
+[api.ts:1988](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1988)
 
 ___
 
@@ -288,7 +288,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2018](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2018)
+[api.ts:2018](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2018)
 
 ___
 
@@ -304,7 +304,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2024](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2024)
+[api.ts:2024](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2024)
 
 ___
 
@@ -320,7 +320,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2048](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2048)
+[api.ts:2048](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2048)
 
 ___
 
@@ -336,7 +336,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2054](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2054)
+[api.ts:2054](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2054)
 
 ___
 
@@ -352,7 +352,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1970](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1970)
+[api.ts:1970](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1970)
 
 ___
 
@@ -368,7 +368,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2042](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2042)
+[api.ts:2042](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2042)
 
 ___
 
@@ -382,7 +382,7 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:2036](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2036)
+[api.ts:2036](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2036)
 
 ___
 
@@ -398,4 +398,4 @@ MetaVulnerabilitiesOut
 
 #### Defined in
 
-[api.ts:1976](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1976)
+[api.ts:1976](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1976)

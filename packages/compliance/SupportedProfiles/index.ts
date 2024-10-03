@@ -31,6 +31,12 @@ export type SupportedProfilesParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof SupportedProfilesApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof SupportedProfilesApi
@@ -46,7 +52,7 @@ export type SupportedProfilesParams = {
 }
 
 const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unknown[]): params is [SupportedProfilesParams] => {
-  return params.length === 1 && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true
 }
 /**
 * Lists Supported Profiles
@@ -55,9 +61,9 @@ const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const supportedProfilesParamCreator = async (...config: ([SupportedProfilesParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSupportedProfilesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SupportedProfilesParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const supportedProfilesParamCreator = async (...config: ([SupportedProfilesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isSupportedProfilesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SupportedProfilesParams;
+    const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/supported_profiles`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -71,6 +77,10 @@ export const supportedProfilesParamCreator = async (...config: ([SupportedProfil
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

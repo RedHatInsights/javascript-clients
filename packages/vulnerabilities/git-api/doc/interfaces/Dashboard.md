@@ -30,7 +30,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:530](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L530)
+[api.ts:530](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L530)
 
 ___
 
@@ -46,7 +46,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:524](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L524)
+[api.ts:524](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L524)
 
 ___
 
@@ -62,7 +62,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:560](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L560)
+[api.ts:560](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L560)
 
 ___
 
@@ -76,7 +76,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:536](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L536)
+[api.ts:536](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L536)
 
 ___
 
@@ -92,7 +92,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:542](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L542)
+[api.ts:542](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L542)
 
 ___
 
@@ -108,7 +108,7 @@ Dashboard
 
 #### Defined in
 
-[api.ts:548](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L548)
+[api.ts:548](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L548)
 
 ___
 
@@ -124,4 +124,4 @@ Dashboard
 
 #### Defined in
 
-[api.ts:554](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L554)
+[api.ts:554](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L554)

@@ -37,6 +37,12 @@ export type ProfilesParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof ProfilesApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof ProfilesApi
@@ -52,7 +58,7 @@ export type ProfilesParams = {
 }
 
 const isProfilesObjectParams = (params: [ProfilesParams] | unknown[]): params is [ProfilesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }
 /**
 * Lists Profiles
@@ -61,9 +67,9 @@ const isProfilesObjectParams = (params: [ProfilesParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const profilesParamCreator = async (...config: ([ProfilesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isProfilesObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfilesParams;
-    const { securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const profilesParamCreator = async (...config: ([ProfilesParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isProfilesObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfilesParams;
+    const { securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/profiles`
         .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -78,6 +84,10 @@ export const profilesParamCreator = async (...config: ([ProfilesParams] | [any, 
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

@@ -110,7 +110,7 @@
 
 #### Defined in
 
-[api.ts:366](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L366)
+[api.ts:366](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L366)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[api.ts:1148](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1148)
+[api.ts:1148](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L1148)
 
 ## Functions
 
@@ -175,7 +175,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2785](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2785)
+[api.ts:2785](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2785)
 
 ___
 
@@ -230,7 +230,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:5606](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5606)
+[api.ts:5606](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5606)
 
 ___
 
@@ -283,4 +283,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:5037](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5037)
+[api.ts:5037](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5037)

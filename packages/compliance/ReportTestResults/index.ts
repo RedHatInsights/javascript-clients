@@ -37,6 +37,12 @@ export type ReportTestResultsParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof ReportTestResultsApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof ReportTestResultsApi
@@ -52,7 +58,7 @@ export type ReportTestResultsParams = {
 }
 
 const isReportTestResultsObjectParams = (params: [ReportTestResultsParams] | unknown[]): params is [ReportTestResultsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true
 }
 /**
 * Lists Test Results under a Report
@@ -61,9 +67,9 @@ const isReportTestResultsObjectParams = (params: [ReportTestResultsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportTestResultsParamCreator = async (...config: ([ReportTestResultsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isReportTestResultsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsParams;
-    const { reportId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const reportTestResultsParamCreator = async (...config: ([ReportTestResultsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportTestResultsObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsParams;
+    const { reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results`
         .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -78,6 +84,10 @@ export const reportTestResultsParamCreator = async (...config: ([ReportTestResul
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

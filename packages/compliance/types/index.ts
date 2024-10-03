@@ -1074,6 +1074,12 @@ export interface SupportedProfile {
      */
     'title'?: any;
     /**
+     * Longer description of the Profile
+     * @type {any}
+     * @memberof SupportedProfile
+     */
+    'description'?: any;
+    /**
      * UUID of the latest Security Guide supporting this Profile
      * @type {any}
      * @memberof SupportedProfile
@@ -1484,7 +1490,7 @@ export interface TestResult {
      * @type {any}
      * @memberof TestResult
      */
-    'last_scanned'?: any;
+    'end_time'?: any;
 }
 
 export const TestResultTypeEnum = {
