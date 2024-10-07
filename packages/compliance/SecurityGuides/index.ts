@@ -31,6 +31,12 @@ export type SecurityGuidesParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof SecurityGuidesApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof SecurityGuidesApi
@@ -46,7 +52,7 @@ export type SecurityGuidesParams = {
 }
 
 const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]): params is [SecurityGuidesParams] => {
-  return params.length === 1 && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true
 }
 /**
 * Lists Security Guides
@@ -55,9 +61,9 @@ const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const securityGuidesParamCreator = async (...config: ([SecurityGuidesParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSecurityGuidesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const securityGuidesParamCreator = async (...config: ([SecurityGuidesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isSecurityGuidesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesParams;
+    const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -71,6 +77,10 @@ export const securityGuidesParamCreator = async (...config: ([SecurityGuidesPara
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

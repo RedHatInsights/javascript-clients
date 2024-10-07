@@ -43,6 +43,12 @@ export type ReportRuleResultsParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof ReportRuleResultsApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof ReportRuleResultsApi
@@ -58,7 +64,7 @@ export type ReportRuleResultsParams = {
 }
 
 const isReportRuleResultsObjectParams = (params: [ReportRuleResultsParams] | unknown[]): params is [ReportRuleResultsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true
 }
 /**
 * Lists Rule Results under a Report
@@ -67,9 +73,9 @@ const isReportRuleResultsObjectParams = (params: [ReportRuleResultsParams] | unk
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResultsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isReportRuleResultsObjectParams(config) ? config[0] : ['testResultId', 'reportId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportRuleResultsParams;
-    const { testResultId, reportId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResultsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportRuleResultsObjectParams(config) ? config[0] : ['testResultId', 'reportId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportRuleResultsParams;
+    const { testResultId, reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/reports/{report_id}/test_results/{test_result_id}/rule_results`
         .replace(`{${"test_result_id"}}`, encodeURIComponent(String(testResultId)))
         .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
@@ -85,6 +91,10 @@ export const reportRuleResultsParamCreator = async (...config: ([ReportRuleResul
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

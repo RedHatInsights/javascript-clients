@@ -30,7 +30,7 @@ ExecutiveReportRecentCves
 
 #### Defined in
 
-[api.ts:915](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L915)
+[api.ts:915](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L915)
 
 ___
 
@@ -46,7 +46,7 @@ ExecutiveReportRecentCves
 
 #### Defined in
 
-[api.ts:909](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L909)
+[api.ts:909](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L909)
 
 ___
 
@@ -62,4 +62,4 @@ ExecutiveReportRecentCves
 
 #### Defined in
 
-[api.ts:921](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L921)
+[api.ts:921](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L921)

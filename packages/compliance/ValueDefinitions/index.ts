@@ -37,6 +37,12 @@ export type ValueDefinitionsParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof ValueDefinitionsApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof ValueDefinitionsApi
@@ -52,7 +58,7 @@ export type ValueDefinitionsParams = {
 }
 
 const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unknown[]): params is [ValueDefinitionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }
 /**
 * Lists Value Definitions
@@ -61,9 +67,9 @@ const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const valueDefinitionsParamCreator = async (...config: ([ValueDefinitionsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isValueDefinitionsObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionsParams;
-    const { securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const valueDefinitionsParamCreator = async (...config: ([ValueDefinitionsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isValueDefinitionsObjectParams(config) ? config[0] : ['securityGuideId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ValueDefinitionsParams;
+    const { securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/security_guides/{security_guide_id}/value_definitions`
         .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -78,6 +84,10 @@ export const valueDefinitionsParamCreator = async (...config: ([ValueDefinitions
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {
