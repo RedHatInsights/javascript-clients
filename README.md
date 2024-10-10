@@ -13,6 +13,23 @@ We are using Java to install and build this generator. Please install Java and p
 
 * When you have dependencies installed you can run build anytime you change something in the generator `npm run build:generator`
 
+### Troubleshooting
+
+#### NX Daemon
+Sometimes NX fails to make it through all of the client packages when running the `build`/`generate` tasks with the following error:
+
+```bash
+ >  NX   Daemon process terminated and closed the connection
+
+   Please rerun the command, which will restart the daemon.
+   If you get this error again, check for any errors in the daemon process logs found in: /RedHatInsights/javascript-clients/.nx/cache/d/daemon.log
+```
+
+If this occurs, try running `npm run nx:reset` and retrigger the `build`/`generate` task.
+
+#### I do not see my changes after running a build
+By default NX caches the build results of the clients upon initial build. Consecutive builds will then be cached unless the client changes. To avoid this caching, run `npm run build:no-cache`
+
 ### Creating a new client
 Run `npm run create-client` and enter your new client name (e.g. entering `notifications` will generate `notifications-client`). All the necessary TS and NX config files will be created for you.
 
