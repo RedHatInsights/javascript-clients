@@ -37,6 +37,12 @@ export type TailoringsParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof TailoringsApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof TailoringsApi
@@ -52,7 +58,7 @@ export type TailoringsParams = {
 }
 
 const isTailoringsObjectParams = (params: [TailoringsParams] | unknown[]): params is [TailoringsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true && true && true && true && true
 }
 /**
 * Lists Tailorings
@@ -61,9 +67,9 @@ const isTailoringsObjectParams = (params: [TailoringsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringsParamCreator = async (...config: ([TailoringsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isTailoringsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringsParams;
-    const { policyId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const tailoringsParamCreator = async (...config: ([TailoringsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isTailoringsObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringsParams;
+    const { policyId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies/{policy_id}/tailorings`
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -78,6 +84,10 @@ export const tailoringsParamCreator = async (...config: ([TailoringsParams] | [a
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

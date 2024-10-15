@@ -911,7 +911,8 @@ export const EndpointType = {
     Camel: 'camel',
     Drawer: 'drawer',
     EmailSubscription: 'email_subscription',
-    Webhook: 'webhook'
+    Webhook: 'webhook',
+    Pagerduty: 'pagerduty'
 } as const;
 
 export type EndpointType = typeof EndpointType[keyof typeof EndpointType];
@@ -1649,6 +1650,43 @@ export interface PageNotificationHistory {
      */
     'meta': Meta;
 }
+/**
+ *
+ * @export
+ * @interface PagerDutyPropertiesDTO
+ */
+export interface PagerDutyPropertiesDTO {
+    /**
+     *
+     * @type {PagerDutySeverity}
+     * @memberof PagerDutyPropertiesDTO
+     */
+    'severity': PagerDutySeverity;
+    /**
+     *
+     * @type {string}
+     * @memberof PagerDutyPropertiesDTO
+     */
+    'secretToken': string;
+}
+
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const PagerDutySeverity = {
+    Critical: 'critical',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info'
+} as const;
+
+export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutySeverity];
+
+
 /**
  *
  * @export

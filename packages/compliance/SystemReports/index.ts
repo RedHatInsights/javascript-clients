@@ -37,13 +37,19 @@ export type SystemReportsParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof SystemReportsApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof SystemReportsApi
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Reports are searchable using attributes `title`, `os_major_version`, and `with_reported_systems`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Reports are searchable using attributes `title`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof SystemReportsApi
   */
@@ -52,7 +58,7 @@ export type SystemReportsParams = {
 }
 
 const isSystemReportsObjectParams = (params: [SystemReportsParams] | unknown[]): params is [SystemReportsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true && true
 }
 /**
 * Lists Reports
@@ -61,9 +67,9 @@ const isSystemReportsObjectParams = (params: [SystemReportsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const systemReportsParamCreator = async (...config: ([SystemReportsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSystemReportsObjectParams(config) ? config[0] : ['systemId', 'xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemReportsParams;
-    const { systemId, xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const systemReportsParamCreator = async (...config: ([SystemReportsParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isSystemReportsObjectParams(config) ? config[0] : ['systemId', 'xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SystemReportsParams;
+    const { systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/systems/{system_id}/reports`
         .replace(`{${"system_id"}}`, encodeURIComponent(String(systemId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -78,6 +84,10 @@ export const systemReportsParamCreator = async (...config: ([SystemReportsParams
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {
