@@ -1099,6 +1099,12 @@ export interface SupportedProfile {
      */
     'title'?: any;
     /**
+     * Longer description of the Profile
+     * @type {any}
+     * @memberof SupportedProfile
+     */
+    'description'?: any;
+    /**
      * UUID of the latest Security Guide supporting this Profile
      * @type {any}
      * @memberof SupportedProfile
@@ -1509,7 +1515,7 @@ export interface TestResult {
      * @type {any}
      * @memberof TestResult
      */
-    'last_scanned'?: any;
+    'end_time'?: any;
 }
 
 export const TestResultTypeEnum = {
@@ -2493,12 +2499,13 @@ export const PoliciesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        policies: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        policies: async (xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/policies`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2517,6 +2524,10 @@ export const PoliciesApiAxiosParamCreator = function (configuration?: Configurat
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -2560,13 +2571,14 @@ export const PoliciesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.policies(xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async policies(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.policies(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -2585,13 +2597,14 @@ export const PoliciesApiFactory = function (configuration?: Configuration, baseP
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
-            return localVarFp.policies(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        policies(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
+            return localVarFp.policies(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2609,14 +2622,15 @@ export class PoliciesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PoliciesApi
      */
-    public policies(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PoliciesApiFp(this.configuration).policies(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public policies(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return PoliciesApiFp(this.configuration).policies(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -2747,14 +2761,16 @@ export const PolicySystemsApiAxiosParamCreator = function (configuration?: Confi
          * @summary Request Systems assigned to a Policy
          * @param {any} policyId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        policySystems: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        policySystems: async (policyId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'policyId' is not null or undefined
             assertParamExists('policySystems', 'policyId', policyId)
             const localVarPath = `/policies/{policy_id}/systems`
@@ -2770,12 +2786,20 @@ export const PolicySystemsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -2818,15 +2842,17 @@ export const PolicySystemsApiFp = function(configuration?: Configuration) {
          * @summary Request Systems assigned to a Policy
          * @param {any} policyId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async policySystems(policyId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.policySystems(policyId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -2844,15 +2870,17 @@ export const PolicySystemsApiFactory = function (configuration?: Configuration, 
          * @summary Request Systems assigned to a Policy
          * @param {any} policyId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        policySystems(policyId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
+            return localVarFp.policySystems(policyId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -2869,16 +2897,18 @@ export class PolicySystemsApi extends BaseAPI {
      * @summary Request Systems assigned to a Policy
      * @param {any} policyId
      * @param {any} [xRHIDENTITY] For internal use only
+     * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PolicySystemsApi
      */
-    public policySystems(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return PolicySystemsApiFp(this.configuration).policySystems(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public policySystems(policyId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return PolicySystemsApiFp(this.configuration).policySystems(policyId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -3275,12 +3305,13 @@ export const ProfileRulesApiAxiosParamCreator = function (configuration?: Config
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        profileRules: async (securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        profileRules: async (securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'securityGuideId' is not null or undefined
             assertParamExists('profileRules', 'securityGuideId', securityGuideId)
             // verify required parameter 'profileId' is not null or undefined
@@ -3305,6 +3336,10 @@ export const ProfileRulesApiAxiosParamCreator = function (configuration?: Config
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -3350,13 +3385,14 @@ export const ProfileRulesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3377,13 +3413,14 @@ export const ProfileRulesApiFactory = function (configuration?: Configuration, b
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
+            return localVarFp.profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3403,14 +3440,15 @@ export class ProfileRulesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileRulesApi
      */
-    public profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ProfileRulesApiFp(this.configuration).profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ProfileRulesApiFp(this.configuration).profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -3428,12 +3466,13 @@ export const ProfilesApiAxiosParamCreator = function (configuration?: Configurat
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        profiles: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        profiles: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'securityGuideId' is not null or undefined
             assertParamExists('profiles', 'securityGuideId', securityGuideId)
             const localVarPath = `/security_guides/{security_guide_id}/profiles`
@@ -3455,6 +3494,10 @@ export const ProfilesApiAxiosParamCreator = function (configuration?: Configurat
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -3499,13 +3542,14 @@ export const ProfilesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profiles200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Profiles200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profiles(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3525,13 +3569,14 @@ export const ProfilesApiFactory = function (configuration?: Configuration, baseP
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Profiles200Response> {
-            return localVarFp.profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Profiles200Response> {
+            return localVarFp.profiles(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3550,14 +3595,15 @@ export class ProfilesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Profiles are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfilesApi
      */
-    public profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ProfilesApiFp(this.configuration).profiles(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public profiles(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ProfilesApiFp(this.configuration).profiles(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -3691,12 +3737,13 @@ export const ReportRuleResultsApiAxiosParamCreator = function (configuration?: C
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Results are searchable using attributes &#x60;result&#x60;, &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportRuleResults: async (testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        reportRuleResults: async (testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'testResultId' is not null or undefined
             assertParamExists('reportRuleResults', 'testResultId', testResultId)
             // verify required parameter 'reportId' is not null or undefined
@@ -3721,6 +3768,10 @@ export const ReportRuleResultsApiAxiosParamCreator = function (configuration?: C
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -3766,13 +3817,14 @@ export const ReportRuleResultsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Results are searchable using attributes &#x60;result&#x60;, &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportRuleResults200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportRuleResults200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3793,13 +3845,14 @@ export const ReportRuleResultsApiFactory = function (configuration?: Configurati
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Results are searchable using attributes &#x60;result&#x60;, &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ReportRuleResults200Response> {
-            return localVarFp.reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ReportRuleResults200Response> {
+            return localVarFp.reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3819,14 +3872,15 @@ export class ReportRuleResultsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Results are searchable using attributes &#x60;result&#x60;, &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReportRuleResultsApi
      */
-    public reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ReportRuleResultsApiFp(this.configuration).reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public reportRuleResults(testResultId: any, reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ReportRuleResultsApiFp(this.configuration).reportRuleResults(testResultId, reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -4083,14 +4137,16 @@ export const ReportSystemsApiAxiosParamCreator = function (configuration?: Confi
          * @summary Request Systems assigned to a Report
          * @param {any} reportId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;never_reported&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportSystems: async (reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        reportSystems: async (reportId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'reportId' is not null or undefined
             assertParamExists('reportSystems', 'reportId', reportId)
             const localVarPath = `/reports/{report_id}/systems`
@@ -4106,12 +4162,20 @@ export const ReportSystemsApiAxiosParamCreator = function (configuration?: Confi
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -4154,15 +4218,17 @@ export const ReportSystemsApiFp = function(configuration?: Configuration) {
          * @summary Request Systems assigned to a Report
          * @param {any} reportId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;never_reported&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reportSystems(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reportSystems(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async reportSystems(reportId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reportSystems(reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -4180,15 +4246,17 @@ export const ReportSystemsApiFactory = function (configuration?: Configuration, 
          * @summary Request Systems assigned to a Report
          * @param {any} reportId
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;never_reported&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportSystems(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.reportSystems(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        reportSystems(reportId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
+            return localVarFp.reportSystems(reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4205,16 +4273,18 @@ export class ReportSystemsApi extends BaseAPI {
      * @summary Request Systems assigned to a Report
      * @param {any} reportId
      * @param {any} [xRHIDENTITY] For internal use only
+     * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;never_reported&#x60;, and &#x60;group_name&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReportSystemsApi
      */
-    public reportSystems(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ReportSystemsApiFp(this.configuration).reportSystems(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public reportSystems(reportId: any, xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ReportSystemsApiFp(this.configuration).reportSystems(reportId, xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -4481,12 +4551,13 @@ export const ReportTestResultsApiAxiosParamCreator = function (configuration?: C
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Test Results are searchable using attributes &#x60;score&#x60;, &#x60;supported&#x60;, &#x60;system_id&#x60;, &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;security_guide_version&#x60;, &#x60;compliant&#x60;, &#x60;group_name&#x60;, and &#x60;failed_rule_severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportTestResults: async (reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        reportTestResults: async (reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'reportId' is not null or undefined
             assertParamExists('reportTestResults', 'reportId', reportId)
             const localVarPath = `/reports/{report_id}/test_results`
@@ -4508,6 +4579,10 @@ export const ReportTestResultsApiAxiosParamCreator = function (configuration?: C
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -4552,13 +4627,14 @@ export const ReportTestResultsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Test Results are searchable using attributes &#x60;score&#x60;, &#x60;supported&#x60;, &#x60;system_id&#x60;, &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;security_guide_version&#x60;, &#x60;compliant&#x60;, &#x60;group_name&#x60;, and &#x60;failed_rule_severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportTestResults200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reportTestResults(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReportTestResults200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reportTestResults(reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -4578,13 +4654,14 @@ export const ReportTestResultsApiFactory = function (configuration?: Configurati
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Test Results are searchable using attributes &#x60;score&#x60;, &#x60;supported&#x60;, &#x60;system_id&#x60;, &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;security_guide_version&#x60;, &#x60;compliant&#x60;, &#x60;group_name&#x60;, and &#x60;failed_rule_severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ReportTestResults200Response> {
-            return localVarFp.reportTestResults(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ReportTestResults200Response> {
+            return localVarFp.reportTestResults(reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4603,14 +4680,15 @@ export class ReportTestResultsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Test Results are searchable using attributes &#x60;score&#x60;, &#x60;supported&#x60;, &#x60;system_id&#x60;, &#x60;display_name&#x60;, &#x60;os_minor_version&#x60;, &#x60;security_guide_version&#x60;, &#x60;compliant&#x60;, &#x60;group_name&#x60;, and &#x60;failed_rule_severity&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReportTestResultsApi
      */
-    public reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ReportTestResultsApiFp(this.configuration).reportTestResults(reportId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public reportTestResults(reportId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ReportTestResultsApiFp(this.configuration).reportTestResults(reportId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -4754,12 +4832,13 @@ export const ReportsApiAxiosParamCreator = function (configuration?: Configurati
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reports: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        reports: async (xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/reports`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4778,6 +4857,10 @@ export const ReportsApiAxiosParamCreator = function (configuration?: Configurati
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -4821,13 +4904,14 @@ export const ReportsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async reports(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reports200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.reports(xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async reports(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reports200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.reports(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -4846,13 +4930,14 @@ export const ReportsApiFactory = function (configuration?: Configuration, basePa
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reports(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Reports200Response> {
-            return localVarFp.reports(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        reports(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Reports200Response> {
+            return localVarFp.reports(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4870,14 +4955,15 @@ export class ReportsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReportsApi
      */
-    public reports(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ReportsApiFp(this.configuration).reports(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public reports(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ReportsApiFp(this.configuration).reports(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -5259,12 +5345,13 @@ export const RuleGroupsApiAxiosParamCreator = function (configuration?: Configur
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleGroups: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        ruleGroups: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'securityGuideId' is not null or undefined
             assertParamExists('ruleGroups', 'securityGuideId', securityGuideId)
             const localVarPath = `/security_guides/{security_guide_id}/rule_groups`
@@ -5286,6 +5373,10 @@ export const RuleGroupsApiAxiosParamCreator = function (configuration?: Configur
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -5330,13 +5421,14 @@ export const RuleGroupsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroups200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RuleGroups200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -5356,13 +5448,14 @@ export const RuleGroupsApiFactory = function (configuration?: Configuration, bas
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<RuleGroups200Response> {
-            return localVarFp.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<RuleGroups200Response> {
+            return localVarFp.ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5381,14 +5474,15 @@ export class RuleGroupsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rule Groups are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RuleGroupsApi
      */
-    public ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return RuleGroupsApiFp(this.configuration).ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public ruleGroups(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return RuleGroupsApiFp(this.configuration).ruleGroups(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -5406,12 +5500,13 @@ export const RulesApiAxiosParamCreator = function (configuration?: Configuration
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rules: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        rules: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'securityGuideId' is not null or undefined
             assertParamExists('rules', 'securityGuideId', securityGuideId)
             const localVarPath = `/security_guides/{security_guide_id}/rules`
@@ -5433,6 +5528,10 @@ export const RulesApiAxiosParamCreator = function (configuration?: Configuration
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -5477,13 +5576,14 @@ export const RulesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.rules(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -5503,13 +5603,14 @@ export const RulesApiFactory = function (configuration?: Configuration, basePath
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
+            return localVarFp.rules(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5528,14 +5629,15 @@ export class RulesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RulesApi
      */
-    public rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return RulesApiFp(this.configuration).rules(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public rules(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return RulesApiFp(this.configuration).rules(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -5782,12 +5884,13 @@ export const SecurityGuidesApiAxiosParamCreator = function (configuration?: Conf
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, &#x60;os_major_version&#x60;, &#x60;profile_ref_id&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        securityGuides: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        securityGuides: async (xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/security_guides`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -5806,6 +5909,10 @@ export const SecurityGuidesApiAxiosParamCreator = function (configuration?: Conf
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -5849,13 +5956,14 @@ export const SecurityGuidesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, &#x60;os_major_version&#x60;, &#x60;profile_ref_id&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuides200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SecurityGuides200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.securityGuides(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -5874,13 +5982,14 @@ export const SecurityGuidesApiFactory = function (configuration?: Configuration,
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, &#x60;os_major_version&#x60;, &#x60;profile_ref_id&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SecurityGuides200Response> {
-            return localVarFp.securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SecurityGuides200Response> {
+            return localVarFp.securityGuides(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5898,14 +6007,15 @@ export class SecurityGuidesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Security Guides are searchable using attributes &#x60;title&#x60;, &#x60;version&#x60;, &#x60;ref_id&#x60;, &#x60;os_major_version&#x60;, &#x60;profile_ref_id&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SecurityGuidesApi
      */
-    public securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SecurityGuidesApiFp(this.configuration).securityGuides(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public securityGuides(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return SecurityGuidesApiFp(this.configuration).securityGuides(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -6042,12 +6152,13 @@ export const SupportedProfilesApiAxiosParamCreator = function (configuration?: C
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        supportedProfiles: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        supportedProfiles: async (xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/security_guides/supported_profiles`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6066,6 +6177,10 @@ export const SupportedProfilesApiAxiosParamCreator = function (configuration?: C
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -6109,13 +6224,14 @@ export const SupportedProfilesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SupportedProfiles200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SupportedProfiles200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.supportedProfiles(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6134,13 +6250,14 @@ export const SupportedProfilesApiFactory = function (configuration?: Configurati
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SupportedProfiles200Response> {
-            return localVarFp.supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<SupportedProfiles200Response> {
+            return localVarFp.supportedProfiles(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6158,14 +6275,15 @@ export class SupportedProfilesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Supported Profiles are searchable using attributes &#x60;os_major_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SupportedProfilesApi
      */
-    public supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SupportedProfilesApiFp(this.configuration).supportedProfiles(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public supportedProfiles(xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return SupportedProfilesApiFp(this.configuration).supportedProfiles(xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -6298,12 +6416,13 @@ export const SystemReportsApiAxiosParamCreator = function (configuration?: Confi
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReports: async (systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        systemReports: async (systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'systemId' is not null or undefined
             assertParamExists('systemReports', 'systemId', systemId)
             const localVarPath = `/systems/{system_id}/reports`
@@ -6325,6 +6444,10 @@ export const SystemReportsApiAxiosParamCreator = function (configuration?: Confi
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -6369,13 +6492,14 @@ export const SystemReportsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reports200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.systemReports(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Reports200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systemReports(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6395,13 +6519,14 @@ export const SystemReportsApiFactory = function (configuration?: Configuration, 
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Reports200Response> {
-            return localVarFp.systemReports(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Reports200Response> {
+            return localVarFp.systemReports(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6420,14 +6545,15 @@ export class SystemReportsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;with_reported_systems&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Reports are searchable using attributes &#x60;title&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemReportsApi
      */
-    public systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SystemReportsApiFp(this.configuration).systemReports(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public systemReports(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return SystemReportsApiFp(this.configuration).systemReports(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -6442,14 +6568,16 @@ export const SystemsApiAxiosParamCreator = function (configuration?: Configurati
          * Lists Systems
          * @summary Request Systems
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systems: async (xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        systems: async (xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/systems`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6462,12 +6590,20 @@ export const SystemsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (tags !== undefined) {
+                localVarQueryParameter['tags'] = tags;
+            }
+
             if (limit !== undefined) {
                 localVarQueryParameter['limit'] = limit;
             }
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -6509,15 +6645,17 @@ export const SystemsApiFp = function(configuration?: Configuration) {
          * Lists Systems
          * @summary Request Systems
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.systems(xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async systems(xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Systems200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systems(xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6534,15 +6672,17 @@ export const SystemsApiFactory = function (configuration?: Configuration, basePa
          * Lists Systems
          * @summary Request Systems
          * @param {any} [xRHIDENTITY] For internal use only
+         * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
-            return localVarFp.systems(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        systems(xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Systems200Response> {
+            return localVarFp.systems(xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6558,16 +6698,18 @@ export class SystemsApi extends BaseAPI {
      * Lists Systems
      * @summary Request Systems
      * @param {any} [xRHIDENTITY] For internal use only
+     * @param {any} [tags] An array of tags to narrow down the search results. In case the value contains symbols used for separators (&#x60;/&#x60; or &#x60;&#x3D;&#x60;), they need to be encoded.&lt;br&gt;e.g.: &#x60;namespace/key&#x3D;value&#x60;, &#x60;insights-client/selinux-config&#x3D;SELINUX%3Denforcing&#x60;
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;never_reported&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Systems are searchable using attributes &#x60;display_name&#x60;, &#x60;os_major_version&#x60;, &#x60;os_minor_version&#x60;, &#x60;assigned_or_scanned&#x60;, &#x60;group_name&#x60;, &#x60;policies&#x60;, and &#x60;profile_ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemsApi
      */
-    public systems(xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SystemsApiFp(this.configuration).systems(xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public systems(xRHIDENTITY?: any, tags?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return SystemsApiFp(this.configuration).systems(xRHIDENTITY, tags, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -6705,12 +6847,13 @@ export const SystemsPoliciesApiAxiosParamCreator = function (configuration?: Con
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemsPolicies: async (systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        systemsPolicies: async (systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'systemId' is not null or undefined
             assertParamExists('systemsPolicies', 'systemId', systemId)
             const localVarPath = `/systems/{system_id}/policies`
@@ -6732,6 +6875,10 @@ export const SystemsPoliciesApiAxiosParamCreator = function (configuration?: Con
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -6776,13 +6923,14 @@ export const SystemsPoliciesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.systemsPolicies(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Policies200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.systemsPolicies(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6802,13 +6950,14 @@ export const SystemsPoliciesApiFactory = function (configuration?: Configuration
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
-            return localVarFp.systemsPolicies(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Policies200Response> {
+            return localVarFp.systemsPolicies(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -6827,14 +6976,15 @@ export class SystemsPoliciesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60;, &#x60;os_major_version&#x60;, and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Policies are searchable using attributes &#x60;title&#x60; and &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SystemsPoliciesApi
      */
-    public systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return SystemsPoliciesApiFp(this.configuration).systemsPolicies(systemId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public systemsPolicies(systemId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return SystemsPoliciesApiFp(this.configuration).systemsPolicies(systemId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7097,12 +7247,13 @@ export const TailoringRulesApiAxiosParamCreator = function (configuration?: Conf
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tailoringRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        tailoringRules: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'policyId' is not null or undefined
             assertParamExists('tailoringRules', 'policyId', policyId)
             // verify required parameter 'tailoringId' is not null or undefined
@@ -7127,6 +7278,10 @@ export const TailoringRulesApiAxiosParamCreator = function (configuration?: Conf
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -7172,13 +7327,14 @@ export const TailoringRulesApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Rules200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -7199,13 +7355,14 @@ export const TailoringRulesApiFactory = function (configuration?: Configuration,
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+         * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
-            return localVarFp.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Rules200Response> {
+            return localVarFp.tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -7225,14 +7382,15 @@ export class TailoringRulesApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
-     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, and &#x60;remediation_available&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
+     * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Rules are searchable using attributes &#x60;title&#x60;, &#x60;severity&#x60;, &#x60;remediation_available&#x60;, and &#x60;rule_group_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TailoringRulesApi
      */
-    public tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return TailoringRulesApiFp(this.configuration).tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public tailoringRules(policyId: any, tailoringId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return TailoringRulesApiFp(this.configuration).tailoringRules(policyId, tailoringId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7250,12 +7408,13 @@ export const TailoringsApiAxiosParamCreator = function (configuration?: Configur
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tailorings: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        tailorings: async (policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'policyId' is not null or undefined
             assertParamExists('tailorings', 'policyId', policyId)
             const localVarPath = `/policies/{policy_id}/tailorings`
@@ -7277,6 +7436,10 @@ export const TailoringsApiAxiosParamCreator = function (configuration?: Configur
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -7321,13 +7484,14 @@ export const TailoringsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailorings200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailorings200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailorings(policyId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -7347,13 +7511,14 @@ export const TailoringsApiFactory = function (configuration?: Configuration, bas
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Tailorings200Response> {
-            return localVarFp.tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<Tailorings200Response> {
+            return localVarFp.tailorings(policyId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -7372,14 +7537,15 @@ export class TailoringsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Tailorings are searchable using attributes &#x60;os_minor_version&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TailoringsApi
      */
-    public tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return TailoringsApiFp(this.configuration).tailorings(policyId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public tailorings(policyId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return TailoringsApiFp(this.configuration).tailorings(policyId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -8021,12 +8187,13 @@ export const ValueDefinitionsApiAxiosParamCreator = function (configuration?: Co
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        valueDefinitions: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        valueDefinitions: async (securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'securityGuideId' is not null or undefined
             assertParamExists('valueDefinitions', 'securityGuideId', securityGuideId)
             const localVarPath = `/security_guides/{security_guide_id}/value_definitions`
@@ -8048,6 +8215,10 @@ export const ValueDefinitionsApiAxiosParamCreator = function (configuration?: Co
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (idsOnly !== undefined) {
+                localVarQueryParameter['ids_only'] = idsOnly;
             }
 
             if (sortBy !== undefined) {
@@ -8092,13 +8263,14 @@ export const ValueDefinitionsApiFp = function(configuration?: Configuration) {
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinitions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options);
+        async valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValueDefinitions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -8118,13 +8290,14 @@ export const ValueDefinitionsApiFactory = function (configuration?: Configuratio
          * @param {any} [xRHIDENTITY] For internal use only
          * @param {any} [limit] Number of items to return per page
          * @param {any} [offset] Offset of first item of paginated response
+         * @param {any} [idsOnly] Indicates whether to return only resource IDs.
          * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
          * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ValueDefinitions200Response> {
-            return localVarFp.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(axios, basePath));
+        valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: any): AxiosPromise<ValueDefinitions200Response> {
+            return localVarFp.valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -8143,14 +8316,15 @@ export class ValueDefinitionsApi extends BaseAPI {
      * @param {any} [xRHIDENTITY] For internal use only
      * @param {any} [limit] Number of items to return per page
      * @param {any} [offset] Offset of first item of paginated response
+     * @param {any} [idsOnly] Indicates whether to return only resource IDs.
      * @param {any} [sortBy] Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (&#x60;&lt;key&gt;:asc&#x60; or &#x60;&lt;key&gt;:desc&#x60;).&lt;br&gt;&lt;br&gt;If no direction is selected, &#x60;&lt;key&gt;:asc&#x60; is used by default.
      * @param {any} [filter] Query string to filter items by their attributes. Compliant with &lt;a href&#x3D;\&quot;https://github.com/wvanbergen/scoped_search/wiki/Query-language\&quot; target&#x3D;\&quot;_blank\&quot; title&#x3D;\&quot;github.com/wvanbergen/scoped_search\&quot;&gt;scoped_search query language&lt;/a&gt;. However, only &#x60;&#x3D;&#x60; or &#x60;!&#x3D;&#x60; (resp. &#x60;&lt;&gt;&#x60;) operators are supported.&lt;br&gt;&lt;br&gt;Value Definitions are searchable using attributes &#x60;title&#x60; and &#x60;ref_id&#x60;&lt;br&gt;&lt;br&gt;(e.g.: &#x60;(field_1&#x3D;something AND field_2!&#x3D;\&quot;something else\&quot;) OR field_3&gt;40&#x60;)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ValueDefinitionsApi
      */
-    public valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
-        return ValueDefinitionsApiFp(this.configuration).valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    public valueDefinitions(securityGuideId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
+        return ValueDefinitionsApiFp(this.configuration).valueDefinitions(securityGuideId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
