@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.5.1-alpha.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/topological-inventory-client-1.5.0...@redhat-cloud-services/topological-inventory-client-1.5.1-alpha.0) (2024-10-16)
+
 ## [1.5.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/topological-inventory-client-1.4.5...@redhat-cloud-services/topological-inventory-client-1.5.0) (2024-08-05)
 
 
