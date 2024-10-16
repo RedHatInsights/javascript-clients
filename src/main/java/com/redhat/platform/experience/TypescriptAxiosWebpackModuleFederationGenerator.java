@@ -251,6 +251,7 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
   @Override
   public OperationsMap postProcessOperationsWithModels(OperationsMap objs, List<ModelMap> allModels) {
       objs = super.postProcessOperationsWithModels(objs, allModels);
+      // this.updateOperationParameterForEnum(objs);
       OperationMap vals = objs.getOperations();
       List<CodegenOperation> operations = vals.getOperation();
       /*
@@ -264,6 +265,20 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
 
       return objs;
   }
+
+// private void updateOperationParameterForEnum(OperationsMap operations) {
+//       // This method will add extra information as to whether or not we have enums and
+//       // update their names with the operation.id prefixed.
+//       // It will also set the uniqueId status if provided.
+//       for (CodegenOperation op : operations.getOperations().getOperation()) {
+//           for (CodegenParameter param : op.allParams) {
+//               if (Boolean.TRUE.equals(param.isEnum)) {
+//                   param.datatypeWithEnum = param.datatypeWithEnum
+//                           .replace(param.enumName, op.operationIdCamelCase + param.enumName);
+//               }
+//           }
+//       }
+//   }
 
   @Override
   public Map<String, ModelsMap> postProcessAllModels(Map<String, ModelsMap> objs) {
