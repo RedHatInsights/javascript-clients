@@ -83,4 +83,3 @@ As the default, we use `typescript-axios` to generate a client based on their Op
 }
 ```
 
-If you've previously used the `typescript-axios` generator you will also have to change the version of `generator-cli.version` in `openapitool.json` to at least `6.6.0`.
