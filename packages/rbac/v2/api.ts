@@ -307,6 +307,12 @@ export interface WorkspacesCreateWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
@@ -331,6 +337,8 @@ export interface WorkspacesCreateWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -532,6 +540,12 @@ export interface WorkspacesPatchWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
@@ -556,6 +570,8 @@ export interface WorkspacesPatchWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -575,6 +591,12 @@ export interface WorkspacesRead200Response {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesRead200Response
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesRead200Response
@@ -599,6 +621,8 @@ export interface WorkspacesRead200Response {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -618,6 +642,12 @@ export interface WorkspacesReadWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
@@ -642,6 +672,8 @@ export interface WorkspacesReadWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -667,6 +699,12 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceWithAncestryResponse
@@ -691,6 +729,8 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -779,6 +819,12 @@ export interface WorkspacesUpdateWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceResponse
@@ -803,6 +849,8 @@ export interface WorkspacesUpdateWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -822,6 +870,12 @@ export interface WorkspacesWorkspace {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesWorkspace
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesWorkspace
@@ -846,6 +900,8 @@ export interface WorkspacesWorkspace {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -896,6 +952,37 @@ export interface WorkspacesWorkspaceListResponse {
      */
     'data': Array<WorkspacesWorkspace>;
 }
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const WorkspacesWorkspaceTypes = {
+    Root: 'root',
+    Default: 'default',
+    Standard: 'standard'
+} as const;
+
+export type WorkspacesWorkspaceTypes = typeof WorkspacesWorkspaceTypes[keyof typeof WorkspacesWorkspaceTypes];
+
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const WorkspacesWorkspaceTypesQueryParam = {
+    All: 'all',
+    Root: 'root',
+    Default: 'default',
+    Standard: 'standard'
+} as const;
+
+export type WorkspacesWorkspaceTypesQueryParam = typeof WorkspacesWorkspaceTypesQueryParam[keyof typeof WorkspacesWorkspaceTypesQueryParam];
+
+
 
 /**
  * WorkspacesCreateApi - axios parameter creator
@@ -1122,10 +1209,11 @@ export const WorkspacesListApiAxiosParamCreator = function (configuration?: Conf
          * @summary List workspaces in a tenant
          * @param {number} [limit]
          * @param {number} [offset]
+         * @param {WorkspacesWorkspaceTypesQueryParam} [type] Defaults to all when param is not supplied.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesList: async (limit?: number, offset?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        workspacesList: async (limit?: number, offset?: number, type?: WorkspacesWorkspaceTypesQueryParam, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/workspaces/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1144,6 +1232,10 @@ export const WorkspacesListApiAxiosParamCreator = function (configuration?: Conf
 
             if (offset !== undefined) {
                 localVarQueryParameter['offset'] = offset;
+            }
+
+            if (type !== undefined) {
+                localVarQueryParameter['type'] = type;
             }
 
 
@@ -1172,11 +1264,12 @@ export const WorkspacesListApiFp = function(configuration?: Configuration) {
          * @summary List workspaces in a tenant
          * @param {number} [limit]
          * @param {number} [offset]
+         * @param {WorkspacesWorkspaceTypesQueryParam} [type] Defaults to all when param is not supplied.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesList(limit?: number, offset?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesWorkspaceListResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesList(limit, offset, options);
+        async workspacesList(limit?: number, offset?: number, type?: WorkspacesWorkspaceTypesQueryParam, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesWorkspaceListResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesList(limit, offset, type, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1194,11 +1287,12 @@ export const WorkspacesListApiFactory = function (configuration?: Configuration,
          * @summary List workspaces in a tenant
          * @param {number} [limit]
          * @param {number} [offset]
+         * @param {WorkspacesWorkspaceTypesQueryParam} [type] Defaults to all when param is not supplied.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesList(limit?: number, offset?: number, options?: any): AxiosPromise<WorkspacesWorkspaceListResponse> {
-            return localVarFp.workspacesList(limit, offset, options).then((request) => request(axios, basePath));
+        workspacesList(limit?: number, offset?: number, type?: WorkspacesWorkspaceTypesQueryParam, options?: any): AxiosPromise<WorkspacesWorkspaceListResponse> {
+            return localVarFp.workspacesList(limit, offset, type, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1215,12 +1309,13 @@ export class WorkspacesListApi extends BaseAPI {
      * @summary List workspaces in a tenant
      * @param {number} [limit]
      * @param {number} [offset]
+     * @param {WorkspacesWorkspaceTypesQueryParam} [type] Defaults to all when param is not supplied.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesListApi
      */
-    public workspacesList(limit?: number, offset?: number, options?: AxiosRequestConfig) {
-        return WorkspacesListApiFp(this.configuration).workspacesList(limit, offset, options).then((request) => request(this.axios, this.basePath));
+    public workspacesList(limit?: number, offset?: number, type?: WorkspacesWorkspaceTypesQueryParam, options?: AxiosRequestConfig) {
+        return WorkspacesListApiFp(this.configuration).workspacesList(limit, offset, type, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

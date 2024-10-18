@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[configuration.ts:67](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L67)
+[configuration.ts:67](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L67)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:51](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L51)
+[configuration.ts:51](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L51)
 
 ___
 
@@ -79,7 +79,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:30](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L30)
+[configuration.ts:30](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L30)
 
 ___
 
@@ -95,7 +95,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:65](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L65)
+[configuration.ts:65](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L65)
 
 ___
 
@@ -111,7 +111,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:58](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L58)
+[configuration.ts:58](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L58)
 
 ___
 
@@ -127,7 +127,7 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:44](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L44)
+[configuration.ts:44](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L44)
 
 ___
 
@@ -143,4 +143,4 @@ Configuration
 
 #### Defined in
 
-[configuration.ts:37](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L37)
+[configuration.ts:37](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/configuration.ts#L37)

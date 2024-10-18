@@ -31,6 +31,12 @@ export type PoliciesParams = {
   */
   offset?: any,
   /**
+  * Indicates whether to return only resource IDs.
+  * @type { any }
+  * @memberof PoliciesApi
+  */
+  idsOnly?: any,
+  /**
   * Attribute and direction to sort the items by. Represented by an array of fields with an optional direction (`<key>:asc` or `<key>:desc`).<br><br>If no direction is selected, `<key>:asc` is used by default.
   * @type { any }
   * @memberof PoliciesApi
@@ -46,7 +52,7 @@ export type PoliciesParams = {
 }
 
 const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is [PoliciesParams] => {
-  return params.length === 1 && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true
 }
 /**
 * Lists Policies
@@ -55,9 +61,9 @@ const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isPoliciesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PoliciesParams;
-    const { xRHIDENTITY, limit, offset, sortBy, filter, options = {} } = params;
+export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isPoliciesObjectParams(config) ? config[0] : ['xRHIDENTITY', 'limit', 'offset', 'idsOnly', 'sortBy', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PoliciesParams;
+    const { xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options = {} } = params;
     const localVarPath = `/policies`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -71,6 +77,10 @@ export const policiesParamCreator = async (...config: ([PoliciesParams] | [any, 
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (idsOnly !== undefined) {
+        localVarQueryParameter['ids_only'] = idsOnly;
     }
 
     if (sortBy !== undefined) {

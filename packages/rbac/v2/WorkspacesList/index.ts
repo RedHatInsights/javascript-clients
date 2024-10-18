@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, WorkspacesList401Response, WorkspacesList500Response, WorkspacesWorkspaceListResponse } from '../types';
+import type { ProblemsProblem403, WorkspacesList401Response, WorkspacesList500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
 
 
 export type WorkspacesListParams = {
@@ -24,11 +24,17 @@ export type WorkspacesListParams = {
   * @memberof WorkspacesListApi
   */
   offset?: number,
+  /**
+  * Defaults to all when param is not supplied.
+  * @type { WorkspacesWorkspaceTypesQueryParam }
+  * @memberof WorkspacesListApi
+  */
+  type?: WorkspacesWorkspaceTypesQueryParam,
   options?: AxiosRequestConfig
 }
 
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
-  return params.length === 1 && true && true
+  return params.length === 1 && true && true && true
 }
 /**
 * List workspaces in a tenant
@@ -37,9 +43,9 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, options = {} } = params;
+export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, type, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -53,6 +59,10 @@ export const workspacesListParamCreator = async (...config: ([WorkspacesListPara
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (type !== undefined) {
+        localVarQueryParameter['type'] = type;
     }
 
 

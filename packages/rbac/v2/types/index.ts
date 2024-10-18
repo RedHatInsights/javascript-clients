@@ -282,6 +282,12 @@ export interface WorkspacesCreateWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesCreateWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
@@ -306,6 +312,8 @@ export interface WorkspacesCreateWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -507,6 +515,12 @@ export interface WorkspacesPatchWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesPatchWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
@@ -531,6 +545,8 @@ export interface WorkspacesPatchWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -550,6 +566,12 @@ export interface WorkspacesRead200Response {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesRead200Response
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesRead200Response
@@ -574,6 +596,8 @@ export interface WorkspacesRead200Response {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -593,6 +617,12 @@ export interface WorkspacesReadWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesReadWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
@@ -617,6 +647,8 @@ export interface WorkspacesReadWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -642,6 +674,12 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesReadWorkspaceWithAncestryResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesReadWorkspaceWithAncestryResponse
@@ -666,6 +704,8 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -754,6 +794,12 @@ export interface WorkspacesUpdateWorkspaceResponse {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesUpdateWorkspaceResponse
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceResponse
@@ -778,6 +824,8 @@ export interface WorkspacesUpdateWorkspaceResponse {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -797,6 +845,12 @@ export interface WorkspacesWorkspace {
      */
     'parent_id'?: string;
     /**
+     *
+     * @type {WorkspacesWorkspaceTypes}
+     * @memberof WorkspacesWorkspace
+     */
+    'type': WorkspacesWorkspaceTypes;
+    /**
      * Workspace A
      * @type {string}
      * @memberof WorkspacesWorkspace
@@ -821,6 +875,8 @@ export interface WorkspacesWorkspace {
      */
     'modified': string;
 }
+
+
 /**
  *
  * @export
@@ -871,3 +927,34 @@ export interface WorkspacesWorkspaceListResponse {
      */
     'data': Array<WorkspacesWorkspace>;
 }
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const WorkspacesWorkspaceTypes = {
+    Root: 'root',
+    Default: 'default',
+    Standard: 'standard'
+} as const;
+
+export type WorkspacesWorkspaceTypes = typeof WorkspacesWorkspaceTypes[keyof typeof WorkspacesWorkspaceTypes];
+
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const WorkspacesWorkspaceTypesQueryParam = {
+    All: 'all',
+    Root: 'root',
+    Default: 'default',
+    Standard: 'standard'
+} as const;
+
+export type WorkspacesWorkspaceTypesQueryParam = typeof WorkspacesWorkspaceTypesQueryParam[keyof typeof WorkspacesWorkspaceTypesQueryParam];
+
+

@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.5.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.5.1...@redhat-cloud-services/notifications-client-2.5.2) (2024-10-15)
+
 ## [2.5.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.5.0...@redhat-cloud-services/notifications-client-2.5.1) (2024-09-04)
 
 ## [2.5.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.4.5...@redhat-cloud-services/notifications-client-2.5.0) (2024-08-05)

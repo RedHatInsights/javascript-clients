@@ -29,7 +29,7 @@ MetaVulnerabilitiesOutAllOfSystemCountPerType
 
 #### Defined in
 
-[api.ts:2170](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2170)
+[api.ts:2170](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2170)
 
 ___
 
@@ -45,4 +45,4 @@ MetaVulnerabilitiesOutAllOfSystemCountPerType
 
 #### Defined in
 
-[api.ts:2164](https://github.com/mkholjuraev/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2164)
+[api.ts:2164](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2164)
