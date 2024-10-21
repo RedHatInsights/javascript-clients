@@ -40,6 +40,32 @@ export interface CreatePolicy201ResponseData {
 /**
  *
  * @export
+ * @interface CreateTailoring201Response
+ */
+export interface CreateTailoring201Response {
+    /**
+     *
+     * @type {CreateTailoring201ResponseData}
+     * @memberof CreateTailoring201Response
+     */
+    'data'?: CreateTailoring201ResponseData;
+}
+/**
+ *
+ * @export
+ * @interface CreateTailoring201ResponseData
+ */
+export interface CreateTailoring201ResponseData {
+    /**
+     *
+     * @type {Tailoring}
+     * @memberof CreateTailoring201ResponseData
+     */
+    'schema'?: Tailoring;
+}
+/**
+ *
+ * @export
  * @interface Errors
  */
 export interface Errors {
@@ -1344,28 +1370,15 @@ export type TailoringTypeEnum = typeof TailoringTypeEnum[keyof typeof TailoringT
 /**
  *
  * @export
- * @interface Tailoring200Response
+ * @interface TailoringCreate
  */
-export interface Tailoring200Response {
+export interface TailoringCreate {
     /**
-     *
-     * @type {Tailoring200ResponseData}
-     * @memberof Tailoring200Response
+     * Minor version of the Operating System that the Tailoring covers
+     * @type {any}
+     * @memberof TailoringCreate
      */
-    'data'?: Tailoring200ResponseData;
-}
-/**
- *
- * @export
- * @interface Tailoring200ResponseData
- */
-export interface Tailoring200ResponseData {
-    /**
-     *
-     * @type {Tailoring}
-     * @memberof Tailoring200ResponseData
-     */
-    'schema'?: Tailoring;
+    'os_minor_version'?: any;
 }
 /**
  * Defines customizations of rules and variables for a set of profiles

@@ -279,14 +279,51 @@ export interface ApplicationDTO {
     'bundle_id': string;
     /**
      *
-     * @type {string}
+     * @type {Set<EventTypeDTO>}
      * @memberof ApplicationDTO
+     */
+    'event_types'?: Set<EventTypeDTO>;
+}
+/**
+ *
+ * @export
+ * @interface ApplicationDTO1
+ */
+export interface ApplicationDTO1 {
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'bundle_id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
      */
     'owner_role'?: string;
     /**
      *
      * @type {string}
-     * @memberof ApplicationDTO
+     * @memberof ApplicationDTO1
      */
     'created'?: string;
 }
@@ -463,6 +500,37 @@ export interface Bundle {
      * @memberof Bundle
      */
     'display_name': string;
+}
+/**
+ *
+ * @export
+ * @interface BundleDTO
+ */
+export interface BundleDTO {
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {Set<ApplicationDTO>}
+     * @memberof BundleDTO
+     */
+    'applications'?: Set<ApplicationDTO>;
 }
 /**
  *
@@ -823,6 +891,18 @@ export interface EndpointDTO {
      * @memberof EndpointDTO
      */
     'properties'?: object;
+    /**
+     *
+     * @type {Set<BundleDTO>}
+     * @memberof EndpointDTO
+     */
+    'event_types_group_by_bundles_and_applications'?: Set<BundleDTO>;
+    /**
+     *
+     * @type {Set<string>}
+     * @memberof EndpointDTO
+     */
+    'event_types'?: Set<string>;
 }
 
 
@@ -1185,6 +1265,43 @@ export interface EventTypeBehaviorId {
      * @memberof EventTypeBehaviorId
      */
     'behaviorGroupId': string;
+}
+/**
+ *
+ * @export
+ * @interface EventTypeDTO
+ */
+export interface EventTypeDTO {
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {ApplicationDTO}
+     * @memberof EventTypeDTO
+     */
+    'application'?: ApplicationDTO;
 }
 /**
  *
@@ -1658,10 +1775,10 @@ export interface PageNotificationHistory {
 export interface PagerDutyPropertiesDTO {
     /**
      *
-     * @type {PagerDutySeverity}
+     * @type {PagerDutySeverityDTO}
      * @memberof PagerDutyPropertiesDTO
      */
-    'severity': PagerDutySeverity;
+    'severity': PagerDutySeverityDTO;
     /**
      *
      * @type {string}
@@ -1685,6 +1802,22 @@ export const PagerDutySeverity = {
 } as const;
 
 export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutySeverity];
+
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const PagerDutySeverityDTO = {
+    Critical: 'critical',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info'
+} as const;
+
+export type PagerDutySeverityDTO = typeof PagerDutySeverityDTO[keyof typeof PagerDutySeverityDTO];
 
 
 /**
@@ -2065,6 +2198,119 @@ export interface X509Certificate {
 }
 
 /**
+ * EndpointResourceV1AddEventTypeToEndpointApi - axios parameter creator
+ * @export
+ */
+export const EndpointResourceV1AddEventTypeToEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Add a link between an endpoint and an event type.
+         * @summary Add a link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1AddEventTypeToEndpoint: async (endpointId: string, eventTypeId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'endpointId' is not null or undefined
+            assertParamExists('endpointResourceV1AddEventTypeToEndpoint', 'endpointId', endpointId)
+            // verify required parameter 'eventTypeId' is not null or undefined
+            assertParamExists('endpointResourceV1AddEventTypeToEndpoint', 'eventTypeId', eventTypeId)
+            const localVarPath = `/endpoints/{endpointId}/eventType/{eventTypeId}`
+                .replace(`{${"endpointId"}}`, encodeURIComponent(String(endpointId)))
+                .replace(`{${"eventTypeId"}}`, encodeURIComponent(String(eventTypeId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1AddEventTypeToEndpointApi - functional programming interface
+ * @export
+ */
+export const EndpointResourceV1AddEventTypeToEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = EndpointResourceV1AddEventTypeToEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Add a link between an endpoint and an event type.
+         * @summary Add a link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async endpointResourceV1AddEventTypeToEndpoint(endpointId: string, eventTypeId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1AddEventTypeToEndpoint(endpointId, eventTypeId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1AddEventTypeToEndpointApi - factory interface
+ * @export
+ */
+export const EndpointResourceV1AddEventTypeToEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = EndpointResourceV1AddEventTypeToEndpointApiFp(configuration)
+    return {
+        /**
+         * Add a link between an endpoint and an event type.
+         * @summary Add a link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1AddEventTypeToEndpoint(endpointId: string, eventTypeId: string, options?: any): AxiosPromise<string> {
+            return localVarFp.endpointResourceV1AddEventTypeToEndpoint(endpointId, eventTypeId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * EndpointResourceV1AddEventTypeToEndpointApi - object-oriented interface
+ * @export
+ * @class EndpointResourceV1AddEventTypeToEndpointApi
+ * @extends {BaseAPI}
+ */
+export class EndpointResourceV1AddEventTypeToEndpointApi extends BaseAPI {
+    /**
+     * Add a link between an endpoint and an event type.
+     * @summary Add a link between an endpoint and an event type
+     * @param {string} endpointId
+     * @param {string} eventTypeId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EndpointResourceV1AddEventTypeToEndpointApi
+     */
+    public endpointResourceV1AddEventTypeToEndpoint(endpointId: string, eventTypeId: string, options?: AxiosRequestConfig) {
+        return EndpointResourceV1AddEventTypeToEndpointApiFp(this.configuration).endpointResourceV1AddEventTypeToEndpoint(endpointId, eventTypeId, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
  * EndpointResourceV1CreateEndpointApi - axios parameter creator
  * @export
  */
@@ -2273,6 +2519,119 @@ export class EndpointResourceV1DeleteEndpointApi extends BaseAPI {
      */
     public endpointResourceV1DeleteEndpoint(id: string, options?: AxiosRequestConfig) {
         return EndpointResourceV1DeleteEndpointApiFp(this.configuration).endpointResourceV1DeleteEndpoint(id, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * EndpointResourceV1DeleteEventTypeFromEndpointApi - axios parameter creator
+ * @export
+ */
+export const EndpointResourceV1DeleteEventTypeFromEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Delete the link between an endpoint and an event type.
+         * @summary Delete the link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1DeleteEventTypeFromEndpoint: async (endpointId: string, eventTypeId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'endpointId' is not null or undefined
+            assertParamExists('endpointResourceV1DeleteEventTypeFromEndpoint', 'endpointId', endpointId)
+            // verify required parameter 'eventTypeId' is not null or undefined
+            assertParamExists('endpointResourceV1DeleteEventTypeFromEndpoint', 'eventTypeId', eventTypeId)
+            const localVarPath = `/endpoints/{endpointId}/eventType/{eventTypeId}`
+                .replace(`{${"endpointId"}}`, encodeURIComponent(String(endpointId)))
+                .replace(`{${"eventTypeId"}}`, encodeURIComponent(String(eventTypeId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1DeleteEventTypeFromEndpointApi - functional programming interface
+ * @export
+ */
+export const EndpointResourceV1DeleteEventTypeFromEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = EndpointResourceV1DeleteEventTypeFromEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Delete the link between an endpoint and an event type.
+         * @summary Delete the link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async endpointResourceV1DeleteEventTypeFromEndpoint(endpointId: string, eventTypeId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1DeleteEventTypeFromEndpoint(endpointId, eventTypeId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1DeleteEventTypeFromEndpointApi - factory interface
+ * @export
+ */
+export const EndpointResourceV1DeleteEventTypeFromEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = EndpointResourceV1DeleteEventTypeFromEndpointApiFp(configuration)
+    return {
+        /**
+         * Delete the link between an endpoint and an event type.
+         * @summary Delete the link between an endpoint and an event type
+         * @param {string} endpointId
+         * @param {string} eventTypeId
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1DeleteEventTypeFromEndpoint(endpointId: string, eventTypeId: string, options?: any): AxiosPromise<string> {
+            return localVarFp.endpointResourceV1DeleteEventTypeFromEndpoint(endpointId, eventTypeId, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * EndpointResourceV1DeleteEventTypeFromEndpointApi - object-oriented interface
+ * @export
+ * @class EndpointResourceV1DeleteEventTypeFromEndpointApi
+ * @extends {BaseAPI}
+ */
+export class EndpointResourceV1DeleteEventTypeFromEndpointApi extends BaseAPI {
+    /**
+     * Delete the link between an endpoint and an event type.
+     * @summary Delete the link between an endpoint and an event type
+     * @param {string} endpointId
+     * @param {string} eventTypeId
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EndpointResourceV1DeleteEventTypeFromEndpointApi
+     */
+    public endpointResourceV1DeleteEventTypeFromEndpoint(endpointId: string, eventTypeId: string, options?: AxiosRequestConfig) {
+        return EndpointResourceV1DeleteEventTypeFromEndpointApiFp(this.configuration).endpointResourceV1DeleteEventTypeFromEndpoint(endpointId, eventTypeId, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -3461,6 +3820,119 @@ export class EndpointResourceV1UpdateEndpointApi extends BaseAPI {
      */
     public endpointResourceV1UpdateEndpoint(id: string, endpointDTO: EndpointDTO, options?: AxiosRequestConfig) {
         return EndpointResourceV1UpdateEndpointApiFp(this.configuration).endpointResourceV1UpdateEndpoint(id, endpointDTO, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * EndpointResourceV1UpdateEventTypesLinkedToEndpointApi - axios parameter creator
+ * @export
+ */
+export const EndpointResourceV1UpdateEventTypesLinkedToEndpointApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Update  links between an endpoint and event types.
+         * @summary Update  links between an endpoint and event types
+         * @param {string} endpointId
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1UpdateEventTypesLinkedToEndpoint: async (endpointId: string, requestBody?: Set<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'endpointId' is not null or undefined
+            assertParamExists('endpointResourceV1UpdateEventTypesLinkedToEndpoint', 'endpointId', endpointId)
+            const localVarPath = `/endpoints/{endpointId}/eventTypes`
+                .replace(`{${"endpointId"}}`, encodeURIComponent(String(endpointId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(requestBody, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1UpdateEventTypesLinkedToEndpointApi - functional programming interface
+ * @export
+ */
+export const EndpointResourceV1UpdateEventTypesLinkedToEndpointApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = EndpointResourceV1UpdateEventTypesLinkedToEndpointApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Update  links between an endpoint and event types.
+         * @summary Update  links between an endpoint and event types
+         * @param {string} endpointId
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId: string, requestBody?: Set<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId, requestBody, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * EndpointResourceV1UpdateEventTypesLinkedToEndpointApi - factory interface
+ * @export
+ */
+export const EndpointResourceV1UpdateEventTypesLinkedToEndpointApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = EndpointResourceV1UpdateEventTypesLinkedToEndpointApiFp(configuration)
+    return {
+        /**
+         * Update  links between an endpoint and event types.
+         * @summary Update  links between an endpoint and event types
+         * @param {string} endpointId
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId: string, requestBody?: Set<string>, options?: any): AxiosPromise<string> {
+            return localVarFp.endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId, requestBody, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * EndpointResourceV1UpdateEventTypesLinkedToEndpointApi - object-oriented interface
+ * @export
+ * @class EndpointResourceV1UpdateEventTypesLinkedToEndpointApi
+ * @extends {BaseAPI}
+ */
+export class EndpointResourceV1UpdateEventTypesLinkedToEndpointApi extends BaseAPI {
+    /**
+     * Update  links between an endpoint and event types.
+     * @summary Update  links between an endpoint and event types
+     * @param {string} endpointId
+     * @param {Set<string>} [requestBody]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EndpointResourceV1UpdateEventTypesLinkedToEndpointApi
+     */
+    public endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId: string, requestBody?: Set<string>, options?: AxiosRequestConfig) {
+        return EndpointResourceV1UpdateEventTypesLinkedToEndpointApiFp(this.configuration).endpointResourceV1UpdateEventTypesLinkedToEndpoint(endpointId, requestBody, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
