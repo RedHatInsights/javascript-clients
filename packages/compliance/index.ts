@@ -22,6 +22,10 @@ export { default as createPolicy } from './CreatePolicy'
 
 
 // end of operations block
+export { default as createTailoring } from './CreateTailoring'
+
+
+// end of operations block
 export { default as deletePolicy } from './DeletePolicy'
 
 
@@ -55,6 +59,10 @@ export { default as profileRule } from './ProfileRule'
 
 // end of operations block
 export { default as profileRules } from './ProfileRules'
+
+
+// end of operations block
+export { default as profileTree } from './ProfileTree'
 
 
 // end of operations block
@@ -167,6 +175,10 @@ export { default as tailoring } from './Tailoring'
 
 // end of operations block
 export { default as tailoringFile } from './TailoringFile'
+
+
+// end of operations block
+export { default as tailoringRuleTree } from './TailoringRuleTree'
 
 
 // end of operations block

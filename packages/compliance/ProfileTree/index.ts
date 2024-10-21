@@ -8,47 +8,47 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CreateTailoring201Response, Errors } from '../types';
+import type { Errors } from '../types';
 
 
-export type TailoringParams = {
+export type ProfileTreeParams = {
   /**
   *
   * @type { any }
-  * @memberof TailoringApi
+  * @memberof ProfileTreeApi
   */
-  policyId: any,
+  securityGuideId: any,
   /**
-  * UUID or OS minor version number
+  *
   * @type { any }
-  * @memberof TailoringApi
+  * @memberof ProfileTreeApi
   */
-  tailoringId: any,
+  profileId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof TailoringApi
+  * @memberof ProfileTreeApi
   */
   xRHIDENTITY?: any,
   options?: AxiosRequestConfig
 }
 
-const isTailoringObjectParams = (params: [TailoringParams] | unknown[]): params is [TailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+const isProfileTreeObjectParams = (params: [ProfileTreeParams] | unknown[]): params is [ProfileTreeParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && true
 }
 /**
-* Returns a Tailoring
-* @summary Request a Tailoring
-* @param {TailoringParams} config with all available params.
+* Returns the Rule Tree of a Profile
+* @summary Request the Rule Tree of a Profile
+* @param {ProfileTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const tailoringParamCreator = async (...config: ([TailoringParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringParams;
-    const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
-    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
-        .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-        .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
+export const profileTreeParamCreator = async (...config: ([ProfileTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isProfileTreeObjectParams(config) ? config[0] : ['securityGuideId', 'profileId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ProfileTreeParams;
+    const { securityGuideId, profileId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}/rule_tree`
+        .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
+        .replace(`{${"profile_id"}}`, encodeURIComponent(String(profileId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
@@ -72,4 +72,4 @@ export const tailoringParamCreator = async (...config: ([TailoringParams] | [any
     };
 }
 
-export default tailoringParamCreator;
+export default profileTreeParamCreator;

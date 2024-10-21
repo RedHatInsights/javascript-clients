@@ -8,56 +8,49 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CreateTailoring201Response, Tailoring } from '../types';
+import type { CreateTailoring201Response, TailoringCreate } from '../types';
 
 
-export type UpdateTailoringParams = {
+export type CreateTailoringParams = {
   /**
   *
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof CreateTailoringApi
   */
   policyId: any,
   /**
-  * UUID or OS minor version number
-  * @type { any }
-  * @memberof UpdateTailoringApi
-  */
-  tailoringId: any,
-  /**
   * For internal use only
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof CreateTailoringApi
   */
   xRHIDENTITY?: any,
   /**
   *
-  * @type { Tailoring }
-  * @memberof UpdateTailoringApi
+  * @type { TailoringCreate }
+  * @memberof CreateTailoringApi
   */
-  tailoring?: Tailoring,
+  tailoringCreate?: TailoringCreate,
   options?: AxiosRequestConfig
 }
 
-const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
+const isCreateTailoringObjectParams = (params: [CreateTailoringParams] | unknown[]): params is [CreateTailoringParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
 }
 /**
-* Updates a Tailoring with the provided value_overrides
-* @summary Update a Tailoring
-* @param {UpdateTailoringParams} config with all available params.
+* Create a Tailoring with the provided attributes (for ImageBuilder only)
+* @summary Create a Tailoring
+* @param {CreateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTailoringParamCreator = async (...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'tailoring', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTailoringParams;
-    const { policyId, tailoringId, xRHIDENTITY, tailoring, options = {} } = params;
-    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
-        .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
-        .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
+export const createTailoringParamCreator = async (...config: ([CreateTailoringParams] | [any, any, TailoringCreate, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isCreateTailoringObjectParams(config) ? config[0] : ['policyId', 'xRHIDENTITY', 'tailoringCreate', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateTailoringParams;
+    const { policyId, xRHIDENTITY, tailoringCreate, options = {} } = params;
+    const localVarPath = `/policies/{policy_id}/tailorings`
+        .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
+    const localVarRequestOptions = { method: 'POST' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -77,8 +70,8 @@ export const updateTailoringParamCreator = async (...config: ([UpdateTailoringPa
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: tailoring,
+        serializeData: tailoringCreate,
     };
 }
 
-export default updateTailoringParamCreator;
+export default createTailoringParamCreator;

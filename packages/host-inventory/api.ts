@@ -857,6 +857,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     groups?: Array<GroupOut>;
+    /**
+     *
+     * @type {SystemProfile}
+     * @memberof HostOut
+     */
+    system_profile?: SystemProfile;
 }
 /**
  *
@@ -948,6 +954,12 @@ export interface HostOutAllOf {
      * @memberof HostOutAllOf
      */
     groups?: Array<GroupOut>;
+    /**
+     *
+     * @type {SystemProfile}
+     * @memberof HostOutAllOf
+     */
+    system_profile?: SystemProfile;
 }
 /**
  * A paginated host search query result with host entries and their Inventory metadata.
@@ -2019,6 +2031,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     third_party_services?: SystemProfileThirdPartyServices;
+    /**
+     *
+     * @type {SystemProfileImageBuilder}
+     * @memberof SystemProfile
+     */
+    image_builder?: SystemProfileImageBuilder;
 }
 
 /**
@@ -2260,6 +2278,25 @@ export interface SystemProfileDnfModule {
      * @memberof SystemProfileDnfModule
      */
     stream?: string;
+}
+/**
+ * Object containing image builder facts
+ * @export
+ * @interface SystemProfileImageBuilder
+ */
+export interface SystemProfileImageBuilder {
+    /**
+     * The compliance policy that was used and applied during the image build
+     * @type {string}
+     * @memberof SystemProfileImageBuilder
+     */
+    compliance_policy_id?: string;
+    /**
+     * The profile that was applied during the image build on which the compliance policy was based
+     * @type {string}
+     * @memberof SystemProfileImageBuilder
+     */
+    compliance_profile_id?: string;
 }
 /**
  * Representation of one installed product
