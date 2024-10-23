@@ -349,6 +349,6 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
     @Override
     public void processOpts() {
       super.processOpts();
-      supportingFiles.removeIf(file -> (file.getDestinationFilename() == "api.ts" || file.getDestinationFilename() == "base.ts" || file.getDestinationFilename() == "common.ts" || file.getDestinationFilename() == "configuration.ts"));
+      supportingFiles.removeIf(file -> (file.getDestinationFilename() == "base.ts" || file.getDestinationFilename() == "common.ts" || file.getDestinationFilename() == "configuration.ts"));
     }
 }

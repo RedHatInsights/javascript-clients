@@ -1,0 +1,13 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils'
+import type { AxiosInstance } from 'axios';
+import {
+{{>endpointList}}  } from './index'
+
+export const client = (BASE_PATH: string, instance: AxiosInstance) => {
+  return APIFactory(BASE_PATH, {
+{{>endpointList}}  }),
+  instance
+}
