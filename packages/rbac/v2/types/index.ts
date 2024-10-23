@@ -266,6 +266,31 @@ export interface WorkspacesBasicWorkspace {
 /**
  *
  * @export
+ * @interface WorkspacesCreateWorkspaceRequest
+ */
+export interface WorkspacesCreateWorkspaceRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'parent_id': string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'description'?: string;
+}
+/**
+ *
+ * @export
  * @interface WorkspacesCreateWorkspaceResponse
  */
 export interface WorkspacesCreateWorkspaceResponse {

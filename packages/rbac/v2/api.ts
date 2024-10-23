@@ -291,6 +291,31 @@ export interface WorkspacesBasicWorkspace {
 /**
  *
  * @export
+ * @interface WorkspacesCreateWorkspaceRequest
+ */
+export interface WorkspacesCreateWorkspaceRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'parent_id': string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'description'?: string;
+}
+/**
+ *
+ * @export
  * @interface WorkspacesCreateWorkspaceResponse
  */
 export interface WorkspacesCreateWorkspaceResponse {
@@ -993,13 +1018,13 @@ export const WorkspacesCreateApiAxiosParamCreator = function (configuration?: Co
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesCreate: async (workspacesBasicWorkspace: WorkspacesBasicWorkspace, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'workspacesBasicWorkspace' is not null or undefined
-            assertParamExists('workspacesCreate', 'workspacesBasicWorkspace', workspacesBasicWorkspace)
+        workspacesCreate: async (workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'workspacesCreateWorkspaceRequest' is not null or undefined
+            assertParamExists('workspacesCreate', 'workspacesCreateWorkspaceRequest', workspacesCreateWorkspaceRequest)
             const localVarPath = `/workspaces/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1019,7 +1044,7 @@ export const WorkspacesCreateApiAxiosParamCreator = function (configuration?: Co
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(workspacesBasicWorkspace, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(workspacesCreateWorkspaceRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1039,12 +1064,12 @@ export const WorkspacesCreateApiFp = function(configuration?: Configuration) {
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesCreateWorkspaceResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesCreate(workspacesBasicWorkspace, options);
+        async workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesCreateWorkspaceResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesCreate(workspacesCreateWorkspaceRequest, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1060,12 +1085,12 @@ export const WorkspacesCreateApiFactory = function (configuration?: Configuratio
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: any): AxiosPromise<WorkspacesCreateWorkspaceResponse> {
-            return localVarFp.workspacesCreate(workspacesBasicWorkspace, options).then((request) => request(axios, basePath));
+        workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: any): AxiosPromise<WorkspacesCreateWorkspaceResponse> {
+            return localVarFp.workspacesCreate(workspacesCreateWorkspaceRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1080,13 +1105,13 @@ export class WorkspacesCreateApi extends BaseAPI {
     /**
      * Create workspace in tenant
      * @summary Create workspace in tenant
-     * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+     * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesCreateApi
      */
-    public workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: AxiosRequestConfig) {
-        return WorkspacesCreateApiFp(this.configuration).workspacesCreate(workspacesBasicWorkspace, options).then((request) => request(this.axios, this.basePath));
+    public workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: AxiosRequestConfig) {
+        return WorkspacesCreateApiFp(this.configuration).workspacesCreate(workspacesCreateWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
