@@ -6,7 +6,7 @@ import type { AxiosInstance } from 'axios';
 import {
 {{>endpointList}}  } from './index';
 
-export const client = (BASE_PATH: string, instance: AxiosInstance) => {
+export const {{{clientName}}} = (BASE_PATH: string, instance: AxiosInstance) => {
   return APIFactory(BASE_PATH, {
 {{>endpointList}}  }),
   instance
