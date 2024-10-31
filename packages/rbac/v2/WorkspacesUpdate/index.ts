@@ -17,7 +17,7 @@ export type WorkspacesUpdateParams = {
   * @type { string }
   * @memberof WorkspacesUpdateApi
   */
-  uuid: string,
+  id: string,
   /**
   *
   * @type { WorkspacesUpdateWorkspaceRequest }
@@ -28,7 +28,7 @@ export type WorkspacesUpdateParams = {
 }
 
 const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unknown[]): params is [WorkspacesUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'workspacesUpdateWorkspaceRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesUpdateWorkspaceRequest')
 }
 /**
 * Edit a workspace
@@ -38,10 +38,10 @@ const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unkno
 * @throws {RequiredError}
 */
 export const workspacesUpdateParamCreator = async (...config: ([WorkspacesUpdateParams] | [string, WorkspacesUpdateWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesUpdateObjectParams(config) ? config[0] : ['uuid', 'workspacesUpdateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesUpdateParams;
-    const { uuid, workspacesUpdateWorkspaceRequest, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}/`
-        .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+    const params = isWorkspacesUpdateObjectParams(config) ? config[0] : ['id', 'workspacesUpdateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesUpdateParams;
+    const { id, workspacesUpdateWorkspaceRequest, options = {} } = params;
+    const localVarPath = `/workspaces/{id}/`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'PUT' as Method, ...options};

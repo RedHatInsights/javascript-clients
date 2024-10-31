@@ -299,7 +299,7 @@ export interface WorkspacesCreateWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -532,7 +532,7 @@ export interface WorkspacesPatchWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -583,7 +583,7 @@ export interface WorkspacesRead200Response {
      * @type {string}
      * @memberof WorkspacesRead200Response
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -634,7 +634,7 @@ export interface WorkspacesReadWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -691,7 +691,7 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      * @type {string}
      * @memberof WorkspacesReadWorkspaceWithAncestryResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -811,7 +811,7 @@ export interface WorkspacesUpdateWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -862,7 +862,7 @@ export interface WorkspacesWorkspace {
      * @type {string}
      * @memberof WorkspacesWorkspace
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -913,7 +913,7 @@ export interface WorkspacesWorkspaceAncestor {
      * @type {string}
      * @memberof WorkspacesWorkspaceAncestor
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
