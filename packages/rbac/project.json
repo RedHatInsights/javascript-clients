@@ -39,6 +39,13 @@
         "jestConfig": "packages/rbac/jest.config.ts"
       }
     },
+    "integration": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/rbac/jest.integration.config.ts"
+      }
+    },
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {

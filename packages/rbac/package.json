@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/RedHatInsights/javascript-clients#readme",
   "scripts": {
-    "doc": "typedoc"
+    "doc": "typedoc",
+    "serve:workspaces": "./v2/tests/integration/scripts/serve.sh"
   },
   "dependencies": {
     "@redhat-cloud-services/javascript-clients-shared": "^1.2.4",
