@@ -2,12 +2,19 @@
 /* eslint-disable */
 
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
-import type { AxiosInstance } from 'axios';
+import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
 {{>endpointList}}  } from './index';
 
-export const {{{clientName}}} = (BASE_PATH: string, instance: AxiosInstance) => {
-  return APIFactory(BASE_PATH, {
-{{>endpointList}}  }),
-  instance
+export const {{{clientName}}} = (BASE_PATH: string, instance?: ApiConfig) => {
+  if (instance) {
+    return APIFactory(BASE_PATH, {
+{{>endpointList}}    },
+    instance);
+  } else {
+    return APIFactory(BASE_PATH, {
+{{>endpointList}}    });
+  }
 }
+
+export default {{{clientName}}};
