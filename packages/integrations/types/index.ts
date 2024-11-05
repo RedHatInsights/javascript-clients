@@ -254,14 +254,51 @@ export interface ApplicationDTO {
     'bundle_id': string;
     /**
      *
-     * @type {string}
+     * @type {Set<EventTypeDTO>}
      * @memberof ApplicationDTO
+     */
+    'event_types'?: Set<EventTypeDTO>;
+}
+/**
+ *
+ * @export
+ * @interface ApplicationDTO1
+ */
+export interface ApplicationDTO1 {
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
+     */
+    'bundle_id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ApplicationDTO1
      */
     'owner_role'?: string;
     /**
      *
      * @type {string}
-     * @memberof ApplicationDTO
+     * @memberof ApplicationDTO1
      */
     'created'?: string;
 }
@@ -438,6 +475,37 @@ export interface Bundle {
      * @memberof Bundle
      */
     'display_name': string;
+}
+/**
+ *
+ * @export
+ * @interface BundleDTO
+ */
+export interface BundleDTO {
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof BundleDTO
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {Set<ApplicationDTO>}
+     * @memberof BundleDTO
+     */
+    'applications'?: Set<ApplicationDTO>;
 }
 /**
  *
@@ -798,6 +866,18 @@ export interface EndpointDTO {
      * @memberof EndpointDTO
      */
     'properties'?: object;
+    /**
+     *
+     * @type {Set<BundleDTO>}
+     * @memberof EndpointDTO
+     */
+    'event_types_group_by_bundles_and_applications'?: Set<BundleDTO>;
+    /**
+     *
+     * @type {Set<string>}
+     * @memberof EndpointDTO
+     */
+    'event_types'?: Set<string>;
 }
 
 
@@ -1160,6 +1240,43 @@ export interface EventTypeBehaviorId {
      * @memberof EventTypeBehaviorId
      */
     'behaviorGroupId': string;
+}
+/**
+ *
+ * @export
+ * @interface EventTypeDTO
+ */
+export interface EventTypeDTO {
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'id'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'display_name': string;
+    /**
+     *
+     * @type {string}
+     * @memberof EventTypeDTO
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {ApplicationDTO}
+     * @memberof EventTypeDTO
+     */
+    'application'?: ApplicationDTO;
 }
 /**
  *
@@ -1633,10 +1750,10 @@ export interface PageNotificationHistory {
 export interface PagerDutyPropertiesDTO {
     /**
      *
-     * @type {PagerDutySeverity}
+     * @type {PagerDutySeverityDTO}
      * @memberof PagerDutyPropertiesDTO
      */
-    'severity': PagerDutySeverity;
+    'severity': PagerDutySeverityDTO;
     /**
      *
      * @type {string}
@@ -1660,6 +1777,22 @@ export const PagerDutySeverity = {
 } as const;
 
 export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutySeverity];
+
+
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+
+export const PagerDutySeverityDTO = {
+    Critical: 'critical',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info'
+} as const;
+
+export type PagerDutySeverityDTO = typeof PagerDutySeverityDTO[keyof typeof PagerDutySeverityDTO];
 
 
 /**

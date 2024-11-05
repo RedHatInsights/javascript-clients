@@ -17,7 +17,7 @@ export type WorkspacesPatchParams = {
   * @type { string }
   * @memberof WorkspacesPatchApi
   */
-  uuid: string,
+  id: string,
   /**
   *
   * @type { WorkspacesPatchWorkspaceRequest }
@@ -28,7 +28,7 @@ export type WorkspacesPatchParams = {
 }
 
 const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown[]): params is [WorkspacesPatchParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'workspacesPatchWorkspaceRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesPatchWorkspaceRequest')
 }
 /**
 *
@@ -37,10 +37,10 @@ const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown
 * @throws {RequiredError}
 */
 export const workspacesPatchParamCreator = async (...config: ([WorkspacesPatchParams] | [string, WorkspacesPatchWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesPatchObjectParams(config) ? config[0] : ['uuid', 'workspacesPatchWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesPatchParams;
-    const { uuid, workspacesPatchWorkspaceRequest, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}/`
-        .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+    const params = isWorkspacesPatchObjectParams(config) ? config[0] : ['id', 'workspacesPatchWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesPatchParams;
+    const { id, workspacesPatchWorkspaceRequest, options = {} } = params;
+    const localVarPath = `/workspaces/{id}/`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'PATCH' as Method, ...options};

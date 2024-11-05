@@ -17,12 +17,12 @@ export type WorkspacesDeleteParams = {
   * @type { string }
   * @memberof WorkspacesDeleteApi
   */
-  uuid: string,
+  id: string,
   options?: AxiosRequestConfig
 }
 
 const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unknown[]): params is [WorkspacesDeleteParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }
 /**
 * Delete a workspace
@@ -32,10 +32,10 @@ const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unkno
 * @throws {RequiredError}
 */
 export const workspacesDeleteParamCreator = async (...config: ([WorkspacesDeleteParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
-    const { uuid, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}/`
-        .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+    const params = isWorkspacesDeleteObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesDeleteParams;
+    const { id, options = {} } = params;
+    const localVarPath = `/workspaces/{id}/`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'DELETE' as Method, ...options};

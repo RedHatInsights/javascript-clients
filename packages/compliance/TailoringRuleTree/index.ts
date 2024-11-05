@@ -8,56 +8,50 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CreateTailoring201Response, Tailoring } from '../types';
+import type { Errors } from '../types';
 
 
-export type UpdateTailoringParams = {
+export type TailoringRuleTreeParams = {
   /**
   *
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringRuleTreeApi
   */
   policyId: any,
   /**
-  * UUID or OS minor version number
+  *
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringRuleTreeApi
   */
   tailoringId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof UpdateTailoringApi
+  * @memberof TailoringRuleTreeApi
   */
   xRHIDENTITY?: any,
-  /**
-  *
-  * @type { Tailoring }
-  * @memberof UpdateTailoringApi
-  */
-  tailoring?: Tailoring,
   options?: AxiosRequestConfig
 }
 
-const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
+const isTailoringRuleTreeObjectParams = (params: [TailoringRuleTreeParams] | unknown[]): params is [TailoringRuleTreeParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
 }
 /**
-* Updates a Tailoring with the provided value_overrides
-* @summary Update a Tailoring
-* @param {UpdateTailoringParams} config with all available params.
+* Returns the Rule Tree of a Tailoring
+* @summary Request the Rule Tree of a Tailoring
+* @param {TailoringRuleTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateTailoringParamCreator = async (...config: ([UpdateTailoringParams] | [any, any, any, Tailoring, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateTailoringObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'tailoring', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateTailoringParams;
-    const { policyId, tailoringId, xRHIDENTITY, tailoring, options = {} } = params;
-    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}`
+export const tailoringRuleTreeParamCreator = async (...config: ([TailoringRuleTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isTailoringRuleTreeObjectParams(config) ? config[0] : ['policyId', 'tailoringId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as TailoringRuleTreeParams;
+    const { policyId, tailoringId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rule_tree`
         .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
         .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-    const localVarRequestOptions = { method: 'PATCH' as Method, ...options};
+    const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
@@ -69,16 +63,13 @@ export const updateTailoringParamCreator = async (...config: ([UpdateTailoringPa
 
 
 
-    localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
     setSearchParams(localVarUrlObj, localVarQueryParameter);
     localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
 
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: tailoring,
     };
 }
 
-export default updateTailoringParamCreator;
+export default tailoringRuleTreeParamCreator;

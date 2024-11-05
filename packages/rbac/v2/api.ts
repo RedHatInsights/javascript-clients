@@ -291,6 +291,31 @@ export interface WorkspacesBasicWorkspace {
 /**
  *
  * @export
+ * @interface WorkspacesCreateWorkspaceRequest
+ */
+export interface WorkspacesCreateWorkspaceRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'parent_id': string;
+    /**
+     * Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'name': string;
+    /**
+     * Description of Workspace A
+     * @type {string}
+     * @memberof WorkspacesCreateWorkspaceRequest
+     */
+    'description'?: string;
+}
+/**
+ *
+ * @export
  * @interface WorkspacesCreateWorkspaceResponse
  */
 export interface WorkspacesCreateWorkspaceResponse {
@@ -299,7 +324,7 @@ export interface WorkspacesCreateWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -532,7 +557,7 @@ export interface WorkspacesPatchWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesPatchWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -583,7 +608,7 @@ export interface WorkspacesRead200Response {
      * @type {string}
      * @memberof WorkspacesRead200Response
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -634,7 +659,7 @@ export interface WorkspacesReadWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesReadWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -691,7 +716,7 @@ export interface WorkspacesReadWorkspaceWithAncestryResponse {
      * @type {string}
      * @memberof WorkspacesReadWorkspaceWithAncestryResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -811,7 +836,7 @@ export interface WorkspacesUpdateWorkspaceResponse {
      * @type {string}
      * @memberof WorkspacesUpdateWorkspaceResponse
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -862,7 +887,7 @@ export interface WorkspacesWorkspace {
      * @type {string}
      * @memberof WorkspacesWorkspace
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -913,7 +938,7 @@ export interface WorkspacesWorkspaceAncestor {
      * @type {string}
      * @memberof WorkspacesWorkspaceAncestor
      */
-    'uuid': string;
+    'id': string;
     /**
      *
      * @type {string}
@@ -993,13 +1018,13 @@ export const WorkspacesCreateApiAxiosParamCreator = function (configuration?: Co
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesCreate: async (workspacesBasicWorkspace: WorkspacesBasicWorkspace, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'workspacesBasicWorkspace' is not null or undefined
-            assertParamExists('workspacesCreate', 'workspacesBasicWorkspace', workspacesBasicWorkspace)
+        workspacesCreate: async (workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'workspacesCreateWorkspaceRequest' is not null or undefined
+            assertParamExists('workspacesCreate', 'workspacesCreateWorkspaceRequest', workspacesCreateWorkspaceRequest)
             const localVarPath = `/workspaces/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1019,7 +1044,7 @@ export const WorkspacesCreateApiAxiosParamCreator = function (configuration?: Co
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(workspacesBasicWorkspace, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(workspacesCreateWorkspaceRequest, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1039,12 +1064,12 @@ export const WorkspacesCreateApiFp = function(configuration?: Configuration) {
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesCreateWorkspaceResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesCreate(workspacesBasicWorkspace, options);
+        async workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesCreateWorkspaceResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesCreate(workspacesCreateWorkspaceRequest, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1060,12 +1085,12 @@ export const WorkspacesCreateApiFactory = function (configuration?: Configuratio
         /**
          * Create workspace in tenant
          * @summary Create workspace in tenant
-         * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+         * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: any): AxiosPromise<WorkspacesCreateWorkspaceResponse> {
-            return localVarFp.workspacesCreate(workspacesBasicWorkspace, options).then((request) => request(axios, basePath));
+        workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: any): AxiosPromise<WorkspacesCreateWorkspaceResponse> {
+            return localVarFp.workspacesCreate(workspacesCreateWorkspaceRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1080,13 +1105,13 @@ export class WorkspacesCreateApi extends BaseAPI {
     /**
      * Create workspace in tenant
      * @summary Create workspace in tenant
-     * @param {WorkspacesBasicWorkspace} workspacesBasicWorkspace
+     * @param {WorkspacesCreateWorkspaceRequest} workspacesCreateWorkspaceRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesCreateApi
      */
-    public workspacesCreate(workspacesBasicWorkspace: WorkspacesBasicWorkspace, options?: AxiosRequestConfig) {
-        return WorkspacesCreateApiFp(this.configuration).workspacesCreate(workspacesBasicWorkspace, options).then((request) => request(this.axios, this.basePath));
+    public workspacesCreate(workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest, options?: AxiosRequestConfig) {
+        return WorkspacesCreateApiFp(this.configuration).workspacesCreate(workspacesCreateWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1101,15 +1126,15 @@ export const WorkspacesDeleteApiAxiosParamCreator = function (configuration?: Co
         /**
          * Delete a workspace
          * @summary Delete the workspace
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesDelete: async (uuid: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('workspacesDelete', 'uuid', uuid)
-            const localVarPath = `/workspaces/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+        workspacesDelete: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('workspacesDelete', 'id', id)
+            const localVarPath = `/workspaces/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1145,12 +1170,12 @@ export const WorkspacesDeleteApiFp = function(configuration?: Configuration) {
         /**
          * Delete a workspace
          * @summary Delete the workspace
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesDelete(uuid: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesDelete(uuid, options);
+        async workspacesDelete(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesDelete(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1166,12 +1191,12 @@ export const WorkspacesDeleteApiFactory = function (configuration?: Configuratio
         /**
          * Delete a workspace
          * @summary Delete the workspace
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesDelete(uuid: string, options?: any): AxiosPromise<void> {
-            return localVarFp.workspacesDelete(uuid, options).then((request) => request(axios, basePath));
+        workspacesDelete(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.workspacesDelete(id, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1186,13 +1211,13 @@ export class WorkspacesDeleteApi extends BaseAPI {
     /**
      * Delete a workspace
      * @summary Delete the workspace
-     * @param {string} uuid Unique identification
+     * @param {string} id Unique identification
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesDeleteApi
      */
-    public workspacesDelete(uuid: string, options?: AxiosRequestConfig) {
-        return WorkspacesDeleteApiFp(this.configuration).workspacesDelete(uuid, options).then((request) => request(this.axios, this.basePath));
+    public workspacesDelete(id: string, options?: AxiosRequestConfig) {
+        return WorkspacesDeleteApiFp(this.configuration).workspacesDelete(id, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1329,18 +1354,18 @@ export const WorkspacesPatchApiAxiosParamCreator = function (configuration?: Con
     return {
         /**
          *
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesPatchWorkspaceRequest} workspacesPatchWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesPatch: async (uuid: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('workspacesPatch', 'uuid', uuid)
+        workspacesPatch: async (id: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('workspacesPatch', 'id', id)
             // verify required parameter 'workspacesPatchWorkspaceRequest' is not null or undefined
             assertParamExists('workspacesPatch', 'workspacesPatchWorkspaceRequest', workspacesPatchWorkspaceRequest)
-            const localVarPath = `/workspaces/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarPath = `/workspaces/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1378,13 +1403,13 @@ export const WorkspacesPatchApiFp = function(configuration?: Configuration) {
     return {
         /**
          *
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesPatchWorkspaceRequest} workspacesPatchWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesPatch(uuid: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesPatchWorkspaceResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesPatch(uuid, workspacesPatchWorkspaceRequest, options);
+        async workspacesPatch(id: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesPatchWorkspaceResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesPatch(id, workspacesPatchWorkspaceRequest, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1399,13 +1424,13 @@ export const WorkspacesPatchApiFactory = function (configuration?: Configuration
     return {
         /**
          *
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesPatchWorkspaceRequest} workspacesPatchWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesPatch(uuid: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: any): AxiosPromise<WorkspacesPatchWorkspaceResponse> {
-            return localVarFp.workspacesPatch(uuid, workspacesPatchWorkspaceRequest, options).then((request) => request(axios, basePath));
+        workspacesPatch(id: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: any): AxiosPromise<WorkspacesPatchWorkspaceResponse> {
+            return localVarFp.workspacesPatch(id, workspacesPatchWorkspaceRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1419,14 +1444,14 @@ export const WorkspacesPatchApiFactory = function (configuration?: Configuration
 export class WorkspacesPatchApi extends BaseAPI {
     /**
      *
-     * @param {string} uuid Unique identification
+     * @param {string} id Unique identification
      * @param {WorkspacesPatchWorkspaceRequest} workspacesPatchWorkspaceRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesPatchApi
      */
-    public workspacesPatch(uuid: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: AxiosRequestConfig) {
-        return WorkspacesPatchApiFp(this.configuration).workspacesPatch(uuid, workspacesPatchWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
+    public workspacesPatch(id: string, workspacesPatchWorkspaceRequest: WorkspacesPatchWorkspaceRequest, options?: AxiosRequestConfig) {
+        return WorkspacesPatchApiFp(this.configuration).workspacesPatch(id, workspacesPatchWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1441,16 +1466,16 @@ export const WorkspacesReadApiAxiosParamCreator = function (configuration?: Conf
         /**
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesRead: async (uuid: string, includeAncestry?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('workspacesRead', 'uuid', uuid)
-            const localVarPath = `/workspaces/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+        workspacesRead: async (id: string, includeAncestry?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('workspacesRead', 'id', id)
+            const localVarPath = `/workspaces/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1490,13 +1515,13 @@ export const WorkspacesReadApiFp = function(configuration?: Configuration) {
         /**
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesRead(uuid: string, includeAncestry?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesRead200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesRead(uuid, includeAncestry, options);
+        async workspacesRead(id: string, includeAncestry?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesRead200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesRead(id, includeAncestry, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1512,13 +1537,13 @@ export const WorkspacesReadApiFactory = function (configuration?: Configuration,
         /**
          * Get a workspace in tenant
          * @summary Get a workspace in tenant
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesRead(uuid: string, includeAncestry?: boolean, options?: any): AxiosPromise<WorkspacesRead200Response> {
-            return localVarFp.workspacesRead(uuid, includeAncestry, options).then((request) => request(axios, basePath));
+        workspacesRead(id: string, includeAncestry?: boolean, options?: any): AxiosPromise<WorkspacesRead200Response> {
+            return localVarFp.workspacesRead(id, includeAncestry, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1533,14 +1558,14 @@ export class WorkspacesReadApi extends BaseAPI {
     /**
      * Get a workspace in tenant
      * @summary Get a workspace in tenant
-     * @param {string} uuid Unique identification
+     * @param {string} id Unique identification
      * @param {boolean} [includeAncestry] When true, the response will include the ancestry of the workspace.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesReadApi
      */
-    public workspacesRead(uuid: string, includeAncestry?: boolean, options?: AxiosRequestConfig) {
-        return WorkspacesReadApiFp(this.configuration).workspacesRead(uuid, includeAncestry, options).then((request) => request(this.axios, this.basePath));
+    public workspacesRead(id: string, includeAncestry?: boolean, options?: AxiosRequestConfig) {
+        return WorkspacesReadApiFp(this.configuration).workspacesRead(id, includeAncestry, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1555,18 +1580,18 @@ export const WorkspacesUpdateApiAxiosParamCreator = function (configuration?: Co
         /**
          * Edit a workspace
          * @summary Edit the workspace name or description
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesUpdateWorkspaceRequest} workspacesUpdateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesUpdate: async (uuid: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'uuid' is not null or undefined
-            assertParamExists('workspacesUpdate', 'uuid', uuid)
+        workspacesUpdate: async (id: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('workspacesUpdate', 'id', id)
             // verify required parameter 'workspacesUpdateWorkspaceRequest' is not null or undefined
             assertParamExists('workspacesUpdate', 'workspacesUpdateWorkspaceRequest', workspacesUpdateWorkspaceRequest)
-            const localVarPath = `/workspaces/{uuid}/`
-                .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+            const localVarPath = `/workspaces/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1605,13 +1630,13 @@ export const WorkspacesUpdateApiFp = function(configuration?: Configuration) {
         /**
          * Edit a workspace
          * @summary Edit the workspace name or description
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesUpdateWorkspaceRequest} workspacesUpdateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async workspacesUpdate(uuid: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesUpdateWorkspaceResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesUpdate(uuid, workspacesUpdateWorkspaceRequest, options);
+        async workspacesUpdate(id: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkspacesUpdateWorkspaceResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.workspacesUpdate(id, workspacesUpdateWorkspaceRequest, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1627,13 +1652,13 @@ export const WorkspacesUpdateApiFactory = function (configuration?: Configuratio
         /**
          * Edit a workspace
          * @summary Edit the workspace name or description
-         * @param {string} uuid Unique identification
+         * @param {string} id Unique identification
          * @param {WorkspacesUpdateWorkspaceRequest} workspacesUpdateWorkspaceRequest
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        workspacesUpdate(uuid: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: any): AxiosPromise<WorkspacesUpdateWorkspaceResponse> {
-            return localVarFp.workspacesUpdate(uuid, workspacesUpdateWorkspaceRequest, options).then((request) => request(axios, basePath));
+        workspacesUpdate(id: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: any): AxiosPromise<WorkspacesUpdateWorkspaceResponse> {
+            return localVarFp.workspacesUpdate(id, workspacesUpdateWorkspaceRequest, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1648,14 +1673,14 @@ export class WorkspacesUpdateApi extends BaseAPI {
     /**
      * Edit a workspace
      * @summary Edit the workspace name or description
-     * @param {string} uuid Unique identification
+     * @param {string} id Unique identification
      * @param {WorkspacesUpdateWorkspaceRequest} workspacesUpdateWorkspaceRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof WorkspacesUpdateApi
      */
-    public workspacesUpdate(uuid: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: AxiosRequestConfig) {
-        return WorkspacesUpdateApiFp(this.configuration).workspacesUpdate(uuid, workspacesUpdateWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
+    public workspacesUpdate(id: string, workspacesUpdateWorkspaceRequest: WorkspacesUpdateWorkspaceRequest, options?: AxiosRequestConfig) {
+        return WorkspacesUpdateApiFp(this.configuration).workspacesUpdate(id, workspacesUpdateWorkspaceRequest, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

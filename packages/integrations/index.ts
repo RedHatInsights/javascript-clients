@@ -2,11 +2,19 @@
 
 export * from './types'
 
+export { default as endpointResourceV1AddEventTypeToEndpoint } from './EndpointResourceV1AddEventTypeToEndpoint'
+
+
+// end of operations block
 export { default as endpointResourceV1CreateEndpoint } from './EndpointResourceV1CreateEndpoint'
 
 
 // end of operations block
 export { default as endpointResourceV1DeleteEndpoint } from './EndpointResourceV1DeleteEndpoint'
+
+
+// end of operations block
+export { default as endpointResourceV1DeleteEventTypeFromEndpoint } from './EndpointResourceV1DeleteEventTypeFromEndpoint'
 
 
 // end of operations block
@@ -47,6 +55,10 @@ export { default as endpointResourceV1TestEndpoint } from './EndpointResourceV1T
 
 // end of operations block
 export { default as endpointResourceV1UpdateEndpoint } from './EndpointResourceV1UpdateEndpoint'
+
+
+// end of operations block
+export { default as endpointResourceV1UpdateEventTypesLinkedToEndpoint } from './EndpointResourceV1UpdateEventTypesLinkedToEndpoint'
 
 
 // end of operations block

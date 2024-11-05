@@ -5,6 +5,7 @@ AssignRules/index.ts
 AssignSystem/index.ts
 AssignSystems/index.ts
 CreatePolicy/index.ts
+CreateTailoring/index.ts
 DeletePolicy/index.ts
 DeleteReport/index.ts
 Policies/index.ts
@@ -14,6 +15,7 @@ PolicySystemsOS/index.ts
 Profile/index.ts
 ProfileRule/index.ts
 ProfileRules/index.ts
+ProfileTree/index.ts
 Profiles/index.ts
 Report/index.ts
 ReportRuleResults/index.ts
@@ -42,6 +44,7 @@ SystemsOS/index.ts
 SystemsPolicies/index.ts
 Tailoring/index.ts
 TailoringFile/index.ts
+TailoringRuleTree/index.ts
 TailoringRules/index.ts
 Tailorings/index.ts
 UnassignRule/index.ts

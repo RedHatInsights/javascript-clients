@@ -1,7 +1,9 @@
 .gitignore
 .npmignore
+EndpointResourceV1AddEventTypeToEndpoint/index.ts
 EndpointResourceV1CreateEndpoint/index.ts
 EndpointResourceV1DeleteEndpoint/index.ts
+EndpointResourceV1DeleteEventTypeFromEndpoint/index.ts
 EndpointResourceV1DisableEndpoint/index.ts
 EndpointResourceV1EnableEndpoint/index.ts
 EndpointResourceV1GetDetailedEndpointHistory/index.ts
@@ -12,6 +14,7 @@ EndpointResourceV1GetOrCreateDrawerSubscriptionEndpoint/index.ts
 EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint/index.ts
 EndpointResourceV1TestEndpoint/index.ts
 EndpointResourceV1UpdateEndpoint/index.ts
+EndpointResourceV1UpdateEventTypesLinkedToEndpoint/index.ts
 api.ts
 base.ts
 common.ts

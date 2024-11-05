@@ -65,6 +65,32 @@ export interface CreatePolicy201ResponseData {
 /**
  *
  * @export
+ * @interface CreateTailoring201Response
+ */
+export interface CreateTailoring201Response {
+    /**
+     *
+     * @type {CreateTailoring201ResponseData}
+     * @memberof CreateTailoring201Response
+     */
+    'data'?: CreateTailoring201ResponseData;
+}
+/**
+ *
+ * @export
+ * @interface CreateTailoring201ResponseData
+ */
+export interface CreateTailoring201ResponseData {
+    /**
+     *
+     * @type {Tailoring}
+     * @memberof CreateTailoring201ResponseData
+     */
+    'schema'?: Tailoring;
+}
+/**
+ *
+ * @export
  * @interface Errors
  */
 export interface Errors {
@@ -1369,28 +1395,15 @@ export type TailoringTypeEnum = typeof TailoringTypeEnum[keyof typeof TailoringT
 /**
  *
  * @export
- * @interface Tailoring200Response
+ * @interface TailoringCreate
  */
-export interface Tailoring200Response {
+export interface TailoringCreate {
     /**
-     *
-     * @type {Tailoring200ResponseData}
-     * @memberof Tailoring200Response
+     * Minor version of the Operating System that the Tailoring covers
+     * @type {any}
+     * @memberof TailoringCreate
      */
-    'data'?: Tailoring200ResponseData;
-}
-/**
- *
- * @export
- * @interface Tailoring200ResponseData
- */
-export interface Tailoring200ResponseData {
-    /**
-     *
-     * @type {Tailoring}
-     * @memberof Tailoring200ResponseData
-     */
-    'schema'?: Tailoring;
+    'os_minor_version'?: any;
 }
 /**
  * Defines customizations of rules and variables for a set of profiles
@@ -2253,6 +2266,128 @@ export class CreatePolicyApi extends BaseAPI {
      */
     public createPolicy(xRHIDENTITY?: any, policy?: Policy, options?: AxiosRequestConfig) {
         return CreatePolicyApiFp(this.configuration).createPolicy(xRHIDENTITY, policy, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * CreateTailoringApi - axios parameter creator
+ * @export
+ */
+export const CreateTailoringApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a Tailoring with the provided attributes (for ImageBuilder only)
+         * @summary Create a Tailoring
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {TailoringCreate} [tailoringCreate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createTailoring: async (policyId: any, xRHIDENTITY?: any, tailoringCreate?: TailoringCreate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('createTailoring', 'policyId', policyId)
+            const localVarPath = `/policies/{policy_id}/tailorings`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(tailoringCreate, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * CreateTailoringApi - functional programming interface
+ * @export
+ */
+export const CreateTailoringApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CreateTailoringApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Create a Tailoring with the provided attributes (for ImageBuilder only)
+         * @summary Create a Tailoring
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {TailoringCreate} [tailoringCreate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createTailoring(policyId: any, xRHIDENTITY?: any, tailoringCreate?: TailoringCreate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateTailoring201Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createTailoring(policyId, xRHIDENTITY, tailoringCreate, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * CreateTailoringApi - factory interface
+ * @export
+ */
+export const CreateTailoringApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CreateTailoringApiFp(configuration)
+    return {
+        /**
+         * Create a Tailoring with the provided attributes (for ImageBuilder only)
+         * @summary Create a Tailoring
+         * @param {any} policyId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {TailoringCreate} [tailoringCreate]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createTailoring(policyId: any, xRHIDENTITY?: any, tailoringCreate?: TailoringCreate, options?: any): AxiosPromise<CreateTailoring201Response> {
+            return localVarFp.createTailoring(policyId, xRHIDENTITY, tailoringCreate, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * CreateTailoringApi - object-oriented interface
+ * @export
+ * @class CreateTailoringApi
+ * @extends {BaseAPI}
+ */
+export class CreateTailoringApi extends BaseAPI {
+    /**
+     * Create a Tailoring with the provided attributes (for ImageBuilder only)
+     * @summary Create a Tailoring
+     * @param {any} policyId
+     * @param {any} [xRHIDENTITY] For internal use only
+     * @param {TailoringCreate} [tailoringCreate]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CreateTailoringApi
+     */
+    public createTailoring(policyId: any, xRHIDENTITY?: any, tailoringCreate?: TailoringCreate, options?: AxiosRequestConfig) {
+        return CreateTailoringApiFp(this.configuration).createTailoring(policyId, xRHIDENTITY, tailoringCreate, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -3449,6 +3584,128 @@ export class ProfileRulesApi extends BaseAPI {
      */
     public profileRules(securityGuideId: any, profileId: any, xRHIDENTITY?: any, limit?: any, offset?: any, idsOnly?: any, sortBy?: any, filter?: any, options?: AxiosRequestConfig) {
         return ProfileRulesApiFp(this.configuration).profileRules(securityGuideId, profileId, xRHIDENTITY, limit, offset, idsOnly, sortBy, filter, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfileTreeApi - axios parameter creator
+ * @export
+ */
+export const ProfileTreeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns the Rule Tree of a Profile
+         * @summary Request the Rule Tree of a Profile
+         * @param {any} securityGuideId
+         * @param {any} profileId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profileTree: async (securityGuideId: any, profileId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'securityGuideId' is not null or undefined
+            assertParamExists('profileTree', 'securityGuideId', securityGuideId)
+            // verify required parameter 'profileId' is not null or undefined
+            assertParamExists('profileTree', 'profileId', profileId)
+            const localVarPath = `/security_guides/{security_guide_id}/profiles/{profile_id}/rule_tree`
+                .replace(`{${"security_guide_id"}}`, encodeURIComponent(String(securityGuideId)))
+                .replace(`{${"profile_id"}}`, encodeURIComponent(String(profileId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ProfileTreeApi - functional programming interface
+ * @export
+ */
+export const ProfileTreeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfileTreeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Profile
+         * @summary Request the Rule Tree of a Profile
+         * @param {any} securityGuideId
+         * @param {any} profileId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async profileTree(securityGuideId: any, profileId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.profileTree(securityGuideId, profileId, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfileTreeApi - factory interface
+ * @export
+ */
+export const ProfileTreeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfileTreeApiFp(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Profile
+         * @summary Request the Rule Tree of a Profile
+         * @param {any} securityGuideId
+         * @param {any} profileId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        profileTree(securityGuideId: any, profileId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<any> {
+            return localVarFp.profileTree(securityGuideId, profileId, xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ProfileTreeApi - object-oriented interface
+ * @export
+ * @class ProfileTreeApi
+ * @extends {BaseAPI}
+ */
+export class ProfileTreeApi extends BaseAPI {
+    /**
+     * Returns the Rule Tree of a Profile
+     * @summary Request the Rule Tree of a Profile
+     * @param {any} securityGuideId
+     * @param {any} profileId
+     * @param {any} [xRHIDENTITY] For internal use only
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileTreeApi
+     */
+    public profileTree(securityGuideId: any, profileId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
+        return ProfileTreeApiFp(this.configuration).profileTree(securityGuideId, profileId, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7059,7 +7316,7 @@ export const TailoringApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailoring200Response>> {
+        async tailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateTailoring201Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.tailoring(policyId, tailoringId, xRHIDENTITY, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -7082,7 +7339,7 @@ export const TailoringApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<Tailoring200Response> {
+        tailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<CreateTailoring201Response> {
             return localVarFp.tailoring(policyId, tailoringId, xRHIDENTITY, options).then((request) => request(axios, basePath));
         },
     };
@@ -7229,6 +7486,128 @@ export class TailoringFileApi extends BaseAPI {
      */
     public tailoringFile(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
         return TailoringFileApiFp(this.configuration).tailoringFile(policyId, tailoringId, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * TailoringRuleTreeApi - axios parameter creator
+ * @export
+ */
+export const TailoringRuleTreeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Returns the Rule Tree of a Tailoring
+         * @summary Request the Rule Tree of a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringRuleTree: async (policyId: any, tailoringId: any, xRHIDENTITY?: any, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'policyId' is not null or undefined
+            assertParamExists('tailoringRuleTree', 'policyId', policyId)
+            // verify required parameter 'tailoringId' is not null or undefined
+            assertParamExists('tailoringRuleTree', 'tailoringId', tailoringId)
+            const localVarPath = `/policies/{policy_id}/tailorings/{tailoring_id}/rule_tree`
+                .replace(`{${"policy_id"}}`, encodeURIComponent(String(policyId)))
+                .replace(`{${"tailoring_id"}}`, encodeURIComponent(String(tailoringId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (xRHIDENTITY != null) {
+                localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
+                    ? xRHIDENTITY
+                    : JSON.stringify(xRHIDENTITY);
+            }
+
+
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * TailoringRuleTreeApi - functional programming interface
+ * @export
+ */
+export const TailoringRuleTreeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TailoringRuleTreeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Tailoring
+         * @summary Request the Rule Tree of a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async tailoringRuleTree(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<any>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tailoringRuleTree(policyId, tailoringId, xRHIDENTITY, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * TailoringRuleTreeApi - factory interface
+ * @export
+ */
+export const TailoringRuleTreeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TailoringRuleTreeApiFp(configuration)
+    return {
+        /**
+         * Returns the Rule Tree of a Tailoring
+         * @summary Request the Rule Tree of a Tailoring
+         * @param {any} policyId
+         * @param {any} tailoringId
+         * @param {any} [xRHIDENTITY] For internal use only
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        tailoringRuleTree(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: any): AxiosPromise<any> {
+            return localVarFp.tailoringRuleTree(policyId, tailoringId, xRHIDENTITY, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * TailoringRuleTreeApi - object-oriented interface
+ * @export
+ * @class TailoringRuleTreeApi
+ * @extends {BaseAPI}
+ */
+export class TailoringRuleTreeApi extends BaseAPI {
+    /**
+     * Returns the Rule Tree of a Tailoring
+     * @summary Request the Rule Tree of a Tailoring
+     * @param {any} policyId
+     * @param {any} tailoringId
+     * @param {any} [xRHIDENTITY] For internal use only
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TailoringRuleTreeApi
+     */
+    public tailoringRuleTree(policyId: any, tailoringId: any, xRHIDENTITY?: any, options?: AxiosRequestConfig) {
+        return TailoringRuleTreeApiFp(this.configuration).tailoringRuleTree(policyId, tailoringId, xRHIDENTITY, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -7998,7 +8377,7 @@ export const UpdateTailoringApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async updateTailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, tailoring?: Tailoring, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Tailoring200Response>> {
+        async updateTailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, tailoring?: Tailoring, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateTailoring201Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateTailoring(policyId, tailoringId, xRHIDENTITY, tailoring, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -8022,7 +8401,7 @@ export const UpdateTailoringApiFactory = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateTailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, tailoring?: Tailoring, options?: any): AxiosPromise<Tailoring200Response> {
+        updateTailoring(policyId: any, tailoringId: any, xRHIDENTITY?: any, tailoring?: Tailoring, options?: any): AxiosPromise<CreateTailoring201Response> {
             return localVarFp.updateTailoring(policyId, tailoringId, xRHIDENTITY, tailoring, options).then((request) => request(axios, basePath));
         },
     };

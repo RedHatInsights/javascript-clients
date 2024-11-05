@@ -17,7 +17,7 @@ export type WorkspacesReadParams = {
   * @type { string }
   * @memberof WorkspacesReadApi
   */
-  uuid: string,
+  id: string,
   /**
   * When true, the response will include the ancestry of the workspace.
   * @type { boolean }
@@ -28,7 +28,7 @@ export type WorkspacesReadParams = {
 }
 
 const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]): params is [WorkspacesReadParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
 }
 /**
 * Get a workspace in tenant
@@ -38,10 +38,10 @@ const isWorkspacesReadObjectParams = (params: [WorkspacesReadParams] | unknown[]
 * @throws {RequiredError}
 */
 export const workspacesReadParamCreator = async (...config: ([WorkspacesReadParams] | [string, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesReadObjectParams(config) ? config[0] : ['uuid', 'includeAncestry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
-    const { uuid, includeAncestry, options = {} } = params;
-    const localVarPath = `/workspaces/{uuid}/`
-        .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
+    const params = isWorkspacesReadObjectParams(config) ? config[0] : ['id', 'includeAncestry', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesReadParams;
+    const { id, includeAncestry, options = {} } = params;
+    const localVarPath = `/workspaces/{id}/`
+        .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};

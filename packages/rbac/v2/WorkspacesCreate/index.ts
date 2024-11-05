@@ -8,21 +8,21 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem400, ProblemsProblem403, WorkspacesBasicWorkspace, WorkspacesCreateWorkspaceResponse, WorkspacesList401Response, WorkspacesList500Response } from '../types';
+import type { ProblemsProblem400, ProblemsProblem403, WorkspacesCreateWorkspaceRequest, WorkspacesCreateWorkspaceResponse, WorkspacesList401Response, WorkspacesList500Response } from '../types';
 
 
 export type WorkspacesCreateParams = {
   /**
   *
-  * @type { WorkspacesBasicWorkspace }
+  * @type { WorkspacesCreateWorkspaceRequest }
   * @memberof WorkspacesCreateApi
   */
-  workspacesBasicWorkspace: WorkspacesBasicWorkspace,
+  workspacesCreateWorkspaceRequest: WorkspacesCreateWorkspaceRequest,
   options?: AxiosRequestConfig
 }
 
 const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unknown[]): params is [WorkspacesCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'workspacesBasicWorkspace')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'workspacesCreateWorkspaceRequest')
 }
 /**
 * Create workspace in tenant
@@ -31,9 +31,9 @@ const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreateParams] | [WorkspacesBasicWorkspace, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesCreateObjectParams(config) ? config[0] : ['workspacesBasicWorkspace', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesCreateParams;
-    const { workspacesBasicWorkspace, options = {} } = params;
+export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreateParams] | [WorkspacesCreateWorkspaceRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesCreateObjectParams(config) ? config[0] : ['workspacesCreateWorkspaceRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesCreateParams;
+    const { workspacesCreateWorkspaceRequest, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -51,7 +51,7 @@ export const workspacesCreateParamCreator = async (...config: ([WorkspacesCreate
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: workspacesBasicWorkspace,
+        serializeData: workspacesCreateWorkspaceRequest,
     };
 }
 
