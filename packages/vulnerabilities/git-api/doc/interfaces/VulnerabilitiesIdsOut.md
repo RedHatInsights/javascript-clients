@@ -26,7 +26,7 @@ VulnerabilitiesIdsOut
 
 #### Defined in
 
-[api.ts:2653](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2653)
+[api.ts:2609](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2609)
 
 ___
 
@@ -40,7 +40,7 @@ VulnerabilitiesIdsOut
 
 #### Defined in
 
-[api.ts:2659](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2659)
+[api.ts:2615](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2615)
 
 ___
 
@@ -54,4 +54,4 @@ VulnerabilitiesIdsOut
 
 #### Defined in
 
-[api.ts:2665](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2665)
+[api.ts:2621](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2621)

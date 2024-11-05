@@ -8,21 +8,21 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Endpoint, EndpointDTO } from '../types';
+import type { Endpoint } from '../types';
 
 
 export type EndpointResourceV1CreateEndpointParams = {
   /**
   *
-  * @type { EndpointDTO }
+  * @type { Endpoint }
   * @memberof EndpointResourceV1CreateEndpointApi
   */
-  endpointDTO: EndpointDTO,
+  endpoint: Endpoint,
   options?: AxiosRequestConfig
 }
 
 const isEndpointResourceV1CreateEndpointObjectParams = (params: [EndpointResourceV1CreateEndpointParams] | unknown[]): params is [EndpointResourceV1CreateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointDTO')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpoint')
 }
 /**
 * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.
@@ -31,9 +31,9 @@ const isEndpointResourceV1CreateEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1CreateEndpointParamCreator = async (...config: ([EndpointResourceV1CreateEndpointParams] | [EndpointDTO, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isEndpointResourceV1CreateEndpointObjectParams(config) ? config[0] : ['endpointDTO', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1CreateEndpointParams;
-    const { endpointDTO, options = {} } = params;
+export const endpointResourceV1CreateEndpointParamCreator = async (...config: ([EndpointResourceV1CreateEndpointParams] | [Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isEndpointResourceV1CreateEndpointObjectParams(config) ? config[0] : ['endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1CreateEndpointParams;
+    const { endpoint, options = {} } = params;
     const localVarPath = `/endpoints`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -51,7 +51,7 @@ export const endpointResourceV1CreateEndpointParamCreator = async (...config: ([
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: endpointDTO,
+        serializeData: endpoint,
     };
 }
 

@@ -26,168 +26,6 @@ import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 /**
  *
  * @export
- * @interface AddAccessRequest
- */
-export interface AddAccessRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof AddAccessRequest
-     */
-    'role'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AddAccessRequest
-     */
-    'application_id'?: string;
-}
-/**
- *
- * @export
- * @interface AddApplicationRequest
- */
-export interface AddApplicationRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof AddApplicationRequest
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AddApplicationRequest
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AddApplicationRequest
-     */
-    'bundle_id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AddApplicationRequest
-     */
-    'owner_role'?: string;
-}
-/**
- *
- * @export
- * @interface AggregationEmailTemplate
- */
-export interface AggregationEmailTemplate {
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'updated'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {Application}
-     * @memberof AggregationEmailTemplate
-     */
-    'application'?: Application;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'application_id'?: string;
-    /**
-     *
-     * @type {SubscriptionType}
-     * @memberof AggregationEmailTemplate
-     */
-    'subscription_type': SubscriptionType;
-    /**
-     *
-     * @type {AggregationEmailTemplateSubjectTemplate}
-     * @memberof AggregationEmailTemplate
-     */
-    'subject_template'?: AggregationEmailTemplateSubjectTemplate;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'subject_template_id': string;
-    /**
-     *
-     * @type {AggregationEmailTemplateSubjectTemplate}
-     * @memberof AggregationEmailTemplate
-     */
-    'body_template'?: AggregationEmailTemplateSubjectTemplate;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplate
-     */
-    'body_template_id': string;
-}
-
-
-/**
- *
- * @export
- * @interface AggregationEmailTemplateSubjectTemplate
- */
-export interface AggregationEmailTemplateSubjectTemplate {
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'updated'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AggregationEmailTemplateSubjectTemplate
-     */
-    'data': string;
-}
-/**
- *
- * @export
  * @interface Application
  */
 export interface Application {
@@ -227,137 +65,6 @@ export interface Application {
      * @memberof Application
      */
     'bundle_id': string;
-}
-/**
- *
- * @export
- * @interface Application1
- */
-export interface Application1 {
-    /**
-     *
-     * @type {string}
-     * @memberof Application1
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Application1
-     */
-    'display_name': string;
-}
-/**
- *
- * @export
- * @interface ApplicationDTO
- */
-export interface ApplicationDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO
-     */
-    'bundle_id': string;
-    /**
-     *
-     * @type {Set<EventTypeDTO>}
-     * @memberof ApplicationDTO
-     */
-    'event_types'?: Set<EventTypeDTO>;
-}
-/**
- *
- * @export
- * @interface ApplicationDTO1
- */
-export interface ApplicationDTO1 {
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'bundle_id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'owner_role'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ApplicationDTO1
-     */
-    'created'?: string;
-}
-/**
- *
- * @export
- * @interface ApplicationSettingsValue
- */
-export interface ApplicationSettingsValue {
-    /**
-     *
-     * @type {{ [key: string]: EventTypeSettingsValue; }}
-     * @memberof ApplicationSettingsValue
-     */
-    'eventTypes'?: { [key: string]: EventTypeSettingsValue; };
-}
-/**
- *
- * @export
- * @interface BasicAuthenticationDTO
- */
-export interface BasicAuthenticationDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof BasicAuthenticationDTO
-     */
-    'username'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof BasicAuthenticationDTO
-     */
-    'password'?: string;
 }
 /**
  *
@@ -504,87 +211,6 @@ export interface Bundle {
 /**
  *
  * @export
- * @interface BundleDTO
- */
-export interface BundleDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof BundleDTO
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof BundleDTO
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof BundleDTO
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {Set<ApplicationDTO>}
-     * @memberof BundleDTO
-     */
-    'applications'?: Set<ApplicationDTO>;
-}
-/**
- *
- * @export
- * @interface BundleSettingsValue
- */
-export interface BundleSettingsValue {
-    /**
-     *
-     * @type {{ [key: string]: ApplicationSettingsValue; }}
-     * @memberof BundleSettingsValue
-     */
-    'applications'?: { [key: string]: ApplicationSettingsValue; };
-}
-/**
- *
- * @export
- * @interface CamelPropertiesDTO
- */
-export interface CamelPropertiesDTO {
-    /**
-     *
-     * @type {boolean}
-     * @memberof CamelPropertiesDTO
-     */
-    'disableSslVerification': boolean;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof CamelPropertiesDTO
-     */
-    'extras'?: { [key: string]: string; };
-    /**
-     *
-     * @type {string}
-     * @memberof CamelPropertiesDTO
-     */
-    'url': string;
-    /**
-     *
-     * @type {BasicAuthenticationDTO}
-     * @memberof CamelPropertiesDTO
-     */
-    'basicAuthentication'?: BasicAuthenticationDTO;
-    /**
-     *
-     * @type {string}
-     * @memberof CamelPropertiesDTO
-     */
-    'secretToken'?: string;
-}
-/**
- *
- * @export
  * @interface CreateBehaviorGroupRequest
  */
 export interface CreateBehaviorGroupRequest {
@@ -668,33 +294,6 @@ export interface CreateBehaviorGroupResponse {
      */
     'created': string;
 }
-/**
- *
- * @export
- * @interface CurrentStatus
- */
-export interface CurrentStatus {
-    /**
-     *
-     * @type {Status}
-     * @memberof CurrentStatus
-     */
-    'status': Status;
-    /**
-     *
-     * @type {string}
-     * @memberof CurrentStatus
-     */
-    'start_time'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CurrentStatus
-     */
-    'end_time'?: string;
-}
-
-
 /**
  *
  * @export
@@ -822,118 +421,6 @@ export interface Endpoint {
 /**
  *
  * @export
- * @interface EndpointDTO
- */
-export interface EndpointDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'description': string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof EndpointDTO
-     */
-    'enabled'?: boolean;
-    /**
-     *
-     * @type {EndpointStatusDTO}
-     * @memberof EndpointDTO
-     */
-    'status'?: EndpointStatusDTO;
-    /**
-     *
-     * @type {number}
-     * @memberof EndpointDTO
-     */
-    'server_errors'?: number;
-    /**
-     *
-     * @type {EndpointTypeDTO}
-     * @memberof EndpointDTO
-     */
-    'type': EndpointTypeDTO;
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'sub_type'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointDTO
-     */
-    'updated'?: string;
-    /**
-     *
-     * @type {object}
-     * @memberof EndpointDTO
-     */
-    'properties'?: object;
-    /**
-     *
-     * @type {Set<BundleDTO>}
-     * @memberof EndpointDTO
-     */
-    'event_types_group_by_bundles_and_applications'?: Set<BundleDTO>;
-    /**
-     *
-     * @type {Set<string>}
-     * @memberof EndpointDTO
-     */
-    'event_types'?: Set<string>;
-}
-
-
-/**
- *
- * @export
- * @interface EndpointPage
- */
-export interface EndpointPage {
-    /**
-     *
-     * @type {Array<EndpointDTO>}
-     * @memberof EndpointPage
-     */
-    'data': Array<EndpointDTO>;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof EndpointPage
-     */
-    'links': { [key: string]: string; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof EndpointPage
-     */
-    'meta': Meta;
-}
-/**
- *
- * @export
  * @enum {string}
  */
 
@@ -955,37 +442,6 @@ export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
  * @enum {string}
  */
 
-export const EndpointStatusDTO = {
-    Deleting: 'DELETING',
-    Failed: 'FAILED',
-    New: 'NEW',
-    Provisioning: 'PROVISIONING',
-    Ready: 'READY',
-    Unknown: 'UNKNOWN'
-} as const;
-
-export type EndpointStatusDTO = typeof EndpointStatusDTO[keyof typeof EndpointStatusDTO];
-
-
-/**
- *
- * @export
- * @interface EndpointTestRequest
- */
-export interface EndpointTestRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof EndpointTestRequest
-     */
-    'message': string;
-}
-/**
- *
- * @export
- * @enum {string}
- */
-
 export const EndpointType = {
     Ansible: 'ansible',
     Camel: 'camel',
@@ -996,39 +452,6 @@ export const EndpointType = {
 } as const;
 
 export type EndpointType = typeof EndpointType[keyof typeof EndpointType];
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const EndpointTypeDTO = {
-    Ansible: 'ansible',
-    Camel: 'camel',
-    Drawer: 'drawer',
-    EmailSubscription: 'email_subscription',
-    Webhook: 'webhook'
-} as const;
-
-export type EndpointTypeDTO = typeof EndpointTypeDTO[keyof typeof EndpointTypeDTO];
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const Environment = {
-    Prod: 'PROD',
-    Stage: 'STAGE',
-    Ephemeral: 'EPHEMERAL',
-    LocalServer: 'LOCAL_SERVER'
-} as const;
-
-export type Environment = typeof Environment[keyof typeof Environment];
 
 
 /**
@@ -1269,93 +692,6 @@ export interface EventTypeBehaviorId {
 /**
  *
  * @export
- * @interface EventTypeDTO
- */
-export interface EventTypeDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof EventTypeDTO
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventTypeDTO
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventTypeDTO
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventTypeDTO
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {ApplicationDTO}
-     * @memberof EventTypeDTO
-     */
-    'application'?: ApplicationDTO;
-}
-/**
- *
- * @export
- * @interface EventTypeSettingsValue
- */
-export interface EventTypeSettingsValue {
-    /**
-     *
-     * @type {{ [key: string]: boolean; }}
-     * @memberof EventTypeSettingsValue
-     */
-    'emailSubscriptionTypes'?: { [key: string]: boolean; };
-    /**
-     *
-     * @type {boolean}
-     * @memberof EventTypeSettingsValue
-     */
-    'hasForcedEmail'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof EventTypeSettingsValue
-     */
-    'subscriptionLocked'?: boolean;
-}
-/**
- *
- * @export
- * @interface EventsReplayRequest
- */
-export interface EventsReplayRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof EventsReplayRequest
-     */
-    'start_date': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventsReplayRequest
-     */
-    'end_date': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventsReplayRequest
-     */
-    'org_id'?: string;
-}
-/**
- *
- * @export
  * @interface Facet
  */
 export interface Facet {
@@ -1387,170 +723,6 @@ export interface Facet {
 /**
  *
  * @export
- * @enum {string}
- */
-
-export const HttpType = {
-    Get: 'GET',
-    Post: 'POST',
-    Put: 'PUT'
-} as const;
-
-export type HttpType = typeof HttpType[keyof typeof HttpType];
-
-
-/**
- *
- * @export
- * @interface InstantEmailTemplate
- */
-export interface InstantEmailTemplate {
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'updated'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {EventType}
-     * @memberof InstantEmailTemplate
-     */
-    'event_type'?: EventType;
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'event_type_id'?: string;
-    /**
-     *
-     * @type {AggregationEmailTemplateSubjectTemplate}
-     * @memberof InstantEmailTemplate
-     */
-    'subject_template'?: AggregationEmailTemplateSubjectTemplate;
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'subject_template_id': string;
-    /**
-     *
-     * @type {AggregationEmailTemplateSubjectTemplate}
-     * @memberof InstantEmailTemplate
-     */
-    'body_template'?: AggregationEmailTemplateSubjectTemplate;
-    /**
-     *
-     * @type {string}
-     * @memberof InstantEmailTemplate
-     */
-    'body_template_id': string;
-}
-/**
- *
- * @export
- * @interface InternalApplicationUserPermission
- */
-export interface InternalApplicationUserPermission {
-    /**
-     *
-     * @type {string}
-     * @memberof InternalApplicationUserPermission
-     */
-    'application_id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof InternalApplicationUserPermission
-     */
-    'application_display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof InternalApplicationUserPermission
-     */
-    'role': string;
-}
-/**
- *
- * @export
- * @interface InternalRoleAccess
- */
-export interface InternalRoleAccess {
-    /**
-     *
-     * @type {string}
-     * @memberof InternalRoleAccess
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof InternalRoleAccess
-     */
-    'role': string;
-    /**
-     *
-     * @type {string}
-     * @memberof InternalRoleAccess
-     */
-    'application_id': string;
-}
-/**
- *
- * @export
- * @interface InternalUserPermissions
- */
-export interface InternalUserPermissions {
-    /**
-     *
-     * @type {boolean}
-     * @memberof InternalUserPermissions
-     */
-    'is_admin': boolean;
-    /**
-     *
-     * @type {Array<Application1>}
-     * @memberof InternalUserPermissions
-     */
-    'applications': Array<Application1>;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof InternalUserPermissions
-     */
-    'roles': Array<string>;
-}
-/**
- *
- * @export
- * @interface MessageValidationResponse
- */
-export interface MessageValidationResponse {
-    /**
-     *
-     * @type {{ [key: string]: Array<string>; }}
-     * @memberof MessageValidationResponse
-     */
-    'errors': { [key: string]: Array<string>; };
-}
-/**
- *
- * @export
  * @interface Meta
  */
 export interface Meta {
@@ -1560,112 +732,6 @@ export interface Meta {
      * @memberof Meta
      */
     'count': number;
-}
-/**
- *
- * @export
- * @interface NotificationHistory
- */
-export interface NotificationHistory {
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof NotificationHistory
-     */
-    'invocationTime': number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof NotificationHistory
-     * @deprecated
-     */
-    'invocationResult': boolean;
-    /**
-     *
-     * @type {NotificationStatus}
-     * @memberof NotificationHistory
-     */
-    'status': NotificationStatus;
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'endpointId'?: string;
-    /**
-     *
-     * @type {{ [key: string]: any; }}
-     * @memberof NotificationHistory
-     */
-    'details'?: { [key: string]: any; };
-    /**
-     *
-     * @type {EndpointType}
-     * @memberof NotificationHistory
-     */
-    'endpointType'?: EndpointType;
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'endpointSubType'?: string;
-}
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const NotificationStatus = {
-    FailedInternal: 'FAILED_INTERNAL',
-    FailedExternal: 'FAILED_EXTERNAL',
-    Processing: 'PROCESSING',
-    Sent: 'SENT',
-    Success: 'SUCCESS'
-} as const;
-
-export type NotificationStatus = typeof NotificationStatus[keyof typeof NotificationStatus];
-
-
-/**
- *
- * @export
- * @interface PageBehaviorGroup
- */
-export interface PageBehaviorGroup {
-    /**
-     *
-     * @type {Array<BehaviorGroup>}
-     * @memberof PageBehaviorGroup
-     */
-    'data': Array<BehaviorGroup>;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof PageBehaviorGroup
-     */
-    'links': { [key: string]: string; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof PageBehaviorGroup
-     */
-    'meta': Meta;
 }
 /**
  *
@@ -1745,328 +811,6 @@ export interface PageEventType {
 /**
  *
  * @export
- * @interface PageNotificationHistory
- */
-export interface PageNotificationHistory {
-    /**
-     *
-     * @type {Array<NotificationHistory>}
-     * @memberof PageNotificationHistory
-     */
-    'data': Array<NotificationHistory>;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof PageNotificationHistory
-     */
-    'links': { [key: string]: string; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof PageNotificationHistory
-     */
-    'meta': Meta;
-}
-/**
- *
- * @export
- * @interface PagerDutyPropertiesDTO
- */
-export interface PagerDutyPropertiesDTO {
-    /**
-     *
-     * @type {PagerDutySeverityDTO}
-     * @memberof PagerDutyPropertiesDTO
-     */
-    'severity': PagerDutySeverityDTO;
-    /**
-     *
-     * @type {string}
-     * @memberof PagerDutyPropertiesDTO
-     */
-    'secretToken': string;
-}
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const PagerDutySeverity = {
-    Critical: 'critical',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info'
-} as const;
-
-export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutySeverity];
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const PagerDutySeverityDTO = {
-    Critical: 'critical',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info'
-} as const;
-
-export type PagerDutySeverityDTO = typeof PagerDutySeverityDTO[keyof typeof PagerDutySeverityDTO];
-
-
-/**
- *
- * @export
- * @interface RenderEmailTemplateRequest
- */
-export interface RenderEmailTemplateRequest {
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof RenderEmailTemplateRequest
-     */
-    'template': Array<string>;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderEmailTemplateRequest
-     */
-    'payload': string;
-}
-/**
- *
- * @export
- * @interface RequestDefaultBehaviorGroupPropertyList
- */
-export interface RequestDefaultBehaviorGroupPropertyList {
-    /**
-     *
-     * @type {boolean}
-     * @memberof RequestDefaultBehaviorGroupPropertyList
-     */
-    'only_admins': boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RequestDefaultBehaviorGroupPropertyList
-     */
-    'ignore_preferences': boolean;
-}
-/**
- *
- * @export
- * @interface RequestSystemSubscriptionProperties
- */
-export interface RequestSystemSubscriptionProperties {
-    /**
-     *
-     * @type {boolean}
-     * @memberof RequestSystemSubscriptionProperties
-     */
-    'only_admins': boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof RequestSystemSubscriptionProperties
-     */
-    'group_id'?: string;
-}
-/**
- *
- * @export
- * @interface ServerInfo
- */
-export interface ServerInfo {
-    /**
-     *
-     * @type {Environment}
-     * @memberof ServerInfo
-     */
-    'environment'?: Environment;
-}
-
-
-/**
- *
- * @export
- * @interface SettingsValuesByEventType
- */
-export interface SettingsValuesByEventType {
-    /**
-     *
-     * @type {{ [key: string]: BundleSettingsValue; }}
-     * @memberof SettingsValuesByEventType
-     */
-    'bundles'?: { [key: string]: BundleSettingsValue; };
-}
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const Status = {
-    Up: 'UP',
-    Maintenance: 'MAINTENANCE'
-} as const;
-
-export type Status = typeof Status[keyof typeof Status];
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const SubscriptionType = {
-    Instant: 'INSTANT',
-    Daily: 'DAILY',
-    Drawer: 'DRAWER'
-} as const;
-
-export type SubscriptionType = typeof SubscriptionType[keyof typeof SubscriptionType];
-
-
-/**
- *
- * @export
- * @interface SystemSubscriptionPropertiesDTO
- */
-export interface SystemSubscriptionPropertiesDTO {
-    /**
-     *
-     * @type {string}
-     * @memberof SystemSubscriptionPropertiesDTO
-     */
-    'groupId'?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SystemSubscriptionPropertiesDTO
-     */
-    'ignorePreferences'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SystemSubscriptionPropertiesDTO
-     */
-    'onlyAdmins'?: boolean;
-}
-/**
- *
- * @export
- * @interface Template
- */
-export interface Template {
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'updated'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Template
-     */
-    'data': string;
-}
-/**
- *
- * @export
- * @interface TriggerDailyDigestRequest
- */
-export interface TriggerDailyDigestRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof TriggerDailyDigestRequest
-     */
-    'application_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof TriggerDailyDigestRequest
-     */
-    'bundle_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof TriggerDailyDigestRequest
-     */
-    'end'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof TriggerDailyDigestRequest
-     */
-    'org_id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof TriggerDailyDigestRequest
-     */
-    'start'?: string;
-}
-/**
- *
- * @export
- * @interface UpdateApplicationRequest
- */
-export interface UpdateApplicationRequest {
-    /**
-     *
-     * @type {string}
-     * @memberof UpdateApplicationRequest
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof UpdateApplicationRequest
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof UpdateApplicationRequest
-     */
-    'owner_role'?: string;
-}
-/**
- *
- * @export
  * @interface UpdateBehaviorGroupRequest
  */
 export interface UpdateBehaviorGroupRequest {
@@ -2113,88 +857,6 @@ export interface UpdateNotificationDrawerStatus {
      * @memberof UpdateNotificationDrawerStatus
      */
     'read_status': boolean;
-}
-/**
- *
- * @export
- * @interface WebhookPropertiesDTO
- */
-export interface WebhookPropertiesDTO {
-    /**
-     *
-     * @type {boolean}
-     * @memberof WebhookPropertiesDTO
-     */
-    'disableSslVerification': boolean;
-    /**
-     *
-     * @type {HttpType}
-     * @memberof WebhookPropertiesDTO
-     */
-    'method': HttpType;
-    /**
-     *
-     * @type {string}
-     * @memberof WebhookPropertiesDTO
-     */
-    'url': string;
-    /**
-     *
-     * @type {BasicAuthenticationDTO}
-     * @memberof WebhookPropertiesDTO
-     */
-    'basicAuthentication'?: BasicAuthenticationDTO;
-    /**
-     *
-     * @type {string}
-     * @memberof WebhookPropertiesDTO
-     */
-    'bearerAuthentication'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WebhookPropertiesDTO
-     */
-    'secretToken'?: string;
-}
-
-
-/**
- *
- * @export
- * @interface X509Certificate
- */
-export interface X509Certificate {
-    /**
-     *
-     * @type {string}
-     * @memberof X509Certificate
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof X509Certificate
-     */
-    'subject_dn': string;
-    /**
-     *
-     * @type {string}
-     * @memberof X509Certificate
-     */
-    'source_environment': string;
-    /**
-     *
-     * @type {string}
-     * @memberof X509Certificate
-     */
-    'bundle': string;
-    /**
-     *
-     * @type {string}
-     * @memberof X509Certificate
-     */
-    'application': string;
 }
 
 /**
@@ -4689,6 +3351,119 @@ export class NotificationResourceV1UpdateEventTypeBehaviorsApi extends BaseAPI {
      */
     public notificationResourceV1UpdateEventTypeBehaviors(eventTypeId: string, requestBody?: Set<string>, options?: AxiosRequestConfig) {
         return NotificationResourceV1UpdateEventTypeBehaviorsApiFp(this.configuration).notificationResourceV1UpdateEventTypeBehaviors(eventTypeId, requestBody, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * NotificationResourceV1UpdateEventTypeEndpointsApi - axios parameter creator
+ * @export
+ */
+export const NotificationResourceV1UpdateEventTypeEndpointsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Updates the list of endpoints associated with an event type.
+         * @summary Update the list of endpoints for an event type
+         * @param {string} eventTypeId UUID of the eventType to associate with the endpoint(s)
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        notificationResourceV1UpdateEventTypeEndpoints: async (eventTypeId: string, requestBody?: Set<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'eventTypeId' is not null or undefined
+            assertParamExists('notificationResourceV1UpdateEventTypeEndpoints', 'eventTypeId', eventTypeId)
+            const localVarPath = `/notifications/eventTypes/{eventTypeId}/endpoints`
+                .replace(`{${"eventTypeId"}}`, encodeURIComponent(String(eventTypeId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(requestBody, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * NotificationResourceV1UpdateEventTypeEndpointsApi - functional programming interface
+ * @export
+ */
+export const NotificationResourceV1UpdateEventTypeEndpointsApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = NotificationResourceV1UpdateEventTypeEndpointsApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Updates the list of endpoints associated with an event type.
+         * @summary Update the list of endpoints for an event type
+         * @param {string} eventTypeId UUID of the eventType to associate with the endpoint(s)
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async notificationResourceV1UpdateEventTypeEndpoints(eventTypeId: string, requestBody?: Set<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.notificationResourceV1UpdateEventTypeEndpoints(eventTypeId, requestBody, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * NotificationResourceV1UpdateEventTypeEndpointsApi - factory interface
+ * @export
+ */
+export const NotificationResourceV1UpdateEventTypeEndpointsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = NotificationResourceV1UpdateEventTypeEndpointsApiFp(configuration)
+    return {
+        /**
+         * Updates the list of endpoints associated with an event type.
+         * @summary Update the list of endpoints for an event type
+         * @param {string} eventTypeId UUID of the eventType to associate with the endpoint(s)
+         * @param {Set<string>} [requestBody]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        notificationResourceV1UpdateEventTypeEndpoints(eventTypeId: string, requestBody?: Set<string>, options?: any): AxiosPromise<string> {
+            return localVarFp.notificationResourceV1UpdateEventTypeEndpoints(eventTypeId, requestBody, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * NotificationResourceV1UpdateEventTypeEndpointsApi - object-oriented interface
+ * @export
+ * @class NotificationResourceV1UpdateEventTypeEndpointsApi
+ * @extends {BaseAPI}
+ */
+export class NotificationResourceV1UpdateEventTypeEndpointsApi extends BaseAPI {
+    /**
+     * Updates the list of endpoints associated with an event type.
+     * @summary Update the list of endpoints for an event type
+     * @param {string} eventTypeId UUID of the eventType to associate with the endpoint(s)
+     * @param {Set<string>} [requestBody]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotificationResourceV1UpdateEventTypeEndpointsApi
+     */
+    public notificationResourceV1UpdateEventTypeEndpoints(eventTypeId: string, requestBody?: Set<string>, options?: AxiosRequestConfig) {
+        return NotificationResourceV1UpdateEventTypeEndpointsApiFp(this.configuration).notificationResourceV1UpdateEventTypeEndpoints(eventTypeId, requestBody, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
