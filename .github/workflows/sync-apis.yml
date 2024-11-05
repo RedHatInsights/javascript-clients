@@ -1,0 +1,49 @@
+# This workflow will review the current status of the APIs.
+# If there are updates in the APIs, it will re-generate the clients and open a PR with the change.
+
+name: Syncing APIs and Generating Clients
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.BOT_GH_TOKEN }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: Install Java and Maven
+      uses: actions/setup-java@4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+        cache: 'maven'
+    - run: npm install
+    - name: Generate clients
+      run: npm run nx:reset && npm run generate
+    - name: Build packages
+      run: npm run build:no-cache
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
+      with:
+        token: ${{ secrets.BOT_GH_TOKEN }}
+        title: 'chore(nightly-sync): API sync and client generation'
+        body: |
+          There were some changes in the contents of the APIs. Clients were re-generated reflecting these changes.
+        commit-message: 'chore(nightly-sync): API sync and client generation'
+        delete-branch: true
+        author: "GitHub <noreply@github.com>"
