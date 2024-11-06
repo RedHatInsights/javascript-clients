@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { EndpointDTO } from '../types';
+import type { Endpoint } from '../types';
 
 
 export type EndpointResourceV1UpdateEndpointParams = {
@@ -20,15 +20,15 @@ export type EndpointResourceV1UpdateEndpointParams = {
   id: string,
   /**
   *
-  * @type { EndpointDTO }
+  * @type { Endpoint }
   * @memberof EndpointResourceV1UpdateEndpointApi
   */
-  endpointDTO: EndpointDTO,
+  endpoint: Endpoint,
   options?: AxiosRequestConfig
 }
 
 const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourceV1UpdateEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpointDTO')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
 }
 /**
 * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
@@ -37,9 +37,9 @@ const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEndpointParams] | [string, EndpointDTO, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isEndpointResourceV1UpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpointDTO', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEndpointParams;
-    const { id, endpointDTO, options = {} } = params;
+export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEndpointParams] | [string, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isEndpointResourceV1UpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEndpointParams;
+    const { id, endpoint, options = {} } = params;
     const localVarPath = `/endpoints/{id}`
         .replace(`{${"id"}}`, encodeURIComponent(String(id)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -58,7 +58,7 @@ export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: endpointDTO,
+        serializeData: endpoint,
     };
 }
 

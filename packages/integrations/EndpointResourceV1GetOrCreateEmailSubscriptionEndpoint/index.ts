@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { EndpointDTO, RequestSystemSubscriptionProperties } from '../types';
+import type { Endpoint, RequestSystemSubscriptionProperties } from '../types';
 
 
 export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams = {

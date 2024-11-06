@@ -26,7 +26,7 @@ SystemCvesOut
 
 #### Defined in
 
-[api.ts:2460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2460)
+[api.ts:2410](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2410)
 
 ___
 
@@ -40,7 +40,7 @@ SystemCvesOut
 
 #### Defined in
 
-[api.ts:2466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2466)
+[api.ts:2416](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2416)
 
 ___
 
@@ -54,4 +54,4 @@ SystemCvesOut
 
 #### Defined in
 
-[api.ts:2472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2472)
+[api.ts:2422](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2422)

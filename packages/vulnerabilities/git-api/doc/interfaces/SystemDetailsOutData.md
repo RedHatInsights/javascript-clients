@@ -14,6 +14,7 @@ SystemDetailsOutData
 - [last\_upload](SystemDetailsOutData.md#last_upload)
 - [opt\_out](SystemDetailsOutData.md#opt_out)
 - [os](SystemDetailsOutData.md#os)
+- [rhsm\_lock](SystemDetailsOutData.md#rhsm_lock)
 - [rules\_evaluation](SystemDetailsOutData.md#rules_evaluation)
 - [stale](SystemDetailsOutData.md#stale)
 - [tags](SystemDetailsOutData.md#tags)
@@ -33,7 +34,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2504](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2504)
+[api.ts:2454](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2454)
 
 ___
 
@@ -49,7 +50,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2522](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2522)
+[api.ts:2472](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2472)
 
 ___
 
@@ -65,7 +66,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2516](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2516)
+[api.ts:2466](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2466)
 
 ___
 
@@ -81,7 +82,23 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2540](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2540)
+[api.ts:2490](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2490)
+
+___
+
+### rhsm\_lock
+
+• **rhsm\_lock**: ``null`` \| `string`
+
+System is locked to following RHSM version.
+
+**`Memberof`**
+
+SystemDetailsOutData
+
+#### Defined in
+
+[api.ts:2496](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2496)
 
 ___
 
@@ -97,7 +114,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2510](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2510)
+[api.ts:2460](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2460)
 
 ___
 
@@ -113,7 +130,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2528](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2528)
+[api.ts:2478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2478)
 
 ___
 
@@ -127,7 +144,7 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2546](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2546)
+[api.ts:2502](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2502)
 
 ___
 
@@ -143,4 +160,4 @@ SystemDetailsOutData
 
 #### Defined in
 
-[api.ts:2534](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2534)
+[api.ts:2484](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2484)

@@ -26,4 +26,4 @@ NotificationsOut
 
 #### Defined in
 
-[api.ts:2233](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2233)
+[api.ts:2183](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2183)

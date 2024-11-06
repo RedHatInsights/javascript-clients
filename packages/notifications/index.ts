@@ -82,6 +82,10 @@ export { default as notificationResourceV1UpdateEventTypeBehaviors } from './Not
 
 
 // end of operations block
+export { default as notificationResourceV1UpdateEventTypeEndpoints } from './NotificationResourceV1UpdateEventTypeEndpoints'
+
+
+// end of operations block
 export { default as orgConfigResourceV1GetDailyDigestTimePreference } from './OrgConfigResourceV1GetDailyDigestTimePreference'
 
 
