@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.5.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-1.5.3...@redhat-cloud-services/host-inventory-client-1.5.4) (2024-11-06)
+
 ## [1.5.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-1.5.2...@redhat-cloud-services/host-inventory-client-1.5.3) (2024-10-21)
 
 ## [1.5.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-1.5.1...@redhat-cloud-services/host-inventory-client-1.5.2) (2024-10-15)
