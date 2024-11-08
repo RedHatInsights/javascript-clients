@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-2.0.0...@redhat-cloud-services/entitlements-client-2.1.0) (2024-11-08)
+
+
+### Features
+
+* convert entitlements to new generator ([948a4ea](https://github.com/RedHatInsights/javascript-clients/commit/948a4eafa26aff8abb83aea08f8935b0a7590b95))
+
 ## [1.5.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-1.4.5...@redhat-cloud-services/entitlements-client-1.5.0) (2024-08-05)
 
 
