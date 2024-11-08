@@ -1,1 +1,6 @@
-# empty npmignore to ensure all required files (e.g., in the dist folder) are published by npm
+.openapi-generator
+node_modules
+.openapi-generator-ignore
+package-lock.json
+*.ts
+!*.d.ts
