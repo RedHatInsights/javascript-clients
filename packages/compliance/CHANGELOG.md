@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-1.0.0...@redhat-cloud-services/compliance-client-1.1.0) (2024-11-08)
+
+
+### Features
+
+* update compliance client with new api.ts ([306ff96](https://github.com/RedHatInsights/javascript-clients/commit/306ff9603b2d674089828f99719cac5cf8a9c8ff))
+
 ## [0.2.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.2.3...@redhat-cloud-services/compliance-client-0.2.4) (2024-10-21)
 
 ## [0.2.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-0.2.2...@redhat-cloud-services/compliance-client-0.2.3) (2024-10-15)
