@@ -54,9 +54,6 @@ UpdateTailoring/index.ts
 ValueDefinition/index.ts
 ValueDefinitions/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
 index.ts
