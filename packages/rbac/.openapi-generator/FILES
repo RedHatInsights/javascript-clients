@@ -29,9 +29,6 @@ PutCrossAccountRequest/index.ts
 UpdateGroup/index.ts
 UpdateRole/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
 index.ts

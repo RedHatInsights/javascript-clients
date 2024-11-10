@@ -16,9 +16,6 @@ EndpointResourceV1TestEndpoint/index.ts
 EndpointResourceV1UpdateEndpoint/index.ts
 EndpointResourceV1UpdateEventTypesLinkedToEndpoint/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
 index.ts
