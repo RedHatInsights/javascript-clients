@@ -104,6 +104,10 @@ export { default as reportTestResultsOS } from './ReportTestResultsOS'
 
 
 // end of operations block
+export { default as reportTestResultsSG } from './ReportTestResultsSG'
+
+
+// end of operations block
 export { default as reports } from './Reports'
 
 
