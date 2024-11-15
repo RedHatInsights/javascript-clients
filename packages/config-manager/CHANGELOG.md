@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-2.0.0...@redhat-cloud-services/config-manager-client-2.1.0) (2024-11-15)
+
+
+### Features
+
+* convert config-manager-client to new generator ([4794a76](https://github.com/RedHatInsights/javascript-clients/commit/4794a768fd0e46f1b2cc99d7d896d3f8d6774b39))
+
 ## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-2.0.0...@redhat-cloud-services/config-manager-client-2.1.0) (2024-11-08)
 
 
