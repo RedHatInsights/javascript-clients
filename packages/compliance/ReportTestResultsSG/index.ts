@@ -11,46 +11,43 @@ import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/
 import type {  } from '../types';
 
 
-export type SecurityGuidesOSParams = {
+export type ReportTestResultsSGParams = {
+  /**
+  *
+  * @type { any }
+  * @memberof ReportTestResultsSGApi
+  */
+  reportId: any,
   /**
   * For internal use only
   * @type { any }
-  * @memberof SecurityGuidesOSApi
+  * @memberof ReportTestResultsSGApi
   */
   xRHIDENTITY?: any,
-  /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_version`, `os_major_version`, `os_minor_version`, `assigned_or_scanned`, `never_reported`, `group_name`, `policies`, and `profile_ref_id`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
-  * @type { any }
-  * @memberof SecurityGuidesOSApi
-  */
-  filter?: any,
   options?: AxiosRequestConfig
 }
 
-const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unknown[]): params is [SecurityGuidesOSParams] => {
-  return params.length === 1 && true && true
+const isReportTestResultsSGObjectParams = (params: [ReportTestResultsSGParams] | unknown[]): params is [ReportTestResultsSGParams] => {
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
 * This feature is exclusively used by the frontend
-* @summary Request the list of available OS versions
-* @param {SecurityGuidesOSParams} config with all available params.
+* @summary Request the list of available Security Guide versions
+* @param {ReportTestResultsSGParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @deprecated
 * @throws {RequiredError}
 */
-export const securityGuidesOSParamCreator = async (...config: ([SecurityGuidesOSParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isSecurityGuidesOSObjectParams(config) ? config[0] : ['xRHIDENTITY', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as SecurityGuidesOSParams;
-    const { xRHIDENTITY, filter, options = {} } = params;
-    const localVarPath = `/security_guides/os_versions`;
+export const reportTestResultsSGParamCreator = async (...config: ([ReportTestResultsSGParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isReportTestResultsSGObjectParams(config) ? config[0] : ['reportId', 'xRHIDENTITY', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ReportTestResultsSGParams;
+    const { reportId, xRHIDENTITY, options = {} } = params;
+    const localVarPath = `/reports/{report_id}/test_results/security_guide_versions`
+        .replace(`{${"report_id"}}`, encodeURIComponent(String(reportId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
     const localVarRequestOptions = { method: 'GET' as Method, ...options};
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
-
-    if (filter !== undefined) {
-        localVarQueryParameter['filter'] = filter;
-    }
 
     if (xRHIDENTITY != null) {
         localVarHeaderParameter['X-RH-IDENTITY'] = typeof xRHIDENTITY === 'string'
@@ -69,4 +66,4 @@ export const securityGuidesOSParamCreator = async (...config: ([SecurityGuidesOS
     };
 }
 
-export default securityGuidesOSParamCreator;
+export default reportTestResultsSGParamCreator;

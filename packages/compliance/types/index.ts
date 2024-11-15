@@ -625,6 +625,12 @@ export interface Rule {
      */
     'ref_id'?: any;
     /**
+     * UUID of the parent Rule Group
+     * @type {any}
+     * @memberof Rule
+     */
+    'rule_group_id'?: any;
+    /**
      * Short title of the Rule
      * @type {any}
      * @memberof Rule
@@ -880,6 +886,12 @@ export interface RuleResult {
      * @memberof RuleResult
      */
     'ref_id'?: any;
+    /**
+     * UUID of the parent Rule Group
+     * @type {any}
+     * @memberof RuleResult
+     */
+    'rule_group_id'?: any;
     /**
      * Short title of the Rule
      * @type {any}
