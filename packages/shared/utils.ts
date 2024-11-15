@@ -1,6 +1,6 @@
 import { BaseAPI } from './base';
 import { ActionType, ApiConfig, RequestArgs } from './common';
-import globalAxios from 'axios';
+import globalAxios, { AxiosResponse } from 'axios';
 
 function isAxiosConfigObject(arg: any): arg is ApiConfig {
   return arg && typeof arg === 'object' && 'axios' in arg;
@@ -10,8 +10,10 @@ function isActionConfigObject(arg: any): arg is Record<string, ActionType> {
   return arg && typeof arg === 'object';
 }
 
-export function APIFactory<T extends Record<string, ActionType>>(basePath: string, actions: T, config?: ApiConfig): BaseAPI & T;
-export function APIFactory<T extends Record<string, ActionType>>(actions: T, config?: ApiConfig): BaseAPI & T;
+export type APIFactoryResponse<J extends Record<string, ActionType>> = { [K in keyof J]: (...args: J[K] extends (...args: infer A) => any ? A : never) => Promise<AxiosResponse<unknown, any>>};
+
+export function APIFactory<T extends Record<string, ActionType>>(basePath: string, actions: T, config?: ApiConfig): BaseAPI & APIFactoryResponse<T>;
+export function APIFactory<T extends Record<string, ActionType>>(actions: T, config?: ApiConfig): BaseAPI & APIFactoryResponse<T>;
 export function APIFactory<T extends Record<string, ActionType>>(...args: unknown[]) {
   const [a, b, c] = args;
   let basePath: string | undefined = undefined;
@@ -43,5 +45,5 @@ export function APIFactory<T extends Record<string, ActionType>>(...args: unknow
     });
   }
 
-  return api as BaseAPI & T;
+  return api as BaseAPI & APIFactoryResponse<T>;
 }
