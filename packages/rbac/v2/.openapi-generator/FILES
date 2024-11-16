@@ -7,9 +7,6 @@ WorkspacesPatch/index.ts
 WorkspacesRead/index.ts
 WorkspacesUpdate/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
 index.ts
