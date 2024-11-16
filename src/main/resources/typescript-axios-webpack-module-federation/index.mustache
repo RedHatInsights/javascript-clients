@@ -1,12 +1,8 @@
-// This is a sample supporting file mustache template.
-
 {{#apiInfo.apis}}
 {{#operations}}
 {{#operation}}
-export { default as {{nickname}} } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
+export { default as {{nickname}}, {{operationIdCamelCase}}ReturnType } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
 
 {{/operation}}
-
-// end of operations block
 {{/operations}}
 {{/apiInfo.apis}}
