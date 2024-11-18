@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-2.1.1...@redhat-cloud-services/entitlements-client-2.1.2) (2024-11-18)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.6`
 ## [2.1.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-2.1.0...@redhat-cloud-services/entitlements-client-2.1.1) (2024-11-18)
 
 ### Dependency Updates
