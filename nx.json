@@ -18,7 +18,7 @@
         "{workspaceRoot}/eslint.config.js"
       ]
     },
-    "e2e": {
+    "integration": {
       "cache": true,
       "inputs": ["default", "^production"]
     },
