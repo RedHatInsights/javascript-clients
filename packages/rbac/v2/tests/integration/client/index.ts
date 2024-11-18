@@ -54,7 +54,7 @@ export const listWorkspaces = async (limit: number, offset: number, query: Works
     // @ts-ignore
     const response: AxiosResponse<WorkspacesWorkspaceListResponse> = await composedWorkspacesApi
       .WorkspacesList(limit, offset, query, config)
-      .catch((error) => {
+      .catch((error: string | undefined) => {
         console.log(error);
         throw new Error(error);
       });
@@ -64,7 +64,7 @@ export const listWorkspaces = async (limit: number, offset: number, query: Works
     const response: AxiosResponse<WorkspacesWorkspaceListResponse> = await composedWorkspacesApi
       //@ts-ignore
       .WorkspacesList(limit, offset, query)
-      .catch((error) => {
+      .catch((error: string | undefined) => {
         console.log(error);
         throw new Error(error);
       });
