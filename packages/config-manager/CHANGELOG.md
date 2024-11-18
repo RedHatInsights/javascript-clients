@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-2.1.0...@redhat-cloud-services/config-manager-client-2.1.1) (2024-11-18)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.5`
 ## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-2.0.0...@redhat-cloud-services/config-manager-client-2.1.0) (2024-11-15)
 
 
