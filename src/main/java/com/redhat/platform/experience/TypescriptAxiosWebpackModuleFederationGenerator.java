@@ -335,10 +335,26 @@ public class TypescriptAxiosWebpackModuleFederationGenerator extends TypeScriptA
             .put("prependNot", new ReplaceDotsWithUnderscoreLambda());
     }
 
+    /**
+     * Checks if an enum uses inverse strings and appends 'Not' if so. For example:
+     * "enum": [
+     *   "insights",
+     *   "yupana",
+     *   "-insights",
+     *   "!yupana"
+     * ]
+     * would evaluate to
+     * {
+     *   Insights: 'insights',
+     *   Yupana: 'yupana',
+     *   NotInsights: '-insights',
+     *   NotYupana: '!yupana'
+     * }
+     */ 
     private static class ReplaceDotsWithUnderscoreLambda implements Mustache.Lambda {
       @Override
       public void execute(Template.Fragment fragment, Writer writer) throws IOException {
-        if (fragment.execute().indexOf("!") != -1) {
+        if (fragment.execute().contains("~'!") || fragment.execute().contains("~'-")) {
           writer.write("Not" + fragment.execute().split("~")[0]);
         } else {
           writer.write(fragment.execute().split("~")[0]);
