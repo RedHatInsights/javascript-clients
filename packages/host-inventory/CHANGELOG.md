@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-2.0.1...@redhat-cloud-services/host-inventory-client-2.0.2) (2024-11-18)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `1.2.5`
 ## [2.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-2.0.0...@redhat-cloud-services/host-inventory-client-2.0.1) (2024-11-07)
 
 ## [1.5.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/host-inventory-client-1.5.3...@redhat-cloud-services/host-inventory-client-1.5.4) (2024-11-06)
