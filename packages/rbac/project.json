@@ -39,6 +39,16 @@
         "jestConfig": "packages/rbac/jest.config.ts"
       }
     },
+    "integration": {
+      "command": "cd packages/rbac/v2/tests/integration && start-server-and-test 'scripts/update.sh && scripts/serve.sh' http://localhost:3000/api/rbac/v2/workspaces/ 'nx run jest'"
+    },
+    "jest": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/rbac/jest.integration.config.ts"
+      }
+    },
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {

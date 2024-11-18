@@ -6,6 +6,14 @@
     <packaging>jar</packaging>
     <name>typescript-axios-webpack-module-federation-openapi-generator</name>
     <version>1.0.0</version>
+
+  <repositories>
+    <repository>
+      <id>rh-internal</id>
+      <name>Red Hat Sonatype Nexus</name>
+      <url>https://nexus.corp.redhat.com/</url>
+    </repository>
+  </repositories>
     <build>
         <plugins>
             <plugin>

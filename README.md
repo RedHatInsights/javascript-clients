@@ -84,3 +84,14 @@ As the default, we use `typescript-axios` to generate a client based on their Op
 ```
 
 If you've previously used the `typescript-axios` generator you will also have to change the version of `generator-cli.version` in `openapitool.json` to at least `6.6.0`.
+
+## Running Client Integration Tests
+
+Integration tests have been added in some client packages. For example, in `packages/rbac/v2/tests/integration/workspaces.test.ts` one will find an end-to-end test for the Workspaces API that exercises the workflow for CRUD operations. 
+
+To run integration tests, use a command like the following:
+
+`npm run test:integration`
+
+Generally, the pattern is for a client to have a `tests/integration` folder with test files having names matching `*.test.ts`. Within each client's folder (e.g. `packages/<client>`) there should be a dedicated `tsconfig.integration.spec.json` with an `include` glob pattern that points to the integration tests. Similarly, there should also be a dedicated `jest.integration.config.ts` that points to `tsconfig.integration.spec.json` in the `transform` value. Also, each client's `project.json` should have an `integration` target defined/added when the integration tests are created.
+ 

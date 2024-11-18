@@ -10,9 +10,20 @@ function isActionConfigObject(arg: any): arg is Record<string, ActionType> {
   return arg && typeof arg === 'object';
 }
 
-export function APIFactory<T extends Record<string, ActionType>>(basePath: string, actions: T, config?: ApiConfig): BaseAPI & T;
-export function APIFactory<T extends Record<string, ActionType>>(actions: T, config?: ApiConfig): BaseAPI & T;
-export function APIFactory<T extends Record<string, ActionType>>(...args: unknown[]) {
+export type APIFactoryResponse<J extends Record<string, ActionType>, L extends { [K in keyof J]: unknown }> = {
+  [K in keyof J]: (...args: J[K] extends (...args: infer A) => any ? A : never) => L[K];
+};
+
+export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(
+  basePath: string,
+  actions: T,
+  config?: ApiConfig,
+): BaseAPI & APIFactoryResponse<T, S>;
+export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(
+  actions: T,
+  config?: ApiConfig,
+): BaseAPI & APIFactoryResponse<T, S>;
+export function APIFactory<T extends Record<string, ActionType>, S extends { [K in keyof T]: unknown }>(...args: unknown[]) {
   const [a, b, c] = args;
   let basePath: string | undefined = undefined;
   let actions: Record<string, ActionType> = {};
@@ -43,5 +54,5 @@ export function APIFactory<T extends Record<string, ActionType>>(...args: unknow
     });
   }
 
-  return api as BaseAPI & T;
+  return api as BaseAPI & APIFactoryResponse<T, S>;
 }
