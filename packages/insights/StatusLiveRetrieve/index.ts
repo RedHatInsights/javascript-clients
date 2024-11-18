@@ -15,6 +15,8 @@ export type StatusLiveRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type StatusLiveRetrieveReturnType = AxiosPromise<void>;
+
 const isStatusLiveRetrieveObjectParams = (params: [StatusLiveRetrieveParams] | unknown[]): params is [StatusLiveRetrieveParams] => {
   return params.length === 1
 }

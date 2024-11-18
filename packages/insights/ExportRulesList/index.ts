@@ -175,6 +175,8 @@ export const ExportRulesListUpdateMethodEnum = {
 } as const;
 export type ExportRulesListUpdateMethodEnum = typeof ExportRulesListUpdateMethodEnum[keyof typeof ExportRulesListUpdateMethodEnum];
 
+export type ExportRulesListReturnType = AxiosPromise<Array<RuleExport>>;
+
 const isExportRulesListObjectParams = (params: [ExportRulesListParams] | unknown[]): params is [ExportRulesListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

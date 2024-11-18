@@ -27,6 +27,8 @@ export type AckUpdateParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckUpdateReturnType = AxiosPromise<Ack>;
+
 const isAckUpdateObjectParams = (params: [AckUpdateParams] | unknown[]): params is [AckUpdateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }

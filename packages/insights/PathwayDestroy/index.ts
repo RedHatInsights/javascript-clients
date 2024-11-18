@@ -21,6 +21,8 @@ export type PathwayDestroyParams = {
   options?: AxiosRequestConfig
 }
 
+export type PathwayDestroyReturnType = AxiosPromise<string>;
+
 const isPathwayDestroyObjectParams = (params: [PathwayDestroyParams] | unknown[]): params is [PathwayDestroyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
 }

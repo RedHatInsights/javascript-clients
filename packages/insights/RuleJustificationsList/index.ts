@@ -33,6 +33,8 @@ export type RuleJustificationsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type RuleJustificationsListReturnType = AxiosPromise<PaginatedJustificationCountList>;
+
 const isRuleJustificationsListObjectParams = (params: [RuleJustificationsListParams] | unknown[]): params is [RuleJustificationsListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true
 }

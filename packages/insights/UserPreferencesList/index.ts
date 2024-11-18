@@ -15,6 +15,8 @@ export type UserPreferencesListParams = {
   options?: AxiosRequestConfig
 }
 
+export type UserPreferencesListReturnType = AxiosPromise<Array<SettingsDDF>>;
+
 const isUserPreferencesListObjectParams = (params: [UserPreferencesListParams] | unknown[]): params is [UserPreferencesListParams] => {
   return params.length === 1
 }

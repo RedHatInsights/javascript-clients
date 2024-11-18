@@ -21,6 +21,8 @@ export type AckCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckCreateReturnType = AxiosPromise<Ack>;
+
 const isAckCreateObjectParams = (params: [AckCreateParams] | unknown[]): params is [AckCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ackInput')
 }

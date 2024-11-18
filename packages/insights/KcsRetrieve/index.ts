@@ -21,6 +21,8 @@ export type KcsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type KcsRetrieveReturnType = AxiosPromise<Array<string>>;
+
 const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): params is [KcsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'nodeId')
 }

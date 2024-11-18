@@ -21,6 +21,8 @@ export type RuleStatsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type RuleStatsRetrieveReturnType = AxiosPromise<RuleUsageStats>;
+
 const isRuleStatsRetrieveObjectParams = (params: [RuleStatsRetrieveParams] | unknown[]): params is [RuleStatsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
 }

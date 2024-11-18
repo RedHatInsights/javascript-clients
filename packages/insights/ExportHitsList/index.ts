@@ -190,6 +190,8 @@ export const ExportHitsListUpdateMethodEnum = {
 } as const;
 export type ExportHitsListUpdateMethodEnum = typeof ExportHitsListUpdateMethodEnum[keyof typeof ExportHitsListUpdateMethodEnum];
 
+export type ExportHitsListReturnType = AxiosPromise<Array<ExportHits>>;
+
 const isExportHitsListObjectParams = (params: [ExportHitsListParams] | unknown[]): params is [ExportHitsListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

@@ -21,6 +21,8 @@ export type RatingCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type RatingCreateReturnType = AxiosPromise<RuleRating>;
+
 const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): params is [RatingCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleRating')
 }

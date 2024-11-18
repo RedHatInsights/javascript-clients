@@ -207,6 +207,8 @@ export const SystemListUpdateMethodEnum = {
 } as const;
 export type SystemListUpdateMethodEnum = typeof SystemListUpdateMethodEnum[keyof typeof SystemListUpdateMethodEnum];
 
+export type SystemListReturnType = AxiosPromise<PaginatedSystemList>;
+
 const isSystemListObjectParams = (params: [SystemListParams] | unknown[]): params is [SystemListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

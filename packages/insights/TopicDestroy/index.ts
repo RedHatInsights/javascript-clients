@@ -21,6 +21,8 @@ export type TopicDestroyParams = {
   options?: AxiosRequestConfig
 }
 
+export type TopicDestroyReturnType = AxiosPromise<void>;
+
 const isTopicDestroyObjectParams = (params: [TopicDestroyParams] | unknown[]): params is [TopicDestroyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
 }

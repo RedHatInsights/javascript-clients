@@ -21,6 +21,8 @@ export type HostackCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type HostackCreateReturnType = AxiosPromise<HostAck>;
+
 const isHostackCreateObjectParams = (params: [HostackCreateParams] | unknown[]): params is [HostackCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostAckInput')
 }

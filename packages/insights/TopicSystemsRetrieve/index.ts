@@ -83,6 +83,8 @@ export const TopicSystemsRetrieveUpdateMethodEnum = {
 } as const;
 export type TopicSystemsRetrieveUpdateMethodEnum = typeof TopicSystemsRetrieveUpdateMethodEnum[keyof typeof TopicSystemsRetrieveUpdateMethodEnum];
 
+export type TopicSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
+
 const isTopicSystemsRetrieveObjectParams = (params: [TopicSystemsRetrieveParams] | unknown[]): params is [TopicSystemsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
 }

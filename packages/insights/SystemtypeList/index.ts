@@ -15,6 +15,8 @@ export type SystemtypeListParams = {
   options?: AxiosRequestConfig
 }
 
+export type SystemtypeListReturnType = AxiosPromise<Array<SystemType>>;
+
 const isSystemtypeListObjectParams = (params: [SystemtypeListParams] | unknown[]): params is [SystemtypeListParams] => {
   return params.length === 1
 }

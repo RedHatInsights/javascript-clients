@@ -15,6 +15,8 @@ export type AckAllListParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckAllListReturnType = AxiosPromise<Array<AllAck>>;
+
 const isAckAllListObjectParams = (params: [AckAllListParams] | unknown[]): params is [AckAllListParams] => {
   return params.length === 1
 }

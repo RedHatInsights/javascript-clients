@@ -15,6 +15,8 @@ export type StatusReadyRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type StatusReadyRetrieveReturnType = AxiosPromise<void>;
+
 const isStatusReadyRetrieveObjectParams = (params: [StatusReadyRetrieveParams] | unknown[]): params is [StatusReadyRetrieveParams] => {
   return params.length === 1
 }

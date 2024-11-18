@@ -21,6 +21,8 @@ export type HostackRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type HostackRetrieveReturnType = AxiosPromise<HostAck>;
+
 const isHostackRetrieveObjectParams = (params: [HostackRetrieveParams] | unknown[]): params is [HostackRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

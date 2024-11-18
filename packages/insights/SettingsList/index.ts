@@ -15,6 +15,8 @@ export type SettingsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type SettingsListReturnType = AxiosPromise<Array<SettingsDDF>>;
+
 const isSettingsListObjectParams = (params: [SettingsListParams] | unknown[]): params is [SettingsListParams] => {
   return params.length === 1
 }

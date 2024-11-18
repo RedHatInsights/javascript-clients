@@ -21,6 +21,8 @@ export type AckDestroyParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckDestroyReturnType = AxiosPromise<string>;
+
 const isAckDestroyObjectParams = (params: [AckDestroyParams] | unknown[]): params is [AckDestroyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
 }

@@ -56,6 +56,8 @@ export const PathwayRulesListCategoryEnum = {
 } as const;
 export type PathwayRulesListCategoryEnum = typeof PathwayRulesListCategoryEnum[keyof typeof PathwayRulesListCategoryEnum];
 
+export type PathwayRulesListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
+
 const isPathwayRulesListObjectParams = (params: [PathwayRulesListParams] | unknown[]): params is [PathwayRulesListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true
 }

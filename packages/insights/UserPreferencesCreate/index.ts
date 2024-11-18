@@ -21,6 +21,8 @@ export type UserPreferencesCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type UserPreferencesCreateReturnType = AxiosPromise<PreferencesInput>;
+
 const isUserPreferencesCreateObjectParams = (params: [UserPreferencesCreateParams] | unknown[]): params is [UserPreferencesCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'preferencesInput')
 }

@@ -80,6 +80,8 @@ export const PathwayRetrieveCategoryEnum = {
 } as const;
 export type PathwayRetrieveCategoryEnum = typeof PathwayRetrieveCategoryEnum[keyof typeof PathwayRetrieveCategoryEnum];
 
+export type PathwayRetrieveReturnType = AxiosPromise<Pathway>;
+
 const isPathwayRetrieveObjectParams = (params: [PathwayRetrieveParams] | unknown[]): params is [PathwayRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true && true && true
 }

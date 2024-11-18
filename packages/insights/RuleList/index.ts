@@ -267,6 +267,8 @@ export const RuleListUpdateMethodEnum = {
 } as const;
 export type RuleListUpdateMethodEnum = typeof RuleListUpdateMethodEnum[keyof typeof RuleListUpdateMethodEnum];
 
+export type RuleListReturnType = AxiosPromise<PaginatedRuleForAccountList>;
+
 const isRuleListObjectParams = (params: [RuleListParams] | unknown[]): params is [RuleListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

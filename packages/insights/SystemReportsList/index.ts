@@ -72,6 +72,8 @@ export const SystemReportsListUpdateMethodEnum = {
 } as const;
 export type SystemReportsListUpdateMethodEnum = typeof SystemReportsListUpdateMethodEnum[keyof typeof SystemReportsListUpdateMethodEnum];
 
+export type SystemReportsListReturnType = AxiosPromise<Array<Report>>;
+
 const isSystemReportsListObjectParams = (params: [SystemReportsListParams] | unknown[]): params is [SystemReportsListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true
 }

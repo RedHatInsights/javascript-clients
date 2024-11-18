@@ -21,6 +21,8 @@ export type TopicRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type TopicRetrieveReturnType = AxiosPromise<Topic>;
+
 const isTopicRetrieveObjectParams = (params: [TopicRetrieveParams] | unknown[]): params is [TopicRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
 }

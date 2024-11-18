@@ -27,6 +27,8 @@ export type AccountListParams = {
   options?: AxiosRequestConfig
 }
 
+export type AccountListReturnType = AxiosPromise<PaginatedOrgIdList>;
+
 const isAccountListObjectParams = (params: [AccountListParams] | unknown[]): params is [AccountListParams] => {
   return params.length === 1 && true && true
 }

@@ -60,6 +60,8 @@ export const TopicListUpdateMethodEnum = {
 } as const;
 export type TopicListUpdateMethodEnum = typeof TopicListUpdateMethodEnum[keyof typeof TopicListUpdateMethodEnum];
 
+export type TopicListReturnType = AxiosPromise<Array<Topic>>;
+
 const isTopicListObjectParams = (params: [TopicListParams] | unknown[]): params is [TopicListParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

@@ -94,6 +94,8 @@ export const ExportSystemsListUpdateMethodEnum = {
 } as const;
 export type ExportSystemsListUpdateMethodEnum = typeof ExportSystemsListUpdateMethodEnum[keyof typeof ExportSystemsListUpdateMethodEnum];
 
+export type ExportSystemsListReturnType = AxiosPromise<Array<System>>;
+
 const isExportSystemsListObjectParams = (params: [ExportSystemsListParams] | unknown[]): params is [ExportSystemsListParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

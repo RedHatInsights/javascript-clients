@@ -21,6 +21,8 @@ export type RulecategoryRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type RulecategoryRetrieveReturnType = AxiosPromise<RuleCategory>;
+
 const isRulecategoryRetrieveObjectParams = (params: [RulecategoryRetrieveParams] | unknown[]): params is [RulecategoryRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

@@ -27,6 +27,8 @@ export type HostackUpdateParams = {
   options?: AxiosRequestConfig
 }
 
+export type HostackUpdateReturnType = AxiosPromise<HostAckJustification>;
+
 const isHostackUpdateObjectParams = (params: [HostackUpdateParams] | unknown[]): params is [HostackUpdateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
 }

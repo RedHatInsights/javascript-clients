@@ -162,6 +162,8 @@ export const RuleSystemsDetailListSortEnum = {
 } as const;
 export type RuleSystemsDetailListSortEnum = typeof RuleSystemsDetailListSortEnum[keyof typeof RuleSystemsDetailListSortEnum];
 
+export type RuleSystemsDetailListReturnType = AxiosPromise<PaginatedSystemsDetailList>;
+
 const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParams] | unknown[]): params is [RuleSystemsDetailListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
 }

@@ -57,6 +57,8 @@ export type HostackListParams = {
   options?: AxiosRequestConfig
 }
 
+export type HostackListReturnType = AxiosPromise<PaginatedHostAckList>;
+
 const isHostackListObjectParams = (params: [HostackListParams] | unknown[]): params is [HostackListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true
 }

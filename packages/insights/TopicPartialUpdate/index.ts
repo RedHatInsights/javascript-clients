@@ -27,6 +27,8 @@ export type TopicPartialUpdateParams = {
   options?: AxiosRequestConfig
 }
 
+export type TopicPartialUpdateReturnType = AxiosPromise<TopicEdit>;
+
 const isTopicPartialUpdateObjectParams = (params: [TopicPartialUpdateParams] | unknown[]): params is [TopicPartialUpdateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true
 }

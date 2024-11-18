@@ -27,6 +27,8 @@ export type RatingStatsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type RatingStatsListReturnType = AxiosPromise<PaginatedRuleRatingStatsList>;
+
 const isRatingStatsListObjectParams = (params: [RatingStatsListParams] | unknown[]): params is [RatingStatsListParams] => {
   return params.length === 1 && true && true
 }

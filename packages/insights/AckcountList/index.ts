@@ -15,6 +15,8 @@ export type AckcountListParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckcountListReturnType = AxiosPromise<Array<AckCount>>;
+
 const isAckcountListObjectParams = (params: [AckcountListParams] | unknown[]): params is [AckcountListParams] => {
   return params.length === 1
 }

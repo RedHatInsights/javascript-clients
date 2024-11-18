@@ -21,6 +21,8 @@ export type HostackDestroyParams = {
   options?: AxiosRequestConfig
 }
 
+export type HostackDestroyReturnType = AxiosPromise<string>;
+
 const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]): params is [HostackDestroyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

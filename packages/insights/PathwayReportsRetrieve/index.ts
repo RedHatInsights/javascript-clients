@@ -77,6 +77,8 @@ export const PathwayReportsRetrieveUpdateMethodEnum = {
 } as const;
 export type PathwayReportsRetrieveUpdateMethodEnum = typeof PathwayReportsRetrieveUpdateMethodEnum[keyof typeof PathwayReportsRetrieveUpdateMethodEnum];
 
+export type PathwayReportsRetrieveReturnType = AxiosPromise<RuleSystemsExport>;
+
 const isPathwayReportsRetrieveObjectParams = (params: [PathwayReportsRetrieveParams] | unknown[]): params is [PathwayReportsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
 }

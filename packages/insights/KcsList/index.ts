@@ -21,6 +21,8 @@ export type KcsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type KcsListReturnType = AxiosPromise<Array<Kcs>>;
+
 const isKcsListObjectParams = (params: [KcsListParams] | unknown[]): params is [KcsListParams] => {
   return params.length === 1 && true
 }

@@ -21,6 +21,8 @@ export type AckRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckRetrieveReturnType = AxiosPromise<Ack>;
+
 const isAckRetrieveObjectParams = (params: [AckRetrieveParams] | unknown[]): params is [AckRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
 }

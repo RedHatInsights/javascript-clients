@@ -21,6 +21,8 @@ export type SystemtypeRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type SystemtypeRetrieveReturnType = AxiosPromise<SystemType>;
+
 const isSystemtypeRetrieveObjectParams = (params: [SystemtypeRetrieveParams] | unknown[]): params is [SystemtypeRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

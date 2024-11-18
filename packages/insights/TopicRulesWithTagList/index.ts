@@ -21,6 +21,8 @@ export type TopicRulesWithTagListParams = {
   options?: AxiosRequestConfig
 }
 
+export type TopicRulesWithTagListReturnType = AxiosPromise<Array<Rule>>;
+
 const isTopicRulesWithTagListObjectParams = (params: [TopicRulesWithTagListParams] | unknown[]): params is [TopicRulesWithTagListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
 }

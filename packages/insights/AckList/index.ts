@@ -27,6 +27,8 @@ export type AckListParams = {
   options?: AxiosRequestConfig
 }
 
+export type AckListReturnType = AxiosPromise<PaginatedAckList>;
+
 const isAckListObjectParams = (params: [AckListParams] | unknown[]): params is [AckListParams] => {
   return params.length === 1 && true && true
 }

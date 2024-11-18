@@ -21,6 +21,8 @@ export type WeeklyreportautosubscribeCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type WeeklyreportautosubscribeCreateReturnType = AxiosPromise<AutoSubscribe>;
+
 const isWeeklyreportautosubscribeCreateObjectParams = (params: [WeeklyreportautosubscribeCreateParams] | unknown[]): params is [WeeklyreportautosubscribeCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'autoSubscribeInput')
 }

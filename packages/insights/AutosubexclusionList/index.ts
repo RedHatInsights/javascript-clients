@@ -27,6 +27,8 @@ export type AutosubexclusionListParams = {
   options?: AxiosRequestConfig
 }
 
+export type AutosubexclusionListReturnType = AxiosPromise<PaginatedSubscriptionExcludedAccountList>;
+
 const isAutosubexclusionListObjectParams = (params: [AutosubexclusionListParams] | unknown[]): params is [AutosubexclusionListParams] => {
   return params.length === 1 && true && true
 }

@@ -21,6 +21,8 @@ export type AutosubexclusionCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type AutosubexclusionCreateReturnType = AxiosPromise<SubscriptionExcludedAccount>;
+
 const isAutosubexclusionCreateObjectParams = (params: [AutosubexclusionCreateParams] | unknown[]): params is [AutosubexclusionCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'subscriptionExcludedAccount')
 }

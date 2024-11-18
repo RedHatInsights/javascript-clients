@@ -39,6 +39,8 @@ export type StatsReportsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type StatsReportsRetrieveReturnType = AxiosPromise<Stats>;
+
 const isStatsReportsRetrieveObjectParams = (params: [StatsReportsRetrieveParams] | unknown[]): params is [StatsReportsRetrieveParams] => {
   return params.length === 1 && true && true && true && true
 }

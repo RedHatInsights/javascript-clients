@@ -15,6 +15,8 @@ export type WeeklyreportsubscriptionListParams = {
   options?: AxiosRequestConfig
 }
 
+export type WeeklyreportsubscriptionListReturnType = AxiosPromise<Array<WeeklyReportSubscription>>;
+
 const isWeeklyreportsubscriptionListObjectParams = (params: [WeeklyreportsubscriptionListParams] | unknown[]): params is [WeeklyreportsubscriptionListParams] => {
   return params.length === 1
 }

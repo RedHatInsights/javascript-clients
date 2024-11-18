@@ -15,6 +15,8 @@ export type StatsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type StatsListReturnType = AxiosPromise<Array<Array<string>>>;
+
 const isStatsListObjectParams = (params: [StatsListParams] | unknown[]): params is [StatsListParams] => {
   return params.length === 1
 }

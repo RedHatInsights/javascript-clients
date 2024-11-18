@@ -21,6 +21,8 @@ export type WeeklyreportsubscriptionCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type WeeklyreportsubscriptionCreateReturnType = AxiosPromise<WeeklyReportSubscription>;
+
 const isWeeklyreportsubscriptionCreateObjectParams = (params: [WeeklyreportsubscriptionCreateParams] | unknown[]): params is [WeeklyreportsubscriptionCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'weeklyReportSubscription')
 }

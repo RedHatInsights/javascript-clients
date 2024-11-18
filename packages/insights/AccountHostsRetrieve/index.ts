@@ -21,6 +21,8 @@ export type AccountHostsRetrieveParams = {
   options?: AxiosRequestConfig
 }
 
+export type AccountHostsRetrieveReturnType = AxiosPromise<OrgId>;
+
 const isAccountHostsRetrieveObjectParams = (params: [AccountHostsRetrieveParams] | unknown[]): params is [AccountHostsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'orgId')
 }

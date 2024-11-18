@@ -15,6 +15,8 @@ export type RulecategoryListParams = {
   options?: AxiosRequestConfig
 }
 
+export type RulecategoryListReturnType = AxiosPromise<Array<RuleCategory>>;
+
 const isRulecategoryListObjectParams = (params: [RulecategoryListParams] | unknown[]): params is [RulecategoryListParams] => {
   return params.length === 1
 }

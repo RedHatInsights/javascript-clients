@@ -21,6 +21,8 @@ export type AutosubexclusionDestroyParams = {
   options?: AxiosRequestConfig
 }
 
+export type AutosubexclusionDestroyReturnType = AxiosPromise<string>;
+
 const isAutosubexclusionDestroyObjectParams = (params: [AutosubexclusionDestroyParams] | unknown[]): params is [AutosubexclusionDestroyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'orgId')
 }

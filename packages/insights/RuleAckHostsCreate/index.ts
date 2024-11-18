@@ -27,6 +27,8 @@ export type RuleAckHostsCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type RuleAckHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
+
 const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | unknown[]): params is [RuleAckHostsCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && Object.prototype.hasOwnProperty.call(params, 'multiHostAck')
 }

@@ -107,6 +107,8 @@ export const PathwaySystemsListUpdateMethodEnum = {
 } as const;
 export type PathwaySystemsListUpdateMethodEnum = typeof PathwaySystemsListUpdateMethodEnum[keyof typeof PathwaySystemsListUpdateMethodEnum];
 
+export type PathwaySystemsListReturnType = AxiosPromise<PaginatedSystemList>;
+
 const isPathwaySystemsListObjectParams = (params: [PathwaySystemsListParams] | unknown[]): params is [PathwaySystemsListParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true && true && true && true && true && true
 }

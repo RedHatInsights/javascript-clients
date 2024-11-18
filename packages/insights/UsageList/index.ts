@@ -39,6 +39,8 @@ export type UsageListParams = {
   options?: AxiosRequestConfig
 }
 
+export type UsageListReturnType = AxiosPromise<Usage>;
+
 const isUsageListObjectParams = (params: [UsageListParams] | unknown[]): params is [UsageListParams] => {
   return params.length === 1 && true && true && true && true
 }

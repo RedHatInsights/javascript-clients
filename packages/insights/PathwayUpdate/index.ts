@@ -27,6 +27,8 @@ export type PathwayUpdateParams = {
   options?: AxiosRequestConfig
 }
 
+export type PathwayUpdateReturnType = AxiosPromise<PathwayInput>;
+
 const isPathwayUpdateObjectParams = (params: [PathwayUpdateParams] | unknown[]): params is [PathwayUpdateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && Object.prototype.hasOwnProperty.call(params, 'pathwayInput')
 }

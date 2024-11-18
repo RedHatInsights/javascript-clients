@@ -21,6 +21,8 @@ export type TopicCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type TopicCreateReturnType = AxiosPromise<TopicEdit>;
+
 const isTopicCreateObjectParams = (params: [TopicCreateParams] | unknown[]): params is [TopicCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'topicEdit')
 }

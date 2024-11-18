@@ -123,6 +123,8 @@ export const PathwayListSortEnum = {
 } as const;
 export type PathwayListSortEnum = typeof PathwayListSortEnum[keyof typeof PathwayListSortEnum];
 
+export type PathwayListReturnType = AxiosPromise<PaginatedPathwayList>;
+
 const isPathwayListObjectParams = (params: [PathwayListParams] | unknown[]): params is [PathwayListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

@@ -170,6 +170,8 @@ export const RuleSystemsRetrieveUpdateMethodEnum = {
 } as const;
 export type RuleSystemsRetrieveUpdateMethodEnum = typeof RuleSystemsRetrieveUpdateMethodEnum[keyof typeof RuleSystemsRetrieveUpdateMethodEnum];
 
+export type RuleSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
+
 const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] | unknown[]): params is [RuleSystemsRetrieveParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
 }
