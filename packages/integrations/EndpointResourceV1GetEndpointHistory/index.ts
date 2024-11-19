@@ -57,11 +57,13 @@ export type EndpointResourceV1GetEndpointHistoryParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetEndpointHistoryReturnType = AxiosPromise<Array<NotificationHistory>>;
+
 const isEndpointResourceV1GetEndpointHistoryObjectParams = (params: [EndpointResourceV1GetEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetEndpointHistoryParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true && true && true
 }
 /**
-*
+* Get Endpoint History
 * @param {EndpointResourceV1GetEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

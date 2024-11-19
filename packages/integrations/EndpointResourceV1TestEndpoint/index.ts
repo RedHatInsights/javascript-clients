@@ -27,6 +27,8 @@ export type EndpointResourceV1TestEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1TestEndpointReturnType = AxiosPromise<void>;
+
 const isEndpointResourceV1TestEndpointObjectParams = (params: [EndpointResourceV1TestEndpointParams] | unknown[]): params is [EndpointResourceV1TestEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }

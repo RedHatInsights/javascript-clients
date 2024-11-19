@@ -21,6 +21,8 @@ export type EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
+
 const isEndpointResourceV1GetOrCreateDrawerSubscriptionEndpointObjectParams = (params: [EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
 }

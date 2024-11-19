@@ -27,6 +27,8 @@ export type EndpointResourceV1GetDetailedEndpointHistoryParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetDetailedEndpointHistoryReturnType = AxiosPromise<string>;
+
 const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [EndpointResourceV1GetDetailedEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetDetailedEndpointHistoryParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'historyId') && Object.prototype.hasOwnProperty.call(params, 'id')
 }
