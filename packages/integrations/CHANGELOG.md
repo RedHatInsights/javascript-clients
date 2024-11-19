@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-3.0.0...@redhat-cloud-services/integrations-client-3.1.0) (2024-11-19)
+
+
+### Features
+
+* generate new api.ts for integrations ([4288dbc](https://github.com/RedHatInsights/javascript-clients/commit/4288dbcdf9fb1677e40b1841ebb04e7daa07ef6d))
+
 ## [2.5.6](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-2.5.5...@redhat-cloud-services/integrations-client-2.5.6) (2024-11-18)
 
 ### Dependency Updates
