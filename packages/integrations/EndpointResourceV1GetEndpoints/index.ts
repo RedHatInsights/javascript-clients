@@ -63,6 +63,8 @@ export type EndpointResourceV1GetEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetEndpointsReturnType = AxiosPromise<EndpointPage>;
+
 const isEndpointResourceV1GetEndpointsObjectParams = (params: [EndpointResourceV1GetEndpointsParams] | unknown[]): params is [EndpointResourceV1GetEndpointsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true
 }

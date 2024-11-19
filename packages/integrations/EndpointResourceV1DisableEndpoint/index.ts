@@ -21,6 +21,8 @@ export type EndpointResourceV1DisableEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1DisableEndpointReturnType = AxiosPromise<void>;
+
 const isEndpointResourceV1DisableEndpointObjectParams = (params: [EndpointResourceV1DisableEndpointParams] | unknown[]): params is [EndpointResourceV1DisableEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

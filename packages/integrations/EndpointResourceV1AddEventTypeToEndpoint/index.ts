@@ -27,6 +27,8 @@ export type EndpointResourceV1AddEventTypeToEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1AddEventTypeToEndpointReturnType = AxiosPromise<string>;
+
 const isEndpointResourceV1AddEventTypeToEndpointObjectParams = (params: [EndpointResourceV1AddEventTypeToEndpointParams] | unknown[]): params is [EndpointResourceV1AddEventTypeToEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
 }

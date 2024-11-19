@@ -27,6 +27,8 @@ export type EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType = AxiosPromise<string>;
+
 const isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams = (params: [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && true
 }

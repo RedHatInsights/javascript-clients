@@ -21,6 +21,8 @@ export type EndpointResourceV1GetEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetEndpointReturnType = AxiosPromise<Endpoint>;
+
 const isEndpointResourceV1GetEndpointObjectParams = (params: [EndpointResourceV1GetEndpointParams] | unknown[]): params is [EndpointResourceV1GetEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

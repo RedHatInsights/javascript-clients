@@ -21,6 +21,8 @@ export type EndpointResourceV1DeleteEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1DeleteEndpointReturnType = AxiosPromise<void>;
+
 const isEndpointResourceV1DeleteEndpointObjectParams = (params: [EndpointResourceV1DeleteEndpointParams] | unknown[]): params is [EndpointResourceV1DeleteEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

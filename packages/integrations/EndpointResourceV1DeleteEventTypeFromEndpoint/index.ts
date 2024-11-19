@@ -27,6 +27,8 @@ export type EndpointResourceV1DeleteEventTypeFromEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1DeleteEventTypeFromEndpointReturnType = AxiosPromise<string>;
+
 const isEndpointResourceV1DeleteEventTypeFromEndpointObjectParams = (params: [EndpointResourceV1DeleteEventTypeFromEndpointParams] | unknown[]): params is [EndpointResourceV1DeleteEventTypeFromEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
 }

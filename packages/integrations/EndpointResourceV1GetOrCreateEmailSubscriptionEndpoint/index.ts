@@ -21,6 +21,8 @@ export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams = {
   options?: AxiosRequestConfig
 }
 
+export type EndpointResourceV1GetOrCreateEmailSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
+
 const isEndpointResourceV1GetOrCreateEmailSubscriptionEndpointObjectParams = (params: [EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
 }
