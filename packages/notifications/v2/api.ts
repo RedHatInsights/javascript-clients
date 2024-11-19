@@ -1,0 +1,87 @@
+/* tslint:disable */
+/* eslint-disable */
+import type { AxiosStatic } from 'axios'
+import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
+import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
+import {
+    eventResourceV2GetEvents,EventResourceV2GetEventsReturnType,
+    notificationResourceV2AppendBehaviorGroupToEventType,NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType,
+    notificationResourceV2CreateBehaviorGroup,NotificationResourceV2CreateBehaviorGroupReturnType,
+    notificationResourceV2DeleteBehaviorGroup,NotificationResourceV2DeleteBehaviorGroupReturnType,
+    notificationResourceV2DeleteBehaviorGroupFromEventType,NotificationResourceV2DeleteBehaviorGroupFromEventTypeReturnType,
+    notificationResourceV2FindBehaviorGroupsByBundleId,NotificationResourceV2FindBehaviorGroupsByBundleIdReturnType,
+    notificationResourceV2GetApplicationByNameAndBundleName,NotificationResourceV2GetApplicationByNameAndBundleNameReturnType,
+    notificationResourceV2GetApplicationsFacets,NotificationResourceV2GetApplicationsFacetsReturnType,
+    notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpoint,NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType,
+    notificationResourceV2GetBundleByName,NotificationResourceV2GetBundleByNameReturnType,
+    notificationResourceV2GetBundleFacets,NotificationResourceV2GetBundleFacetsReturnType,
+    notificationResourceV2GetEventTypes,NotificationResourceV2GetEventTypesReturnType,
+    notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroup,NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType,
+    notificationResourceV2GetEventTypesByNameAndBundleAndApplicationName,NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameReturnType,
+    notificationResourceV2GetLinkedBehaviorGroups,NotificationResourceV2GetLinkedBehaviorGroupsReturnType,
+    notificationResourceV2UpdateBehaviorGroup,NotificationResourceV2UpdateBehaviorGroupReturnType,
+    notificationResourceV2UpdateBehaviorGroupActions,NotificationResourceV2UpdateBehaviorGroupActionsReturnType,
+    notificationResourceV2UpdateEventTypeBehaviors,NotificationResourceV2UpdateEventTypeBehaviorsReturnType,
+    notificationResourceV2UpdateEventTypeEndpoints,NotificationResourceV2UpdateEventTypeEndpointsReturnType,
+    orgConfigResourceV2GetDailyDigestTimePreference,OrgConfigResourceV2GetDailyDigestTimePreferenceReturnType,
+    orgConfigResourceV2SaveDailyDigestTimePreference,OrgConfigResourceV2SaveDailyDigestTimePreferenceReturnType,
+
+  } from './index';
+
+const endpointList = {
+      eventResourceV2GetEvents,
+    notificationResourceV2AppendBehaviorGroupToEventType,
+    notificationResourceV2CreateBehaviorGroup,
+    notificationResourceV2DeleteBehaviorGroup,
+    notificationResourceV2DeleteBehaviorGroupFromEventType,
+    notificationResourceV2FindBehaviorGroupsByBundleId,
+    notificationResourceV2GetApplicationByNameAndBundleName,
+    notificationResourceV2GetApplicationsFacets,
+    notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpoint,
+    notificationResourceV2GetBundleByName,
+    notificationResourceV2GetBundleFacets,
+    notificationResourceV2GetEventTypes,
+    notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroup,
+    notificationResourceV2GetEventTypesByNameAndBundleAndApplicationName,
+    notificationResourceV2GetLinkedBehaviorGroups,
+    notificationResourceV2UpdateBehaviorGroup,
+    notificationResourceV2UpdateBehaviorGroupActions,
+    notificationResourceV2UpdateEventTypeBehaviors,
+    notificationResourceV2UpdateEventTypeEndpoints,
+    orgConfigResourceV2GetDailyDigestTimePreference,
+    orgConfigResourceV2SaveDailyDigestTimePreference,
+
+
+};
+
+type endpointReturnTypes = {
+      eventResourceV2GetEvents: EventResourceV2GetEventsReturnType,
+    notificationResourceV2AppendBehaviorGroupToEventType: NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType,
+    notificationResourceV2CreateBehaviorGroup: NotificationResourceV2CreateBehaviorGroupReturnType,
+    notificationResourceV2DeleteBehaviorGroup: NotificationResourceV2DeleteBehaviorGroupReturnType,
+    notificationResourceV2DeleteBehaviorGroupFromEventType: NotificationResourceV2DeleteBehaviorGroupFromEventTypeReturnType,
+    notificationResourceV2FindBehaviorGroupsByBundleId: NotificationResourceV2FindBehaviorGroupsByBundleIdReturnType,
+    notificationResourceV2GetApplicationByNameAndBundleName: NotificationResourceV2GetApplicationByNameAndBundleNameReturnType,
+    notificationResourceV2GetApplicationsFacets: NotificationResourceV2GetApplicationsFacetsReturnType,
+    notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpoint: NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType,
+    notificationResourceV2GetBundleByName: NotificationResourceV2GetBundleByNameReturnType,
+    notificationResourceV2GetBundleFacets: NotificationResourceV2GetBundleFacetsReturnType,
+    notificationResourceV2GetEventTypes: NotificationResourceV2GetEventTypesReturnType,
+    notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroup: NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType,
+    notificationResourceV2GetEventTypesByNameAndBundleAndApplicationName: NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameReturnType,
+    notificationResourceV2GetLinkedBehaviorGroups: NotificationResourceV2GetLinkedBehaviorGroupsReturnType,
+    notificationResourceV2UpdateBehaviorGroup: NotificationResourceV2UpdateBehaviorGroupReturnType,
+    notificationResourceV2UpdateBehaviorGroupActions: NotificationResourceV2UpdateBehaviorGroupActionsReturnType,
+    notificationResourceV2UpdateEventTypeBehaviors: NotificationResourceV2UpdateEventTypeBehaviorsReturnType,
+    notificationResourceV2UpdateEventTypeEndpoints: NotificationResourceV2UpdateEventTypeEndpointsReturnType,
+    orgConfigResourceV2GetDailyDigestTimePreference: OrgConfigResourceV2GetDailyDigestTimePreferenceReturnType,
+    orgConfigResourceV2SaveDailyDigestTimePreference: OrgConfigResourceV2SaveDailyDigestTimePreferenceReturnType,
+
+
+};
+
+export const NotificationsClient = (BASE_PATH: string, instance?: ApiConfig) => {
+  return APIFactory<typeof endpointList, endpointReturnTypes>(BASE_PATH, endpointList, instance);
+}
+
+export default NotificationsClient;
