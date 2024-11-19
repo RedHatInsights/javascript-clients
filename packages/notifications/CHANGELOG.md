@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-3.0.1...@redhat-cloud-services/notifications-client-3.1.0) (2024-11-19)
+
+
+### Features
+
+* create V2 spec of notifications client RHCLOUD-36224 ([6196b8f](https://github.com/RedHatInsights/javascript-clients/commit/6196b8f7098c8616b4f66976c2b6a2e388ee8f6c))
+
 ## [3.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-3.0.0...@redhat-cloud-services/notifications-client-3.0.1) (2024-11-19)
 
 ## [2.5.6](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-2.5.5...@redhat-cloud-services/notifications-client-2.5.6) (2024-11-18)
