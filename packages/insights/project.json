@@ -8,7 +8,6 @@
       "executor": "@redhat-cloud-services/build-utils:client-generator",
       "options": {
         "postProcess": "./postProcess.sh",
-        "legacyGenerator": true,
         "specs": {
           "default": "https://cloud.redhat.com/api/insights/v1/openapi.json"
         }
