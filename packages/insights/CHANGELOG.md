@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-2.0.0...@redhat-cloud-services/insights-client-2.1.0) (2024-11-19)
+
+
+### Features
+
+* convert insights-client to new generator ([ad88fdc](https://github.com/RedHatInsights/javascript-clients/commit/ad88fdc93d529add17bb71ee9f3a47ce10d75f23))
+
 ## [1.5.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-1.5.0...@redhat-cloud-services/insights-client-1.5.1) (2024-08-31)
 
 ## [1.5.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-1.4.6...@redhat-cloud-services/insights-client-1.5.0) (2024-08-05)
