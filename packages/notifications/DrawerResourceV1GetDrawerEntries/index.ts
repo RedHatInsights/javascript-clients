@@ -81,6 +81,8 @@ export type DrawerResourceV1GetDrawerEntriesParams = {
   options?: AxiosRequestConfig
 }
 
+export type DrawerResourceV1GetDrawerEntriesReturnType = AxiosPromise<PageDrawerEntryPayload>;
+
 const isDrawerResourceV1GetDrawerEntriesObjectParams = (params: [DrawerResourceV1GetDrawerEntriesParams] | unknown[]): params is [DrawerResourceV1GetDrawerEntriesParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true
 }

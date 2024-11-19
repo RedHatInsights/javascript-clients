@@ -33,6 +33,8 @@ export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType = AxiosPromise<EventType>;
+
 const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObjectParams = (params: [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | unknown[]): params is [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'applicationName') && Object.prototype.hasOwnProperty.call(params, 'bundleName') && Object.prototype.hasOwnProperty.call(params, 'eventTypeName')
 }

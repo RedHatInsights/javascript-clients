@@ -21,6 +21,8 @@ export type NotificationResourceV1GetApplicationsFacetsParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetApplicationsFacetsReturnType = AxiosPromise<Array<Facet>>;
+
 const isNotificationResourceV1GetApplicationsFacetsObjectParams = (params: [NotificationResourceV1GetApplicationsFacetsParams] | unknown[]): params is [NotificationResourceV1GetApplicationsFacetsParams] => {
   return params.length === 1 && true
 }

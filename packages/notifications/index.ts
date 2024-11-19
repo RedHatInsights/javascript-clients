@@ -1,96 +1,46 @@
-// This is a sample supporting file mustache template.
+export { default as drawerResourceV1GetDrawerEntries, DrawerResourceV1GetDrawerEntriesReturnType } from './DrawerResourceV1GetDrawerEntries'
 
-export * from './types'
+export { default as drawerResourceV1UpdateNotificationReadStatus, DrawerResourceV1UpdateNotificationReadStatusReturnType } from './DrawerResourceV1UpdateNotificationReadStatus'
 
-export { default as drawerResourceV1GetDrawerEntries } from './DrawerResourceV1GetDrawerEntries'
+export { default as eventResourceV1GetEvents, EventResourceV1GetEventsReturnType } from './EventResourceV1GetEvents'
 
+export { default as notificationResourceV1AppendBehaviorGroupToEventType, NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType } from './NotificationResourceV1AppendBehaviorGroupToEventType'
 
-// end of operations block
-export { default as drawerResourceV1UpdateNotificationReadStatus } from './DrawerResourceV1UpdateNotificationReadStatus'
+export { default as notificationResourceV1CreateBehaviorGroup, NotificationResourceV1CreateBehaviorGroupReturnType } from './NotificationResourceV1CreateBehaviorGroup'
 
+export { default as notificationResourceV1DeleteBehaviorGroup, NotificationResourceV1DeleteBehaviorGroupReturnType } from './NotificationResourceV1DeleteBehaviorGroup'
 
-// end of operations block
-export { default as eventResourceV1GetEvents } from './EventResourceV1GetEvents'
+export { default as notificationResourceV1DeleteBehaviorGroupFromEventType, NotificationResourceV1DeleteBehaviorGroupFromEventTypeReturnType } from './NotificationResourceV1DeleteBehaviorGroupFromEventType'
 
+export { default as notificationResourceV1FindBehaviorGroupsByBundleId, NotificationResourceV1FindBehaviorGroupsByBundleIdReturnType } from './NotificationResourceV1FindBehaviorGroupsByBundleId'
 
-// end of operations block
-export { default as notificationResourceV1AppendBehaviorGroupToEventType } from './NotificationResourceV1AppendBehaviorGroupToEventType'
+export { default as notificationResourceV1GetApplicationByNameAndBundleName, NotificationResourceV1GetApplicationByNameAndBundleNameReturnType } from './NotificationResourceV1GetApplicationByNameAndBundleName'
 
+export { default as notificationResourceV1GetApplicationsFacets, NotificationResourceV1GetApplicationsFacetsReturnType } from './NotificationResourceV1GetApplicationsFacets'
 
-// end of operations block
-export { default as notificationResourceV1CreateBehaviorGroup } from './NotificationResourceV1CreateBehaviorGroup'
+export { default as notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint, NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType } from './NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint'
 
+export { default as notificationResourceV1GetBundleByName, NotificationResourceV1GetBundleByNameReturnType } from './NotificationResourceV1GetBundleByName'
 
-// end of operations block
-export { default as notificationResourceV1DeleteBehaviorGroup } from './NotificationResourceV1DeleteBehaviorGroup'
+export { default as notificationResourceV1GetBundleFacets, NotificationResourceV1GetBundleFacetsReturnType } from './NotificationResourceV1GetBundleFacets'
 
+export { default as notificationResourceV1GetEventTypes, NotificationResourceV1GetEventTypesReturnType } from './NotificationResourceV1GetEventTypes'
 
-// end of operations block
-export { default as notificationResourceV1DeleteBehaviorGroupFromEventType } from './NotificationResourceV1DeleteBehaviorGroupFromEventType'
+export { default as notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup, NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType } from './NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup'
 
+export { default as notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName, NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType } from './NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName'
 
-// end of operations block
-export { default as notificationResourceV1FindBehaviorGroupsByBundleId } from './NotificationResourceV1FindBehaviorGroupsByBundleId'
+export { default as notificationResourceV1GetLinkedBehaviorGroups, NotificationResourceV1GetLinkedBehaviorGroupsReturnType } from './NotificationResourceV1GetLinkedBehaviorGroups'
 
+export { default as notificationResourceV1UpdateBehaviorGroup, NotificationResourceV1UpdateBehaviorGroupReturnType } from './NotificationResourceV1UpdateBehaviorGroup'
 
-// end of operations block
-export { default as notificationResourceV1GetApplicationByNameAndBundleName } from './NotificationResourceV1GetApplicationByNameAndBundleName'
+export { default as notificationResourceV1UpdateBehaviorGroupActions, NotificationResourceV1UpdateBehaviorGroupActionsReturnType } from './NotificationResourceV1UpdateBehaviorGroupActions'
 
+export { default as notificationResourceV1UpdateEventTypeBehaviors, NotificationResourceV1UpdateEventTypeBehaviorsReturnType } from './NotificationResourceV1UpdateEventTypeBehaviors'
 
-// end of operations block
-export { default as notificationResourceV1GetApplicationsFacets } from './NotificationResourceV1GetApplicationsFacets'
+export { default as notificationResourceV1UpdateEventTypeEndpoints, NotificationResourceV1UpdateEventTypeEndpointsReturnType } from './NotificationResourceV1UpdateEventTypeEndpoints'
 
+export { default as orgConfigResourceV1GetDailyDigestTimePreference, OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV1GetDailyDigestTimePreference'
 
-// end of operations block
-export { default as notificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint } from './NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpoint'
+export { default as orgConfigResourceV1SaveDailyDigestTimePreference, OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
 
-
-// end of operations block
-export { default as notificationResourceV1GetBundleByName } from './NotificationResourceV1GetBundleByName'
-
-
-// end of operations block
-export { default as notificationResourceV1GetBundleFacets } from './NotificationResourceV1GetBundleFacets'
-
-
-// end of operations block
-export { default as notificationResourceV1GetEventTypes } from './NotificationResourceV1GetEventTypes'
-
-
-// end of operations block
-export { default as notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup } from './NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroup'
-
-
-// end of operations block
-export { default as notificationResourceV1GetEventTypesByNameAndBundleAndApplicationName } from './NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationName'
-
-
-// end of operations block
-export { default as notificationResourceV1GetLinkedBehaviorGroups } from './NotificationResourceV1GetLinkedBehaviorGroups'
-
-
-// end of operations block
-export { default as notificationResourceV1UpdateBehaviorGroup } from './NotificationResourceV1UpdateBehaviorGroup'
-
-
-// end of operations block
-export { default as notificationResourceV1UpdateBehaviorGroupActions } from './NotificationResourceV1UpdateBehaviorGroupActions'
-
-
-// end of operations block
-export { default as notificationResourceV1UpdateEventTypeBehaviors } from './NotificationResourceV1UpdateEventTypeBehaviors'
-
-
-// end of operations block
-export { default as notificationResourceV1UpdateEventTypeEndpoints } from './NotificationResourceV1UpdateEventTypeEndpoints'
-
-
-// end of operations block
-export { default as orgConfigResourceV1GetDailyDigestTimePreference } from './OrgConfigResourceV1GetDailyDigestTimePreference'
-
-
-// end of operations block
-export { default as orgConfigResourceV1SaveDailyDigestTimePreference } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
-
-
-// end of operations block

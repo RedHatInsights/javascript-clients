@@ -27,6 +27,8 @@ export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeReturnType = AxiosPromise<void>;
+
 const isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams = (params: [NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | unknown[]): params is [NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
 }

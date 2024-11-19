@@ -69,6 +69,8 @@ export type NotificationResourceV1GetEventTypesParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetEventTypesReturnType = AxiosPromise<PageEventType>;
+
 const isNotificationResourceV1GetEventTypesObjectParams = (params: [NotificationResourceV1GetEventTypesParams] | unknown[]): params is [NotificationResourceV1GetEventTypesParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true
 }
