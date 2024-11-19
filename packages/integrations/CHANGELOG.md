@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-3.1.0...@redhat-cloud-services/integrations-client-3.2.0) (2024-11-19)
+
+
+### Features
+
+* create V2 spec of integrations client RHCLOUD-36225 ([93f6816](https://github.com/RedHatInsights/javascript-clients/commit/93f681689d220f0d11901193c2f09b61402f2a01))
+
 ## [3.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-3.0.0...@redhat-cloud-services/integrations-client-3.1.0) (2024-11-19)
 
 
