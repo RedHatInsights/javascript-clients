@@ -21,6 +21,8 @@ export type DrawerResourceV1UpdateNotificationReadStatusParams = {
   options?: AxiosRequestConfig
 }
 
+export type DrawerResourceV1UpdateNotificationReadStatusReturnType = AxiosPromise<number>;
+
 const isDrawerResourceV1UpdateNotificationReadStatusObjectParams = (params: [DrawerResourceV1UpdateNotificationReadStatusParams] | unknown[]): params is [DrawerResourceV1UpdateNotificationReadStatusParams] => {
   return params.length === 1 && true
 }

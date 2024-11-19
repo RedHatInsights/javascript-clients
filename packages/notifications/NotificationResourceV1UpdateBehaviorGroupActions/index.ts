@@ -27,6 +27,8 @@ export type NotificationResourceV1UpdateBehaviorGroupActionsParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1UpdateBehaviorGroupActionsReturnType = AxiosPromise<string>;
+
 const isNotificationResourceV1UpdateBehaviorGroupActionsObjectParams = (params: [NotificationResourceV1UpdateBehaviorGroupActionsParams] | unknown[]): params is [NotificationResourceV1UpdateBehaviorGroupActionsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId') && true
 }

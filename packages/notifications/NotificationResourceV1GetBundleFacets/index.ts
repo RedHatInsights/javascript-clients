@@ -21,6 +21,8 @@ export type NotificationResourceV1GetBundleFacetsParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetBundleFacetsReturnType = AxiosPromise<Array<Facet>>;
+
 const isNotificationResourceV1GetBundleFacetsObjectParams = (params: [NotificationResourceV1GetBundleFacetsParams] | unknown[]): params is [NotificationResourceV1GetBundleFacetsParams] => {
   return params.length === 1 && true
 }

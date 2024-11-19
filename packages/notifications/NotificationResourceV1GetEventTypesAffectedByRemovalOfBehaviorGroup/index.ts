@@ -21,6 +21,8 @@ export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupP
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType = AxiosPromise<Array<EventType>>;
+
 const isNotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupObjectParams = (params: [NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | unknown[]): params is [NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId')
 }

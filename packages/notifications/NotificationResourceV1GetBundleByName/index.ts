@@ -21,6 +21,8 @@ export type NotificationResourceV1GetBundleByNameParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetBundleByNameReturnType = AxiosPromise<Bundle>;
+
 const isNotificationResourceV1GetBundleByNameObjectParams = (params: [NotificationResourceV1GetBundleByNameParams] | unknown[]): params is [NotificationResourceV1GetBundleByNameParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'bundleName')
 }

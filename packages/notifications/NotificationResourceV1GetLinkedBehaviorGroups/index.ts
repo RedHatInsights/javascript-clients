@@ -51,6 +51,8 @@ export type NotificationResourceV1GetLinkedBehaviorGroupsParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetLinkedBehaviorGroupsReturnType = AxiosPromise<Array<BehaviorGroup>>;
+
 const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [NotificationResourceV1GetLinkedBehaviorGroupsParams] | unknown[]): params is [NotificationResourceV1GetLinkedBehaviorGroupsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true && true && true && true && true
 }

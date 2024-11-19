@@ -111,6 +111,8 @@ export type EventResourceV1GetEventsParams = {
   options?: AxiosRequestConfig
 }
 
+export type EventResourceV1GetEventsReturnType = AxiosPromise<PageEventLogEntry>;
+
 const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEventsParams] | unknown[]): params is [EventResourceV1GetEventsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

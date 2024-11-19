@@ -21,6 +21,8 @@ export type NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointPa
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType = AxiosPromise<Array<BehaviorGroup>>;
+
 const isNotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointObjectParams = (params: [NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | unknown[]): params is [NotificationResourceV1GetBehaviorGroupsAffectedByRemovalOfEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId')
 }

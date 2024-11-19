@@ -21,6 +21,8 @@ export type NotificationResourceV1FindBehaviorGroupsByBundleIdParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1FindBehaviorGroupsByBundleIdReturnType = AxiosPromise<Array<BehaviorGroup>>;
+
 const isNotificationResourceV1FindBehaviorGroupsByBundleIdObjectParams = (params: [NotificationResourceV1FindBehaviorGroupsByBundleIdParams] | unknown[]): params is [NotificationResourceV1FindBehaviorGroupsByBundleIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'bundleId')
 }

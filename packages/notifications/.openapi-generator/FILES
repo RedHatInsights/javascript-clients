@@ -24,9 +24,6 @@ NotificationResourceV1UpdateEventTypeEndpoints/index.ts
 OrgConfigResourceV1GetDailyDigestTimePreference/index.ts
 OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
 index.ts

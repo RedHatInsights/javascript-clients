@@ -27,6 +27,8 @@ export type NotificationResourceV1AppendBehaviorGroupToEventTypeParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType = AxiosPromise<void>;
+
 const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (params: [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | unknown[]): params is [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupUuid') && Object.prototype.hasOwnProperty.call(params, 'eventTypeUuid')
 }

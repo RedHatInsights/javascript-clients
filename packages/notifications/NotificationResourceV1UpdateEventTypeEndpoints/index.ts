@@ -27,6 +27,8 @@ export type NotificationResourceV1UpdateEventTypeEndpointsParams = {
   options?: AxiosRequestConfig
 }
 
+export type NotificationResourceV1UpdateEventTypeEndpointsReturnType = AxiosPromise<string>;
+
 const isNotificationResourceV1UpdateEventTypeEndpointsObjectParams = (params: [NotificationResourceV1UpdateEventTypeEndpointsParams] | unknown[]): params is [NotificationResourceV1UpdateEventTypeEndpointsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true
 }
