@@ -1,8 +1,13 @@
 .gitignore
 .npmignore
+FavoritesGet/index.ts
+FavoritesPost/index.ts
+HelptopicsGet/index.ts
+HelptopicsNameGet/index.ts
+QuickstartsGet/index.ts
+QuickstartsIdGet/index.ts
 api.ts
-base.ts
-common.ts
-configuration.ts
 git_push.sh
 index.ts
+index.ts
+types/index.ts
