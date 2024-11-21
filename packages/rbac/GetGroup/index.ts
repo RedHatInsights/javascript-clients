@@ -21,6 +21,8 @@ export type GetGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type GetGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+
 const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is [GetGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }

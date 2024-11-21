@@ -86,6 +86,8 @@ export const ListRolesForGroupOrderByEnum = {
 } as const;
 export type ListRolesForGroupOrderByEnum = typeof ListRolesForGroupOrderByEnum[keyof typeof ListRolesForGroupOrderByEnum];
 
+export type ListRolesForGroupReturnType = AxiosPromise<GroupRolesPagination>;
+
 const isListRolesForGroupObjectParams = (params: [ListRolesForGroupParams] | unknown[]): params is [ListRolesForGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true
 }

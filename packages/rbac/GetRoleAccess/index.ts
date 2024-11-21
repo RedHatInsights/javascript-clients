@@ -33,6 +33,8 @@ export type GetRoleAccessParams = {
   options?: AxiosRequestConfig
 }
 
+export type GetRoleAccessReturnType = AxiosPromise<AccessPagination>;
+
 const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]): params is [GetRoleAccessParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
 }

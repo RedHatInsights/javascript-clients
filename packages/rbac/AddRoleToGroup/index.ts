@@ -27,6 +27,8 @@ export type AddRoleToGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type AddRoleToGroupReturnType = AxiosPromise<AddRoleToGroup200Response>;
+
 const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]): params is [AddRoleToGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupRoleIn')
 }

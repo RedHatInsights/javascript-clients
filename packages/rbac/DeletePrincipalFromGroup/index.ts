@@ -33,6 +33,8 @@ export type DeletePrincipalFromGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeletePrincipalFromGroupReturnType = AxiosPromise<void>;
+
 const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGroupParams] | unknown[]): params is [DeletePrincipalFromGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
 }

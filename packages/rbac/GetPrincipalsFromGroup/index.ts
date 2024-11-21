@@ -98,6 +98,8 @@ export const GetPrincipalsFromGroupPrincipalTypeEnum = {
 } as const;
 export type GetPrincipalsFromGroupPrincipalTypeEnum = typeof GetPrincipalsFromGroupPrincipalTypeEnum[keyof typeof GetPrincipalsFromGroupPrincipalTypeEnum];
 
+export type GetPrincipalsFromGroupReturnType = AxiosPromise<GetPrincipalsFromGroup200Response>;
+
 const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupParams] | unknown[]): params is [GetPrincipalsFromGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true && true
 }

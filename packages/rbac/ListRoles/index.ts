@@ -132,6 +132,8 @@ export const ListRolesAddFieldsEnum = {
 } as const;
 export type ListRolesAddFieldsEnum = typeof ListRolesAddFieldsEnum[keyof typeof ListRolesAddFieldsEnum];
 
+export type ListRolesReturnType = AxiosPromise<RolePaginationDynamic>;
+
 const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params is [ListRolesParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

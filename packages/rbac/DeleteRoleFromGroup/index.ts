@@ -27,6 +27,8 @@ export type DeleteRoleFromGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeleteRoleFromGroupReturnType = AxiosPromise<void>;
+
 const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] | unknown[]): params is [DeleteRoleFromGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'roles')
 }

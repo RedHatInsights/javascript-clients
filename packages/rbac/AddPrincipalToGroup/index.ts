@@ -27,6 +27,8 @@ export type AddPrincipalToGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type AddPrincipalToGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+
 const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] | unknown[]): params is [AddPrincipalToGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupPrincipalIn')
 }
