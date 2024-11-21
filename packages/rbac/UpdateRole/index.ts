@@ -27,6 +27,8 @@ export type UpdateRoleParams = {
   options?: AxiosRequestConfig
 }
 
+export type UpdateRoleReturnType = AxiosPromise<void>;
+
 const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'rolePut')
 }

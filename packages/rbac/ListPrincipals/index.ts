@@ -126,6 +126,8 @@ export const ListPrincipalsTypeEnum = {
 } as const;
 export type ListPrincipalsTypeEnum = typeof ListPrincipalsTypeEnum[keyof typeof ListPrincipalsTypeEnum];
 
+export type ListPrincipalsReturnType = AxiosPromise<ListPrincipals200Response>;
+
 const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]): params is [ListPrincipalsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true
 }

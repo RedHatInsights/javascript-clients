@@ -1,116 +1,56 @@
-// This is a sample supporting file mustache template.
+export { default as addPrincipalToGroup, AddPrincipalToGroupReturnType } from './AddPrincipalToGroup'
 
-export * from './types'
+export { default as addRoleToGroup, AddRoleToGroupReturnType } from './AddRoleToGroup'
 
-export { default as addPrincipalToGroup } from './AddPrincipalToGroup'
+export { default as createCrossAccountRequests, CreateCrossAccountRequestsReturnType } from './CreateCrossAccountRequests'
 
+export { default as createGroup, CreateGroupReturnType } from './CreateGroup'
 
-// end of operations block
-export { default as addRoleToGroup } from './AddRoleToGroup'
+export { default as createRole, CreateRoleReturnType } from './CreateRole'
 
+export { default as deleteGroup, DeleteGroupReturnType } from './DeleteGroup'
 
-// end of operations block
-export { default as createCrossAccountRequests } from './CreateCrossAccountRequests'
+export { default as deletePrincipalFromGroup, DeletePrincipalFromGroupReturnType } from './DeletePrincipalFromGroup'
 
+export { default as deleteRole, DeleteRoleReturnType } from './DeleteRole'
 
-// end of operations block
-export { default as createGroup } from './CreateGroup'
+export { default as deleteRoleFromGroup, DeleteRoleFromGroupReturnType } from './DeleteRoleFromGroup'
 
+export { default as getCrossAccountRequest, GetCrossAccountRequestReturnType } from './GetCrossAccountRequest'
 
-// end of operations block
-export { default as createRole } from './CreateRole'
+export { default as getGroup, GetGroupReturnType } from './GetGroup'
 
+export { default as getPrincipalAccess, GetPrincipalAccessReturnType } from './GetPrincipalAccess'
 
-// end of operations block
-export { default as deleteGroup } from './DeleteGroup'
+export { default as getPrincipalsFromGroup, GetPrincipalsFromGroupReturnType } from './GetPrincipalsFromGroup'
 
+export { default as getRole, GetRoleReturnType } from './GetRole'
 
-// end of operations block
-export { default as deletePrincipalFromGroup } from './DeletePrincipalFromGroup'
+export { default as getRoleAccess, GetRoleAccessReturnType } from './GetRoleAccess'
 
+export { default as getStatus, GetStatusReturnType } from './GetStatus'
 
-// end of operations block
-export { default as deleteRole } from './DeleteRole'
+export { default as listCrossAccountRequests, ListCrossAccountRequestsReturnType } from './ListCrossAccountRequests'
 
+export { default as listGroups, ListGroupsReturnType } from './ListGroups'
 
-// end of operations block
-export { default as deleteRoleFromGroup } from './DeleteRoleFromGroup'
+export { default as listPermissionOptions, ListPermissionOptionsReturnType } from './ListPermissionOptions'
 
+export { default as listPermissions, ListPermissionsReturnType } from './ListPermissions'
 
-// end of operations block
-export { default as getCrossAccountRequest } from './GetCrossAccountRequest'
+export { default as listPrincipals, ListPrincipalsReturnType } from './ListPrincipals'
 
+export { default as listRoles, ListRolesReturnType } from './ListRoles'
 
-// end of operations block
-export { default as getGroup } from './GetGroup'
+export { default as listRolesForGroup, ListRolesForGroupReturnType } from './ListRolesForGroup'
 
+export { default as patchCrossAccountRequest, PatchCrossAccountRequestReturnType } from './PatchCrossAccountRequest'
 
-// end of operations block
-export { default as getPrincipalAccess } from './GetPrincipalAccess'
+export { default as patchRole, PatchRoleReturnType } from './PatchRole'
 
+export { default as putCrossAccountRequest, PutCrossAccountRequestReturnType } from './PutCrossAccountRequest'
 
-// end of operations block
-export { default as getPrincipalsFromGroup } from './GetPrincipalsFromGroup'
+export { default as updateGroup, UpdateGroupReturnType } from './UpdateGroup'
 
+export { default as updateRole, UpdateRoleReturnType } from './UpdateRole'
 
-// end of operations block
-export { default as getRole } from './GetRole'
-
-
-// end of operations block
-export { default as getRoleAccess } from './GetRoleAccess'
-
-
-// end of operations block
-export { default as getStatus } from './GetStatus'
-
-
-// end of operations block
-export { default as listCrossAccountRequests } from './ListCrossAccountRequests'
-
-
-// end of operations block
-export { default as listGroups } from './ListGroups'
-
-
-// end of operations block
-export { default as listPermissionOptions } from './ListPermissionOptions'
-
-
-// end of operations block
-export { default as listPermissions } from './ListPermissions'
-
-
-// end of operations block
-export { default as listPrincipals } from './ListPrincipals'
-
-
-// end of operations block
-export { default as listRoles } from './ListRoles'
-
-
-// end of operations block
-export { default as listRolesForGroup } from './ListRolesForGroup'
-
-
-// end of operations block
-export { default as patchCrossAccountRequest } from './PatchCrossAccountRequest'
-
-
-// end of operations block
-export { default as patchRole } from './PatchRole'
-
-
-// end of operations block
-export { default as putCrossAccountRequest } from './PutCrossAccountRequest'
-
-
-// end of operations block
-export { default as updateGroup } from './UpdateGroup'
-
-
-// end of operations block
-export { default as updateRole } from './UpdateRole'
-
-
-// end of operations block

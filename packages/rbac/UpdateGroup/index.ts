@@ -27,6 +27,8 @@ export type UpdateGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type UpdateGroupReturnType = AxiosPromise<GroupOut>;
+
 const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): params is [UpdateGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'group')
 }

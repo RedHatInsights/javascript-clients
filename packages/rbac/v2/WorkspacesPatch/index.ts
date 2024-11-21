@@ -27,6 +27,8 @@ export type WorkspacesPatchParams = {
   options?: AxiosRequestConfig
 }
 
+export type WorkspacesPatchReturnType = AxiosPromise<WorkspacesPatchWorkspaceResponse>;
+
 const isWorkspacesPatchObjectParams = (params: [WorkspacesPatchParams] | unknown[]): params is [WorkspacesPatchParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesPatchWorkspaceRequest')
 }

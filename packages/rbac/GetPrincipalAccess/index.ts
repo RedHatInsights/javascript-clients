@@ -71,6 +71,8 @@ export const GetPrincipalAccessStatusEnum = {
 } as const;
 export type GetPrincipalAccessStatusEnum = typeof GetPrincipalAccessStatusEnum[keyof typeof GetPrincipalAccessStatusEnum];
 
+export type GetPrincipalAccessReturnType = AxiosPromise<AccessPagination>;
+
 const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | unknown[]): params is [GetPrincipalAccessParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'application') && true && true && true && true && true
 }

@@ -21,6 +21,8 @@ export type CreateRoleParams = {
   options?: AxiosRequestConfig
 }
 
+export type CreateRoleReturnType = AxiosPromise<RoleWithAccess>;
+
 const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): params is [CreateRoleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'roleIn')
 }

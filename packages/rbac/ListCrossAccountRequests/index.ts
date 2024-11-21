@@ -105,6 +105,8 @@ export const ListCrossAccountRequestsOrderByEnum = {
 } as const;
 export type ListCrossAccountRequestsOrderByEnum = typeof ListCrossAccountRequestsOrderByEnum[keyof typeof ListCrossAccountRequestsOrderByEnum];
 
+export type ListCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestPagination>;
+
 const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequestsParams] | unknown[]): params is [ListCrossAccountRequestsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true
 }

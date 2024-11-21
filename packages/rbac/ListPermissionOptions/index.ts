@@ -91,6 +91,8 @@ export const ListPermissionOptionsAllowedOnlyEnum = {
 } as const;
 export type ListPermissionOptionsAllowedOnlyEnum = typeof ListPermissionOptionsAllowedOnlyEnum[keyof typeof ListPermissionOptionsAllowedOnlyEnum];
 
+export type ListPermissionOptionsReturnType = AxiosPromise<PermissionOptionsPagination>;
+
 const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParams] | unknown[]): params is [ListPermissionOptionsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'field') && true && true && true && true && true && true && true
 }

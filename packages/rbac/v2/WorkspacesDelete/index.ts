@@ -21,6 +21,8 @@ export type WorkspacesDeleteParams = {
   options?: AxiosRequestConfig
 }
 
+export type WorkspacesDeleteReturnType = AxiosPromise<void>;
+
 const isWorkspacesDeleteObjectParams = (params: [WorkspacesDeleteParams] | unknown[]): params is [WorkspacesDeleteParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

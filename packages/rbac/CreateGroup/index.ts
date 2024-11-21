@@ -21,6 +21,8 @@ export type CreateGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type CreateGroupReturnType = AxiosPromise<GroupOut>;
+
 const isCreateGroupObjectParams = (params: [CreateGroupParams] | unknown[]): params is [CreateGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'group')
 }

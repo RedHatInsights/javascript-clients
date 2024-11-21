@@ -27,6 +27,8 @@ export type PutCrossAccountRequestParams = {
   options?: AxiosRequestConfig
 }
 
+export type PutCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+
 const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestParams] | unknown[]): params is [PutCrossAccountRequestParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestUpdateIn')
 }

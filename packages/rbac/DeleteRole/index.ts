@@ -21,6 +21,8 @@ export type DeleteRoleParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeleteRoleReturnType = AxiosPromise<void>;
+
 const isDeleteRoleObjectParams = (params: [DeleteRoleParams] | unknown[]): params is [DeleteRoleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }

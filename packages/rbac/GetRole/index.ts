@@ -36,6 +36,8 @@ export const GetRoleScopeEnum = {
 } as const;
 export type GetRoleScopeEnum = typeof GetRoleScopeEnum[keyof typeof GetRoleScopeEnum];
 
+export type GetRoleReturnType = AxiosPromise<RoleWithAccess>;
+
 const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [GetRoleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }

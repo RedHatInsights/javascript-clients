@@ -21,6 +21,8 @@ export type DeleteGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeleteGroupReturnType = AxiosPromise<void>;
+
 const isDeleteGroupObjectParams = (params: [DeleteGroupParams] | unknown[]): params is [DeleteGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
 }

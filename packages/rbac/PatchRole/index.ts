@@ -27,6 +27,8 @@ export type PatchRoleParams = {
   options?: AxiosRequestConfig
 }
 
+export type PatchRoleReturnType = AxiosPromise<RoleWithAccess>;
+
 const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params is [PatchRoleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
 }

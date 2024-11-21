@@ -1,28 +1,12 @@
-// This is a sample supporting file mustache template.
+export { default as workspacesCreate, WorkspacesCreateReturnType } from './WorkspacesCreate'
 
-export * from './types'
+export { default as workspacesDelete, WorkspacesDeleteReturnType } from './WorkspacesDelete'
 
-export { default as workspacesCreate } from './WorkspacesCreate'
+export { default as workspacesList, WorkspacesListReturnType } from './WorkspacesList'
 
+export { default as workspacesPatch, WorkspacesPatchReturnType } from './WorkspacesPatch'
 
-// end of operations block
-export { default as workspacesDelete } from './WorkspacesDelete'
+export { default as workspacesRead, WorkspacesReadReturnType } from './WorkspacesRead'
 
+export { default as workspacesUpdate, WorkspacesUpdateReturnType } from './WorkspacesUpdate'
 
-// end of operations block
-export { default as workspacesList } from './WorkspacesList'
-
-
-// end of operations block
-export { default as workspacesPatch } from './WorkspacesPatch'
-
-
-// end of operations block
-export { default as workspacesRead } from './WorkspacesRead'
-
-
-// end of operations block
-export { default as workspacesUpdate } from './WorkspacesUpdate'
-
-
-// end of operations block

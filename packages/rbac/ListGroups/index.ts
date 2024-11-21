@@ -137,6 +137,8 @@ export const ListGroupsOrderByEnum = {
 } as const;
 export type ListGroupsOrderByEnum = typeof ListGroupsOrderByEnum[keyof typeof ListGroupsOrderByEnum];
 
+export type ListGroupsReturnType = AxiosPromise<GroupPagination>;
+
 const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): params is [ListGroupsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

@@ -56,6 +56,8 @@ export const GetCrossAccountRequestApprovedOnlyEnum = {
 } as const;
 export type GetCrossAccountRequestApprovedOnlyEnum = typeof GetCrossAccountRequestApprovedOnlyEnum[keyof typeof GetCrossAccountRequestApprovedOnlyEnum];
 
+export type GetCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+
 const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestParams] | unknown[]): params is [GetCrossAccountRequestParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true
 }

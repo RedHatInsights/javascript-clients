@@ -21,6 +21,8 @@ export type WorkspacesCreateParams = {
   options?: AxiosRequestConfig
 }
 
+export type WorkspacesCreateReturnType = AxiosPromise<WorkspacesCreateWorkspaceResponse>;
+
 const isWorkspacesCreateObjectParams = (params: [WorkspacesCreateParams] | unknown[]): params is [WorkspacesCreateParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'workspacesCreateWorkspaceRequest')
 }

@@ -33,6 +33,8 @@ export type WorkspacesListParams = {
   options?: AxiosRequestConfig
 }
 
+export type WorkspacesListReturnType = AxiosPromise<WorkspacesWorkspaceListResponse>;
+
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
   return params.length === 1 && true && true && true
 }
