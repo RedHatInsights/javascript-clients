@@ -33,6 +33,8 @@ export type ApiHostPatchHostByIdParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostPatchHostByIdReturnType = AxiosPromise<void>;
+
 const isApiHostPatchHostByIdObjectParams = (params: [ApiHostPatchHostByIdParams] | unknown[]): params is [ApiHostPatchHostByIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && Object.prototype.hasOwnProperty.call(params, 'patchHostIn') && true
 }

@@ -57,6 +57,8 @@ export type ProfilesParams = {
   options?: AxiosRequestConfig
 }
 
+export type ProfilesReturnType = AxiosPromise<Profiles200Response>;
+
 const isProfilesObjectParams = (params: [ProfilesParams] | unknown[]): params is [ProfilesParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }

@@ -21,6 +21,8 @@ export type GetProfileParams = {
   options?: AxiosRequestConfig
 }
 
+export type GetProfileReturnType = AxiosPromise<Profile>;
+
 const isGetProfileObjectParams = (params: [GetProfileParams] | unknown[]): params is [GetProfileParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
 }

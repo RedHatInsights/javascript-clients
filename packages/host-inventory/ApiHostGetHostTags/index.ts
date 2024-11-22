@@ -71,6 +71,8 @@ export const ApiHostGetHostTagsOrderHowEnum = {
 } as const;
 export type ApiHostGetHostTagsOrderHowEnum = typeof ApiHostGetHostTagsOrderHowEnum[keyof typeof ApiHostGetHostTagsOrderHowEnum];
 
+export type ApiHostGetHostTagsReturnType = AxiosPromise<TagsOut>;
+
 const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | unknown[]): params is [ApiHostGetHostTagsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true
 }

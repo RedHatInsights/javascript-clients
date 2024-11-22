@@ -21,6 +21,8 @@ export type ApiHostHostCheckinParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostHostCheckinReturnType = AxiosPromise<HostOut>;
+
 const isApiHostHostCheckinObjectParams = (params: [ApiHostHostCheckinParams] | unknown[]): params is [ApiHostHostCheckinParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'createCheckIn')
 }

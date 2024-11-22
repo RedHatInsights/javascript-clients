@@ -1,218 +1,108 @@
-// This is a sample supporting file mustache template.
+export { default as assignRule, AssignRuleReturnType } from './AssignRule'
 
-export { default as assignRule } from './AssignRule'
+export { default as assignRules, AssignRulesReturnType } from './AssignRules'
 
+export { default as assignSystem, AssignSystemReturnType } from './AssignSystem'
 
-// end of operations block
-export { default as assignRules } from './AssignRules'
+export { default as assignSystems, AssignSystemsReturnType } from './AssignSystems'
 
+export { default as createPolicy, CreatePolicyReturnType } from './CreatePolicy'
 
-// end of operations block
-export { default as assignSystem } from './AssignSystem'
+export { default as createTailoring, CreateTailoringReturnType } from './CreateTailoring'
 
+export { default as deletePolicy, DeletePolicyReturnType } from './DeletePolicy'
 
-// end of operations block
-export { default as assignSystems } from './AssignSystems'
+export { default as deleteReport, DeleteReportReturnType } from './DeleteReport'
 
+export { default as policies, PoliciesReturnType } from './Policies'
 
-// end of operations block
-export { default as createPolicy } from './CreatePolicy'
+export { default as policy, PolicyReturnType } from './Policy'
 
+export { default as policySystems, PolicySystemsReturnType } from './PolicySystems'
 
-// end of operations block
-export { default as createTailoring } from './CreateTailoring'
+export { default as policySystemsOS, PolicySystemsOSReturnType } from './PolicySystemsOS'
 
+export { default as profile, ProfileReturnType } from './Profile'
 
-// end of operations block
-export { default as deletePolicy } from './DeletePolicy'
+export { default as profileRule, ProfileRuleReturnType } from './ProfileRule'
 
+export { default as profileRules, ProfileRulesReturnType } from './ProfileRules'
 
-// end of operations block
-export { default as deleteReport } from './DeleteReport'
+export { default as profileTree, ProfileTreeReturnType } from './ProfileTree'
 
+export { default as profiles, ProfilesReturnType } from './Profiles'
 
-// end of operations block
-export { default as policies } from './Policies'
+export { default as report, ReportReturnType } from './Report'
 
+export { default as reportRuleResults, ReportRuleResultsReturnType } from './ReportRuleResults'
 
-// end of operations block
-export { default as policy } from './Policy'
+export { default as reportStats, ReportStatsReturnType } from './ReportStats'
 
+export { default as reportSystem, ReportSystemReturnType } from './ReportSystem'
 
-// end of operations block
-export { default as policySystems } from './PolicySystems'
+export { default as reportSystems, ReportSystemsReturnType } from './ReportSystems'
 
+export { default as reportSystemsOS, ReportSystemsOSReturnType } from './ReportSystemsOS'
 
-// end of operations block
-export { default as policySystemsOS } from './PolicySystemsOS'
+export { default as reportTestResult, ReportTestResultReturnType } from './ReportTestResult'
 
+export { default as reportTestResults, ReportTestResultsReturnType } from './ReportTestResults'
 
-// end of operations block
-export { default as profile } from './Profile'
+export { default as reportTestResultsOS, ReportTestResultsOSReturnType } from './ReportTestResultsOS'
 
+export { default as reportTestResultsSG, ReportTestResultsSGReturnType } from './ReportTestResultsSG'
 
-// end of operations block
-export { default as profileRule } from './ProfileRule'
+export { default as reports, ReportsReturnType } from './Reports'
 
+export { default as reportsOS, ReportsOSReturnType } from './ReportsOS'
 
-// end of operations block
-export { default as profileRules } from './ProfileRules'
+export { default as rule, RuleReturnType } from './Rule'
 
+export { default as ruleGroup, RuleGroupReturnType } from './RuleGroup'
 
-// end of operations block
-export { default as profileTree } from './ProfileTree'
+export { default as ruleGroups, RuleGroupsReturnType } from './RuleGroups'
 
+export { default as rules, RulesReturnType } from './Rules'
 
-// end of operations block
-export { default as profiles } from './Profiles'
+export { default as securityGuide, SecurityGuideReturnType } from './SecurityGuide'
 
+export { default as securityGuideRuleTree, SecurityGuideRuleTreeReturnType } from './SecurityGuideRuleTree'
 
-// end of operations block
-export { default as report } from './Report'
+export { default as securityGuides, SecurityGuidesReturnType } from './SecurityGuides'
 
+export { default as securityGuidesOS, SecurityGuidesOSReturnType } from './SecurityGuidesOS'
 
-// end of operations block
-export { default as reportRuleResults } from './ReportRuleResults'
+export { default as supportedProfiles, SupportedProfilesReturnType } from './SupportedProfiles'
 
+export { default as system, SystemReturnType } from './System'
 
-// end of operations block
-export { default as reportStats } from './ReportStats'
+export { default as systemReports, SystemReportsReturnType } from './SystemReports'
 
+export { default as systems, SystemsReturnType } from './Systems'
 
-// end of operations block
-export { default as reportSystem } from './ReportSystem'
+export { default as systemsOS, SystemsOSReturnType } from './SystemsOS'
 
+export { default as systemsPolicies, SystemsPoliciesReturnType } from './SystemsPolicies'
 
-// end of operations block
-export { default as reportSystems } from './ReportSystems'
+export { default as tailoring, TailoringReturnType } from './Tailoring'
 
+export { default as tailoringFile, TailoringFileReturnType } from './TailoringFile'
 
-// end of operations block
-export { default as reportSystemsOS } from './ReportSystemsOS'
+export { default as tailoringRuleTree, TailoringRuleTreeReturnType } from './TailoringRuleTree'
 
+export { default as tailoringRules, TailoringRulesReturnType } from './TailoringRules'
 
-// end of operations block
-export { default as reportTestResult } from './ReportTestResult'
+export { default as tailorings, TailoringsReturnType } from './Tailorings'
 
+export { default as unassignRule, UnassignRuleReturnType } from './UnassignRule'
 
-// end of operations block
-export { default as reportTestResults } from './ReportTestResults'
+export { default as unassignSystem, UnassignSystemReturnType } from './UnassignSystem'
 
+export { default as updatePolicy, UpdatePolicyReturnType } from './UpdatePolicy'
 
-// end of operations block
-export { default as reportTestResultsOS } from './ReportTestResultsOS'
+export { default as updateTailoring, UpdateTailoringReturnType } from './UpdateTailoring'
 
+export { default as valueDefinition, ValueDefinitionReturnType } from './ValueDefinition'
 
-// end of operations block
-export { default as reportTestResultsSG } from './ReportTestResultsSG'
+export { default as valueDefinitions, ValueDefinitionsReturnType } from './ValueDefinitions'
 
-
-// end of operations block
-export { default as reports } from './Reports'
-
-
-// end of operations block
-export { default as reportsOS } from './ReportsOS'
-
-
-// end of operations block
-export { default as rule } from './Rule'
-
-
-// end of operations block
-export { default as ruleGroup } from './RuleGroup'
-
-
-// end of operations block
-export { default as ruleGroups } from './RuleGroups'
-
-
-// end of operations block
-export { default as rules } from './Rules'
-
-
-// end of operations block
-export { default as securityGuide } from './SecurityGuide'
-
-
-// end of operations block
-export { default as securityGuideRuleTree } from './SecurityGuideRuleTree'
-
-
-// end of operations block
-export { default as securityGuides } from './SecurityGuides'
-
-
-// end of operations block
-export { default as securityGuidesOS } from './SecurityGuidesOS'
-
-
-// end of operations block
-export { default as supportedProfiles } from './SupportedProfiles'
-
-
-// end of operations block
-export { default as system } from './System'
-
-
-// end of operations block
-export { default as systemReports } from './SystemReports'
-
-
-// end of operations block
-export { default as systems } from './Systems'
-
-
-// end of operations block
-export { default as systemsOS } from './SystemsOS'
-
-
-// end of operations block
-export { default as systemsPolicies } from './SystemsPolicies'
-
-
-// end of operations block
-export { default as tailoring } from './Tailoring'
-
-
-// end of operations block
-export { default as tailoringFile } from './TailoringFile'
-
-
-// end of operations block
-export { default as tailoringRuleTree } from './TailoringRuleTree'
-
-
-// end of operations block
-export { default as tailoringRules } from './TailoringRules'
-
-
-// end of operations block
-export { default as tailorings } from './Tailorings'
-
-
-// end of operations block
-export { default as unassignRule } from './UnassignRule'
-
-
-// end of operations block
-export { default as unassignSystem } from './UnassignSystem'
-
-
-// end of operations block
-export { default as updatePolicy } from './UpdatePolicy'
-
-
-// end of operations block
-export { default as updateTailoring } from './UpdateTailoring'
-
-
-// end of operations block
-export { default as valueDefinition } from './ValueDefinition'
-
-
-// end of operations block
-export { default as valueDefinitions } from './ValueDefinitions'
-
-
-// end of operations block

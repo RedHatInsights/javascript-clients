@@ -21,6 +21,8 @@ export type ApiGroupDeleteGroupsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiGroupDeleteGroupsReturnType = AxiosPromise<void>;
+
 const isApiGroupDeleteGroupsObjectParams = (params: [ApiGroupDeleteGroupsParams] | unknown[]): params is [ApiGroupDeleteGroupsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList')
 }

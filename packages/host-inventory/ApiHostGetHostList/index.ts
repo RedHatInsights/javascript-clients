@@ -192,6 +192,8 @@ export const ApiHostGetHostListRegisteredWithEnum = {
 } as const;
 export type ApiHostGetHostListRegisteredWithEnum = typeof ApiHostGetHostListRegisteredWithEnum[keyof typeof ApiHostGetHostListRegisteredWithEnum];
 
+export type ApiHostGetHostListReturnType = AxiosPromise<HostQueryOutput>;
+
 const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | unknown[]): params is [ApiHostGetHostListParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

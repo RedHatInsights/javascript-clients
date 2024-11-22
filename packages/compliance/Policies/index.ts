@@ -51,6 +51,8 @@ export type PoliciesParams = {
   options?: AxiosRequestConfig
 }
 
+export type PoliciesReturnType = AxiosPromise<Policies200Response>;
+
 const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is [PoliciesParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

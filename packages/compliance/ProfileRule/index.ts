@@ -39,6 +39,8 @@ export type ProfileRuleParams = {
   options?: AxiosRequestConfig
 }
 
+export type ProfileRuleReturnType = AxiosPromise<Rule200Response>;
+
 const isProfileRuleObjectParams = (params: [ProfileRuleParams] | unknown[]): params is [ProfileRuleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }

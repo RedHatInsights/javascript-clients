@@ -27,6 +27,8 @@ export type ApiResourceTypeGetResourceTypeListParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiResourceTypeGetResourceTypeListReturnType = AxiosPromise<ResourceTypesQueryOutput>;
+
 const isApiResourceTypeGetResourceTypeListObjectParams = (params: [ApiResourceTypeGetResourceTypeListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeListParams] => {
   return params.length === 1 && true && true
 }

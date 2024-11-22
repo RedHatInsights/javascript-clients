@@ -57,6 +57,8 @@ export type RuleGroupsParams = {
   options?: AxiosRequestConfig
 }
 
+export type RuleGroupsReturnType = AxiosPromise<RuleGroups200Response>;
+
 const isRuleGroupsObjectParams = (params: [RuleGroupsParams] | unknown[]): params is [RuleGroupsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }

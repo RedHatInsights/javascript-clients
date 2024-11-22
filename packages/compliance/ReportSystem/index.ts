@@ -33,6 +33,8 @@ export type ReportSystemParams = {
   options?: AxiosRequestConfig
 }
 
+export type ReportSystemReturnType = AxiosPromise<System200Response>;
+
 const isReportSystemObjectParams = (params: [ReportSystemParams] | unknown[]): params is [ReportSystemParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }

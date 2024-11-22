@@ -27,6 +27,8 @@ export type DeleteReportParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeleteReportReturnType = AxiosPromise<void>;
+
 const isDeleteReportObjectParams = (params: [DeleteReportParams] | unknown[]): params is [DeleteReportParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }

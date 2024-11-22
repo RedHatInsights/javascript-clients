@@ -184,6 +184,8 @@ export const ApiTagGetTagsRegisteredWithEnum = {
 } as const;
 export type ApiTagGetTagsRegisteredWithEnum = typeof ApiTagGetTagsRegisteredWithEnum[keyof typeof ApiTagGetTagsRegisteredWithEnum];
 
+export type ApiTagGetTagsReturnType = AxiosPromise<ActiveTags>;
+
 const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]): params is [ApiTagGetTagsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

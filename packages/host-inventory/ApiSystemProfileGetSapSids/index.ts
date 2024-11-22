@@ -88,6 +88,8 @@ export const ApiSystemProfileGetSapSidsRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetSapSidsRegisteredWithEnum = typeof ApiSystemProfileGetSapSidsRegisteredWithEnum[keyof typeof ApiSystemProfileGetSapSidsRegisteredWithEnum];
 
+export type ApiSystemProfileGetSapSidsReturnType = AxiosPromise<SystemProfileSapSystemOut>;
+
 const isApiSystemProfileGetSapSidsObjectParams = (params: [ApiSystemProfileGetSapSidsParams] | unknown[]): params is [ApiSystemProfileGetSapSidsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true
 }

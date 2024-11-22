@@ -77,6 +77,8 @@ export const ApiHostGetHostByIdOrderHowEnum = {
 } as const;
 export type ApiHostGetHostByIdOrderHowEnum = typeof ApiHostGetHostByIdOrderHowEnum[keyof typeof ApiHostGetHostByIdOrderHowEnum];
 
+export type ApiHostGetHostByIdReturnType = AxiosPromise<HostQueryOutput>;
+
 const isApiHostGetHostByIdObjectParams = (params: [ApiHostGetHostByIdParams] | unknown[]): params is [ApiHostGetHostByIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
 }

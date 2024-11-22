@@ -51,6 +51,8 @@ export type ReportsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ReportsReturnType = AxiosPromise<Reports200Response>;
+
 const isReportsObjectParams = (params: [ReportsParams] | unknown[]): params is [ReportsParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

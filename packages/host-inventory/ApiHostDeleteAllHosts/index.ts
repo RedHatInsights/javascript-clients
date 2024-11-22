@@ -21,6 +21,8 @@ export type ApiHostDeleteAllHostsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostDeleteAllHostsReturnType = AxiosPromise<void>;
+
 const isApiHostDeleteAllHostsObjectParams = (params: [ApiHostDeleteAllHostsParams] | unknown[]): params is [ApiHostDeleteAllHostsParams] => {
   return params.length === 1 && true
 }

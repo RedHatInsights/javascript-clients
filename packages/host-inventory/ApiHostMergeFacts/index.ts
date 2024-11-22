@@ -39,6 +39,8 @@ export type ApiHostMergeFactsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostMergeFactsReturnType = AxiosPromise<void>;
+
 const isApiHostMergeFactsObjectParams = (params: [ApiHostMergeFactsParams] | unknown[]): params is [ApiHostMergeFactsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && Object.prototype.hasOwnProperty.call(params, 'namespace') && Object.prototype.hasOwnProperty.call(params, 'body') && true
 }
