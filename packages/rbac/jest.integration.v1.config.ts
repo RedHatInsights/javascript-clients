@@ -3,13 +3,13 @@ export default {
   displayName: 'rbac-client',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.integration.spec.json' }],
+    '^.+\\.[t]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.integration.v1.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js'],
   coverageDirectory: '../../coverage/packages/rbac',
   testEnvironmentOptions: {
     testEnvironment: 'node',
-    url: "http://localhost:3000",
-    userAgent: 'Chell',
+    url: "http://localhost:3001",
   },
+  testMatch: ['**/rbac.v1.integration.test.ts']
 };
