@@ -15,6 +15,8 @@ export type ApiStalenessDeleteStalenessParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiStalenessDeleteStalenessReturnType = AxiosPromise<void>;
+
 const isApiStalenessDeleteStalenessObjectParams = (params: [ApiStalenessDeleteStalenessParams] | unknown[]): params is [ApiStalenessDeleteStalenessParams] => {
   return params.length === 1
 }

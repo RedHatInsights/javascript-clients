@@ -64,6 +64,8 @@ export const ApiGroupGetGroupsByIdOrderHowEnum = {
 } as const;
 export type ApiGroupGetGroupsByIdOrderHowEnum = typeof ApiGroupGetGroupsByIdOrderHowEnum[keyof typeof ApiGroupGetGroupsByIdOrderHowEnum];
 
+export type ApiGroupGetGroupsByIdReturnType = AxiosPromise<GroupQueryOutput>;
+
 const isApiGroupGetGroupsByIdObjectParams = (params: [ApiGroupGetGroupsByIdParams] | unknown[]): params is [ApiGroupGetGroupsByIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupIdList') && true && true && true && true
 }

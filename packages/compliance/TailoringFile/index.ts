@@ -33,6 +33,8 @@ export type TailoringFileParams = {
   options?: AxiosRequestConfig
 }
 
+export type TailoringFileReturnType = AxiosPromise<TailoringFile>;
+
 const isTailoringFileObjectParams = (params: [TailoringFileParams] | unknown[]): params is [TailoringFileParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
 }

@@ -27,6 +27,8 @@ export type ApiGroupPatchGroupByIdParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiGroupPatchGroupByIdReturnType = AxiosPromise<GroupOutWithHostCount>;
+
 const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdParams] | unknown[]): params is [ApiGroupPatchGroupByIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'groupIn')
 }

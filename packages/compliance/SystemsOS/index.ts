@@ -27,6 +27,8 @@ export type SystemsOSParams = {
   options?: AxiosRequestConfig
 }
 
+export type SystemsOSReturnType = AxiosPromise<any>;
+
 const isSystemsOSObjectParams = (params: [SystemsOSParams] | unknown[]): params is [SystemsOSParams] => {
   return params.length === 1 && true && true
 }

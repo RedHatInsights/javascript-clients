@@ -27,6 +27,8 @@ export type ReportTestResultsSGParams = {
   options?: AxiosRequestConfig
 }
 
+export type ReportTestResultsSGReturnType = AxiosPromise<any>;
+
 const isReportTestResultsSGObjectParams = (params: [ReportTestResultsSGParams] | unknown[]): params is [ReportTestResultsSGParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }

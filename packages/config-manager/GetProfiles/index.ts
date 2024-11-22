@@ -43,6 +43,8 @@ export const GetProfilesSortByEnum = {
 } as const;
 export type GetProfilesSortByEnum = typeof GetProfilesSortByEnum[keyof typeof GetProfilesSortByEnum];
 
+export type GetProfilesReturnType = AxiosPromise<GetProfiles200Response>;
+
 const isGetProfilesObjectParams = (params: [GetProfilesParams] | unknown[]): params is [GetProfilesParams] => {
   return params.length === 1 && true && true && true
 }

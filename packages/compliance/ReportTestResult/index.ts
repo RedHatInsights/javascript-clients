@@ -33,6 +33,8 @@ export type ReportTestResultParams = {
   options?: AxiosRequestConfig
 }
 
+export type ReportTestResultReturnType = AxiosPromise<System200Response>;
+
 const isReportTestResultObjectParams = (params: [ReportTestResultParams] | unknown[]): params is [ReportTestResultParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }

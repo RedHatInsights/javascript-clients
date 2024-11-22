@@ -21,6 +21,8 @@ export type GetPlaybookParams = {
   options?: AxiosRequestConfig
 }
 
+export type GetPlaybookReturnType = AxiosPromise<object>;
+
 const isGetPlaybookObjectParams = (params: [GetPlaybookParams] | unknown[]): params is [GetPlaybookParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'profileId')
 }

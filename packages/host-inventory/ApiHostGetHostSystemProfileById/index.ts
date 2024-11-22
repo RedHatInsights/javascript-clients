@@ -77,6 +77,8 @@ export const ApiHostGetHostSystemProfileByIdOrderHowEnum = {
 } as const;
 export type ApiHostGetHostSystemProfileByIdOrderHowEnum = typeof ApiHostGetHostSystemProfileByIdOrderHowEnum[keyof typeof ApiHostGetHostSystemProfileByIdOrderHowEnum];
 
+export type ApiHostGetHostSystemProfileByIdReturnType = AxiosPromise<SystemProfileByHostOut>;
+
 const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSystemProfileByIdParams] | unknown[]): params is [ApiHostGetHostSystemProfileByIdParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
 }

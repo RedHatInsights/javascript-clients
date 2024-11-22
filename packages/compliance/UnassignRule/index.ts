@@ -39,6 +39,8 @@ export type UnassignRuleParams = {
   options?: AxiosRequestConfig
 }
 
+export type UnassignRuleReturnType = AxiosPromise<void>;
+
 const isUnassignRuleObjectParams = (params: [UnassignRuleParams] | unknown[]): params is [UnassignRuleParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }

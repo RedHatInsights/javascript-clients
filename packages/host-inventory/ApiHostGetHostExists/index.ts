@@ -21,6 +21,8 @@ export type ApiHostGetHostExistsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostGetHostExistsReturnType = AxiosPromise<HostIdOut>;
+
 const isApiHostGetHostExistsObjectParams = (params: [ApiHostGetHostExistsParams] | unknown[]): params is [ApiHostGetHostExistsParams] => {
   return params.length === 1 && true
 }

@@ -15,6 +15,8 @@ export type ServicesGetParams = {
   options?: AxiosRequestConfig
 }
 
+export type ServicesGetReturnType = AxiosPromise<{ [key: string]: ServiceDetails; }>;
+
 const isServicesGetObjectParams = (params: [ServicesGetParams] | unknown[]): params is [ServicesGetParams] => {
   return params.length === 1
 }

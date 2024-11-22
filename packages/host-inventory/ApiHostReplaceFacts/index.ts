@@ -39,6 +39,8 @@ export type ApiHostReplaceFactsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostReplaceFactsReturnType = AxiosPromise<void>;
+
 const isApiHostReplaceFactsObjectParams = (params: [ApiHostReplaceFactsParams] | unknown[]): params is [ApiHostReplaceFactsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && Object.prototype.hasOwnProperty.call(params, 'namespace') && Object.prototype.hasOwnProperty.call(params, 'body') && true
 }

@@ -27,6 +27,8 @@ export type SecurityGuidesOSParams = {
   options?: AxiosRequestConfig
 }
 
+export type SecurityGuidesOSReturnType = AxiosPromise<any>;
+
 const isSecurityGuidesOSObjectParams = (params: [SecurityGuidesOSParams] | unknown[]): params is [SecurityGuidesOSParams] => {
   return params.length === 1 && true && true
 }

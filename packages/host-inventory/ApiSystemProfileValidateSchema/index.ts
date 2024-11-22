@@ -39,6 +39,8 @@ export type ApiSystemProfileValidateSchemaParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiSystemProfileValidateSchemaReturnType = AxiosPromise<void>;
+
 const isApiSystemProfileValidateSchemaObjectParams = (params: [ApiSystemProfileValidateSchemaParams] | unknown[]): params is [ApiSystemProfileValidateSchemaParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'repoBranch') && true && true && true
 }

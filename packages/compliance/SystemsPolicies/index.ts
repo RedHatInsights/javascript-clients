@@ -57,6 +57,8 @@ export type SystemsPoliciesParams = {
   options?: AxiosRequestConfig
 }
 
+export type SystemsPoliciesReturnType = AxiosPromise<Policies200Response>;
+
 const isSystemsPoliciesObjectParams = (params: [SystemsPoliciesParams] | unknown[]): params is [SystemsPoliciesParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true && true
 }

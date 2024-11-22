@@ -27,6 +27,8 @@ export type PolicyParams = {
   options?: AxiosRequestConfig
 }
 
+export type PolicyReturnType = AxiosPromise<CreatePolicy201Response>;
+
 const isPolicyObjectParams = (params: [PolicyParams] | unknown[]): params is [PolicyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }

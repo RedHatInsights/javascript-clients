@@ -1,18 +1,8 @@
-// This is a sample supporting file mustache template.
+export { default as createProfile, CreateProfileReturnType } from './CreateProfile'
 
-export { default as createProfile } from './CreateProfile'
+export { default as getPlaybook, GetPlaybookReturnType } from './GetPlaybook'
 
+export { default as getProfile, GetProfileReturnType } from './GetProfile'
 
-// end of operations block
-export { default as getPlaybook } from './GetPlaybook'
+export { default as getProfiles, GetProfilesReturnType } from './GetProfiles'
 
-
-// end of operations block
-export { default as getProfile } from './GetProfile'
-
-
-// end of operations block
-export { default as getProfiles } from './GetProfiles'
-
-
-// end of operations block

@@ -27,6 +27,8 @@ export type ApiHostGroupAddHostListToGroupParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiHostGroupAddHostListToGroupReturnType = AxiosPromise<GroupOutWithHostCount>;
+
 const isApiHostGroupAddHostListToGroupObjectParams = (params: [ApiHostGroupAddHostListToGroupParams] | unknown[]): params is [ApiHostGroupAddHostListToGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'requestBody')
 }
