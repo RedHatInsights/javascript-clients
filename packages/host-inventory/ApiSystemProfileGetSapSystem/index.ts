@@ -82,6 +82,8 @@ export const ApiSystemProfileGetSapSystemRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetSapSystemRegisteredWithEnum = typeof ApiSystemProfileGetSapSystemRegisteredWithEnum[keyof typeof ApiSystemProfileGetSapSystemRegisteredWithEnum];
 
+export type ApiSystemProfileGetSapSystemReturnType = AxiosPromise<SystemProfileSapSystemOut>;
+
 const isApiSystemProfileGetSapSystemObjectParams = (params: [ApiSystemProfileGetSapSystemParams] | unknown[]): params is [ApiSystemProfileGetSapSystemParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

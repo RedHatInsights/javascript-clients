@@ -21,6 +21,8 @@ export type ApiStalenessUpdateStalenessParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiStalenessUpdateStalenessReturnType = AxiosPromise<StalenessOutput>;
+
 const isApiStalenessUpdateStalenessObjectParams = (params: [ApiStalenessUpdateStalenessParams] | unknown[]): params is [ApiStalenessUpdateStalenessParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'stalenessIn')
 }

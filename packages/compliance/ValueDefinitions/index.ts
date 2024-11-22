@@ -57,6 +57,8 @@ export type ValueDefinitionsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ValueDefinitionsReturnType = AxiosPromise<ValueDefinitions200Response>;
+
 const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unknown[]): params is [ValueDefinitionsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }

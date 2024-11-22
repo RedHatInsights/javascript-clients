@@ -27,6 +27,8 @@ export type DeletePolicyParams = {
   options?: AxiosRequestConfig
 }
 
+export type DeletePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
+
 const isDeletePolicyObjectParams = (params: [DeletePolicyParams] | unknown[]): params is [DeletePolicyParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }

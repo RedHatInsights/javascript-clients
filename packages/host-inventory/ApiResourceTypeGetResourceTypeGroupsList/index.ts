@@ -33,6 +33,8 @@ export type ApiResourceTypeGetResourceTypeGroupsListParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiResourceTypeGetResourceTypeGroupsListReturnType = AxiosPromise<ResourceTypesGroupsQueryOutput>;
+
 const isApiResourceTypeGetResourceTypeGroupsListObjectParams = (params: [ApiResourceTypeGetResourceTypeGroupsListParams] | unknown[]): params is [ApiResourceTypeGetResourceTypeGroupsListParams] => {
   return params.length === 1 && true && true && true
 }

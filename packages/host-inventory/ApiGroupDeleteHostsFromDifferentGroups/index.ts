@@ -21,6 +21,8 @@ export type ApiGroupDeleteHostsFromDifferentGroupsParams = {
   options?: AxiosRequestConfig
 }
 
+export type ApiGroupDeleteHostsFromDifferentGroupsReturnType = AxiosPromise<void>;
+
 const isApiGroupDeleteHostsFromDifferentGroupsObjectParams = (params: [ApiGroupDeleteHostsFromDifferentGroupsParams] | unknown[]): params is [ApiGroupDeleteHostsFromDifferentGroupsParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList')
 }

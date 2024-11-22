@@ -51,6 +51,8 @@ export type SupportedProfilesParams = {
   options?: AxiosRequestConfig
 }
 
+export type SupportedProfilesReturnType = AxiosPromise<SupportedProfiles200Response>;
+
 const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unknown[]): params is [SupportedProfilesParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

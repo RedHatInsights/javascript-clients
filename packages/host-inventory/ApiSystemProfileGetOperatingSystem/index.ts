@@ -82,6 +82,8 @@ export const ApiSystemProfileGetOperatingSystemRegisteredWithEnum = {
 } as const;
 export type ApiSystemProfileGetOperatingSystemRegisteredWithEnum = typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum[keyof typeof ApiSystemProfileGetOperatingSystemRegisteredWithEnum];
 
+export type ApiSystemProfileGetOperatingSystemReturnType = AxiosPromise<SystemProfileOperatingSystemOut>;
+
 const isApiSystemProfileGetOperatingSystemObjectParams = (params: [ApiSystemProfileGetOperatingSystemParams] | unknown[]): params is [ApiSystemProfileGetOperatingSystemParams] => {
   return params.length === 1 && true && true && true && true && true && true
 }

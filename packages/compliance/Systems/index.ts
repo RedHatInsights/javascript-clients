@@ -57,6 +57,8 @@ export type SystemsParams = {
   options?: AxiosRequestConfig
 }
 
+export type SystemsReturnType = AxiosPromise<Systems200Response>;
+
 const isSystemsObjectParams = (params: [SystemsParams] | unknown[]): params is [SystemsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true
 }

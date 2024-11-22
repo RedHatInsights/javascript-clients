@@ -136,6 +136,8 @@ export const ApiHostDeleteHostsByFilterStalenessEnum = {
 } as const;
 export type ApiHostDeleteHostsByFilterStalenessEnum = typeof ApiHostDeleteHostsByFilterStalenessEnum[keyof typeof ApiHostDeleteHostsByFilterStalenessEnum];
 
+export type ApiHostDeleteHostsByFilterReturnType = AxiosPromise<void>;
+
 const isApiHostDeleteHostsByFilterObjectParams = (params: [ApiHostDeleteHostsByFilterParams] | unknown[]): params is [ApiHostDeleteHostsByFilterParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true
 }

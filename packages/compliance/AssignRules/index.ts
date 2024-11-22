@@ -39,6 +39,8 @@ export type AssignRulesParams = {
   options?: AxiosRequestConfig
 }
 
+export type AssignRulesReturnType = AxiosPromise<Rules200Response>;
+
 const isAssignRulesObjectParams = (params: [AssignRulesParams] | unknown[]): params is [AssignRulesParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
 }

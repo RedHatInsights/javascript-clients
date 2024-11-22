@@ -1,134 +1,66 @@
-// This is a sample supporting file mustache template.
+export { default as apiGroupCreateGroup, ApiGroupCreateGroupReturnType } from './ApiGroupCreateGroup'
 
-export { default as apiGroupCreateGroup } from './ApiGroupCreateGroup'
+export { default as apiGroupDeleteGroups, ApiGroupDeleteGroupsReturnType } from './ApiGroupDeleteGroups'
 
+export { default as apiGroupDeleteHostsFromDifferentGroups, ApiGroupDeleteHostsFromDifferentGroupsReturnType } from './ApiGroupDeleteHostsFromDifferentGroups'
 
-// end of operations block
-export { default as apiGroupDeleteGroups } from './ApiGroupDeleteGroups'
+export { default as apiGroupGetGroupList, ApiGroupGetGroupListReturnType } from './ApiGroupGetGroupList'
 
+export { default as apiGroupGetGroupsById, ApiGroupGetGroupsByIdReturnType } from './ApiGroupGetGroupsById'
 
-// end of operations block
-export { default as apiGroupDeleteHostsFromDifferentGroups } from './ApiGroupDeleteHostsFromDifferentGroups'
+export { default as apiGroupPatchGroupById, ApiGroupPatchGroupByIdReturnType } from './ApiGroupPatchGroupById'
 
+export { default as apiHostDeleteAllHosts, ApiHostDeleteAllHostsReturnType } from './ApiHostDeleteAllHosts'
 
-// end of operations block
-export { default as apiGroupGetGroupList } from './ApiGroupGetGroupList'
+export { default as apiHostDeleteHostById, ApiHostDeleteHostByIdReturnType } from './ApiHostDeleteHostById'
 
+export { default as apiHostDeleteHostsByFilter, ApiHostDeleteHostsByFilterReturnType } from './ApiHostDeleteHostsByFilter'
 
-// end of operations block
-export { default as apiGroupGetGroupsById } from './ApiGroupGetGroupsById'
+export { default as apiHostGetHostById, ApiHostGetHostByIdReturnType } from './ApiHostGetHostById'
 
+export { default as apiHostGetHostExists, ApiHostGetHostExistsReturnType } from './ApiHostGetHostExists'
 
-// end of operations block
-export { default as apiGroupPatchGroupById } from './ApiGroupPatchGroupById'
+export { default as apiHostGetHostList, ApiHostGetHostListReturnType } from './ApiHostGetHostList'
 
+export { default as apiHostGetHostSystemProfileById, ApiHostGetHostSystemProfileByIdReturnType } from './ApiHostGetHostSystemProfileById'
 
-// end of operations block
-export { default as apiHostDeleteAllHosts } from './ApiHostDeleteAllHosts'
+export { default as apiHostGetHostTagCount, ApiHostGetHostTagCountReturnType } from './ApiHostGetHostTagCount'
 
+export { default as apiHostGetHostTags, ApiHostGetHostTagsReturnType } from './ApiHostGetHostTags'
 
-// end of operations block
-export { default as apiHostDeleteHostById } from './ApiHostDeleteHostById'
+export { default as apiHostGroupAddHostListToGroup, ApiHostGroupAddHostListToGroupReturnType } from './ApiHostGroupAddHostListToGroup'
 
+export { default as apiHostGroupDeleteHostsFromGroup, ApiHostGroupDeleteHostsFromGroupReturnType } from './ApiHostGroupDeleteHostsFromGroup'
 
-// end of operations block
-export { default as apiHostDeleteHostsByFilter } from './ApiHostDeleteHostsByFilter'
+export { default as apiHostHostCheckin, ApiHostHostCheckinReturnType } from './ApiHostHostCheckin'
 
+export { default as apiHostMergeFacts, ApiHostMergeFactsReturnType } from './ApiHostMergeFacts'
 
-// end of operations block
-export { default as apiHostGetHostById } from './ApiHostGetHostById'
+export { default as apiHostPatchHostById, ApiHostPatchHostByIdReturnType } from './ApiHostPatchHostById'
 
+export { default as apiHostReplaceFacts, ApiHostReplaceFactsReturnType } from './ApiHostReplaceFacts'
 
-// end of operations block
-export { default as apiHostGetHostExists } from './ApiHostGetHostExists'
+export { default as apiResourceTypeGetResourceTypeGroupsList, ApiResourceTypeGetResourceTypeGroupsListReturnType } from './ApiResourceTypeGetResourceTypeGroupsList'
 
+export { default as apiResourceTypeGetResourceTypeList, ApiResourceTypeGetResourceTypeListReturnType } from './ApiResourceTypeGetResourceTypeList'
 
-// end of operations block
-export { default as apiHostGetHostList } from './ApiHostGetHostList'
+export { default as apiStalenessCreateStaleness, ApiStalenessCreateStalenessReturnType } from './ApiStalenessCreateStaleness'
 
+export { default as apiStalenessDeleteStaleness, ApiStalenessDeleteStalenessReturnType } from './ApiStalenessDeleteStaleness'
 
-// end of operations block
-export { default as apiHostGetHostSystemProfileById } from './ApiHostGetHostSystemProfileById'
+export { default as apiStalenessGetDefaultStaleness, ApiStalenessGetDefaultStalenessReturnType } from './ApiStalenessGetDefaultStaleness'
 
+export { default as apiStalenessGetStaleness, ApiStalenessGetStalenessReturnType } from './ApiStalenessGetStaleness'
 
-// end of operations block
-export { default as apiHostGetHostTagCount } from './ApiHostGetHostTagCount'
+export { default as apiStalenessUpdateStaleness, ApiStalenessUpdateStalenessReturnType } from './ApiStalenessUpdateStaleness'
 
+export { default as apiSystemProfileGetOperatingSystem, ApiSystemProfileGetOperatingSystemReturnType } from './ApiSystemProfileGetOperatingSystem'
 
-// end of operations block
-export { default as apiHostGetHostTags } from './ApiHostGetHostTags'
+export { default as apiSystemProfileGetSapSids, ApiSystemProfileGetSapSidsReturnType } from './ApiSystemProfileGetSapSids'
 
+export { default as apiSystemProfileGetSapSystem, ApiSystemProfileGetSapSystemReturnType } from './ApiSystemProfileGetSapSystem'
 
-// end of operations block
-export { default as apiHostGroupAddHostListToGroup } from './ApiHostGroupAddHostListToGroup'
+export { default as apiSystemProfileValidateSchema, ApiSystemProfileValidateSchemaReturnType } from './ApiSystemProfileValidateSchema'
 
+export { default as apiTagGetTags, ApiTagGetTagsReturnType } from './ApiTagGetTags'
 
-// end of operations block
-export { default as apiHostGroupDeleteHostsFromGroup } from './ApiHostGroupDeleteHostsFromGroup'
-
-
-// end of operations block
-export { default as apiHostHostCheckin } from './ApiHostHostCheckin'
-
-
-// end of operations block
-export { default as apiHostMergeFacts } from './ApiHostMergeFacts'
-
-
-// end of operations block
-export { default as apiHostPatchHostById } from './ApiHostPatchHostById'
-
-
-// end of operations block
-export { default as apiHostReplaceFacts } from './ApiHostReplaceFacts'
-
-
-// end of operations block
-export { default as apiResourceTypeGetResourceTypeGroupsList } from './ApiResourceTypeGetResourceTypeGroupsList'
-
-
-// end of operations block
-export { default as apiResourceTypeGetResourceTypeList } from './ApiResourceTypeGetResourceTypeList'
-
-
-// end of operations block
-export { default as apiStalenessCreateStaleness } from './ApiStalenessCreateStaleness'
-
-
-// end of operations block
-export { default as apiStalenessDeleteStaleness } from './ApiStalenessDeleteStaleness'
-
-
-// end of operations block
-export { default as apiStalenessGetDefaultStaleness } from './ApiStalenessGetDefaultStaleness'
-
-
-// end of operations block
-export { default as apiStalenessGetStaleness } from './ApiStalenessGetStaleness'
-
-
-// end of operations block
-export { default as apiStalenessUpdateStaleness } from './ApiStalenessUpdateStaleness'
-
-
-// end of operations block
-export { default as apiSystemProfileGetOperatingSystem } from './ApiSystemProfileGetOperatingSystem'
-
-
-// end of operations block
-export { default as apiSystemProfileGetSapSids } from './ApiSystemProfileGetSapSids'
-
-
-// end of operations block
-export { default as apiSystemProfileGetSapSystem } from './ApiSystemProfileGetSapSystem'
-
-
-// end of operations block
-export { default as apiSystemProfileValidateSchema } from './ApiSystemProfileValidateSchema'
-
-
-// end of operations block
-export { default as apiTagGetTags } from './ApiTagGetTags'
-
-
-// end of operations block

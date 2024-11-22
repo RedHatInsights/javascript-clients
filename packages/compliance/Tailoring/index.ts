@@ -33,6 +33,8 @@ export type TailoringParams = {
   options?: AxiosRequestConfig
 }
 
+export type TailoringReturnType = AxiosPromise<CreateTailoring201Response>;
+
 const isTailoringObjectParams = (params: [TailoringParams] | unknown[]): params is [TailoringParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
 }
