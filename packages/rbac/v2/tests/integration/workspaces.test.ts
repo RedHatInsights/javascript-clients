@@ -14,7 +14,7 @@ describe('Workspaces API endpoints', () => {
     const convertedConfig: AxiosRequestConfig = await convertConfig(axiosConfig);
 
     // create it
-    const createResponse = await createWorkspace(TEST_WORKSPACE_NAME, TEST_WORKSPACE_DESC, convertedConfig);
+    const createResponse = await createWorkspace('', TEST_WORKSPACE_NAME, TEST_WORKSPACE_DESC, convertedConfig);
     expect(createResponse.status).toEqual(201);
     const workspaceId = createResponse.data.id;
     expect(workspaceId).toBeTruthy();
