@@ -39,7 +39,7 @@ const isTailoringFileObjectParams = (params: [TailoringFileParams] | unknown[]):
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
 }
 /**
-* Returns a Tailoring File
+* Retrieve a tailoring file of a specific tailoring.
 * @summary Request a Tailoring file
 * @param {TailoringFileParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -14,70 +14,70 @@ import type { PageDrawerEntryPayload } from '../types';
 export type DrawerResourceV1GetDrawerEntriesParams = {
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  appIds?: Set<string>,
+  appIds?: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  bundleIds?: Set<string>,
+  bundleIds?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  endDate?: string,
+  endDate?: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  eventTypeIds?: Set<string>,
+  eventTypeIds?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  limit?: number,
+  limit?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  readStatus?: boolean,
+  readStatus?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof DrawerResourceV1GetDrawerEntriesApi
   */
-  startDate?: string,
+  startDate?: any,
   options?: AxiosRequestConfig
 }
 
@@ -93,7 +93,7 @@ const isDrawerResourceV1GetDrawerEntriesObjectParams = (params: [DrawerResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([DrawerResourceV1GetDrawerEntriesParams] | [Set<string>, Set<string>, string, Set<string>, number, number, number, boolean, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([DrawerResourceV1GetDrawerEntriesParams] | [any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDrawerResourceV1GetDrawerEntriesObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'eventTypeIds', 'limit', 'offset', 'pageNumber', 'readStatus', 'sortBy', 'sortBy2', 'startDate', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DrawerResourceV1GetDrawerEntriesParams;
     const { appIds, bundleIds, endDate, eventTypeIds, limit, offset, pageNumber, readStatus, sortBy, sortBy2, startDate, options = {} } = params;
     const localVarPath = `/notifications/drawer`;
@@ -103,22 +103,20 @@ export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
-    if (appIds) {
-        localVarQueryParameter['appIds'] = Array.from(appIds);
+    if (appIds !== undefined) {
+        localVarQueryParameter['appIds'] = appIds;
     }
 
-    if (bundleIds) {
-        localVarQueryParameter['bundleIds'] = Array.from(bundleIds);
+    if (bundleIds !== undefined) {
+        localVarQueryParameter['bundleIds'] = bundleIds;
     }
 
     if (endDate !== undefined) {
-        localVarQueryParameter['endDate'] = (endDate as any instanceof Date) ?
-            (endDate as any).toISOString() :
-            endDate;
+        localVarQueryParameter['endDate'] = endDate;
     }
 
-    if (eventTypeIds) {
-        localVarQueryParameter['eventTypeIds'] = Array.from(eventTypeIds);
+    if (eventTypeIds !== undefined) {
+        localVarQueryParameter['eventTypeIds'] = eventTypeIds;
     }
 
     if (limit !== undefined) {
@@ -146,9 +144,7 @@ export const drawerResourceV1GetDrawerEntriesParamCreator = async (...config: ([
     }
 
     if (startDate !== undefined) {
-        localVarQueryParameter['startDate'] = (startDate as any instanceof Date) ?
-            (startDate as any).toISOString() :
-            startDate;
+        localVarQueryParameter['startDate'] = startDate;
     }
 
 

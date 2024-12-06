@@ -14,20 +14,20 @@ import type {  } from '../types';
 export type EndpointResourceV2AddEventTypeToEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2AddEventTypeToEndpointApi
   */
-  endpointId: string,
+  endpointId: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2AddEventTypeToEndpointApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV2AddEventTypeToEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV2AddEventTypeToEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV2AddEventTypeToEndpointObjectParams = (params: [EndpointResourceV2AddEventTypeToEndpointParams] | unknown[]): params is [EndpointResourceV2AddEventTypeToEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
@@ -39,7 +39,7 @@ const isEndpointResourceV2AddEventTypeToEndpointObjectParams = (params: [Endpoin
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2AddEventTypeToEndpointParamCreator = async (...config: ([EndpointResourceV2AddEventTypeToEndpointParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2AddEventTypeToEndpointParamCreator = async (...config: ([EndpointResourceV2AddEventTypeToEndpointParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2AddEventTypeToEndpointObjectParams(config) ? config[0] : ['endpointId', 'eventTypeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2AddEventTypeToEndpointParams;
     const { endpointId, eventTypeId, options = {} } = params;
     const localVarPath = `/endpoints/{endpointId}/eventType/{eventTypeId}`

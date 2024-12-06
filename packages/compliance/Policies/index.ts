@@ -57,7 +57,7 @@ const isPoliciesObjectParams = (params: [PoliciesParams] | unknown[]): params is
   return params.length === 1 && true && true && true && true && true && true
 }
 /**
-* Lists Policies
+* Retrieve the list of policies that have been created to test the compliance of your registered systems.
 * @summary Request Policies
 * @param {PoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.

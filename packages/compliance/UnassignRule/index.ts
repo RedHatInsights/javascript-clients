@@ -45,7 +45,7 @@ const isUnassignRuleObjectParams = (params: [UnassignRuleParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }
 /**
-* Unassigns a Rule from a Tailoring
+* Use this to remove a rule from your tailoring.
 * @summary Unassign a Rule from a Tailoring
 * @param {UnassignRuleParams} config with all available params.
 * @param {*} [options] Override http request option.
