@@ -45,7 +45,7 @@ const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
 }
 /**
-* Updates a Tailoring with the provided value_overrides
+* Edit or update an existing tailoring.
 * @summary Update a Tailoring
 * @param {UpdateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -14,10 +14,10 @@ import type { Bundle } from '../types';
 export type NotificationResourceV1GetBundleByNameParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetBundleByNameApi
   */
-  bundleName: string,
+  bundleName: any,
   options?: AxiosRequestConfig
 }
 
@@ -33,7 +33,7 @@ const isNotificationResourceV1GetBundleByNameObjectParams = (params: [Notificati
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetBundleByNameParamCreator = async (...config: ([NotificationResourceV1GetBundleByNameParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetBundleByNameParamCreator = async (...config: ([NotificationResourceV1GetBundleByNameParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetBundleByNameObjectParams(config) ? config[0] : ['bundleName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetBundleByNameParams;
     const { bundleName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}`

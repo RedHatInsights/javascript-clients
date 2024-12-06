@@ -14,16 +14,16 @@ import type {  } from '../types';
 export type NotificationResourceV2AppendBehaviorGroupToEventTypeParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2AppendBehaviorGroupToEventTypeApi
   */
-  behaviorGroupUuid: string,
+  behaviorGroupUuid: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2AppendBehaviorGroupToEventTypeApi
   */
-  eventTypeUuid: string,
+  eventTypeUuid: any,
   options?: AxiosRequestConfig
 }
 
@@ -39,7 +39,7 @@ const isNotificationResourceV2AppendBehaviorGroupToEventTypeObjectParams = (para
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2AppendBehaviorGroupToEventTypeParamCreator = async (...config: ([NotificationResourceV2AppendBehaviorGroupToEventTypeParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2AppendBehaviorGroupToEventTypeParamCreator = async (...config: ([NotificationResourceV2AppendBehaviorGroupToEventTypeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2AppendBehaviorGroupToEventTypeObjectParams(config) ? config[0] : ['behaviorGroupUuid', 'eventTypeUuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2AppendBehaviorGroupToEventTypeParams;
     const { behaviorGroupUuid, eventTypeUuid, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeUuid}/behaviorGroups/{behaviorGroupUuid}`

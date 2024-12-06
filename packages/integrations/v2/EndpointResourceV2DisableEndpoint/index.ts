@@ -14,10 +14,10 @@ import type {  } from '../types';
 export type EndpointResourceV2DisableEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2DisableEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
@@ -33,7 +33,7 @@ const isEndpointResourceV2DisableEndpointObjectParams = (params: [EndpointResour
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2DisableEndpointParamCreator = async (...config: ([EndpointResourceV2DisableEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2DisableEndpointParamCreator = async (...config: ([EndpointResourceV2DisableEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2DisableEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2DisableEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/enable`

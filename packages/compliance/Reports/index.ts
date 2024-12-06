@@ -57,7 +57,7 @@ const isReportsObjectParams = (params: [ReportsParams] | unknown[]): params is [
   return params.length === 1 && true && true && true && true && true && true
 }
 /**
-* Lists Reports
+* Retrieve a list of all available reports.
 * @summary Request Reports
 * @param {ReportsParams} config with all available params.
 * @param {*} [options] Override http request option.

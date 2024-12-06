@@ -33,7 +33,7 @@ const isDeletePolicyObjectParams = (params: [DeletePolicyParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }
 /**
-* Deletes a Policy
+* Delete a specific policy.
 * @summary Delete a Policy
 * @param {DeletePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.
