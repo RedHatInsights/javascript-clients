@@ -1,10 +1,75 @@
+# Javascript client for the policies API
+If you want to use [RedHatInsights/policies](https://github.com/RedHatInsights/policies) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+
+## Install
+NPM
+```bash
+npm install --save @redhat-cloud-services/policies-client
+```
+
+Or Yarn
+```bash
+yarn add @redhat-cloud-services/policies-client
+```
+
+### Usage
+This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
+
+This package comes with a client in its `api.ts` already defined with every call available. 
+```JS
+`import policiesClient from '@redhat-cloud-services/javascript-clients-shared/utils';
+
+policiesClient.someEndpoint();
+```
+
+To bootstrap this API manually, you should create your own client via the `APIFactory` defined in the `@redhat-cloud-services/javascript-clients-shared` package. See below for an example:
+```JS
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils'; 
+import exampleEndpoint from '@redhat-cloud-services/policies-client/ExampleEndpoint';
+
+// BASE_PATH should be set in your constants file
+const policiesApi = APIFactory(BASE_PATH, undefined, { exampleEndpoint });
+export policiesApi;
+```
+
+If you want to add some interceptors you can use axios build in interceptors
+```JS
+import axios from 'axios';
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils';
+import exampleEndpoint from '@redhat-cloud-services/policies-client/ExampleEndpoint';
+
+const instance = axios.create();
+
+// Request interceptor
+instance.interceptors.request.use((request) => {
+    // some logic to do with request
+});
+
+// Response interceptor
+instance.interceptors.response.use((response) => {
+    // some logic to do with request
+});
+
+// Error interceptor
+instance.interceptors.response.use(null, (error) => {
+    // some logic to do with error
+});
+
+// BASE_PATH should be set in your constants file
+const policiesApi = APIFactory(BASE_PATH, instance, { exampleEndpoint });
+export policiesApi;
+```
+## Generating
+
+Ensure you have the javascript-clients generator built first with `npm run build:generator`. Then, run `nx run @redhat-cloud-services/policies-client:generate` to generate the package.
+
 ## Building
 
-Run `nx build @redhat-cloud-services/policies-client` to build the library.
+Run `nx run @redhat-cloud-services/policies-client:build` to build the package. This creates the `dist` for publishing.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/policies-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx run @redhat-cloud-services/policies-client:test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

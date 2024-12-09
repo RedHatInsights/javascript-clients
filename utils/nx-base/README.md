@@ -15,23 +15,29 @@ yarn add @redhat-cloud-services/CLIENTNAME-client
 ### Usage
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
-To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
+This package comes with a client in its `api.ts` already defined with every call available. 
 ```JS
-// api.js
-import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/CLIENTNAME-client';
-const instance = axios.create();
+`import CLIENTNAMEClient from '@redhat-cloud-services/javascript-clients-shared/utils';
+
+CLIENTNAMEClient.someEndpoint();
+```
+
+To bootstrap this API manually, you should create your own client via the `APIFactory` defined in the `@redhat-cloud-services/javascript-clients-shared` package. See below for an example:
+```JS
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils'; 
+import exampleEndpoint from '@redhat-cloud-services/CLIENTNAME-client/ExampleEndpoint';
 
 // BASE_PATH should be set in your constants file
-const configApi = new Configuration(undefined, BASE_PATH, instance);
-export configApi;
+const CLIENTNAMEApi = APIFactory(BASE_PATH, undefined, { exampleEndpoint });
+export CLIENTNAMEApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
-// api.js
 import axios from 'axios';
-import { Configuration } from '@redhat-cloud-services/CLIENTNAME-client';
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils';
+import exampleEndpoint from '@redhat-cloud-services/CLIENTNAME-client/ExampleEndpoint';
+
 const instance = axios.create();
 
 // Request interceptor
@@ -50,17 +56,20 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const configApi = new Configuration(undefined, BASE_PATH, instance);
-export configApi;
+const CLIENTNAMEApi = APIFactory(BASE_PATH, instance, { exampleEndpoint });
+export CLIENTNAMEApi;
 ```
+## Generating
+
+Ensure you have the javascript-clients generator built first with `npm run build:generator`. Then, run `nx run @redhat-cloud-services/CLIENTNAME-client:generate` to generate the package.
 
 ## Building
 
-Run `nx build @redhat-cloud-services/CLIENTNAME-client` to build the library.
+Run `nx run @redhat-cloud-services/CLIENTNAME-client:build` to build the package. This creates the `dist` for publishing.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/CLIENTNAME-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx run @redhat-cloud-services/CLIENTNAME-client:test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
