@@ -1,5 +1,5 @@
-# Javascript client for Notifications API
-If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with the service.
+# Javascript client for the notifications API
+If you want to use [RedHatInsights/notifications](https://github.com/RedHatInsights/notifications) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
 NPM
@@ -15,25 +15,29 @@ yarn add @redhat-cloud-services/notifications-client
 ### Usage
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
-To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
+This package comes with a client in its `api.ts` already defined with every call available. 
 ```JS
-// api.js
-import APIFactory from '@redhat-cloud-services/notifications-client/utils'; 
-import createBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1CreateBehaviorGroup';
-import updateBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1UpdateBehaviorGroup';
-import deleteBehaviorGroup from '@redhat-cloud-services/notifications-client/NotificationResourceV1DeleteBehaviorGroup';
+`import notificationsClient from '@redhat-cloud-services/javascript-clients-shared/utils';
 
+notificationsClient.someEndpoint();
+```
+
+To bootstrap this API manually, you should create your own client via the `APIFactory` defined in the `@redhat-cloud-services/javascript-clients-shared` package. See below for an example:
+```JS
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils'; 
+import exampleEndpoint from '@redhat-cloud-services/notifications-client/ExampleEndpoint';
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = APIFactory(BASE_PATH, undefined, { createBehaviorGroup, updateBehaviorGroup, deleteBehaviorGroup });
+const notificationsApi = APIFactory(BASE_PATH, undefined, { exampleEndpoint });
 export notificationsApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
-// api.js
 import axios from 'axios';
-import { NotificationsApi } from '@redhat-cloud-services/notifications-client';
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils';
+import exampleEndpoint from '@redhat-cloud-services/notifications-client/ExampleEndpoint';
+
 const instance = axios.create();
 
 // Request interceptor
@@ -52,17 +56,20 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const notificationsApi = APIFactory(BASE_PATH, instance, { createBehaviorGroup, updateBehaviorGroup, deleteBehaviorGroup });
+const notificationsApi = APIFactory(BASE_PATH, instance, { exampleEndpoint });
 export notificationsApi;
 ```
+## Generating
+
+Ensure you have the javascript-clients generator built first with `npm run build:generator`. Then, run `nx run @redhat-cloud-services/notifications-client:generate` to generate the package.
 
 ## Building
 
-Run `nx build @redhat-cloud-services/notifications-client` to build the library.
+Run `nx run @redhat-cloud-services/notifications-client:build` to build the package. This creates the `dist` for publishing.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/notifications-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx run @redhat-cloud-services/notifications-client:test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

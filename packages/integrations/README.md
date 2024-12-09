@@ -1,5 +1,5 @@
-# Javascript client for Integrations API
-If you want to use [RedHatInsights/notifications-backend](https://github.com/RedHatInsights/notifications-backend) you shouldn't use get requests directly, but rather use this client to integrate with the service.
+# Javascript client for the integrations API
+If you want to use [RedHatInsights/integrations](https://github.com/RedHatInsights/integrations) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
 NPM
@@ -15,23 +15,29 @@ yarn add @redhat-cloud-services/integrations-client
 ### Usage
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
-To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
+This package comes with a client in its `api.ts` already defined with every call available. 
 ```JS
-// api.js
-import APIFactory from '@redhat-cloud-services/integrations-client/utils'; 
-import createEndpoint from '@redhat-cloud-services/integrations-client/endpointResourceV1CreateEndpoint';
-import enableEndpoint from '@redhat-cloud-services/integrations-client/endpointResourceV1EnableEndpoint';
+`import integrationsClient from '@redhat-cloud-services/javascript-clients-shared/utils';
+
+integrationsClient.someEndpoint();
+```
+
+To bootstrap this API manually, you should create your own client via the `APIFactory` defined in the `@redhat-cloud-services/javascript-clients-shared` package. See below for an example:
+```JS
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils'; 
+import exampleEndpoint from '@redhat-cloud-services/integrations-client/ExampleEndpoint';
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = APIFactory(BASE_PATH, undefined, { createEndpoint, enableEndpoint });
+const integrationsApi = APIFactory(BASE_PATH, undefined, { exampleEndpoint });
 export integrationsApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
-// api.js
 import axios from 'axios';
-import { IntegrationsApi } from '@redhat-cloud-services/integrations-client';
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils';
+import exampleEndpoint from '@redhat-cloud-services/integrations-client/ExampleEndpoint';
+
 const instance = axios.create();
 
 // Request interceptor
@@ -50,17 +56,20 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const integrationsApi = APIFactory(BASE_PATH, instance, { createEndpoint, enableEndpoint });
+const integrationsApi = APIFactory(BASE_PATH, instance, { exampleEndpoint });
 export integrationsApi;
 ```
+## Generating
+
+Ensure you have the javascript-clients generator built first with `npm run build:generator`. Then, run `nx run @redhat-cloud-services/integrations-client:generate` to generate the package.
 
 ## Building
 
-Run `nx build @redhat-cloud-services/integrations-client` to build the library.
+Run `nx run @redhat-cloud-services/integrations-client:build` to build the package. This creates the `dist` for publishing.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/integrations-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx run @redhat-cloud-services/integrations-client:test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 

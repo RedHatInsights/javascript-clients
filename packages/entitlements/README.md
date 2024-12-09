@@ -1,5 +1,5 @@
-# Javascript client for Inventory API
-If you want to use [RedHatInsights/entitlements-api](https://github.com/RedHatInsights/entitlements-api) you shouldn't use get requests directly, but rather use this client to integrate with this service.
+# Javascript client for the entitlements API
+If you want to use [RedHatInsights/entitlements](https://github.com/RedHatInsights/entitlements) you shouldn't use get requests directly, but rather use this client to integrate with this service.
 
 ## Install
 NPM
@@ -15,23 +15,29 @@ yarn add @redhat-cloud-services/entitlements-client
 ### Usage
 This client is using typescript and axios. Types are distributed with this package, so no need to define or install them separately.
 
-To correctly bootstrap this API you should use this config (no need to define it multiple times, just one config and reimport it anywhere you want to use it).
+This package comes with a client in its `api.ts` already defined with every call available. 
 ```JS
-// api.js
-import axios from 'axios';
-import { ActionApi } from '@redhat-cloud-services/entitlements-client';
-const instance = axios.create();
+`import entitlementsClient from '@redhat-cloud-services/javascript-clients-shared/utils';
+
+entitlementsClient.someEndpoint();
+```
+
+To bootstrap this API manually, you should create your own client via the `APIFactory` defined in the `@redhat-cloud-services/javascript-clients-shared` package. See below for an example:
+```JS
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils'; 
+import exampleEndpoint from '@redhat-cloud-services/entitlements-client/ExampleEndpoint';
 
 // BASE_PATH should be set in your constants file
-const actionAPI = new ActionApi(undefined, BASE_PATH, instance);
-export actionAPI;
+const entitlementsApi = APIFactory(BASE_PATH, undefined, { exampleEndpoint });
+export entitlementsApi;
 ```
 
 If you want to add some interceptors you can use axios build in interceptors
 ```JS
-// api.js
 import axios from 'axios';
-import { ActionApi } from '@redhat-cloud-services/entitlements-client';
+import APIFactory from '@redhat-cloud-services/javascript-clients-shared/utils';
+import exampleEndpoint from '@redhat-cloud-services/entitlements-client/ExampleEndpoint';
+
 const instance = axios.create();
 
 // Request interceptor
@@ -50,17 +56,20 @@ instance.interceptors.response.use(null, (error) => {
 });
 
 // BASE_PATH should be set in your constants file
-const actionAPI = new ActionApi(undefined, BASE_PATH, instance);
-export actionAPI;
+const entitlementsApi = APIFactory(BASE_PATH, instance, { exampleEndpoint });
+export entitlementsApi;
 ```
+## Generating
+
+Ensure you have the javascript-clients generator built first with `npm run build:generator`. Then, run `nx run @redhat-cloud-services/entitlements-client:generate` to generate the package.
 
 ## Building
 
-Run `nx build @redhat-cloud-services/entitlements-client` to build the library.
+Run `nx run @redhat-cloud-services/entitlements-client:build` to build the package. This creates the `dist` for publishing.
 
 ## Running unit tests
 
-Run `nx test @redhat-cloud-services/entitlements-client` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx run @redhat-cloud-services/entitlements-client:test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## API documentation
 
