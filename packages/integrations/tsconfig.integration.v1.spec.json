@@ -8,7 +8,5 @@
   "include": [
     "jest.config.ts",
     "packages/integrations/tests/integration/integrations.v1.integration.test.ts"
-  ],
-  // explicitly exclude the workspaces test because jest insists on running it for some reason
-  //  "exclude": ["packages/rbac/v2/test/integration/workspaces.test.ts"]
+  ]
 }
