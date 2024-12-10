@@ -14,23 +14,23 @@ import type { EndpointTestRequest } from '../types';
 export type EndpointResourceV2TestEndpointParams = {
   /**
   * The UUID of the endpoint to test
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2TestEndpointApi
   */
-  uuid: string,
+  uuid: any,
   /**
   *
   * @type { EndpointTestRequest }
   * @memberof EndpointResourceV2TestEndpointApi
   */
-  endpointTestRequest?: EndpointTestRequest,
+  endpointTestRequest: EndpointTestRequest,
   options?: AxiosRequestConfig
 }
 
 export type EndpointResourceV2TestEndpointReturnType = AxiosPromise<void>;
 
 const isEndpointResourceV2TestEndpointObjectParams = (params: [EndpointResourceV2TestEndpointParams] | unknown[]): params is [EndpointResourceV2TestEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'endpointTestRequest')
 }
 /**
 * Generates a test notification for a particular endpoint. Use this endpoint to test that an integration that you created works as expected. This endpoint triggers a test notification that should be received by the target recipient. For example, if you set up a webhook as the action to take upon receiving a notification, you should receive a test notification when using this endpoint.
@@ -39,7 +39,7 @@ const isEndpointResourceV2TestEndpointObjectParams = (params: [EndpointResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2TestEndpointParamCreator = async (...config: ([EndpointResourceV2TestEndpointParams] | [string, EndpointTestRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2TestEndpointParamCreator = async (...config: ([EndpointResourceV2TestEndpointParams] | [any, EndpointTestRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2TestEndpointObjectParams(config) ? config[0] : ['uuid', 'endpointTestRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2TestEndpointParams;
     const { uuid, endpointTestRequest, options = {} } = params;
     const localVarPath = `/endpoints/{uuid}/test`

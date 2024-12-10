@@ -33,7 +33,7 @@ const isSystemObjectParams = (params: [SystemParams] | unknown[]): params is [Sy
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true
 }
 /**
-* Returns a System
+* Get information about one specific system.
 * @summary Request a System
 * @param {SystemParams} config with all available params.
 * @param {*} [options] Override http request option.

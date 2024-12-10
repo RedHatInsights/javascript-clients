@@ -1390,7 +1390,7 @@ export interface TailoringCreate {
      * @type {any}
      * @memberof TailoringCreate
      */
-    'os_minor_version'?: any;
+    'os_minor_version': any;
 }
 /**
  * Defines customizations of rules and variables for a set of profiles

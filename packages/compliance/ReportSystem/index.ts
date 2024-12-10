@@ -39,7 +39,7 @@ const isReportSystemObjectParams = (params: [ReportSystemParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
-* Returns a System under a Report
+* Retrieve a specific system from a specific report.
 * @summary Request a System
 * @param {ReportSystemParams} config with all available params.
 * @param {*} [options] Override http request option.

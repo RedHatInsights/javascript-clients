@@ -14,20 +14,20 @@ import type {  } from '../types';
 export type EndpointResourceV1GetDetailedEndpointHistoryParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1GetDetailedEndpointHistoryApi
   */
-  historyId: string,
+  historyId: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1GetDetailedEndpointHistoryApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetDetailedEndpointHistoryReturnType = AxiosPromise<string>;
+export type EndpointResourceV1GetDetailedEndpointHistoryReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [EndpointResourceV1GetDetailedEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetDetailedEndpointHistoryParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'historyId') && Object.prototype.hasOwnProperty.call(params, 'id')
@@ -39,7 +39,7 @@ const isEndpointResourceV1GetDetailedEndpointHistoryObjectParams = (params: [End
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetDetailedEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetDetailedEndpointHistoryParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetDetailedEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetDetailedEndpointHistoryParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV1GetDetailedEndpointHistoryObjectParams(config) ? config[0] : ['historyId', 'id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetDetailedEndpointHistoryParams;
     const { historyId, id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history/{history_id}/details`

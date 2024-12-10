@@ -8,20 +8,20 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { EventType } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams = {
   /**
   * The UUID of the behavior group to check
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType = AxiosPromise<Array<EventType>>;
+export type NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupObjectParams = (params: [NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | unknown[]): params is [NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId')
@@ -33,7 +33,7 @@ const isNotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupObjec
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator = async (...config: ([NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator = async (...config: ([NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupObjectParams(config) ? config[0] : ['behaviorGroupId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetEventTypesAffectedByRemovalOfBehaviorGroupParams;
     const { behaviorGroupId, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/affectedByRemovalOfBehaviorGroup/{behaviorGroupId}`

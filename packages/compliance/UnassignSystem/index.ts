@@ -39,7 +39,7 @@ const isUnassignSystemObjectParams = (params: [UnassignSystemParams] | unknown[]
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }
 /**
-* Unassigns a System from a Policy
+* Remove a specific system from a specific policy.
 * @summary Unassign a System from a Policy
 * @param {UnassignSystemParams} config with all available params.
 * @param {*} [options] Override http request option.

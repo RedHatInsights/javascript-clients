@@ -17,14 +17,14 @@ export type DrawerResourceV1UpdateNotificationReadStatusParams = {
   * @type { UpdateNotificationDrawerStatus }
   * @memberof DrawerResourceV1UpdateNotificationReadStatusApi
   */
-  updateNotificationDrawerStatus?: UpdateNotificationDrawerStatus,
+  updateNotificationDrawerStatus: UpdateNotificationDrawerStatus,
   options?: AxiosRequestConfig
 }
 
-export type DrawerResourceV1UpdateNotificationReadStatusReturnType = AxiosPromise<number>;
+export type DrawerResourceV1UpdateNotificationReadStatusReturnType = AxiosPromise<any>;
 
 const isDrawerResourceV1UpdateNotificationReadStatusObjectParams = (params: [DrawerResourceV1UpdateNotificationReadStatusParams] | unknown[]): params is [DrawerResourceV1UpdateNotificationReadStatusParams] => {
-  return params.length === 1 && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'updateNotificationDrawerStatus')
 }
 /**
 * Update drawer notifications status.

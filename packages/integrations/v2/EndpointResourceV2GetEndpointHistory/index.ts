@@ -14,46 +14,46 @@ import type { PageNotificationHistory } from '../types';
 export type EndpointResourceV2GetEndpointHistoryParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  id: string,
+  id: any,
   /**
   * Number of items per page, if not specified or 0 is used, returns a maximum of 500 elements.
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Page number. Starts at first page (0), if not specified starts at first page.
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   * Include the detail in the reply
-  * @type { boolean }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  includeDetail?: boolean,
+  includeDetail?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointHistoryApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   options?: AxiosRequestConfig
 }
 
@@ -63,12 +63,13 @@ const isEndpointResourceV2GetEndpointHistoryObjectParams = (params: [EndpointRes
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true && true && true
 }
 /**
-* Get Endpoint History
+*
+* @summary Get Endpoint History
 * @param {EndpointResourceV2GetEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2GetEndpointHistoryParamCreator = async (...config: ([EndpointResourceV2GetEndpointHistoryParams] | [string, number, number, boolean, number, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2GetEndpointHistoryParamCreator = async (...config: ([EndpointResourceV2GetEndpointHistoryParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2GetEndpointHistoryObjectParams(config) ? config[0] : ['id', 'limit', 'pageNumber', 'includeDetail', 'offset', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2GetEndpointHistoryParams;
     const { id, limit, pageNumber, includeDetail, offset, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history`
