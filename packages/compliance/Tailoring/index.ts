@@ -39,7 +39,7 @@ const isTailoringObjectParams = (params: [TailoringParams] | unknown[]): params 
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
 }
 /**
-* Returns a Tailoring
+* Retrieve a specific tailoring.
 * @summary Request a Tailoring
 * @param {TailoringParams} config with all available params.
 * @param {*} [options] Override http request option.

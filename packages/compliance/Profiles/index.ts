@@ -63,7 +63,7 @@ const isProfilesObjectParams = (params: [ProfilesParams] | unknown[]): params is
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }
 /**
-* Lists Profiles
+* List all security guide profiles.
 * @summary Request Profiles
 * @param {ProfilesParams} config with all available params.
 * @param {*} [options] Override http request option.

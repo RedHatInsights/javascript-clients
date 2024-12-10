@@ -14,52 +14,52 @@ import type { EndpointPage } from '../types';
 export type EndpointResourceV2GetEndpointsParams = {
   /**
   * Number of items per page. If the value is 0, it will return all elements
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Page number. Starts at first page (0), if not specified starts at first page.
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  active?: boolean,
+  active?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  name?: string,
+  name?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   /**
   *
-  * @type { Array<string> }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointsApi
   */
-  type?: Array<string>,
+  type?: any,
   options?: AxiosRequestConfig
 }
 
@@ -75,7 +75,7 @@ const isEndpointResourceV2GetEndpointsObjectParams = (params: [EndpointResourceV
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2GetEndpointsParamCreator = async (...config: ([EndpointResourceV2GetEndpointsParams] | [number, number, boolean, string, number, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2GetEndpointsParamCreator = async (...config: ([EndpointResourceV2GetEndpointsParams] | [any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2GetEndpointsObjectParams(config) ? config[0] : ['limit', 'pageNumber', 'active', 'name', 'offset', 'sortBy', 'sortBy2', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2GetEndpointsParams;
     const { limit, pageNumber, active, name, offset, sortBy, sortBy2, type, options = {} } = params;
     const localVarPath = `/endpoints`;
@@ -113,7 +113,7 @@ export const endpointResourceV2GetEndpointsParamCreator = async (...config: ([En
         localVarQueryParameter['sort_by'] = sortBy2;
     }
 
-    if (type) {
+    if (type !== undefined) {
         localVarQueryParameter['type'] = type;
     }
 

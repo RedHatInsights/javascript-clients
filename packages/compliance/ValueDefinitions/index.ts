@@ -63,7 +63,7 @@ const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unkno
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }
 /**
-* Lists Value Definitions
+* Retrieve a list of the fields which can be edited within a profile.
 * @summary Request Value Definitions
 * @param {ValueDefinitionsParams} config with all available params.
 * @param {*} [options] Override http request option.
