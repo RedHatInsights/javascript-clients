@@ -33,7 +33,7 @@ const isDeleteReportObjectParams = (params: [DeleteReportParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
-* Deletes Report\'s test results
+* Delete test results for a specific report.
 * @summary Delete a Report results
 * @param {DeleteReportParams} config with all available params.
 * @param {*} [options] Override http request option.

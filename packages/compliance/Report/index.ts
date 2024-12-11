@@ -33,7 +33,7 @@ const isReportObjectParams = (params: [ReportParams] | unknown[]): params is [Re
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
-* Returns a Report
+* Retrieve a specific report.
 * @summary Request a Report
 * @param {ReportParams} config with all available params.
 * @param {*} [options] Override http request option.

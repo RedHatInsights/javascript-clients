@@ -2080,6 +2080,18 @@ export interface SystemProfileRhelAi {
      */
     'rhel_ai_version_id'?: string;
     /**
+     * Model name of AMD GPUs
+     * @type {Array<string>}
+     * @memberof SystemProfileRhelAi
+     */
+    'amd_gpu_models'?: Array<string>;
+    /**
+     * Model name of Intel Gaudi HPUs
+     * @type {Array<string>}
+     * @memberof SystemProfileRhelAi
+     */
+    'intel_gaudi_hpu_models'?: Array<string>;
+    /**
      * Model name of Nvidia GPUs in the GPU index order
      * @type {Array<string>}
      * @memberof SystemProfileRhelAi

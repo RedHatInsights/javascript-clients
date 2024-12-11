@@ -39,7 +39,7 @@ const isRuleGroupObjectParams = (params: [RuleGroupParams] | unknown[]): params 
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'ruleGroupId') && true
 }
 /**
-* Returns a Rule Group
+* Retrieve a specific rule group.
 * @summary Request a Rule Group
 * @param {RuleGroupParams} config with all available params.
 * @param {*} [options] Override http request option.

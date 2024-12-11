@@ -69,7 +69,7 @@ const isReportRuleResultsObjectParams = (params: [ReportRuleResultsParams] | unk
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true && true && true && true && true
 }
 /**
-* Lists Rule Results under a Report
+* Retrieve all of the rule results for a specific report.
 * @summary Request Rule Results under a Report
 * @param {ReportRuleResultsParams} config with all available params.
 * @param {*} [options] Override http request option.
