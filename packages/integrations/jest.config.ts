@@ -7,4 +7,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/packages/integrations',
+  testPathIgnorePatterns: ['/node_modules/','/tests/integration/'],
 };
