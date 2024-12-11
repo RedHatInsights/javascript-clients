@@ -14,16 +14,16 @@ import type {  } from '../types';
 export type NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1DeleteBehaviorGroupFromEventTypeApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1DeleteBehaviorGroupFromEventTypeApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   options?: AxiosRequestConfig
 }
 
@@ -39,7 +39,7 @@ const isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams = (pa
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator = async (...config: ([NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1DeleteBehaviorGroupFromEventTypeParamCreator = async (...config: ([NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1DeleteBehaviorGroupFromEventTypeObjectParams(config) ? config[0] : ['behaviorGroupId', 'eventTypeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1DeleteBehaviorGroupFromEventTypeParams;
     const { behaviorGroupId, eventTypeId, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups/{behaviorGroupId}`

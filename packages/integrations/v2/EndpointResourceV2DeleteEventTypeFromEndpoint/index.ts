@@ -14,20 +14,20 @@ import type {  } from '../types';
 export type EndpointResourceV2DeleteEventTypeFromEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2DeleteEventTypeFromEndpointApi
   */
-  endpointId: string,
+  endpointId: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2DeleteEventTypeFromEndpointApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV2DeleteEventTypeFromEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV2DeleteEventTypeFromEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV2DeleteEventTypeFromEndpointObjectParams = (params: [EndpointResourceV2DeleteEventTypeFromEndpointParams] | unknown[]): params is [EndpointResourceV2DeleteEventTypeFromEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && Object.prototype.hasOwnProperty.call(params, 'eventTypeId')
@@ -39,7 +39,7 @@ const isEndpointResourceV2DeleteEventTypeFromEndpointObjectParams = (params: [En
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2DeleteEventTypeFromEndpointParamCreator = async (...config: ([EndpointResourceV2DeleteEventTypeFromEndpointParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2DeleteEventTypeFromEndpointParamCreator = async (...config: ([EndpointResourceV2DeleteEventTypeFromEndpointParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2DeleteEventTypeFromEndpointObjectParams(config) ? config[0] : ['endpointId', 'eventTypeId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2DeleteEventTypeFromEndpointParams;
     const { endpointId, eventTypeId, options = {} } = params;
     const localVarPath = `/endpoints/{endpointId}/eventType/{eventTypeId}`

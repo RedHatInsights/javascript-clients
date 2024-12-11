@@ -39,7 +39,7 @@ const isReportTestResultObjectParams = (params: [ReportTestResultParams] | unkno
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'testResultId') && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
 }
 /**
-* Returns a Test Result under a Report
+* Retrieve a specific test result for a specific report.
 * @summary Request a Test Result
 * @param {ReportTestResultParams} config with all available params.
 * @param {*} [options] Override http request option.

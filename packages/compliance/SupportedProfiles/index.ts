@@ -57,7 +57,7 @@ const isSupportedProfilesObjectParams = (params: [SupportedProfilesParams] | unk
   return params.length === 1 && true && true && true && true && true && true
 }
 /**
-* Lists Supported Profiles
+* Retrieve the list of profiles supported by particular RHEL versions.
 * @summary Request Supported Profiles
 * @param {SupportedProfilesParams} config with all available params.
 * @param {*} [options] Override http request option.

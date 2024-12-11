@@ -33,7 +33,7 @@ const isPolicyObjectParams = (params: [PolicyParams] | unknown[]): params is [Po
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
 }
 /**
-* Returns a Policy
+* Retrieve a specific policy.
 * @summary Request a Policy
 * @param {PolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

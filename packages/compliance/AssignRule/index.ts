@@ -45,7 +45,7 @@ const isAssignRuleObjectParams = (params: [AssignRuleParams] | unknown[]): param
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
 }
 /**
-* Assigns a Rule to a Tailoring
+* Add a rule to a specific tailoring.
 * @summary Assign a Rule to a Tailoring
 * @param {AssignRuleParams} config with all available params.
 * @param {*} [options] Override http request option.

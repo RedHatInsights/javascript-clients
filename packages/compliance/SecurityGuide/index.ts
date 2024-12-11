@@ -33,7 +33,7 @@ const isSecurityGuideObjectParams = (params: [SecurityGuideParams] | unknown[]):
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true
 }
 /**
-* Returns a Security Guide
+* Retrieve a specific security guide.
 * @summary Request a Security Guide
 * @param {SecurityGuideParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -43,6 +43,7 @@ const isProfileTreeObjectParams = (params: [ProfileTreeParams] | unknown[]): par
 * @summary Request the Rule Tree of a Profile
 * @param {ProfileTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const profileTreeParamCreator = async (...config: ([ProfileTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {

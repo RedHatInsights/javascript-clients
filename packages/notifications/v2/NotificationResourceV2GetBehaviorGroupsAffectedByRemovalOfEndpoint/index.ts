@@ -8,20 +8,20 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { BehaviorGroup } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointApi
   */
-  endpointId: string,
+  endpointId: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType = AxiosPromise<Array<BehaviorGroup>>;
+export type NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointObjectParams = (params: [NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | unknown[]): params is [NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId')
@@ -33,7 +33,7 @@ const isNotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointObject
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator = async (...config: ([NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParamCreator = async (...config: ([NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointObjectParams(config) ? config[0] : ['endpointId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams;
     const { endpointId, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/affectedByRemovalOfEndpoint/{endpointId}`

@@ -69,7 +69,7 @@ const isTailoringRulesObjectParams = (params: [TailoringRulesParams] | unknown[]
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true && true && true && true && true
 }
 /**
-* Lists Rules assigned to a Tailoring
+* Retrieve a list of rules relating to specific tailorings.
 * @summary Request Rules assigned to a Tailoring
 * @param {TailoringRulesParams} config with all available params.
 * @param {*} [options] Override http request option.

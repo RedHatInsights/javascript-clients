@@ -6,34 +6,34 @@
 export interface Application {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'id'?: string;
+    'event_types'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'name': string;
+    'bundle_id': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'display_name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'bundle_id': string;
+    'id'?: any;
     /**
      *
-     * @type {Set<EventType>}
+     * @type {any}
      * @memberof Application
      */
-    'event_types'?: Set<EventType>;
+    'display_name': any;
 }
 /**
  *
@@ -43,16 +43,16 @@ export interface Application {
 export interface BasicAuthentication {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BasicAuthentication
      */
-    'username'?: string;
+    'password'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BasicAuthentication
      */
-    'password'?: string;
+    'username'?: any;
 }
 /**
  *
@@ -62,28 +62,28 @@ export interface BasicAuthentication {
 export interface Bundle {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'id'?: string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'name': string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {Set<Application>}
+     * @type {any}
      * @memberof Bundle
      */
-    'applications'?: Set<Application>;
+    'applications'?: any;
 }
 /**
  *
@@ -93,22 +93,22 @@ export interface Bundle {
 export interface CamelProperties {
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof CamelProperties
      */
-    'disableSslVerification': boolean;
+    'secretToken'?: any;
     /**
      *
-     * @type {{ [key: string]: string; }}
+     * @type {any}
      * @memberof CamelProperties
      */
-    'extras'?: { [key: string]: string; };
+    'disableSslVerification': any;
     /**
      *
-     * @type {string}
+     * @type {{ [key: string]: any; }}
      * @memberof CamelProperties
      */
-    'url': string;
+    'extras'?: { [key: string]: any; };
     /**
      *
      * @type {BasicAuthentication}
@@ -117,10 +117,10 @@ export interface CamelProperties {
     'basicAuthentication'?: BasicAuthentication;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CamelProperties
      */
-    'secretToken'?: string;
+    'url': any;
 }
 /**
  *
@@ -130,40 +130,28 @@ export interface CamelProperties {
 export interface Endpoint {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'id'?: string;
+    'created'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'name': string;
+    'event_types_group_by_bundles_and_applications'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'description': string;
+    'server_errors'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof Endpoint
      */
-    'enabled'?: boolean;
-    /**
-     *
-     * @type {EndpointStatus}
-     * @memberof Endpoint
-     */
-    'status'?: EndpointStatus;
-    /**
-     *
-     * @type {number}
-     * @memberof Endpoint
-     */
-    'server_errors'?: number;
+    'description': any;
     /**
      *
      * @type {EndpointType}
@@ -172,40 +160,52 @@ export interface Endpoint {
     'type': EndpointType;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'sub_type'?: string;
+    'enabled'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'created'?: string;
+    'event_types'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'updated'?: string;
+    'sub_type'?: any;
     /**
      *
-     * @type {object}
+     * @type {any}
      * @memberof Endpoint
      */
-    'properties'?: object;
+    'name': any;
     /**
      *
-     * @type {Set<Bundle>}
+     * @type {any}
      * @memberof Endpoint
      */
-    'event_types_group_by_bundles_and_applications'?: Set<Bundle>;
+    'id'?: any;
     /**
      *
-     * @type {Set<string>}
+     * @type {any}
      * @memberof Endpoint
      */
-    'event_types'?: Set<string>;
+    'updated'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof Endpoint
+     */
+    'properties'?: any;
+    /**
+     *
+     * @type {EndpointStatus}
+     * @memberof Endpoint
+     */
+    'status'?: EndpointStatus;
 }
 
 
@@ -217,41 +217,30 @@ export interface Endpoint {
 export interface EndpointPage {
     /**
      *
-     * @type {Array<Endpoint>}
+     * @type {any}
      * @memberof EndpointPage
      */
-    'data': Array<Endpoint>;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof EndpointPage
-     */
-    'links': { [key: string]: string; };
+    'data': any;
     /**
      *
      * @type {Meta}
      * @memberof EndpointPage
      */
     'meta': Meta;
+    /**
+     *
+     * @type {{ [key: string]: any; }}
+     * @memberof EndpointPage
+     */
+    'links': { [key: string]: any; };
 }
 /**
  *
  * @export
- * @enum {string}
+ * @interface EndpointStatus
  */
-
-export const EndpointStatus = {
-    Deleting: 'DELETING',
-    Failed: 'FAILED',
-    New: 'NEW',
-    Provisioning: 'PROVISIONING',
-    Ready: 'READY',
-    Unknown: 'UNKNOWN'
-} as const;
-
-export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
-
-
+export interface EndpointStatus {
+}
 /**
  *
  * @export
@@ -260,29 +249,18 @@ export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
 export interface EndpointTestRequest {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EndpointTestRequest
      */
-    'message': string;
+    'message': any;
 }
 /**
  *
  * @export
- * @enum {string}
+ * @interface EndpointType
  */
-
-export const EndpointType = {
-    Ansible: 'ansible',
-    Camel: 'camel',
-    Drawer: 'drawer',
-    EmailSubscription: 'email_subscription',
-    Webhook: 'webhook',
-    Pagerduty: 'pagerduty'
-} as const;
-
-export type EndpointType = typeof EndpointType[keyof typeof EndpointType];
-
-
+export interface EndpointType {
+}
 /**
  *
  * @export
@@ -291,50 +269,42 @@ export type EndpointType = typeof EndpointType[keyof typeof EndpointType];
 export interface EventType {
     /**
      *
-     * @type {string}
-     * @memberof EventType
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventType
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventType
-     */
-    'display_name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventType
-     */
-    'description'?: string;
-    /**
-     *
      * @type {Application}
      * @memberof EventType
      */
     'application'?: Application;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'name': any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'description'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'id'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'display_name': any;
 }
 /**
  *
  * @export
- * @enum {string}
+ * @interface HttpType
  */
-
-export const HttpType = {
-    Get: 'GET',
-    Post: 'POST',
-    Put: 'PUT'
-} as const;
-
-export type HttpType = typeof HttpType[keyof typeof HttpType];
-
-
+export interface HttpType {
+}
 /**
  *
  * @export
@@ -343,10 +313,10 @@ export type HttpType = typeof HttpType[keyof typeof HttpType];
 export interface Meta {
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof Meta
      */
-    'count': number;
+    'count': any;
 }
 /**
  *
@@ -356,40 +326,10 @@ export interface Meta {
 export interface NotificationHistory {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof NotificationHistory
      */
-    'created'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'id'?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof NotificationHistory
-     */
-    'invocationTime': number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof NotificationHistory
-     */
-    'invocationResult': boolean;
-    /**
-     *
-     * @type {NotificationStatus}
-     * @memberof NotificationHistory
-     */
-    'status': NotificationStatus;
-    /**
-     *
-     * @type {string}
-     * @memberof NotificationHistory
-     */
-    'endpointId'?: string;
+    'invocationResult': any;
     /**
      *
      * @type {EndpointType}
@@ -398,30 +338,50 @@ export interface NotificationHistory {
     'endpointType'?: EndpointType;
     /**
      *
+     * @type {any}
+     * @memberof NotificationHistory
+     */
+    'created'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof NotificationHistory
+     */
+    'invocationTime': any;
+    /**
+     *
+     * @type {any}
+     * @memberof NotificationHistory
+     */
+    'endpointId'?: any;
+    /**
+     *
      * @type {{ [key: string]: any; }}
      * @memberof NotificationHistory
      */
     'details'?: { [key: string]: any; };
+    /**
+     *
+     * @type {any}
+     * @memberof NotificationHistory
+     */
+    'id'?: any;
+    /**
+     *
+     * @type {NotificationStatus}
+     * @memberof NotificationHistory
+     */
+    'status': NotificationStatus;
 }
 
 
 /**
  *
  * @export
- * @enum {string}
+ * @interface NotificationStatus
  */
-
-export const NotificationStatus = {
-    FailedInternal: 'FAILED_INTERNAL',
-    FailedExternal: 'FAILED_EXTERNAL',
-    Processing: 'PROCESSING',
-    Sent: 'SENT',
-    Success: 'SUCCESS'
-} as const;
-
-export type NotificationStatus = typeof NotificationStatus[keyof typeof NotificationStatus];
-
-
+export interface NotificationStatus {
+}
 /**
  *
  * @export
@@ -436,29 +396,20 @@ export interface PagerDutyProperties {
     'severity': PagerDutySeverity;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PagerDutyProperties
      */
-    'secretToken': string;
+    'secretToken': any;
 }
 
 
 /**
  *
  * @export
- * @enum {string}
+ * @interface PagerDutySeverity
  */
-
-export const PagerDutySeverity = {
-    Critical: 'critical',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info'
-} as const;
-
-export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutySeverity];
-
-
+export interface PagerDutySeverity {
+}
 /**
  *
  * @export
@@ -467,16 +418,16 @@ export type PagerDutySeverity = typeof PagerDutySeverity[keyof typeof PagerDutyS
 export interface RequestSystemSubscriptionProperties {
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof RequestSystemSubscriptionProperties
      */
-    'only_admins': boolean;
+    'group_id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof RequestSystemSubscriptionProperties
      */
-    'group_id'?: string;
+    'only_admins': any;
 }
 /**
  *
@@ -486,22 +437,22 @@ export interface RequestSystemSubscriptionProperties {
 export interface SystemSubscriptionProperties {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'groupId'?: string;
+    'onlyAdmins'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'ignorePreferences'?: boolean;
+    'ignorePreferences'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof SystemSubscriptionProperties
      */
-    'onlyAdmins'?: boolean;
+    'groupId'?: any;
 }
 /**
  *
@@ -511,10 +462,10 @@ export interface SystemSubscriptionProperties {
 export interface WebhookProperties {
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof WebhookProperties
      */
-    'disableSslVerification': boolean;
+    'bearerAuthentication'?: any;
     /**
      *
      * @type {HttpType}
@@ -523,10 +474,16 @@ export interface WebhookProperties {
     'method': HttpType;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof WebhookProperties
      */
-    'url': string;
+    'secretToken'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof WebhookProperties
+     */
+    'disableSslVerification': any;
     /**
      *
      * @type {BasicAuthentication}
@@ -535,16 +492,10 @@ export interface WebhookProperties {
     'basicAuthentication'?: BasicAuthentication;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof WebhookProperties
      */
-    'bearerAuthentication'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WebhookProperties
-     */
-    'secretToken'?: string;
+    'url': any;
 }
 
 

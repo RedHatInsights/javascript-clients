@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type NotificationResourceV1UpdateEventTypeEndpointsParams = {
   /**
   * UUID of the eventType to associate with the endpoint(s)
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1UpdateEventTypeEndpointsApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof NotificationResourceV1UpdateEventTypeEndpointsApi
   */
-  requestBody?: Set<string>,
+  body: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1UpdateEventTypeEndpointsReturnType = AxiosPromise<string>;
+export type NotificationResourceV1UpdateEventTypeEndpointsReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV1UpdateEventTypeEndpointsObjectParams = (params: [NotificationResourceV1UpdateEventTypeEndpointsParams] | unknown[]): params is [NotificationResourceV1UpdateEventTypeEndpointsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && Object.prototype.hasOwnProperty.call(params, 'body')
 }
 /**
 * Updates the list of endpoints associated with an event type.
@@ -39,9 +39,9 @@ const isNotificationResourceV1UpdateEventTypeEndpointsObjectParams = (params: [N
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async (...config: ([NotificationResourceV1UpdateEventTypeEndpointsParams] | [string, Set<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isNotificationResourceV1UpdateEventTypeEndpointsObjectParams(config) ? config[0] : ['eventTypeId', 'requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1UpdateEventTypeEndpointsParams;
-    const { eventTypeId, requestBody, options = {} } = params;
+export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async (...config: ([NotificationResourceV1UpdateEventTypeEndpointsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isNotificationResourceV1UpdateEventTypeEndpointsObjectParams(config) ? config[0] : ['eventTypeId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1UpdateEventTypeEndpointsParams;
+    const { eventTypeId, body, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/endpoints`
         .replace(`{${"eventTypeId"}}`, encodeURIComponent(String(eventTypeId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -60,7 +60,7 @@ export const notificationResourceV1UpdateEventTypeEndpointsParamCreator = async 
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: requestBody,
+        serializeData: body,
     };
 }
 

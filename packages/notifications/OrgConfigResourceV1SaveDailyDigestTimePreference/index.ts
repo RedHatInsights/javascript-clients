@@ -14,17 +14,17 @@ import type {  } from '../types';
 export type OrgConfigResourceV1SaveDailyDigestTimePreferenceParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof OrgConfigResourceV1SaveDailyDigestTimePreferenceApi
   */
-  body?: string,
+  body: any,
   options?: AxiosRequestConfig
 }
 
 export type OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType = AxiosPromise<void>;
 
 const isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams = (params: [OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | unknown[]): params is [OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] => {
-  return params.length === 1 && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'body')
 }
 /**
 * Sets the daily digest UTC time. The accepted minute values are 00, 15, 30, and 45. Use this endpoint to set the time when daily emails are sent.
@@ -33,7 +33,7 @@ const isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams = (params: 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator = async (...config: ([OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const orgConfigResourceV1SaveDailyDigestTimePreferenceParamCreator = async (...config: ([OrgConfigResourceV1SaveDailyDigestTimePreferenceParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isOrgConfigResourceV1SaveDailyDigestTimePreferenceObjectParams(config) ? config[0] : ['body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as OrgConfigResourceV1SaveDailyDigestTimePreferenceParams;
     const { body, options = {} } = params;
     const localVarPath = `/org-config/daily-digest/time-preference`;

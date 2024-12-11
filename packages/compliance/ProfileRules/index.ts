@@ -69,7 +69,7 @@ const isProfileRulesObjectParams = (params: [ProfileRulesParams] | unknown[]): p
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && true && true && true && true && true && true
 }
 /**
-* Lists Rules assigned to a Profile
+* Retrieve a list of all security guide rules for a specific profile.
 * @summary Request Rules assigned to a Profile
 * @param {ProfileRulesParams} config with all available params.
 * @param {*} [options] Override http request option.

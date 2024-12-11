@@ -43,6 +43,7 @@ const isCreateTailoringObjectParams = (params: [CreateTailoringParams] | unknown
 * @summary Create a Tailoring
 * @param {CreateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const createTailoringParamCreator = async (...config: ([CreateTailoringParams] | [any, any, TailoringCreate, AxiosRequestConfig])): Promise<RequestArgs> => {

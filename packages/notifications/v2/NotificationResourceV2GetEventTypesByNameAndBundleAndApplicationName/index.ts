@@ -14,22 +14,22 @@ import type { EventType } from '../types';
 export type NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  applicationName: string,
+  applicationName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  bundleName: string,
+  bundleName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  eventTypeName: string,
+  eventTypeName: any,
   options?: AxiosRequestConfig
 }
 
@@ -45,7 +45,7 @@ const isNotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameObje
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (...config: ([NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (...config: ([NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'eventTypeName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetEventTypesByNameAndBundleAndApplicationNameParams;
     const { applicationName, bundleName, eventTypeName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}/eventTypes/{eventTypeName}`

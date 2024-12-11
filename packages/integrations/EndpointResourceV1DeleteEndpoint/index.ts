@@ -14,10 +14,10 @@ import type {  } from '../types';
 export type EndpointResourceV1DeleteEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1DeleteEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
@@ -33,7 +33,7 @@ const isEndpointResourceV1DeleteEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1DeleteEndpointParamCreator = async (...config: ([EndpointResourceV1DeleteEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1DeleteEndpointParamCreator = async (...config: ([EndpointResourceV1DeleteEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV1DeleteEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1DeleteEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}`

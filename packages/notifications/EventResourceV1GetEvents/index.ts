@@ -8,106 +8,106 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { EventLogEntryActionStatus, PageEventLogEntry } from '../types';
+import type { PageEventLogEntry } from '../types';
 
 
 export type EventResourceV1GetEventsParams = {
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  appIds?: Set<string>,
+  appIds?: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  bundleIds?: Set<string>,
+  bundleIds?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  endDate?: string,
+  endDate?: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  endpointTypes?: Set<string>,
+  endpointTypes?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  eventTypeDisplayName?: string,
+  eventTypeDisplayName?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  includeActions?: boolean,
+  includeActions?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  includeDetails?: boolean,
+  includeDetails?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  includePayload?: boolean,
+  includePayload?: any,
   /**
   *
-  * @type { Set<boolean> }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  invocationResults?: Set<boolean>,
+  invocationResults?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  startDate?: string,
+  startDate?: any,
   /**
   *
-  * @type { Set<EventLogEntryActionStatus> }
+  * @type { any }
   * @memberof EventResourceV1GetEventsApi
   */
-  status?: Set<EventLogEntryActionStatus>,
+  status?: any,
   options?: AxiosRequestConfig
 }
 
@@ -123,7 +123,7 @@ const isEventResourceV1GetEventsObjectParams = (params: [EventResourceV1GetEvent
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const eventResourceV1GetEventsParamCreator = async (...config: ([EventResourceV1GetEventsParams] | [Set<string>, Set<string>, string, Set<string>, string, boolean, boolean, boolean, Set<boolean>, number, number, number, string, string, string, Set<EventLogEntryActionStatus>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const eventResourceV1GetEventsParamCreator = async (...config: ([EventResourceV1GetEventsParams] | [any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEventResourceV1GetEventsObjectParams(config) ? config[0] : ['appIds', 'bundleIds', 'endDate', 'endpointTypes', 'eventTypeDisplayName', 'includeActions', 'includeDetails', 'includePayload', 'invocationResults', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'startDate', 'status', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EventResourceV1GetEventsParams;
     const { appIds, bundleIds, endDate, endpointTypes, eventTypeDisplayName, includeActions, includeDetails, includePayload, invocationResults, limit, offset, pageNumber, sortBy, sortBy2, startDate, status, options = {} } = params;
     const localVarPath = `/notifications/events`;
@@ -133,22 +133,20 @@ export const eventResourceV1GetEventsParamCreator = async (...config: ([EventRes
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
-    if (appIds) {
-        localVarQueryParameter['appIds'] = Array.from(appIds);
+    if (appIds !== undefined) {
+        localVarQueryParameter['appIds'] = appIds;
     }
 
-    if (bundleIds) {
-        localVarQueryParameter['bundleIds'] = Array.from(bundleIds);
+    if (bundleIds !== undefined) {
+        localVarQueryParameter['bundleIds'] = bundleIds;
     }
 
     if (endDate !== undefined) {
-        localVarQueryParameter['endDate'] = (endDate as any instanceof Date) ?
-            (endDate as any).toISOString().substr(0,10) :
-            endDate;
+        localVarQueryParameter['endDate'] = endDate;
     }
 
-    if (endpointTypes) {
-        localVarQueryParameter['endpointTypes'] = Array.from(endpointTypes);
+    if (endpointTypes !== undefined) {
+        localVarQueryParameter['endpointTypes'] = endpointTypes;
     }
 
     if (eventTypeDisplayName !== undefined) {
@@ -167,8 +165,8 @@ export const eventResourceV1GetEventsParamCreator = async (...config: ([EventRes
         localVarQueryParameter['includePayload'] = includePayload;
     }
 
-    if (invocationResults) {
-        localVarQueryParameter['invocationResults'] = Array.from(invocationResults);
+    if (invocationResults !== undefined) {
+        localVarQueryParameter['invocationResults'] = invocationResults;
     }
 
     if (limit !== undefined) {
@@ -192,13 +190,11 @@ export const eventResourceV1GetEventsParamCreator = async (...config: ([EventRes
     }
 
     if (startDate !== undefined) {
-        localVarQueryParameter['startDate'] = (startDate as any instanceof Date) ?
-            (startDate as any).toISOString().substr(0,10) :
-            startDate;
+        localVarQueryParameter['startDate'] = startDate;
     }
 
-    if (status) {
-        localVarQueryParameter['status'] = Array.from(status);
+    if (status !== undefined) {
+        localVarQueryParameter['status'] = status;
     }
 
 

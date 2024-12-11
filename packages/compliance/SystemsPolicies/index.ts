@@ -63,7 +63,7 @@ const isSystemsPoliciesObjectParams = (params: [SystemsPoliciesParams] | unknown
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true && true && true && true && true && true
 }
 /**
-* Lists Policies under a System
+* List all policies assigned to a single system.
 * @summary Request Policies assigned to a System
 * @param {SystemsPoliciesParams} config with all available params.
 * @param {*} [options] Override http request option.

@@ -14,16 +14,16 @@ import type { Application } from '../types';
 export type NotificationResourceV2GetApplicationByNameAndBundleNameParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetApplicationByNameAndBundleNameApi
   */
-  applicationName: string,
+  applicationName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetApplicationByNameAndBundleNameApi
   */
-  bundleName: string,
+  bundleName: any,
   options?: AxiosRequestConfig
 }
 
@@ -39,7 +39,7 @@ const isNotificationResourceV2GetApplicationByNameAndBundleNameObjectParams = (p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetApplicationByNameAndBundleNameParamCreator = async (...config: ([NotificationResourceV2GetApplicationByNameAndBundleNameParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetApplicationByNameAndBundleNameParamCreator = async (...config: ([NotificationResourceV2GetApplicationByNameAndBundleNameParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetApplicationByNameAndBundleNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetApplicationByNameAndBundleNameParams;
     const { applicationName, bundleName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}`

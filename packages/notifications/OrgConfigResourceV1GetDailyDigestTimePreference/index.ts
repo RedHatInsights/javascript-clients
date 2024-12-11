@@ -15,7 +15,7 @@ export type OrgConfigResourceV1GetDailyDigestTimePreferenceParams = {
   options?: AxiosRequestConfig
 }
 
-export type OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType = AxiosPromise<string>;
+export type OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType = AxiosPromise<any>;
 
 const isOrgConfigResourceV1GetDailyDigestTimePreferenceObjectParams = (params: [OrgConfigResourceV1GetDailyDigestTimePreferenceParams] | unknown[]): params is [OrgConfigResourceV1GetDailyDigestTimePreferenceParams] => {
   return params.length === 1

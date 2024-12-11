@@ -39,7 +39,7 @@ const isValueDefinitionObjectParams = (params: [ValueDefinitionParams] | unknown
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'valueDefinitionId') && true
 }
 /**
-* Returns a Value Definition
+* Retrieve a specific value definition.
 * @summary Request a Value Definition
 * @param {ValueDefinitionParams} config with all available params.
 * @param {*} [options] Override http request option.

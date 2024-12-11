@@ -63,7 +63,7 @@ const isRulesObjectParams = (params: [RulesParams] | unknown[]): params is [Rule
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
 }
 /**
-* Lists Rules assigned
+* Retrieve a list of rules for a specific security guide.
 * @summary Request Rules
 * @param {RulesParams} config with all available params.
 * @param {*} [options] Override http request option.

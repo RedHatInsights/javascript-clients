@@ -14,10 +14,10 @@ import type { Endpoint } from '../types';
 export type EndpointResourceV1UpdateEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1UpdateEndpointApi
   */
-  id: string,
+  id: any,
   /**
   *
   * @type { Endpoint }
@@ -27,7 +27,7 @@ export type EndpointResourceV1UpdateEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1UpdateEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV1UpdateEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourceV1UpdateEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEndpointParams] => {
   return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
@@ -39,7 +39,7 @@ const isEndpointResourceV1UpdateEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEndpointParams] | [string, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1UpdateEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEndpointParams] | [any, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV1UpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEndpointParams;
     const { id, endpoint, options = {} } = params;
     const localVarPath = `/endpoints/{id}`

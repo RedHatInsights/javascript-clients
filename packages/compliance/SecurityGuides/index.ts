@@ -57,7 +57,7 @@ const isSecurityGuidesObjectParams = (params: [SecurityGuidesParams] | unknown[]
   return params.length === 1 && true && true && true && true && true && true
 }
 /**
-* Lists Security Guides
+* Retrieve a list of all SCAP security guides.
 * @summary Request Security Guides
 * @param {SecurityGuidesParams} config with all available params.
 * @param {*} [options] Override http request option.

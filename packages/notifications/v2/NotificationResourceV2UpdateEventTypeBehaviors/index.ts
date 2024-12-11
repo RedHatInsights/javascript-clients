@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type NotificationResourceV2UpdateEventTypeBehaviorsParams = {
   /**
   * UUID of the eventType to associate with the behavior group(s)
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2UpdateEventTypeBehaviorsApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof NotificationResourceV2UpdateEventTypeBehaviorsApi
   */
-  requestBody?: Set<string>,
+  body: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2UpdateEventTypeBehaviorsReturnType = AxiosPromise<string>;
+export type NotificationResourceV2UpdateEventTypeBehaviorsReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2UpdateEventTypeBehaviorsObjectParams = (params: [NotificationResourceV2UpdateEventTypeBehaviorsParams] | unknown[]): params is [NotificationResourceV2UpdateEventTypeBehaviorsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && Object.prototype.hasOwnProperty.call(params, 'body')
 }
 /**
 * Updates the list of behavior groups associated with an event type.
@@ -39,9 +39,9 @@ const isNotificationResourceV2UpdateEventTypeBehaviorsObjectParams = (params: [N
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2UpdateEventTypeBehaviorsParamCreator = async (...config: ([NotificationResourceV2UpdateEventTypeBehaviorsParams] | [string, Set<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isNotificationResourceV2UpdateEventTypeBehaviorsObjectParams(config) ? config[0] : ['eventTypeId', 'requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2UpdateEventTypeBehaviorsParams;
-    const { eventTypeId, requestBody, options = {} } = params;
+export const notificationResourceV2UpdateEventTypeBehaviorsParamCreator = async (...config: ([NotificationResourceV2UpdateEventTypeBehaviorsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isNotificationResourceV2UpdateEventTypeBehaviorsObjectParams(config) ? config[0] : ['eventTypeId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2UpdateEventTypeBehaviorsParams;
+    const { eventTypeId, body, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups`
         .replace(`{${"eventTypeId"}}`, encodeURIComponent(String(eventTypeId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -60,7 +60,7 @@ export const notificationResourceV2UpdateEventTypeBehaviorsParamCreator = async 
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: requestBody,
+        serializeData: body,
     };
 }
 
