@@ -10,7 +10,7 @@ import {
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/configuration';
 import { RbacClient } from '../../../api';
 
-export const WORKSPACES_API_BASE = 'http://localhost:3000/api/rbac/v2';
+export const WORKSPACES_API_BASE = 'http://localhost:3002/api/rbac/v2';
 export const config: Configuration = new Configuration();
 export const composedWorkspacesApi = RbacClient(WORKSPACES_API_BASE);
 
