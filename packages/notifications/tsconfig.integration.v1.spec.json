@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "jest.config.ts",
+    "packages/notifications/tests/integrations/notifications.v1.test.ts"
+  ],
+  "exclude": ["packages/notifications/v2/tests/integration/notifications.v2.test.ts"]
+}

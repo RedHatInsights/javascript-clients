@@ -47,6 +47,27 @@
         "commitMessageFormat": "release: bump {projectName} to {version} [skip ci]"
       }
     },
+    "integration-v2": {
+      "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/notifications/v2/openapi.json 3002' http://localhost:3002/api/notifications/v2.0/notifications/bundles/bob 'nx run --verbose @redhat-cloud-services/notifications-client:jest-v2'"
+    },
+    "integration-v1": {
+      "command": "start-server-and-test 'bin/serve.sh https://console.redhat.com/api/notifications/v1.0/openapi.json 3001' http://localhost:3001/api/notifications/v1.0/notifications/bundles/bob 'nx run --verbose @redhat-cloud-services/notifications-client:jest-v1'"
+    },
+    "jest-v2": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/notifications/jest.integration.v2.config.ts"
+      },
+      "parallelism": false
+    },
+    "jest-v1": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/notifications/jest.integration.v1.config.ts"
+      }
+    },
     "github": {
       "executor": "@jscutlery/semver:github",
       "options": {
