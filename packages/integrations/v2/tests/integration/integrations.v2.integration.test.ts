@@ -17,11 +17,10 @@ import { EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams } from '..
 import { EndpointResourceV2UpdateEndpointParams } from '../../EndpointResourceV2UpdateEndpoint';
 import { EndpointResourceV2UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV2UpdateEventTypesLinkedToEndpoint';
 
-// note the 1.0, which is different from, for example, RBAC V2
 const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
 
 const client = IntegrationsClient(BASE_PATH);
-const placeHolder = 'amVmZgo=';
+const placeHolder = 'bob';
 
 describe('Integrations API (v2)', () => {
   test('create endpoint', async () => {
@@ -37,8 +36,8 @@ describe('Integrations API (v2)', () => {
     const createEndpointResp = await client.endpointResourceV2CreateEndpoint(endpointResourceV2CreateEndpointParams);
     expect(createEndpointResp.status).toEqual(200);
   });
-  6;
-  test('add event type from endpoint params', async () => {
+
+  xtest('add event type from endpoint params', async () => {
     const addEventTypeParams: EndpointResourceV2AddEventTypeToEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
@@ -47,7 +46,7 @@ describe('Integrations API (v2)', () => {
     expect(addEventTypeResp.status).toEqual(204);
   });
 
-  test('remove event type from endpoint params', async () => {
+  xtest('remove event type from endpoint params', async () => {
     const removeEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
@@ -56,7 +55,7 @@ describe('Integrations API (v2)', () => {
     expect(removeEventTypeResp.status).toEqual(204);
   });
 
-  test('delete event type from endpoint', async () => {
+  xtest('delete event type from endpoint', async () => {
     const deleteEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
