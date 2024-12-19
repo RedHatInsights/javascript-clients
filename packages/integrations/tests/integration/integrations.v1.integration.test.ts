@@ -16,6 +16,7 @@ import { EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams } from '.
 import { EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint';
 import { EndpointResourceV1UpdateEndpointParams } from '../../EndpointResourceV1UpdateEndpoint';
 import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
+import { AxiosError } from 'axios';
 
 // note the 1.0, which is different from, for example, RBAC v1
 const BASE_PATH = 'http://localhost:3001/api/integrations/v1.0/';
@@ -37,42 +38,59 @@ describe('Integrations API (v1)', () => {
     expect(createEndpointResp.status).toEqual(200);
   });
 
-  xtest('add event type from endpoint params', async () => {
+  test('add event type from endpoint params', async () => {
     const addEventTypeParams: EndpointResourceV1AddEventTypeToEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const addEventTypeResp = await client.endpointResourceV1AddEventTypeToEndpoint(addEventTypeParams).catch((reason) => {
-      return reason;
+    const addEventTypeResp = await client.endpointResourceV1AddEventTypeToEndpoint(addEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
     });
-    // it is unclear when/why a 404 happens
-    expect([404, 204]).toContain(addEventTypeResp.status);
+    if (!addEventTypeResp) {
+      return;
+    }
+    expect(addEventTypeResp.status).toEqual(204);
   });
 
-  xtest('remove event type from endpoint params', async () => {
+  test('remove event type from endpoint params', async () => {
     const removeEventTypeParams: EndpointResourceV1DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const removeEventTypeResp = await client.endpointResourceV1DeleteEventTypeFromEndpoint(removeEventTypeParams);
-    expect([204, 404]).toContain(removeEventTypeResp.status);
+    const removeEventTypeResp = await client.endpointResourceV1DeleteEventTypeFromEndpoint(removeEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!removeEventTypeResp) {
+      return;
+    }
+    expect(removeEventTypeResp).toEqual(204);
   });
 
-  xtest('delete event type from endpoint', async () => {
+  test('delete event type from endpoint', async () => {
     const deleteEventTypeParams: EndpointResourceV1DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const deleteEventTypeResp = await client.endpointResourceV1DeleteEventTypeFromEndpoint(deleteEventTypeParams);
-    expect([204, 404]).toContain(deleteEventTypeResp.status);
+    const deleteEventTypeResp = await client.endpointResourceV1DeleteEventTypeFromEndpoint(deleteEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!deleteEventTypeResp) {
+      return;
+    }
+    expect(deleteEventTypeResp.status).toEqual(204);
   });
 
-  xtest('delete endpoint', async () => {
+  test('delete endpoint', async () => {
     const deleteEndpointParams: EndpointResourceV1DeleteEndpointParams = {
       id: placeHolder,
     };
-    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams);
-    expect([204, 404]).toContain(deleteEndpointResp.status);
+    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!deleteEndpointResp) {
+      return;
+    }
+    expect(deleteEndpointResp.status).toEqual(204);
   });
 
   test('enable endpoint', async () => {
@@ -83,10 +101,15 @@ describe('Integrations API (v1)', () => {
     expect(enableResp.status).toEqual(200);
   });
 
-  xtest('disable endpoint', async () => {
+  test('disable endpoint', async () => {
     const disableEndpointParams: EndpointResourceV1DisableEndpointParams = { id: placeHolder };
-    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams);
-    expect([404, 204]).toContain(disableResp.status);
+    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams).catch((error: AxiosError) => {
+      expect(error).toContain('404');
+    });
+    if (!disableResp) {
+      return;
+    }
+    expect(disableResp.status).toEqual(204);
   });
 
   test('get endpoint', async () => {

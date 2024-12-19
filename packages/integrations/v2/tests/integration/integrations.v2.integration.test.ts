@@ -16,6 +16,7 @@ import { EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams } from '.
 import { EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateEmailSubscriptionEndpoint';
 import { EndpointResourceV2UpdateEndpointParams } from '../../EndpointResourceV2UpdateEndpoint';
 import { EndpointResourceV2UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV2UpdateEventTypesLinkedToEndpoint';
+import { AxiosError } from 'axios';
 
 const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
 
@@ -37,30 +38,45 @@ describe('Integrations API (v2)', () => {
     expect(createEndpointResp.status).toEqual(200);
   });
 
-  xtest('add event type from endpoint params', async () => {
+  test('add event type from endpoint params', async () => {
     const addEventTypeParams: EndpointResourceV2AddEventTypeToEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const addEventTypeResp = await client.endpointResourceV2AddEventTypeToEndpoint(addEventTypeParams);
+    const addEventTypeResp = await client.endpointResourceV2AddEventTypeToEndpoint(addEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!addEventTypeResp) {
+      return;
+    }
     expect(addEventTypeResp.status).toEqual(204);
   });
 
-  xtest('remove event type from endpoint params', async () => {
+  test('remove event type from endpoint params', async () => {
     const removeEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const removeEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(removeEventTypeParams);
+    const removeEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(removeEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!removeEventTypeResp) {
+      return;
+    }
     expect(removeEventTypeResp.status).toEqual(204);
   });
 
-  xtest('delete event type from endpoint', async () => {
+  test('delete event type from endpoint', async () => {
     const deleteEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
       endpointId: placeHolder,
       eventTypeId: placeHolder,
     };
-    const deleteEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(deleteEventTypeParams);
+    const deleteEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(deleteEventTypeParams).catch((error: AxiosError) => {
+      expect(error.message).toContain('404');
+    });
+    if (!deleteEventTypeResp) {
+      return;
+    }
     expect(deleteEventTypeResp.status).toEqual(204);
   });
 
