@@ -402,7 +402,7 @@ export interface CrossAccountRequestIn {
      * @type {string}
      * @memberof CrossAccountRequestIn
      */
-    'target_account': string;
+    'target_account'?: string;
     /**
      *
      * @type {string}
