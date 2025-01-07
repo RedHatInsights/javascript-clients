@@ -14,7 +14,6 @@ import { EndpointResourceV1GetOrCreateDrawerSubscriptionEndpointParams } from '.
 import { EndpointResourceV1GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV1GetOrCreateEmailSubscriptionEndpoint';
 import { EndpointResourceV1UpdateEndpointParams } from '../../EndpointResourceV1UpdateEndpoint';
 import { EndpointResourceV1UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV1UpdateEventTypesLinkedToEndpoint';
-import { AxiosError } from 'axios';
 
 // note the 1.0, which is different from, for example, RBAC v1
 const BASE_PATH = 'http://localhost:3001/api/integrations/v1.0/';
@@ -40,12 +39,7 @@ describe('Integrations API (v1)', () => {
     const deleteEndpointParams: EndpointResourceV1DeleteEndpointParams = {
       id: placeHolder,
     };
-    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams).catch((error: AxiosError) => {
-      expect(error.message).toContain('404');
-    });
-    if (!deleteEndpointResp) {
-      return;
-    }
+    const deleteEndpointResp = await client.endpointResourceV1DeleteEndpoint(deleteEndpointParams);
     expect(deleteEndpointResp.status).toEqual(204);
   });
 
@@ -59,12 +53,7 @@ describe('Integrations API (v1)', () => {
 
   test('disable endpoint', async () => {
     const disableEndpointParams: EndpointResourceV1DisableEndpointParams = { id: placeHolder };
-    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams).catch((error: AxiosError) => {
-      expect(error).toContain('404');
-    });
-    if (!disableResp) {
-      return;
-    }
+    const disableResp = await client.endpointResourceV1DisableEndpoint(disableEndpointParams);
     expect(disableResp.status).toEqual(204);
   });
 
