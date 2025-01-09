@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-2.0.2...@redhat-cloud-services/compliance-client-3.0.0) (2025-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update compliance to use new builder
+
+### Features
+
+* Update compliance to use new builder ([adabfab](https://github.com/RedHatInsights/javascript-clients/commit/adabfab4a817aa5fc061961f606dc091b3cb9379))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/compliance-client-2.0.1...@redhat-cloud-services/compliance-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
