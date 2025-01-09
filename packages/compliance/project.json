@@ -13,11 +13,12 @@
       }
     },
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:old-builder",
+      "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "outputPath": "packages/compliance/dist",
         "main": "packages/compliance/index.ts",
-        "tsConfig": "packages/compliance/tsconfig.cjs.json"
+        "esmTsConfig": "packages/compliance/tsconfig.esm.json",
+        "cjsTsConfig": "packages/compliance/tsconfig.cjs.json"
       }
     },
     "publish": {
@@ -56,8 +57,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "distFolderPath": "dist/compliance"
+        "access": "public"
       }
     }
   },
