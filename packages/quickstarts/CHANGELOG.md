@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-3.0.0...@redhat-cloud-services/quickstarts-client-4.0.0) (2025-01-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update quickstarts to use new builder
+
+### Features
+
+* Update quickstarts to use new builder ([6d21f83](https://github.com/RedHatInsights/javascript-clients/commit/6d21f834e7e422ebf7e5dc9bad421a0802fa5200))
+
 ## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-2.0.2...@redhat-cloud-services/quickstarts-client-3.0.0) (2025-01-09)
 
 
