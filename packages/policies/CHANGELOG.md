@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/policies-client-2.0.2...@redhat-cloud-services/policies-client-3.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update policies to use new builder
+
+### Features
+
+* Update policies to use new builder ([868a73d](https://github.com/RedHatInsights/javascript-clients/commit/868a73df70d472ce0d41563c218c26206397f4c9))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/policies-client-2.0.1...@redhat-cloud-services/policies-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
