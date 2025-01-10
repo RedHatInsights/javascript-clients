@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/patch-client-2.0.2...@redhat-cloud-services/patch-client-3.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update patch to use new builder
+
+### Features
+
+* Update patch to use new builder ([d8800d5](https://github.com/RedHatInsights/javascript-clients/commit/d8800d5e88d09bfc2d7c92a71cd94759f3859c79))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/patch-client-2.0.1...@redhat-cloud-services/patch-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
