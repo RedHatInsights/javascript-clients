@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-3.0.2...@redhat-cloud-services/config-manager-client-4.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update config-manager to use new builder
+
+### Features
+
+* Update config-manager to use new builder ([0e9b7d4](https://github.com/RedHatInsights/javascript-clients/commit/0e9b7d45fe8ae203ac5faa70798f97c5e54ed966))
+
 ## [3.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/config-manager-client-3.0.1...@redhat-cloud-services/config-manager-client-3.0.2) (2024-12-09)
 
 ### Dependency Updates
