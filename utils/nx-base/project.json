@@ -17,7 +17,8 @@
       "options": {
         "outputPath": "packages/CLIENTNAME/dist",
         "main": "packages/CLIENTNAME/index.ts",
-        "tsConfig": "packages/CLIENTNAME/tsconfig.cjs.json"
+        "esmTsConfig": "packages/CLIENTNAME/tsconfig.esm.json",
+        "cjsTsConfig": "packages/CLIENTNAME/tsconfig.cjs.json"
       }
     },
     "publish": {
@@ -56,8 +57,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "distFolderPath": "dist/CLIENTNAME"
+        "access": "public"
       }
     }
   },
