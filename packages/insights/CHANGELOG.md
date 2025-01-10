@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-2.1.1...@redhat-cloud-services/insights-client-3.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update insights-client to use new builder
+
+### Features
+
+* Update insights-client to use new builder ([fa21ad6](https://github.com/RedHatInsights/javascript-clients/commit/fa21ad6d2b485ff127392f67f363d8adc586bbd2))
+
 ## [2.1.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-2.1.0...@redhat-cloud-services/insights-client-2.1.1) (2024-12-09)
 
 ### Dependency Updates
