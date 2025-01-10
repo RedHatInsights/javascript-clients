@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-3.1.1...@redhat-cloud-services/notifications-client-4.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update notifications to use new builder
+
+### Features
+
+* Update notifications to use new builder ([af93ec4](https://github.com/RedHatInsights/javascript-clients/commit/af93ec4163f545ba7d96665d16b862ffec3b849f))
+
 ## [3.1.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-3.1.0...@redhat-cloud-services/notifications-client-3.1.1) (2024-12-09)
 
 ### Dependency Updates
