@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-3.0.2...@redhat-cloud-services/entitlements-client-4.0.0) (2025-01-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update entitlements to use new builder
+
+### Features
+
+* Update entitlements to use new builder ([569a0db](https://github.com/RedHatInsights/javascript-clients/commit/569a0db2937dc7a4824b157aeeab6df9ca85a8c0))
+
 ## [3.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/entitlements-client-3.0.1...@redhat-cloud-services/entitlements-client-3.0.2) (2024-12-09)
 
 ### Dependency Updates
