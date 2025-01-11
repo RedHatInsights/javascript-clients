@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-3.0.5...@redhat-cloud-services/rbac-client-4.0.0) (2025-01-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update rbac-client to use new builder
+
+### Features
+
+* Update rbac-client to use new builder ([16c9317](https://github.com/RedHatInsights/javascript-clients/commit/16c931723722883d5461b9d819947850ccec32a3))
+
 ## [3.0.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-3.0.4...@redhat-cloud-services/rbac-client-3.0.5) (2025-01-06)
 
 ## [3.0.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-3.0.3...@redhat-cloud-services/rbac-client-3.0.4) (2024-12-12)
