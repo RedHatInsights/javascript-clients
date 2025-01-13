@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/topological-inventory-client-2.0.2...@redhat-cloud-services/topological-inventory-client-3.0.0) (2025-01-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update topological-inventory-client to use new builder
+
+### Features
+
+* Update topological-inventory-client to use new builder ([b358233](https://github.com/RedHatInsights/javascript-clients/commit/b3582334f94c08b3297ae7f669afe477da2d7491))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/topological-inventory-client-2.0.1...@redhat-cloud-services/topological-inventory-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
