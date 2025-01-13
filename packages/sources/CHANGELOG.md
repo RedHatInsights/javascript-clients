@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/sources-client-2.0.2...@redhat-cloud-services/sources-client-3.0.0) (2025-01-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update sources-client to use new builder
+
+### Features
+
+* Update sources-client to use new builder ([6e5ffad](https://github.com/RedHatInsights/javascript-clients/commit/6e5ffadb4aa0144785c53a940d245fbf47c4ec2c))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/sources-client-2.0.1...@redhat-cloud-services/sources-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
