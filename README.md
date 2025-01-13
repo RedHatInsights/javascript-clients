@@ -94,4 +94,6 @@ To run integration tests, use a command like the following:
 `npm run test:integration`
 
 Generally, the pattern is for a client to have a `tests/integration` folder with test files having names matching `*.test.ts`. Within each client's folder (e.g. `packages/<client>`) there should be a dedicated `tsconfig.integration.spec.json` with an `include` glob pattern that points to the integration tests. Similarly, there should also be a dedicated `jest.integration.config.ts` that points to `tsconfig.integration.spec.json` in the `transform` value. Also, each client's `project.json` should have an `integration` target defined/added when the integration tests are created.
- 
+
+
+Demo change. 
