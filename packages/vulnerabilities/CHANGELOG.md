@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/vulnerabilities-client-1.5.5...@redhat-cloud-services/vulnerabilities-client-2.0.0) (2025-01-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update vulnerabilities-client to use new builder
+
+### Features
+
+* Update vulnerabilities-client to use new builder ([80ef91b](https://github.com/RedHatInsights/javascript-clients/commit/80ef91b578b0b2ef783cf877e4e6a5b4e0ce472a))
+
 ## [1.5.5](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/vulnerabilities-client-1.5.4...@redhat-cloud-services/vulnerabilities-client-1.5.5) (2024-11-06)
 
 ## [1.5.4](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/vulnerabilities-client-1.5.3...@redhat-cloud-services/vulnerabilities-client-1.5.4) (2024-10-21)
