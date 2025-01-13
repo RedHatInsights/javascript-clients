@@ -13,11 +13,12 @@
       }
     },
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:old-builder",
+      "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "outputPath": "packages/topological-inventory/dist",
         "main": "packages/topological-inventory/index.ts",
-        "tsConfig": "packages/topological-inventory/tsconfig.cjs.json"
+        "esmTsConfig": "packages/topological-inventory/tsconfig.esm.json",
+        "cjsTsConfig": "packages/topological-inventory/tsconfig.cjs.json"
       }
     },
     "publish": {
@@ -56,8 +57,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "distFolderPath": "dist/topological-inventory"
+        "access": "public"
       }
     }
   },
