@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/remediations-client-2.0.2...@redhat-cloud-services/remediations-client-3.0.0) (2025-01-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update remediations-client to use new builder
+
+### Features
+
+* Update remediations-client to use new builder ([b137441](https://github.com/RedHatInsights/javascript-clients/commit/b1374418b5442a8687f7250625890424ab93fc29))
+
 ## [2.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/remediations-client-2.0.1...@redhat-cloud-services/remediations-client-2.0.2) (2024-12-09)
 
 ### Dependency Updates
