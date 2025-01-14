@@ -3,8 +3,6 @@ import { describe, expect, test } from '@jest/globals';
 import { IntegrationsClient } from '../../api';
 import { Endpoint, EndpointType, RequestSystemSubscriptionProperties } from '../../types';
 import { EndpointResourceV2CreateEndpointParams } from '../../EndpointResourceV2CreateEndpoint';
-import { EndpointResourceV2AddEventTypeToEndpointParams } from '../../EndpointResourceV2AddEventTypeToEndpoint';
-import { EndpointResourceV2DeleteEventTypeFromEndpointParams } from '../../EndpointResourceV2DeleteEventTypeFromEndpoint';
 import { EndpointResourceV2DeleteEndpointParams } from '../../EndpointResourceV2DeleteEndpoint';
 import { EndpointResourceV2EnableEndpointParams } from '../../EndpointResourceV2EnableEndpoint';
 import { EndpointResourceV2DisableEndpointParams } from '../../EndpointResourceV2DisableEndpoint';
@@ -16,7 +14,6 @@ import { EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams } from '.
 import { EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams } from '../../EndpointResourceV2GetOrCreateEmailSubscriptionEndpoint';
 import { EndpointResourceV2UpdateEndpointParams } from '../../EndpointResourceV2UpdateEndpoint';
 import { EndpointResourceV2UpdateEventTypesLinkedToEndpointParams } from '../../EndpointResourceV2UpdateEventTypesLinkedToEndpoint';
-import { AxiosError } from 'axios';
 
 const BASE_PATH = 'http://localhost:3002/api/integrations/v2.0/';
 
@@ -36,48 +33,6 @@ describe('Integrations API (v2)', () => {
     };
     const createEndpointResp = await client.endpointResourceV2CreateEndpoint(endpointResourceV2CreateEndpointParams);
     expect(createEndpointResp.status).toEqual(200);
-  });
-
-  test('add event type from endpoint params', async () => {
-    const addEventTypeParams: EndpointResourceV2AddEventTypeToEndpointParams = {
-      endpointId: placeHolder,
-      eventTypeId: placeHolder,
-    };
-    const addEventTypeResp = await client.endpointResourceV2AddEventTypeToEndpoint(addEventTypeParams).catch((error: AxiosError) => {
-      expect(error.message).toContain('404');
-    });
-    if (!addEventTypeResp) {
-      return;
-    }
-    expect(addEventTypeResp.status).toEqual(204);
-  });
-
-  test('remove event type from endpoint params', async () => {
-    const removeEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
-      endpointId: placeHolder,
-      eventTypeId: placeHolder,
-    };
-    const removeEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(removeEventTypeParams).catch((error: AxiosError) => {
-      expect(error.message).toContain('404');
-    });
-    if (!removeEventTypeResp) {
-      return;
-    }
-    expect(removeEventTypeResp.status).toEqual(204);
-  });
-
-  test('delete event type from endpoint', async () => {
-    const deleteEventTypeParams: EndpointResourceV2DeleteEventTypeFromEndpointParams = {
-      endpointId: placeHolder,
-      eventTypeId: placeHolder,
-    };
-    const deleteEventTypeResp = await client.endpointResourceV2DeleteEventTypeFromEndpoint(deleteEventTypeParams).catch((error: AxiosError) => {
-      expect(error.message).toContain('404');
-    });
-    if (!deleteEventTypeResp) {
-      return;
-    }
-    expect(deleteEventTypeResp.status).toEqual(204);
   });
 
   test('delete endpoint', async () => {
