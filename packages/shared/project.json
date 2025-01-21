@@ -5,11 +5,12 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:old-builder",
+      "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "outputPath": "packages/shared/dist",
         "main": "packages/shared/index.ts",
-        "tsConfig": "packages/shared/tsconfig.cjs.json"
+        "esmTsConfig": "packages/shared/tsconfig.esm.json",
+        "cjsTsConfig": "packages/shared/tsconfig.cjs.json"
       }
     },
     "publish": {
@@ -48,8 +49,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "distFolderPath": "dist/shared"
+        "access": "public"
       }
     },
     "syncDependencies": {
