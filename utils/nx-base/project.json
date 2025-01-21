@@ -13,7 +13,7 @@
       }
     },
     "build": {
-      "executor": "@redhat-cloud-services/build-utils:old-builder",
+      "executor": "@redhat-cloud-services/build-utils:builder",
       "options": {
         "outputPath": "packages/CLIENTNAME/dist",
         "main": "packages/CLIENTNAME/index.ts",
