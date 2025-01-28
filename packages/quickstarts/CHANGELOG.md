@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-4.0.0...@redhat-cloud-services/quickstarts-client-4.0.1) (2025-01-28)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `2.0.0`
 ## [4.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/quickstarts-client-3.0.0...@redhat-cloud-services/quickstarts-client-4.0.0) (2025-01-09)
 
 
