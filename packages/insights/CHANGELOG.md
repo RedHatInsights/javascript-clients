@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-3.0.0...@redhat-cloud-services/insights-client-3.0.1) (2025-01-28)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `2.0.0`
 ## [3.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/insights-client-2.1.1...@redhat-cloud-services/insights-client-3.0.0) (2025-01-10)
 
 
