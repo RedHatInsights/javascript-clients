@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.7...@redhat-cloud-services/javascript-clients-shared-2.0.0) (2025-01-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update javascript-clients-shared to use new esm builder
+
+### Features
+
+* Update javascript-clients-shared to use new esm builder ([4598609](https://github.com/RedHatInsights/javascript-clients/commit/4598609942ae362a844bb721dfe08df3f9961211))
+
 ## [1.2.7](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.6...@redhat-cloud-services/javascript-clients-shared-1.2.7) (2024-12-09)
 
 ## [1.2.6](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.5...@redhat-cloud-services/javascript-clients-shared-1.2.6) (2024-11-18)
