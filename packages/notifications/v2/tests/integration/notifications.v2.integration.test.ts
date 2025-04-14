@@ -18,11 +18,8 @@ import { NotificationResourceV2GetLinkedBehaviorGroupsParams } from '../../Notif
 import { NotificationResourceV2DeleteBehaviorGroupFromEventTypeParams } from '../../NotificationResourceV2DeleteBehaviorGroupFromEventType';
 import { NotificationResourceV2UpdateEventTypeEndpointsParams } from '../../NotificationResourceV2UpdateEventTypeEndpoints';
 import { NotificationResourceV2AppendBehaviorGroupToEventTypeParams } from '../../NotificationResourceV2AppendBehaviorGroupToEventType';
-import { EventResourceV2GetEventsParams } from '../../EventResourceV2GetEvents';
 import { NotificationResourceV2GetApplicationsFacetsParams } from '../../NotificationResourceV2GetApplicationsFacets';
 import { NotificationResourceV2GetBundleFacetsParams } from '../../NotificationResourceV2GetBundleFacets';
-import { OrgConfigResourceV2SaveDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV2SaveDailyDigestTimePreference';
-import { OrgConfigResourceV2GetDailyDigestTimePreferenceParams } from '../../OrgConfigResourceV2GetDailyDigestTimePreference';
 import { CreateBehaviorGroupRequest } from '../../types';
 import { UpdateBehaviorGroupRequest } from '../../types';
 
@@ -34,7 +31,7 @@ const client = NotificationsClient(BASE_PATH);
 describe('Notifications v2.0', () => {
   test('Create a behavior group', async () => {
     const createBehaviorGroupRequest: CreateBehaviorGroupRequest = {
-      bundle_id: '09258c36-2297-4c8c-b3cd-2667d34e5780',
+      bundle_id: '7464f4e8-e84a-405b-877b-ad62ad395595',
       bundle_name: '',
       display_name: '',
       endpoint_ids: [],
@@ -47,14 +44,14 @@ describe('Notifications v2.0', () => {
   });
 
   test('List the behavior groups affected by the removal of an endpoint', async () => {
-    const params: NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams = { endpointId: 'ab3bab59-adb6-4582-ac96-b8e358c3a82f' };
+    const params: NotificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpointParams = { endpointId: 'b1d0a37f-6dd5-4cb0-9d9b-47a63711a25d' };
     const resp = await client.notificationResourceV2GetBehaviorGroupsAffectedByRemovalOfEndpoint(params);
     expect(resp.status).toBe(200);
   });
 
   test('Update the list of behavior group actions', async () => {
     const params: NotificationResourceV2UpdateBehaviorGroupActionsParams = {
-      behaviorGroupId: '41381b48-4f7f-4be9-a8a3-ef94a6f07bc7',
+      behaviorGroupId: 'c89a38e8-f13f-4599-b1e8-284c318404ff',
       requestBody: [],
     };
     const resp = await client.notificationResourceV2UpdateBehaviorGroupActions(params);
@@ -68,19 +65,19 @@ describe('Notifications v2.0', () => {
       event_type_ids: new Set<string>(),
       display_name_not_null_and_blank: true,
     };
-    const params: NotificationResourceV2UpdateBehaviorGroupParams = { id: 'c50a3c34-257b-4e6b-8410-1217edb4ad4c', updateBehaviorGroupRequest };
+    const params: NotificationResourceV2UpdateBehaviorGroupParams = { id: 'd6b117bc-725e-41b3-8292-ea48ab4291d5', updateBehaviorGroupRequest };
     const resp = await client.notificationResourceV2UpdateBehaviorGroup(params);
     expect(resp.status).toBe(200);
   });
 
   test('Delete a behavior group', async () => {
-    const params: NotificationResourceV2DeleteBehaviorGroupParams = { id: '0408caa3-2a2a-4d7f-96fc-91614be0149a' };
+    const params: NotificationResourceV2DeleteBehaviorGroupParams = { id: 'b123896b-88dc-4ec7-a3c1-d89fdc1236e9' };
     const resp = await client.notificationResourceV2DeleteBehaviorGroup(params);
     expect(resp.status).toBe(200);
   });
 
   test('List behavior groups in a bundle', async () => {
-    const params: NotificationResourceV2FindBehaviorGroupsByBundleIdParams = { bundleId: 'e86268e6-60d2-4f0c-8c3c-c0de73753c1f' };
+    const params: NotificationResourceV2FindBehaviorGroupsByBundleIdParams = { bundleId: '48d9484b-d192-4ca2-8f49-d4bcd2503086' };
     const resp = await client.notificationResourceV2FindBehaviorGroupsByBundleId(params);
     expect(resp.status).toBe(200);
   });
@@ -115,7 +112,7 @@ describe('Notifications v2.0', () => {
 
   test('List the event types affected by the removal of a behavior group', async () => {
     const params: NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams = {
-      behaviorGroupId: '6f768840-5ce4-4fe1-942c-6dd1e35308bb',
+      behaviorGroupId: '16087f1c-94b7-4d23-a19a-a447595b44a8',
     };
     const resp = await client.notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroup(params);
     expect(resp.status).toBe(200);
@@ -123,7 +120,7 @@ describe('Notifications v2.0', () => {
 
   test('Update the list of behavior groups for an event type', async () => {
     const params: NotificationResourceV2UpdateEventTypeBehaviorsParams = {
-      eventTypeId: '7f30b8e1-0baa-40f0-b156-1c7f5b1a366a',
+      eventTypeId: '51512695-4d25-43aa-9631-2bfffc5fd92f',
       requestBody: new Set<string>(),
     };
     const resp = await client.notificationResourceV2UpdateEventTypeBehaviors(params);
@@ -131,15 +128,15 @@ describe('Notifications v2.0', () => {
   });
 
   test('Retrieve the behavior groups linked to an event type.', async () => {
-    const params: NotificationResourceV2GetLinkedBehaviorGroupsParams = { eventTypeId: '0dae92b3-1068-4bd6-b9bd-b475eefeb2ca' };
+    const params: NotificationResourceV2GetLinkedBehaviorGroupsParams = { eventTypeId: 'ad1a7cd7-0b42-4210-8093-b6c58a23d4b0' };
     const resp = await client.notificationResourceV2GetLinkedBehaviorGroups(params);
     expect(resp.status).toBe(200);
   });
 
   test('Delete a behavior group from an event type', async () => {
     const params: NotificationResourceV2DeleteBehaviorGroupFromEventTypeParams = {
-      behaviorGroupId: '4f373825-f6b8-459e-b18a-061466b05629',
-      eventTypeId: '2e63e32f-dbaa-4e9f-bfc4-124857a4cb07',
+      behaviorGroupId: '98d38280-0589-4072-aaa5-0977e95fb31a',
+      eventTypeId: '38a3f0d4-f5cf-4411-8702-9b89ee26d2b2',
     };
     const resp = await client.notificationResourceV2DeleteBehaviorGroupFromEventType(params);
     expect(resp.status).toBe(204);
@@ -147,7 +144,7 @@ describe('Notifications v2.0', () => {
 
   test('Update the list of endpoints for an event type', async () => {
     const params: NotificationResourceV2UpdateEventTypeEndpointsParams = {
-      eventTypeId: '4d18a86d-6cad-44e3-995b-e68defae19fb',
+      eventTypeId: 'e6756939-0f1e-40bf-aff4-f1f8888aef91',
       requestBody: new Set<string>(),
     };
     const resp = await client.notificationResourceV2UpdateEventTypeEndpoints(params);
@@ -156,17 +153,11 @@ describe('Notifications v2.0', () => {
 
   test('Add a behavior group to the given event type.', async () => {
     const params: NotificationResourceV2AppendBehaviorGroupToEventTypeParams = {
-      behaviorGroupUuid: 'd2c07e31-e893-404c-98ca-4164c58628d7',
-      eventTypeUuid: '3b2816e6-1d0e-4aeb-b88a-c5d56a3dc42d',
+      behaviorGroupUuid: '878a5716-f4c9-4430-aa36-ce54613b425c',
+      eventTypeUuid: '15785bd9-102f-4bc8-b71c-d048215ba995',
     };
     const resp = await client.notificationResourceV2AppendBehaviorGroupToEventType(params);
     expect(resp.status).toBe(204);
-  });
-
-  test('Retrieve the event log entries', async () => {
-    const params: EventResourceV2GetEventsParams = {};
-    const resp = await client.eventResourceV2GetEvents(params);
-    expect(resp.status).toBe(200);
   });
 
   test('List configured applications', async () => {
@@ -178,18 +169,6 @@ describe('Notifications v2.0', () => {
   test('List configured bundles', async () => {
     const params: NotificationResourceV2GetBundleFacetsParams = {};
     const resp = await client.notificationResourceV2GetBundleFacets(params);
-    expect(resp.status).toBe(200);
-  });
-
-  test('Set the daily digest time', async () => {
-    const params: OrgConfigResourceV2SaveDailyDigestTimePreferenceParams = { body: '13:45:30.123456789' };
-    const resp = await client.orgConfigResourceV2SaveDailyDigestTimePreference(params);
-    expect(resp.status).toBe(204);
-  });
-
-  test('Retrieve the daily digest time', async () => {
-    const params: OrgConfigResourceV2GetDailyDigestTimePreferenceParams = {};
-    const resp = await client.orgConfigResourceV2GetDailyDigestTimePreference(params);
     expect(resp.status).toBe(200);
   });
 });
