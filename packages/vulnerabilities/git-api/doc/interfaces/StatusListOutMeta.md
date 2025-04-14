@@ -26,4 +26,4 @@ StatusListOutMeta
 
 #### Defined in
 
-[api.ts:2334](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2334)
+[api.ts:2438](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2438)

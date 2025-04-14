@@ -13,6 +13,7 @@ MetaVulnerabilitiesOut
 - [advisory\_available](MetaVulnerabilitiesOut.md#advisory_available)
 - [affecting](MetaVulnerabilitiesOut.md#affecting)
 - [business\_risk\_id](MetaVulnerabilitiesOut.md#business_risk_id)
+- [cache\_used](MetaVulnerabilitiesOut.md#cache_used)
 - [cves\_without\_errata](MetaVulnerabilitiesOut.md#cves_without_errata)
 - [cvss\_from](MetaVulnerabilitiesOut.md#cvss_from)
 - [cvss\_to](MetaVulnerabilitiesOut.md#cvss_to)
@@ -81,6 +82,22 @@ MetaVulnerabilitiesOut
 #### Defined in
 
 [api.ts:2000](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2000)
+
+___
+
+### cache\_used
+
+• **cache\_used**: `boolean`
+
+Flag if cached data was used to produce the response.
+
+**`Memberof`**
+
+MetaVulnerabilitiesOut
+
+#### Defined in
+
+[api.ts:2072](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2072)
 
 ___
 
