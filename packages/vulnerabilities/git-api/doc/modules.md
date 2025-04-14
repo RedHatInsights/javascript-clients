@@ -63,6 +63,8 @@
 - [MetaVulnerabilitiesOutAllOf](interfaces/MetaVulnerabilitiesOutAllOf.md)
 - [MetaVulnerabilitiesOutAllOfSystemCountPerType](interfaces/MetaVulnerabilitiesOutAllOfSystemCountPerType.md)
 - [NotificationsOut](interfaces/NotificationsOut.md)
+- [OSExposureReport](interfaces/OSExposureReport.md)
+- [OSExposureReportData](interfaces/OSExposureReportData.md)
 - [OptOutIn](interfaces/OptOutIn.md)
 - [PlaybookTemplate](interfaces/PlaybookTemplate.md)
 - [PlaybookTemplateData](interfaces/PlaybookTemplateData.md)
@@ -157,6 +159,7 @@ DefaultApi - axios parameter creator
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
 | `getExecutiveReport` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
+| `getOSExposure` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
 | `getStatusList` | (`options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `Promise`\<`RequestArgs`\> | - |
@@ -173,7 +176,7 @@ DefaultApi - axios parameter creator
 
 #### Defined in
 
-[api.ts:2741](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2741)
+[api.ts:2845](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2845)
 
 ___
 
@@ -212,6 +215,7 @@ DefaultApi - factory interface
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`\<[`DashbarOut`](interfaces/DashbarOut.md)\> |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `AxiosPromise`\<[`Dashboard`](interfaces/Dashboard.md)\> |
 | `getExecutiveReport` | (`options?`: `any`) => `AxiosPromise`\<[`ExecutiveReport`](interfaces/ExecutiveReport.md)\> |
+| `getOSExposure` | (`options?`: `any`) => `AxiosPromise`\<[`OSExposureReport`](interfaces/OSExposureReport.md)\> |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `AxiosPromise`\<[`PlaybookTemplate`](interfaces/PlaybookTemplate.md)\> |
 | `getStatusList` | (`options?`: `any`) => `AxiosPromise`\<[`StatusListOut`](interfaces/StatusListOut.md)\> |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `AxiosPromise`\<[`SystemDetailsOut`](interfaces/SystemDetailsOut.md)\> |
@@ -228,7 +232,7 @@ DefaultApi - factory interface
 
 #### Defined in
 
-[api.ts:5562](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5562)
+[api.ts:5723](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5723)
 
 ___
 
@@ -265,6 +269,7 @@ DefaultApi - functional programming interface
 | `getDashbar` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`DashbarOut`](interfaces/DashbarOut.md)\>\> |
 | `getDashboard` | (`tags?`: `string`[], `sapSids?`: `string`[], `sapSystem?`: `boolean`, `ansible?`: `boolean`, `mssql?`: `boolean`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`Dashboard`](interfaces/Dashboard.md)\>\> |
 | `getExecutiveReport` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`ExecutiveReport`](interfaces/ExecutiveReport.md)\>\> |
+| `getOSExposure` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`OSExposureReport`](interfaces/OSExposureReport.md)\>\> |
 | `getPlaybookTemplate` | (`ruleId`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`PlaybookTemplate`](interfaces/PlaybookTemplate.md)\>\> |
 | `getStatusList` | (`options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`StatusListOut`](interfaces/StatusListOut.md)\>\> |
 | `getSystemDetails` | (`inventoryId`: `string`, `options?`: `any`) => `Promise`\<(`axios?`: `AxiosInstance`, `basePath?`: `string`) => `AxiosPromise`\<[`SystemDetailsOut`](interfaces/SystemDetailsOut.md)\>\> |
@@ -281,4 +286,4 @@ DefaultApi - functional programming interface
 
 #### Defined in
 
-[api.ts:4993](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L4993)
+[api.ts:5141](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L5141)
