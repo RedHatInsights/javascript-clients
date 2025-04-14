@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/vulnerabilities-client-2.0.0...@redhat-cloud-services/vulnerabilities-client-2.1.0) (2025-04-14)
+
+
+### Features
+
+* update vulnerabilities-client to accept new OS report endpoint ([6412738](https://github.com/RedHatInsights/javascript-clients/commit/64127380b8f9f3cce7c8614ab2d20e70dda90e35))
+
 ## [2.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/vulnerabilities-client-1.5.5...@redhat-cloud-services/vulnerabilities-client-2.0.0) (2025-01-13)
 
 
