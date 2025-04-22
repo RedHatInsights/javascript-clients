@@ -39,6 +39,7 @@ describe('RBAC API (v1)', () => {
 
     const getPrincipalAccessParams: GetPrincipalAccessParams = {
       application: 'jeff',
+      limit: 567
     };
     const getPrincipalAccessResp = await client.getPrincipalAccess(getPrincipalAccessParams);
     expect(getPrincipalAccessResp.status).toEqual(200);
