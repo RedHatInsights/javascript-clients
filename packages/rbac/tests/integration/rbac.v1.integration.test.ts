@@ -39,14 +39,13 @@ describe('RBAC API (v1)', () => {
 
     const getPrincipalAccessParams: GetPrincipalAccessParams = {
       application: 'jeff',
-      limit: 567
+      limit: 567,
     };
     const getPrincipalAccessResp = await client.getPrincipalAccess(getPrincipalAccessParams);
     expect(getPrincipalAccessResp.status).toEqual(200);
 
-    // application value is required per RBAC spec
     const getPrincipalAccessRespError = await client.getPrincipalAccess(null);
-    expect(getPrincipallAccessRespError.status).toEqual(400);
+    expect(getPrincipalAccessRespError.status).toEqual(400);
   });
 
   test('groups crud operations', async () => {
