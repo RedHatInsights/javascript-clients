@@ -27,7 +27,7 @@ export type {{operationIdCamelCase}}Params = {
   * @deprecated
 {{/deprecated}}
   */
-  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}}, 
+  {{paramName}}{{^required}}?{{/required}}: {{#isEnum}}{{{datatypeWithEnum}}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{#isNullable}} | null{{/isNullable}}{{/isEnum}},
   {{/allParams}}
   options?: AxiosRequestConfig
 }
@@ -56,7 +56,7 @@ export type {{operationIdCamelCase}}{{enumName}} = typeof {{operationIdCamelCase
 export type {{operationIdCamelCase}}ReturnType = AxiosPromise<{{{returnType}}}{{^returnType}}void{{/returnType}}>;
 
 const is{{operationIdCamelCase}}ObjectParams = (params: [{{operationIdCamelCase}}Params] | unknown[]): params is [{{operationIdCamelCase}}Params] => {
-  return params.length === 1{{#allParams}} && {{^required}}true{{/required}}{{#required}}Object.prototype.hasOwnProperty.call(params, '{{paramName}}'){{/required}}{{/allParams}}
+  return params.length === 1{{#allParams}} && {{^required}}true{{/required}}{{#required}}Object.prototype.hasOwnProperty.call(params[0], '{{paramName}}'){{/required}}{{/allParams}}
 }
 /**
 * {{&notes}}
@@ -144,8 +144,8 @@ export const {{nickname}}ParamCreator = async (...config: ([{{operationIdCamelCa
         {{/isString}}
         {{^isString}}
         {{! isString is falsy also for $ref that defines a string or enum type}}
-        localVarHeaderParameter['{{baseName}}'] = typeof {{paramName}} === 'string' 
-            ? {{paramName}} 
+        localVarHeaderParameter['{{baseName}}'] = typeof {{paramName}} === 'string'
+            ? {{paramName}}
             : JSON.stringify({{paramName}});
         {{/isString}}
     }
