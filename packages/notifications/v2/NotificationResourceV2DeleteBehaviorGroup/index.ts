@@ -14,17 +14,17 @@ import type {  } from '../types';
 export type NotificationResourceV2DeleteBehaviorGroupParams = {
   /**
   * The UUID of the behavior group to delete
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2DeleteBehaviorGroupApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2DeleteBehaviorGroupReturnType = AxiosPromise<boolean>;
+export type NotificationResourceV2DeleteBehaviorGroupReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2DeleteBehaviorGroupObjectParams = (params: [NotificationResourceV2DeleteBehaviorGroupParams] | unknown[]): params is [NotificationResourceV2DeleteBehaviorGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Deletes a behavior group and all of its configured actions. Use this endpoint when you no longer need a behavior group.
@@ -33,7 +33,7 @@ const isNotificationResourceV2DeleteBehaviorGroupObjectParams = (params: [Notifi
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2DeleteBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2DeleteBehaviorGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2DeleteBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2DeleteBehaviorGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2DeleteBehaviorGroupObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2DeleteBehaviorGroupParams;
     const { id, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/{id}`

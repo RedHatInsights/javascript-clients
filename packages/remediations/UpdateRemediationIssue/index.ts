@@ -36,7 +36,7 @@ export type UpdateRemediationIssueParams = {
 export type UpdateRemediationIssueReturnType = AxiosPromise<void>;
 
 const isUpdateRemediationIssueObjectParams = (params: [UpdateRemediationIssueParams] | unknown[]): params is [UpdateRemediationIssueParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issue') && Object.prototype.hasOwnProperty.call(params, 'remediationIssueIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue') && Object.prototype.hasOwnProperty.call(params[0], 'remediationIssueIn')
 }
 /**
 * Updates the given Remediation Issue, RBAC permission {remediations:remediation:write}

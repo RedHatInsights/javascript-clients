@@ -85,11 +85,17 @@ export type ApiHostDeleteHostsByFilterParams = {
   */
   tags?: Array<string>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiHostDeleteHostsByFilterApi
   */
   filter?: { [key: string]: SystemProfileNestedObjectValue; },
+  /**
+  * Filter by subscription_manager_id
+  * @type { string }
+  * @memberof ApiHostDeleteHostsByFilterApi
+  */
+  subscriptionManagerId?: string,
   options?: AxiosRequestConfig
 }
 /**
@@ -139,7 +145,7 @@ export type ApiHostDeleteHostsByFilterStalenessEnum = typeof ApiHostDeleteHostsB
 export type ApiHostDeleteHostsByFilterReturnType = AxiosPromise<void>;
 
 const isApiHostDeleteHostsByFilterObjectParams = (params: [ApiHostDeleteHostsByFilterParams] | unknown[]): params is [ApiHostDeleteHostsByFilterParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Delete the entire list of hosts filtered by the given parameters. <br /><br /> Required permissions: inventory:hosts:write
@@ -148,9 +154,9 @@ const isApiHostDeleteHostsByFilterObjectParams = (params: [ApiHostDeleteHostsByF
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostDeleteHostsByFilterParamCreator = async (...config: ([ApiHostDeleteHostsByFilterParams] | [string, string, string, string, string, ApiHostDeleteHostsByFilterProviderTypeEnum, string, string, Array<string>, Array<ApiHostDeleteHostsByFilterRegisteredWithEnum>, Array<ApiHostDeleteHostsByFilterStalenessEnum>, Array<string>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isApiHostDeleteHostsByFilterObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'staleness', 'tags', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteHostsByFilterParams;
-    const { displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, options = {} } = params;
+export const apiHostDeleteHostsByFilterParamCreator = async (...config: ([ApiHostDeleteHostsByFilterParams] | [string, string, string, string, string, ApiHostDeleteHostsByFilterProviderTypeEnum, string, string, Array<string>, Array<ApiHostDeleteHostsByFilterRegisteredWithEnum>, Array<ApiHostDeleteHostsByFilterStalenessEnum>, Array<string>, { [key: string]: SystemProfileNestedObjectValue; }, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isApiHostDeleteHostsByFilterObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'staleness', 'tags', 'filter', 'subscriptionManagerId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostDeleteHostsByFilterParams;
+    const { displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, staleness, tags, filter, subscriptionManagerId, options = {} } = params;
     const localVarPath = `/hosts`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -212,6 +218,10 @@ export const apiHostDeleteHostsByFilterParamCreator = async (...config: ([ApiHos
 
     if (filter !== undefined) {
         localVarQueryParameter['filter'] = filter;
+    }
+
+    if (subscriptionManagerId !== undefined) {
+        localVarQueryParameter['subscription_manager_id'] = subscriptionManagerId;
     }
 
 

@@ -24,7 +24,7 @@ export type AckcountRetrieveParams = {
 export type AckcountRetrieveReturnType = AxiosPromise<AckCount>;
 
 const isAckcountRetrieveObjectParams = (params: [AckcountRetrieveParams] | unknown[]): params is [AckcountRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
 }
 /**
 * Get the ack count for the given rule_id  Returns the rule_id and its ack count

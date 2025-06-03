@@ -24,7 +24,7 @@ export type CreateEndpointParams = {
 export type CreateEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isCreateEndpointObjectParams = (params: [CreateEndpointParams] | unknown[]): params is [CreateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpoint')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
 }
 /**
 * Creates a Endpoint object

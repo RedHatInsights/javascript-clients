@@ -24,7 +24,7 @@ export type ShowContainerNodeParams = {
 export type ShowContainerNodeReturnType = AxiosPromise<ContainerNode>;
 
 const isShowContainerNodeObjectParams = (params: [ShowContainerNodeParams] | unknown[]): params is [ShowContainerNodeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ContainerNode object

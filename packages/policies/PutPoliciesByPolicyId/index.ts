@@ -36,7 +36,7 @@ export type PutPoliciesByPolicyIdParams = {
 export type PutPoliciesByPolicyIdReturnType = AxiosPromise<Policy>;
 
 const isPutPoliciesByPolicyIdObjectParams = (params: [PutPoliciesByPolicyIdParams] | unknown[]): params is [PutPoliciesByPolicyIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true && true
 }
 /**
 *

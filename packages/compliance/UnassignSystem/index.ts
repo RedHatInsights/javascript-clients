@@ -36,10 +36,10 @@ export type UnassignSystemParams = {
 export type UnassignSystemReturnType = AxiosPromise<System200Response>;
 
 const isUnassignSystemObjectParams = (params: [UnassignSystemParams] | unknown[]): params is [UnassignSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'systemId') && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true
 }
 /**
-* Unassigns a System from a Policy
+* Remove a specific system from a specific policy.
 * @summary Unassign a System from a Policy
 * @param {UnassignSystemParams} config with all available params.
 * @param {*} [options] Override http request option.

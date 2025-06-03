@@ -24,7 +24,7 @@ export type ShowSourceTypeParams = {
 export type ShowSourceTypeReturnType = AxiosPromise<SourceType>;
 
 const isShowSourceTypeObjectParams = (params: [ShowSourceTypeParams] | unknown[]): params is [ShowSourceTypeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a SourceType object

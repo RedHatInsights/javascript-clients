@@ -92,6 +92,8 @@ export type RuleSystemsDetailListParams = {
   */
 export const RuleSystemsDetailListRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -131,7 +133,9 @@ export const RuleSystemsDetailListRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type RuleSystemsDetailListRhelVersionEnum = typeof RuleSystemsDetailListRhelVersionEnum[keyof typeof RuleSystemsDetailListRhelVersionEnum];
 /**
@@ -165,7 +169,7 @@ export type RuleSystemsDetailListSortEnum = typeof RuleSystemsDetailListSortEnum
 export type RuleSystemsDetailListReturnType = AxiosPromise<PaginatedSystemsDetailList>;
 
 const isRuleSystemsDetailListObjectParams = (params: [RuleSystemsDetailListParams] | unknown[]): params is [RuleSystemsDetailListParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * List systems affected by this rule with additional information about each system  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed in a paginated format.  Additional information includes hit counts and upload/stale timestamps.

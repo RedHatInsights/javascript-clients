@@ -4,6 +4,7 @@ import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
+    addTemplateSubscribedSystem,AddTemplateSubscribedSystemReturnType,
     baselineDelete,BaselineDeleteReturnType,
     createBaseline,CreateBaselineReturnType,
     deletesystem,DeletesystemReturnType,
@@ -52,7 +53,8 @@ import {
   } from './index';
 
 const endpointList = {
-      baselineDelete,
+      addTemplateSubscribedSystem,
+    baselineDelete,
     createBaseline,
     deletesystem,
     detailAdvisory,
@@ -101,7 +103,8 @@ const endpointList = {
 };
 
 type endpointReturnTypes = {
-      baselineDelete: BaselineDeleteReturnType,
+      addTemplateSubscribedSystem: AddTemplateSubscribedSystemReturnType,
+    baselineDelete: BaselineDeleteReturnType,
     createBaseline: CreateBaselineReturnType,
     deletesystem: DeletesystemReturnType,
     detailAdvisory: DetailAdvisoryReturnType,

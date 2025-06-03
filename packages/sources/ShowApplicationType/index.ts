@@ -24,7 +24,7 @@ export type ShowApplicationTypeParams = {
 export type ShowApplicationTypeReturnType = AxiosPromise<ApplicationType>;
 
 const isShowApplicationTypeObjectParams = (params: [ShowApplicationTypeParams] | unknown[]): params is [ShowApplicationTypeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ApplicationType object

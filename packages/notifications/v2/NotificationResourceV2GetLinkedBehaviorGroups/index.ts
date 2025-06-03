@@ -14,56 +14,56 @@ import type { PageBehaviorGroup } from '../types';
 export type NotificationResourceV2GetLinkedBehaviorGroupsParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetLinkedBehaviorGroupsApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   options?: AxiosRequestConfig
 }
 
 export type NotificationResourceV2GetLinkedBehaviorGroupsReturnType = AxiosPromise<PageBehaviorGroup>;
 
 const isNotificationResourceV2GetLinkedBehaviorGroupsObjectParams = (params: [NotificationResourceV2GetLinkedBehaviorGroupsParams] | unknown[]): params is [NotificationResourceV2GetLinkedBehaviorGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'eventTypeId') && true && true && true && true && true
 }
 /**
-* Get Linked Behavior Groups
+*
 * @summary Retrieve the behavior groups linked to an event type.
 * @param {NotificationResourceV2GetLinkedBehaviorGroupsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetLinkedBehaviorGroupsParamCreator = async (...config: ([NotificationResourceV2GetLinkedBehaviorGroupsParams] | [string, number, number, number, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetLinkedBehaviorGroupsParamCreator = async (...config: ([NotificationResourceV2GetLinkedBehaviorGroupsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetLinkedBehaviorGroupsObjectParams(config) ? config[0] : ['eventTypeId', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetLinkedBehaviorGroupsParams;
     const { eventTypeId, limit, offset, pageNumber, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups`

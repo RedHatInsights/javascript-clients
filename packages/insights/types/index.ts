@@ -493,19 +493,6 @@ export interface MultiHostUnAck {
     'systems': Array<string>;
 }
 /**
- * A specific org id for a Red Hat customer.
- * @export
- * @interface OrgId
- */
-export interface OrgId {
-    /**
-     *
-     * @type {string}
-     * @memberof OrgId
-     */
-    'org_id': string;
-}
-/**
  *
  * @export
  * @interface PaginatedAckList
@@ -648,31 +635,6 @@ export interface PaginatedJustificationCountList {
      * @memberof PaginatedJustificationCountList
      */
     'data'?: Array<JustificationCount>;
-}
-/**
- *
- * @export
- * @interface PaginatedOrgIdList
- */
-export interface PaginatedOrgIdList {
-    /**
-     *
-     * @type {PaginatedAckListMeta}
-     * @memberof PaginatedOrgIdList
-     */
-    'meta'?: PaginatedAckListMeta;
-    /**
-     *
-     * @type {PaginatedAckListLinks}
-     * @memberof PaginatedOrgIdList
-     */
-    'links'?: PaginatedAckListLinks;
-    /**
-     *
-     * @type {Array<OrgId>}
-     * @memberof PaginatedOrgIdList
-     */
-    'data'?: Array<OrgId>;
 }
 /**
  *
@@ -1002,43 +964,6 @@ export interface Pathway {
     'low_risk_count': number;
 }
 /**
- * Serializer specifically for handling CREATE and UPDATE views for Pathways
- * @export
- * @interface PathwayInput
- */
-export interface PathwayInput {
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'component': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'resolution_risk': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PathwayInput
-     */
-    'publish_date': string;
-}
-/**
  * User preferences - separated from account settings.
  * @export
  * @interface PreferencesInput
@@ -1050,49 +975,6 @@ export interface PreferencesInput {
      * @memberof PreferencesInput
      */
     'is_subscribed': boolean;
-}
-/**
- * The actual rule fields with the report data for a particular system rendered into them, in a flat structure that\'s easier to use.
- * @export
- * @interface RenderedReport
- */
-export interface RenderedReport {
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'summary': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'generic': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'reason': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'more_info'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RenderedReport
-     */
-    'resolution': string;
 }
 /**
  *
@@ -2266,19 +2148,6 @@ export interface TopicEdit {
      * @memberof TopicEdit
      */
     'enabled'?: boolean;
-}
-/**
- * An approximation of the number of unique hits per day.
- * @export
- * @interface Usage
- */
-export interface Usage {
-    /**
-     *
-     * @type {number}
-     * @memberof Usage
-     */
-    'unique_hits': number;
 }
 /**
  *

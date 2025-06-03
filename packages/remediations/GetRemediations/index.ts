@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { GetRemediations200Response, RequestError } from '../types';
+import type { GetRemediations200Response, GetRemediationsFilterParameter, RequestError } from '../types';
 
 
 export type GetRemediationsParams = {
   /**
-  * Sort order
+  * Sort order. Use `-` before a field name for descending order (e.g., `?-system_count`).
   * @type { GetRemediationsSortEnum }
   * @memberof GetRemediationsApi
   */
   sort?: GetRemediationsSortEnum,
   /**
-  * Remediation name filter. If specified only remediations whose name matches the given string will be returned.
-  * @type { string }
+  * For filtering by various criteria.  There are two styles of filter: legacy and new.  Legacy filtering allows for filtering by remediation plan name and is of the form: `?filter=plan name`. If specified, only remediations whose name matches the given string will be returned.  New style filters allow for filtering by various criteria and are of the form: `?filter[<field>]=<value>`.  Available filter fields: - name: plan names matching string, `?filter[name]=my plan name` - created_after: created on or after date-time, `filter[created_after]=2025-03-31T08:19:36.641Z` - updated_after: modified on or after date-time, `filter[updated_after]=2025-03-31T08:19:36.641Z` - last_run_after: executed on or after date-time or \'never\', `filter[last_run_after]=never`  - status: status matching one of [running, success, failure], `filter[status]=failure`
+  * @type { GetRemediationsFilterParameter }
   * @memberof GetRemediationsApi
   */
-  filter?: string,
+  filter?: GetRemediationsFilterParameter,
   /**
   * Maximum number of results to return
   * @type { number }
@@ -63,12 +63,18 @@ export type GetRemediationsParams = {
 export const GetRemediationsSortEnum = {
     UpdatedAt: 'updated_at',
     NotUpdatedAt: '-updated_at',
+    CreatedAt: 'created_at',
+    NotCreatedAt: '-created_at',
+    LastRunAt: 'last_run_at',
+    NotLastRunAt: '-last_run_at',
     Name: 'name',
     NotName: '-name',
     SystemCount: 'system_count',
     NotSystemCount: '-system_count',
     IssueCount: 'issue_count',
-    NotIssueCount: '-issue_count'
+    NotIssueCount: '-issue_count',
+    Status: 'status',
+    NotStatus: '-status'
 } as const;
 export type GetRemediationsSortEnum = typeof GetRemediationsSortEnum[keyof typeof GetRemediationsSortEnum];
 /**
@@ -93,7 +99,7 @@ const isGetRemediationsObjectParams = (params: [GetRemediationsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRemediationsParamCreator = async (...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, string, number, number, string, boolean, Array<GetRemediationsFieldsDataEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRemediationsParamCreator = async (...config: ([GetRemediationsParams] | [GetRemediationsSortEnum, GetRemediationsFilterParameter, number, number, string, boolean, Array<GetRemediationsFieldsDataEnum>, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetRemediationsObjectParams(config) ? config[0] : ['sort', 'filter', 'limit', 'offset', 'system', 'hideArchived', 'fieldsData', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRemediationsParams;
     const { sort, filter, limit, offset, system, hideArchived, fieldsData, options = {} } = params;
     const localVarPath = `/remediations`;

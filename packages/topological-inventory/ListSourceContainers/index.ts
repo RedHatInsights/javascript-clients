@@ -48,7 +48,7 @@ export type ListSourceContainersParams = {
 export type ListSourceContainersReturnType = AxiosPromise<ContainersCollection>;
 
 const isListSourceContainersObjectParams = (params: [ListSourceContainersParams] | unknown[]): params is [ListSourceContainersParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Container objects

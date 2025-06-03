@@ -42,7 +42,7 @@ export type ApiSystemProfileValidateSchemaParams = {
 export type ApiSystemProfileValidateSchemaReturnType = AxiosPromise<void>;
 
 const isApiSystemProfileValidateSchemaObjectParams = (params: [ApiSystemProfileValidateSchemaParams] | unknown[]): params is [ApiSystemProfileValidateSchemaParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'repoBranch') && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'repoBranch') && true && true && true
 }
 /**
 * Validates System Profile data from recent Kafka messages against a given spec, and compares it with the current one. Only HBI Admins can access this endpoint.

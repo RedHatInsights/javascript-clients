@@ -83,7 +83,7 @@ export type PathwayRetrieveCategoryEnum = typeof PathwayRetrieveCategoryEnum[key
 export type PathwayRetrieveReturnType = AxiosPromise<Pathway>;
 
 const isPathwayRetrieveObjectParams = (params: [PathwayRetrieveParams] | unknown[]): params is [PathwayRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'slug') && true && true && true && true && true && true && true && true
 }
 /**
 * This returns an individual pathway based on slug. Will display the same information as is provided in the list view.

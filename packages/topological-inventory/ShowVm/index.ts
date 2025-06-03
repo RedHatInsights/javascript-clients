@@ -24,7 +24,7 @@ export type ShowVmParams = {
 export type ShowVmReturnType = AxiosPromise<Vm>;
 
 const isShowVmObjectParams = (params: [ShowVmParams] | unknown[]): params is [ShowVmParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Vm object

@@ -154,7 +154,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6207](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6207)
+[api.ts:6135](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6135)
 
 ___
 
@@ -215,7 +215,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6247)
+[api.ts:6175](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6175)
 
 ___
 
@@ -275,7 +275,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6286](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6286)
+[api.ts:6214](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6214)
 
 ___
 
@@ -307,7 +307,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6297](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6297)
+[api.ts:6225](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6225)
 
 ___
 
@@ -339,7 +339,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6308](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6308)
+[api.ts:6236](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6236)
 
 ___
 
@@ -371,7 +371,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6319](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6319)
+[api.ts:6247](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6247)
 
 ___
 
@@ -405,7 +405,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6332](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6332)
+[api.ts:6260](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6260)
 
 ___
 
@@ -461,7 +461,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6367](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6367)
+[api.ts:6295](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6295)
 
 ___
 
@@ -517,7 +517,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6402](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6402)
+[api.ts:6330](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6330)
 
 ___
 
@@ -578,7 +578,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6442](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6442)
+[api.ts:6370](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6370)
 
 ___
 
@@ -635,7 +635,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6478](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6478)
+[api.ts:6406](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6406)
 
 ___
 
@@ -674,7 +674,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6496](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6496)
+[api.ts:6424](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6424)
 
 ___
 
@@ -711,7 +711,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6512](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6512)
+[api.ts:6440](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6440)
 
 ___
 
@@ -748,7 +748,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6528](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6528)
+[api.ts:6456](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6456)
 
 ___
 
@@ -780,13 +780,13 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6539](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6539)
+[api.ts:6467](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6467)
 
 ___
 
 ### getOSExposure
 
-▸ **getOSExposure**(`options?`): `Promise`\<`AxiosResponse`\<[`OSExposureReport`](../interfaces/OSExposureReport.md), `any`\>\>
+▸ **getOSExposure**(`dataFormat?`, `options?`): `Promise`\<`AxiosResponse`\<[`OSExposureReport`](../interfaces/OSExposureReport.md), `any`\>\>
 
 List RHEL versions and number of CVEs exposing each of these versions. Each RHEL version represents system with base and core group packages installed.
 
@@ -794,6 +794,7 @@ List RHEL versions and number of CVEs exposing each of these versions. Each RHEL
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `dataFormat?` | `string` | Format of the output data, either JSON (default) or CSV. |
 | `options?` | `any` | Override http request option. |
 
 #### Returns
@@ -812,7 +813,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6550](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6550)
+[api.ts:6479](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6479)
 
 ___
 
@@ -845,7 +846,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6562](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6562)
+[api.ts:6491](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6491)
 
 ___
 
@@ -877,7 +878,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6573)
+[api.ts:6502](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6502)
 
 ___
 
@@ -910,7 +911,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6585](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6585)
+[api.ts:6514](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6514)
 
 ___
 
@@ -960,7 +961,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6614](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6614)
+[api.ts:6543](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6543)
 
 ___
 
@@ -1011,7 +1012,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6644](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6644)
+[api.ts:6573](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6573)
 
 ___
 
@@ -1043,7 +1044,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6655](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6655)
+[api.ts:6584](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6584)
 
 ___
 
@@ -1076,7 +1077,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6667](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6667)
+[api.ts:6596](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6596)
 
 ___
 
@@ -1109,7 +1110,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6679](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6679)
+[api.ts:6608](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6608)
 
 ___
 
@@ -1142,7 +1143,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6691](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6691)
+[api.ts:6620](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6620)
 
 ___
 
@@ -1175,7 +1176,7 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6703](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6703)
+[api.ts:6632](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6632)
 
 ___
 
@@ -1208,4 +1209,4 @@ DefaultApi
 
 #### Defined in
 
-[api.ts:6715](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6715)
+[api.ts:6644](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L6644)

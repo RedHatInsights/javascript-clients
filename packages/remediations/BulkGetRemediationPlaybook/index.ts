@@ -42,7 +42,7 @@ export type BulkGetRemediationPlaybookParams = {
 export type BulkGetRemediationPlaybookReturnType = AxiosPromise<string>;
 
 const isBulkGetRemediationPlaybookObjectParams = (params: [BulkGetRemediationPlaybookParams] | unknown[]): params is [BulkGetRemediationPlaybookParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'requestBody') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'requestBody') && true && true
 }
 /**
 * Fetch Ansible Playbook - for use with large list of target systems, RBAC permission {remediations:remediation:read}

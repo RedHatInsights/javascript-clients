@@ -30,7 +30,7 @@ export type UpdateEndpointParams = {
 export type UpdateEndpointReturnType = AxiosPromise<void>;
 
 const isUpdateEndpointObjectParams = (params: [UpdateEndpointParams] | unknown[]): params is [UpdateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
 }
 /**
 * Updates a Endpoint object

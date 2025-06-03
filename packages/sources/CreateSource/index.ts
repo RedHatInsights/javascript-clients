@@ -24,7 +24,7 @@ export type CreateSourceParams = {
 export type CreateSourceReturnType = AxiosPromise<Source>;
 
 const isCreateSourceObjectParams = (params: [CreateSourceParams] | unknown[]): params is [CreateSourceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'source')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'source')
 }
 /**
 * Creates a Source object

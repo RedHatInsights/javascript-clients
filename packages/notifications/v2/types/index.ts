@@ -6,40 +6,40 @@
 export interface Application {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'updated'?: string;
+    'updated'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'id'?: string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Application
      */
-    'bundle_id': string;
+    'bundle_id': any;
 }
 /**
  *
@@ -49,34 +49,34 @@ export interface Application {
 export interface BehaviorGroup {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'updated'?: string;
+    'updated'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'id'?: string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'bundle_id': string;
+    'bundle_id': any;
     /**
      *
      * @type {Bundle}
@@ -85,22 +85,22 @@ export interface BehaviorGroup {
     'bundle'?: Bundle;
     /**
      *
-     * @type {Array<BehaviorGroupAction>}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'actions'?: Array<BehaviorGroupAction>;
+    'actions'?: any;
     /**
      *
-     * @type {Set<EventTypeBehavior>}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'behaviors'?: Set<EventTypeBehavior>;
+    'behaviors'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof BehaviorGroup
      */
-    'default_behavior'?: boolean;
+    'default_behavior'?: any;
 }
 /**
  *
@@ -110,10 +110,10 @@ export interface BehaviorGroup {
 export interface BehaviorGroupAction {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroupAction
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
      * @type {BehaviorGroupActionId}
@@ -135,16 +135,16 @@ export interface BehaviorGroupAction {
 export interface BehaviorGroupActionId {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroupActionId
      */
-    'behaviorGroupId': string;
+    'behaviorGroupId': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof BehaviorGroupActionId
      */
-    'endpointId': string;
+    'endpointId': any;
 }
 /**
  *
@@ -154,34 +154,34 @@ export interface BehaviorGroupActionId {
 export interface Bundle {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'updated'?: string;
+    'updated'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'id'?: string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Bundle
      */
-    'display_name': string;
+    'display_name': any;
 }
 /**
  *
@@ -191,40 +191,40 @@ export interface Bundle {
 export interface CreateBehaviorGroupRequest {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'bundle_id'?: string;
+    'bundle_id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'bundle_name'?: string;
+    'bundle_name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'endpoint_ids'?: Array<string>;
+    'endpoint_ids'?: any;
     /**
      *
-     * @type {Set<string>}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'event_type_ids'?: Set<string>;
+    'event_type_ids'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof CreateBehaviorGroupRequest
      */
-    'bundle_uuid_or_bundle_name_valid'?: boolean;
+    'bundle_uuid_or_bundle_name_valid'?: any;
 }
 /**
  *
@@ -234,40 +234,40 @@ export interface CreateBehaviorGroupRequest {
 export interface CreateBehaviorGroupResponse {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'id': string;
+    'id': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'bundle_id': string;
+    'bundle_id': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'endpoints': Array<string>;
+    'endpoints': any;
     /**
      *
-     * @type {Set<string>}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'event_types': Set<string>;
+    'event_types': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CreateBehaviorGroupResponse
      */
-    'created': string;
+    'created': any;
 }
 /**
  *
@@ -277,40 +277,40 @@ export interface CreateBehaviorGroupResponse {
 export interface Endpoint {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'updated'?: string;
+    'updated'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'id'?: string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'description': string;
+    'description': any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof Endpoint
      */
-    'enabled'?: boolean;
+    'enabled'?: any;
     /**
      *
      * @type {EndpointStatus}
@@ -319,16 +319,16 @@ export interface Endpoint {
     'status'?: EndpointStatus;
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof Endpoint
      */
-    'server_errors'?: number;
+    'server_errors'?: any;
     /**
      *
-     * @type {object}
+     * @type {any}
      * @memberof Endpoint
      */
-    'properties'?: object;
+    'properties'?: any;
     /**
      *
      * @type {EndpointType}
@@ -337,167 +337,27 @@ export interface Endpoint {
     'type'?: EndpointType;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Endpoint
      */
-    'sub_type'?: string;
+    'sub_type'?: any;
 }
 
 
 /**
  *
  * @export
- * @enum {string}
+ * @interface EndpointStatus
  */
-
-export const EndpointStatus = {
-    Ready: 'READY',
-    Unknown: 'UNKNOWN',
-    New: 'NEW',
-    Provisioning: 'PROVISIONING',
-    Deleting: 'DELETING',
-    Failed: 'FAILED'
-} as const;
-
-export type EndpointStatus = typeof EndpointStatus[keyof typeof EndpointStatus];
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const EndpointType = {
-    Ansible: 'ansible',
-    Camel: 'camel',
-    Drawer: 'drawer',
-    EmailSubscription: 'email_subscription',
-    Webhook: 'webhook',
-    Pagerduty: 'pagerduty'
-} as const;
-
-export type EndpointType = typeof EndpointType[keyof typeof EndpointType];
-
-
-/**
- *
- * @export
- * @interface EventLogEntry
- */
-export interface EventLogEntry {
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'bundle': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'application': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'event_type': string;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntry
-     */
-    'payload'?: string;
-    /**
-     *
-     * @type {Array<EventLogEntryAction>}
-     * @memberof EventLogEntry
-     */
-    'actions': Array<EventLogEntryAction>;
+export interface EndpointStatus {
 }
 /**
  *
  * @export
- * @interface EventLogEntryAction
+ * @interface EndpointType
  */
-export interface EventLogEntryAction {
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntryAction
-     */
-    'id': string;
-    /**
-     *
-     * @type {EndpointType}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_type': EndpointType;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_sub_type'?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof EventLogEntryAction
-     * @deprecated
-     */
-    'invocation_result': boolean;
-    /**
-     *
-     * @type {EventLogEntryActionStatus}
-     * @memberof EventLogEntryAction
-     */
-    'status': EventLogEntryActionStatus;
-    /**
-     *
-     * @type {string}
-     * @memberof EventLogEntryAction
-     */
-    'endpoint_id'?: string;
-    /**
-     *
-     * @type {{ [key: string]: any; }}
-     * @memberof EventLogEntryAction
-     */
-    'details'?: { [key: string]: any; };
+export interface EndpointType {
 }
-
-
-/**
- *
- * @export
- * @enum {string}
- */
-
-export const EventLogEntryActionStatus = {
-    Sent: 'SENT',
-    Success: 'SUCCESS',
-    Processing: 'PROCESSING',
-    Failed: 'FAILED',
-    Unknown: 'UNKNOWN'
-} as const;
-
-export type EventLogEntryActionStatus = typeof EventLogEntryActionStatus[keyof typeof EventLogEntryActionStatus];
-
-
 /**
  *
  * @export
@@ -506,40 +366,40 @@ export type EventLogEntryActionStatus = typeof EventLogEntryActionStatus[keyof t
 export interface EventType {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'id'?: string;
+    'id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'display_name': string;
+    'display_name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'description'?: string;
+    'description'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'fully_qualified_name'?: string;
+    'fully_qualified_name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventType
      */
-    'application_id': string;
+    'application_id': any;
     /**
      *
      * @type {Application}
@@ -548,28 +408,34 @@ export interface EventType {
     'application'?: Application;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof EventType
      */
-    'visible'?: boolean;
+    'visible'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof EventType
      */
-    'subscribed_by_default'?: boolean;
+    'subscribed_by_default'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof EventType
      */
-    'subscription_locked'?: boolean;
+    'subscription_locked'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof EventType
      */
-    'not_subscription_locked_or_subscribed_by_default'?: boolean;
+    'restrict_to_recipients_integrations'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof EventType
+     */
+    'not_subscription_locked_or_subscribed_by_default'?: any;
 }
 /**
  *
@@ -579,10 +445,10 @@ export interface EventType {
 export interface EventTypeBehavior {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventTypeBehavior
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
      * @type {EventTypeBehaviorId}
@@ -604,16 +470,16 @@ export interface EventTypeBehavior {
 export interface EventTypeBehaviorId {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventTypeBehaviorId
      */
-    'eventTypeId': string;
+    'eventTypeId': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof EventTypeBehaviorId
      */
-    'behaviorGroupId': string;
+    'behaviorGroupId': any;
 }
 /**
  *
@@ -623,28 +489,28 @@ export interface EventTypeBehaviorId {
 export interface Facet {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Facet
      */
-    'id': string;
+    'id': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Facet
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Facet
      */
-    'displayName': string;
+    'displayName': any;
     /**
      *
-     * @type {Array<Facet>}
+     * @type {any}
      * @memberof Facet
      */
-    'children'?: Array<Facet>;
+    'children'?: any;
 }
 /**
  *
@@ -654,10 +520,10 @@ export interface Facet {
 export interface Meta {
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof Meta
      */
-    'count': number;
+    'count': any;
 }
 /**
  *
@@ -667,45 +533,20 @@ export interface Meta {
 export interface PageBehaviorGroup {
     /**
      *
-     * @type {Array<BehaviorGroup>}
+     * @type {any}
      * @memberof PageBehaviorGroup
      */
-    'data': Array<BehaviorGroup>;
+    'data': any;
     /**
      *
-     * @type {{ [key: string]: string; }}
+     * @type {{ [key: string]: any; }}
      * @memberof PageBehaviorGroup
      */
-    'links': { [key: string]: string; };
+    'links': { [key: string]: any; };
     /**
      *
      * @type {Meta}
      * @memberof PageBehaviorGroup
-     */
-    'meta': Meta;
-}
-/**
- *
- * @export
- * @interface PageEventLogEntry
- */
-export interface PageEventLogEntry {
-    /**
-     *
-     * @type {Array<EventLogEntry>}
-     * @memberof PageEventLogEntry
-     */
-    'data': Array<EventLogEntry>;
-    /**
-     *
-     * @type {{ [key: string]: string; }}
-     * @memberof PageEventLogEntry
-     */
-    'links': { [key: string]: string; };
-    /**
-     *
-     * @type {Meta}
-     * @memberof PageEventLogEntry
      */
     'meta': Meta;
 }
@@ -717,16 +558,16 @@ export interface PageEventLogEntry {
 export interface PageEventType {
     /**
      *
-     * @type {Array<EventType>}
+     * @type {any}
      * @memberof PageEventType
      */
-    'data': Array<EventType>;
+    'data': any;
     /**
      *
-     * @type {{ [key: string]: string; }}
+     * @type {{ [key: string]: any; }}
      * @memberof PageEventType
      */
-    'links': { [key: string]: string; };
+    'links': { [key: string]: any; };
     /**
      *
      * @type {Meta}
@@ -742,26 +583,26 @@ export interface PageEventType {
 export interface UpdateBehaviorGroupRequest {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof UpdateBehaviorGroupRequest
      */
-    'display_name'?: string;
+    'display_name'?: any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof UpdateBehaviorGroupRequest
      */
-    'endpoint_ids'?: Array<string>;
+    'endpoint_ids'?: any;
     /**
      *
-     * @type {Set<string>}
+     * @type {any}
      * @memberof UpdateBehaviorGroupRequest
      */
-    'event_type_ids'?: Set<string>;
+    'event_type_ids'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof UpdateBehaviorGroupRequest
      */
-    'display_name_not_null_and_blank'?: boolean;
+    'display_name_not_null_and_blank'?: any;
 }

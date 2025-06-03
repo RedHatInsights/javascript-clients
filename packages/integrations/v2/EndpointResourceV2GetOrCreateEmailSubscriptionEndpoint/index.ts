@@ -24,7 +24,7 @@ export type EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams = {
 export type EndpointResourceV2GetOrCreateEmailSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isEndpointResourceV2GetOrCreateEmailSubscriptionEndpointObjectParams = (params: [EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV2GetOrCreateEmailSubscriptionEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'requestSystemSubscriptionProperties')
 }
 /**
 * Adds the email subscription endpoint into the system and specifies the role-based access control (RBAC) group that will receive email notifications. Use this endpoint in behavior groups to send emails when an action linked to the behavior group is triggered.

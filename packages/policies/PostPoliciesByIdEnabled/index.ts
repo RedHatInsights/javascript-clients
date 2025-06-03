@@ -30,7 +30,7 @@ export type PostPoliciesByIdEnabledParams = {
 export type PostPoliciesByIdEnabledReturnType = AxiosPromise<void>;
 
 const isPostPoliciesByIdEnabledObjectParams = (params: [PostPoliciesByIdEnabledParams] | unknown[]): params is [PostPoliciesByIdEnabledParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true
 }
 /**
 *

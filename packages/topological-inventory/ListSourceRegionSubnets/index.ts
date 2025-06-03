@@ -48,7 +48,7 @@ export type ListSourceRegionSubnetsParams = {
 export type ListSourceRegionSubnetsReturnType = AxiosPromise<SubnetsCollection>;
 
 const isListSourceRegionSubnetsObjectParams = (params: [ListSourceRegionSubnetsParams] | unknown[]): params is [ListSourceRegionSubnetsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Subnet objects

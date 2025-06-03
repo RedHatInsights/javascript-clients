@@ -30,10 +30,10 @@ export type ReportParams = {
 export type ReportReturnType = AxiosPromise<Report200Response>;
 
 const isReportObjectParams = (params: [ReportParams] | unknown[]): params is [ReportParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'reportId') && true
 }
 /**
-* Returns a Report
+* Retrieve a specific report.
 * @summary Request a Report
 * @param {ReportParams} config with all available params.
 * @param {*} [options] Override http request option.

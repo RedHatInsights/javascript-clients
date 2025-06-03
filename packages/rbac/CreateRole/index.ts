@@ -8,23 +8,23 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RoleIn, RoleWithAccess } from '../types';
+import type { Error403 } from '../types';
 
 
 export type CreateRoleParams = {
   /**
   * Role to create
-  * @type { RoleIn }
+  * @type { any }
   * @memberof CreateRoleApi
   */
-  roleIn: RoleIn,
+  body: any,
   options?: AxiosRequestConfig
 }
 
-export type CreateRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type CreateRoleReturnType = AxiosPromise<any>;
 
 const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): params is [CreateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'roleIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 *
@@ -33,9 +33,9 @@ const isCreateRoleObjectParams = (params: [CreateRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [RoleIn, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isCreateRoleObjectParams(config) ? config[0] : ['roleIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateRoleParams;
-    const { roleIn, options = {} } = params;
+export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isCreateRoleObjectParams(config) ? config[0] : ['body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as CreateRoleParams;
+    const { body, options = {} } = params;
     const localVarPath = `/roles/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -53,7 +53,7 @@ export const createRoleParamCreator = async (...config: ([CreateRoleParams] | [R
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: roleIn,
+        serializeData: body,
         auth:[
         {
         // authentication basic_auth required

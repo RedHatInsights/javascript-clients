@@ -48,7 +48,7 @@ export type ListTagNetworkAdaptersParams = {
 export type ListTagNetworkAdaptersReturnType = AxiosPromise<NetworkAdaptersCollection>;
 
 const isListTagNetworkAdaptersObjectParams = (params: [ListTagNetworkAdaptersParams] | unknown[]): params is [ListTagNetworkAdaptersParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of NetworkAdapter objects

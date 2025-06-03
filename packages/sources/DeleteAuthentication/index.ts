@@ -24,7 +24,7 @@ export type DeleteAuthenticationParams = {
 export type DeleteAuthenticationReturnType = AxiosPromise<void>;
 
 const isDeleteAuthenticationObjectParams = (params: [DeleteAuthenticationParams] | unknown[]): params is [DeleteAuthenticationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Deletes a Authentication object

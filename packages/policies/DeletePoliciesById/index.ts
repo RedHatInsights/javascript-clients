@@ -24,7 +24,7 @@ export type DeletePoliciesByIdParams = {
 export type DeletePoliciesByIdReturnType = AxiosPromise<void>;
 
 const isDeletePoliciesByIdObjectParams = (params: [DeletePoliciesByIdParams] | unknown[]): params is [DeletePoliciesByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 *

@@ -30,7 +30,7 @@ export type UpdateSourceParams = {
 export type UpdateSourceReturnType = AxiosPromise<void>;
 
 const isUpdateSourceObjectParams = (params: [UpdateSourceParams] | unknown[]): params is [UpdateSourceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'source')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'source')
 }
 /**
 * Updates a Source object

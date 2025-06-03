@@ -24,7 +24,7 @@ export type TopicCreateParams = {
 export type TopicCreateReturnType = AxiosPromise<TopicEdit>;
 
 const isTopicCreateObjectParams = (params: [TopicCreateParams] | unknown[]): params is [TopicCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'topicEdit')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'topicEdit')
 }
 /**
 * Create a new rule topic, along with its association to a rule tag

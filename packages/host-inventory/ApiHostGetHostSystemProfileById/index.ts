@@ -37,11 +37,11 @@ export type ApiHostGetHostSystemProfileByIdParams = {
   */
   orderBy?: ApiHostGetHostSystemProfileByIdOrderByEnum,
   /**
-  * Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-  * @type { ApiHostGetHostSystemProfileByIdOrderHowEnum }
+  * Direction of the ordering (case-insensitive); defaults to ASC for display_name, and to DESC for updated and operating_system
+  * @type { string }
   * @memberof ApiHostGetHostSystemProfileByIdApi
   */
-  orderHow?: ApiHostGetHostSystemProfileByIdOrderHowEnum,
+  orderHow?: string,
   /**
   * Filter by branch_id
   * @type { string }
@@ -64,23 +64,15 @@ export const ApiHostGetHostSystemProfileByIdOrderByEnum = {
     DisplayName: 'display_name',
     GroupName: 'group_name',
     Updated: 'updated',
-    OperatingSystem: 'operating_system'
+    OperatingSystem: 'operating_system',
+    LastCheckIn: 'last_check_in'
 } as const;
 export type ApiHostGetHostSystemProfileByIdOrderByEnum = typeof ApiHostGetHostSystemProfileByIdOrderByEnum[keyof typeof ApiHostGetHostSystemProfileByIdOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ApiHostGetHostSystemProfileByIdOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
-} as const;
-export type ApiHostGetHostSystemProfileByIdOrderHowEnum = typeof ApiHostGetHostSystemProfileByIdOrderHowEnum[keyof typeof ApiHostGetHostSystemProfileByIdOrderHowEnum];
 
 export type ApiHostGetHostSystemProfileByIdReturnType = AxiosPromise<SystemProfileByHostOut>;
 
 const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSystemProfileByIdParams] | unknown[]): params is [ApiHostGetHostSystemProfileByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList') && true && true && true && true && true && true
 }
 /**
 * Find one or more hosts by their ID and return the id and system profile <br /><br /> Required permissions: inventory:hosts:read
@@ -89,7 +81,7 @@ const isApiHostGetHostSystemProfileByIdObjectParams = (params: [ApiHostGetHostSy
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostSystemProfileByIdParamCreator = async (...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, ApiHostGetHostSystemProfileByIdOrderHowEnum, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostSystemProfileByIdParamCreator = async (...config: ([ApiHostGetHostSystemProfileByIdParams] | [Array<string>, number, number, ApiHostGetHostSystemProfileByIdOrderByEnum, string, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isApiHostGetHostSystemProfileByIdObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'branchId', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostSystemProfileByIdParams;
     const { hostIdList, perPage, page, orderBy, orderHow, branchId, fields, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/system_profile`

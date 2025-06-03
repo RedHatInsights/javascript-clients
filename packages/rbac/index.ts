@@ -16,6 +16,8 @@ export { default as deleteRole, DeleteRoleReturnType } from './DeleteRole'
 
 export { default as deleteRoleFromGroup, DeleteRoleFromGroupReturnType } from './DeleteRoleFromGroup'
 
+export { default as getAuditlogs, GetAuditlogsReturnType } from './GetAuditlogs'
+
 export { default as getCrossAccountRequest, GetCrossAccountRequestReturnType } from './GetCrossAccountRequest'
 
 export { default as getGroup, GetGroupReturnType } from './GetGroup'

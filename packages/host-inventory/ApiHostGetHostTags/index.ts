@@ -37,11 +37,11 @@ export type ApiHostGetHostTagsParams = {
   */
   orderBy?: ApiHostGetHostTagsOrderByEnum,
   /**
-  * Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-  * @type { ApiHostGetHostTagsOrderHowEnum }
+  * Direction of the ordering (case-insensitive); defaults to ASC for display_name, and to DESC for updated and operating_system
+  * @type { string }
   * @memberof ApiHostGetHostTagsApi
   */
-  orderHow?: ApiHostGetHostTagsOrderHowEnum,
+  orderHow?: string,
   /**
   * Used for searching tags and sap_sids that match the given search string. For searching tags, a tag\'s namespace, key, and/or value is used for matching.
   * @type { string }
@@ -58,23 +58,15 @@ export const ApiHostGetHostTagsOrderByEnum = {
     DisplayName: 'display_name',
     GroupName: 'group_name',
     Updated: 'updated',
-    OperatingSystem: 'operating_system'
+    OperatingSystem: 'operating_system',
+    LastCheckIn: 'last_check_in'
 } as const;
 export type ApiHostGetHostTagsOrderByEnum = typeof ApiHostGetHostTagsOrderByEnum[keyof typeof ApiHostGetHostTagsOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ApiHostGetHostTagsOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
-} as const;
-export type ApiHostGetHostTagsOrderHowEnum = typeof ApiHostGetHostTagsOrderHowEnum[keyof typeof ApiHostGetHostTagsOrderHowEnum];
 
 export type ApiHostGetHostTagsReturnType = AxiosPromise<TagsOut>;
 
 const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | unknown[]): params is [ApiHostGetHostTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList') && true && true && true && true && true
 }
 /**
 * Get the tags on a host <br /><br /> Required permissions: inventory:hosts:read
@@ -83,7 +75,7 @@ const isApiHostGetHostTagsObjectParams = (params: [ApiHostGetHostTagsParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, ApiHostGetHostTagsOrderHowEnum, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagsParamCreator = async (...config: ([ApiHostGetHostTagsParams] | [Array<string>, number, number, ApiHostGetHostTagsOrderByEnum, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isApiHostGetHostTagsObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'search', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagsParams;
     const { hostIdList, perPage, page, orderBy, orderHow, search, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags`

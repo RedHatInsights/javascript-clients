@@ -42,10 +42,10 @@ export type UpdateTailoringParams = {
 export type UpdateTailoringReturnType = AxiosPromise<CreateTailoring201Response>;
 
 const isUpdateTailoringObjectParams = (params: [UpdateTailoringParams] | unknown[]): params is [UpdateTailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && true && true
 }
 /**
-* Updates a Tailoring with the provided value_overrides
+* Edit or update an existing tailoring.
 * @summary Update a Tailoring
 * @param {UpdateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.

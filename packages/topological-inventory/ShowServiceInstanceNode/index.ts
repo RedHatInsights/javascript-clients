@@ -24,7 +24,7 @@ export type ShowServiceInstanceNodeParams = {
 export type ShowServiceInstanceNodeReturnType = AxiosPromise<ServiceInstanceNode>;
 
 const isShowServiceInstanceNodeObjectParams = (params: [ShowServiceInstanceNodeParams] | unknown[]): params is [ShowServiceInstanceNodeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ServiceInstanceNode object

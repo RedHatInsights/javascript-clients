@@ -24,7 +24,7 @@ export type GetResolutionsForIssueParams = {
 export type GetResolutionsForIssueReturnType = AxiosPromise<Resolutions>;
 
 const isGetResolutionsForIssueObjectParams = (params: [GetResolutionsForIssueParams] | unknown[]): params is [GetResolutionsForIssueParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'issue')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'issue')
 }
 /**
 * Provides information about resolutions available for the given issue

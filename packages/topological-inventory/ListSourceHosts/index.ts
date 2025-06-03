@@ -48,7 +48,7 @@ export type ListSourceHostsParams = {
 export type ListSourceHostsReturnType = AxiosPromise<HostsCollection>;
 
 const isListSourceHostsObjectParams = (params: [ListSourceHostsParams] | unknown[]): params is [ListSourceHostsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Host objects

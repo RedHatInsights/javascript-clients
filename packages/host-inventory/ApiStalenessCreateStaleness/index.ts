@@ -24,7 +24,7 @@ export type ApiStalenessCreateStalenessParams = {
 export type ApiStalenessCreateStalenessReturnType = AxiosPromise<StalenessOutput>;
 
 const isApiStalenessCreateStalenessObjectParams = (params: [ApiStalenessCreateStalenessParams] | unknown[]): params is [ApiStalenessCreateStalenessParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'stalenessIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'stalenessIn')
 }
 /**
 * Create account staleness record. Required permissions: staleness:staleness:write

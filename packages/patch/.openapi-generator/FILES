@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+AddTemplateSubscribedSystem/index.ts
 BaselineDelete/index.ts
 CreateBaseline/index.ts
 Deletesystem/index.ts

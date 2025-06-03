@@ -48,7 +48,7 @@ export type ListSourceSubscriptionsParams = {
 export type ListSourceSubscriptionsReturnType = AxiosPromise<SubscriptionsCollection>;
 
 const isListSourceSubscriptionsObjectParams = (params: [ListSourceSubscriptionsParams] | unknown[]): params is [ListSourceSubscriptionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Subscription objects

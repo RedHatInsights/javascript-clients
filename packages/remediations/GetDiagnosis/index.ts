@@ -13,7 +13,7 @@ import type { Diagnosis, RequestError } from '../types';
 
 export type GetDiagnosisParams = {
   /**
-  * System identifier
+  * System Insights identifier (uuid)  `insights_id` as returned from `/api/inventory/v1/hosts/{system_id}`
   * @type { string }
   * @memberof GetDiagnosisApi
   */
@@ -36,7 +36,7 @@ export type GetDiagnosisParams = {
 export type GetDiagnosisReturnType = AxiosPromise<Diagnosis>;
 
 const isGetDiagnosisObjectParams = (params: [GetDiagnosisParams] | unknown[]): params is [GetDiagnosisParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'system') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'system') && true && true
 }
 /**
 * Provides host-specific diagnosis information

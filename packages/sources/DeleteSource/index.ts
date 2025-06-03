@@ -24,7 +24,7 @@ export type DeleteSourceParams = {
 export type DeleteSourceReturnType = AxiosPromise<void>;
 
 const isDeleteSourceObjectParams = (params: [DeleteSourceParams] | unknown[]): params is [DeleteSourceParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Deletes a Source object

@@ -8,40 +8,40 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RolePaginationDynamic } from '../types';
+import type { Error403 } from '../types';
 
 
 export type ListRolesParams = {
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Parameter for filtering resource by name using string contains search.
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  name?: string,
+  name?: any,
   /**
   * Parameter for filtering resource by system flag.
-  * @type { boolean }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  system?: boolean,
+  system?: any,
   /**
   * Parameter for filtering resource by display_name using string contains search.
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  displayName?: string,
+  displayName?: any,
   /**
   * Parameter for specifying the matching criteria for an object\'s name or display_name.
   * @type { ListRolesNameMatchEnum }
@@ -62,34 +62,34 @@ export type ListRolesParams = {
   orderBy?: ListRolesOrderByEnum,
   /**
   * Parameter for add list of fields to display for roles.
-  * @type { Array<ListRolesAddFieldsEnum> }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  addFields?: Array<ListRolesAddFieldsEnum>,
+  addFields?: any,
   /**
   * Unique username of the principal to obtain roles for (only available for admins, and if supplied, takes precedence over the identity header).
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  username?: string,
+  username?: any,
   /**
   * The application name(s) to filter roles by, from permissions or external tenant name. This is an exact match. You may also use a comma-separated list to match on multiple applications.
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  application?: string,
+  application?: any,
   /**
   * The permission(s) to filter roles by. This is an exact match. You may also use a comma-separated list to match on multiple permissions.
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  permission?: string,
+  permission?: any,
   /**
   * Parameter for filtering roles by external tenant name using string search.
-  * @type { string }
+  * @type { any }
   * @memberof ListRolesApi
   */
-  externalTenant?: string,
+  externalTenant?: any,
   options?: AxiosRequestConfig
 }
 /**
@@ -121,18 +121,8 @@ export const ListRolesOrderByEnum = {
     PolicyCount: 'policyCount'
 } as const;
 export type ListRolesOrderByEnum = typeof ListRolesOrderByEnum[keyof typeof ListRolesOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ListRolesAddFieldsEnum = {
-    GroupsIn: 'groups_in',
-    GroupsInCount: 'groups_in_count',
-    Access: 'access'
-} as const;
-export type ListRolesAddFieldsEnum = typeof ListRolesAddFieldsEnum[keyof typeof ListRolesAddFieldsEnum];
 
-export type ListRolesReturnType = AxiosPromise<RolePaginationDynamic>;
+export type ListRolesReturnType = AxiosPromise<any>;
 
 const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params is [ListRolesParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true
@@ -144,7 +134,7 @@ const isListRolesObjectParams = (params: [ListRolesParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listRolesParamCreator = async (...config: ([ListRolesParams] | [number, number, string, boolean, string, ListRolesNameMatchEnum, ListRolesScopeEnum, ListRolesOrderByEnum, Array<ListRolesAddFieldsEnum>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listRolesParamCreator = async (...config: ([ListRolesParams] | [any, any, any, any, any, ListRolesNameMatchEnum, ListRolesScopeEnum, ListRolesOrderByEnum, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListRolesObjectParams(config) ? config[0] : ['limit', 'offset', 'name', 'system', 'displayName', 'nameMatch', 'scope', 'orderBy', 'addFields', 'username', 'application', 'permission', 'externalTenant', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListRolesParams;
     const { limit, offset, name, system, displayName, nameMatch, scope, orderBy, addFields, username, application, permission, externalTenant, options = {} } = params;
     const localVarPath = `/roles/`;
@@ -186,8 +176,8 @@ export const listRolesParamCreator = async (...config: ([ListRolesParams] | [num
         localVarQueryParameter['order_by'] = orderBy;
     }
 
-    if (addFields) {
-        localVarQueryParameter['add_fields'] = addFields.join(COLLECTION_FORMATS.csv);
+    if (addFields !== undefined) {
+        localVarQueryParameter['add_fields'] = addFields;
     }
 
     if (username !== undefined) {

@@ -50,10 +50,10 @@ export type ExportBaselineSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportBaselineSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -90,7 +90,7 @@ export type ExportBaselineSystemsParams = {
 export type ExportBaselineSystemsReturnType = AxiosPromise<Array<ControllersBaselineSystemsDBLookup>>;
 
 const isExportBaselineSystemsObjectParams = (params: [ExportBaselineSystemsParams] | unknown[]): params is [ExportBaselineSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId') && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId') && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Export systems applicable to a baseline. Export endpoints are not paginated.
@@ -99,7 +99,7 @@ const isExportBaselineSystemsObjectParams = (params: [ExportBaselineSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportBaselineSystemsParamCreator = async (...config: ([ExportBaselineSystemsParams] | [number, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportBaselineSystemsParamCreator = async (...config: ([ExportBaselineSystemsParams] | [number, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isExportBaselineSystemsObjectParams(config) ? config[0] : ['baselineId', 'search', 'filterDisplayName', 'filterOs', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportBaselineSystemsParams;
     const { baselineId, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/export/baselines/{baseline_id}/systems`

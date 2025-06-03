@@ -48,7 +48,7 @@ export type ListContainerProjectContainerGroupsParams = {
 export type ListContainerProjectContainerGroupsReturnType = AxiosPromise<ContainerGroupsCollection>;
 
 const isListContainerProjectContainerGroupsObjectParams = (params: [ListContainerProjectContainerGroupsParams] | unknown[]): params is [ListContainerProjectContainerGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ContainerGroup objects

@@ -48,7 +48,7 @@ export type ListSourceContainerNodesParams = {
 export type ListSourceContainerNodesReturnType = AxiosPromise<ContainerNodesCollection>;
 
 const isListSourceContainerNodesObjectParams = (params: [ListSourceContainerNodesParams] | unknown[]): params is [ListSourceContainerNodesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ContainerNode objects

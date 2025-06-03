@@ -30,10 +30,10 @@ export type SecurityGuideParams = {
 export type SecurityGuideReturnType = AxiosPromise<SecurityGuide200Response>;
 
 const isSecurityGuideObjectParams = (params: [SecurityGuideParams] | unknown[]): params is [SecurityGuideParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && true
 }
 /**
-* Returns a Security Guide
+* Retrieve a specific security guide.
 * @summary Request a Security Guide
 * @param {SecurityGuideParams} config with all available params.
 * @param {*} [options] Override http request option.

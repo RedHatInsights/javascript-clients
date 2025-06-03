@@ -36,10 +36,10 @@ export type TailoringFileParams = {
 export type TailoringFileReturnType = AxiosPromise<TailoringFile>;
 
 const isTailoringFileObjectParams = (params: [TailoringFileParams] | unknown[]): params is [TailoringFileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && true
 }
 /**
-* Returns a Tailoring File
+* Retrieve a tailoring file of a specific tailoring.
 * @summary Request a Tailoring file
 * @param {TailoringFileParams} config with all available params.
 * @param {*} [options] Override http request option.

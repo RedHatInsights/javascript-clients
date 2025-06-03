@@ -14,17 +14,17 @@ import type {  } from '../types';
 export type EndpointResourceV2EnableEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2EnableEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV2EnableEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV2EnableEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV2EnableEndpointObjectParams = (params: [EndpointResourceV2EnableEndpointParams] | unknown[]): params is [EndpointResourceV2EnableEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Enables an endpoint that is disabled so that the endpoint will be executed on the following operations that use the endpoint. An operation must be restarted to use the enabled endpoint.
@@ -33,7 +33,7 @@ const isEndpointResourceV2EnableEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2EnableEndpointParamCreator = async (...config: ([EndpointResourceV2EnableEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2EnableEndpointParamCreator = async (...config: ([EndpointResourceV2EnableEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2EnableEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2EnableEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/enable`

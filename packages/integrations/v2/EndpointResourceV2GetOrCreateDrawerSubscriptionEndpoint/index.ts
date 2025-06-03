@@ -24,7 +24,7 @@ export type EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams = {
 export type EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isEndpointResourceV2GetOrCreateDrawerSubscriptionEndpointObjectParams = (params: [EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams] | unknown[]): params is [EndpointResourceV2GetOrCreateDrawerSubscriptionEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'requestSystemSubscriptionProperties')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'requestSystemSubscriptionProperties')
 }
 /**
 * Adds the drawer system endpoint into the system and specifies the role-based access control (RBAC) group that will receive notifications. Use this endpoint to add an animation as a notification in the UI.

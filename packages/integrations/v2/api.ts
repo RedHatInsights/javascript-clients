@@ -4,10 +4,8 @@ import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
-    endpointResourceV2AddEventTypeToEndpoint,EndpointResourceV2AddEventTypeToEndpointReturnType,
     endpointResourceV2CreateEndpoint,EndpointResourceV2CreateEndpointReturnType,
     endpointResourceV2DeleteEndpoint,EndpointResourceV2DeleteEndpointReturnType,
-    endpointResourceV2DeleteEventTypeFromEndpoint,EndpointResourceV2DeleteEventTypeFromEndpointReturnType,
     endpointResourceV2DisableEndpoint,EndpointResourceV2DisableEndpointReturnType,
     endpointResourceV2EnableEndpoint,EndpointResourceV2EnableEndpointReturnType,
     endpointResourceV2GetDetailedEndpointHistory,EndpointResourceV2GetDetailedEndpointHistoryReturnType,
@@ -23,10 +21,8 @@ import {
   } from './index';
 
 const endpointList = {
-      endpointResourceV2AddEventTypeToEndpoint,
-    endpointResourceV2CreateEndpoint,
+      endpointResourceV2CreateEndpoint,
     endpointResourceV2DeleteEndpoint,
-    endpointResourceV2DeleteEventTypeFromEndpoint,
     endpointResourceV2DisableEndpoint,
     endpointResourceV2EnableEndpoint,
     endpointResourceV2GetDetailedEndpointHistory,
@@ -43,10 +39,8 @@ const endpointList = {
 };
 
 type endpointReturnTypes = {
-      endpointResourceV2AddEventTypeToEndpoint: EndpointResourceV2AddEventTypeToEndpointReturnType,
-    endpointResourceV2CreateEndpoint: EndpointResourceV2CreateEndpointReturnType,
+      endpointResourceV2CreateEndpoint: EndpointResourceV2CreateEndpointReturnType,
     endpointResourceV2DeleteEndpoint: EndpointResourceV2DeleteEndpointReturnType,
-    endpointResourceV2DeleteEventTypeFromEndpoint: EndpointResourceV2DeleteEventTypeFromEndpointReturnType,
     endpointResourceV2DisableEndpoint: EndpointResourceV2DisableEndpointReturnType,
     endpointResourceV2EnableEndpoint: EndpointResourceV2EnableEndpointReturnType,
     endpointResourceV2GetDetailedEndpointHistory: EndpointResourceV2GetDetailedEndpointHistoryReturnType,

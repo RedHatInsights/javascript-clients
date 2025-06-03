@@ -42,7 +42,7 @@ export type AssignRulesParams = {
 export type AssignRulesReturnType = AxiosPromise<Rules200Response>;
 
 const isAssignRulesObjectParams = (params: [AssignRulesParams] | unknown[]): params is [AssignRulesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && true && true
 }
 /**
 * This feature is exclusively used by the frontend

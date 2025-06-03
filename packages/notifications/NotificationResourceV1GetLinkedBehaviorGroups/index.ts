@@ -8,53 +8,53 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { BehaviorGroup } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV1GetLinkedBehaviorGroupsParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  eventTypeId: string,
+  eventTypeId: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetLinkedBehaviorGroupsApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetLinkedBehaviorGroupsReturnType = AxiosPromise<Array<BehaviorGroup>>;
+export type NotificationResourceV1GetLinkedBehaviorGroupsReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [NotificationResourceV1GetLinkedBehaviorGroupsParams] | unknown[]): params is [NotificationResourceV1GetLinkedBehaviorGroupsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'eventTypeId') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'eventTypeId') && true && true && true && true && true
 }
 /**
 * Lists the behavior groups that are linked to an event type. Use this endpoint to see which behavior groups will be affected if you delete an event type.
@@ -63,7 +63,7 @@ const isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams = (params: [No
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (...config: ([NotificationResourceV1GetLinkedBehaviorGroupsParams] | [string, number, number, number, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetLinkedBehaviorGroupsParamCreator = async (...config: ([NotificationResourceV1GetLinkedBehaviorGroupsParams] | [any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetLinkedBehaviorGroupsObjectParams(config) ? config[0] : ['eventTypeId', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetLinkedBehaviorGroupsParams;
     const { eventTypeId, limit, offset, pageNumber, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeId}/behaviorGroups`

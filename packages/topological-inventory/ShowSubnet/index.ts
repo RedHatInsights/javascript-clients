@@ -24,7 +24,7 @@ export type ShowSubnetParams = {
 export type ShowSubnetReturnType = AxiosPromise<Subnet>;
 
 const isShowSubnetObjectParams = (params: [ShowSubnetParams] | unknown[]): params is [ShowSubnetParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Subnet object

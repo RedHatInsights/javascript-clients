@@ -14,23 +14,23 @@ import type { Error403 } from '../types';
 export type DeleteRoleFromGroupParams = {
   /**
   * ID of group to update
-  * @type { string }
+  * @type { any }
   * @memberof DeleteRoleFromGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * A comma separated list of role UUIDs for roles to remove from the group
-  * @type { string }
+  * @type { any }
   * @memberof DeleteRoleFromGroupApi
   */
-  roles: string,
+  roles: any,
   options?: AxiosRequestConfig
 }
 
 export type DeleteRoleFromGroupReturnType = AxiosPromise<void>;
 
 const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] | unknown[]): params is [DeleteRoleFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'roles')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'roles')
 }
 /**
 *
@@ -39,7 +39,7 @@ const isDeleteRoleFromGroupObjectParams = (params: [DeleteRoleFromGroupParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRoleFromGroupParamCreator = async (...config: ([DeleteRoleFromGroupParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRoleFromGroupParamCreator = async (...config: ([DeleteRoleFromGroupParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDeleteRoleFromGroupObjectParams(config) ? config[0] : ['uuid', 'roles', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRoleFromGroupParams;
     const { uuid, roles, options = {} } = params;
     const localVarPath = `/groups/{uuid}/roles/`

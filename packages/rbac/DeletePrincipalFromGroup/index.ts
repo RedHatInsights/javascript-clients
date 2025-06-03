@@ -14,29 +14,29 @@ import type { Error403, ErrorNotFound } from '../types';
 export type DeletePrincipalFromGroupParams = {
   /**
   * ID of group to update
-  * @type { string }
+  * @type { any }
   * @memberof DeletePrincipalFromGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * A comma separated list of usernames for principals to remove from the group
-  * @type { string }
+  * @type { any }
   * @memberof DeletePrincipalFromGroupApi
   */
-  usernames?: string,
+  usernames?: any,
   /**
   * A comma separated list of client IDs for service accounts to remove from the group
-  * @type { string }
+  * @type { any }
   * @memberof DeletePrincipalFromGroupApi
   */
-  serviceAccounts?: string,
+  serviceAccounts?: any,
   options?: AxiosRequestConfig
 }
 
 export type DeletePrincipalFromGroupReturnType = AxiosPromise<void>;
 
 const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGroupParams] | unknown[]): params is [DeletePrincipalFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true && true
 }
 /**
 *
@@ -45,7 +45,7 @@ const isDeletePrincipalFromGroupObjectParams = (params: [DeletePrincipalFromGrou
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deletePrincipalFromGroupParamCreator = async (...config: ([DeletePrincipalFromGroupParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deletePrincipalFromGroupParamCreator = async (...config: ([DeletePrincipalFromGroupParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDeletePrincipalFromGroupObjectParams(config) ? config[0] : ['uuid', 'usernames', 'serviceAccounts', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeletePrincipalFromGroupParams;
     const { uuid, usernames, serviceAccounts, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`

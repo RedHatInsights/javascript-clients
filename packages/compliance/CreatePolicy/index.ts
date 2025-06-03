@@ -33,7 +33,7 @@ const isCreatePolicyObjectParams = (params: [CreatePolicyParams] | unknown[]): p
   return params.length === 1 && true && true
 }
 /**
-* Create a Policy with the provided attributes
+* Create a new security policy.
 * @summary Create a Policy
 * @param {CreatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

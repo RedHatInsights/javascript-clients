@@ -1,8 +1,8 @@
-export { default as drawerResourceV1GetDrawerEntries, DrawerResourceV1GetDrawerEntriesReturnType } from './DrawerResourceV1GetDrawerEntries'
+export { default as drawerResourceGetDrawerEntries, DrawerResourceGetDrawerEntriesReturnType } from './DrawerResourceGetDrawerEntries'
 
-export { default as drawerResourceV1UpdateNotificationReadStatus, DrawerResourceV1UpdateNotificationReadStatusReturnType } from './DrawerResourceV1UpdateNotificationReadStatus'
+export { default as drawerResourceUpdateNotificationReadStatus, DrawerResourceUpdateNotificationReadStatusReturnType } from './DrawerResourceUpdateNotificationReadStatus'
 
-export { default as eventResourceV1GetEvents, EventResourceV1GetEventsReturnType } from './EventResourceV1GetEvents'
+export { default as eventResourceGetEvents, EventResourceGetEventsReturnType } from './EventResourceGetEvents'
 
 export { default as notificationResourceV1AppendBehaviorGroupToEventType, NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType } from './NotificationResourceV1AppendBehaviorGroupToEventType'
 
@@ -40,7 +40,7 @@ export { default as notificationResourceV1UpdateEventTypeBehaviors, Notification
 
 export { default as notificationResourceV1UpdateEventTypeEndpoints, NotificationResourceV1UpdateEventTypeEndpointsReturnType } from './NotificationResourceV1UpdateEventTypeEndpoints'
 
-export { default as orgConfigResourceV1GetDailyDigestTimePreference, OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV1GetDailyDigestTimePreference'
+export { default as orgConfigResourceGetDailyDigestTimePreference, OrgConfigResourceGetDailyDigestTimePreferenceReturnType } from './OrgConfigResourceGetDailyDigestTimePreference'
 
-export { default as orgConfigResourceV1SaveDailyDigestTimePreference, OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV1SaveDailyDigestTimePreference'
+export { default as orgConfigResourceSaveDailyDigestTimePreference, OrgConfigResourceSaveDailyDigestTimePreferenceReturnType } from './OrgConfigResourceSaveDailyDigestTimePreference'
 

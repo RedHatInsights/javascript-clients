@@ -14,17 +14,17 @@ import type { Error403 } from '../types';
 export type DeleteRoleParams = {
   /**
   * ID of role to delete
-  * @type { string }
+  * @type { any }
   * @memberof DeleteRoleApi
   */
-  uuid: string,
+  uuid: any,
   options?: AxiosRequestConfig
 }
 
 export type DeleteRoleReturnType = AxiosPromise<void>;
 
 const isDeleteRoleObjectParams = (params: [DeleteRoleParams] | unknown[]): params is [DeleteRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
 }
 /**
 *
@@ -33,7 +33,7 @@ const isDeleteRoleObjectParams = (params: [DeleteRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteRoleParamCreator = async (...config: ([DeleteRoleParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteRoleParamCreator = async (...config: ([DeleteRoleParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDeleteRoleObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteRoleParams;
     const { uuid, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`

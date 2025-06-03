@@ -24,13 +24,14 @@ export type BaselineDeleteParams = {
 export type BaselineDeleteReturnType = AxiosPromise<ControllersDeleteBaselineResponse>;
 
 const isBaselineDeleteObjectParams = (params: [BaselineDeleteParams] | unknown[]): params is [BaselineDeleteParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId')
 }
 /**
 * Delete a baseline
 * @summary Delete a baseline
 * @param {BaselineDeleteParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const baselineDeleteParamCreator = async (...config: ([BaselineDeleteParams] | [number, AxiosRequestConfig])): Promise<RequestArgs> => {

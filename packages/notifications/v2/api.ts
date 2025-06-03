@@ -4,7 +4,6 @@ import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
-    eventResourceV2GetEvents,EventResourceV2GetEventsReturnType,
     notificationResourceV2AppendBehaviorGroupToEventType,NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType,
     notificationResourceV2CreateBehaviorGroup,NotificationResourceV2CreateBehaviorGroupReturnType,
     notificationResourceV2DeleteBehaviorGroup,NotificationResourceV2DeleteBehaviorGroupReturnType,
@@ -23,14 +22,11 @@ import {
     notificationResourceV2UpdateBehaviorGroupActions,NotificationResourceV2UpdateBehaviorGroupActionsReturnType,
     notificationResourceV2UpdateEventTypeBehaviors,NotificationResourceV2UpdateEventTypeBehaviorsReturnType,
     notificationResourceV2UpdateEventTypeEndpoints,NotificationResourceV2UpdateEventTypeEndpointsReturnType,
-    orgConfigResourceV2GetDailyDigestTimePreference,OrgConfigResourceV2GetDailyDigestTimePreferenceReturnType,
-    orgConfigResourceV2SaveDailyDigestTimePreference,OrgConfigResourceV2SaveDailyDigestTimePreferenceReturnType,
 
   } from './index';
 
 const endpointList = {
-      eventResourceV2GetEvents,
-    notificationResourceV2AppendBehaviorGroupToEventType,
+      notificationResourceV2AppendBehaviorGroupToEventType,
     notificationResourceV2CreateBehaviorGroup,
     notificationResourceV2DeleteBehaviorGroup,
     notificationResourceV2DeleteBehaviorGroupFromEventType,
@@ -48,15 +44,12 @@ const endpointList = {
     notificationResourceV2UpdateBehaviorGroupActions,
     notificationResourceV2UpdateEventTypeBehaviors,
     notificationResourceV2UpdateEventTypeEndpoints,
-    orgConfigResourceV2GetDailyDigestTimePreference,
-    orgConfigResourceV2SaveDailyDigestTimePreference,
 
 
 };
 
 type endpointReturnTypes = {
-      eventResourceV2GetEvents: EventResourceV2GetEventsReturnType,
-    notificationResourceV2AppendBehaviorGroupToEventType: NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType,
+      notificationResourceV2AppendBehaviorGroupToEventType: NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType,
     notificationResourceV2CreateBehaviorGroup: NotificationResourceV2CreateBehaviorGroupReturnType,
     notificationResourceV2DeleteBehaviorGroup: NotificationResourceV2DeleteBehaviorGroupReturnType,
     notificationResourceV2DeleteBehaviorGroupFromEventType: NotificationResourceV2DeleteBehaviorGroupFromEventTypeReturnType,
@@ -74,8 +67,6 @@ type endpointReturnTypes = {
     notificationResourceV2UpdateBehaviorGroupActions: NotificationResourceV2UpdateBehaviorGroupActionsReturnType,
     notificationResourceV2UpdateEventTypeBehaviors: NotificationResourceV2UpdateEventTypeBehaviorsReturnType,
     notificationResourceV2UpdateEventTypeEndpoints: NotificationResourceV2UpdateEventTypeEndpointsReturnType,
-    orgConfigResourceV2GetDailyDigestTimePreference: OrgConfigResourceV2GetDailyDigestTimePreferenceReturnType,
-    orgConfigResourceV2SaveDailyDigestTimePreference: OrgConfigResourceV2SaveDailyDigestTimePreferenceReturnType,
 
 
 };

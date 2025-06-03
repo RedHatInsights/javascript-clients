@@ -48,7 +48,7 @@ export type ListSourceEndpointsParams = {
 export type ListSourceEndpointsReturnType = AxiosPromise<EndpointsCollection>;
 
 const isListSourceEndpointsObjectParams = (params: [ListSourceEndpointsParams] | unknown[]): params is [ListSourceEndpointsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Endpoint objects

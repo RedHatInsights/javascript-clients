@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type EndpointResourceV2GetDetailedEndpointHistoryParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetDetailedEndpointHistoryApi
   */
-  historyId: string,
+  historyId: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetDetailedEndpointHistoryApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV2GetDetailedEndpointHistoryReturnType = AxiosPromise<string>;
+export type EndpointResourceV2GetDetailedEndpointHistoryReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV2GetDetailedEndpointHistoryObjectParams = (params: [EndpointResourceV2GetDetailedEndpointHistoryParams] | unknown[]): params is [EndpointResourceV2GetDetailedEndpointHistoryParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'historyId') && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'historyId') && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Retrieves extended information about the outcome of an event notification related to the specified endpoint. Use this endpoint to learn why an event delivery failed.
@@ -39,7 +39,7 @@ const isEndpointResourceV2GetDetailedEndpointHistoryObjectParams = (params: [End
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2GetDetailedEndpointHistoryParamCreator = async (...config: ([EndpointResourceV2GetDetailedEndpointHistoryParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2GetDetailedEndpointHistoryParamCreator = async (...config: ([EndpointResourceV2GetDetailedEndpointHistoryParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2GetDetailedEndpointHistoryObjectParams(config) ? config[0] : ['historyId', 'id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2GetDetailedEndpointHistoryParams;
     const { historyId, id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history/{history_id}/details`

@@ -48,7 +48,7 @@ export type ListNetworkSubnetsParams = {
 export type ListNetworkSubnetsReturnType = AxiosPromise<SubnetsCollection>;
 
 const isListNetworkSubnetsObjectParams = (params: [ListNetworkSubnetsParams] | unknown[]): params is [ListNetworkSubnetsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Subnet objects

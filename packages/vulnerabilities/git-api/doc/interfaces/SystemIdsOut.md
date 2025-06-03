@@ -26,7 +26,7 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2644](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2644)
+[api.ts:2565](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2565)
 
 ___
 
@@ -40,7 +40,7 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2650](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2650)
+[api.ts:2571](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2571)
 
 ___
 
@@ -54,4 +54,4 @@ SystemIdsOut
 
 #### Defined in
 
-[api.ts:2656](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2656)
+[api.ts:2577](https://github.com/RedHatInsights/javascript-clients/blob/main/packages/vulnerabilities/git-api/api.ts#L2577)

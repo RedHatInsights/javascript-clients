@@ -14,29 +14,29 @@ import type { EventType } from '../types';
 export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  applicationName: string,
+  applicationName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  bundleName: string,
+  bundleName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameApi
   */
-  eventTypeName: string,
+  eventTypeName: any,
   options?: AxiosRequestConfig
 }
 
 export type NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameReturnType = AxiosPromise<EventType>;
 
 const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObjectParams = (params: [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | unknown[]): params is [NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'applicationName') && Object.prototype.hasOwnProperty.call(params, 'bundleName') && Object.prototype.hasOwnProperty.call(params, 'eventTypeName')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'applicationName') && Object.prototype.hasOwnProperty.call(params[0], 'bundleName') && Object.prototype.hasOwnProperty.call(params[0], 'eventTypeName')
 }
 /**
 * Retrieves the details of an event type by specifying the bundle name, the application name, and the event type name.
@@ -45,7 +45,7 @@ const isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObje
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (...config: ([NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | [string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParamCreator = async (...config: ([NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'eventTypeName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetEventTypesByNameAndBundleAndApplicationNameParams;
     const { applicationName, bundleName, eventTypeName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}/eventTypes/{eventTypeName}`

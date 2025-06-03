@@ -36,7 +36,7 @@ export type PolicySystemsOSParams = {
 export type PolicySystemsOSReturnType = AxiosPromise<any>;
 
 const isPolicySystemsOSObjectParams = (params: [PolicySystemsOSParams] | unknown[]): params is [PolicySystemsOSParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true && true
 }
 /**
 * This feature is exclusively used by the frontend

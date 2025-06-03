@@ -24,7 +24,7 @@ export type GetProfileParams = {
 export type GetProfileReturnType = AxiosPromise<Profile>;
 
 const isGetProfileObjectParams = (params: [GetProfileParams] | unknown[]): params is [GetProfileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Retrieve a specific profile identified by the \'id\' path parameter for the identified account. If the special value \"current\" is used for the \'id\' path parameter, the most recent profile is retrieved instead.

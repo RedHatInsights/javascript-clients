@@ -55,7 +55,7 @@ export type PolicySystemsParams = {
   */
   sortBy?: any,
   /**
-  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_version`, `os_minor_version`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
+  * Query string to filter items by their attributes. Compliant with <a href=\"https://github.com/wvanbergen/scoped_search/wiki/Query-language\" target=\"_blank\" title=\"github.com/wvanbergen/scoped_search\">scoped_search query language</a>. However, only `=` or `!=` (resp. `<>`) operators are supported.<br><br>Systems are searchable using attributes `display_name`, `os_minor_version`, and `group_name`<br><br>(e.g.: `(field_1=something AND field_2!=\"something else\") OR field_3>40`)
   * @type { any }
   * @memberof PolicySystemsApi
   */
@@ -66,10 +66,10 @@ export type PolicySystemsParams = {
 export type PolicySystemsReturnType = AxiosPromise<Systems200Response>;
 
 const isPolicySystemsObjectParams = (params: [PolicySystemsParams] | unknown[]): params is [PolicySystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true && true && true && true && true && true && true
 }
 /**
-* Lists Systems assigned to a Policy
+* Retrieve all of the systems assigned to a specific policy.
 * @summary Request Systems assigned to a Policy
 * @param {PolicySystemsParams} config with all available params.
 * @param {*} [options] Override http request option.

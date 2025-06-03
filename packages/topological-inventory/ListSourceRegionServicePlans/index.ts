@@ -48,7 +48,7 @@ export type ListSourceRegionServicePlansParams = {
 export type ListSourceRegionServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
 
 const isListSourceRegionServicePlansObjectParams = (params: [ListSourceRegionServicePlansParams] | unknown[]): params is [ListSourceRegionServicePlansParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ServicePlan objects

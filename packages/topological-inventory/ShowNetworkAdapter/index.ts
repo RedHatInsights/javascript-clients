@@ -24,7 +24,7 @@ export type ShowNetworkAdapterParams = {
 export type ShowNetworkAdapterReturnType = AxiosPromise<NetworkAdapter>;
 
 const isShowNetworkAdapterObjectParams = (params: [ShowNetworkAdapterParams] | unknown[]): params is [ShowNetworkAdapterParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a NetworkAdapter object

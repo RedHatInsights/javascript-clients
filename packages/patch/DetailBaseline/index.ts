@@ -24,13 +24,14 @@ export type DetailBaselineParams = {
 export type DetailBaselineReturnType = AxiosPromise<ControllersBaselineDetailResponse>;
 
 const isDetailBaselineObjectParams = (params: [DetailBaselineParams] | unknown[]): params is [DetailBaselineParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId')
 }
 /**
 * Show baseline detail by given baseline ID
 * @summary Show baseline detail by given baseline ID
 * @param {DetailBaselineParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const detailBaselineParamCreator = async (...config: ([DetailBaselineParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {

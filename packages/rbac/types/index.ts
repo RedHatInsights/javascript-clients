@@ -6,41 +6,16 @@
 export interface Access {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Access
      */
-    'permission': string;
+    'permission': any;
     /**
      *
-     * @type {Array<ResourceDefinition>}
+     * @type {any}
      * @memberof Access
      */
-    'resourceDefinitions': Array<ResourceDefinition>;
-}
-/**
- *
- * @export
- * @interface AccessPagination
- */
-export interface AccessPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof AccessPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof AccessPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<Access>}
-     * @memberof AccessPagination
-     */
-    'data': Array<Access>;
+    'resourceDefinitions': any;
 }
 /**
  *
@@ -50,10 +25,10 @@ export interface AccessPagination {
 export interface AddRoleToGroup200Response {
     /**
      *
-     * @type {Array<RoleOut>}
+     * @type {any}
      * @memberof AddRoleToGroup200Response
      */
-    'data': Array<RoleOut>;
+    'data': any;
 }
 /**
  *
@@ -63,22 +38,59 @@ export interface AddRoleToGroup200Response {
 export interface AdditionalGroup {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof AdditionalGroup
      */
-    'name'?: string;
+    'name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof AdditionalGroup
      */
-    'description'?: string;
+    'description'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof AdditionalGroup
      */
-    'uuid'?: string;
+    'uuid'?: any;
+}
+/**
+ *
+ * @export
+ * @interface AuditLog
+ */
+export interface AuditLog {
+    /**
+     *
+     * @type {any}
+     * @memberof AuditLog
+     */
+    'created'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof AuditLog
+     */
+    'principal_username'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof AuditLog
+     */
+    'description'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof AuditLog
+     */
+    'resource_type'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof AuditLog
+     */
+    'action'?: any;
 }
 /**
  *
@@ -88,34 +100,34 @@ export interface AdditionalGroup {
 export interface CrossAccountRequest {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequest
      */
-    'request_id'?: string;
+    'request_id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequest
      */
-    'target_account'?: string;
+    'target_account'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequest
      */
-    'target_org'?: string;
+    'target_org'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequest
      */
-    'status'?: string;
+    'status'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequest
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
      * @type {any}
@@ -128,268 +140,6 @@ export interface CrossAccountRequest {
      * @memberof CrossAccountRequest
      */
     'end_date'?: any;
-}
-/**
- *
- * @export
- * @interface CrossAccountRequestByAccount
- */
-export interface CrossAccountRequestByAccount {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'target_org'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'status'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'start_date'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'end_date'?: any;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'first_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'last_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByAccount
-     */
-    'email'?: string;
-}
-/**
- *
- * @export
- * @interface CrossAccountRequestByUserId
- */
-export interface CrossAccountRequestByUserId {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'target_org'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'status'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'start_date'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'end_date'?: any;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestByUserId
-     */
-    'user_id'?: string;
-}
-/**
- * @type CrossAccountRequestDetail
- * @export
- */
-export type CrossAccountRequestDetail = CrossAccountRequestDetailByAccount | CrossAccountRequestDetailByUseId;
-
-/**
- *
- * @export
- * @interface CrossAccountRequestDetailByAccount
- */
-export interface CrossAccountRequestDetailByAccount {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'target_org'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'start_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'end_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'status'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {Array<CrossAccountRequestWithRolesRolesInner>}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'roles'?: Array<CrossAccountRequestWithRolesRolesInner>;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'first_name'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'last_name'?: any;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestDetailByAccount
-     */
-    'email'?: any;
-}
-/**
- *
- * @export
- * @interface CrossAccountRequestDetailByUseId
- */
-export interface CrossAccountRequestDetailByUseId {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'target_org'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'start_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'end_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'status'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {Array<CrossAccountRequestWithRolesRolesInner>}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'roles'?: Array<CrossAccountRequestWithRolesRolesInner>;
-    /**
-     *
-     * @type {any}
-     * @memberof CrossAccountRequestDetailByUseId
-     */
-    'user_id'?: any;
 }
 /**
  *
@@ -399,127 +149,35 @@ export interface CrossAccountRequestDetailByUseId {
 export interface CrossAccountRequestIn {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestIn
      */
-    'target_account'?: string;
+    'target_account'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestIn
      */
-    'target_org': string;
+    'target_org': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestIn
      */
-    'start_date': string;
+    'start_date': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestIn
      */
-    'end_date': string;
+    'end_date': any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof CrossAccountRequestIn
      */
-    'roles': Array<string>;
+    'roles': any;
 }
-/**
- *
- * @export
- * @interface CrossAccountRequestOut
- */
-export interface CrossAccountRequestOut {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'request_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'target_account'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'target_org'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'start_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'end_date'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'status'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'created'?: string;
-    /**
-     *
-     * @type {Array<CrossAccountRequestWithRolesRolesInner>}
-     * @memberof CrossAccountRequestOut
-     */
-    'roles'?: Array<CrossAccountRequestWithRolesRolesInner>;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestOut
-     */
-    'user_id'?: string;
-}
-/**
- *
- * @export
- * @interface CrossAccountRequestPagination
- */
-export interface CrossAccountRequestPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof CrossAccountRequestPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof CrossAccountRequestPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<CrossAccountRequestPaginationAllOfDataInner>}
-     * @memberof CrossAccountRequestPagination
-     */
-    'data': Array<CrossAccountRequestPaginationAllOfDataInner>;
-}
-/**
- * @type CrossAccountRequestPaginationAllOfDataInner
- * @export
- */
-export type CrossAccountRequestPaginationAllOfDataInner = CrossAccountRequestByAccount | CrossAccountRequestByUserId;
-
 /**
  *
  * @export
@@ -528,25 +186,25 @@ export type CrossAccountRequestPaginationAllOfDataInner = CrossAccountRequestByA
 export interface CrossAccountRequestPatch {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestPatch
      */
-    'start_date'?: string;
+    'start_date'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestPatch
      */
-    'end_date'?: string;
+    'end_date'?: any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof CrossAccountRequestPatch
      */
-    'roles'?: Array<string>;
+    'roles'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestPatch
      */
     'status'?: CrossAccountRequestPatchStatusEnum;
@@ -570,22 +228,22 @@ export type CrossAccountRequestPatchStatusEnum = typeof CrossAccountRequestPatch
 export interface CrossAccountRequestUpdateIn {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestUpdateIn
      */
-    'start_date': string;
+    'start_date': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestUpdateIn
      */
-    'end_date': string;
+    'end_date': any;
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof CrossAccountRequestUpdateIn
      */
-    'roles': Array<string>;
+    'roles': any;
 }
 /**
  *
@@ -595,77 +253,52 @@ export interface CrossAccountRequestUpdateIn {
 export interface CrossAccountRequestWithRoles {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'request_id'?: string;
+    'request_id'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'target_account'?: string;
+    'target_account'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'target_org'?: string;
+    'target_org'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'start_date'?: string;
+    'start_date'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'end_date'?: string;
+    'end_date'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'status'?: string;
+    'status'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'created'?: string;
+    'created'?: any;
     /**
      *
-     * @type {Array<CrossAccountRequestWithRolesRolesInner>}
+     * @type {any}
      * @memberof CrossAccountRequestWithRoles
      */
-    'roles'?: Array<CrossAccountRequestWithRolesRolesInner>;
-}
-/**
- *
- * @export
- * @interface CrossAccountRequestWithRolesRolesInner
- */
-export interface CrossAccountRequestWithRolesRolesInner {
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestWithRolesRolesInner
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CrossAccountRequestWithRolesRolesInner
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {Array<Permission>}
-     * @memberof CrossAccountRequestWithRolesRolesInner
-     */
-    'permissions'?: Array<Permission>;
+    'roles'?: any;
 }
 /**
  *
@@ -675,54 +308,10 @@ export interface CrossAccountRequestWithRolesRolesInner {
 export interface Error403 {
     /**
      *
-     * @type {Array<Error403ErrorsInner>}
+     * @type {any}
      * @memberof Error403
      */
-    'errors': Array<Error403ErrorsInner>;
-}
-/**
- *
- * @export
- * @interface Error403ErrorsInner
- */
-export interface Error403ErrorsInner {
-    /**
-     *
-     * @type {string}
-     * @memberof Error403ErrorsInner
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Error403ErrorsInner
-     */
-    'source'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Error403ErrorsInner
-     */
-    'status'?: string;
-}
-/**
- *
- * @export
- * @interface ErrorErrorsInner
- */
-export interface ErrorErrorsInner {
-    /**
-     *
-     * @type {string}
-     * @memberof ErrorErrorsInner
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ErrorErrorsInner
-     */
-    'status'?: string;
+    'errors': any;
 }
 /**
  * Error structure for the \"Not Found\" responses.
@@ -732,42 +321,11 @@ export interface ErrorErrorsInner {
 export interface ErrorNotFound {
     /**
      *
-     * @type {Array<ErrorNotFoundErrorsInner>}
+     * @type {any}
      * @memberof ErrorNotFound
      */
-    'errors': Array<ErrorNotFoundErrorsInner>;
+    'errors': any;
 }
-/**
- *
- * @export
- * @interface ErrorNotFoundErrorsInner
- */
-export interface ErrorNotFoundErrorsInner {
-    /**
-     * Detail of the error.
-     * @type {string}
-     * @memberof ErrorNotFoundErrorsInner
-     */
-    'detail'?: string;
-    /**
-     * Status of the response
-     * @type {string}
-     * @memberof ErrorNotFoundErrorsInner
-     */
-    'status'?: string;
-    /**
-     * Source of the error.
-     * @type {string}
-     * @memberof ErrorNotFoundErrorsInner
-     */
-    'source'?: string;
-}
-/**
- * @type GetPrincipalsFromGroup200Response
- * @export
- */
-export type GetPrincipalsFromGroup200Response = PrincipalPagination | ServiceAccountInGroupResponse | ServiceAccountPagination;
-
 /**
  *
  * @export
@@ -776,108 +334,16 @@ export type GetPrincipalsFromGroup200Response = PrincipalPagination | ServiceAcc
 export interface Group {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Group
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Group
      */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface GroupOut
- */
-export interface GroupOut {
-    /**
-     *
-     * @type {string}
-     * @memberof GroupOut
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupOut
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupOut
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupOut
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupOut
-     */
-    'modified': string;
-    /**
-     *
-     * @type {number}
-     * @memberof GroupOut
-     */
-    'principalCount'?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof GroupOut
-     */
-    'roleCount'?: number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof GroupOut
-     */
-    'system'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof GroupOut
-     */
-    'platform_default'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof GroupOut
-     */
-    'admin_default'?: boolean;
-}
-/**
- *
- * @export
- * @interface GroupPagination
- */
-export interface GroupPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof GroupPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof GroupPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<GroupOut>}
-     * @memberof GroupPagination
-     */
-    'data': Array<GroupOut>;
+    'description'?: any;
 }
 /**
  *
@@ -887,43 +353,11 @@ export interface GroupPagination {
 export interface GroupPrincipalIn {
     /**
      *
-     * @type {Array<GroupPrincipalInPrincipalsInner>}
+     * @type {any}
      * @memberof GroupPrincipalIn
      */
-    'principals': Array<GroupPrincipalInPrincipalsInner>;
+    'principals': any;
 }
-/**
- *
- * @export
- * @interface GroupPrincipalInPrincipalsInner
- */
-export interface GroupPrincipalInPrincipalsInner {
-    /**
-     *
-     * @type {string}
-     * @memberof GroupPrincipalInPrincipalsInner
-     */
-    'username': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupPrincipalInPrincipalsInner
-     */
-    'type': GroupPrincipalInPrincipalsInnerTypeEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupPrincipalInPrincipalsInner
-     */
-    'clientId': string;
-}
-
-export const GroupPrincipalInPrincipalsInnerTypeEnum = {
-    ServiceAccount: 'service-account'
-} as const;
-
-export type GroupPrincipalInPrincipalsInnerTypeEnum = typeof GroupPrincipalInPrincipalsInnerTypeEnum[keyof typeof GroupPrincipalInPrincipalsInnerTypeEnum];
-
 /**
  *
  * @export
@@ -932,127 +366,10 @@ export type GroupPrincipalInPrincipalsInnerTypeEnum = typeof GroupPrincipalInPri
 export interface GroupRoleIn {
     /**
      *
-     * @type {Array<string>}
+     * @type {any}
      * @memberof GroupRoleIn
      */
-    'roles': Array<string>;
-}
-/**
- *
- * @export
- * @interface GroupRolesPagination
- */
-export interface GroupRolesPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof GroupRolesPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof GroupRolesPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<RoleOut>}
-     * @memberof GroupRolesPagination
-     */
-    'data': Array<RoleOut>;
-}
-/**
- *
- * @export
- * @interface GroupWithPrincipals
- */
-export interface GroupWithPrincipals {
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipals
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipals
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipals
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipals
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipals
-     */
-    'modified': string;
-    /**
-     *
-     * @type {Array<Principal>}
-     * @memberof GroupWithPrincipals
-     */
-    'principals': Array<Principal>;
-}
-/**
- *
- * @export
- * @interface GroupWithPrincipalsAndRoles
- */
-export interface GroupWithPrincipalsAndRoles {
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'modified': string;
-    /**
-     *
-     * @type {Array<Principal>}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'principals': Array<Principal>;
-    /**
-     *
-     * @type {Array<RoleOut>}
-     * @memberof GroupWithPrincipalsAndRoles
-     */
-    'roles': Array<RoleOut>;
+    'roles': any;
 }
 /**
  *
@@ -1074,12 +391,6 @@ export interface ListPagination {
     'links'?: PaginationLinks;
 }
 /**
- * @type ListPrincipals200Response
- * @export
- */
-export type ListPrincipals200Response = PrincipalPagination | ServiceAccountPagination;
-
-/**
  *
  * @export
  * @interface ModelError
@@ -1087,10 +398,10 @@ export type ListPrincipals200Response = PrincipalPagination | ServiceAccountPagi
 export interface ModelError {
     /**
      *
-     * @type {Array<ErrorErrorsInner>}
+     * @type {any}
      * @memberof ModelError
      */
-    'errors': Array<ErrorErrorsInner>;
+    'errors': any;
 }
 /**
  *
@@ -1100,28 +411,28 @@ export interface ModelError {
 export interface PaginationLinks {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PaginationLinks
      */
-    'first'?: string;
+    'first'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PaginationLinks
      */
-    'previous'?: string;
+    'previous'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PaginationLinks
      */
-    'next'?: string;
+    'next'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PaginationLinks
      */
-    'last'?: string;
+    'last'?: any;
 }
 /**
  *
@@ -1131,10 +442,10 @@ export interface PaginationLinks {
 export interface PaginationMeta {
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof PaginationMeta
      */
-    'count'?: number;
+    'count'?: any;
 }
 /**
  *
@@ -1144,84 +455,34 @@ export interface PaginationMeta {
 export interface Permission {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Permission
      */
-    'application'?: string;
+    'application'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Permission
      */
-    'resource_type'?: string;
+    'resource_type'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Permission
      */
-    'verb'?: string;
+    'verb'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Permission
      */
-    'permission'?: string;
+    'permission'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Permission
      */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface PermissionOptionsPagination
- */
-export interface PermissionOptionsPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof PermissionOptionsPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof PermissionOptionsPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof PermissionOptionsPagination
-     */
-    'data': Array<string>;
-}
-/**
- *
- * @export
- * @interface PermissionPagination
- */
-export interface PermissionPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof PermissionPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof PermissionPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<Permission>}
-     * @memberof PermissionPagination
-     */
-    'data': Array<Permission>;
+    'description'?: any;
 }
 /**
  *
@@ -1231,121 +492,16 @@ export interface PermissionPagination {
 export interface Policy {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Policy
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Policy
      */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface PolicyExtended
- */
-export interface PolicyExtended {
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyExtended
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyExtended
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyExtended
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyExtended
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyExtended
-     */
-    'modified': string;
-    /**
-     *
-     * @type {GroupOut}
-     * @memberof PolicyExtended
-     */
-    'group': GroupOut;
-    /**
-     *
-     * @type {Array<RoleOut>}
-     * @memberof PolicyExtended
-     */
-    'roles': Array<RoleOut>;
-}
-/**
- *
- * @export
- * @interface PolicyIn
- */
-export interface PolicyIn {
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyIn
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyIn
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof PolicyIn
-     */
-    'group': string;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof PolicyIn
-     */
-    'roles': Array<string>;
-}
-/**
- *
- * @export
- * @interface PolicyPagination
- */
-export interface PolicyPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof PolicyPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof PolicyPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<PolicyExtended>}
-     * @memberof PolicyPagination
-     */
-    'data': Array<PolicyExtended>;
+    'description'?: any;
 }
 /**
  *
@@ -1355,53 +511,47 @@ export interface PolicyPagination {
 export interface Principal {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Principal
      */
-    'username': string;
+    'username': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Principal
      */
-    'email': string;
+    'email': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Principal
      */
-    'first_name'?: string;
+    'first_name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Principal
      */
-    'last_name'?: string;
+    'last_name'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof Principal
      */
-    'is_active'?: boolean;
+    'is_active'?: any;
     /**
      *
-     * @type {boolean}
+     * @type {any}
      * @memberof Principal
      */
-    'is_org_admin'?: boolean;
+    'is_org_admin'?: any;
     /**
      *
-     * @type {PrincipalExternalSourceId}
+     * @type {any}
      * @memberof Principal
      */
-    'external_source_id'?: PrincipalExternalSourceId;
+    'external_source_id'?: any | null;
 }
-/**
- * @type PrincipalExternalSourceId
- * @export
- */
-export type PrincipalExternalSourceId = number | string;
-
 /**
  *
  * @export
@@ -1410,10 +560,10 @@ export type PrincipalExternalSourceId = number | string;
 export interface PrincipalIn {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PrincipalIn
      */
-    'username': string;
+    'username': any;
 }
 /**
  *
@@ -1423,97 +573,11 @@ export interface PrincipalIn {
 export interface PrincipalMinimal {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof PrincipalMinimal
      */
-    'username': string;
+    'username': any;
 }
-/**
- *
- * @export
- * @interface PrincipalOut
- */
-export interface PrincipalOut {
-    /**
-     *
-     * @type {string}
-     * @memberof PrincipalOut
-     */
-    'username': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PrincipalOut
-     */
-    'email': string;
-    /**
-     *
-     * @type {string}
-     * @memberof PrincipalOut
-     */
-    'first_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof PrincipalOut
-     */
-    'last_name'?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof PrincipalOut
-     */
-    'is_active'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof PrincipalOut
-     */
-    'is_org_admin'?: boolean;
-    /**
-     *
-     * @type {PrincipalExternalSourceId}
-     * @memberof PrincipalOut
-     */
-    'external_source_id'?: PrincipalExternalSourceId;
-    /**
-     *
-     * @type {string}
-     * @memberof PrincipalOut
-     */
-    'uuid': string;
-}
-/**
- *
- * @export
- * @interface PrincipalPagination
- */
-export interface PrincipalPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof PrincipalPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof PrincipalPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<PrincipalPaginationAllOfDataInner>}
-     * @memberof PrincipalPagination
-     */
-    'data': Array<PrincipalPaginationAllOfDataInner>;
-}
-/**
- * @type PrincipalPaginationAllOfDataInner
- * @export
- */
-export type PrincipalPaginationAllOfDataInner = Principal | PrincipalMinimal;
-
 /**
  *
  * @export
@@ -1535,22 +599,22 @@ export interface ResourceDefinition {
 export interface ResourceDefinitionFilter {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ResourceDefinitionFilter
      */
-    'key': string;
+    'key': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ResourceDefinitionFilter
      */
     'operation': ResourceDefinitionFilterOperationEnum;
     /**
      *
-     * @type {ResourceDefinitionFilterValue}
+     * @type {any}
      * @memberof ResourceDefinitionFilter
      */
-    'value': ResourceDefinitionFilterValue;
+    'value': any;
 }
 
 export const ResourceDefinitionFilterOperationEnum = {
@@ -1561,18 +625,6 @@ export const ResourceDefinitionFilterOperationEnum = {
 export type ResourceDefinitionFilterOperationEnum = typeof ResourceDefinitionFilterOperationEnum[keyof typeof ResourceDefinitionFilterOperationEnum];
 
 /**
- * @type ResourceDefinitionFilterValue
- * @export
- */
-export type ResourceDefinitionFilterValue = Array<ResourceDefinitionFilterValueObject> | string;
-
-/**
- * @type ResourceDefinitionFilterValueObject
- * @export
- */
-export type ResourceDefinitionFilterValueObject = string;
-
-/**
  *
  * @export
  * @interface Role
@@ -1580,303 +632,22 @@ export type ResourceDefinitionFilterValueObject = string;
 export interface Role {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Role
      */
-    'name': string;
+    'name': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Role
      */
-    'display_name'?: string;
+    'display_name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Role
      */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface RoleIn
- */
-export interface RoleIn {
-    /**
-     *
-     * @type {string}
-     * @memberof RoleIn
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleIn
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleIn
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {Array<Access>}
-     * @memberof RoleIn
-     */
-    'access': Array<Access>;
-}
-/**
- *
- * @export
- * @interface RoleOut
- */
-export interface RoleOut {
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'modified': string;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleOut
-     */
-    'policyCount'?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleOut
-     */
-    'accessCount'?: number;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof RoleOut
-     */
-    'applications'?: Array<string>;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOut
-     */
-    'system'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOut
-     */
-    'platform_default'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOut
-     */
-    'admin_default'?: boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'external_role_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOut
-     */
-    'external_tenant'?: string;
-}
-/**
- *
- * @export
- * @interface RoleOutDynamic
- */
-export interface RoleOutDynamic {
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'modified': string;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleOutDynamic
-     */
-    'policyCount': number;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleOutDynamic
-     */
-    'accessCount': number;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof RoleOutDynamic
-     */
-    'applications': Array<string>;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOutDynamic
-     */
-    'system': boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOutDynamic
-     */
-    'platform_default': boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleOutDynamic
-     */
-    'admin_default': boolean;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleOutDynamic
-     */
-    'groups_in_count'?: number;
-    /**
-     *
-     * @type {Array<AdditionalGroup>}
-     * @memberof RoleOutDynamic
-     */
-    'groups_in'?: Array<AdditionalGroup>;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'external_role_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleOutDynamic
-     */
-    'external_tenant'?: string;
-    /**
-     *
-     * @type {Array<Access>}
-     * @memberof RoleOutDynamic
-     */
-    'access'?: Array<Access>;
-}
-/**
- *
- * @export
- * @interface RolePagination
- */
-export interface RolePagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof RolePagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof RolePagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<RoleOut>}
-     * @memberof RolePagination
-     */
-    'data': Array<RoleOut>;
-}
-/**
- *
- * @export
- * @interface RolePaginationDynamic
- */
-export interface RolePaginationDynamic {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof RolePaginationDynamic
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof RolePaginationDynamic
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<RoleOutDynamic>}
-     * @memberof RolePaginationDynamic
-     */
-    'data': Array<RoleOutDynamic>;
+    'description'?: any;
 }
 /**
  *
@@ -1886,150 +657,22 @@ export interface RolePaginationDynamic {
 export interface RolePatch {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof RolePatch
      */
-    'name'?: string;
+    'name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof RolePatch
      */
-    'display_name'?: string;
+    'display_name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof RolePatch
      */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface RolePut
- */
-export interface RolePut {
-    /**
-     *
-     * @type {string}
-     * @memberof RolePut
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RolePut
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RolePut
-     */
-    'description'?: string;
-    /**
-     * List of access permissions. This array can be empty.
-     * @type {Array<Access>}
-     * @memberof RolePut
-     */
-    'access': Array<Access>;
-}
-/**
- *
- * @export
- * @interface RoleWithAccess
- */
-export interface RoleWithAccess {
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'display_name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'description'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'uuid': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'modified': string;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleWithAccess
-     */
-    'policyCount'?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof RoleWithAccess
-     */
-    'accessCount'?: number;
-    /**
-     *
-     * @type {Array<string>}
-     * @memberof RoleWithAccess
-     */
-    'applications'?: Array<string>;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleWithAccess
-     */
-    'system'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleWithAccess
-     */
-    'platform_default'?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RoleWithAccess
-     */
-    'admin_default'?: boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'external_role_id'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleWithAccess
-     */
-    'external_tenant'?: string;
-    /**
-     *
-     * @type {Array<Access>}
-     * @memberof RoleWithAccess
-     */
-    'access': Array<Access>;
+    'description'?: any;
 }
 /**
  *
@@ -2039,46 +682,46 @@ export interface RoleWithAccess {
 export interface ServiceAccount {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'username': string;
+    'username': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
     'type': ServiceAccountTypeEnum;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'clientId': string;
+    'clientId': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'name'?: string;
+    'name'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'description'?: string;
+    'description'?: any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'owner'?: string;
+    'owner'?: any;
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof ServiceAccount
      */
-    'time_created'?: number;
+    'time_created'?: any;
 }
 
 export const ServiceAccountTypeEnum = {
@@ -2095,16 +738,16 @@ export type ServiceAccountTypeEnum = typeof ServiceAccountTypeEnum[keyof typeof 
 export interface ServiceAccountIn {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccountIn
      */
     'type': ServiceAccountInTypeEnum;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof ServiceAccountIn
      */
-    'clientId': string;
+    'clientId': any;
 }
 
 export const ServiceAccountInTypeEnum = {
@@ -2127,41 +770,16 @@ export interface ServiceAccountInGroupResponse {
     'meta'?: PaginationMeta;
     /**
      * The links object for this particular response will be empty, since there is no pagination available for the query parameter
-     * @type {object}
+     * @type {any}
      * @memberof ServiceAccountInGroupResponse
      */
-    'links'?: object;
+    'links'?: any;
     /**
      * Object which indicates whether the given service account UUIDs in the query parameter are present in the specified group or not
-     * @type {{ [key: string]: boolean; }}
+     * @type {{ [key: string]: any; }}
      * @memberof ServiceAccountInGroupResponse
      */
-    'data'?: { [key: string]: boolean; };
-}
-/**
- *
- * @export
- * @interface ServiceAccountPagination
- */
-export interface ServiceAccountPagination {
-    /**
-     *
-     * @type {PaginationMeta}
-     * @memberof ServiceAccountPagination
-     */
-    'meta'?: PaginationMeta;
-    /**
-     *
-     * @type {PaginationLinks}
-     * @memberof ServiceAccountPagination
-     */
-    'links'?: PaginationLinks;
-    /**
-     *
-     * @type {Array<ServiceAccount>}
-     * @memberof ServiceAccountPagination
-     */
-    'data': Array<ServiceAccount>;
+    'data'?: { [key: string]: any; };
 }
 /**
  *
@@ -2171,16 +789,16 @@ export interface ServiceAccountPagination {
 export interface Status {
     /**
      *
-     * @type {number}
+     * @type {any}
      * @memberof Status
      */
-    'api_version': number;
+    'api_version': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Status
      */
-    'commit'?: string;
+    'commit'?: any;
 }
 /**
  *
@@ -2190,16 +808,16 @@ export interface Status {
 export interface Timestamped {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Timestamped
      */
-    'created': string;
+    'created': any;
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof Timestamped
      */
-    'modified': string;
+    'modified': any;
 }
 /**
  *
@@ -2209,8 +827,8 @@ export interface Timestamped {
 export interface UUID {
     /**
      *
-     * @type {string}
+     * @type {any}
      * @memberof UUID
      */
-    'uuid': string;
+    'uuid': any;
 }

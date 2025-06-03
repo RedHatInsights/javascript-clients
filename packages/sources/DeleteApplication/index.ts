@@ -24,7 +24,7 @@ export type DeleteApplicationParams = {
 export type DeleteApplicationReturnType = AxiosPromise<void>;
 
 const isDeleteApplicationObjectParams = (params: [DeleteApplicationParams] | unknown[]): params is [DeleteApplicationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Deletes a Application object

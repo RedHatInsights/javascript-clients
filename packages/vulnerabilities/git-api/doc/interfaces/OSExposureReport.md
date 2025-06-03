@@ -16,7 +16,7 @@ OSExposureReport
 
 ### data
 
-• **data**: [`OSExposureReportData`](OSExposureReportData.md)[]
+• **data**: `string` \| `object`[]
 
 **`Memberof`**
 

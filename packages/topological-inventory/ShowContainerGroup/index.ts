@@ -24,7 +24,7 @@ export type ShowContainerGroupParams = {
 export type ShowContainerGroupReturnType = AxiosPromise<ContainerGroup>;
 
 const isShowContainerGroupObjectParams = (params: [ShowContainerGroupParams] | unknown[]): params is [ShowContainerGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ContainerGroup object

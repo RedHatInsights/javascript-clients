@@ -24,7 +24,7 @@ export type GetPlaybookParams = {
 export type GetPlaybookReturnType = AxiosPromise<object>;
 
 const isGetPlaybookObjectParams = (params: [GetPlaybookParams] | unknown[]): params is [GetPlaybookParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'profileId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'profileId')
 }
 /**
 * Constructs and returns a Ansible playbook suitable to configure a host for the requested profile.

@@ -48,7 +48,7 @@ export type ListSubscriptionOrchestrationStacksParams = {
 export type ListSubscriptionOrchestrationStacksReturnType = AxiosPromise<OrchestrationStacksCollection>;
 
 const isListSubscriptionOrchestrationStacksObjectParams = (params: [ListSubscriptionOrchestrationStacksParams] | unknown[]): params is [ListSubscriptionOrchestrationStacksParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of OrchestrationStack objects

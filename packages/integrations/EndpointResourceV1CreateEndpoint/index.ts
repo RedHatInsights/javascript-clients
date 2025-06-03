@@ -24,7 +24,7 @@ export type EndpointResourceV1CreateEndpointParams = {
 export type EndpointResourceV1CreateEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isEndpointResourceV1CreateEndpointObjectParams = (params: [EndpointResourceV1CreateEndpointParams] | unknown[]): params is [EndpointResourceV1CreateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpoint')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
 }
 /**
 * Creates a new endpoint by providing data such as a description, a name, and the endpoint properties. Use this endpoint to create endpoints for integration with third-party services such as webhooks, Slack, or Google Chat.

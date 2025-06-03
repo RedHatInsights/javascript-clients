@@ -24,7 +24,7 @@ export type AutosubexclusionRetrieveParams = {
 export type AutosubexclusionRetrieveReturnType = AxiosPromise<SubscriptionExcludedAccount>;
 
 const isAutosubexclusionRetrieveObjectParams = (params: [AutosubexclusionRetrieveParams] | unknown[]): params is [AutosubexclusionRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'orgId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'orgId')
 }
 /**
 * Returns an individual subscription exclusion based on org_id.  This returns an individual subscription exclusion based on the org_id.

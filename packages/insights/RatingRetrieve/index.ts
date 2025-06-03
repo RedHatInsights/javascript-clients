@@ -24,7 +24,7 @@ export type RatingRetrieveParams = {
 export type RatingRetrieveReturnType = AxiosPromise<RuleRating>;
 
 const isRatingRetrieveObjectParams = (params: [RatingRetrieveParams] | unknown[]): params is [RatingRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'rule')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'rule')
 }
 /**
 * Retrieve the ratings for a single rule, by Insights Rule ID

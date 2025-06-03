@@ -14,23 +14,23 @@ import type { Application } from '../types';
 export type NotificationResourceV2GetApplicationByNameAndBundleNameParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetApplicationByNameAndBundleNameApi
   */
-  applicationName: string,
+  applicationName: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetApplicationByNameAndBundleNameApi
   */
-  bundleName: string,
+  bundleName: any,
   options?: AxiosRequestConfig
 }
 
 export type NotificationResourceV2GetApplicationByNameAndBundleNameReturnType = AxiosPromise<Application>;
 
 const isNotificationResourceV2GetApplicationByNameAndBundleNameObjectParams = (params: [NotificationResourceV2GetApplicationByNameAndBundleNameParams] | unknown[]): params is [NotificationResourceV2GetApplicationByNameAndBundleNameParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'applicationName') && Object.prototype.hasOwnProperty.call(params, 'bundleName')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'applicationName') && Object.prototype.hasOwnProperty.call(params[0], 'bundleName')
 }
 /**
 * Retrieves an application by bundle and application names. Use this endpoint to  find an application by searching for the bundle that the application is part of. This is useful if you do not know the UUID of the bundle or application.
@@ -39,7 +39,7 @@ const isNotificationResourceV2GetApplicationByNameAndBundleNameObjectParams = (p
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetApplicationByNameAndBundleNameParamCreator = async (...config: ([NotificationResourceV2GetApplicationByNameAndBundleNameParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetApplicationByNameAndBundleNameParamCreator = async (...config: ([NotificationResourceV2GetApplicationByNameAndBundleNameParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetApplicationByNameAndBundleNameObjectParams(config) ? config[0] : ['applicationName', 'bundleName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetApplicationByNameAndBundleNameParams;
     const { applicationName, bundleName, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleName}/applications/{applicationName}`

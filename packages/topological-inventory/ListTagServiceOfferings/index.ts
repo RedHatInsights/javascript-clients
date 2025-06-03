@@ -48,7 +48,7 @@ export type ListTagServiceOfferingsParams = {
 export type ListTagServiceOfferingsReturnType = AxiosPromise<ServiceOfferingsCollection>;
 
 const isListTagServiceOfferingsObjectParams = (params: [ListTagServiceOfferingsParams] | unknown[]): params is [ListTagServiceOfferingsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ServiceOffering objects

@@ -24,7 +24,7 @@ export type GenerateParams = {
 export type GenerateReturnType = AxiosPromise<string>;
 
 const isGenerateObjectParams = (params: [GenerateParams] | unknown[]): params is [GenerateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'playbookDefinition')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'playbookDefinition')
 }
 /**
 * Generates an Ansible Playbook based on input parameters

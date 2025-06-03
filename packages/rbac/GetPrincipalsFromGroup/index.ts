@@ -8,40 +8,40 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { GetPrincipalsFromGroup200Response } from '../types';
+import type {  } from '../types';
 
 
 export type GetPrincipalsFromGroupParams = {
   /**
   * ID of group from which to get principals
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Get only admin users within an account.
-  * @type { boolean }
+  * @type { GetPrincipalsFromGroupAdminOnlyEnum }
   * @memberof GetPrincipalsFromGroupApi
   */
-  adminOnly?: boolean,
+  adminOnly?: GetPrincipalsFromGroupAdminOnlyEnum,
   /**
   * Parameter for filtering group principals by principal `username` using string contains search.
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  principalUsername?: string,
+  principalUsername?: any,
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Parameter for ordering principals by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-username
   * @type { GetPrincipalsFromGroupOrderByEnum }
@@ -50,10 +50,10 @@ export type GetPrincipalsFromGroupParams = {
   orderBy?: GetPrincipalsFromGroupOrderByEnum,
   /**
   * Parameter for optionally returning only usernames for principals, bypassing a call to IT.
-  * @type { boolean }
+  * @type { GetPrincipalsFromGroupUsernameOnlyEnum }
   * @memberof GetPrincipalsFromGroupApi
   */
-  usernameOnly?: boolean,
+  usernameOnly?: GetPrincipalsFromGroupUsernameOnlyEnum,
   /**
   * Parameter for selecting the type of principal to be returned.
   * @type { GetPrincipalsFromGroupPrincipalTypeEnum }
@@ -62,24 +62,33 @@ export type GetPrincipalsFromGroupParams = {
   principalType?: GetPrincipalsFromGroupPrincipalTypeEnum,
   /**
   * By specifying a comma separated list of client IDs with this query parameter, RBAC will return an object with the specified client ID and it\'s matching boolean value to flag whether the client ID is present in the group or not. This query parameter cannot be used along with any other query parameter.
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  serviceAccountClientIds?: string,
+  serviceAccountClientIds?: any,
   /**
   * Parameter for filtering the service accounts by their description.
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  serviceAccountDescription?: string,
+  serviceAccountDescription?: any,
   /**
   * Parameter for filtering the service accounts by their name.
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalsFromGroupApi
   */
-  serviceAccountName?: string,
+  serviceAccountName?: any,
   options?: AxiosRequestConfig
 }
+/**
+  * @export
+  * @enum {string}
+  */
+export const GetPrincipalsFromGroupAdminOnlyEnum = {
+    True: 'true',
+    False: 'false'
+} as const;
+export type GetPrincipalsFromGroupAdminOnlyEnum = typeof GetPrincipalsFromGroupAdminOnlyEnum[keyof typeof GetPrincipalsFromGroupAdminOnlyEnum];
 /**
   * @export
   * @enum {string}
@@ -92,16 +101,26 @@ export type GetPrincipalsFromGroupOrderByEnum = typeof GetPrincipalsFromGroupOrd
   * @export
   * @enum {string}
   */
+export const GetPrincipalsFromGroupUsernameOnlyEnum = {
+    True: 'true',
+    False: 'false'
+} as const;
+export type GetPrincipalsFromGroupUsernameOnlyEnum = typeof GetPrincipalsFromGroupUsernameOnlyEnum[keyof typeof GetPrincipalsFromGroupUsernameOnlyEnum];
+/**
+  * @export
+  * @enum {string}
+  */
 export const GetPrincipalsFromGroupPrincipalTypeEnum = {
     ServiceAccount: 'service-account',
-    User: 'user'
+    User: 'user',
+    All: 'all'
 } as const;
 export type GetPrincipalsFromGroupPrincipalTypeEnum = typeof GetPrincipalsFromGroupPrincipalTypeEnum[keyof typeof GetPrincipalsFromGroupPrincipalTypeEnum];
 
-export type GetPrincipalsFromGroupReturnType = AxiosPromise<GetPrincipalsFromGroup200Response>;
+export type GetPrincipalsFromGroupReturnType = AxiosPromise<any>;
 
 const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupParams] | unknown[]): params is [GetPrincipalsFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * By default, responses are sorted in ascending order by username
@@ -110,7 +129,7 @@ const isGetPrincipalsFromGroupObjectParams = (params: [GetPrincipalsFromGroupPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPrincipalsFromGroupParamCreator = async (...config: ([GetPrincipalsFromGroupParams] | [string, boolean, string, number, number, GetPrincipalsFromGroupOrderByEnum, boolean, GetPrincipalsFromGroupPrincipalTypeEnum, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPrincipalsFromGroupParamCreator = async (...config: ([GetPrincipalsFromGroupParams] | [any, GetPrincipalsFromGroupAdminOnlyEnum, any, any, any, GetPrincipalsFromGroupOrderByEnum, GetPrincipalsFromGroupUsernameOnlyEnum, GetPrincipalsFromGroupPrincipalTypeEnum, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetPrincipalsFromGroupObjectParams(config) ? config[0] : ['uuid', 'adminOnly', 'principalUsername', 'limit', 'offset', 'orderBy', 'usernameOnly', 'principalType', 'serviceAccountClientIds', 'serviceAccountDescription', 'serviceAccountName', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPrincipalsFromGroupParams;
     const { uuid, adminOnly, principalUsername, limit, offset, orderBy, usernameOnly, principalType, serviceAccountClientIds, serviceAccountDescription, serviceAccountName, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`

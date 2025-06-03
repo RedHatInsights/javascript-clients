@@ -74,40 +74,40 @@ export type ListAdvisorySystemsIdsParams = {
   filterLastUpload?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterRhsaCount?: string,
+  filterRhsaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterRhbaCount?: string,
+  filterRhbaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterRheaCount?: string,
+  filterRheaCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterOtherCount?: string,
+  filterOtherCount?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterSatelliteManaged?: string,
+  filterSatelliteManaged?: boolean,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterStale?: string,
+  filterStale?: boolean,
   /**
   * Filter
   * @type { string }
@@ -158,10 +158,10 @@ export type ListAdvisorySystemsIdsParams = {
   filterOs?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { boolean }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterBuiltPkgcache?: string,
+  filterBuiltPkgcache?: boolean,
   /**
   * Tag filter
   * @type { Array<string> }
@@ -176,10 +176,10 @@ export type ListAdvisorySystemsIdsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListAdvisorySystemsIdsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -234,7 +234,7 @@ export type ListAdvisorySystemsIdsSortEnum = typeof ListAdvisorySystemsIdsSortEn
 export type ListAdvisorySystemsIdsReturnType = AxiosPromise<ControllersIDsStatusResponse>;
 
 const isListAdvisorySystemsIdsObjectParams = (params: [ListAdvisorySystemsIdsParams] | unknown[]): params is [ListAdvisorySystemsIdsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'advisoryId') && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId') && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Show me systems on which the given advisory is applicable
@@ -243,7 +243,7 @@ const isListAdvisorySystemsIdsObjectParams = (params: [ListAdvisorySystemsIdsPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listAdvisorySystemsIdsParamCreator = async (...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listAdvisorySystemsIdsParamCreator = async (...config: ([ListAdvisorySystemsIdsParams] | [string, number, number, ListAdvisorySystemsIdsSortEnum, string, string, string, string, string, string, number, number, number, number, boolean, boolean, string, string, string, string, string, string, string, string, boolean, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListAdvisorySystemsIdsObjectParams(config) ? config[0] : ['advisoryId', 'limit', 'offset', 'sort', 'search', 'filterId', 'filterInsightsId', 'filterDisplayName', 'filterLastEvaluation', 'filterLastUpload', 'filterRhsaCount', 'filterRhbaCount', 'filterRheaCount', 'filterOtherCount', 'filterSatelliteManaged', 'filterStale', 'filterStaleTimestamp', 'filterStaleWarningTimestamp', 'filterCulledTimestamp', 'filterCreated', 'filterOsname', 'filterOsminor', 'filterOsmajor', 'filterOs', 'filterBuiltPkgcache', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListAdvisorySystemsIdsParams;
     const { advisoryId, limit, offset, sort, search, filterId, filterInsightsId, filterDisplayName, filterLastEvaluation, filterLastUpload, filterRhsaCount, filterRhbaCount, filterRheaCount, filterOtherCount, filterSatelliteManaged, filterStale, filterStaleTimestamp, filterStaleWarningTimestamp, filterCulledTimestamp, filterCreated, filterOsname, filterOsminor, filterOsmajor, filterOs, filterBuiltPkgcache, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/ids/advisories/{advisory_id}/systems`

@@ -8,28 +8,28 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, GroupPagination } from '../types';
+import type { Error403 } from '../types';
 
 
 export type ListGroupsParams = {
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Parameter for filtering resource by name using string contains search.
-  * @type { string }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  name?: string,
+  name?: any,
   /**
   * Parameter for specifying the matching criteria for an object\'s name or display_name.
   * @type { ListGroupsNameMatchEnum }
@@ -44,28 +44,28 @@ export type ListGroupsParams = {
   scope?: ListGroupsScopeEnum,
   /**
   * A username for a principal to filter for groups
-  * @type { string }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  username?: string,
+  username?: any,
   /**
   * A username for a principal to filter for groups where principal is not a member and can be added manually
-  * @type { string }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  excludeUsername?: string,
+  excludeUsername?: any,
   /**
   * A list of UUIDs to filter listed groups.
-  * @type { Array<string> }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  uuid?: Array<string>,
+  uuid?: any,
   /**
   * List of role name to filter for groups. It is exact match but case-insensitive
-  * @type { Array<string> }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  roleNames?: Array<string>,
+  roleNames?: any,
   /**
   * Discriminator that works with role_names to indicate matching all/any of the role names
   * @type { ListGroupsRoleDiscriminatorEnum }
@@ -80,22 +80,22 @@ export type ListGroupsParams = {
   orderBy?: ListGroupsOrderByEnum,
   /**
   * An optional flag to return either platform default or non-platform default groups.
-  * @type { boolean }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  platformDefault?: boolean,
+  platformDefault?: any,
   /**
   * An optional flag to return either admin default or non-admin default groups.
-  * @type { boolean }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  adminDefault?: boolean,
+  adminDefault?: any,
   /**
   * An optional flag to return either system or non-system groups.
-  * @type { boolean }
+  * @type { any }
   * @memberof ListGroupsApi
   */
-  system?: boolean,
+  system?: any,
   options?: AxiosRequestConfig
 }
 /**
@@ -137,7 +137,7 @@ export const ListGroupsOrderByEnum = {
 } as const;
 export type ListGroupsOrderByEnum = typeof ListGroupsOrderByEnum[keyof typeof ListGroupsOrderByEnum];
 
-export type ListGroupsReturnType = AxiosPromise<GroupPagination>;
+export type ListGroupsReturnType = AxiosPromise<any>;
 
 const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): params is [ListGroupsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
@@ -149,7 +149,7 @@ const isListGroupsObjectParams = (params: [ListGroupsParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [number, number, string, ListGroupsNameMatchEnum, ListGroupsScopeEnum, string, string, Array<string>, Array<string>, ListGroupsRoleDiscriminatorEnum, ListGroupsOrderByEnum, boolean, boolean, boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [any, any, any, ListGroupsNameMatchEnum, ListGroupsScopeEnum, any, any, any, any, ListGroupsRoleDiscriminatorEnum, ListGroupsOrderByEnum, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListGroupsObjectParams(config) ? config[0] : ['limit', 'offset', 'name', 'nameMatch', 'scope', 'username', 'excludeUsername', 'uuid', 'roleNames', 'roleDiscriminator', 'orderBy', 'platformDefault', 'adminDefault', 'system', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListGroupsParams;
     const { limit, offset, name, nameMatch, scope, username, excludeUsername, uuid, roleNames, roleDiscriminator, orderBy, platformDefault, adminDefault, system, options = {} } = params;
     const localVarPath = `/groups/`;
@@ -187,12 +187,12 @@ export const listGroupsParamCreator = async (...config: ([ListGroupsParams] | [n
         localVarQueryParameter['exclude_username'] = excludeUsername;
     }
 
-    if (uuid) {
-        localVarQueryParameter['uuid'] = uuid.join(COLLECTION_FORMATS.csv);
+    if (uuid !== undefined) {
+        localVarQueryParameter['uuid'] = uuid;
     }
 
-    if (roleNames) {
-        localVarQueryParameter['role_names'] = roleNames.join(COLLECTION_FORMATS.csv);
+    if (roleNames !== undefined) {
+        localVarQueryParameter['role_names'] = roleNames;
     }
 
     if (roleDiscriminator !== undefined) {

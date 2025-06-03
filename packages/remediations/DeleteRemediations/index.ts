@@ -24,7 +24,7 @@ export type DeleteRemediationsParams = {
 export type DeleteRemediationsReturnType = AxiosPromise<MultipleDelete>;
 
 const isDeleteRemediationsObjectParams = (params: [DeleteRemediationsParams] | unknown[]): params is [DeleteRemediationsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'remediationsList')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'remediationsList')
 }
 /**
 * Removes the given list of Remediations.  Requests containing malformed remediation IDs are rejected.  Duplicate or missing IDs are ignored. RBAC permission {remediations:remediation:write}

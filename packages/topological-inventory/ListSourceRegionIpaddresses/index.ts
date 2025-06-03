@@ -48,7 +48,7 @@ export type ListSourceRegionIpaddressesParams = {
 export type ListSourceRegionIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
 
 const isListSourceRegionIpaddressesObjectParams = (params: [ListSourceRegionIpaddressesParams] | unknown[]): params is [ListSourceRegionIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Ipaddress objects

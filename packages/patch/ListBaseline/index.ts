@@ -86,6 +86,7 @@ const isListBaselineObjectParams = (params: [ListBaselineParams] | unknown[]): p
 * @summary Show me all baselines for all my systems
 * @param {ListBaselineParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const listBaselineParamCreator = async (...config: ([ListBaselineParams] | [number, number, ListBaselineSortEnum, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {

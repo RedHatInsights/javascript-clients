@@ -101,6 +101,8 @@ export type RuleSystemsRetrieveFormatEnum = typeof RuleSystemsRetrieveFormatEnum
   */
 export const RuleSystemsRetrieveRhelVersionEnum = {
     _100: '10.0',
+    _101: '10.1',
+    _102: '10.2',
     _60: '6.0',
     _61: '6.1',
     _610: '6.10',
@@ -140,7 +142,9 @@ export const RuleSystemsRetrieveRhelVersionEnum = {
     _93: '9.3',
     _94: '9.4',
     _95: '9.5',
-    _96: '9.6'
+    _96: '9.6',
+    _97: '9.7',
+    _98: '9.8'
 } as const;
 export type RuleSystemsRetrieveRhelVersionEnum = typeof RuleSystemsRetrieveRhelVersionEnum[keyof typeof RuleSystemsRetrieveRhelVersionEnum];
 /**
@@ -173,7 +177,7 @@ export type RuleSystemsRetrieveUpdateMethodEnum = typeof RuleSystemsRetrieveUpda
 export type RuleSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
 
 const isRuleSystemsRetrieveObjectParams = (params: [RuleSystemsRetrieveParams] | unknown[]): params is [RuleSystemsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * List all systems affected by this rule.  All systems owned by the user\'s account, with a current upload reporting the given rule, are listed.  Systems are simply listed by Insights Inventory UUID.

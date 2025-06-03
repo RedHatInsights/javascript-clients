@@ -8,67 +8,68 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { NotificationHistory } from '../types';
+import type {  } from '../types';
 
 
 export type EndpointResourceV1GetEndpointHistoryParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  id: string,
+  id: any,
   /**
   * Number of items per page, if not specified or 0 is used, returns a maximum of 500 elements.
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Page number. Starts at first page (0), if not specified starts at first page.
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   * Include the detail in the reply
-  * @type { boolean }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  includeDetail?: boolean,
+  includeDetail?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1GetEndpointHistoryApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1GetEndpointHistoryReturnType = AxiosPromise<Array<NotificationHistory>>;
+export type EndpointResourceV1GetEndpointHistoryReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV1GetEndpointHistoryObjectParams = (params: [EndpointResourceV1GetEndpointHistoryParams] | unknown[]): params is [EndpointResourceV1GetEndpointHistoryParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true && true && true
 }
 /**
-* Get Endpoint History
+*
+* @summary Get Endpoint History
 * @param {EndpointResourceV1GetEndpointHistoryParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1GetEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetEndpointHistoryParams] | [string, number, number, boolean, number, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1GetEndpointHistoryParamCreator = async (...config: ([EndpointResourceV1GetEndpointHistoryParams] | [any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV1GetEndpointHistoryObjectParams(config) ? config[0] : ['id', 'limit', 'pageNumber', 'includeDetail', 'offset', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1GetEndpointHistoryParams;
     const { id, limit, pageNumber, includeDetail, offset, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/endpoints/{id}/history`

@@ -36,13 +36,14 @@ export type CreateTailoringParams = {
 export type CreateTailoringReturnType = AxiosPromise<CreateTailoring201Response>;
 
 const isCreateTailoringObjectParams = (params: [CreateTailoringParams] | unknown[]): params is [CreateTailoringParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true && true
 }
 /**
 * Create a Tailoring with the provided attributes (for ImageBuilder only)
 * @summary Create a Tailoring
 * @param {CreateTailoringParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const createTailoringParamCreator = async (...config: ([CreateTailoringParams] | [any, any, TailoringCreate, AxiosRequestConfig])): Promise<RequestArgs> => {

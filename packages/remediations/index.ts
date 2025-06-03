@@ -12,6 +12,10 @@ export { default as deleteRemediationIssue, DeleteRemediationIssueReturnType } f
 
 export { default as deleteRemediationIssueSystem, DeleteRemediationIssueSystemReturnType } from './DeleteRemediationIssueSystem'
 
+export { default as deleteRemediationIssues, DeleteRemediationIssuesReturnType } from './DeleteRemediationIssues'
+
+export { default as deleteRemediationSystems, DeleteRemediationSystemsReturnType } from './DeleteRemediationSystems'
+
 export { default as deleteRemediations, DeleteRemediationsReturnType } from './DeleteRemediations'
 
 export { default as downloadPlaybooks, DownloadPlaybooksReturnType } from './DownloadPlaybooks'
@@ -32,7 +36,11 @@ export { default as getRemediationConnectionStatus, GetRemediationConnectionStat
 
 export { default as getRemediationIssueSystems, GetRemediationIssueSystemsReturnType } from './GetRemediationIssueSystems'
 
+export { default as getRemediationIssues, GetRemediationIssuesReturnType } from './GetRemediationIssues'
+
 export { default as getRemediationPlaybook, GetRemediationPlaybookReturnType } from './GetRemediationPlaybook'
+
+export { default as getRemediationSystems, GetRemediationSystemsReturnType } from './GetRemediationSystems'
 
 export { default as getRemediations, GetRemediationsReturnType } from './GetRemediations'
 

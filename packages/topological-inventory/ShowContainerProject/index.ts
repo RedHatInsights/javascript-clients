@@ -24,7 +24,7 @@ export type ShowContainerProjectParams = {
 export type ShowContainerProjectReturnType = AxiosPromise<ContainerProject>;
 
 const isShowContainerProjectObjectParams = (params: [ShowContainerProjectParams] | unknown[]): params is [ShowContainerProjectParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ContainerProject object

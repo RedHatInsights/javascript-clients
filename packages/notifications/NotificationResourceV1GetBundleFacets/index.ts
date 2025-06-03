@@ -8,20 +8,20 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Facet } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV1GetBundleFacetsParams = {
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof NotificationResourceV1GetBundleFacetsApi
   */
-  includeApplications?: boolean,
+  includeApplications?: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV1GetBundleFacetsReturnType = AxiosPromise<Array<Facet>>;
+export type NotificationResourceV1GetBundleFacetsReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV1GetBundleFacetsObjectParams = (params: [NotificationResourceV1GetBundleFacetsParams] | unknown[]): params is [NotificationResourceV1GetBundleFacetsParams] => {
   return params.length === 1 && true
@@ -33,7 +33,7 @@ const isNotificationResourceV1GetBundleFacetsObjectParams = (params: [Notificati
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetBundleFacetsParamCreator = async (...config: ([NotificationResourceV1GetBundleFacetsParams] | [boolean, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetBundleFacetsParamCreator = async (...config: ([NotificationResourceV1GetBundleFacetsParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetBundleFacetsObjectParams(config) ? config[0] : ['includeApplications', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetBundleFacetsParams;
     const { includeApplications, options = {} } = params;
     const localVarPath = `/notifications/facets/bundles`;

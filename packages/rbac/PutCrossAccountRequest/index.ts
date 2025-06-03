@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CrossAccountRequestDetail, CrossAccountRequestOut, CrossAccountRequestUpdateIn, Error403 } from '../types';
+import type { CrossAccountRequestUpdateIn, Error403 } from '../types';
 
 
 export type PutCrossAccountRequestParams = {
   /**
   * ID of cross account request to get
-  * @type { string }
+  * @type { any }
   * @memberof PutCrossAccountRequestApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Updates to CrossAccountRequest
   * @type { CrossAccountRequestUpdateIn }
@@ -27,10 +27,10 @@ export type PutCrossAccountRequestParams = {
   options?: AxiosRequestConfig
 }
 
-export type PutCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type PutCrossAccountRequestReturnType = AxiosPromise<any>;
 
 const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestParams] | unknown[]): params is [PutCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestUpdateIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestUpdateIn')
 }
 /**
 * For TAM requestor to update the start_date/end_date/roles of an existing cross account request.
@@ -39,7 +39,7 @@ const isPutCrossAccountRequestObjectParams = (params: [PutCrossAccountRequestPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const putCrossAccountRequestParamCreator = async (...config: ([PutCrossAccountRequestParams] | [string, CrossAccountRequestUpdateIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const putCrossAccountRequestParamCreator = async (...config: ([PutCrossAccountRequestParams] | [any, CrossAccountRequestUpdateIn, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isPutCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'crossAccountRequestUpdateIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PutCrossAccountRequestParams;
     const { uuid, crossAccountRequestUpdateIn, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`

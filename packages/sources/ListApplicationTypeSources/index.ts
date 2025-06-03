@@ -48,7 +48,7 @@ export type ListApplicationTypeSourcesParams = {
 export type ListApplicationTypeSourcesReturnType = AxiosPromise<SourcesCollection>;
 
 const isListApplicationTypeSourcesObjectParams = (params: [ListApplicationTypeSourcesParams] | unknown[]): params is [ListApplicationTypeSourcesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Source objects

@@ -9,6 +9,7 @@ DeleteGroup/index.ts
 DeletePrincipalFromGroup/index.ts
 DeleteRole/index.ts
 DeleteRoleFromGroup/index.ts
+GetAuditlogs/index.ts
 GetCrossAccountRequest/index.ts
 GetGroup/index.ts
 GetPrincipalAccess/index.ts

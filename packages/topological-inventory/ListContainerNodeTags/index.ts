@@ -48,7 +48,7 @@ export type ListContainerNodeTagsParams = {
 export type ListContainerNodeTagsReturnType = AxiosPromise<TagsCollection>;
 
 const isListContainerNodeTagsObjectParams = (params: [ListContainerNodeTagsParams] | unknown[]): params is [ListContainerNodeTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Tag objects

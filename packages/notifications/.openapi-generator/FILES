@@ -1,8 +1,8 @@
 .gitignore
 .npmignore
-DrawerResourceV1GetDrawerEntries/index.ts
-DrawerResourceV1UpdateNotificationReadStatus/index.ts
-EventResourceV1GetEvents/index.ts
+DrawerResourceGetDrawerEntries/index.ts
+DrawerResourceUpdateNotificationReadStatus/index.ts
+EventResourceGetEvents/index.ts
 NotificationResourceV1AppendBehaviorGroupToEventType/index.ts
 NotificationResourceV1CreateBehaviorGroup/index.ts
 NotificationResourceV1DeleteBehaviorGroup/index.ts
@@ -21,8 +21,8 @@ NotificationResourceV1UpdateBehaviorGroup/index.ts
 NotificationResourceV1UpdateBehaviorGroupActions/index.ts
 NotificationResourceV1UpdateEventTypeBehaviors/index.ts
 NotificationResourceV1UpdateEventTypeEndpoints/index.ts
-OrgConfigResourceV1GetDailyDigestTimePreference/index.ts
-OrgConfigResourceV1SaveDailyDigestTimePreference/index.ts
+OrgConfigResourceGetDailyDigestTimePreference/index.ts
+OrgConfigResourceSaveDailyDigestTimePreference/index.ts
 api.ts
 git_push.sh
 index.ts

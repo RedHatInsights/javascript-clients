@@ -24,7 +24,7 @@ export type WeeklyreportsubscriptionCreateParams = {
 export type WeeklyreportsubscriptionCreateReturnType = AxiosPromise<WeeklyReportSubscription>;
 
 const isWeeklyreportsubscriptionCreateObjectParams = (params: [WeeklyreportsubscriptionCreateParams] | unknown[]): params is [WeeklyreportsubscriptionCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'weeklyReportSubscription')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'weeklyReportSubscription')
 }
 /**
 * Set the subscription status of the current user to the supplied `is_subscribed` value.  If \'is_subscribed\' is true, a subscription is added if it doesn\'t already exist.  If it is false, the subscription is removed if it exists.

@@ -14,10 +14,10 @@ import type { Endpoint } from '../types';
 export type EndpointResourceV2UpdateEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2UpdateEndpointApi
   */
-  id: string,
+  id: any,
   /**
   *
   * @type { Endpoint }
@@ -27,10 +27,10 @@ export type EndpointResourceV2UpdateEndpointParams = {
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV2UpdateEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV2UpdateEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV2UpdateEndpointObjectParams = (params: [EndpointResourceV2UpdateEndpointParams] | unknown[]): params is [EndpointResourceV2UpdateEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'endpoint')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'endpoint')
 }
 /**
 * Updates the endpoint configuration. Use this to update an existing endpoint. Any changes to the endpoint take place immediately.
@@ -39,7 +39,7 @@ const isEndpointResourceV2UpdateEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2UpdateEndpointParamCreator = async (...config: ([EndpointResourceV2UpdateEndpointParams] | [string, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2UpdateEndpointParamCreator = async (...config: ([EndpointResourceV2UpdateEndpointParams] | [any, Endpoint, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2UpdateEndpointObjectParams(config) ? config[0] : ['id', 'endpoint', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2UpdateEndpointParams;
     const { id, endpoint, options = {} } = params;
     const localVarPath = `/endpoints/{id}`

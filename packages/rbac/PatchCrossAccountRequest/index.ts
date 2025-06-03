@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CrossAccountRequestDetail, CrossAccountRequestOut, CrossAccountRequestPatch, Error403 } from '../types';
+import type { CrossAccountRequestPatch, Error403 } from '../types';
 
 
 export type PatchCrossAccountRequestParams = {
   /**
   * ID of cross account request to get
-  * @type { string }
+  * @type { any }
   * @memberof PatchCrossAccountRequestApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Updates to CrossAccountRequest
   * @type { CrossAccountRequestPatch }
@@ -27,10 +27,10 @@ export type PatchCrossAccountRequestParams = {
   options?: AxiosRequestConfig
 }
 
-export type PatchCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type PatchCrossAccountRequestReturnType = AxiosPromise<any>;
 
 const isPatchCrossAccountRequestObjectParams = (params: [PatchCrossAccountRequestParams] | unknown[]): params is [PatchCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestPatch')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestPatch')
 }
 /**
 * Patch the start_date/end_date/roles of an existing request. Could be used by TAM requestor to cancel request or target account admin to approve/deny request.
@@ -39,7 +39,7 @@ const isPatchCrossAccountRequestObjectParams = (params: [PatchCrossAccountReques
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const patchCrossAccountRequestParamCreator = async (...config: ([PatchCrossAccountRequestParams] | [string, CrossAccountRequestPatch, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const patchCrossAccountRequestParamCreator = async (...config: ([PatchCrossAccountRequestParams] | [any, CrossAccountRequestPatch, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isPatchCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'crossAccountRequestPatch', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PatchCrossAccountRequestParams;
     const { uuid, crossAccountRequestPatch, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`

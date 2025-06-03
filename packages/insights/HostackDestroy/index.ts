@@ -24,7 +24,7 @@ export type HostackDestroyParams = {
 export type HostackDestroyReturnType = AxiosPromise<string>;
 
 const isHostackDestroyObjectParams = (params: [HostackDestroyParams] | unknown[]): params is [HostackDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Delete an acknowledgement for a rule, for a system, for an account, by its ID.  Takes the hostack ID (given in the hostack list) as an identifier.

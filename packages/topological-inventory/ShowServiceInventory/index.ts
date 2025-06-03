@@ -24,7 +24,7 @@ export type ShowServiceInventoryParams = {
 export type ShowServiceInventoryReturnType = AxiosPromise<ServiceInventory>;
 
 const isShowServiceInventoryObjectParams = (params: [ShowServiceInventoryParams] | unknown[]): params is [ShowServiceInventoryParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ServiceInventory object

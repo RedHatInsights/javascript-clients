@@ -44,35 +44,42 @@ export type ExportAdvisoriesParams = {
   filterSynopsis?: string,
   /**
   * Filter
-  * @type { string }
+  * @type { ExportAdvisoriesFilterAdvisoryTypeNameEnum }
   * @memberof ExportAdvisoriesApi
   */
-  filterAdvisoryType?: string,
+  filterAdvisoryTypeName?: ExportAdvisoriesFilterAdvisoryTypeNameEnum,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportAdvisoriesApi
   */
-  filterAdvisoryTypeName?: string,
+  filterSeverity?: number,
   /**
   * Filter
-  * @type { string }
+  * @type { number }
   * @memberof ExportAdvisoriesApi
   */
-  filterSeverity?: string,
-  /**
-  * Filter
-  * @type { string }
-  * @memberof ExportAdvisoriesApi
-  */
-  filterApplicableSystems?: string,
+  filterApplicableSystems?: number,
   options?: AxiosRequestConfig
 }
+/**
+  * @export
+  * @enum {string}
+  */
+export const ExportAdvisoriesFilterAdvisoryTypeNameEnum = {
+    Unknown: 'unknown',
+    Unspecified: 'unspecified',
+    Other: 'other',
+    Enhancement: 'enhancement',
+    Bugfix: 'bugfix',
+    Security: 'security'
+} as const;
+export type ExportAdvisoriesFilterAdvisoryTypeNameEnum = typeof ExportAdvisoriesFilterAdvisoryTypeNameEnum[keyof typeof ExportAdvisoriesFilterAdvisoryTypeNameEnum];
 
 export type ExportAdvisoriesReturnType = AxiosPromise<Array<ControllersAdvisoriesDBLookup>>;
 
 const isExportAdvisoriesObjectParams = (params: [ExportAdvisoriesParams] | unknown[]): params is [ExportAdvisoriesParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true
 }
 /**
 * Export applicable advisories for all my systems. Export endpoints are not paginated.
@@ -81,9 +88,9 @@ const isExportAdvisoriesObjectParams = (params: [ExportAdvisoriesParams] | unkno
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisoriesParams] | [string, string, string, string, string, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isExportAdvisoriesObjectParams(config) ? config[0] : ['search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryType', 'filterAdvisoryTypeName', 'filterSeverity', 'filterApplicableSystems', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportAdvisoriesParams;
-    const { search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryType, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options = {} } = params;
+export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisoriesParams] | [string, string, string, string, string, ExportAdvisoriesFilterAdvisoryTypeNameEnum, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isExportAdvisoriesObjectParams(config) ? config[0] : ['search', 'filterId', 'filterDescription', 'filterPublicDate', 'filterSynopsis', 'filterAdvisoryTypeName', 'filterSeverity', 'filterApplicableSystems', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportAdvisoriesParams;
+    const { search, filterId, filterDescription, filterPublicDate, filterSynopsis, filterAdvisoryTypeName, filterSeverity, filterApplicableSystems, options = {} } = params;
     const localVarPath = `/export/advisories`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -109,10 +116,6 @@ export const exportAdvisoriesParamCreator = async (...config: ([ExportAdvisories
 
     if (filterSynopsis !== undefined) {
         localVarQueryParameter['filter[synopsis]'] = filterSynopsis;
-    }
-
-    if (filterAdvisoryType !== undefined) {
-        localVarQueryParameter['filter[advisory_type]'] = filterAdvisoryType;
     }
 
     if (filterAdvisoryTypeName !== undefined) {

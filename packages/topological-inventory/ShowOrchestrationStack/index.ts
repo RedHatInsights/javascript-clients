@@ -24,7 +24,7 @@ export type ShowOrchestrationStackParams = {
 export type ShowOrchestrationStackReturnType = AxiosPromise<OrchestrationStack>;
 
 const isShowOrchestrationStackObjectParams = (params: [ShowOrchestrationStackParams] | unknown[]): params is [ShowOrchestrationStackParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a OrchestrationStack object

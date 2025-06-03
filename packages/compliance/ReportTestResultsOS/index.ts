@@ -36,7 +36,7 @@ export type ReportTestResultsOSParams = {
 export type ReportTestResultsOSReturnType = AxiosPromise<any>;
 
 const isReportTestResultsOSObjectParams = (params: [ReportTestResultsOSParams] | unknown[]): params is [ReportTestResultsOSParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'reportId') && true && true
 }
 /**
 * This feature is exclusively used by the frontend
