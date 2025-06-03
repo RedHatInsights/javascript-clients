@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { AccessPagination } from '../types';
+import type {  } from '../types';
 
 
 export type GetPrincipalAccessParams = {
   /**
   * The application name(s) to obtain access for the principal. This is an exact match. When no application is supplied, all permissions for the principal are returned. You may also use a comma-separated list to match on multiple applications.
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalAccessApi
   */
-  application: string,
+  application: any,
   /**
   * Unique username of the principal to obtain access for (only available for admins, and if supplied, takes precedence over the identity header).
-  * @type { string }
+  * @type { any }
   * @memberof GetPrincipalAccessApi
   */
-  username?: string,
+  username?: any,
   /**
   * Parameter for ordering roles by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-application
   * @type { GetPrincipalAccessOrderByEnum }
@@ -38,16 +38,16 @@ export type GetPrincipalAccessParams = {
   status?: GetPrincipalAccessStatusEnum,
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof GetPrincipalAccessApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof GetPrincipalAccessApi
   */
-  offset?: number,
+  offset?: any,
   options?: AxiosRequestConfig
 }
 /**
@@ -71,10 +71,10 @@ export const GetPrincipalAccessStatusEnum = {
 } as const;
 export type GetPrincipalAccessStatusEnum = typeof GetPrincipalAccessStatusEnum[keyof typeof GetPrincipalAccessStatusEnum];
 
-export type GetPrincipalAccessReturnType = AxiosPromise<AccessPagination>;
+export type GetPrincipalAccessReturnType = AxiosPromise<any>;
 
 const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | unknown[]): params is [GetPrincipalAccessParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'application') && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'application') && true && true && true && true && true
 }
 /**
 * Access responses are sorted in ascending order by an ID internal to the database
@@ -83,7 +83,7 @@ const isGetPrincipalAccessObjectParams = (params: [GetPrincipalAccessParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getPrincipalAccessParamCreator = async (...config: ([GetPrincipalAccessParams] | [string, string, GetPrincipalAccessOrderByEnum, GetPrincipalAccessStatusEnum, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getPrincipalAccessParamCreator = async (...config: ([GetPrincipalAccessParams] | [any, any, GetPrincipalAccessOrderByEnum, GetPrincipalAccessStatusEnum, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetPrincipalAccessObjectParams(config) ? config[0] : ['application', 'username', 'orderBy', 'status', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetPrincipalAccessParams;
     const { application, username, orderBy, status, limit, offset, options = {} } = params;
     const localVarPath = `/access/`;

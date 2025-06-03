@@ -42,10 +42,10 @@ export type UnassignRuleParams = {
 export type UnassignRuleReturnType = AxiosPromise<void>;
 
 const isUnassignRuleObjectParams = (params: [UnassignRuleParams] | unknown[]): params is [UnassignRuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && true
 }
 /**
-* Unassigns a Rule from a Tailoring
+* Use this to remove a rule from your tailoring.
 * @summary Unassign a Rule from a Tailoring
 * @param {UnassignRuleParams} config with all available params.
 * @param {*} [options] Override http request option.

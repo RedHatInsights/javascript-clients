@@ -30,10 +30,10 @@ export type SystemParams = {
 export type SystemReturnType = AxiosPromise<System200Response>;
 
 const isSystemObjectParams = (params: [SystemParams] | unknown[]): params is [SystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'systemId') && true
 }
 /**
-* Returns a System
+* Get information about one specific system.
 * @summary Request a System
 * @param {SystemParams} config with all available params.
 * @param {*} [options] Override http request option.

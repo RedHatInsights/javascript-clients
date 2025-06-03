@@ -30,7 +30,7 @@ export type GetPlaybookRunDetailsParams = {
 export type GetPlaybookRunDetailsReturnType = AxiosPromise<PlaybookRunExecutorDetails>;
 
 const isGetPlaybookRunDetailsObjectParams = (params: [GetPlaybookRunDetailsParams] | unknown[]): params is [GetPlaybookRunDetailsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'playbookRunId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId')
 }
 /**
 * Get details on execution of the remediation

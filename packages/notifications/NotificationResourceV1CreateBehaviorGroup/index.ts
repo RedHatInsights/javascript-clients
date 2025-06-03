@@ -24,7 +24,7 @@ export type NotificationResourceV1CreateBehaviorGroupParams = {
 export type NotificationResourceV1CreateBehaviorGroupReturnType = AxiosPromise<CreateBehaviorGroupResponse>;
 
 const isNotificationResourceV1CreateBehaviorGroupObjectParams = (params: [NotificationResourceV1CreateBehaviorGroupParams] | unknown[]): params is [NotificationResourceV1CreateBehaviorGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'createBehaviorGroupRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'createBehaviorGroupRequest')
 }
 /**
 * Creates a behavior group that defines which notifications will be sent to external services after an event is received. Use this endpoint to control the types of events users are notified about.

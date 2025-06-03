@@ -68,10 +68,10 @@ export type ListBaselineSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ListBaselineSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -128,16 +128,17 @@ export type ListBaselineSystemsSortEnum = typeof ListBaselineSystemsSortEnum[key
 export type ListBaselineSystemsReturnType = AxiosPromise<ControllersBaselineSystemsResponse>;
 
 const isListBaselineSystemsObjectParams = (params: [ListBaselineSystemsParams] | unknown[]): params is [ListBaselineSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId') && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId') && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Show me all systems applicable to a baseline
 * @summary Show me all systems belonging to a baseline
 * @param {ListBaselineSystemsParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
-export const listBaselineSystemsParamCreator = async (...config: ([ListBaselineSystemsParams] | [number, number, number, ListBaselineSystemsSortEnum, string, string, string, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listBaselineSystemsParamCreator = async (...config: ([ListBaselineSystemsParams] | [number, number, number, ListBaselineSystemsSortEnum, string, string, string, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListBaselineSystemsObjectParams(config) ? config[0] : ['baselineId', 'limit', 'offset', 'sort', 'search', 'filterDisplayName', 'filterOs', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListBaselineSystemsParams;
     const { baselineId, limit, offset, sort, search, filterDisplayName, filterOs, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/baselines/{baseline_id}/systems`

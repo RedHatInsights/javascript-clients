@@ -1,7 +1,5 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
-EventResourceV2GetEvents/index.ts
 NotificationResourceV2AppendBehaviorGroupToEventType/index.ts
 NotificationResourceV2CreateBehaviorGroup/index.ts
 NotificationResourceV2DeleteBehaviorGroup/index.ts
@@ -20,8 +18,6 @@ NotificationResourceV2UpdateBehaviorGroup/index.ts
 NotificationResourceV2UpdateBehaviorGroupActions/index.ts
 NotificationResourceV2UpdateEventTypeBehaviors/index.ts
 NotificationResourceV2UpdateEventTypeEndpoints/index.ts
-OrgConfigResourceV2GetDailyDigestTimePreference/index.ts
-OrgConfigResourceV2SaveDailyDigestTimePreference/index.ts
 api.ts
 git_push.sh
 index.ts

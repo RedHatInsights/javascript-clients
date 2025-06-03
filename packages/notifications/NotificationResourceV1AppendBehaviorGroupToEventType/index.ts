@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type NotificationResourceV1AppendBehaviorGroupToEventTypeParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1AppendBehaviorGroupToEventTypeApi
   */
-  behaviorGroupUuid: string,
+  behaviorGroupUuid: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1AppendBehaviorGroupToEventTypeApi
   */
-  eventTypeUuid: string,
+  eventTypeUuid: any,
   options?: AxiosRequestConfig
 }
 
 export type NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType = AxiosPromise<void>;
 
 const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (params: [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | unknown[]): params is [NotificationResourceV1AppendBehaviorGroupToEventTypeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupUuid') && Object.prototype.hasOwnProperty.call(params, 'eventTypeUuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'behaviorGroupUuid') && Object.prototype.hasOwnProperty.call(params[0], 'eventTypeUuid')
 }
 /**
 *
@@ -39,7 +39,7 @@ const isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams = (para
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator = async (...config: ([NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | [string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1AppendBehaviorGroupToEventTypeParamCreator = async (...config: ([NotificationResourceV1AppendBehaviorGroupToEventTypeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1AppendBehaviorGroupToEventTypeObjectParams(config) ? config[0] : ['behaviorGroupUuid', 'eventTypeUuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1AppendBehaviorGroupToEventTypeParams;
     const { behaviorGroupUuid, eventTypeUuid, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/{eventTypeUuid}/behaviorGroups/{behaviorGroupUuid}`

@@ -24,7 +24,7 @@ export type KcsRetrieveParams = {
 export type KcsRetrieveReturnType = AxiosPromise<Array<string>>;
 
 const isKcsRetrieveObjectParams = (params: [KcsRetrieveParams] | unknown[]): params is [KcsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'nodeId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'nodeId')
 }
 /**
 * Gets active rule(s) for a particular KCS solution (node_id)  Returns a list of C.R.C rule url(s) for that KCS solution

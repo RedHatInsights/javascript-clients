@@ -48,7 +48,7 @@ export type ListVolumeTypeVolumesParams = {
 export type ListVolumeTypeVolumesReturnType = AxiosPromise<VolumesCollection>;
 
 const isListVolumeTypeVolumesObjectParams = (params: [ListVolumeTypeVolumesParams] | unknown[]): params is [ListVolumeTypeVolumesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Volume objects

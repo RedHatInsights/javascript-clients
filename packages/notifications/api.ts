@@ -4,9 +4,9 @@ import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
-    drawerResourceV1GetDrawerEntries,DrawerResourceV1GetDrawerEntriesReturnType,
-    drawerResourceV1UpdateNotificationReadStatus,DrawerResourceV1UpdateNotificationReadStatusReturnType,
-    eventResourceV1GetEvents,EventResourceV1GetEventsReturnType,
+    drawerResourceGetDrawerEntries,DrawerResourceGetDrawerEntriesReturnType,
+    drawerResourceUpdateNotificationReadStatus,DrawerResourceUpdateNotificationReadStatusReturnType,
+    eventResourceGetEvents,EventResourceGetEventsReturnType,
     notificationResourceV1AppendBehaviorGroupToEventType,NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType,
     notificationResourceV1CreateBehaviorGroup,NotificationResourceV1CreateBehaviorGroupReturnType,
     notificationResourceV1DeleteBehaviorGroup,NotificationResourceV1DeleteBehaviorGroupReturnType,
@@ -25,15 +25,15 @@ import {
     notificationResourceV1UpdateBehaviorGroupActions,NotificationResourceV1UpdateBehaviorGroupActionsReturnType,
     notificationResourceV1UpdateEventTypeBehaviors,NotificationResourceV1UpdateEventTypeBehaviorsReturnType,
     notificationResourceV1UpdateEventTypeEndpoints,NotificationResourceV1UpdateEventTypeEndpointsReturnType,
-    orgConfigResourceV1GetDailyDigestTimePreference,OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType,
-    orgConfigResourceV1SaveDailyDigestTimePreference,OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType,
+    orgConfigResourceGetDailyDigestTimePreference,OrgConfigResourceGetDailyDigestTimePreferenceReturnType,
+    orgConfigResourceSaveDailyDigestTimePreference,OrgConfigResourceSaveDailyDigestTimePreferenceReturnType,
 
   } from './index';
 
 const endpointList = {
-      drawerResourceV1GetDrawerEntries,
-    drawerResourceV1UpdateNotificationReadStatus,
-    eventResourceV1GetEvents,
+      drawerResourceGetDrawerEntries,
+    drawerResourceUpdateNotificationReadStatus,
+    eventResourceGetEvents,
     notificationResourceV1AppendBehaviorGroupToEventType,
     notificationResourceV1CreateBehaviorGroup,
     notificationResourceV1DeleteBehaviorGroup,
@@ -52,16 +52,16 @@ const endpointList = {
     notificationResourceV1UpdateBehaviorGroupActions,
     notificationResourceV1UpdateEventTypeBehaviors,
     notificationResourceV1UpdateEventTypeEndpoints,
-    orgConfigResourceV1GetDailyDigestTimePreference,
-    orgConfigResourceV1SaveDailyDigestTimePreference,
+    orgConfigResourceGetDailyDigestTimePreference,
+    orgConfigResourceSaveDailyDigestTimePreference,
 
 
 };
 
 type endpointReturnTypes = {
-      drawerResourceV1GetDrawerEntries: DrawerResourceV1GetDrawerEntriesReturnType,
-    drawerResourceV1UpdateNotificationReadStatus: DrawerResourceV1UpdateNotificationReadStatusReturnType,
-    eventResourceV1GetEvents: EventResourceV1GetEventsReturnType,
+      drawerResourceGetDrawerEntries: DrawerResourceGetDrawerEntriesReturnType,
+    drawerResourceUpdateNotificationReadStatus: DrawerResourceUpdateNotificationReadStatusReturnType,
+    eventResourceGetEvents: EventResourceGetEventsReturnType,
     notificationResourceV1AppendBehaviorGroupToEventType: NotificationResourceV1AppendBehaviorGroupToEventTypeReturnType,
     notificationResourceV1CreateBehaviorGroup: NotificationResourceV1CreateBehaviorGroupReturnType,
     notificationResourceV1DeleteBehaviorGroup: NotificationResourceV1DeleteBehaviorGroupReturnType,
@@ -80,8 +80,8 @@ type endpointReturnTypes = {
     notificationResourceV1UpdateBehaviorGroupActions: NotificationResourceV1UpdateBehaviorGroupActionsReturnType,
     notificationResourceV1UpdateEventTypeBehaviors: NotificationResourceV1UpdateEventTypeBehaviorsReturnType,
     notificationResourceV1UpdateEventTypeEndpoints: NotificationResourceV1UpdateEventTypeEndpointsReturnType,
-    orgConfigResourceV1GetDailyDigestTimePreference: OrgConfigResourceV1GetDailyDigestTimePreferenceReturnType,
-    orgConfigResourceV1SaveDailyDigestTimePreference: OrgConfigResourceV1SaveDailyDigestTimePreferenceReturnType,
+    orgConfigResourceGetDailyDigestTimePreference: OrgConfigResourceGetDailyDigestTimePreferenceReturnType,
+    orgConfigResourceSaveDailyDigestTimePreference: OrgConfigResourceSaveDailyDigestTimePreferenceReturnType,
 
 
 };

@@ -36,13 +36,14 @@ export type ProfileTreeParams = {
 export type ProfileTreeReturnType = AxiosPromise<any>;
 
 const isProfileTreeObjectParams = (params: [ProfileTreeParams] | unknown[]): params is [ProfileTreeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'profileId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'profileId') && true
 }
 /**
 * Returns the Rule Tree of a Profile
 * @summary Request the Rule Tree of a Profile
 * @param {ProfileTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const profileTreeParamCreator = async (...config: ([ProfileTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {

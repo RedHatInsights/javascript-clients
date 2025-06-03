@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CrossAccountRequestIn, CrossAccountRequestOut, Error403 } from '../types';
+import type { CrossAccountRequestIn, Error403 } from '../types';
 
 
 export type CreateCrossAccountRequestsParams = {
@@ -21,10 +21,10 @@ export type CreateCrossAccountRequestsParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestOut>;
+export type CreateCrossAccountRequestsReturnType = AxiosPromise<any>;
 
 const isCreateCrossAccountRequestsObjectParams = (params: [CreateCrossAccountRequestsParams] | unknown[]): params is [CreateCrossAccountRequestsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'crossAccountRequestIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'crossAccountRequestIn')
 }
 /**
 *

@@ -42,7 +42,7 @@ export type ApiHostReplaceFactsParams = {
 export type ApiHostReplaceFactsReturnType = AxiosPromise<void>;
 
 const isApiHostReplaceFactsObjectParams = (params: [ApiHostReplaceFactsParams] | unknown[]): params is [ApiHostReplaceFactsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'hostIdList') && Object.prototype.hasOwnProperty.call(params, 'namespace') && Object.prototype.hasOwnProperty.call(params, 'body') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList') && Object.prototype.hasOwnProperty.call(params[0], 'namespace') && Object.prototype.hasOwnProperty.call(params[0], 'body') && true
 }
 /**
 * Replace facts under a namespace <br /><br /> Required permissions: inventory:hosts:write

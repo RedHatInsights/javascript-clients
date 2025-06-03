@@ -24,7 +24,7 @@ export type ShowContainerParams = {
 export type ShowContainerReturnType = AxiosPromise<Container>;
 
 const isShowContainerObjectParams = (params: [ShowContainerParams] | unknown[]): params is [ShowContainerParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Container object

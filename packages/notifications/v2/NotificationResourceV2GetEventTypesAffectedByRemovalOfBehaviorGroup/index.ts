@@ -8,23 +8,23 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { EventType } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams = {
   /**
   * The UUID of the behavior group to check
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType = AxiosPromise<Array<EventType>>;
+export type NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupObjectParams = (params: [NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | unknown[]): params is [NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'behaviorGroupId')
 }
 /**
 * Lists the event types that will be affected by the removal of a behavior group. Use this endpoint to see which event types will be removed if you delete a behavior group.
@@ -33,7 +33,7 @@ const isNotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupObjec
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupObjectParams(config) ? config[0] : ['behaviorGroupId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2GetEventTypesAffectedByRemovalOfBehaviorGroupParams;
     const { behaviorGroupId, options = {} } = params;
     const localVarPath = `/notifications/eventTypes/affectedByRemovalOfBehaviorGroup/{behaviorGroupId}`

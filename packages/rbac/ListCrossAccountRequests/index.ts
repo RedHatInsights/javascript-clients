@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CrossAccountRequestPagination, Error403 } from '../types';
+import type { Error403 } from '../types';
 
 
 export type ListCrossAccountRequestsParams = {
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof ListCrossAccountRequestsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof ListCrossAccountRequestsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Parameter for filtering resource by either a user\'s ID, or a client\'s org. The default value is target_org.
   * @type { ListCrossAccountRequestsQueryByEnum }
@@ -32,16 +32,16 @@ export type ListCrossAccountRequestsParams = {
   queryBy?: ListCrossAccountRequestsQueryByEnum,
   /**
   * Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by account number.
-  * @type { string }
+  * @type { any }
   * @memberof ListCrossAccountRequestsApi
   */
-  account?: string,
+  account?: any,
   /**
   * Parameter for filtering resource by an org id. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by org id.
-  * @type { string }
+  * @type { any }
   * @memberof ListCrossAccountRequestsApi
   */
-  orgId?: string,
+  orgId?: any,
   /**
   * Parameter for filtering resource which have been approved.
   * @type { ListCrossAccountRequestsApprovedOnlyEnum }
@@ -105,7 +105,7 @@ export const ListCrossAccountRequestsOrderByEnum = {
 } as const;
 export type ListCrossAccountRequestsOrderByEnum = typeof ListCrossAccountRequestsOrderByEnum[keyof typeof ListCrossAccountRequestsOrderByEnum];
 
-export type ListCrossAccountRequestsReturnType = AxiosPromise<CrossAccountRequestPagination>;
+export type ListCrossAccountRequestsReturnType = AxiosPromise<any>;
 
 const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequestsParams] | unknown[]): params is [ListCrossAccountRequestsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true
@@ -117,7 +117,7 @@ const isListCrossAccountRequestsObjectParams = (params: [ListCrossAccountRequest
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listCrossAccountRequestsParamCreator = async (...config: ([ListCrossAccountRequestsParams] | [number, number, ListCrossAccountRequestsQueryByEnum, string, string, ListCrossAccountRequestsApprovedOnlyEnum, ListCrossAccountRequestsStatusEnum, ListCrossAccountRequestsOrderByEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listCrossAccountRequestsParamCreator = async (...config: ([ListCrossAccountRequestsParams] | [any, any, ListCrossAccountRequestsQueryByEnum, any, any, ListCrossAccountRequestsApprovedOnlyEnum, ListCrossAccountRequestsStatusEnum, ListCrossAccountRequestsOrderByEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListCrossAccountRequestsObjectParams(config) ? config[0] : ['limit', 'offset', 'queryBy', 'account', 'orgId', 'approvedOnly', 'status', 'orderBy', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListCrossAccountRequestsParams;
     const { limit, offset, queryBy, account, orgId, approvedOnly, status, orderBy, options = {} } = params;
     const localVarPath = `/cross-account-requests/`;

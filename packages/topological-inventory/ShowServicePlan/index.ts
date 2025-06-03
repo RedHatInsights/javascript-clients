@@ -24,7 +24,7 @@ export type ShowServicePlanParams = {
 export type ShowServicePlanReturnType = AxiosPromise<ServicePlan>;
 
 const isShowServicePlanObjectParams = (params: [ShowServicePlanParams] | unknown[]): params is [ShowServicePlanParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ServicePlan object

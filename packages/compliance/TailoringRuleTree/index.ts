@@ -36,13 +36,14 @@ export type TailoringRuleTreeParams = {
 export type TailoringRuleTreeReturnType = AxiosPromise<any>;
 
 const isTailoringRuleTreeObjectParams = (params: [TailoringRuleTreeParams] | unknown[]): params is [TailoringRuleTreeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && Object.prototype.hasOwnProperty.call(params, 'tailoringId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && Object.prototype.hasOwnProperty.call(params[0], 'tailoringId') && true
 }
 /**
-* Returns the Rule Tree of a Tailoring
+* Returns rule tree of a tailoring.
 * @summary Request the Rule Tree of a Tailoring
 * @param {TailoringRuleTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const tailoringRuleTreeParamCreator = async (...config: ([TailoringRuleTreeParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {

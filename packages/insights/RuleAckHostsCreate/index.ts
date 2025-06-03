@@ -30,7 +30,7 @@ export type RuleAckHostsCreateParams = {
 export type RuleAckHostsCreateReturnType = AxiosPromise<MultiAckResponse>;
 
 const isRuleAckHostsCreateObjectParams = (params: [RuleAckHostsCreateParams] | unknown[]): params is [RuleAckHostsCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId') && Object.prototype.hasOwnProperty.call(params, 'multiHostAck')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && Object.prototype.hasOwnProperty.call(params[0], 'multiHostAck')
 }
 /**
 * Add acknowledgements for one or more hosts to this rule.  Host acknowledgements will be added to this rule in this account for the system UUIDs supplied.  The justification supplied will be given for all host acks created.  Any existing host acknowledgements for a host on this rule will be updated.  The count of created hosts acknowledgements, and the list of systems now impacted by this rule, will be returned.  Account-wide acks are unaffected.

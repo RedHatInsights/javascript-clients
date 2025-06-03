@@ -30,7 +30,7 @@ export type ApiHostGroupAddHostListToGroupParams = {
 export type ApiHostGroupAddHostListToGroupReturnType = AxiosPromise<GroupOutWithHostCount>;
 
 const isApiHostGroupAddHostListToGroupObjectParams = (params: [ApiHostGroupAddHostListToGroupParams] | unknown[]): params is [ApiHostGroupAddHostListToGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'requestBody')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'groupId') && Object.prototype.hasOwnProperty.call(params[0], 'requestBody')
 }
 /**
 * Adds the host list in the request body to the provided group. <br /><br /> Required permissions: inventory:groups:write

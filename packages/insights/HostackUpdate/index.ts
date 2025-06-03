@@ -30,7 +30,7 @@ export type HostackUpdateParams = {
 export type HostackUpdateReturnType = AxiosPromise<HostAckJustification>;
 
 const isHostackUpdateObjectParams = (params: [HostackUpdateParams] | unknown[]): params is [HostackUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true
 }
 /**
 * Update the justification for this host acknowledgement.  The justification is taken from the request body.  The created_by field is taken from the username in the x-rh-identity field, and the updated_at field is set to the current time.

@@ -48,7 +48,7 @@ export type ListSourceRegionOrchestrationStacksParams = {
 export type ListSourceRegionOrchestrationStacksReturnType = AxiosPromise<OrchestrationStacksCollection>;
 
 const isListSourceRegionOrchestrationStacksObjectParams = (params: [ListSourceRegionOrchestrationStacksParams] | unknown[]): params is [ListSourceRegionOrchestrationStacksParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of OrchestrationStack objects

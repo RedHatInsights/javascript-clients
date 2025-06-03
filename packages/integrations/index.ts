@@ -1,10 +1,6 @@
-export { default as endpointResourceV1AddEventTypeToEndpoint, EndpointResourceV1AddEventTypeToEndpointReturnType } from './EndpointResourceV1AddEventTypeToEndpoint'
-
 export { default as endpointResourceV1CreateEndpoint, EndpointResourceV1CreateEndpointReturnType } from './EndpointResourceV1CreateEndpoint'
 
 export { default as endpointResourceV1DeleteEndpoint, EndpointResourceV1DeleteEndpointReturnType } from './EndpointResourceV1DeleteEndpoint'
-
-export { default as endpointResourceV1DeleteEventTypeFromEndpoint, EndpointResourceV1DeleteEventTypeFromEndpointReturnType } from './EndpointResourceV1DeleteEventTypeFromEndpoint'
 
 export { default as endpointResourceV1DisableEndpoint, EndpointResourceV1DisableEndpointReturnType } from './EndpointResourceV1DisableEndpoint'
 

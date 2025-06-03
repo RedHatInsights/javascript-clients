@@ -14,17 +14,17 @@ import type { Endpoint } from '../types';
 export type EndpointResourceV2GetEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2GetEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
 export type EndpointResourceV2GetEndpointReturnType = AxiosPromise<Endpoint>;
 
 const isEndpointResourceV2GetEndpointObjectParams = (params: [EndpointResourceV2GetEndpointParams] | unknown[]): params is [EndpointResourceV2GetEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Retrieves the public information associated with an endpoint such as its description, name, and properties.
@@ -33,7 +33,7 @@ const isEndpointResourceV2GetEndpointObjectParams = (params: [EndpointResourceV2
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2GetEndpointParamCreator = async (...config: ([EndpointResourceV2GetEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2GetEndpointParamCreator = async (...config: ([EndpointResourceV2GetEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2GetEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2GetEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}`

@@ -1,10 +1,7 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
-EndpointResourceV2AddEventTypeToEndpoint/index.ts
 EndpointResourceV2CreateEndpoint/index.ts
 EndpointResourceV2DeleteEndpoint/index.ts
-EndpointResourceV2DeleteEventTypeFromEndpoint/index.ts
 EndpointResourceV2DisableEndpoint/index.ts
 EndpointResourceV2EnableEndpoint/index.ts
 EndpointResourceV2GetDetailedEndpointHistory/index.ts

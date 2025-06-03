@@ -8,22 +8,22 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, PermissionPagination } from '../types';
+import type { Error403 } from '../types';
 
 
 export type ListPermissionsParams = {
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Parameter for ordering permissions by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-application
   * @type { ListPermissionsOrderByEnum }
@@ -32,28 +32,28 @@ export type ListPermissionsParams = {
   orderBy?: ListPermissionsOrderByEnum,
   /**
   * Exact match for the application name of a permission. You may also use a comma-separated list to match on multiple applications.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  application?: string,
+  application?: any,
   /**
   * Exact match for the resource type name of a permission. You may also use a comma-separated list to match on multiple resource_types.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  resourceType?: string,
+  resourceType?: any,
   /**
   * Exact match for the operation verb name of a permission You may also use a comma-separated list to match on multiple verbs.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  verb?: string,
+  verb?: any,
   /**
   * Partial match for the aggregate permission value name of a permission object.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  permission?: string,
+  permission?: any,
   /**
   * If set to \'true\', this will exclude any permission with a global allowance on either \'application\', \'resource_type\' or \'verb\'. The default is \'false\'.
   * @type { ListPermissionsExcludeGlobalsEnum }
@@ -62,10 +62,10 @@ export type ListPermissionsParams = {
   excludeGlobals?: ListPermissionsExcludeGlobalsEnum,
   /**
   * An optional string filter which accepts one or more role UUIDs, comma-separated, to return permissions not associated with the supplied role(s).
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionsApi
   */
-  excludeRoles?: string,
+  excludeRoles?: any,
   /**
   * If set to \'true\', this will exclude any permission with a role where the \'application\' is not in the role create allow list.
   * @type { ListPermissionsAllowedOnlyEnum }
@@ -104,7 +104,7 @@ export const ListPermissionsAllowedOnlyEnum = {
 } as const;
 export type ListPermissionsAllowedOnlyEnum = typeof ListPermissionsAllowedOnlyEnum[keyof typeof ListPermissionsAllowedOnlyEnum];
 
-export type ListPermissionsReturnType = AxiosPromise<PermissionPagination>;
+export type ListPermissionsReturnType = AxiosPromise<any>;
 
 const isListPermissionsObjectParams = (params: [ListPermissionsParams] | unknown[]): params is [ListPermissionsParams] => {
   return params.length === 1 && true && true && true && true && true && true && true && true && true && true
@@ -116,7 +116,7 @@ const isListPermissionsObjectParams = (params: [ListPermissionsParams] | unknown
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPermissionsParamCreator = async (...config: ([ListPermissionsParams] | [number, number, ListPermissionsOrderByEnum, string, string, string, string, ListPermissionsExcludeGlobalsEnum, string, ListPermissionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPermissionsParamCreator = async (...config: ([ListPermissionsParams] | [any, any, ListPermissionsOrderByEnum, any, any, any, any, ListPermissionsExcludeGlobalsEnum, any, ListPermissionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListPermissionsObjectParams(config) ? config[0] : ['limit', 'offset', 'orderBy', 'application', 'resourceType', 'verb', 'permission', 'excludeGlobals', 'excludeRoles', 'allowedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPermissionsParams;
     const { limit, offset, orderBy, application, resourceType, verb, permission, excludeGlobals, excludeRoles, allowedOnly, options = {} } = params;
     const localVarPath = `/permissions/`;

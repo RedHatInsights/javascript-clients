@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type EndpointResourceV1UpdateEventTypesLinkedToEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1UpdateEventTypesLinkedToEndpointApi
   */
-  endpointId: string,
+  endpointId: any,
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof EndpointResourceV1UpdateEventTypesLinkedToEndpointApi
   */
-  requestBody?: Set<string>,
+  body: any,
   options?: AxiosRequestConfig
 }
 
-export type EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType = AxiosPromise<string>;
+export type EndpointResourceV1UpdateEventTypesLinkedToEndpointReturnType = AxiosPromise<any>;
 
 const isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams = (params: [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | unknown[]): params is [EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'endpointId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'endpointId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 * Update  links between an endpoint and event types.
@@ -39,9 +39,9 @@ const isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams = (params
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | [string, Set<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams(config) ? config[0] : ['endpointId', 'requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEventTypesLinkedToEndpointParams;
-    const { endpointId, requestBody, options = {} } = params;
+export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = async (...config: ([EndpointResourceV1UpdateEventTypesLinkedToEndpointParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isEndpointResourceV1UpdateEventTypesLinkedToEndpointObjectParams(config) ? config[0] : ['endpointId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1UpdateEventTypesLinkedToEndpointParams;
+    const { endpointId, body, options = {} } = params;
     const localVarPath = `/endpoints/{endpointId}/eventTypes`
         .replace(`{${"endpointId"}}`, encodeURIComponent(String(endpointId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -60,7 +60,7 @@ export const endpointResourceV1UpdateEventTypesLinkedToEndpointParamCreator = as
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: requestBody,
+        serializeData: body,
     };
 }
 

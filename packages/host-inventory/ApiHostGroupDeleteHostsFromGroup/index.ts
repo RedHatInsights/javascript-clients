@@ -30,7 +30,7 @@ export type ApiHostGroupDeleteHostsFromGroupParams = {
 export type ApiHostGroupDeleteHostsFromGroupReturnType = AxiosPromise<void>;
 
 const isApiHostGroupDeleteHostsFromGroupObjectParams = (params: [ApiHostGroupDeleteHostsFromGroupParams] | unknown[]): params is [ApiHostGroupDeleteHostsFromGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'hostIdList')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'groupId') && Object.prototype.hasOwnProperty.call(params[0], 'hostIdList')
 }
 /**
 * Delete one or more hosts from a group. <br /><br /> Required permissions: inventory:groups:write

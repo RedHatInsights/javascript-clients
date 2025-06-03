@@ -36,10 +36,10 @@ export type AssignSystemParams = {
 export type AssignSystemReturnType = AxiosPromise<System200Response>;
 
 const isAssignSystemObjectParams = (params: [AssignSystemParams] | unknown[]): params is [AssignSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'systemId') && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'systemId') && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true
 }
 /**
-* Assigns a System to a Policy
+* Assign a specific system to a specific policy.
 * @summary Assign a System to a Policy
 * @param {AssignSystemParams} config with all available params.
 * @param {*} [options] Override http request option.

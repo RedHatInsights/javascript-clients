@@ -30,11 +30,11 @@ export type DeleteRemediationIssueParams = {
 export type DeleteRemediationIssueReturnType = AxiosPromise<void>;
 
 const isDeleteRemediationIssueObjectParams = (params: [DeleteRemediationIssueParams] | unknown[]): params is [DeleteRemediationIssueParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'issue')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'issue')
 }
 /**
 * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
-* @summary Remove Remediation Issue
+* @summary Remove Remediation Plan Issue
 * @param {DeleteRemediationIssueParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

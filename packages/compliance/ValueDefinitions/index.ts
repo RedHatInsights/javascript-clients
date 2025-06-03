@@ -60,10 +60,10 @@ export type ValueDefinitionsParams = {
 export type ValueDefinitionsReturnType = AxiosPromise<ValueDefinitions200Response>;
 
 const isValueDefinitionsObjectParams = (params: [ValueDefinitionsParams] | unknown[]): params is [ValueDefinitionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && true && true && true && true && true && true
 }
 /**
-* Lists Value Definitions
+* Retrieve a list of the fields which can be edited within a profile.
 * @summary Request Value Definitions
 * @param {ValueDefinitionsParams} config with all available params.
 * @param {*} [options] Override http request option.

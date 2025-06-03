@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RolePatch, RoleWithAccess } from '../types';
+import type { Error403, RolePatch } from '../types';
 
 
 export type PatchRoleParams = {
   /**
   * ID of role to update
-  * @type { string }
+  * @type { any }
   * @memberof PatchRoleApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Patch to a role
   * @type { RolePatch }
@@ -27,10 +27,10 @@ export type PatchRoleParams = {
   options?: AxiosRequestConfig
 }
 
-export type PatchRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type PatchRoleReturnType = AxiosPromise<any>;
 
 const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params is [PatchRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true
 }
 /**
 *
@@ -39,7 +39,7 @@ const isPatchRoleObjectParams = (params: [PatchRoleParams] | unknown[]): params 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const patchRoleParamCreator = async (...config: ([PatchRoleParams] | [string, RolePatch, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const patchRoleParamCreator = async (...config: ([PatchRoleParams] | [any, RolePatch, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isPatchRoleObjectParams(config) ? config[0] : ['uuid', 'rolePatch', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as PatchRoleParams;
     const { uuid, rolePatch, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`

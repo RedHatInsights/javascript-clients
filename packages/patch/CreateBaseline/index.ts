@@ -24,13 +24,14 @@ export type CreateBaselineParams = {
 export type CreateBaselineReturnType = AxiosPromise<ControllersCreateBaselineResponse>;
 
 const isCreateBaselineObjectParams = (params: [CreateBaselineParams] | unknown[]): params is [CreateBaselineParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'body')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 * Create a baseline for my set of systems. System cannot be satellite managed.
 * @summary Create a baseline for my set of systems
 * @param {CreateBaselineParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const createBaselineParamCreator = async (...config: ([CreateBaselineParams] | [ControllersCreateBaselineRequest, AxiosRequestConfig])): Promise<RequestArgs> => {

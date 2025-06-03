@@ -37,11 +37,17 @@ export type ApiGroupGetGroupListParams = {
   */
   orderBy?: ApiGroupGetGroupListOrderByEnum,
   /**
-  * Direction of the ordering; defaults to ASC for name, and to DESC for host_count
-  * @type { ApiGroupGetGroupListOrderHowEnum }
+  * Direction of the ordering (case-insensitive); defaults to ASC for name, and to DESC for host_count
+  * @type { string }
   * @memberof ApiGroupGetGroupListApi
   */
-  orderHow?: ApiGroupGetGroupListOrderHowEnum,
+  orderHow?: string,
+  /**
+  * The type of workspaces that should be returned.
+  * @type { ApiGroupGetGroupListTypeEnum }
+  * @memberof ApiGroupGetGroupListApi
+  */
+  type?: ApiGroupGetGroupListTypeEnum,
   options?: AxiosRequestConfig
 }
 /**
@@ -58,16 +64,17 @@ export type ApiGroupGetGroupListOrderByEnum = typeof ApiGroupGetGroupListOrderBy
   * @export
   * @enum {string}
   */
-export const ApiGroupGetGroupListOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
+export const ApiGroupGetGroupListTypeEnum = {
+    Standard: 'standard',
+    UngroupedHosts: 'ungrouped-hosts',
+    All: 'all'
 } as const;
-export type ApiGroupGetGroupListOrderHowEnum = typeof ApiGroupGetGroupListOrderHowEnum[keyof typeof ApiGroupGetGroupListOrderHowEnum];
+export type ApiGroupGetGroupListTypeEnum = typeof ApiGroupGetGroupListTypeEnum[keyof typeof ApiGroupGetGroupListTypeEnum];
 
 export type ApiGroupGetGroupListReturnType = AxiosPromise<GroupQueryOutput>;
 
 const isApiGroupGetGroupListObjectParams = (params: [ApiGroupGetGroupListParams] | unknown[]): params is [ApiGroupGetGroupListParams] => {
-  return params.length === 1 && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true
 }
 /**
 * Read the entire list of all groups available to the account. <br /><br /> Required permissions: inventory:groups:read
@@ -76,9 +83,9 @@ const isApiGroupGetGroupListObjectParams = (params: [ApiGroupGetGroupListParams]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiGroupGetGroupListParamCreator = async (...config: ([ApiGroupGetGroupListParams] | [string, number, number, ApiGroupGetGroupListOrderByEnum, ApiGroupGetGroupListOrderHowEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isApiGroupGetGroupListObjectParams(config) ? config[0] : ['name', 'perPage', 'page', 'orderBy', 'orderHow', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupGetGroupListParams;
-    const { name, perPage, page, orderBy, orderHow, options = {} } = params;
+export const apiGroupGetGroupListParamCreator = async (...config: ([ApiGroupGetGroupListParams] | [string, number, number, ApiGroupGetGroupListOrderByEnum, string, ApiGroupGetGroupListTypeEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isApiGroupGetGroupListObjectParams(config) ? config[0] : ['name', 'perPage', 'page', 'orderBy', 'orderHow', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiGroupGetGroupListParams;
+    const { name, perPage, page, orderBy, orderHow, type, options = {} } = params;
     const localVarPath = `/groups`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -104,6 +111,10 @@ export const apiGroupGetGroupListParamCreator = async (...config: ([ApiGroupGetG
 
     if (orderHow !== undefined) {
         localVarQueryParameter['order_how'] = orderHow;
+    }
+
+    if (type !== undefined) {
+        localVarQueryParameter['type'] = type;
     }
 
 

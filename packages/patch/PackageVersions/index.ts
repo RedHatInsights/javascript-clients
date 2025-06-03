@@ -36,7 +36,7 @@ export type PackageVersionsParams = {
 export type PackageVersionsReturnType = AxiosPromise<ControllersPackageVersionsResponse>;
 
 const isPackageVersionsObjectParams = (params: [PackageVersionsParams] | unknown[]): params is [PackageVersionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'packageName') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'packageName') && true && true
 }
 /**
 * Show me all package versions installed on some system

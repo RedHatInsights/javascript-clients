@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, Group, GroupOut } from '../types';
+import type { Error403, Group } from '../types';
 
 
 export type UpdateGroupParams = {
   /**
   * ID of group to update
-  * @type { string }
+  * @type { any }
   * @memberof UpdateGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Group to update in tenant
   * @type { Group }
@@ -27,10 +27,10 @@ export type UpdateGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type UpdateGroupReturnType = AxiosPromise<GroupOut>;
+export type UpdateGroupReturnType = AxiosPromise<any>;
 
 const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): params is [UpdateGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'group')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'group')
 }
 /**
 *
@@ -39,7 +39,7 @@ const isUpdateGroupObjectParams = (params: [UpdateGroupParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | [string, Group, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const updateGroupParamCreator = async (...config: ([UpdateGroupParams] | [any, Group, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isUpdateGroupObjectParams(config) ? config[0] : ['uuid', 'group', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateGroupParams;
     const { uuid, group, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`

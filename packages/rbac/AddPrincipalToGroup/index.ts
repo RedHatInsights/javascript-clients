@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, ErrorNotFound, GroupPrincipalIn, GroupWithPrincipalsAndRoles } from '../types';
+import type { Error403, ErrorNotFound, GroupPrincipalIn } from '../types';
 
 
 export type AddPrincipalToGroupParams = {
   /**
   * ID of group to update
-  * @type { string }
+  * @type { any }
   * @memberof AddPrincipalToGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Principal to add to a group
   * @type { GroupPrincipalIn }
@@ -27,10 +27,10 @@ export type AddPrincipalToGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type AddPrincipalToGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+export type AddPrincipalToGroupReturnType = AxiosPromise<any>;
 
 const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] | unknown[]): params is [AddPrincipalToGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupPrincipalIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'groupPrincipalIn')
 }
 /**
 *
@@ -39,7 +39,7 @@ const isAddPrincipalToGroupObjectParams = (params: [AddPrincipalToGroupParams] |
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const addPrincipalToGroupParamCreator = async (...config: ([AddPrincipalToGroupParams] | [string, GroupPrincipalIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const addPrincipalToGroupParamCreator = async (...config: ([AddPrincipalToGroupParams] | [any, GroupPrincipalIn, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isAddPrincipalToGroupObjectParams(config) ? config[0] : ['uuid', 'groupPrincipalIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AddPrincipalToGroupParams;
     const { uuid, groupPrincipalIn, options = {} } = params;
     const localVarPath = `/groups/{uuid}/principals/`

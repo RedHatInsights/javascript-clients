@@ -14,58 +14,58 @@ import type { PageEventType } from '../types';
 export type NotificationResourceV1GetEventTypesParams = {
   /**
   *
-  * @type { Set<string> }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  applicationIds?: Set<string>,
+  applicationIds?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  bundleId?: string,
+  bundleId?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  eventTypeName?: string,
+  eventTypeName?: any,
   /**
   *
-  * @type { boolean }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  excludeMutedTypes?: boolean,
+  excludeMutedTypes?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  limit?: number,
+  limit?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  offset?: number,
+  offset?: any,
   /**
   *
-  * @type { number }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  pageNumber?: number,
+  pageNumber?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  sortBy?: string,
+  sortBy?: any,
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV1GetEventTypesApi
   */
-  sortBy2?: string,
+  sortBy2?: any,
   options?: AxiosRequestConfig
 }
 
@@ -81,7 +81,7 @@ const isNotificationResourceV1GetEventTypesObjectParams = (params: [Notification
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV1GetEventTypesParamCreator = async (...config: ([NotificationResourceV1GetEventTypesParams] | [Set<string>, string, string, boolean, number, number, number, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV1GetEventTypesParamCreator = async (...config: ([NotificationResourceV1GetEventTypesParams] | [any, any, any, any, any, any, any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV1GetEventTypesObjectParams(config) ? config[0] : ['applicationIds', 'bundleId', 'eventTypeName', 'excludeMutedTypes', 'limit', 'offset', 'pageNumber', 'sortBy', 'sortBy2', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV1GetEventTypesParams;
     const { applicationIds, bundleId, eventTypeName, excludeMutedTypes, limit, offset, pageNumber, sortBy, sortBy2, options = {} } = params;
     const localVarPath = `/notifications/eventTypes`;
@@ -91,8 +91,8 @@ export const notificationResourceV1GetEventTypesParamCreator = async (...config:
     const localVarHeaderParameter = {} as any;
     const localVarQueryParameter = {} as any;
 
-    if (applicationIds) {
-        localVarQueryParameter['applicationIds'] = Array.from(applicationIds);
+    if (applicationIds !== undefined) {
+        localVarQueryParameter['applicationIds'] = applicationIds;
     }
 
     if (bundleId !== undefined) {

@@ -48,7 +48,7 @@ export type ListNetworkAdapterIpaddressesParams = {
 export type ListNetworkAdapterIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
 
 const isListNetworkAdapterIpaddressesObjectParams = (params: [ListNetworkAdapterIpaddressesParams] | unknown[]): params is [ListNetworkAdapterIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Ipaddress objects

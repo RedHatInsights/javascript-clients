@@ -48,7 +48,7 @@ export type ListContainerProjectContainerResourceQuotaParams = {
 export type ListContainerProjectContainerResourceQuotaReturnType = AxiosPromise<ContainerResourceQuotaCollection>;
 
 const isListContainerProjectContainerResourceQuotaObjectParams = (params: [ListContainerProjectContainerResourceQuotaParams] | unknown[]): params is [ListContainerProjectContainerResourceQuotaParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ContainerResourceQuota objects

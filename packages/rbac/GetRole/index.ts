@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RoleWithAccess } from '../types';
+import type { Error403 } from '../types';
 
 
 export type GetRoleParams = {
   /**
   * ID of role to get
-  * @type { string }
+  * @type { any }
   * @memberof GetRoleApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Parameter for filtering resource by scope.
   * @type { GetRoleScopeEnum }
@@ -36,10 +36,10 @@ export const GetRoleScopeEnum = {
 } as const;
 export type GetRoleScopeEnum = typeof GetRoleScopeEnum[keyof typeof GetRoleScopeEnum];
 
-export type GetRoleReturnType = AxiosPromise<RoleWithAccess>;
+export type GetRoleReturnType = AxiosPromise<any>;
 
 const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [GetRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true
 }
 /**
 *
@@ -48,7 +48,7 @@ const isGetRoleObjectParams = (params: [GetRoleParams] | unknown[]): params is [
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRoleParamCreator = async (...config: ([GetRoleParams] | [string, GetRoleScopeEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRoleParamCreator = async (...config: ([GetRoleParams] | [any, GetRoleScopeEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetRoleObjectParams(config) ? config[0] : ['uuid', 'scope', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRoleParams;
     const { uuid, scope, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`

@@ -85,7 +85,7 @@ export type ListBaselineSystemsIdsSortEnum = typeof ListBaselineSystemsIdsSortEn
 export type ListBaselineSystemsIdsReturnType = AxiosPromise<ControllersIDsPlainResponse>;
 
 const isListBaselineSystemsIdsObjectParams = (params: [ListBaselineSystemsIdsParams] | unknown[]): params is [ListBaselineSystemsIdsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId') && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId') && true && true && true && true && true && true && true
 }
 /**
 * Show me all systems applicable to a baseline

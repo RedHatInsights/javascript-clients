@@ -24,7 +24,7 @@ export type AckRetrieveParams = {
 export type AckRetrieveReturnType = AxiosPromise<Ack>;
 
 const isAckRetrieveObjectParams = (params: [AckRetrieveParams] | unknown[]): params is [AckRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
 }
 /**
 * Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset

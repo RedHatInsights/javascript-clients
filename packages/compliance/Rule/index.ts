@@ -36,10 +36,10 @@ export type RuleParams = {
 export type RuleReturnType = AxiosPromise<Rule200Response>;
 
 const isRuleObjectParams = (params: [RuleParams] | unknown[]): params is [RuleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && Object.prototype.hasOwnProperty.call(params, 'ruleId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && Object.prototype.hasOwnProperty.call(params[0], 'ruleId') && true
 }
 /**
-* Returns a Rule
+* Retrieve a specific rule from a specific security guide.
 * @summary Request a Rule
 * @param {RuleParams} config with all available params.
 * @param {*} [options] Override http request option.

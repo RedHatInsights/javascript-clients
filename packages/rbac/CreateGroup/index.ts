@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, Group, GroupOut } from '../types';
+import type { Error403, Group } from '../types';
 
 
 export type CreateGroupParams = {
@@ -21,10 +21,10 @@ export type CreateGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type CreateGroupReturnType = AxiosPromise<GroupOut>;
+export type CreateGroupReturnType = AxiosPromise<any>;
 
 const isCreateGroupObjectParams = (params: [CreateGroupParams] | unknown[]): params is [CreateGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'group')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'group')
 }
 /**
 *

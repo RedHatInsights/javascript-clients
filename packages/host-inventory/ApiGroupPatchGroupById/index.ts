@@ -19,7 +19,7 @@ export type ApiGroupPatchGroupByIdParams = {
   */
   groupId: string,
   /**
-  * A dictionary with new information to merge with the original group.
+  * A dictionary with new information with which to update the original group.
   * @type { GroupIn }
   * @memberof ApiGroupPatchGroupByIdApi
   */
@@ -30,11 +30,11 @@ export type ApiGroupPatchGroupByIdParams = {
 export type ApiGroupPatchGroupByIdReturnType = AxiosPromise<GroupOutWithHostCount>;
 
 const isApiGroupPatchGroupByIdObjectParams = (params: [ApiGroupPatchGroupByIdParams] | unknown[]): params is [ApiGroupPatchGroupByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'groupId') && Object.prototype.hasOwnProperty.call(params, 'groupIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'groupId') && Object.prototype.hasOwnProperty.call(params[0], 'groupIn')
 }
 /**
-* Merge group information. <br /><br /> Required permissions: inventory:groups:write
-* @summary Merge group information
+* Update group information, removing any existing host associations from the group. <br /><br /> Required permissions: inventory:groups:write
+* @summary Update group information
 * @param {ApiGroupPatchGroupByIdParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

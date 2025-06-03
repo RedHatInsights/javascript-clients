@@ -24,7 +24,7 @@ export type DeleteRemediationParams = {
 export type DeleteRemediationReturnType = AxiosPromise<void>;
 
 const isDeleteRemediationObjectParams = (params: [DeleteRemediationParams] | unknown[]): params is [DeleteRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Removes the given Remediation, RBAC permission {remediations:remediation:write}

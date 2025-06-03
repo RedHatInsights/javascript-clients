@@ -24,7 +24,7 @@ export type ShowVolumeTypeParams = {
 export type ShowVolumeTypeReturnType = AxiosPromise<VolumeType>;
 
 const isShowVolumeTypeObjectParams = (params: [ShowVolumeTypeParams] | unknown[]): params is [ShowVolumeTypeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a VolumeType object

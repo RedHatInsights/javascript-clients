@@ -36,10 +36,10 @@ export type UpdatePolicyParams = {
 export type UpdatePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
 
 const isUpdatePolicyObjectParams = (params: [UpdatePolicyParams] | unknown[]): params is [UpdatePolicyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true && true
 }
 /**
-* Updates a Policy with the provided attributes
+* Edit or update an existing policy.
 * @summary Update a Policy
 * @param {UpdatePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

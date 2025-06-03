@@ -48,7 +48,7 @@ export type ListSubscriptionServicePlansParams = {
 export type ListSubscriptionServicePlansReturnType = AxiosPromise<ServicePlansCollection>;
 
 const isListSubscriptionServicePlansObjectParams = (params: [ListSubscriptionServicePlansParams] | unknown[]): params is [ListSubscriptionServicePlansParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ServicePlan objects

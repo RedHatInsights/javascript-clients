@@ -24,7 +24,7 @@ export type AckDestroyParams = {
 export type AckDestroyReturnType = AxiosPromise<string>;
 
 const isAckDestroyObjectParams = (params: [AckDestroyParams] | unknown[]): params is [AckDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleId')
 }
 /**
 * Delete an acknowledgement for a rule, by its rule ID.  If the ack existed, it is deleted and a 204 is returned.  Otherwise, a 404 is returned.

@@ -44,10 +44,10 @@ export type ViewAdvisoriesSystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ViewAdvisoriesSystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -84,7 +84,7 @@ export type ViewAdvisoriesSystemsParams = {
 export type ViewAdvisoriesSystemsReturnType = AxiosPromise<ControllersAdvisoriesSystemsResponse>;
 
 const isViewAdvisoriesSystemsObjectParams = (params: [ViewAdvisoriesSystemsParams] | unknown[]): params is [ViewAdvisoriesSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'body') && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'body') && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * View advisory-system pairs for selected systems and installable advisories
@@ -93,7 +93,7 @@ const isViewAdvisoriesSystemsObjectParams = (params: [ViewAdvisoriesSystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const viewAdvisoriesSystemsParamCreator = async (...config: ([ViewAdvisoriesSystemsParams] | [ControllersSystemsAdvisoriesRequest, number, number, Array<string>, Array<string>, string, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const viewAdvisoriesSystemsParamCreator = async (...config: ([ViewAdvisoriesSystemsParams] | [ControllersSystemsAdvisoriesRequest, number, number, Array<string>, Array<string>, boolean, Array<string>, string, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isViewAdvisoriesSystemsObjectParams(config) ? config[0] : ['body', 'limit', 'offset', 'tags', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ViewAdvisoriesSystemsParams;
     const { body, limit, offset, tags, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, options = {} } = params;
     const localVarPath = `/views/advisories/systems`;

@@ -24,7 +24,7 @@ export type ShowClusterParams = {
 export type ShowClusterReturnType = AxiosPromise<Cluster>;
 
 const isShowClusterObjectParams = (params: [ShowClusterParams] | unknown[]): params is [ShowClusterParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Cluster object

@@ -24,7 +24,7 @@ export type GetPoliciesByIdParams = {
 export type GetPoliciesByIdReturnType = AxiosPromise<Policy>;
 
 const isGetPoliciesByIdObjectParams = (params: [GetPoliciesByIdParams] | unknown[]): params is [GetPoliciesByIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 *

@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, PermissionOptionsPagination } from '../types';
+import type { Error403 } from '../types';
 
 
 export type ListPermissionOptionsParams = {
@@ -20,34 +20,34 @@ export type ListPermissionOptionsParams = {
   field: ListPermissionOptionsFieldEnum,
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof ListPermissionOptionsApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof ListPermissionOptionsApi
   */
-  offset?: number,
+  offset?: any,
   /**
   * Filter returned options based on application. You may also use a comma-separated list to filter on multiple applications.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionOptionsApi
   */
-  application?: string,
+  application?: any,
   /**
   * Filter returned options based on resource_type. You may also use a comma-separated list to filter on multiple resource_types.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionOptionsApi
   */
-  resourceType?: string,
+  resourceType?: any,
   /**
   * Filter returned options based on verb. You may also use a comma-separated list to filter on multiple verbs.
-  * @type { string }
+  * @type { any }
   * @memberof ListPermissionOptionsApi
   */
-  verb?: string,
+  verb?: any,
   /**
   * If set to \'true\', this will exclude any permission option with a global allowance on the supplied \'?field=\' value of \'application\', \'resource_type\' or \'verb\'. The default is \'false\'.
   * @type { ListPermissionOptionsExcludeGlobalsEnum }
@@ -91,10 +91,10 @@ export const ListPermissionOptionsAllowedOnlyEnum = {
 } as const;
 export type ListPermissionOptionsAllowedOnlyEnum = typeof ListPermissionOptionsAllowedOnlyEnum[keyof typeof ListPermissionOptionsAllowedOnlyEnum];
 
-export type ListPermissionOptionsReturnType = AxiosPromise<PermissionOptionsPagination>;
+export type ListPermissionOptionsReturnType = AxiosPromise<any>;
 
 const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParams] | unknown[]): params is [ListPermissionOptionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'field') && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'field') && true && true && true && true && true && true && true
 }
 /**
 * By default, options of application is returned. And could be resource_type or verb on demand.
@@ -103,7 +103,7 @@ const isListPermissionOptionsObjectParams = (params: [ListPermissionOptionsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPermissionOptionsParamCreator = async (...config: ([ListPermissionOptionsParams] | [ListPermissionOptionsFieldEnum, number, number, string, string, string, ListPermissionOptionsExcludeGlobalsEnum, ListPermissionOptionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const listPermissionOptionsParamCreator = async (...config: ([ListPermissionOptionsParams] | [ListPermissionOptionsFieldEnum, any, any, any, any, any, ListPermissionOptionsExcludeGlobalsEnum, ListPermissionOptionsAllowedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isListPermissionOptionsObjectParams(config) ? config[0] : ['field', 'limit', 'offset', 'application', 'resourceType', 'verb', 'excludeGlobals', 'allowedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPermissionOptionsParams;
     const { field, limit, offset, application, resourceType, verb, excludeGlobals, allowedOnly, options = {} } = params;
     const localVarPath = `/permissions/options/`;

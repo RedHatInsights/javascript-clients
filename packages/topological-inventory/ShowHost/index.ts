@@ -24,7 +24,7 @@ export type ShowHostParams = {
 export type ShowHostReturnType = AxiosPromise<Host>;
 
 const isShowHostObjectParams = (params: [ShowHostParams] | unknown[]): params is [ShowHostParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Host object

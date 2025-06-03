@@ -1215,6 +1215,12 @@ export interface System {
      * @type {any}
      * @memberof System
      */
+    'last_check_in'?: any;
+    /**
+     *
+     * @type {any}
+     * @memberof System
+     */
     'stale_timestamp'?: any;
     /**
      *
@@ -1390,7 +1396,7 @@ export interface TailoringCreate {
      * @type {any}
      * @memberof TailoringCreate
      */
-    'os_minor_version'?: any;
+    'os_minor_version': any;
 }
 /**
  * Defines customizations of rules and variables for a set of profiles
@@ -1505,7 +1511,7 @@ export interface TestResult {
      */
     'supported'?: any;
     /**
-     * Number of failed rules in the Test Result
+     * Number of failures, errors and unknown states for rules in the Test Result.
      * @type {any}
      * @memberof TestResult
      */

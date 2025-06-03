@@ -24,7 +24,7 @@ export type DetailSystemParams = {
 export type DetailSystemReturnType = AxiosPromise<ControllersSystemDetailResponse>;
 
 const isDetailSystemObjectParams = (params: [DetailSystemParams] | unknown[]): params is [DetailSystemParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId')
 }
 /**
 * Show me details about a system by given inventory id

@@ -14,10 +14,10 @@ import type { UpdateBehaviorGroupRequest } from '../types';
 export type NotificationResourceV2UpdateBehaviorGroupParams = {
   /**
   * The UUID of the behavior group to update
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2UpdateBehaviorGroupApi
   */
-  id: string,
+  id: any,
   /**
   * New parameters
   * @type { UpdateBehaviorGroupRequest }
@@ -27,10 +27,10 @@ export type NotificationResourceV2UpdateBehaviorGroupParams = {
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2UpdateBehaviorGroupReturnType = AxiosPromise<boolean>;
+export type NotificationResourceV2UpdateBehaviorGroupReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2UpdateBehaviorGroupObjectParams = (params: [NotificationResourceV2UpdateBehaviorGroupParams] | unknown[]): params is [NotificationResourceV2UpdateBehaviorGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'updateBehaviorGroupRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'updateBehaviorGroupRequest')
 }
 /**
 * Updates the details of a behavior group. Use this endpoint to update the list of related endpoints and event types associated with this behavior group.
@@ -39,7 +39,7 @@ const isNotificationResourceV2UpdateBehaviorGroupObjectParams = (params: [Notifi
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2UpdateBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2UpdateBehaviorGroupParams] | [string, UpdateBehaviorGroupRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2UpdateBehaviorGroupParamCreator = async (...config: ([NotificationResourceV2UpdateBehaviorGroupParams] | [any, UpdateBehaviorGroupRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2UpdateBehaviorGroupObjectParams(config) ? config[0] : ['id', 'updateBehaviorGroupRequest', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2UpdateBehaviorGroupParams;
     const { id, updateBehaviorGroupRequest, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/{id}`

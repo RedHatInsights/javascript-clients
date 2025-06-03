@@ -14,17 +14,17 @@ import type {  } from '../types';
 export type EndpointResourceV2DeleteEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV2DeleteEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
 export type EndpointResourceV2DeleteEndpointReturnType = AxiosPromise<void>;
 
 const isEndpointResourceV2DeleteEndpointObjectParams = (params: [EndpointResourceV2DeleteEndpointParams] | unknown[]): params is [EndpointResourceV2DeleteEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Deletes an endpoint. Use this endpoint to delete an endpoint that is no longer needed. Deleting an endpoint that is already linked to a behavior group will unlink it from the behavior group. You cannot delete system endpoints.
@@ -33,7 +33,7 @@ const isEndpointResourceV2DeleteEndpointObjectParams = (params: [EndpointResourc
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV2DeleteEndpointParamCreator = async (...config: ([EndpointResourceV2DeleteEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV2DeleteEndpointParamCreator = async (...config: ([EndpointResourceV2DeleteEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV2DeleteEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV2DeleteEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}`

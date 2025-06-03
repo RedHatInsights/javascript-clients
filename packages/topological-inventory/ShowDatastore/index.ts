@@ -24,7 +24,7 @@ export type ShowDatastoreParams = {
 export type ShowDatastoreReturnType = AxiosPromise<Datastore>;
 
 const isShowDatastoreObjectParams = (params: [ShowDatastoreParams] | unknown[]): params is [ShowDatastoreParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Datastore object

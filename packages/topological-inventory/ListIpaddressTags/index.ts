@@ -48,7 +48,7 @@ export type ListIpaddressTagsParams = {
 export type ListIpaddressTagsReturnType = AxiosPromise<TagsCollection>;
 
 const isListIpaddressTagsObjectParams = (params: [ListIpaddressTagsParams] | unknown[]): params is [ListIpaddressTagsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Tag objects

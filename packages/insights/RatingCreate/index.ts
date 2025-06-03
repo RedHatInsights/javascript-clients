@@ -24,7 +24,7 @@ export type RatingCreateParams = {
 export type RatingCreateReturnType = AxiosPromise<RuleRating>;
 
 const isRatingCreateObjectParams = (params: [RatingCreateParams] | unknown[]): params is [RatingCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ruleRating')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ruleRating')
 }
 /**
 * Add or update a rating for a rule, by rule ID.  Return the new rating.  Any previous rating for this rule by this user is amended to the current value.  This does not attempt to delete a rating by this user of this rule if the rating is zero.

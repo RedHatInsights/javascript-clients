@@ -24,7 +24,7 @@ export type AckCreateParams = {
 export type AckCreateReturnType = AxiosPromise<Ack>;
 
 const isAckCreateObjectParams = (params: [AckCreateParams] | unknown[]): params is [AckCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'ackInput')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'ackInput')
 }
 /**
 * Add an acknowledgement for a rule, by rule ID.  If there\'s already an acknowledgement of this rule by this accounts org_id, then return that.  Otherwise, a new ack is created.

@@ -24,7 +24,7 @@ export type TopicDestroyParams = {
 export type TopicDestroyReturnType = AxiosPromise<void>;
 
 const isTopicDestroyObjectParams = (params: [TopicDestroyParams] | unknown[]): params is [TopicDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'slug')
 }
 /**
 * Delete a rule topic.  Rules associated with the tag of this topic will be unaffected

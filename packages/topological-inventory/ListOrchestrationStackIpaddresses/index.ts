@@ -48,7 +48,7 @@ export type ListOrchestrationStackIpaddressesParams = {
 export type ListOrchestrationStackIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
 
 const isListOrchestrationStackIpaddressesObjectParams = (params: [ListOrchestrationStackIpaddressesParams] | unknown[]): params is [ListOrchestrationStackIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Ipaddress objects

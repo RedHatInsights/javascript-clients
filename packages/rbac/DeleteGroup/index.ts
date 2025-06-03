@@ -14,17 +14,17 @@ import type { Error403 } from '../types';
 export type DeleteGroupParams = {
   /**
   * ID of group to delete
-  * @type { string }
+  * @type { any }
   * @memberof DeleteGroupApi
   */
-  uuid: string,
+  uuid: any,
   options?: AxiosRequestConfig
 }
 
 export type DeleteGroupReturnType = AxiosPromise<void>;
 
 const isDeleteGroupObjectParams = (params: [DeleteGroupParams] | unknown[]): params is [DeleteGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
 }
 /**
 *
@@ -33,7 +33,7 @@ const isDeleteGroupObjectParams = (params: [DeleteGroupParams] | unknown[]): par
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const deleteGroupParamCreator = async (...config: ([DeleteGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const deleteGroupParamCreator = async (...config: ([DeleteGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isDeleteGroupObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as DeleteGroupParams;
     const { uuid, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`

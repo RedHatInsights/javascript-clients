@@ -1,5 +1,3 @@
-export { default as eventResourceV2GetEvents, EventResourceV2GetEventsReturnType } from './EventResourceV2GetEvents'
-
 export { default as notificationResourceV2AppendBehaviorGroupToEventType, NotificationResourceV2AppendBehaviorGroupToEventTypeReturnType } from './NotificationResourceV2AppendBehaviorGroupToEventType'
 
 export { default as notificationResourceV2CreateBehaviorGroup, NotificationResourceV2CreateBehaviorGroupReturnType } from './NotificationResourceV2CreateBehaviorGroup'
@@ -35,8 +33,4 @@ export { default as notificationResourceV2UpdateBehaviorGroupActions, Notificati
 export { default as notificationResourceV2UpdateEventTypeBehaviors, NotificationResourceV2UpdateEventTypeBehaviorsReturnType } from './NotificationResourceV2UpdateEventTypeBehaviors'
 
 export { default as notificationResourceV2UpdateEventTypeEndpoints, NotificationResourceV2UpdateEventTypeEndpointsReturnType } from './NotificationResourceV2UpdateEventTypeEndpoints'
-
-export { default as orgConfigResourceV2GetDailyDigestTimePreference, OrgConfigResourceV2GetDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV2GetDailyDigestTimePreference'
-
-export { default as orgConfigResourceV2SaveDailyDigestTimePreference, OrgConfigResourceV2SaveDailyDigestTimePreferenceReturnType } from './OrgConfigResourceV2SaveDailyDigestTimePreference'
 

@@ -8,35 +8,35 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { AccessPagination, Error403 } from '../types';
+import type { Error403 } from '../types';
 
 
 export type GetRoleAccessParams = {
   /**
   * ID of the role
-  * @type { string }
+  * @type { any }
   * @memberof GetRoleAccessApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Parameter for selecting the amount of data returned.
-  * @type { number }
+  * @type { any }
   * @memberof GetRoleAccessApi
   */
-  limit?: number,
+  limit?: any,
   /**
   * Parameter for selecting the offset of data.
-  * @type { number }
+  * @type { any }
   * @memberof GetRoleAccessApi
   */
-  offset?: number,
+  offset?: any,
   options?: AxiosRequestConfig
 }
 
-export type GetRoleAccessReturnType = AxiosPromise<AccessPagination>;
+export type GetRoleAccessReturnType = AxiosPromise<any>;
 
 const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]): params is [GetRoleAccessParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true && true
 }
 /**
 *
@@ -45,7 +45,7 @@ const isGetRoleAccessObjectParams = (params: [GetRoleAccessParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getRoleAccessParamCreator = async (...config: ([GetRoleAccessParams] | [string, number, number, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getRoleAccessParamCreator = async (...config: ([GetRoleAccessParams] | [any, any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetRoleAccessObjectParams(config) ? config[0] : ['uuid', 'limit', 'offset', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetRoleAccessParams;
     const { uuid, limit, offset, options = {} } = params;
     const localVarPath = `/roles/{uuid}/access/`

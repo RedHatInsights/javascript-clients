@@ -86,7 +86,7 @@ export type TopicSystemsRetrieveUpdateMethodEnum = typeof TopicSystemsRetrieveUp
 export type TopicSystemsRetrieveReturnType = AxiosPromise<SystemsForRule>;
 
 const isTopicSystemsRetrieveObjectParams = (params: [TopicSystemsRetrieveParams] | unknown[]): params is [TopicSystemsRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug') && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'slug') && true && true && true && true && true && true
 }
 /**
 * List all systems affected by this rule topic.  Systems are just listed by their UUID.

@@ -8,29 +8,29 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, RolePut } from '../types';
+import type { Error403 } from '../types';
 
 
 export type UpdateRoleParams = {
   /**
   * ID of role to update
-  * @type { string }
+  * @type { any }
   * @memberof UpdateRoleApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Update to a role
-  * @type { RolePut }
+  * @type { any }
   * @memberof UpdateRoleApi
   */
-  rolePut: RolePut,
+  body: any,
   options?: AxiosRequestConfig
 }
 
 export type UpdateRoleReturnType = AxiosPromise<void>;
 
 const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): params is [UpdateRoleParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'rolePut')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 *
@@ -39,9 +39,9 @@ const isUpdateRoleObjectParams = (params: [UpdateRoleParams] | unknown[]): param
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [string, RolePut, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'rolePut', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
-    const { uuid, rolePut, options = {} } = params;
+export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isUpdateRoleObjectParams(config) ? config[0] : ['uuid', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as UpdateRoleParams;
+    const { uuid, body, options = {} } = params;
     const localVarPath = `/roles/{uuid}/`
         .replace(`{${"uuid"}}`, encodeURIComponent(String(uuid)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -60,7 +60,7 @@ export const updateRoleParamCreator = async (...config: ([UpdateRoleParams] | [s
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: rolePut,
+        serializeData: body,
         auth:[
         {
         // authentication basic_auth required

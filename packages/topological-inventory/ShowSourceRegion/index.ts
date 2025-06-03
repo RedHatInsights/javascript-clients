@@ -24,7 +24,7 @@ export type ShowSourceRegionParams = {
 export type ShowSourceRegionReturnType = AxiosPromise<SourceRegion>;
 
 const isShowSourceRegionObjectParams = (params: [ShowSourceRegionParams] | unknown[]): params is [ShowSourceRegionParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a SourceRegion object

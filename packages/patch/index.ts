@@ -1,3 +1,5 @@
+export { default as addTemplateSubscribedSystem, AddTemplateSubscribedSystemReturnType } from './AddTemplateSubscribedSystem'
+
 export { default as baselineDelete, BaselineDeleteReturnType } from './BaselineDelete'
 
 export { default as createBaseline, CreateBaselineReturnType } from './CreateBaseline'

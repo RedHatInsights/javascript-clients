@@ -33,7 +33,7 @@ const isAckListObjectParams = (params: [AckListParams] | unknown[]): params is [
   return params.length === 1 && true && true
 }
 /**
-* List acks from this account by org_id where the rule is active  Will return an empty list if this account has no acks.
+* Acks acknowledge (and therefore hide) a rule from view in an account.  This view handles listing, retrieving, creating and deleting acks.  Acks are created and deleted by Insights rule ID, not by their own ack ID.  param: rule_id: Rule ID defined by Insights ruleset
 * @param {AckListParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

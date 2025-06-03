@@ -24,13 +24,14 @@ export type RemoveBaselineSystemsParams = {
 export type RemoveBaselineSystemsReturnType = AxiosPromise<void>;
 
 const isRemoveBaselineSystemsObjectParams = (params: [RemoveBaselineSystemsParams] | unknown[]): params is [RemoveBaselineSystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'body')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 * Remove systems from baseline
 * @summary Remove systems from baseline
 * @param {RemoveBaselineSystemsParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const removeBaselineSystemsParamCreator = async (...config: ([RemoveBaselineSystemsParams] | [ControllersBaselineSystemsRemoveRequest, AxiosRequestConfig])): Promise<RequestArgs> => {

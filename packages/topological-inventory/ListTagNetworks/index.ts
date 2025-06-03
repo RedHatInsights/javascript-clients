@@ -48,7 +48,7 @@ export type ListTagNetworksParams = {
 export type ListTagNetworksReturnType = AxiosPromise<NetworksCollection>;
 
 const isListTagNetworksObjectParams = (params: [ListTagNetworksParams] | unknown[]): params is [ListTagNetworksParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Network objects

@@ -8,23 +8,23 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { Error403, GroupWithPrincipalsAndRoles } from '../types';
+import type { Error403 } from '../types';
 
 
 export type GetGroupParams = {
   /**
   * ID of group to get
-  * @type { string }
+  * @type { any }
   * @memberof GetGroupApi
   */
-  uuid: string,
+  uuid: any,
   options?: AxiosRequestConfig
 }
 
-export type GetGroupReturnType = AxiosPromise<GroupWithPrincipalsAndRoles>;
+export type GetGroupReturnType = AxiosPromise<any>;
 
 const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is [GetGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
 }
 /**
 *
@@ -33,7 +33,7 @@ const isGetGroupObjectParams = (params: [GetGroupParams] | unknown[]): params is
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getGroupParamCreator = async (...config: ([GetGroupParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getGroupParamCreator = async (...config: ([GetGroupParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetGroupObjectParams(config) ? config[0] : ['uuid', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetGroupParams;
     const { uuid, options = {} } = params;
     const localVarPath = `/groups/{uuid}/`

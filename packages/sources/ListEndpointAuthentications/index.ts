@@ -48,7 +48,7 @@ export type ListEndpointAuthenticationsParams = {
 export type ListEndpointAuthenticationsReturnType = AxiosPromise<AuthenticationsCollection>;
 
 const isListEndpointAuthenticationsObjectParams = (params: [ListEndpointAuthenticationsParams] | unknown[]): params is [ListEndpointAuthenticationsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Authentication objects

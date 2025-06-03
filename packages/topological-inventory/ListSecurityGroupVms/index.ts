@@ -48,7 +48,7 @@ export type ListSecurityGroupVmsParams = {
 export type ListSecurityGroupVmsReturnType = AxiosPromise<VmsCollection>;
 
 const isListSecurityGroupVmsObjectParams = (params: [ListSecurityGroupVmsParams] | unknown[]): params is [ListSecurityGroupVmsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Vm objects

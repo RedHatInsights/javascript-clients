@@ -14,23 +14,23 @@ import type {  } from '../types';
 export type NotificationResourceV2UpdateBehaviorGroupActionsParams = {
   /**
   * The UUID of the behavior group to update
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2UpdateBehaviorGroupActionsApi
   */
-  behaviorGroupId: string,
+  behaviorGroupId: any,
   /**
   *
-  * @type { Array<string> }
+  * @type { any }
   * @memberof NotificationResourceV2UpdateBehaviorGroupActionsApi
   */
-  requestBody?: Array<string>,
+  body: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2UpdateBehaviorGroupActionsReturnType = AxiosPromise<string>;
+export type NotificationResourceV2UpdateBehaviorGroupActionsReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2UpdateBehaviorGroupActionsObjectParams = (params: [NotificationResourceV2UpdateBehaviorGroupActionsParams] | unknown[]): params is [NotificationResourceV2UpdateBehaviorGroupActionsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'behaviorGroupId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'behaviorGroupId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 * Updates the list of actions to be executed in that particular behavior group after an event is received.
@@ -39,9 +39,9 @@ const isNotificationResourceV2UpdateBehaviorGroupActionsObjectParams = (params: 
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2UpdateBehaviorGroupActionsParamCreator = async (...config: ([NotificationResourceV2UpdateBehaviorGroupActionsParams] | [string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isNotificationResourceV2UpdateBehaviorGroupActionsObjectParams(config) ? config[0] : ['behaviorGroupId', 'requestBody', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2UpdateBehaviorGroupActionsParams;
-    const { behaviorGroupId, requestBody, options = {} } = params;
+export const notificationResourceV2UpdateBehaviorGroupActionsParamCreator = async (...config: ([NotificationResourceV2UpdateBehaviorGroupActionsParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isNotificationResourceV2UpdateBehaviorGroupActionsObjectParams(config) ? config[0] : ['behaviorGroupId', 'body', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2UpdateBehaviorGroupActionsParams;
+    const { behaviorGroupId, body, options = {} } = params;
     const localVarPath = `/notifications/behaviorGroups/{behaviorGroupId}/actions`
         .replace(`{${"behaviorGroupId"}}`, encodeURIComponent(String(behaviorGroupId)));
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -60,7 +60,7 @@ export const notificationResourceV2UpdateBehaviorGroupActionsParamCreator = asyn
     return {
         urlObj: localVarUrlObj,
         options: localVarRequestOptions,
-        serializeData: requestBody,
+        serializeData: body,
     };
 }
 

@@ -30,7 +30,7 @@ export type UpdateAuthenticationParams = {
 export type UpdateAuthenticationReturnType = AxiosPromise<void>;
 
 const isUpdateAuthenticationObjectParams = (params: [UpdateAuthenticationParams] | unknown[]): params is [UpdateAuthenticationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'authentication')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'authentication')
 }
 /**
 * Updates a Authentication object

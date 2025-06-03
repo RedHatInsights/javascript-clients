@@ -50,10 +50,10 @@ export type ExportAdvisorySystemsParams = {
   filterGroupName?: Array<string>,
   /**
   * Filter only SAP systems
-  * @type { string }
+  * @type { boolean }
   * @memberof ExportAdvisorySystemsApi
   */
-  filterSystemProfileSapSystem?: string,
+  filterSystemProfileSapSystem?: boolean,
   /**
   * Filter systems by their SAP SIDs
   * @type { Array<string> }
@@ -102,7 +102,7 @@ export type ExportAdvisorySystemsParams = {
 export type ExportAdvisorySystemsReturnType = AxiosPromise<Array<ControllersAdvisorySystemDBLookup>>;
 
 const isExportAdvisorySystemsObjectParams = (params: [ExportAdvisorySystemsParams] | unknown[]): params is [ExportAdvisorySystemsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'advisoryId') && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'advisoryId') && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Export systems for my account. Export endpoints are not paginated.
@@ -111,7 +111,7 @@ const isExportAdvisorySystemsObjectParams = (params: [ExportAdvisorySystemsParam
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const exportAdvisorySystemsParamCreator = async (...config: ([ExportAdvisorySystemsParams] | [string, string, string, string, string, Array<string>, string, Array<string>, string, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const exportAdvisorySystemsParamCreator = async (...config: ([ExportAdvisorySystemsParams] | [string, string, string, string, string, Array<string>, boolean, Array<string>, string, string, string, string, string, Array<string>, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isExportAdvisorySystemsObjectParams(config) ? config[0] : ['advisoryId', 'search', 'filterId', 'filterDisplayName', 'filterStale', 'filterGroupName', 'filterSystemProfileSapSystem', 'filterSystemProfileSapSids', 'filterSystemProfileAnsible', 'filterSystemProfileAnsibleControllerVersion', 'filterSystemProfileMssql', 'filterSystemProfileMssqlVersion', 'filterOs', 'tags', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ExportAdvisorySystemsParams;
     const { advisoryId, search, filterId, filterDisplayName, filterStale, filterGroupName, filterSystemProfileSapSystem, filterSystemProfileSapSids, filterSystemProfileAnsible, filterSystemProfileAnsibleControllerVersion, filterSystemProfileMssql, filterSystemProfileMssqlVersion, filterOs, tags, options = {} } = params;
     const localVarPath = `/export/advisories/{advisory_id}/systems`

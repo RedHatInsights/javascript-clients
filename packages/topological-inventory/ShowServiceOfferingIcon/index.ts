@@ -24,7 +24,7 @@ export type ShowServiceOfferingIconParams = {
 export type ShowServiceOfferingIconReturnType = AxiosPromise<ServiceOfferingIcon>;
 
 const isShowServiceOfferingIconObjectParams = (params: [ShowServiceOfferingIconParams] | unknown[]): params is [ShowServiceOfferingIconParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ServiceOfferingIcon object

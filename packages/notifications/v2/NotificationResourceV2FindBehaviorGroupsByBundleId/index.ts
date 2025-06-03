@@ -8,23 +8,23 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { BehaviorGroup } from '../types';
+import type {  } from '../types';
 
 
 export type NotificationResourceV2FindBehaviorGroupsByBundleIdParams = {
   /**
   * UUID of the bundle to retrieve the behavior groups for.
-  * @type { string }
+  * @type { any }
   * @memberof NotificationResourceV2FindBehaviorGroupsByBundleIdApi
   */
-  bundleId: string,
+  bundleId: any,
   options?: AxiosRequestConfig
 }
 
-export type NotificationResourceV2FindBehaviorGroupsByBundleIdReturnType = AxiosPromise<Array<BehaviorGroup>>;
+export type NotificationResourceV2FindBehaviorGroupsByBundleIdReturnType = AxiosPromise<any>;
 
 const isNotificationResourceV2FindBehaviorGroupsByBundleIdObjectParams = (params: [NotificationResourceV2FindBehaviorGroupsByBundleIdParams] | unknown[]): params is [NotificationResourceV2FindBehaviorGroupsByBundleIdParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'bundleId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'bundleId')
 }
 /**
 * Lists the behavior groups associated with a bundle. Use this endpoint to see the behavior groups that are configured for a particular bundle for a particular tenant.
@@ -33,7 +33,7 @@ const isNotificationResourceV2FindBehaviorGroupsByBundleIdObjectParams = (params
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const notificationResourceV2FindBehaviorGroupsByBundleIdParamCreator = async (...config: ([NotificationResourceV2FindBehaviorGroupsByBundleIdParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const notificationResourceV2FindBehaviorGroupsByBundleIdParamCreator = async (...config: ([NotificationResourceV2FindBehaviorGroupsByBundleIdParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isNotificationResourceV2FindBehaviorGroupsByBundleIdObjectParams(config) ? config[0] : ['bundleId', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as NotificationResourceV2FindBehaviorGroupsByBundleIdParams;
     const { bundleId, options = {} } = params;
     const localVarPath = `/notifications/bundles/{bundleId}/behaviorGroups`

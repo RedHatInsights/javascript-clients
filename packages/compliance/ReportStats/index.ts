@@ -30,7 +30,7 @@ export type ReportStatsParams = {
 export type ReportStatsReturnType = AxiosPromise<ReportStats200Response>;
 
 const isReportStatsObjectParams = (params: [ReportStatsParams] | unknown[]): params is [ReportStatsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'reportId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'reportId') && true
 }
 /**
 * Returns detailed stats for a Report

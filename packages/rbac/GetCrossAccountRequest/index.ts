@@ -8,16 +8,16 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { CrossAccountRequestDetail, Error403 } from '../types';
+import type { Error403 } from '../types';
 
 
 export type GetCrossAccountRequestParams = {
   /**
   * ID of cross account request to get
-  * @type { string }
+  * @type { any }
   * @memberof GetCrossAccountRequestApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Parameter for filtering resource by either a user\'s ID, or a client\'s org. The default value is target_org.
   * @type { GetCrossAccountRequestQueryByEnum }
@@ -26,10 +26,10 @@ export type GetCrossAccountRequestParams = {
   queryBy?: GetCrossAccountRequestQueryByEnum,
   /**
   * Parameter for filtering resource by an account number. Value can be a comma-separated list of ids. To be used in tandem with ?query_by=user_id to further filter a user\'s requests by account number.
-  * @type { string }
+  * @type { any }
   * @memberof GetCrossAccountRequestApi
   */
-  account?: string,
+  account?: any,
   /**
   * Parameter for filtering resource which have been approved.
   * @type { GetCrossAccountRequestApprovedOnlyEnum }
@@ -56,10 +56,10 @@ export const GetCrossAccountRequestApprovedOnlyEnum = {
 } as const;
 export type GetCrossAccountRequestApprovedOnlyEnum = typeof GetCrossAccountRequestApprovedOnlyEnum[keyof typeof GetCrossAccountRequestApprovedOnlyEnum];
 
-export type GetCrossAccountRequestReturnType = AxiosPromise<CrossAccountRequestDetail>;
+export type GetCrossAccountRequestReturnType = AxiosPromise<any>;
 
 const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestParams] | unknown[]): params is [GetCrossAccountRequestParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && true && true && true
 }
 /**
 *
@@ -68,7 +68,7 @@ const isGetCrossAccountRequestObjectParams = (params: [GetCrossAccountRequestPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const getCrossAccountRequestParamCreator = async (...config: ([GetCrossAccountRequestParams] | [string, GetCrossAccountRequestQueryByEnum, string, GetCrossAccountRequestApprovedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const getCrossAccountRequestParamCreator = async (...config: ([GetCrossAccountRequestParams] | [any, GetCrossAccountRequestQueryByEnum, any, GetCrossAccountRequestApprovedOnlyEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isGetCrossAccountRequestObjectParams(config) ? config[0] : ['uuid', 'queryBy', 'account', 'approvedOnly', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as GetCrossAccountRequestParams;
     const { uuid, queryBy, account, approvedOnly, options = {} } = params;
     const localVarPath = `/cross-account-requests/{uuid}/`

@@ -55,148 +55,6 @@ export interface ActiveTags {
     'results': Array<ActiveTag>;
 }
 /**
- * Data for a single Assignment Rule
- * @export
- * @interface AssignmentRuleIn
- */
-export interface AssignmentRuleIn {
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleIn
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleIn
-     */
-    'description'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleIn
-     */
-    'group_id': string;
-    /**
-     *
-     * @type {object}
-     * @memberof AssignmentRuleIn
-     */
-    'filter': object;
-    /**
-     *
-     * @type {boolean}
-     * @memberof AssignmentRuleIn
-     */
-    'enabled': boolean;
-}
-/**
- * Data for a single Assignment Rule response
- * @export
- * @interface AssignmentRuleOut
- */
-export interface AssignmentRuleOut {
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'id'?: string;
-    /**
-     * The Org ID of the tenant that owns the host.
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'org_id'?: string;
-    /**
-     * A Red Hat Account number that owns the host.
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     * @deprecated
-     */
-    'account'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'description'?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'group_id': string;
-    /**
-     *
-     * @type {object}
-     * @memberof AssignmentRuleOut
-     */
-    'filter': object;
-    /**
-     *
-     * @type {boolean}
-     * @memberof AssignmentRuleOut
-     */
-    'enabled': boolean;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'created': string;
-    /**
-     *
-     * @type {string}
-     * @memberof AssignmentRuleOut
-     */
-    'modified': string;
-}
-/**
- * A paginated assignment-rule search query result with assignment-rule entries and their Inventory metadata.
- * @export
- * @interface AssignmentRuleQueryOutput
- */
-export interface AssignmentRuleQueryOutput {
-    /**
-     * The number of items on the current page
-     * @type {number}
-     * @memberof AssignmentRuleQueryOutput
-     */
-    'count': number;
-    /**
-     * The page number
-     * @type {number}
-     * @memberof AssignmentRuleQueryOutput
-     */
-    'page': number;
-    /**
-     * The number of items to return per page
-     * @type {number}
-     * @memberof AssignmentRuleQueryOutput
-     */
-    'per_page': number;
-    /**
-     * Total number of items
-     * @type {number}
-     * @memberof AssignmentRuleQueryOutput
-     */
-    'total': number;
-    /**
-     * Actual assignment-rule search query result entries.
-     * @type {Array<AssignmentRuleOut>}
-     * @memberof AssignmentRuleQueryOutput
-     */
-    'results': Array<AssignmentRuleOut>;
-}
-/**
  *
  * @export
  * @interface CanonicalFactsIn
@@ -455,6 +313,12 @@ export interface GroupOut {
      */
     'org_id'?: string;
     /**
+     * Whether the group is the \"ungrouped hosts\" group
+     * @type {boolean}
+     * @memberof GroupOut
+     */
+    'ungrouped'?: boolean;
+    /**
      * A timestamp when the entry was created.
      * @type {string}
      * @memberof GroupOut
@@ -498,6 +362,12 @@ export interface GroupOutWithHostCount {
      * @memberof GroupOutWithHostCount
      */
     'org_id'?: string;
+    /**
+     * Whether the group is the \"ungrouped hosts\" group
+     * @type {boolean}
+     * @memberof GroupOutWithHostCount
+     */
+    'ungrouped'?: boolean;
     /**
      * A timestamp when the entry was created.
      * @type {string}
@@ -718,6 +588,12 @@ export interface HostOut {
      * @memberof HostOut
      */
     'system_profile'?: SystemProfile;
+    /**
+     *
+     * @type {string}
+     * @memberof HostOut
+     */
+    'last_check_in'?: string;
 }
 /**
  * A paginated host search query result with host entries and their Inventory metadata.
@@ -1581,6 +1457,12 @@ export interface SystemProfile {
      * @memberof SystemProfile
      */
     'image_builder'?: SystemProfileImageBuilder;
+    /**
+     *
+     * @type {SystemProfileWorkloads}
+     * @memberof SystemProfile
+     */
+    'workloads'?: SystemProfileWorkloads;
 }
 
 export const SystemProfileSelinuxCurrentModeEnum = {
@@ -1604,7 +1486,8 @@ export type SystemProfileGreenbootStatusEnum = typeof SystemProfileGreenbootStat
 export const SystemProfileSystemUpdateMethodEnum = {
     Dnf: 'dnf',
     RpmOstree: 'rpm-ostree',
-    Yum: 'yum'
+    Yum: 'yum',
+    Bootc: 'bootc'
 } as const;
 
 export type SystemProfileSystemUpdateMethodEnum = typeof SystemProfileSystemUpdateMethodEnum[keyof typeof SystemProfileSystemUpdateMethodEnum];
@@ -2080,6 +1963,18 @@ export interface SystemProfileRhelAi {
      */
     'rhel_ai_version_id'?: string;
     /**
+     * Model name of AMD GPUs
+     * @type {Array<string>}
+     * @memberof SystemProfileRhelAi
+     */
+    'amd_gpu_models'?: Array<string>;
+    /**
+     * Model name of Intel Gaudi HPUs
+     * @type {Array<string>}
+     * @memberof SystemProfileRhelAi
+     */
+    'intel_gaudi_hpu_models'?: Array<string>;
+    /**
      * Model name of Nvidia GPUs in the GPU index order
      * @type {Array<string>}
      * @memberof SystemProfileRhelAi
@@ -2098,6 +1993,12 @@ export interface SystemProfileRhsm {
      * @memberof SystemProfileRhsm
      */
     'version'?: string;
+    /**
+     * Environments (\"content templates\") the system is subscribed to.
+     * @type {Array<string>}
+     * @memberof SystemProfileRhsm
+     */
+    'environment_ids'?: Array<string>;
 }
 /**
  * Limited deployment information from systems managed by rpm-ostree as reported by rpm-ostree status --json
@@ -2359,6 +2260,174 @@ export interface SystemProfileThirdPartyServicesCrowdstrike {
     'falcon_version'?: string;
 }
 /**
+ * Object containing information about system workloads
+ * @export
+ * @interface SystemProfileWorkloads
+ */
+export interface SystemProfileWorkloads {
+    /**
+     *
+     * @type {SystemProfileAnsible}
+     * @memberof SystemProfileWorkloads
+     */
+    'ansible'?: SystemProfileAnsible;
+    /**
+     *
+     * @type {SystemProfileThirdPartyServicesCrowdstrike}
+     * @memberof SystemProfileWorkloads
+     */
+    'crowdstrike'?: SystemProfileThirdPartyServicesCrowdstrike;
+    /**
+     *
+     * @type {SystemProfileWorkloadsIbmDb2}
+     * @memberof SystemProfileWorkloads
+     */
+    'ibm_db2'?: SystemProfileWorkloadsIbmDb2;
+    /**
+     *
+     * @type {SystemProfileWorkloadsIntersystems}
+     * @memberof SystemProfileWorkloads
+     */
+    'intersystems'?: SystemProfileWorkloadsIntersystems;
+    /**
+     *
+     * @type {SystemProfileMssql}
+     * @memberof SystemProfileWorkloads
+     */
+    'mssql'?: SystemProfileMssql;
+    /**
+     *
+     * @type {SystemProfileWorkloadsOracleDb}
+     * @memberof SystemProfileWorkloads
+     */
+    'oracle_db'?: SystemProfileWorkloadsOracleDb;
+    /**
+     *
+     * @type {SystemProfileWorkloadsRhelAi}
+     * @memberof SystemProfileWorkloads
+     */
+    'rhel_ai'?: SystemProfileWorkloadsRhelAi;
+    /**
+     *
+     * @type {SystemProfileSap}
+     * @memberof SystemProfileWorkloads
+     */
+    'sap'?: SystemProfileSap;
+}
+/**
+ * Object containing data specific to the IBM DB2 workload
+ * @export
+ * @interface SystemProfileWorkloadsIbmDb2
+ */
+export interface SystemProfileWorkloadsIbmDb2 {
+    /**
+     * Indicates if IBM DB2 is running on the system
+     * @type {boolean}
+     * @memberof SystemProfileWorkloadsIbmDb2
+     */
+    'is_running'?: boolean;
+}
+/**
+ * Object containing data specific to InterSystems workload
+ * @export
+ * @interface SystemProfileWorkloadsIntersystems
+ */
+export interface SystemProfileWorkloadsIntersystems {
+    /**
+     * Indicates if InterSystems is installed on the system
+     * @type {boolean}
+     * @memberof SystemProfileWorkloadsIntersystems
+     */
+    'is_intersystems'?: boolean;
+    /**
+     *
+     * @type {Array<Items>}
+     * @memberof SystemProfileWorkloadsIntersystems
+     */
+    'running_instances'?: Array<Items>;
+}
+/**
+ * Object containing data specific to the Oracle DB workload
+ * @export
+ * @interface SystemProfileWorkloadsOracleDb
+ */
+export interface SystemProfileWorkloadsOracleDb {
+    /**
+     * Indicates if Oracle DB is running on the system
+     * @type {boolean}
+     * @memberof SystemProfileWorkloadsOracleDb
+     */
+    'is_running'?: boolean;
+}
+/**
+ * Object containing information about RHEL AI
+ * @export
+ * @interface SystemProfileWorkloadsRhelAi
+ */
+export interface SystemProfileWorkloadsRhelAi {
+    /**
+     * RHEL AI VARIANT
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAi
+     */
+    'variant'?: string;
+    /**
+     * RHEL AI VERSION ID
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAi
+     */
+    'rhel_ai_version_id'?: string;
+    /**
+     * The list of GPU models on the host
+     * @type {Array<SystemProfileWorkloadsRhelAiGpuModelsInner>}
+     * @memberof SystemProfileWorkloadsRhelAi
+     */
+    'gpu_models'?: Array<SystemProfileWorkloadsRhelAiGpuModelsInner>;
+    /**
+     * The list of AI models available on the host
+     * @type {Array<string>}
+     * @memberof SystemProfileWorkloadsRhelAi
+     */
+    'ai_models'?: Array<string>;
+    /**
+     * The free storage available on the host
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAi
+     */
+    'free_disk_storage'?: string;
+}
+/**
+ * Object containing data specific to a GPU model
+ * @export
+ * @interface SystemProfileWorkloadsRhelAiGpuModelsInner
+ */
+export interface SystemProfileWorkloadsRhelAiGpuModelsInner {
+    /**
+     * The name of GPU model
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAiGpuModelsInner
+     */
+    'name'?: string;
+    /**
+     * The vendor of GPU model
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAiGpuModelsInner
+     */
+    'vendor'?: string;
+    /**
+     * The memory of GPU model
+     * @type {string}
+     * @memberof SystemProfileWorkloadsRhelAiGpuModelsInner
+     */
+    'memory'?: string;
+    /**
+     * The count of this specific GPU model
+     * @type {number}
+     * @memberof SystemProfileWorkloadsRhelAiGpuModelsInner
+     */
+    'count'?: number;
+}
+/**
  * Representation of one yum repository
  * @export
  * @interface SystemProfileYumRepo
@@ -2474,23 +2543,4 @@ export interface TagsOut {
      * @memberof TagsOut
      */
     'results'?: { [key: string]: Array<StructuredTag>; };
-}
-/**
- *
- * @export
- * @interface UnleashToggleOut
- */
-export interface UnleashToggleOut {
-    /**
-     * The value of the feature flag toggle
-     * @type {boolean}
-     * @memberof UnleashToggleOut
-     */
-    'flag_value'?: boolean;
-    /**
-     * Whether the fallback value was used, if the Unleash server could not be accessed
-     * @type {boolean}
-     * @memberof UnleashToggleOut
-     */
-    'using_fallback_value'?: boolean;
 }

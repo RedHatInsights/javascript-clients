@@ -24,7 +24,7 @@ export type AutosubexclusionDestroyParams = {
 export type AutosubexclusionDestroyReturnType = AxiosPromise<string>;
 
 const isAutosubexclusionDestroyObjectParams = (params: [AutosubexclusionDestroyParams] | unknown[]): params is [AutosubexclusionDestroyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'orgId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'orgId')
 }
 /**
 * Destroy an existing subscription exclusion in the system.  This will DELETE an existing subscription exclusion in the system. Existing subscription exclusions are identified and deleted by the \"org_id\" field.

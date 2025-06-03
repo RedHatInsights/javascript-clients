@@ -24,7 +24,7 @@ export type ShowContainerImageParams = {
 export type ShowContainerImageReturnType = AxiosPromise<ContainerImage>;
 
 const isShowContainerImageObjectParams = (params: [ShowContainerImageParams] | unknown[]): params is [ShowContainerImageParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a ContainerImage object

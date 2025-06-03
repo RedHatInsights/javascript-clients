@@ -30,7 +30,7 @@ export type WorkspacesUpdateParams = {
 export type WorkspacesUpdateReturnType = AxiosPromise<WorkspacesUpdateWorkspaceResponse>;
 
 const isWorkspacesUpdateObjectParams = (params: [WorkspacesUpdateParams] | unknown[]): params is [WorkspacesUpdateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'workspacesUpdateWorkspaceRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'workspacesUpdateWorkspaceRequest')
 }
 /**
 * Edit a workspace

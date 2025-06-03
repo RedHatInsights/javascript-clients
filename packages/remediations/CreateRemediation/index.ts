@@ -24,7 +24,7 @@ export type CreateRemediationParams = {
 export type CreateRemediationReturnType = AxiosPromise<RemediationCreated>;
 
 const isCreateRemediationObjectParams = (params: [CreateRemediationParams] | unknown[]): params is [CreateRemediationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'remediationInput')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'remediationInput')
 }
 /**
 * Creates a new Remediation based on given information, RBAC permission {remediations:remediation:write}

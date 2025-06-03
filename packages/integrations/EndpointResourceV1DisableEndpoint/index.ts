@@ -14,17 +14,17 @@ import type {  } from '../types';
 export type EndpointResourceV1DisableEndpointParams = {
   /**
   *
-  * @type { string }
+  * @type { any }
   * @memberof EndpointResourceV1DisableEndpointApi
   */
-  id: string,
+  id: any,
   options?: AxiosRequestConfig
 }
 
 export type EndpointResourceV1DisableEndpointReturnType = AxiosPromise<void>;
 
 const isEndpointResourceV1DisableEndpointObjectParams = (params: [EndpointResourceV1DisableEndpointParams] | unknown[]): params is [EndpointResourceV1DisableEndpointParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Disables an endpoint so that the endpoint will not be executed after an operation that uses the endpoint is started. An operation that is already running can still execute the endpoint. Disable an endpoint when you want to stop it from running and might want to re-enable it in the future.
@@ -33,7 +33,7 @@ const isEndpointResourceV1DisableEndpointObjectParams = (params: [EndpointResour
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const endpointResourceV1DisableEndpointParamCreator = async (...config: ([EndpointResourceV1DisableEndpointParams] | [string, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const endpointResourceV1DisableEndpointParamCreator = async (...config: ([EndpointResourceV1DisableEndpointParams] | [any, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isEndpointResourceV1DisableEndpointObjectParams(config) ? config[0] : ['id', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as EndpointResourceV1DisableEndpointParams;
     const { id, options = {} } = params;
     const localVarPath = `/endpoints/{id}/enable`

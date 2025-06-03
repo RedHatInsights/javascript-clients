@@ -30,13 +30,14 @@ export type SecurityGuideRuleTreeParams = {
 export type SecurityGuideRuleTreeReturnType = AxiosPromise<any>;
 
 const isSecurityGuideRuleTreeObjectParams = (params: [SecurityGuideRuleTreeParams] | unknown[]): params is [SecurityGuideRuleTreeParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'securityGuideId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'securityGuideId') && true
 }
 /**
-* Returns the Rule Tree of a Security Guide
+* Returns rule tree of a security guide.
 * @summary Request the Rule Tree of a Security Guide
 * @param {SecurityGuideRuleTreeParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const securityGuideRuleTreeParamCreator = async (...config: ([SecurityGuideRuleTreeParams] | [any, any, AxiosRequestConfig])): Promise<RequestArgs> => {

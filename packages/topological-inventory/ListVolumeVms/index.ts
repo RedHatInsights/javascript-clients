@@ -48,7 +48,7 @@ export type ListVolumeVmsParams = {
 export type ListVolumeVmsReturnType = AxiosPromise<VmsCollection>;
 
 const isListVolumeVmsObjectParams = (params: [ListVolumeVmsParams] | unknown[]): params is [ListVolumeVmsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Vm objects

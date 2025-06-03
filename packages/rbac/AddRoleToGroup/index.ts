@@ -14,10 +14,10 @@ import type { AddRoleToGroup200Response, Error403, GroupRoleIn } from '../types'
 export type AddRoleToGroupParams = {
   /**
   * ID of group to update
-  * @type { string }
+  * @type { any }
   * @memberof AddRoleToGroupApi
   */
-  uuid: string,
+  uuid: any,
   /**
   * Role to add to a group
   * @type { GroupRoleIn }
@@ -30,7 +30,7 @@ export type AddRoleToGroupParams = {
 export type AddRoleToGroupReturnType = AxiosPromise<AddRoleToGroup200Response>;
 
 const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]): params is [AddRoleToGroupParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid') && Object.prototype.hasOwnProperty.call(params, 'groupRoleIn')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid') && Object.prototype.hasOwnProperty.call(params[0], 'groupRoleIn')
 }
 /**
 *
@@ -39,7 +39,7 @@ const isAddRoleToGroupObjectParams = (params: [AddRoleToGroupParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const addRoleToGroupParamCreator = async (...config: ([AddRoleToGroupParams] | [string, GroupRoleIn, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const addRoleToGroupParamCreator = async (...config: ([AddRoleToGroupParams] | [any, GroupRoleIn, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isAddRoleToGroupObjectParams(config) ? config[0] : ['uuid', 'groupRoleIn', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as AddRoleToGroupParams;
     const { uuid, groupRoleIn, options = {} } = params;
     const localVarPath = `/groups/{uuid}/roles/`

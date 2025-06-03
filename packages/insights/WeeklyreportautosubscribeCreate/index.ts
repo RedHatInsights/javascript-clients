@@ -24,7 +24,7 @@ export type WeeklyreportautosubscribeCreateParams = {
 export type WeeklyreportautosubscribeCreateReturnType = AxiosPromise<AutoSubscribe>;
 
 const isWeeklyreportautosubscribeCreateObjectParams = (params: [WeeklyreportautosubscribeCreateParams] | unknown[]): params is [WeeklyreportautosubscribeCreateParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'autoSubscribeInput')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'autoSubscribeInput')
 }
 /**
 * Set the auto-subscription status of the current user to the supplied `is_auto_subscribed` value.  If \'is_auto_subscribed\' is true, an auto-subscription is added if it doesn\'t already exist.  If it is false, the auto-subscription is removed if it exists.  Check if ENABLE_AUTOSUB enviroment variable is set to allow the method.

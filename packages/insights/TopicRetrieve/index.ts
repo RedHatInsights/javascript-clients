@@ -24,7 +24,7 @@ export type TopicRetrieveParams = {
 export type TopicRetrieveReturnType = AxiosPromise<Topic>;
 
 const isTopicRetrieveObjectParams = (params: [TopicRetrieveParams] | unknown[]): params is [TopicRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'slug')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'slug')
 }
 /**
 * Retrieve a single topic by slug.  This also lists the topic\'s impacted systems count.

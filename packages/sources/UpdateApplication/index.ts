@@ -30,7 +30,7 @@ export type UpdateApplicationParams = {
 export type UpdateApplicationReturnType = AxiosPromise<void>;
 
 const isUpdateApplicationObjectParams = (params: [UpdateApplicationParams] | unknown[]): params is [UpdateApplicationParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'application')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'application')
 }
 /**
 * Updates a Application object

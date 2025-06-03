@@ -48,7 +48,7 @@ export type ListServiceInstanceServiceInstanceNodesParams = {
 export type ListServiceInstanceServiceInstanceNodesReturnType = AxiosPromise<ServiceInstanceNodesCollection>;
 
 const isListServiceInstanceServiceInstanceNodesObjectParams = (params: [ListServiceInstanceServiceInstanceNodesParams] | unknown[]): params is [ListServiceInstanceServiceInstanceNodesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of ServiceInstanceNode objects

@@ -48,7 +48,7 @@ export type ListSubscriptionIpaddressesParams = {
 export type ListSubscriptionIpaddressesReturnType = AxiosPromise<IpaddressesCollection>;
 
 const isListSubscriptionIpaddressesObjectParams = (params: [ListSubscriptionIpaddressesParams] | unknown[]): params is [ListSubscriptionIpaddressesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && true && true && true && true
 }
 /**
 * Returns an array of Ipaddress objects

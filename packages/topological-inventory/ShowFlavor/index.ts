@@ -24,7 +24,7 @@ export type ShowFlavorParams = {
 export type ShowFlavorReturnType = AxiosPromise<Flavor>;
 
 const isShowFlavorObjectParams = (params: [ShowFlavorParams] | unknown[]): params is [ShowFlavorParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id')
 }
 /**
 * Returns a Flavor object

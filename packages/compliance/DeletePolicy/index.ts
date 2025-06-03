@@ -30,10 +30,10 @@ export type DeletePolicyParams = {
 export type DeletePolicyReturnType = AxiosPromise<CreatePolicy201Response>;
 
 const isDeletePolicyObjectParams = (params: [DeletePolicyParams] | unknown[]): params is [DeletePolicyParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'policyId') && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'policyId') && true
 }
 /**
-* Deletes a Policy
+* Delete a specific policy.
 * @summary Delete a Policy
 * @param {DeletePolicyParams} config with all available params.
 * @param {*} [options] Override http request option.

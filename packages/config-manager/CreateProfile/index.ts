@@ -24,7 +24,7 @@ export type CreateProfileParams = {
 export type CreateProfileReturnType = AxiosPromise<Profile>;
 
 const isCreateProfileObjectParams = (params: [CreateProfileParams] | unknown[]): params is [CreateProfileParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'createProfileRequest')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'createProfileRequest')
 }
 /**
 * Create and optionally activate a new profile.

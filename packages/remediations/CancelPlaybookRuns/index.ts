@@ -30,7 +30,7 @@ export type CancelPlaybookRunsParams = {
 export type CancelPlaybookRunsReturnType = AxiosPromise<object>;
 
 const isCancelPlaybookRunsObjectParams = (params: [CancelPlaybookRunsParams] | unknown[]): params is [CancelPlaybookRunsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'playbookRunId')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId')
 }
 /**
 * Cancel execution of the remediation

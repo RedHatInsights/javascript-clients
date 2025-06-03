@@ -33,7 +33,7 @@ const isSystemsOSObjectParams = (params: [SystemsOSParams] | unknown[]): params 
   return params.length === 1 && true && true
 }
 /**
-* This feature is exclusively used by the frontend
+* This feature is exclusively used by the frontend.
 * @summary Request the list of available OS versions
 * @param {SystemsOSParams} config with all available params.
 * @param {*} [options] Override http request option.

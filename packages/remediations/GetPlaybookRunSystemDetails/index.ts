@@ -36,7 +36,7 @@ export type GetPlaybookRunSystemDetailsParams = {
 export type GetPlaybookRunSystemDetailsReturnType = AxiosPromise<PlaybookRunSystemDetails>;
 
 const isGetPlaybookRunSystemDetailsObjectParams = (params: [GetPlaybookRunSystemDetailsParams] | unknown[]): params is [GetPlaybookRunSystemDetailsParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'id') && Object.prototype.hasOwnProperty.call(params, 'playbookRunId') && Object.prototype.hasOwnProperty.call(params, 'system')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'id') && Object.prototype.hasOwnProperty.call(params[0], 'playbookRunId') && Object.prototype.hasOwnProperty.call(params[0], 'system')
 }
 /**
 * Get details and updated log of system being executed on in specific playbook run

@@ -24,7 +24,7 @@ export type SystemRetrieveParams = {
 export type SystemRetrieveReturnType = AxiosPromise<System>;
 
 const isSystemRetrieveObjectParams = (params: [SystemRetrieveParams] | unknown[]): params is [SystemRetrieveParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'uuid')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'uuid')
 }
 /**
 * Retrieve the reports for a single system by Insights Inventory UUID

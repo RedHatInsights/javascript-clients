@@ -60,7 +60,7 @@ export type ExportSystemPackagesParams = {
 export type ExportSystemPackagesReturnType = AxiosPromise<Array<ControllersSystemPackageInline>>;
 
 const isExportSystemPackagesObjectParams = (params: [ExportSystemPackagesParams] | unknown[]): params is [ExportSystemPackagesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId') && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId') && true && true && true && true && true && true
 }
 /**
 * Show me details about a system packages by given inventory id. Export endpoints are not paginated.

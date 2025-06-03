@@ -78,7 +78,7 @@ export type SystemPackagesParams = {
 export type SystemPackagesReturnType = AxiosPromise<ControllersSystemPackageResponse>;
 
 const isSystemPackagesObjectParams = (params: [SystemPackagesParams] | unknown[]): params is [SystemPackagesParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'inventoryId') && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'inventoryId') && true && true && true && true && true && true && true && true && true
 }
 /**
 * Show me details about a system packages by given inventory id

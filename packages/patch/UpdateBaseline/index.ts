@@ -30,13 +30,14 @@ export type UpdateBaselineParams = {
 export type UpdateBaselineReturnType = AxiosPromise<ControllersUpdateBaselineResponse>;
 
 const isUpdateBaselineObjectParams = (params: [UpdateBaselineParams] | unknown[]): params is [UpdateBaselineParams] => {
-  return params.length === 1 && Object.prototype.hasOwnProperty.call(params, 'baselineId') && Object.prototype.hasOwnProperty.call(params, 'body')
+  return params.length === 1 && Object.prototype.hasOwnProperty.call(params[0], 'baselineId') && Object.prototype.hasOwnProperty.call(params[0], 'body')
 }
 /**
 * Update a baseline for my set of systems. System cannot be satellite managed.
 * @summary Update a baseline for my set of systems
 * @param {UpdateBaselineParams} config with all available params.
 * @param {*} [options] Override http request option.
+* @deprecated
 * @throws {RequiredError}
 */
 export const updateBaselineParamCreator = async (...config: ([UpdateBaselineParams] | [number, ControllersUpdateBaselineRequest, AxiosRequestConfig])): Promise<RequestArgs> => {
