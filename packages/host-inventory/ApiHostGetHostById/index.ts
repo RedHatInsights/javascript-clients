@@ -43,11 +43,11 @@ export type ApiHostGetHostByIdParams = {
   */
   orderBy?: ApiHostGetHostByIdOrderByEnum,
   /**
-  * Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-  * @type { ApiHostGetHostByIdOrderHowEnum }
+  * Direction of the ordering (case-insensitive); defaults to ASC for display_name, and to DESC for updated and operating_system
+  * @type { string }
   * @memberof ApiHostGetHostByIdApi
   */
-  orderHow?: ApiHostGetHostByIdOrderHowEnum,
+  orderHow?: string,
   /**
   * Fetches only mentioned system_profile fields. For example, <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": [\"arch\", \"host_type\"]} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?fields[system_profile]=arch,host_type\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
@@ -64,18 +64,10 @@ export const ApiHostGetHostByIdOrderByEnum = {
     DisplayName: 'display_name',
     GroupName: 'group_name',
     Updated: 'updated',
-    OperatingSystem: 'operating_system'
+    OperatingSystem: 'operating_system',
+    LastCheckIn: 'last_check_in'
 } as const;
 export type ApiHostGetHostByIdOrderByEnum = typeof ApiHostGetHostByIdOrderByEnum[keyof typeof ApiHostGetHostByIdOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ApiHostGetHostByIdOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
-} as const;
-export type ApiHostGetHostByIdOrderHowEnum = typeof ApiHostGetHostByIdOrderHowEnum[keyof typeof ApiHostGetHostByIdOrderHowEnum];
 
 export type ApiHostGetHostByIdReturnType = AxiosPromise<HostQueryOutput>;
 
@@ -89,7 +81,7 @@ const isApiHostGetHostByIdObjectParams = (params: [ApiHostGetHostByIdParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostByIdParamCreator = async (...config: ([ApiHostGetHostByIdParams] | [Array<string>, string, number, number, ApiHostGetHostByIdOrderByEnum, ApiHostGetHostByIdOrderHowEnum, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostByIdParamCreator = async (...config: ([ApiHostGetHostByIdParams] | [Array<string>, string, number, number, ApiHostGetHostByIdOrderByEnum, string, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isApiHostGetHostByIdObjectParams(config) ? config[0] : ['hostIdList', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostByIdParams;
     const { hostIdList, branchId, perPage, page, orderBy, orderHow, fields, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}`
