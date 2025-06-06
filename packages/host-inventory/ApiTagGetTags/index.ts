@@ -25,11 +25,11 @@ export type ApiTagGetTagsParams = {
   */
   orderBy?: ApiTagGetTagsOrderByEnum,
   /**
-  * Direction of the ordering. Default to ASC
-  * @type { ApiTagGetTagsOrderHowEnum }
+  * Direction of the ordering (case-insensitive). Valid values are ASC (default) and DESC.
+  * @type { string }
   * @memberof ApiTagGetTagsApi
   */
-  orderHow?: ApiTagGetTagsOrderHowEnum,
+  orderHow?: string,
   /**
   * A number of items to return per page.
   * @type { number }
@@ -115,7 +115,7 @@ export type ApiTagGetTagsParams = {
   */
   registeredWith?: Array<ApiTagGetTagsRegisteredWithEnum>,
   /**
-  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\"
+  * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiTagGetTagsApi
   */
@@ -131,15 +131,6 @@ export const ApiTagGetTagsOrderByEnum = {
     Count: 'count'
 } as const;
 export type ApiTagGetTagsOrderByEnum = typeof ApiTagGetTagsOrderByEnum[keyof typeof ApiTagGetTagsOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ApiTagGetTagsOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
-} as const;
-export type ApiTagGetTagsOrderHowEnum = typeof ApiTagGetTagsOrderHowEnum[keyof typeof ApiTagGetTagsOrderHowEnum];
 /**
   * @export
   * @enum {string}
@@ -196,7 +187,7 @@ const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, ApiTagGetTagsOrderHowEnum, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
     const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options = {} } = params;
     const localVarPath = `/tags`;

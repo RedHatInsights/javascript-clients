@@ -37,11 +37,11 @@ export type ApiHostGetHostTagCountParams = {
   */
   orderBy?: ApiHostGetHostTagCountOrderByEnum,
   /**
-  * Direction of the ordering; defaults to ASC for display_name, and to DESC for updated and operating_system
-  * @type { ApiHostGetHostTagCountOrderHowEnum }
+  * Direction of the ordering (case-insensitive); defaults to ASC for display_name, and to DESC for updated and operating_system
+  * @type { string }
   * @memberof ApiHostGetHostTagCountApi
   */
-  orderHow?: ApiHostGetHostTagCountOrderHowEnum,
+  orderHow?: string,
   options?: AxiosRequestConfig
 }
 /**
@@ -52,18 +52,10 @@ export const ApiHostGetHostTagCountOrderByEnum = {
     DisplayName: 'display_name',
     GroupName: 'group_name',
     Updated: 'updated',
-    OperatingSystem: 'operating_system'
+    OperatingSystem: 'operating_system',
+    LastCheckIn: 'last_check_in'
 } as const;
 export type ApiHostGetHostTagCountOrderByEnum = typeof ApiHostGetHostTagCountOrderByEnum[keyof typeof ApiHostGetHostTagCountOrderByEnum];
-/**
-  * @export
-  * @enum {string}
-  */
-export const ApiHostGetHostTagCountOrderHowEnum = {
-    Asc: 'ASC',
-    Desc: 'DESC'
-} as const;
-export type ApiHostGetHostTagCountOrderHowEnum = typeof ApiHostGetHostTagCountOrderHowEnum[keyof typeof ApiHostGetHostTagCountOrderHowEnum];
 
 export type ApiHostGetHostTagCountReturnType = AxiosPromise<TagCountOut>;
 
@@ -77,7 +69,7 @@ const isApiHostGetHostTagCountObjectParams = (params: [ApiHostGetHostTagCountPar
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, ApiHostGetHostTagCountOrderHowEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
+export const apiHostGetHostTagCountParamCreator = async (...config: ([ApiHostGetHostTagCountParams] | [Array<string>, number, number, ApiHostGetHostTagCountOrderByEnum, string, AxiosRequestConfig])): Promise<RequestArgs> => {
     const params = isApiHostGetHostTagCountObjectParams(config) ? config[0] : ['hostIdList', 'perPage', 'page', 'orderBy', 'orderHow', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostTagCountParams;
     const { hostIdList, perPage, page, orderBy, orderHow, options = {} } = params;
     const localVarPath = `/hosts/{host_id_list}/tags/count`
