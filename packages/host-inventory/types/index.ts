@@ -1730,6 +1730,31 @@ export interface SystemProfileInstalledProduct {
     'status'?: string;
 }
 /**
+ * The info for an InterSystems instance running on the system
+ * @export
+ * @interface SystemProfileInterSystemsRunningInstance
+ */
+export interface SystemProfileInterSystemsRunningInstance {
+    /**
+     * The name of the instance
+     * @type {string}
+     * @memberof SystemProfileInterSystemsRunningInstance
+     */
+    'instance_name'?: string;
+    /**
+     * The product of the instance
+     * @type {string}
+     * @memberof SystemProfileInterSystemsRunningInstance
+     */
+    'product'?: string;
+    /**
+     * The version of the instance
+     * @type {string}
+     * @memberof SystemProfileInterSystemsRunningInstance
+     */
+    'version'?: string;
+}
+/**
  * Object containing data specific to InterSystems workload
  * @export
  * @interface SystemProfileIntersystems
@@ -1743,35 +1768,10 @@ export interface SystemProfileIntersystems {
     'is_intersystems'?: boolean;
     /**
      *
-     * @type {Array<SystemProfileIntersystemsRunningInstancesInner>}
+     * @type {Array<SystemProfileInterSystemsRunningInstance>}
      * @memberof SystemProfileIntersystems
      */
-    'running_instances'?: Array<SystemProfileIntersystemsRunningInstancesInner>;
-}
-/**
- * The info for an InterSystems instance running on the system
- * @export
- * @interface SystemProfileIntersystemsRunningInstancesInner
- */
-export interface SystemProfileIntersystemsRunningInstancesInner {
-    /**
-     * The name of the instance
-     * @type {string}
-     * @memberof SystemProfileIntersystemsRunningInstancesInner
-     */
-    'instance_name'?: string;
-    /**
-     * The product of the instance
-     * @type {string}
-     * @memberof SystemProfileIntersystemsRunningInstancesInner
-     */
-    'product'?: string;
-    /**
-     * The version of the instance
-     * @type {string}
-     * @memberof SystemProfileIntersystemsRunningInstancesInner
-     */
-    'version'?: string;
+    'running_instances'?: Array<SystemProfileInterSystemsRunningInstance>;
 }
 /**
  * Object containing data specific to the MS SQL workload
@@ -2285,10 +2285,10 @@ export interface SystemProfileWorkloads {
     'ibm_db2'?: SystemProfileWorkloadsIbmDb2;
     /**
      *
-     * @type {SystemProfileWorkloadsIntersystems}
+     * @type {SystemProfileIntersystems}
      * @memberof SystemProfileWorkloads
      */
-    'intersystems'?: SystemProfileWorkloadsIntersystems;
+    'intersystems'?: SystemProfileIntersystems;
     /**
      *
      * @type {SystemProfileMssql}
@@ -2326,25 +2326,6 @@ export interface SystemProfileWorkloadsIbmDb2 {
      * @memberof SystemProfileWorkloadsIbmDb2
      */
     'is_running'?: boolean;
-}
-/**
- * Object containing data specific to InterSystems workload
- * @export
- * @interface SystemProfileWorkloadsIntersystems
- */
-export interface SystemProfileWorkloadsIntersystems {
-    /**
-     * Indicates if InterSystems is installed on the system
-     * @type {boolean}
-     * @memberof SystemProfileWorkloadsIntersystems
-     */
-    'is_intersystems'?: boolean;
-    /**
-     *
-     * @type {Array<Items>}
-     * @memberof SystemProfileWorkloadsIntersystems
-     */
-    'running_instances'?: Array<Items>;
 }
 /**
  * Object containing data specific to the Oracle DB workload
