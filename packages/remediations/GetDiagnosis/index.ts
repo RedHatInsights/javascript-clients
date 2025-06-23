@@ -13,7 +13,7 @@ import type { Diagnosis, RequestError } from '../types';
 
 export type GetDiagnosisParams = {
   /**
-  * System identifier
+  * System Insights identifier (uuid)  `insights_id` as returned from `/api/inventory/v1/hosts/{system_id}`
   * @type { string }
   * @memberof GetDiagnosisApi
   */

@@ -76,6 +76,44 @@ export interface ExecuteRemediation {
 /**
  *
  * @export
+ * @interface GetRemediationIssuesFilterParameter
+ */
+export interface GetRemediationIssuesFilterParameter {
+    /**
+     * Filter by issue id (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationIssuesFilterParameter
+     */
+    'id'?: string;
+}
+/**
+ *
+ * @export
+ * @interface GetRemediationSystemsFilterParameter
+ */
+export interface GetRemediationSystemsFilterParameter {
+    /**
+     * Filter by system id (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationSystemsFilterParameter
+     */
+    'id'?: string;
+    /**
+     * Filter by hostname (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationSystemsFilterParameter
+     */
+    'hostname'?: string;
+    /**
+     * Filter by display name (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationSystemsFilterParameter
+     */
+    'display_name'?: string;
+}
+/**
+ *
+ * @export
  * @interface GetRemediations200Response
  */
 export interface GetRemediations200Response {
@@ -93,11 +131,109 @@ export interface GetRemediations200Response {
     'meta': Meta;
     /**
      *
-     * @type {RemediationListLinks}
+     * @type {Links}
      * @memberof GetRemediations200Response
      */
-    'links': RemediationListLinks;
+    'links': Links;
 }
+/**
+ *
+ * @export
+ * @interface GetRemediationsFilterParameter
+ */
+export interface GetRemediationsFilterParameter {
+    /**
+     * Filter by plan name (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameter
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {GetRemediationsFilterParameterAnyOfLastRunAfter}
+     * @memberof GetRemediationsFilterParameter
+     */
+    'last_run_after'?: GetRemediationsFilterParameterAnyOfLastRunAfter;
+    /**
+     * Filter remediations created on or after this timestamp (ISO 8601 format)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameter
+     */
+    'created_after'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GetRemediationsFilterParameter
+     */
+    'status'?: GetRemediationsFilterParameterStatusEnum;
+    /**
+     * Filter remediations updated on or after this timestamp (ISO 8601 format)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameter
+     */
+    'updated_after'?: string;
+}
+
+export const GetRemediationsFilterParameterStatusEnum = {
+    Running: 'running',
+    Success: 'success',
+    Failure: 'failure'
+} as const;
+
+export type GetRemediationsFilterParameterStatusEnum = typeof GetRemediationsFilterParameterStatusEnum[keyof typeof GetRemediationsFilterParameterStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface GetRemediationsFilterParameterAnyOf
+ */
+export interface GetRemediationsFilterParameterAnyOf {
+    /**
+     * Filter by plan name (allows partial match)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameterAnyOf
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {GetRemediationsFilterParameterAnyOfLastRunAfter}
+     * @memberof GetRemediationsFilterParameterAnyOf
+     */
+    'last_run_after'?: GetRemediationsFilterParameterAnyOfLastRunAfter;
+    /**
+     * Filter remediations created on or after this timestamp (ISO 8601 format)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameterAnyOf
+     */
+    'created_after'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GetRemediationsFilterParameterAnyOf
+     */
+    'status'?: GetRemediationsFilterParameterAnyOfStatusEnum;
+    /**
+     * Filter remediations updated on or after this timestamp (ISO 8601 format)
+     * @type {string}
+     * @memberof GetRemediationsFilterParameterAnyOf
+     */
+    'updated_after'?: string;
+}
+
+export const GetRemediationsFilterParameterAnyOfStatusEnum = {
+    Running: 'running',
+    Success: 'success',
+    Failure: 'failure'
+} as const;
+
+export type GetRemediationsFilterParameterAnyOfStatusEnum = typeof GetRemediationsFilterParameterAnyOfStatusEnum[keyof typeof GetRemediationsFilterParameterAnyOfStatusEnum];
+
+/**
+ * @type GetRemediationsFilterParameterAnyOfLastRunAfter
+ * @export
+ */
+export type GetRemediationsFilterParameterAnyOfLastRunAfter = string;
+
 /**
  *
  * @export
@@ -116,6 +252,81 @@ export interface GetVersion200Response {
      * @memberof GetVersion200Response
      */
     'commit': string;
+}
+/**
+ *
+ * @export
+ * @interface IssueListLinks
+ */
+export interface IssueListLinks {
+    /**
+     * relative link to the first page of the query results
+     * @type {string}
+     * @memberof IssueListLinks
+     */
+    'first': string;
+    /**
+     * relative link to the last page of the query results
+     * @type {string}
+     * @memberof IssueListLinks
+     */
+    'last': string;
+    /**
+     * relative link to the next page of the query results (or null if this is the last page)
+     * @type {string}
+     * @memberof IssueListLinks
+     */
+    'next': string | null;
+    /**
+     * relative link to the previous page of the query results (or null if this is the first page)
+     * @type {string}
+     * @memberof IssueListLinks
+     */
+    'previous': string | null;
+}
+/**
+ *
+ * @export
+ * @interface IssuesList
+ */
+export interface IssuesList {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof IssuesList
+     */
+    'issue_ids': Array<string>;
+}
+/**
+ *
+ * @export
+ * @interface Links
+ */
+export interface Links {
+    /**
+     * relative link to the first page of the query results
+     * @type {string}
+     * @memberof Links
+     */
+    'first': string;
+    /**
+     * relative link to the last page of the query results
+     * @type {string}
+     * @memberof Links
+     */
+    'last': string;
+    /**
+     * relative link to the next page of the query results (or null if this is the last page)
+     * @type {string}
+     * @memberof Links
+     */
+    'next': string | null;
+    /**
+     * relative link to the previous page of the query results (or null if this is the first page)
+     * @type {string}
+     * @memberof Links
+     */
+    'previous': string | null;
 }
 /**
  *
@@ -505,7 +716,8 @@ export const PlaybookRunExecutorStatus = {
     Running: 'running',
     Success: 'success',
     Failure: 'failure',
-    Canceled: 'canceled'
+    Canceled: 'canceled',
+    Timeout: 'timeout'
 } as const;
 
 export type PlaybookRunExecutorStatus = typeof PlaybookRunExecutorStatus[keyof typeof PlaybookRunExecutorStatus];
@@ -522,7 +734,8 @@ export const PlaybookRunStatus = {
     Running: 'running',
     Success: 'success',
     Failure: 'failure',
-    Canceled: 'canceled'
+    Canceled: 'canceled',
+    Timeout: 'timeout'
 } as const;
 
 export type PlaybookRunStatus = typeof PlaybookRunStatus[keyof typeof PlaybookRunStatus];
@@ -603,7 +816,8 @@ export const PlaybookRunSystemStatus = {
     Running: 'running',
     Success: 'success',
     Failure: 'failure',
-    Canceled: 'canceled'
+    Canceled: 'canceled',
+    Timeout: 'timeout'
 } as const;
 
 export type PlaybookRunSystemStatus = typeof PlaybookRunSystemStatus[keyof typeof PlaybookRunSystemStatus];
@@ -735,7 +949,7 @@ export interface RemediationDetails {
      * @type {boolean}
      * @memberof RemediationDetails
      */
-    'needs_reboot': boolean;
+    'needs_reboot'?: boolean;
     /**
      * Indicates whether a remediation has been marked as archived
      * @type {boolean}
@@ -777,13 +991,25 @@ export interface RemediationDetails {
      * @type {number}
      * @memberof RemediationDetails
      */
-    'resolved_count': number;
+    'resolved_count'?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RemediationDetails
+     */
+    'issue_count'?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof RemediationDetails
+     */
+    'system_count'?: number;
     /**
      *
      * @type {Array<RemediationIssue>}
      * @memberof RemediationDetails
      */
-    'issues': Array<RemediationIssue>;
+    'issues'?: Array<RemediationIssue>;
 }
 /**
  *
@@ -913,6 +1139,31 @@ export interface RemediationIssueIn {
 /**
  *
  * @export
+ * @interface RemediationIssueList
+ */
+export interface RemediationIssueList {
+    /**
+     *
+     * @type {Array<RemediationIssueSummary>}
+     * @memberof RemediationIssueList
+     */
+    'data': Array<RemediationIssueSummary>;
+    /**
+     *
+     * @type {Meta}
+     * @memberof RemediationIssueList
+     */
+    'meta': Meta;
+    /**
+     *
+     * @type {IssueListLinks}
+     * @memberof RemediationIssueList
+     */
+    'links': IssueListLinks;
+}
+/**
+ *
+ * @export
  * @interface RemediationIssueResolution
  */
 export interface RemediationIssueResolution {
@@ -943,6 +1194,43 @@ export interface RemediationIssueResolution {
 }
 
 
+/**
+ *
+ * @export
+ * @interface RemediationIssueSummary
+ */
+export interface RemediationIssueSummary {
+    /**
+     *
+     * @type {string}
+     * @memberof RemediationIssueSummary
+     */
+    'id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof RemediationIssueSummary
+     */
+    'description': string;
+    /**
+     *
+     * @type {RemediationIssueResolution}
+     * @memberof RemediationIssueSummary
+     */
+    'resolution': RemediationIssueResolution;
+    /**
+     * The total number of available resolutions for this issue
+     * @type {number}
+     * @memberof RemediationIssueSummary
+     */
+    'resolutions_available'?: number;
+    /**
+     * The number of systems associated with this plan issue
+     * @type {number}
+     * @memberof RemediationIssueSummary
+     */
+    'system_count': number;
+}
 /**
  *
  * @export
@@ -982,10 +1270,10 @@ export interface RemediationList {
     'meta': Meta;
     /**
      *
-     * @type {RemediationListLinks}
+     * @type {Links}
      * @memberof RemediationList
      */
-    'links': RemediationListLinks;
+    'links': Links;
 }
 /**
  *
@@ -1069,37 +1357,6 @@ export interface RemediationListItem {
 /**
  *
  * @export
- * @interface RemediationListLinks
- */
-export interface RemediationListLinks {
-    /**
-     * relative link to the first page of the query results
-     * @type {string}
-     * @memberof RemediationListLinks
-     */
-    'first': string;
-    /**
-     * relative link to the last page of the query results
-     * @type {string}
-     * @memberof RemediationListLinks
-     */
-    'last': string;
-    /**
-     * relative link to the next page of the query results (or null if this is the last page)
-     * @type {string}
-     * @memberof RemediationListLinks
-     */
-    'next': string | null;
-    /**
-     * relative link to the previous page of the query results (or null if this is the first page)
-     * @type {string}
-     * @memberof RemediationListLinks
-     */
-    'previous': string | null;
-}
-/**
- *
- * @export
  * @interface RemediationNameList
  */
 export interface RemediationNameList {
@@ -1117,10 +1374,10 @@ export interface RemediationNameList {
     'meta': Meta;
     /**
      *
-     * @type {RemediationListLinks}
+     * @type {Links}
      * @memberof RemediationNameList
      */
-    'links': RemediationListLinks;
+    'links': Links;
 }
 /**
  *
@@ -1134,6 +1391,31 @@ export interface RemediationNameListItem {
      * @memberof RemediationNameListItem
      */
     'name': string;
+}
+/**
+ *
+ * @export
+ * @interface RemediationSystemList
+ */
+export interface RemediationSystemList {
+    /**
+     *
+     * @type {Array<SystemOut>}
+     * @memberof RemediationSystemList
+     */
+    'data': Array<SystemOut>;
+    /**
+     *
+     * @type {Meta}
+     * @memberof RemediationSystemList
+     */
+    'meta': Meta;
+    /**
+     *
+     * @type {Links}
+     * @memberof RemediationSystemList
+     */
+    'links': Links;
 }
 /**
  *
@@ -1324,6 +1606,19 @@ export interface SystemOut {
      * @memberof SystemOut
      */
     'resolved'?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface SystemsList
+ */
+export interface SystemsList {
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemsList
+     */
+    'system_ids': Array<string>;
 }
 /**
  *

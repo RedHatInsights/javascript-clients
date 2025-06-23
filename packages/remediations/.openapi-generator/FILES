@@ -6,6 +6,8 @@ CreateRemediation/index.ts
 DeleteRemediation/index.ts
 DeleteRemediationIssue/index.ts
 DeleteRemediationIssueSystem/index.ts
+DeleteRemediationIssues/index.ts
+DeleteRemediationSystems/index.ts
 DeleteRemediations/index.ts
 DownloadPlaybooks/index.ts
 Generate/index.ts
@@ -16,7 +18,9 @@ GetPlaybookRunSystems/index.ts
 GetRemediation/index.ts
 GetRemediationConnectionStatus/index.ts
 GetRemediationIssueSystems/index.ts
+GetRemediationIssues/index.ts
 GetRemediationPlaybook/index.ts
+GetRemediationSystems/index.ts
 GetRemediations/index.ts
 GetResolutionsForIssue/index.ts
 GetResolutionsForIssues/index.ts
