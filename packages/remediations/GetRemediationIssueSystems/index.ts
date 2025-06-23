@@ -61,7 +61,7 @@ const isGetRemediationIssueSystemsObjectParams = (params: [GetRemediationIssueSy
 }
 /**
 * Get a paginated list of systems from a given issue, RBAC permission {remediations:remediation:read}
-* @summary Get Remediation Issue Systems
+* @summary Get Remediation Plan Issue Systems
 * @param {GetRemediationIssueSystemsParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}

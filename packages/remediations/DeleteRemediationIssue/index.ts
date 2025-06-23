@@ -34,7 +34,7 @@ const isDeleteRemediationIssueObjectParams = (params: [DeleteRemediationIssuePar
 }
 /**
 * Removes the given Issue from the Remediation, RBAC permission {remediations:remediation:write}
-* @summary Remove Remediation Issue
+* @summary Remove Remediation Plan Issue
 * @param {DeleteRemediationIssueParams} config with all available params.
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
