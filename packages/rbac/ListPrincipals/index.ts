@@ -61,7 +61,7 @@ export type ListPrincipalsParams = {
   */
   adminOnly?: boolean,
   /**
-  * Parameter for ordering principals by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-username
+  * Parameter for ordering principals by value. For inverse ordering, supply \'-\' before the param value, such as: ?order_by=-username. All options work for type of service-account principal, only username works for a user based principal.
   * @type { ListPrincipalsOrderByEnum }
   * @memberof ListPrincipalsApi
   */
@@ -73,11 +73,29 @@ export type ListPrincipalsParams = {
   */
   usernameOnly?: boolean,
   /**
-  * Parameter for selecting the type of principal to be returned.
+  * Parameter for selecting the type of principal to be returned. Defaults to \'user\'.
   * @type { ListPrincipalsTypeEnum }
   * @memberof ListPrincipalsApi
   */
   type?: ListPrincipalsTypeEnum,
+  /**
+  * Parameter for filtering principals of type \'service-account\' by exact name such as: ?type=service-account&name=userA.
+  * @type { string }
+  * @memberof ListPrincipalsApi
+  */
+  name?: string,
+  /**
+  * Parameter for filtering principals of type \'service-account\' by exact owner such as: ?type=service-account&owner=ownerA.
+  * @type { string }
+  * @memberof ListPrincipalsApi
+  */
+  owner?: string,
+  /**
+  * Parameter for filtering principals of type \'service-account\' by partial description such as: ?type=service-account&description=desc.
+  * @type { string }
+  * @memberof ListPrincipalsApi
+  */
+  description?: string,
   options?: AxiosRequestConfig
 }
 /**
@@ -113,7 +131,12 @@ export type ListPrincipalsStatusEnum = typeof ListPrincipalsStatusEnum[keyof typ
   * @enum {string}
   */
 export const ListPrincipalsOrderByEnum = {
-    Username: 'username'
+    Username: 'username',
+    Name: 'name',
+    Owner: 'owner',
+    Description: 'description',
+    ClientId: 'clientId',
+    TimeCreated: 'time_created'
 } as const;
 export type ListPrincipalsOrderByEnum = typeof ListPrincipalsOrderByEnum[keyof typeof ListPrincipalsOrderByEnum];
 /**
@@ -122,14 +145,15 @@ export type ListPrincipalsOrderByEnum = typeof ListPrincipalsOrderByEnum[keyof t
   */
 export const ListPrincipalsTypeEnum = {
     ServiceAccount: 'service-account',
-    User: 'user'
+    User: 'user',
+    All: 'all'
 } as const;
 export type ListPrincipalsTypeEnum = typeof ListPrincipalsTypeEnum[keyof typeof ListPrincipalsTypeEnum];
 
 export type ListPrincipalsReturnType = AxiosPromise<ListPrincipals200Response>;
 
 const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]): params is [ListPrincipalsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * By default, responses are sorted in ascending order by username
@@ -138,9 +162,9 @@ const isListPrincipalsObjectParams = (params: [ListPrincipalsParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsParams] | [number, number, ListPrincipalsMatchCriteriaEnum, string, ListPrincipalsSortOrderEnum, string, ListPrincipalsStatusEnum, boolean, ListPrincipalsOrderByEnum, boolean, ListPrincipalsTypeEnum, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isListPrincipalsObjectParams(config) ? config[0] : ['limit', 'offset', 'matchCriteria', 'usernames', 'sortOrder', 'email', 'status', 'adminOnly', 'orderBy', 'usernameOnly', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPrincipalsParams;
-    const { limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, options = {} } = params;
+export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsParams] | [number, number, ListPrincipalsMatchCriteriaEnum, string, ListPrincipalsSortOrderEnum, string, ListPrincipalsStatusEnum, boolean, ListPrincipalsOrderByEnum, boolean, ListPrincipalsTypeEnum, string, string, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isListPrincipalsObjectParams(config) ? config[0] : ['limit', 'offset', 'matchCriteria', 'usernames', 'sortOrder', 'email', 'status', 'adminOnly', 'orderBy', 'usernameOnly', 'type', 'name', 'owner', 'description', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ListPrincipalsParams;
+    const { limit, offset, matchCriteria, usernames, sortOrder, email, status, adminOnly, orderBy, usernameOnly, type, name, owner, description, options = {} } = params;
     const localVarPath = `/principals/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -190,6 +214,18 @@ export const listPrincipalsParamCreator = async (...config: ([ListPrincipalsPara
 
     if (type !== undefined) {
         localVarQueryParameter['type'] = type;
+    }
+
+    if (name !== undefined) {
+        localVarQueryParameter['name'] = name;
+    }
+
+    if (owner !== undefined) {
+        localVarQueryParameter['owner'] = owner;
+    }
+
+    if (description !== undefined) {
+        localVarQueryParameter['description'] = description;
     }
 
 
