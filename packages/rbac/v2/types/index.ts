@@ -274,7 +274,7 @@ export interface WorkspacesCreateWorkspaceRequest {
      * @type {string}
      * @memberof WorkspacesCreateWorkspaceRequest
      */
-    'parent_id': string;
+    'parent_id'?: string;
     /**
      * Workspace A
      * @type {string}
@@ -427,6 +427,38 @@ export const WorkspacesList500ResponseStatusEnum = {
 
 export type WorkspacesList500ResponseStatusEnum = typeof WorkspacesList500ResponseStatusEnum[keyof typeof WorkspacesList500ResponseStatusEnum];
 
+/**
+ *
+ * @export
+ * @interface WorkspacesMoveWorkspaceRequest
+ */
+export interface WorkspacesMoveWorkspaceRequest {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesMoveWorkspaceRequest
+     */
+    'parent_id': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesMoveWorkspaceResponse
+ */
+export interface WorkspacesMoveWorkspaceResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesMoveWorkspaceResponse
+     */
+    'id': string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkspacesMoveWorkspaceResponse
+     */
+    'parent_id': string;
+}
 /**
  *
  * @export
@@ -961,7 +993,8 @@ export interface WorkspacesWorkspaceListResponse {
 export const WorkspacesWorkspaceTypes = {
     Root: 'root',
     Default: 'default',
-    Standard: 'standard'
+    Standard: 'standard',
+    UngroupedHosts: 'ungrouped-hosts'
 } as const;
 
 export type WorkspacesWorkspaceTypes = typeof WorkspacesWorkspaceTypes[keyof typeof WorkspacesWorkspaceTypes];
@@ -977,7 +1010,8 @@ export const WorkspacesWorkspaceTypesQueryParam = {
     All: 'all',
     Root: 'root',
     Default: 'default',
-    Standard: 'standard'
+    Standard: 'standard',
+    UngroupedHosts: 'ungrouped-hosts'
 } as const;
 
 export type WorkspacesWorkspaceTypesQueryParam = typeof WorkspacesWorkspaceTypesQueryParam[keyof typeof WorkspacesWorkspaceTypesQueryParam];

@@ -83,6 +83,112 @@ export interface AdditionalGroup {
 /**
  *
  * @export
+ * @interface AllPrincipalsPagination
+ */
+export interface AllPrincipalsPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof AllPrincipalsPagination
+     */
+    'meta'?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof AllPrincipalsPagination
+     */
+    'links'?: PaginationLinks;
+    /**
+     *
+     * @type {AllPrincipalsPaginationAllOfData}
+     * @memberof AllPrincipalsPagination
+     */
+    'data': AllPrincipalsPaginationAllOfData | null;
+}
+/**
+ *
+ * @export
+ * @interface AllPrincipalsPaginationAllOfData
+ */
+export interface AllPrincipalsPaginationAllOfData {
+    /**
+     *
+     * @type {Array<ServiceAccount>}
+     * @memberof AllPrincipalsPaginationAllOfData
+     */
+    'serviceAccounts'?: Array<ServiceAccount>;
+    /**
+     *
+     * @type {Array<PrincipalPaginationAllOfDataInner>}
+     * @memberof AllPrincipalsPaginationAllOfData
+     */
+    'users'?: Array<PrincipalPaginationAllOfDataInner>;
+}
+/**
+ *
+ * @export
+ * @interface AuditLog
+ */
+export interface AuditLog {
+    /**
+     *
+     * @type {string}
+     * @memberof AuditLog
+     */
+    'created'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AuditLog
+     */
+    'principal_username'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AuditLog
+     */
+    'description'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AuditLog
+     */
+    'resource_type'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AuditLog
+     */
+    'action'?: string;
+}
+/**
+ *
+ * @export
+ * @interface AuditLogPagination
+ */
+export interface AuditLogPagination {
+    /**
+     *
+     * @type {PaginationMeta}
+     * @memberof AuditLogPagination
+     */
+    'meta'?: PaginationMeta;
+    /**
+     *
+     * @type {PaginationLinks}
+     * @memberof AuditLogPagination
+     */
+    'links'?: PaginationLinks;
+    /**
+     *
+     * @type {Array<AuditLog>}
+     * @memberof AuditLogPagination
+     */
+    'data': Array<AuditLog>;
+}
+/**
+ *
+ * @export
  * @interface CrossAccountRequest
  */
 export interface CrossAccountRequest {
@@ -766,7 +872,7 @@ export interface ErrorNotFoundErrorsInner {
  * @type GetPrincipalsFromGroup200Response
  * @export
  */
-export type GetPrincipalsFromGroup200Response = PrincipalPagination | ServiceAccountInGroupResponse | ServiceAccountPagination;
+export type GetPrincipalsFromGroup200Response = AllPrincipalsPagination | PrincipalPagination | ServiceAccountInGroupResponse | ServiceAccountPagination;
 
 /**
  *
@@ -1077,7 +1183,7 @@ export interface ListPagination {
  * @type ListPrincipals200Response
  * @export
  */
-export type ListPrincipals200Response = PrincipalPagination | ServiceAccountPagination;
+export type ListPrincipals200Response = AllPrincipalsPagination | PrincipalPagination | ServiceAccountPagination;
 
 /**
  *
@@ -1528,49 +1634,74 @@ export interface ResourceDefinition {
     'attributeFilter': ResourceDefinitionFilter;
 }
 /**
+ * @type ResourceDefinitionFilter
+ * @export
+ */
+export type ResourceDefinitionFilter = ResourceDefinitionFilterOperationEqual | ResourceDefinitionFilterOperationIn;
+
+/**
  *
  * @export
- * @interface ResourceDefinitionFilter
+ * @interface ResourceDefinitionFilterOperationEqual
  */
-export interface ResourceDefinitionFilter {
+export interface ResourceDefinitionFilterOperationEqual {
     /**
      *
      * @type {string}
-     * @memberof ResourceDefinitionFilter
+     * @memberof ResourceDefinitionFilterOperationEqual
      */
     'key': string;
     /**
      *
      * @type {string}
-     * @memberof ResourceDefinitionFilter
+     * @memberof ResourceDefinitionFilterOperationEqual
      */
-    'operation': ResourceDefinitionFilterOperationEnum;
+    'operation': ResourceDefinitionFilterOperationEqualOperationEnum;
     /**
      *
-     * @type {ResourceDefinitionFilterValue}
-     * @memberof ResourceDefinitionFilter
+     * @type {string}
+     * @memberof ResourceDefinitionFilterOperationEqual
      */
-    'value': ResourceDefinitionFilterValue;
+    'value': string | null;
 }
 
-export const ResourceDefinitionFilterOperationEnum = {
-    Equal: 'equal',
+export const ResourceDefinitionFilterOperationEqualOperationEnum = {
+    Equal: 'equal'
+} as const;
+
+export type ResourceDefinitionFilterOperationEqualOperationEnum = typeof ResourceDefinitionFilterOperationEqualOperationEnum[keyof typeof ResourceDefinitionFilterOperationEqualOperationEnum];
+
+/**
+ *
+ * @export
+ * @interface ResourceDefinitionFilterOperationIn
+ */
+export interface ResourceDefinitionFilterOperationIn {
+    /**
+     *
+     * @type {string}
+     * @memberof ResourceDefinitionFilterOperationIn
+     */
+    'key': string;
+    /**
+     *
+     * @type {string}
+     * @memberof ResourceDefinitionFilterOperationIn
+     */
+    'operation': ResourceDefinitionFilterOperationInOperationEnum;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof ResourceDefinitionFilterOperationIn
+     */
+    'value': Array<string>;
+}
+
+export const ResourceDefinitionFilterOperationInOperationEnum = {
     In: 'in'
 } as const;
 
-export type ResourceDefinitionFilterOperationEnum = typeof ResourceDefinitionFilterOperationEnum[keyof typeof ResourceDefinitionFilterOperationEnum];
-
-/**
- * @type ResourceDefinitionFilterValue
- * @export
- */
-export type ResourceDefinitionFilterValue = Array<ResourceDefinitionFilterValueObject> | string;
-
-/**
- * @type ResourceDefinitionFilterValueObject
- * @export
- */
-export type ResourceDefinitionFilterValueObject = string;
+export type ResourceDefinitionFilterOperationInOperationEnum = typeof ResourceDefinitionFilterOperationInOperationEnum[keyof typeof ResourceDefinitionFilterOperationInOperationEnum];
 
 /**
  *

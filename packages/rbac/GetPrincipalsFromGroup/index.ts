@@ -94,7 +94,8 @@ export type GetPrincipalsFromGroupOrderByEnum = typeof GetPrincipalsFromGroupOrd
   */
 export const GetPrincipalsFromGroupPrincipalTypeEnum = {
     ServiceAccount: 'service-account',
-    User: 'user'
+    User: 'user',
+    All: 'all'
 } as const;
 export type GetPrincipalsFromGroupPrincipalTypeEnum = typeof GetPrincipalsFromGroupPrincipalTypeEnum[keyof typeof GetPrincipalsFromGroupPrincipalTypeEnum];
 

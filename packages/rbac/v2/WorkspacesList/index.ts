@@ -30,13 +30,19 @@ export type WorkspacesListParams = {
   * @memberof WorkspacesListApi
   */
   type?: WorkspacesWorkspaceTypesQueryParam,
+  /**
+  * Case sensitive exact match of workspace by name.
+  * @type { string }
+  * @memberof WorkspacesListApi
+  */
+  name?: string,
   options?: AxiosRequestConfig
 }
 
 export type WorkspacesListReturnType = AxiosPromise<WorkspacesWorkspaceListResponse>;
 
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
-  return params.length === 1 && true && true && true
+  return params.length === 1 && true && true && true && true
 }
 /**
 * List workspaces in a tenant
@@ -45,9 +51,9 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, type, options = {} } = params;
+export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, type, name, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -65,6 +71,10 @@ export const workspacesListParamCreator = async (...config: ([WorkspacesListPara
 
     if (type !== undefined) {
         localVarQueryParameter['type'] = type;
+    }
+
+    if (name !== undefined) {
+        localVarQueryParameter['name'] = name;
     }
 
 

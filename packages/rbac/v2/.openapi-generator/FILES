@@ -3,6 +3,7 @@
 WorkspacesCreate/index.ts
 WorkspacesDelete/index.ts
 WorkspacesList/index.ts
+WorkspacesMove/index.ts
 WorkspacesPatch/index.ts
 WorkspacesRead/index.ts
 WorkspacesUpdate/index.ts

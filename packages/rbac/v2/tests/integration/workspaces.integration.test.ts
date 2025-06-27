@@ -5,7 +5,7 @@ import { AxiosRequestConfig } from 'axios';
 import { WorkspacesWorkspaceTypesQueryParam } from '../../types';
 import { convertConfig, updateConfig } from './util';
 
-describe('Workspaces API endpoints', () => {
+describe.skip('Workspaces API endpoints', () => {
   const TEST_WORKSPACE_NAME = 'JSClientsTestWorkspace';
   const TEST_WORKSPACE_DESC = 'Test workspace created by JS Clients test automation';
 

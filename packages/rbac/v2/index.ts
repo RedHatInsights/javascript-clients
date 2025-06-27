@@ -4,6 +4,8 @@ export { default as workspacesDelete, WorkspacesDeleteReturnType } from './Works
 
 export { default as workspacesList, WorkspacesListReturnType } from './WorkspacesList'
 
+export { default as workspacesMove, WorkspacesMoveReturnType } from './WorkspacesMove'
+
 export { default as workspacesPatch, WorkspacesPatchReturnType } from './WorkspacesPatch'
 
 export { default as workspacesRead, WorkspacesReadReturnType } from './WorkspacesRead'
