@@ -33,7 +33,7 @@ export const deleteWorkspace = async (workspaceId: string, config: AxiosRequestC
 
 export const listWorkspaces = async (limit: number, offset: number, query: WorkspacesWorkspaceTypesQueryParam, config: AxiosRequestConfig) => {
   const response: AxiosResponse<WorkspacesWorkspaceListResponse> = await composedWorkspacesApi
-    .workspacesList(limit, offset, query, config)
+  .workspacesList(limit, offset, query, '', config)
     .catch((error: string | undefined) => {
       console.log(error);
       throw new Error(error);
