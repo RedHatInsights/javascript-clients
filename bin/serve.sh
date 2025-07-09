@@ -15,6 +15,12 @@
 # The server runs on localhost port 3000 by default. Can be overridden using arg 2.
 #
 
+set -e
+if ! command -v jq; then
+    echo "This script requires jq; install and try again"
+    exit 1
+fi
+
 # Clean up temp files
 rm -f /tmp/workspaces.json
 rm -f /tmp/workspaces_updated.json
