@@ -115,6 +115,12 @@ export type ApiTagGetTagsParams = {
   */
   registeredWith?: Array<ApiTagGetTagsRegisteredWithEnum>,
   /**
+  * Filters systems by type
+  * @type { Array<ApiTagGetTagsSystemTypeEnum> }
+  * @memberof ApiTagGetTagsApi
+  */
+  systemType?: Array<ApiTagGetTagsSystemTypeEnum>,
+  /**
   * Filters hosts based on system_profile fields. For example: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"sap_system\": {\"eq\": \"true\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][sap_system][eq]=true\" <br /><br /> To get \"edge\" hosts, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"host_type\": {\"eq\": \"edge\"}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][host_type][eq]=edge\" <br /><br /> To get hosts with an specific operating system, use this explicit filter: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;{\"system_profile\": {\"operating_system\": {\"name\": {\"eq\": \"rhel\"}}}} <br /><br /> which equates to the URL param: <br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;\"?filter[system_profile][name][eq]=rhel\"
   * @type { { [key: string]: SystemProfileNestedObjectValue; } }
   * @memberof ApiTagGetTagsApi
@@ -174,11 +180,21 @@ export const ApiTagGetTagsRegisteredWithEnum = {
     NotCloudConnector: '!cloud-connector'
 } as const;
 export type ApiTagGetTagsRegisteredWithEnum = typeof ApiTagGetTagsRegisteredWithEnum[keyof typeof ApiTagGetTagsRegisteredWithEnum];
+/**
+  * @export
+  * @enum {string}
+  */
+export const ApiTagGetTagsSystemTypeEnum = {
+    Conventional: 'conventional',
+    Bootc: 'bootc',
+    Edge: 'edge'
+} as const;
+export type ApiTagGetTagsSystemTypeEnum = typeof ApiTagGetTagsSystemTypeEnum[keyof typeof ApiTagGetTagsSystemTypeEnum];
 
 export type ApiTagGetTagsReturnType = AxiosPromise<ActiveTags>;
 
 const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]): params is [ApiTagGetTagsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Required permissions: inventory:hosts:read
@@ -187,9 +203,9 @@ const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
-    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, filter, options = {} } = params;
+export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
+    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, systemType, filter, options = {} } = params;
     const localVarPath = `/tags`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -267,6 +283,10 @@ export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams
 
     if (registeredWith) {
         localVarQueryParameter['registered_with'] = registeredWith;
+    }
+
+    if (systemType) {
+        localVarQueryParameter['system_type'] = systemType;
     }
 
     if (filter !== undefined) {
