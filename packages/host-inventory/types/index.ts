@@ -1684,7 +1684,22 @@ export interface SystemProfileDnfModule {
      * @memberof SystemProfileDnfModule
      */
     'stream'?: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof SystemProfileDnfModule
+     */
+    'status'?: Array<SystemProfileDnfModuleStatusEnum>;
 }
+
+export const SystemProfileDnfModuleStatusEnum = {
+    Default: 'default',
+    Enabled: 'enabled',
+    Installed: 'installed'
+} as const;
+
+export type SystemProfileDnfModuleStatusEnum = typeof SystemProfileDnfModuleStatusEnum[keyof typeof SystemProfileDnfModuleStatusEnum];
+
 /**
  * Object containing image builder facts
  * @export
@@ -2141,43 +2156,20 @@ export interface SystemProfileSystemPurpose {
      * @type {string}
      * @memberof SystemProfileSystemPurpose
      */
-    'usage'?: SystemProfileSystemPurposeUsageEnum;
+    'usage'?: string;
     /**
      * The intended role of the system
      * @type {string}
      * @memberof SystemProfileSystemPurpose
      */
-    'role'?: SystemProfileSystemPurposeRoleEnum;
+    'role'?: string;
     /**
      * The intended SLA of the system
      * @type {string}
      * @memberof SystemProfileSystemPurpose
      */
-    'sla'?: SystemProfileSystemPurposeSlaEnum;
+    'sla'?: string;
 }
-
-export const SystemProfileSystemPurposeUsageEnum = {
-    Production: 'Production',
-    DevelopmentTest: 'Development/Test',
-    DisasterRecovery: 'Disaster Recovery'
-} as const;
-
-export type SystemProfileSystemPurposeUsageEnum = typeof SystemProfileSystemPurposeUsageEnum[keyof typeof SystemProfileSystemPurposeUsageEnum];
-export const SystemProfileSystemPurposeRoleEnum = {
-    Server: 'Red Hat Enterprise Linux Server',
-    Workstation: 'Red Hat Enterprise Linux Workstation',
-    ComputeNode: 'Red Hat Enterprise Linux Compute Node'
-} as const;
-
-export type SystemProfileSystemPurposeRoleEnum = typeof SystemProfileSystemPurposeRoleEnum[keyof typeof SystemProfileSystemPurposeRoleEnum];
-export const SystemProfileSystemPurposeSlaEnum = {
-    Premium: 'Premium',
-    Standard: 'Standard',
-    SelfSupport: 'Self-Support'
-} as const;
-
-export type SystemProfileSystemPurposeSlaEnum = typeof SystemProfileSystemPurposeSlaEnum[keyof typeof SystemProfileSystemPurposeSlaEnum];
-
 /**
  * Object for whole system systemd state, as reported by systemctl status --all
  * @export
