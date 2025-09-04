@@ -8,7 +8,7 @@ import { BaseAPI } from '@redhat-cloud-services/javascript-clients-shared/dist/b
 import { Configuration } from '@redhat-cloud-services/javascript-clients-shared/dist/configuration';
 
 // @ts-ignore
-import type { ProblemsProblem403, WorkspacesList401Response, WorkspacesList500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
+import type { ProblemsProblem403, RoleBindingsListBySubject401Response, RoleBindingsListBySubject500Response, WorkspacesWorkspaceListResponse, WorkspacesWorkspaceTypesQueryParam } from '../types';
 
 
 export type WorkspacesListParams = {
@@ -24,6 +24,12 @@ export type WorkspacesListParams = {
   * @memberof WorkspacesListApi
   */
   offset?: number,
+  /**
+  * Cursor for cursor-based pagination. When provided, offset parameter is ignored.
+  * @type { string }
+  * @memberof WorkspacesListApi
+  */
+  cursor?: string,
   /**
   * Defaults to all when param is not supplied.
   * @type { WorkspacesWorkspaceTypesQueryParam }
@@ -42,7 +48,7 @@ export type WorkspacesListParams = {
 export type WorkspacesListReturnType = AxiosPromise<WorkspacesWorkspaceListResponse>;
 
 const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]): params is [WorkspacesListParams] => {
-  return params.length === 1 && true && true && true && true
+  return params.length === 1 && true && true && true && true && true
 }
 /**
 * List workspaces in a tenant
@@ -51,9 +57,9 @@ const isWorkspacesListObjectParams = (params: [WorkspacesListParams] | unknown[]
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, WorkspacesWorkspaceTypesQueryParam, string, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'type', 'name', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
-    const { limit, offset, type, name, options = {} } = params;
+export const workspacesListParamCreator = async (...config: ([WorkspacesListParams] | [number, number, string, WorkspacesWorkspaceTypesQueryParam, string, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isWorkspacesListObjectParams(config) ? config[0] : ['limit', 'offset', 'cursor', 'type', 'name', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as WorkspacesListParams;
+    const { limit, offset, cursor, type, name, options = {} } = params;
     const localVarPath = `/workspaces/`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -67,6 +73,10 @@ export const workspacesListParamCreator = async (...config: ([WorkspacesListPara
 
     if (offset !== undefined) {
         localVarQueryParameter['offset'] = offset;
+    }
+
+    if (cursor !== undefined) {
+        localVarQueryParameter['cursor'] = cursor;
     }
 
     if (type !== undefined) {

@@ -215,6 +215,367 @@ export type ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum = typeof Prob
 /**
  *
  * @export
+ * @interface RoleBindingsBaseResource
+ */
+export interface RoleBindingsBaseResource {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsBaseResource
+     */
+    'id'?: string;
+    /**
+     * Type of resource
+     * @type {string}
+     * @memberof RoleBindingsBaseResource
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsBaseSubject
+ */
+export interface RoleBindingsBaseSubject {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsBaseSubject
+     */
+    'id'?: string;
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsBaseSubject
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsGroupDetails
+ */
+export interface RoleBindingsGroupDetails {
+    /**
+     * Name of the group
+     * @type {string}
+     * @memberof RoleBindingsGroupDetails
+     */
+    'name'?: string;
+    /**
+     * Description of the group
+     * @type {string}
+     * @memberof RoleBindingsGroupDetails
+     */
+    'description'?: string;
+    /**
+     * Number of users in the group
+     * @type {number}
+     * @memberof RoleBindingsGroupDetails
+     */
+    'user_count'?: number;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsGroupSubject
+ */
+export interface RoleBindingsGroupSubject extends RoleBindingsBaseSubject {
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsGroupSubject
+     */
+    'type': RoleBindingsGroupSubjectTypeEnum;
+    /**
+     *
+     * @type {RoleBindingsGroupDetails}
+     * @memberof RoleBindingsGroupSubject
+     */
+    'group'?: RoleBindingsGroupDetails;
+}
+
+export const RoleBindingsGroupSubjectTypeEnum = {
+    Group: 'group'
+} as const;
+
+export type RoleBindingsGroupSubjectTypeEnum = typeof RoleBindingsGroupSubjectTypeEnum[keyof typeof RoleBindingsGroupSubjectTypeEnum];
+
+/**
+ *
+ * @export
+ * @interface RoleBindingsListBySubject401Response
+ */
+export interface RoleBindingsListBySubject401Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof RoleBindingsListBySubject401Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleBindingsListBySubject401Response
+     */
+    'status'?: RoleBindingsListBySubject401ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject401Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject401Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject401Response
+     */
+    'instance'?: string;
+}
+
+export const RoleBindingsListBySubject401ResponseStatusEnum = {
+    NUMBER_401: 401
+} as const;
+
+export type RoleBindingsListBySubject401ResponseStatusEnum = typeof RoleBindingsListBySubject401ResponseStatusEnum[keyof typeof RoleBindingsListBySubject401ResponseStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface RoleBindingsListBySubject500Response
+ */
+export interface RoleBindingsListBySubject500Response {
+    /**
+     *
+     * @type {ProblemsProblemType}
+     * @memberof RoleBindingsListBySubject500Response
+     */
+    'type'?: ProblemsProblemType;
+    /**
+     *
+     * @type {number}
+     * @memberof RoleBindingsListBySubject500Response
+     */
+    'status'?: RoleBindingsListBySubject500ResponseStatusEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject500Response
+     */
+    'title'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject500Response
+     */
+    'detail'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsListBySubject500Response
+     */
+    'instance'?: string;
+}
+
+export const RoleBindingsListBySubject500ResponseStatusEnum = {
+    NUMBER_500: 500
+} as const;
+
+export type RoleBindingsListBySubject500ResponseStatusEnum = typeof RoleBindingsListBySubject500ResponseStatusEnum[keyof typeof RoleBindingsListBySubject500ResponseStatusEnum];
+
+/**
+ *
+ * @export
+ * @interface RoleBindingsRole
+ */
+export interface RoleBindingsRole {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsRole
+     */
+    'id'?: string;
+    /**
+     * Name of the role
+     * @type {string}
+     * @memberof RoleBindingsRole
+     */
+    'name'?: string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsRoleBindingBySubject
+ */
+export interface RoleBindingsRoleBindingBySubject {
+    /**
+     * Timestamp of last modification
+     * @type {string}
+     * @memberof RoleBindingsRoleBindingBySubject
+     */
+    'last_modified'?: string;
+    /**
+     *
+     * @type {RoleBindingsRoleBindingBySubjectSubject}
+     * @memberof RoleBindingsRoleBindingBySubject
+     */
+    'subject'?: RoleBindingsRoleBindingBySubjectSubject;
+    /**
+     * Roles assigned to the subject
+     * @type {Array<RoleBindingsRole>}
+     * @memberof RoleBindingsRoleBindingBySubject
+     */
+    'roles'?: Array<RoleBindingsRole>;
+    /**
+     *
+     * @type {RoleBindingsWorkspaceResource}
+     * @memberof RoleBindingsRoleBindingBySubject
+     */
+    'resource'?: RoleBindingsWorkspaceResource;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsRoleBindingBySubjectListResponse
+ */
+export interface RoleBindingsRoleBindingBySubjectListResponse {
+    /**
+     *
+     * @type {WorkspacesCursorPaginationMeta}
+     * @memberof RoleBindingsRoleBindingBySubjectListResponse
+     */
+    'meta': WorkspacesCursorPaginationMeta;
+    /**
+     *
+     * @type {WorkspacesCursorPaginationLinks}
+     * @memberof RoleBindingsRoleBindingBySubjectListResponse
+     */
+    'links': WorkspacesCursorPaginationLinks;
+    /**
+     * List of role bindings grouped by subject
+     * @type {Array<RoleBindingsRoleBindingBySubject>}
+     * @memberof RoleBindingsRoleBindingBySubjectListResponse
+     */
+    'data': Array<RoleBindingsRoleBindingBySubject>;
+}
+/**
+ * Subject of the role binding
+ * @export
+ * @interface RoleBindingsRoleBindingBySubjectSubject
+ */
+export interface RoleBindingsRoleBindingBySubjectSubject {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsRoleBindingBySubjectSubject
+     */
+    'id'?: string;
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsRoleBindingBySubjectSubject
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsUserDetails
+ */
+export interface RoleBindingsUserDetails {
+    /**
+     * Name of the user
+     * @type {string}
+     * @memberof RoleBindingsUserDetails
+     */
+    'username'?: string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsUserSubject
+ */
+export interface RoleBindingsUserSubject extends RoleBindingsBaseSubject {
+    /**
+     * Type of subject
+     * @type {string}
+     * @memberof RoleBindingsUserSubject
+     */
+    'type': RoleBindingsUserSubjectTypeEnum;
+    /**
+     *
+     * @type {RoleBindingsUserDetails}
+     * @memberof RoleBindingsUserSubject
+     */
+    'user'?: RoleBindingsUserDetails;
+}
+
+export const RoleBindingsUserSubjectTypeEnum = {
+    User: 'user'
+} as const;
+
+export type RoleBindingsUserSubjectTypeEnum = typeof RoleBindingsUserSubjectTypeEnum[keyof typeof RoleBindingsUserSubjectTypeEnum];
+
+/**
+ *
+ * @export
+ * @interface RoleBindingsWorkspaceDetails
+ */
+export interface RoleBindingsWorkspaceDetails {
+    /**
+     * Name of the workspace
+     * @type {string}
+     * @memberof RoleBindingsWorkspaceDetails
+     */
+    'name'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsWorkspaceDetails
+     */
+    'type'?: string;
+    /**
+     * Description of the workspace
+     * @type {string}
+     * @memberof RoleBindingsWorkspaceDetails
+     */
+    'description'?: string;
+}
+/**
+ *
+ * @export
+ * @interface RoleBindingsWorkspaceResource
+ */
+export interface RoleBindingsWorkspaceResource extends RoleBindingsBaseResource {
+    /**
+     * Type of resource
+     * @type {string}
+     * @memberof RoleBindingsWorkspaceResource
+     */
+    'type': RoleBindingsWorkspaceResourceTypeEnum;
+    /**
+     *
+     * @type {RoleBindingsWorkspaceDetails}
+     * @memberof RoleBindingsWorkspaceResource
+     */
+    'workspace'?: RoleBindingsWorkspaceDetails;
+}
+
+export const RoleBindingsWorkspaceResourceTypeEnum = {
+    Workspace: 'workspace'
+} as const;
+
+export type RoleBindingsWorkspaceResourceTypeEnum = typeof RoleBindingsWorkspaceResourceTypeEnum[keyof typeof RoleBindingsWorkspaceResourceTypeEnum];
+
+/**
+ *
+ * @export
  * @interface Timestamps
  */
 export interface Timestamps {
@@ -244,6 +605,38 @@ export const Versions = {
 export type Versions = typeof Versions[keyof typeof Versions];
 
 
+/**
+ *
+ * @export
+ * @interface WorkspacesBasePaginationLinks
+ */
+export interface WorkspacesBasePaginationLinks {
+    /**
+     * Pagination type
+     * @type {string}
+     * @memberof WorkspacesBasePaginationLinks
+     */
+    'type': string;
+}
+/**
+ *
+ * @export
+ * @interface WorkspacesBasePaginationMeta
+ */
+export interface WorkspacesBasePaginationMeta {
+    /**
+     * Pagination type
+     * @type {string}
+     * @memberof WorkspacesBasePaginationMeta
+     */
+    'type': string;
+    /**
+     * Limit of returned objects
+     * @type {number}
+     * @memberof WorkspacesBasePaginationMeta
+     */
+    'limit': number;
+}
 /**
  *
  * @export
@@ -342,91 +735,41 @@ export interface WorkspacesCreateWorkspaceResponse {
 /**
  *
  * @export
- * @interface WorkspacesList401Response
+ * @interface WorkspacesCursorPaginationLinks
  */
-export interface WorkspacesList401Response {
+export interface WorkspacesCursorPaginationLinks {
     /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof WorkspacesList401Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
-     * @type {number}
-     * @memberof WorkspacesList401Response
-     */
-    'status'?: WorkspacesList401ResponseStatusEnum;
-    /**
-     *
+     * The next link in pagination
      * @type {string}
-     * @memberof WorkspacesList401Response
+     * @memberof WorkspacesCursorPaginationLinks
      */
-    'title'?: string;
+    'next': string | null;
     /**
-     *
+     * The previous link in pagination
      * @type {string}
-     * @memberof WorkspacesList401Response
+     * @memberof WorkspacesCursorPaginationLinks
      */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesList401Response
-     */
-    'instance'?: string;
+    'previous': string | null;
 }
-
-export const WorkspacesList401ResponseStatusEnum = {
-    NUMBER_401: 401
-} as const;
-
-export type WorkspacesList401ResponseStatusEnum = typeof WorkspacesList401ResponseStatusEnum[keyof typeof WorkspacesList401ResponseStatusEnum];
-
 /**
  *
  * @export
- * @interface WorkspacesList500Response
+ * @interface WorkspacesCursorPaginationMeta
  */
-export interface WorkspacesList500Response {
+export interface WorkspacesCursorPaginationMeta {
     /**
-     *
-     * @type {ProblemsProblemType}
-     * @memberof WorkspacesList500Response
-     */
-    'type'?: ProblemsProblemType;
-    /**
-     *
+     * Limit of returned objects
      * @type {number}
-     * @memberof WorkspacesList500Response
+     * @memberof WorkspacesCursorPaginationMeta
      */
-    'status'?: WorkspacesList500ResponseStatusEnum;
+    'limit': number;
     /**
-     *
+     * Cursor for the current page
      * @type {string}
-     * @memberof WorkspacesList500Response
+     * @memberof WorkspacesCursorPaginationMeta
      */
-    'title'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesList500Response
-     */
-    'detail'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof WorkspacesList500Response
-     */
-    'instance'?: string;
+    'cursor'?: string;
 }
-
-export const WorkspacesList500ResponseStatusEnum = {
-    NUMBER_500: 500
-} as const;
-
-export type WorkspacesList500ResponseStatusEnum = typeof WorkspacesList500ResponseStatusEnum[keyof typeof WorkspacesList500ResponseStatusEnum];
-
 /**
  *
  * @export
@@ -462,6 +805,82 @@ export interface WorkspacesMoveWorkspaceResponse {
 /**
  *
  * @export
+ * @interface WorkspacesOffsetPaginationLinks
+ */
+export interface WorkspacesOffsetPaginationLinks extends WorkspacesBasePaginationLinks {
+    /**
+     * Pagination type
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationLinks
+     */
+    'type': WorkspacesOffsetPaginationLinksTypeEnum;
+    /**
+     * The first link in pagination
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationLinks
+     */
+    'first': string;
+    /**
+     * The next link in pagination
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationLinks
+     */
+    'next': string | null;
+    /**
+     * The previous link in pagination
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationLinks
+     */
+    'previous': string | null;
+    /**
+     * The last link in pagination
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationLinks
+     */
+    'last': string;
+}
+
+export const WorkspacesOffsetPaginationLinksTypeEnum = {
+    Offset: 'offset'
+} as const;
+
+export type WorkspacesOffsetPaginationLinksTypeEnum = typeof WorkspacesOffsetPaginationLinksTypeEnum[keyof typeof WorkspacesOffsetPaginationLinksTypeEnum];
+
+/**
+ *
+ * @export
+ * @interface WorkspacesOffsetPaginationMeta
+ */
+export interface WorkspacesOffsetPaginationMeta extends WorkspacesBasePaginationMeta {
+    /**
+     * Pagination type
+     * @type {string}
+     * @memberof WorkspacesOffsetPaginationMeta
+     */
+    'type': WorkspacesOffsetPaginationMetaTypeEnum;
+    /**
+     * Total count of objects
+     * @type {number}
+     * @memberof WorkspacesOffsetPaginationMeta
+     */
+    'count': number;
+    /**
+     * Offset of returned objects
+     * @type {number}
+     * @memberof WorkspacesOffsetPaginationMeta
+     */
+    'offset': number;
+}
+
+export const WorkspacesOffsetPaginationMetaTypeEnum = {
+    Offset: 'offset'
+} as const;
+
+export type WorkspacesOffsetPaginationMetaTypeEnum = typeof WorkspacesOffsetPaginationMetaTypeEnum[keyof typeof WorkspacesOffsetPaginationMetaTypeEnum];
+
+/**
+ *
+ * @export
  * @interface WorkspacesPagination
  */
 export interface WorkspacesPagination {
@@ -479,17 +898,11 @@ export interface WorkspacesPagination {
     'links': WorkspacesPaginationLinks;
 }
 /**
- *
+ * Pagination links
  * @export
  * @interface WorkspacesPaginationLinks
  */
 export interface WorkspacesPaginationLinks {
-    /**
-     * The first link in pagination
-     * @type {string}
-     * @memberof WorkspacesPaginationLinks
-     */
-    'first': string;
     /**
      * The next link in pagination
      * @type {string}
@@ -502,25 +915,13 @@ export interface WorkspacesPaginationLinks {
      * @memberof WorkspacesPaginationLinks
      */
     'previous': string | null;
-    /**
-     * The last link in pagination
-     * @type {string}
-     * @memberof WorkspacesPaginationLinks
-     */
-    'last': string;
 }
 /**
- *
+ * Pagination metadata
  * @export
  * @interface WorkspacesPaginationMeta
  */
 export interface WorkspacesPaginationMeta {
-    /**
-     * Total count of objects
-     * @type {number}
-     * @memberof WorkspacesPaginationMeta
-     */
-    'count': number;
     /**
      * Limit of returned objects
      * @type {number}
@@ -528,11 +929,11 @@ export interface WorkspacesPaginationMeta {
      */
     'limit': number;
     /**
-     * Offset of returned objects
-     * @type {number}
+     * Cursor for the current page
+     * @type {string}
      * @memberof WorkspacesPaginationMeta
      */
-    'offset': number;
+    'cursor'?: string;
 }
 /**
  *
