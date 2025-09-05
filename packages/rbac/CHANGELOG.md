@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.1.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-4.0.2...@redhat-cloud-services/rbac-client-4.1.0) (2025-09-05)
+
+
+### Features
+
+* **rbacv2:** release new version of rbac client with role binding ([b6a2787](https://github.com/RedHatInsights/javascript-clients/commit/b6a27874c8a870be61fc950a0b0b7efbc5ce092f))
+
 ## [4.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-4.0.1...@redhat-cloud-services/rbac-client-4.0.2) (2025-06-30)
 
 ## [4.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-4.0.0...@redhat-cloud-services/rbac-client-4.0.1) (2025-01-28)
