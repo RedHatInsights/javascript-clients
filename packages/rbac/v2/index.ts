@@ -1,3 +1,5 @@
+export { default as roleBindingsListBySubject, RoleBindingsListBySubjectReturnType } from './RoleBindingsListBySubject'
+
 export { default as workspacesCreate, WorkspacesCreateReturnType } from './WorkspacesCreate'
 
 export { default as workspacesDelete, WorkspacesDeleteReturnType } from './WorkspacesDelete'

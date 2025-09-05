@@ -4,6 +4,7 @@ import type { AxiosStatic } from 'axios'
 import { APIFactory } from '@redhat-cloud-services/javascript-clients-shared/dist/utils';
 import { ApiConfig } from '@redhat-cloud-services/javascript-clients-shared/dist/common'
 import {
+    roleBindingsListBySubject,RoleBindingsListBySubjectReturnType,
     workspacesCreate,WorkspacesCreateReturnType,
     workspacesDelete,WorkspacesDeleteReturnType,
     workspacesList,WorkspacesListReturnType,
@@ -15,7 +16,8 @@ import {
   } from './index';
 
 const endpointList = {
-      workspacesCreate,
+      roleBindingsListBySubject,
+    workspacesCreate,
     workspacesDelete,
     workspacesList,
     workspacesMove,
@@ -27,7 +29,8 @@ const endpointList = {
 };
 
 type endpointReturnTypes = {
-      workspacesCreate: WorkspacesCreateReturnType,
+      roleBindingsListBySubject: RoleBindingsListBySubjectReturnType,
+    workspacesCreate: WorkspacesCreateReturnType,
     workspacesDelete: WorkspacesDeleteReturnType,
     workspacesList: WorkspacesListReturnType,
     workspacesMove: WorkspacesMoveReturnType,

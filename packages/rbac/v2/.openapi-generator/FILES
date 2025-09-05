@@ -1,5 +1,6 @@
 .gitignore
 .npmignore
+RoleBindingsListBySubject/index.ts
 WorkspacesCreate/index.ts
 WorkspacesDelete/index.ts
 WorkspacesList/index.ts
