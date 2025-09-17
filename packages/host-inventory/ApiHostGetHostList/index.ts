@@ -67,6 +67,18 @@ export type ApiHostGetHostListParams = {
   */
   updatedEnd?: string,
   /**
+  * Only show hosts last checked in after the given date
+  * @type { string }
+  * @memberof ApiHostGetHostListApi
+  */
+  lastCheckInStart?: string,
+  /**
+  * Only show hosts last checked in before the given date
+  * @type { string }
+  * @memberof ApiHostGetHostListApi
+  */
+  lastCheckInEnd?: string,
+  /**
   * Filter by group name
   * @type { Array<string> }
   * @memberof ApiHostGetHostListApi
@@ -109,7 +121,7 @@ export type ApiHostGetHostListParams = {
   */
   staleness?: Array<ApiHostGetHostListStalenessEnum>,
   /**
-  * filters out hosts not tagged by the given tags
+  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod).
   * @type { Array<string> }
   * @memberof ApiHostGetHostListApi
   */
@@ -148,6 +160,7 @@ export const ApiHostGetHostListProviderTypeEnum = {
     Alibaba: 'alibaba',
     Aws: 'aws',
     Azure: 'azure',
+    Discovery: 'discovery',
     Gcp: 'gcp',
     Ibm: 'ibm'
 } as const;
@@ -209,7 +222,7 @@ export type ApiHostGetHostListSystemTypeEnum = typeof ApiHostGetHostListSystemTy
 export type ApiHostGetHostListReturnType = AxiosPromise<HostQueryOutput>;
 
 const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | unknown[]): params is [ApiHostGetHostListParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Read the entire list of all hosts available to the account. <br /><br /> Required permissions: inventory:hosts:read
@@ -218,9 +231,9 @@ const isApiHostGetHostListObjectParams = (params: [ApiHostGetHostListParams] | u
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isApiHostGetHostListObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostListParams;
-    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, options = {} } = params;
+export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHostListParams] | [string, string, string, string, string, string, ApiHostGetHostListProviderTypeEnum, string, string, string, string, Array<string>, string, number, number, ApiHostGetHostListOrderByEnum, string, Array<ApiHostGetHostListStalenessEnum>, Array<string>, Array<ApiHostGetHostListRegisteredWithEnum>, Array<ApiHostGetHostListSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isApiHostGetHostListObjectParams(config) ? config[0] : ['displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'subscriptionManagerId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'branchId', 'perPage', 'page', 'orderBy', 'orderHow', 'staleness', 'tags', 'registeredWith', 'systemType', 'filter', 'fields', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiHostGetHostListParams;
+    const { displayName, fqdn, hostnameOrId, insightsId, subscriptionManagerId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, branchId, perPage, page, orderBy, orderHow, staleness, tags, registeredWith, systemType, filter, fields, options = {} } = params;
     const localVarPath = `/hosts`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -266,6 +279,18 @@ export const apiHostGetHostListParamCreator = async (...config: ([ApiHostGetHost
         localVarQueryParameter['updated_end'] = (updatedEnd as any instanceof Date) ?
             (updatedEnd as any).toISOString() :
             updatedEnd;
+    }
+
+    if (lastCheckInStart !== undefined) {
+        localVarQueryParameter['last_check_in_start'] = (lastCheckInStart as any instanceof Date) ?
+            (lastCheckInStart as any).toISOString() :
+            lastCheckInStart;
+    }
+
+    if (lastCheckInEnd !== undefined) {
+        localVarQueryParameter['last_check_in_end'] = (lastCheckInEnd as any instanceof Date) ?
+            (lastCheckInEnd as any).toISOString() :
+            lastCheckInEnd;
     }
 
     if (groupName) {

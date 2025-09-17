@@ -13,7 +13,7 @@ import type { ActiveTags, SystemProfileNestedObjectValue } from '../types';
 
 export type ApiTagGetTagsParams = {
   /**
-  * filters out hosts not tagged by the given tags
+  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod).
   * @type { Array<string> }
   * @memberof ApiTagGetTagsApi
   */
@@ -103,6 +103,18 @@ export type ApiTagGetTagsParams = {
   */
   updatedEnd?: string,
   /**
+  * Only show hosts last checked in after the given date
+  * @type { string }
+  * @memberof ApiTagGetTagsApi
+  */
+  lastCheckInStart?: string,
+  /**
+  * Only show hosts last checked in before the given date
+  * @type { string }
+  * @memberof ApiTagGetTagsApi
+  */
+  lastCheckInEnd?: string,
+  /**
   * Filter by group name
   * @type { Array<string> }
   * @memberof ApiTagGetTagsApi
@@ -156,6 +168,7 @@ export const ApiTagGetTagsProviderTypeEnum = {
     Alibaba: 'alibaba',
     Aws: 'aws',
     Azure: 'azure',
+    Discovery: 'discovery',
     Gcp: 'gcp',
     Ibm: 'ibm'
 } as const;
@@ -194,7 +207,7 @@ export type ApiTagGetTagsSystemTypeEnum = typeof ApiTagGetTagsSystemTypeEnum[key
 export type ApiTagGetTagsReturnType = AxiosPromise<ActiveTags>;
 
 const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]): params is [ApiTagGetTagsParams] => {
-  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
+  return params.length === 1 && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true && true
 }
 /**
 * Required permissions: inventory:hosts:read
@@ -203,9 +216,9 @@ const isApiTagGetTagsObjectParams = (params: [ApiTagGetTagsParams] | unknown[]):
 * @param {*} [options] Override http request option.
 * @throws {RequiredError}
 */
-export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
-    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'groupName', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
-    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, groupName, registeredWith, systemType, filter, options = {} } = params;
+export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams] | [Array<string>, ApiTagGetTagsOrderByEnum, string, number, number, Array<ApiTagGetTagsStalenessEnum>, string, string, string, string, string, string, ApiTagGetTagsProviderTypeEnum, string, string, string, string, Array<string>, Array<ApiTagGetTagsRegisteredWithEnum>, Array<ApiTagGetTagsSystemTypeEnum>, { [key: string]: SystemProfileNestedObjectValue; }, AxiosRequestConfig])): Promise<RequestArgs> => {
+    const params = isApiTagGetTagsObjectParams(config) ? config[0] : ['tags', 'orderBy', 'orderHow', 'perPage', 'page', 'staleness', 'search', 'displayName', 'fqdn', 'hostnameOrId', 'insightsId', 'providerId', 'providerType', 'updatedStart', 'updatedEnd', 'lastCheckInStart', 'lastCheckInEnd', 'groupName', 'registeredWith', 'systemType', 'filter', 'options'].reduce((acc, curr, index) => ({ ...acc, [curr]: config[index] }), {}) as ApiTagGetTagsParams;
+    const { tags, orderBy, orderHow, perPage, page, staleness, search, displayName, fqdn, hostnameOrId, insightsId, providerId, providerType, updatedStart, updatedEnd, lastCheckInStart, lastCheckInEnd, groupName, registeredWith, systemType, filter, options = {} } = params;
     const localVarPath = `/tags`;
     // use dummy base URL string because the URL constructor only accepts absolute URLs.
     const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -275,6 +288,18 @@ export const apiTagGetTagsParamCreator = async (...config: ([ApiTagGetTagsParams
         localVarQueryParameter['updated_end'] = (updatedEnd as any instanceof Date) ?
             (updatedEnd as any).toISOString() :
             updatedEnd;
+    }
+
+    if (lastCheckInStart !== undefined) {
+        localVarQueryParameter['last_check_in_start'] = (lastCheckInStart as any instanceof Date) ?
+            (lastCheckInStart as any).toISOString() :
+            lastCheckInStart;
+    }
+
+    if (lastCheckInEnd !== undefined) {
+        localVarQueryParameter['last_check_in_end'] = (lastCheckInEnd as any instanceof Date) ?
+            (lastCheckInEnd as any).toISOString() :
+            lastCheckInEnd;
     }
 
     if (groupName) {

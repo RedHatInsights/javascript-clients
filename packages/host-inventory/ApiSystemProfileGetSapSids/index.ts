@@ -19,7 +19,7 @@ export type ApiSystemProfileGetSapSidsParams = {
   */
   search?: string,
   /**
-  * filters out hosts not tagged by the given tags
+  * Filters systems by tag(s). Specify multiple tags as a comma-separated list (e.g. insights-client/security=strict,env/type=prod).
   * @type { Array<string> }
   * @memberof ApiSystemProfileGetSapSidsApi
   */
