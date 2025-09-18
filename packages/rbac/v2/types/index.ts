@@ -1,6 +1,94 @@
 /**
  *
  * @export
+ * @interface CursorPaginationLinks
+ */
+export interface CursorPaginationLinks {
+    /**
+     * The next link in pagination
+     * @type {string}
+     * @memberof CursorPaginationLinks
+     */
+    'next': string | null;
+    /**
+     * The previous link in pagination
+     * @type {string}
+     * @memberof CursorPaginationLinks
+     */
+    'previous': string | null;
+}
+/**
+ *
+ * @export
+ * @interface CursorPaginationMeta
+ */
+export interface CursorPaginationMeta {
+    /**
+     * Limit of returned objects
+     * @type {number}
+     * @memberof CursorPaginationMeta
+     */
+    'limit': number;
+}
+/**
+ *
+ * @export
+ * @interface OffsetPaginationLinks
+ */
+export interface OffsetPaginationLinks {
+    /**
+     * The first link in pagination
+     * @type {string}
+     * @memberof OffsetPaginationLinks
+     */
+    'first': string | null;
+    /**
+     * The next link in pagination
+     * @type {string}
+     * @memberof OffsetPaginationLinks
+     */
+    'next': string | null;
+    /**
+     * The previous link in pagination
+     * @type {string}
+     * @memberof OffsetPaginationLinks
+     */
+    'previous': string | null;
+    /**
+     * The last link in pagination
+     * @type {string}
+     * @memberof OffsetPaginationLinks
+     */
+    'last': string | null;
+}
+/**
+ *
+ * @export
+ * @interface OffsetPaginationMeta
+ */
+export interface OffsetPaginationMeta {
+    /**
+     * Total count of objects
+     * @type {number}
+     * @memberof OffsetPaginationMeta
+     */
+    'count': number;
+    /**
+     * Limit of returned objects
+     * @type {number}
+     * @memberof OffsetPaginationMeta
+     */
+    'limit': number;
+    /**
+     * Offset of returned objects
+     * @type {number}
+     * @memberof OffsetPaginationMeta
+     */
+    'offset': number;
+}
+/**
+ *
+ * @export
  * @interface ProblemsProblem400
  */
 export interface ProblemsProblem400 {
@@ -215,25 +303,6 @@ export type ProblemsWorkspaceProblem400WorkspaceNotEmptyStatusEnum = typeof Prob
 /**
  *
  * @export
- * @interface RoleBindingsBaseResource
- */
-export interface RoleBindingsBaseResource {
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsBaseResource
-     */
-    'id'?: string;
-    /**
-     * Type of resource
-     * @type {string}
-     * @memberof RoleBindingsBaseResource
-     */
-    'type': string;
-}
-/**
- *
- * @export
  * @interface RoleBindingsBaseSubject
  */
 export interface RoleBindingsBaseSubject {
@@ -392,6 +461,31 @@ export type RoleBindingsListBySubject500ResponseStatusEnum = typeof RoleBindings
 /**
  *
  * @export
+ * @interface RoleBindingsResource
+ */
+export interface RoleBindingsResource {
+    /**
+     *
+     * @type {string}
+     * @memberof RoleBindingsResource
+     */
+    'id'?: string;
+    /**
+     * Resource name
+     * @type {string}
+     * @memberof RoleBindingsResource
+     */
+    'name'?: string;
+    /**
+     * Resource type
+     * @type {string}
+     * @memberof RoleBindingsResource
+     */
+    'type'?: string;
+}
+/**
+ *
+ * @export
  * @interface RoleBindingsRole
  */
 export interface RoleBindingsRole {
@@ -434,10 +528,16 @@ export interface RoleBindingsRoleBindingBySubject {
     'roles'?: Array<RoleBindingsRole>;
     /**
      *
-     * @type {RoleBindingsWorkspaceResource}
+     * @type {RoleBindingsResource}
      * @memberof RoleBindingsRoleBindingBySubject
      */
-    'resource'?: RoleBindingsWorkspaceResource;
+    'resource'?: RoleBindingsResource;
+    /**
+     *
+     * @type {RoleBindingsResource}
+     * @memberof RoleBindingsRoleBindingBySubject
+     */
+    'inherited_from'?: RoleBindingsResource;
 }
 /**
  *
@@ -447,16 +547,16 @@ export interface RoleBindingsRoleBindingBySubject {
 export interface RoleBindingsRoleBindingBySubjectListResponse {
     /**
      *
-     * @type {WorkspacesCursorPaginationMeta}
+     * @type {CursorPaginationMeta}
      * @memberof RoleBindingsRoleBindingBySubjectListResponse
      */
-    'meta': WorkspacesCursorPaginationMeta;
+    'meta': CursorPaginationMeta;
     /**
      *
-     * @type {WorkspacesCursorPaginationLinks}
+     * @type {CursorPaginationLinks}
      * @memberof RoleBindingsRoleBindingBySubjectListResponse
      */
-    'links': WorkspacesCursorPaginationLinks;
+    'links': CursorPaginationLinks;
     /**
      * List of role bindings grouped by subject
      * @type {Array<RoleBindingsRoleBindingBySubject>}
@@ -525,57 +625,6 @@ export type RoleBindingsUserSubjectTypeEnum = typeof RoleBindingsUserSubjectType
 /**
  *
  * @export
- * @interface RoleBindingsWorkspaceDetails
- */
-export interface RoleBindingsWorkspaceDetails {
-    /**
-     * Name of the workspace
-     * @type {string}
-     * @memberof RoleBindingsWorkspaceDetails
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RoleBindingsWorkspaceDetails
-     */
-    'type'?: string;
-    /**
-     * Description of the workspace
-     * @type {string}
-     * @memberof RoleBindingsWorkspaceDetails
-     */
-    'description'?: string;
-}
-/**
- *
- * @export
- * @interface RoleBindingsWorkspaceResource
- */
-export interface RoleBindingsWorkspaceResource extends RoleBindingsBaseResource {
-    /**
-     * Type of resource
-     * @type {string}
-     * @memberof RoleBindingsWorkspaceResource
-     */
-    'type': RoleBindingsWorkspaceResourceTypeEnum;
-    /**
-     *
-     * @type {RoleBindingsWorkspaceDetails}
-     * @memberof RoleBindingsWorkspaceResource
-     */
-    'workspace'?: RoleBindingsWorkspaceDetails;
-}
-
-export const RoleBindingsWorkspaceResourceTypeEnum = {
-    Workspace: 'workspace'
-} as const;
-
-export type RoleBindingsWorkspaceResourceTypeEnum = typeof RoleBindingsWorkspaceResourceTypeEnum[keyof typeof RoleBindingsWorkspaceResourceTypeEnum];
-
-/**
- *
- * @export
  * @interface Timestamps
  */
 export interface Timestamps {
@@ -605,38 +654,6 @@ export const Versions = {
 export type Versions = typeof Versions[keyof typeof Versions];
 
 
-/**
- *
- * @export
- * @interface WorkspacesBasePaginationLinks
- */
-export interface WorkspacesBasePaginationLinks {
-    /**
-     * Pagination type
-     * @type {string}
-     * @memberof WorkspacesBasePaginationLinks
-     */
-    'type': string;
-}
-/**
- *
- * @export
- * @interface WorkspacesBasePaginationMeta
- */
-export interface WorkspacesBasePaginationMeta {
-    /**
-     * Pagination type
-     * @type {string}
-     * @memberof WorkspacesBasePaginationMeta
-     */
-    'type': string;
-    /**
-     * Limit of returned objects
-     * @type {number}
-     * @memberof WorkspacesBasePaginationMeta
-     */
-    'limit': number;
-}
 /**
  *
  * @export
@@ -735,44 +752,6 @@ export interface WorkspacesCreateWorkspaceResponse {
 /**
  *
  * @export
- * @interface WorkspacesCursorPaginationLinks
- */
-export interface WorkspacesCursorPaginationLinks {
-    /**
-     * The next link in pagination
-     * @type {string}
-     * @memberof WorkspacesCursorPaginationLinks
-     */
-    'next': string | null;
-    /**
-     * The previous link in pagination
-     * @type {string}
-     * @memberof WorkspacesCursorPaginationLinks
-     */
-    'previous': string | null;
-}
-/**
- *
- * @export
- * @interface WorkspacesCursorPaginationMeta
- */
-export interface WorkspacesCursorPaginationMeta {
-    /**
-     * Limit of returned objects
-     * @type {number}
-     * @memberof WorkspacesCursorPaginationMeta
-     */
-    'limit': number;
-    /**
-     * Cursor for the current page
-     * @type {string}
-     * @memberof WorkspacesCursorPaginationMeta
-     */
-    'cursor'?: string;
-}
-/**
- *
- * @export
  * @interface WorkspacesMoveWorkspaceRequest
  */
 export interface WorkspacesMoveWorkspaceRequest {
@@ -805,135 +784,21 @@ export interface WorkspacesMoveWorkspaceResponse {
 /**
  *
  * @export
- * @interface WorkspacesOffsetPaginationLinks
- */
-export interface WorkspacesOffsetPaginationLinks extends WorkspacesBasePaginationLinks {
-    /**
-     * Pagination type
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationLinks
-     */
-    'type': WorkspacesOffsetPaginationLinksTypeEnum;
-    /**
-     * The first link in pagination
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationLinks
-     */
-    'first': string;
-    /**
-     * The next link in pagination
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationLinks
-     */
-    'next': string | null;
-    /**
-     * The previous link in pagination
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationLinks
-     */
-    'previous': string | null;
-    /**
-     * The last link in pagination
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationLinks
-     */
-    'last': string;
-}
-
-export const WorkspacesOffsetPaginationLinksTypeEnum = {
-    Offset: 'offset'
-} as const;
-
-export type WorkspacesOffsetPaginationLinksTypeEnum = typeof WorkspacesOffsetPaginationLinksTypeEnum[keyof typeof WorkspacesOffsetPaginationLinksTypeEnum];
-
-/**
- *
- * @export
- * @interface WorkspacesOffsetPaginationMeta
- */
-export interface WorkspacesOffsetPaginationMeta extends WorkspacesBasePaginationMeta {
-    /**
-     * Pagination type
-     * @type {string}
-     * @memberof WorkspacesOffsetPaginationMeta
-     */
-    'type': WorkspacesOffsetPaginationMetaTypeEnum;
-    /**
-     * Total count of objects
-     * @type {number}
-     * @memberof WorkspacesOffsetPaginationMeta
-     */
-    'count': number;
-    /**
-     * Offset of returned objects
-     * @type {number}
-     * @memberof WorkspacesOffsetPaginationMeta
-     */
-    'offset': number;
-}
-
-export const WorkspacesOffsetPaginationMetaTypeEnum = {
-    Offset: 'offset'
-} as const;
-
-export type WorkspacesOffsetPaginationMetaTypeEnum = typeof WorkspacesOffsetPaginationMetaTypeEnum[keyof typeof WorkspacesOffsetPaginationMetaTypeEnum];
-
-/**
- *
- * @export
  * @interface WorkspacesPagination
  */
 export interface WorkspacesPagination {
     /**
      *
-     * @type {WorkspacesPaginationMeta}
+     * @type {OffsetPaginationMeta}
      * @memberof WorkspacesPagination
      */
-    'meta': WorkspacesPaginationMeta;
+    'meta': OffsetPaginationMeta;
     /**
      *
-     * @type {WorkspacesPaginationLinks}
+     * @type {OffsetPaginationLinks}
      * @memberof WorkspacesPagination
      */
-    'links': WorkspacesPaginationLinks;
-}
-/**
- * Pagination links
- * @export
- * @interface WorkspacesPaginationLinks
- */
-export interface WorkspacesPaginationLinks {
-    /**
-     * The next link in pagination
-     * @type {string}
-     * @memberof WorkspacesPaginationLinks
-     */
-    'next': string | null;
-    /**
-     * The previous link in pagination
-     * @type {string}
-     * @memberof WorkspacesPaginationLinks
-     */
-    'previous': string | null;
-}
-/**
- * Pagination metadata
- * @export
- * @interface WorkspacesPaginationMeta
- */
-export interface WorkspacesPaginationMeta {
-    /**
-     * Limit of returned objects
-     * @type {number}
-     * @memberof WorkspacesPaginationMeta
-     */
-    'limit': number;
-    /**
-     * Cursor for the current page
-     * @type {string}
-     * @memberof WorkspacesPaginationMeta
-     */
-    'cursor'?: string;
+    'links': OffsetPaginationLinks;
 }
 /**
  *
@@ -1368,16 +1233,16 @@ export interface WorkspacesWorkspaceAncestor {
 export interface WorkspacesWorkspaceListResponse {
     /**
      *
-     * @type {WorkspacesPaginationMeta}
+     * @type {OffsetPaginationMeta}
      * @memberof WorkspacesWorkspaceListResponse
      */
-    'meta': WorkspacesPaginationMeta;
+    'meta': OffsetPaginationMeta;
     /**
      *
-     * @type {WorkspacesPaginationLinks}
+     * @type {OffsetPaginationLinks}
      * @memberof WorkspacesWorkspaceListResponse
      */
-    'links': WorkspacesPaginationLinks;
+    'links': OffsetPaginationLinks;
     /**
      * List of workspaces
      * @type {Array<WorkspacesWorkspace>}
