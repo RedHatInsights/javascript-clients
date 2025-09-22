@@ -8,59 +8,63 @@ on:
 
 jobs:
   install:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: nrwl/nx-set-shas@v4
-      # cache node modules for all jobs to use
-      - uses: './.github/actions/node-cache'
+      - uses: './.github/actions/setup-environment'
       # cache cypress runner
       - uses: './.github/actions/cypress-cache'
+      - name: Check Node version
+        run: node --version && npm --version
       - name: Install deps
         run: npm ci
   lint:
     needs: [install]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/lint'
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [install]
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/test-unit'
   integration:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [install]
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/test-integration'
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [install]
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: './.github/actions/setup-environment'
       - uses: nrwl/nx-set-shas@v4
-      - uses: './.github/actions/node-cache'
       - name: Install deps
-        run: npm i
+        run: npm ci
       - name: Build affected
         env:
           NX_SKIP_NX_CACHE: true
         run: npx nx affected -t build --exclude=@redhat-cloud-services/CLIENTNAME-client
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [install, lint, test, build]
     if: github.event_name != 'pull_request'
     steps:
@@ -68,6 +72,7 @@ jobs:
         with:
           fetch-depth: 0
           ssh-key: ${{ secrets.BOT_SSH_KEY}}
+      - uses: './.github/actions/setup-environment'
       - uses: './.github/actions/release'
         with:
           gh_token: ${{ secrets.BOT_GH_TOKEN }}

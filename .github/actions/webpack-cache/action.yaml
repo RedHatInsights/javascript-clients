@@ -9,4 +9,4 @@ runs:
       with:
         path: | 
           **/.webpack-cache
-        key: webpack-cache-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        key: webpack-cache-${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}

@@ -15,6 +15,20 @@ We are using Java to install and build this generator. Please install Java and p
 
 ### Troubleshooting
 
+#### CI fails due to mismatch between package.json and package-lock.json
+
+The Ubuntu 24.04 container running the Github Actions uses node 20.19.5.
+Therefore, make sure to be running the same node version when running `npm install`.
+
+```sh
+# option 1: using nvm on local 
+nvm use 20.19.5'
+npm install
+
+# option 2: using container very similar to the github action
+podman run --rm -it --userns=keep-id -v .:/workspace:Z -w /workspace -e PATH="/opt/acttoolcache/node/20.19.5/x64/bin:$PATH" catthehacker/ubuntu:act-24.04 npm install
+```
+
 #### NX Daemon
 Sometimes NX fails to make it through all of the client packages when running the `build`/`generate` tasks with the following error:
 

@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@redhat-cloud-services/javascript-clients-shared": "^1.2.6",
-    "axios": "^1.7.2",
     "tslib": "^2.6.2"
   }
 }

@@ -16,11 +16,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-    - uses: './.github/actions/node-cache'
+    - uses: './.github/actions/setup-environment'
     - name: Install deps
       shell: bash
       run: npm i
