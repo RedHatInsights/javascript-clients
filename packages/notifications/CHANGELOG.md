@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-4.0.0...@redhat-cloud-services/notifications-client-4.0.1) (2025-09-24)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `2.0.1`
+
+### Bug Fixes
+
+* security patch for axios ([4da4eb9](https://github.com/RedHatInsights/javascript-clients/commit/4da4eb95e285c17023e618bb5fc17e184dc6b227))
+* update failing notifications V2 integration test ([e6c41f3](https://github.com/RedHatInsights/javascript-clients/commit/e6c41f3797a59236748a6fbd9f0f1f936fd91400))
+
 ## [4.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/notifications-client-4.0.0...@redhat-cloud-services/notifications-client-4.0.1) (2025-09-18)
 
 ### Dependency Updates
