@@ -27,7 +27,7 @@ runs:
         git config user.email "${{ inputs.gh_email }}"
     - name: Build
       shell: bash
-      run: npx nx affected --base=HEAD~1 -t build --trackDeps
+      run: npx nx affected --base=HEAD~1 -t build --trackDeps --exclude=@redhat-cloud-services/CLIENTNAME-client
     - name: Set publish config
       env:
         NPM_TOKEN: ${{ inputs.npm_token }}
@@ -38,5 +38,5 @@ runs:
       env:
         GH_TOKEN: ${{ inputs.gh_token }}
         GITHUB_TOKEN: ${{ inputs.gh_token }}
-      run: npx nx affected --base=HEAD~1 --parallel=1 --target=version --postTargets=npm,github --trackDeps
+      run: npx nx affected --base=HEAD~1 --parallel=1 --target=version --postTargets=npm,github --trackDeps --exclude=@redhat-cloud-services/CLIENTNAME-client
   
