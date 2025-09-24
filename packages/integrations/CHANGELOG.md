@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.0.3](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-4.0.2...@redhat-cloud-services/integrations-client-4.0.3) (2025-09-24)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `2.0.1`
+
+### Bug Fixes
+
+* security patch for axios ([4da4eb9](https://github.com/RedHatInsights/javascript-clients/commit/4da4eb95e285c17023e618bb5fc17e184dc6b227))
+
 ## [4.0.2](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/integrations-client-4.0.1...@redhat-cloud-services/integrations-client-4.0.2) (2025-01-28)
 
 ### Dependency Updates
