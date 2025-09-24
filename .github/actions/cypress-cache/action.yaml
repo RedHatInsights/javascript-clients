@@ -8,4 +8,4 @@ runs:
       id: cypress-cache
       with:
         path: /home/runner/.cache/Cypress
-        key: cypress-runner-cache-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        key: cypress-runner-cache-${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}

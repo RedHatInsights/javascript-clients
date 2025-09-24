@@ -11,20 +11,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/checkout@v4
       with:
         token: ${{ secrets.BOT_GH_TOKEN }}
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+    - uses: './.github/actions/setup-environment'
     - name: Install Java and Maven
       uses: actions/setup-java@v4
       with:
