@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.1](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-2.0.0...@redhat-cloud-services/javascript-clients-shared-2.0.1) (2025-09-24)
+
+
+### Bug Fixes
+
+* security patch for axios ([4da4eb9](https://github.com/RedHatInsights/javascript-clients/commit/4da4eb95e285c17023e618bb5fc17e184dc6b227))
+
 ## [2.0.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/javascript-clients-shared-1.2.7...@redhat-cloud-services/javascript-clients-shared-2.0.0) (2025-01-28)
 
 
