@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [4.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-4.1.0...@redhat-cloud-services/rbac-client-4.2.0) (2025-09-24)
+
+### Dependency Updates
+
+* `@redhat-cloud-services/javascript-clients-shared` updated to version `2.0.1`
+
+### Features
+
+* **rbac:** release rbac client on 25-09-18 ([#383](https://github.com/RedHatInsights/javascript-clients/issues/383)) ([87e3e43](https://github.com/RedHatInsights/javascript-clients/commit/87e3e43828bbbab83c309178cb86222221e848eb))
+
+
+### Bug Fixes
+
+* security patch for axios ([4da4eb9](https://github.com/RedHatInsights/javascript-clients/commit/4da4eb95e285c17023e618bb5fc17e184dc6b227))
+
 ## [4.2.0](https://github.com/RedHatInsights/javascript-clients/compare/@redhat-cloud-services/rbac-client-4.1.0...@redhat-cloud-services/rbac-client-4.2.0) (2025-09-18)
 
 
