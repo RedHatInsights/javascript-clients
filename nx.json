@@ -54,6 +54,33 @@
     "sharedGlobals": []
   },
   "neverConnectToCloud": true,
+  "release": {
+    "projects": ["packages/*"],
+    "projectsRelationship": "independent",
+    "version": {
+      "git": {
+        "commit": false,
+        "tag": true,
+        "push": false,
+        "commitMessage": "chore(release): publish\n\n{releaseNotes}"
+      },
+      "preVersionCommand": "npx nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
+      "conventionalCommits": true,
+      "preserveLocalDependencyProtocols": false,
+      "versionActionsOptions": {
+        "skipLockFileUpdate": true
+      },
+      "manifestRootsToUpdate": [
+        "{projectRoot}",
+        "{projectRoot}/dist"
+      ]
+    },
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": false
+    },
+    "releaseTagPattern": "{projectName}-{version}"
+  },
   "generators": {
     "@nx/react": {
       "application": {
