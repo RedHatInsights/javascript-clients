@@ -73,8 +73,8 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "@types/jest": "30.0.0",
     "@types/node": "^13.11.1",
-    "@typescript-eslint/eslint-plugin": "8.11.0",
-    "@typescript-eslint/parser": "8.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
     "axios": "^1.12.2",
     "cypress": "14.5.4",
     "dotenv": "^8.2.0",
@@ -89,6 +89,7 @@
     "jest": "30.0.5",
     "jest-environment-jsdom": "30.0.5",
     "jest-environment-node": "^29.4.1",
+    "jest-util": "30.0.5",
     "jsonc-eslint-parser": "^2.4.0",
     "lerna": "^5.6.2",
     "npm-run-all": "^4.1.5",
@@ -101,13 +102,12 @@
     "ts-jest": "29.4.4",
     "ts-node": "10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typedoc": "^0.25.13",
+    "typedoc": "^0.28.13",
     "typedoc-plugin-markdown": "^3.13.6",
     "typescript": "^5.6.0",
     "url-loader": "^4.1.1",
     "verdaccio": "6.1.6",
     "webpack-merge": "^5.10.0",
-    "zod": "^3.22.4",
-    "jest-util": "30.0.5"
+    "zod": "^3.22.4"
   }
 }

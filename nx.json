@@ -54,6 +54,9 @@
     "sharedGlobals": []
   },
   "neverConnectToCloud": true,
+  "tui": {
+    "enabled": false
+  },
   "release": {
     "projects": ["packages/*"],
     "projectsRelationship": "independent",
