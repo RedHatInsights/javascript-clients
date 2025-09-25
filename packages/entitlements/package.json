@@ -21,7 +21,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@redhat-cloud-services/javascript-clients-shared": "^1.2.6",
+    "@redhat-cloud-services/javascript-clients-shared": "^2.0.2",
     "tslib": "^2.6.2"
   }
 }
