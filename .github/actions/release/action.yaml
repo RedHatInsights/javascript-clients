@@ -25,18 +25,20 @@ runs:
       run: |
         git config user.name "${{ inputs.gh_name }}"
         git config user.email "${{ inputs.gh_email }}"
-    - name: Build
-      shell: bash
-      run: npx nx affected --base=HEAD~1 -t build --trackDeps --exclude=@redhat-cloud-services/CLIENTNAME-client
     - name: Set publish config
       env:
         NPM_TOKEN: ${{ inputs.npm_token }}
       shell: bash
       run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-    - name: Version
+    - name: Release version
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.gh_token }}
         GITHUB_TOKEN: ${{ inputs.gh_token }}
-      run: npx nx affected --base=HEAD~1 --parallel=1 --target=version --postTargets=npm,github --trackDeps --exclude=@redhat-cloud-services/CLIENTNAME-client
+      run: npx nx release version
+    - name: Release publish
+      shell: bash
+      env:
+        NPM_TOKEN: ${{ inputs.npm_token }}
+      run: npx nx release publish
   
