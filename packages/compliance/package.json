@@ -1,7 +1,7 @@
 {
   "name": "@redhat-cloud-services/compliance-client",
   "version": "3.0.3",
-  "description": "",
+  "description": "TypeScript client for Red Hat Insights Compliance service",
   "main": "./index.js",
   "module": "./esm/index.js",
   "typings": "./index.d.ts",
