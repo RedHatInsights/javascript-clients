@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/compliance-client",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "TypeScript client for Red Hat Insights Compliance service",
   "main": "./index.js",
   "module": "./esm/index.js",
@@ -22,7 +22,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@redhat-cloud-services/javascript-clients-shared": "^2.0.2",
+    "@redhat-cloud-services/javascript-clients-shared": "^2.0.3",
     "tslib": "^2.6.2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/host-inventory-client",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -18,7 +18,7 @@
     "doc": "typedoc"
   },
   "dependencies": {
-    "@redhat-cloud-services/javascript-clients-shared": "^2.0.2",
+    "@redhat-cloud-services/javascript-clients-shared": "^2.0.3",
     "tslib": "^2.6.2"
   }
 }
