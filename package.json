@@ -13,7 +13,6 @@
     "build:generator": "mvn clean package -q -DskipTests",
     "create-client": "utils/create-client.sh",
     "doc": "npm run doc --workspaces",
-    "release:bot": "node config/release.js",
     "nx": "nx",
     "nx:reset": "nx reset",
     "prepare": "husky install",
