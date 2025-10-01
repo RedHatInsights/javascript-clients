@@ -15,6 +15,30 @@ We are using Java to install and build this generator. Please install Java and p
 
 ### Troubleshooting
 
+#### Publish to local registry 
+
+You can publish a package to a local registry to test that the import works. 
+
+```sh
+# start local registry
+docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+# add user and login
+npm adduser --registry http://127.0.0.1:4873
+# build package
+npx nx build @redhat-cloud-services/rbac-client 
+# publish package 
+NPM_CONFIG_REGISTRY=http://127.0.0.1:4873 npm publish --tag local ./packages/rbac
+```
+
+Testing from package consumer perspective. 
+
+```sh
+# install package from local registry
+NPM_CONFIG_REGISTRY=http://127.0.0.1:4873 npm install @redhat-cloud-services/rbac-client@4.2.12-local
+# build
+NPM_CONFIG_REGISTRY=http://127.0.0.1:4873 npx tsc
+```
+
 #### CI fails due to mismatch between package.json and package-lock.json
 
 The Ubuntu 24.04 container running the Github Actions uses node 20.19.5.

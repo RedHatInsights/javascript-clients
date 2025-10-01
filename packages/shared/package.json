@@ -4,6 +4,79 @@
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/esm/utils.js",
+      "default": "./dist/utils.js"
+    },
+    "./common": {
+      "types": "./dist/common.d.ts",
+      "import": "./dist/esm/common.js",
+      "default": "./dist/common.js"
+    },
+    "./base": {
+      "types": "./dist/base.d.ts",
+      "import": "./dist/esm/base.js",
+      "default": "./dist/base.js"
+    },
+    "./configuration": {
+      "types": "./dist/configuration.d.ts",
+      "import": "./dist/esm/configuration.js",
+      "default": "./dist/configuration.js"
+    },
+    "./dist/utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/esm/utils.js",
+      "default": "./dist/utils.js"
+    },
+    "./dist/common": {
+      "types": "./dist/common.d.ts",
+      "import": "./dist/esm/common.js",
+      "default": "./dist/common.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/esm/*/index.js",
+      "default": "./dist/*/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "utils": [
+        "./dist/utils.d.ts"
+      ],
+      "common": [
+        "./dist/common.d.ts"
+      ],
+      "base": [
+        "./dist/base.d.ts"
+      ],
+      "configuration": [
+        "./dist/configuration.d.ts"
+      ],
+      "dist/utils": [
+        "./dist/utils.d.ts"
+      ],
+      "dist/common": [
+        "./dist/common.d.ts"
+      ],
+      "dist/base": [
+        "./dist/base.d.ts"
+      ],
+      "dist/configuration": [
+        "./dist/configuration.d.ts"
+      ],
+      "*": [
+        "./dist/*/index.d.ts"
+      ]
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
