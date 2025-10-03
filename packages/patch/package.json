@@ -4,8 +4,35 @@
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/index.js"
+    },
+    "./api": {
+      "types": "./dist/api.d.ts",
+      "import": "./dist/esm/api.js",
+      "default": "./dist/api.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/esm/*/index.js",
+      "default": "./dist/*/index.js"
+    }
+  },
   "scripts": {
     "doc": "typedoc"
+  },
+  "typesVersions": {
+    "*": {
+      "api": [
+        "./dist/api.d.ts"
+      ],
+      "*": [
+        "./dist/*/index.d.ts"
+      ]
+    }
   },
   "publishConfig": {
     "access": "public"

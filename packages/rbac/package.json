@@ -4,6 +4,41 @@
   "description": "TypeScript client for Red Hat Insights RBAC service",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/index.js"
+    },
+    "./api": {
+      "types": "./dist/api.d.ts",
+      "import": "./dist/esm/api.js",
+      "default": "./dist/api.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/types/index.js",
+      "default": "./dist/types/index.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/esm/*/index.js",
+      "default": "./dist/*/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "api": [
+        "./dist/api.d.ts"
+      ],
+      "types": [
+        "./dist/types/index.d.ts"
+      ],
+      "*": [
+        "./dist/*/index.d.ts"
+      ]
+    }
+  },
   "publishConfig": {
     "access": "public"
   },

@@ -20,7 +20,7 @@
     "test:unit": "nx run-many -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "test:unit:affected": "nx affected -t test --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "test:integration": "npm run build:no-cache && nx run-many --parallel=1 -t integration-v1,integration-v2 --exclude=@redhat-cloud-services/CLIENTNAME-client --skip-nx-cache",
-    "test": "npm-run-all --parallel test:* --exclude=@redhat-cloud-services/CLIENTNAME-client",
+    "test": "npm-run-all --parallel test:*",
     "build": "nx run-many -t build --exclude=@redhat-cloud-services/CLIENTNAME-client",
     "build:no-cache": "npm run build -- --skip-nx-cache",
     "generate": "nx run-many -t generate --exclude=@redhat-cloud-services/CLIENTNAME-client",
