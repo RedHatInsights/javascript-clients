@@ -2,9 +2,36 @@
   "name": "@redhat-cloud-services/CLIENTNAME-client",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.js",
-  "module": "./esm/index.js",
-  "typings": "./index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/index.js"
+    },
+    "./api": {
+      "types": "./dist/api.d.ts",
+      "import": "./dist/esm/api.js",
+      "default": "./dist/api.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/esm/*/index.js",
+      "default": "./dist/*/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "api": [
+        "./dist/api.d.ts"
+      ],
+      "*": [
+        "./dist/*/index.d.ts"
+      ]
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
