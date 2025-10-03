@@ -1,6 +1,6 @@
 {
   "name": "@redhat-cloud-services/patch-client",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -49,6 +49,6 @@
   "homepage": "https://github.com/RedHatInsights/javascript-clients/tree/master/packages/patch#readme",
   "dependencies": {
     "tslib": "^2.6.2",
-    "@redhat-cloud-services/javascript-clients-shared": "^2.0.3"
+    "@redhat-cloud-services/javascript-clients-shared": "^2.0.4"
   }
 }
