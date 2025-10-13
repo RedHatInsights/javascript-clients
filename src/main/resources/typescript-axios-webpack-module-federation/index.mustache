@@ -1,8 +1,10 @@
 {{#apiInfo.apis}}
 {{#operations}}
 {{#operation}}
-export { default as {{nickname}}, {{operationIdCamelCase}}ReturnType } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
+export { default as {{nickname}}, type {{operationIdCamelCase}}ReturnType } from './{{#lambda.titlecase}}{{operationId}}{{/lambda.titlecase}}'
 
 {{/operation}}
 {{/operations}}
 {{/apiInfo.apis}}
+
+export * from './types'

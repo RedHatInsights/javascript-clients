@@ -1,66 +1,68 @@
-export { default as apiGroupCreateGroup, ApiGroupCreateGroupReturnType } from './ApiGroupCreateGroup'
+export { default as apiGroupCreateGroup, type ApiGroupCreateGroupReturnType } from './ApiGroupCreateGroup'
 
-export { default as apiGroupDeleteGroups, ApiGroupDeleteGroupsReturnType } from './ApiGroupDeleteGroups'
+export { default as apiGroupDeleteGroups, type ApiGroupDeleteGroupsReturnType } from './ApiGroupDeleteGroups'
 
-export { default as apiGroupDeleteHostsFromDifferentGroups, ApiGroupDeleteHostsFromDifferentGroupsReturnType } from './ApiGroupDeleteHostsFromDifferentGroups'
+export { default as apiGroupDeleteHostsFromDifferentGroups, type ApiGroupDeleteHostsFromDifferentGroupsReturnType } from './ApiGroupDeleteHostsFromDifferentGroups'
 
-export { default as apiGroupGetGroupList, ApiGroupGetGroupListReturnType } from './ApiGroupGetGroupList'
+export { default as apiGroupGetGroupList, type ApiGroupGetGroupListReturnType } from './ApiGroupGetGroupList'
 
-export { default as apiGroupGetGroupsById, ApiGroupGetGroupsByIdReturnType } from './ApiGroupGetGroupsById'
+export { default as apiGroupGetGroupsById, type ApiGroupGetGroupsByIdReturnType } from './ApiGroupGetGroupsById'
 
-export { default as apiGroupPatchGroupById, ApiGroupPatchGroupByIdReturnType } from './ApiGroupPatchGroupById'
+export { default as apiGroupPatchGroupById, type ApiGroupPatchGroupByIdReturnType } from './ApiGroupPatchGroupById'
 
-export { default as apiHostDeleteAllHosts, ApiHostDeleteAllHostsReturnType } from './ApiHostDeleteAllHosts'
+export { default as apiHostDeleteAllHosts, type ApiHostDeleteAllHostsReturnType } from './ApiHostDeleteAllHosts'
 
-export { default as apiHostDeleteHostById, ApiHostDeleteHostByIdReturnType } from './ApiHostDeleteHostById'
+export { default as apiHostDeleteHostById, type ApiHostDeleteHostByIdReturnType } from './ApiHostDeleteHostById'
 
-export { default as apiHostDeleteHostsByFilter, ApiHostDeleteHostsByFilterReturnType } from './ApiHostDeleteHostsByFilter'
+export { default as apiHostDeleteHostsByFilter, type ApiHostDeleteHostsByFilterReturnType } from './ApiHostDeleteHostsByFilter'
 
-export { default as apiHostGetHostById, ApiHostGetHostByIdReturnType } from './ApiHostGetHostById'
+export { default as apiHostGetHostById, type ApiHostGetHostByIdReturnType } from './ApiHostGetHostById'
 
-export { default as apiHostGetHostExists, ApiHostGetHostExistsReturnType } from './ApiHostGetHostExists'
+export { default as apiHostGetHostExists, type ApiHostGetHostExistsReturnType } from './ApiHostGetHostExists'
 
-export { default as apiHostGetHostList, ApiHostGetHostListReturnType } from './ApiHostGetHostList'
+export { default as apiHostGetHostList, type ApiHostGetHostListReturnType } from './ApiHostGetHostList'
 
-export { default as apiHostGetHostSystemProfileById, ApiHostGetHostSystemProfileByIdReturnType } from './ApiHostGetHostSystemProfileById'
+export { default as apiHostGetHostSystemProfileById, type ApiHostGetHostSystemProfileByIdReturnType } from './ApiHostGetHostSystemProfileById'
 
-export { default as apiHostGetHostTagCount, ApiHostGetHostTagCountReturnType } from './ApiHostGetHostTagCount'
+export { default as apiHostGetHostTagCount, type ApiHostGetHostTagCountReturnType } from './ApiHostGetHostTagCount'
 
-export { default as apiHostGetHostTags, ApiHostGetHostTagsReturnType } from './ApiHostGetHostTags'
+export { default as apiHostGetHostTags, type ApiHostGetHostTagsReturnType } from './ApiHostGetHostTags'
 
-export { default as apiHostGroupAddHostListToGroup, ApiHostGroupAddHostListToGroupReturnType } from './ApiHostGroupAddHostListToGroup'
+export { default as apiHostGroupAddHostListToGroup, type ApiHostGroupAddHostListToGroupReturnType } from './ApiHostGroupAddHostListToGroup'
 
-export { default as apiHostGroupDeleteHostsFromGroup, ApiHostGroupDeleteHostsFromGroupReturnType } from './ApiHostGroupDeleteHostsFromGroup'
+export { default as apiHostGroupDeleteHostsFromGroup, type ApiHostGroupDeleteHostsFromGroupReturnType } from './ApiHostGroupDeleteHostsFromGroup'
 
-export { default as apiHostHostCheckin, ApiHostHostCheckinReturnType } from './ApiHostHostCheckin'
+export { default as apiHostHostCheckin, type ApiHostHostCheckinReturnType } from './ApiHostHostCheckin'
 
-export { default as apiHostMergeFacts, ApiHostMergeFactsReturnType } from './ApiHostMergeFacts'
+export { default as apiHostMergeFacts, type ApiHostMergeFactsReturnType } from './ApiHostMergeFacts'
 
-export { default as apiHostPatchHostById, ApiHostPatchHostByIdReturnType } from './ApiHostPatchHostById'
+export { default as apiHostPatchHostById, type ApiHostPatchHostByIdReturnType } from './ApiHostPatchHostById'
 
-export { default as apiHostReplaceFacts, ApiHostReplaceFactsReturnType } from './ApiHostReplaceFacts'
+export { default as apiHostReplaceFacts, type ApiHostReplaceFactsReturnType } from './ApiHostReplaceFacts'
 
-export { default as apiResourceTypeGetResourceTypeGroupsList, ApiResourceTypeGetResourceTypeGroupsListReturnType } from './ApiResourceTypeGetResourceTypeGroupsList'
+export { default as apiResourceTypeGetResourceTypeGroupsList, type ApiResourceTypeGetResourceTypeGroupsListReturnType } from './ApiResourceTypeGetResourceTypeGroupsList'
 
-export { default as apiResourceTypeGetResourceTypeList, ApiResourceTypeGetResourceTypeListReturnType } from './ApiResourceTypeGetResourceTypeList'
+export { default as apiResourceTypeGetResourceTypeList, type ApiResourceTypeGetResourceTypeListReturnType } from './ApiResourceTypeGetResourceTypeList'
 
-export { default as apiStalenessCreateStaleness, ApiStalenessCreateStalenessReturnType } from './ApiStalenessCreateStaleness'
+export { default as apiStalenessCreateStaleness, type ApiStalenessCreateStalenessReturnType } from './ApiStalenessCreateStaleness'
 
-export { default as apiStalenessDeleteStaleness, ApiStalenessDeleteStalenessReturnType } from './ApiStalenessDeleteStaleness'
+export { default as apiStalenessDeleteStaleness, type ApiStalenessDeleteStalenessReturnType } from './ApiStalenessDeleteStaleness'
 
-export { default as apiStalenessGetDefaultStaleness, ApiStalenessGetDefaultStalenessReturnType } from './ApiStalenessGetDefaultStaleness'
+export { default as apiStalenessGetDefaultStaleness, type ApiStalenessGetDefaultStalenessReturnType } from './ApiStalenessGetDefaultStaleness'
 
-export { default as apiStalenessGetStaleness, ApiStalenessGetStalenessReturnType } from './ApiStalenessGetStaleness'
+export { default as apiStalenessGetStaleness, type ApiStalenessGetStalenessReturnType } from './ApiStalenessGetStaleness'
 
-export { default as apiStalenessUpdateStaleness, ApiStalenessUpdateStalenessReturnType } from './ApiStalenessUpdateStaleness'
+export { default as apiStalenessUpdateStaleness, type ApiStalenessUpdateStalenessReturnType } from './ApiStalenessUpdateStaleness'
 
-export { default as apiSystemProfileGetOperatingSystem, ApiSystemProfileGetOperatingSystemReturnType } from './ApiSystemProfileGetOperatingSystem'
+export { default as apiSystemProfileGetOperatingSystem, type ApiSystemProfileGetOperatingSystemReturnType } from './ApiSystemProfileGetOperatingSystem'
 
-export { default as apiSystemProfileGetSapSids, ApiSystemProfileGetSapSidsReturnType } from './ApiSystemProfileGetSapSids'
+export { default as apiSystemProfileGetSapSids, type ApiSystemProfileGetSapSidsReturnType } from './ApiSystemProfileGetSapSids'
 
-export { default as apiSystemProfileGetSapSystem, ApiSystemProfileGetSapSystemReturnType } from './ApiSystemProfileGetSapSystem'
+export { default as apiSystemProfileGetSapSystem, type ApiSystemProfileGetSapSystemReturnType } from './ApiSystemProfileGetSapSystem'
 
-export { default as apiSystemProfileValidateSchema, ApiSystemProfileValidateSchemaReturnType } from './ApiSystemProfileValidateSchema'
+export { default as apiSystemProfileValidateSchema, type ApiSystemProfileValidateSchemaReturnType } from './ApiSystemProfileValidateSchema'
 
-export { default as apiTagGetTags, ApiTagGetTagsReturnType } from './ApiTagGetTags'
+export { default as apiTagGetTags, type ApiTagGetTagsReturnType } from './ApiTagGetTags'
 
+
+export * from './types'

@@ -1,16 +1,18 @@
-export { default as roleBindingsListBySubject, RoleBindingsListBySubjectReturnType } from './RoleBindingsListBySubject'
+export { default as roleBindingsListBySubject, type RoleBindingsListBySubjectReturnType } from './RoleBindingsListBySubject'
 
-export { default as workspacesCreate, WorkspacesCreateReturnType } from './WorkspacesCreate'
+export { default as workspacesCreate, type WorkspacesCreateReturnType } from './WorkspacesCreate'
 
-export { default as workspacesDelete, WorkspacesDeleteReturnType } from './WorkspacesDelete'
+export { default as workspacesDelete, type WorkspacesDeleteReturnType } from './WorkspacesDelete'
 
-export { default as workspacesList, WorkspacesListReturnType } from './WorkspacesList'
+export { default as workspacesList, type WorkspacesListReturnType } from './WorkspacesList'
 
-export { default as workspacesMove, WorkspacesMoveReturnType } from './WorkspacesMove'
+export { default as workspacesMove, type WorkspacesMoveReturnType } from './WorkspacesMove'
 
-export { default as workspacesPatch, WorkspacesPatchReturnType } from './WorkspacesPatch'
+export { default as workspacesPatch, type WorkspacesPatchReturnType } from './WorkspacesPatch'
 
-export { default as workspacesRead, WorkspacesReadReturnType } from './WorkspacesRead'
+export { default as workspacesRead, type WorkspacesReadReturnType } from './WorkspacesRead'
 
-export { default as workspacesUpdate, WorkspacesUpdateReturnType } from './WorkspacesUpdate'
+export { default as workspacesUpdate, type WorkspacesUpdateReturnType } from './WorkspacesUpdate'
 
+
+export * from './types'

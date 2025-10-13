@@ -1,20 +1,22 @@
-export { default as favoritesGet, FavoritesGetReturnType } from './FavoritesGet'
+export { default as favoritesGet, type FavoritesGetReturnType } from './FavoritesGet'
 
-export { default as favoritesPost, FavoritesPostReturnType } from './FavoritesPost'
+export { default as favoritesPost, type FavoritesPostReturnType } from './FavoritesPost'
 
-export { default as helptopicsGet, HelptopicsGetReturnType } from './HelptopicsGet'
+export { default as helptopicsGet, type HelptopicsGetReturnType } from './HelptopicsGet'
 
-export { default as helptopicsNameGet, HelptopicsNameGetReturnType } from './HelptopicsNameGet'
+export { default as helptopicsNameGet, type HelptopicsNameGetReturnType } from './HelptopicsNameGet'
 
-export { default as progressGet, ProgressGetReturnType } from './ProgressGet'
+export { default as progressGet, type ProgressGetReturnType } from './ProgressGet'
 
-export { default as progressIdDelete, ProgressIdDeleteReturnType } from './ProgressIdDelete'
+export { default as progressIdDelete, type ProgressIdDeleteReturnType } from './ProgressIdDelete'
 
-export { default as progressPost, ProgressPostReturnType } from './ProgressPost'
+export { default as progressPost, type ProgressPostReturnType } from './ProgressPost'
 
-export { default as quickstartsFiltersGet, QuickstartsFiltersGetReturnType } from './QuickstartsFiltersGet'
+export { default as quickstartsFiltersGet, type QuickstartsFiltersGetReturnType } from './QuickstartsFiltersGet'
 
-export { default as quickstartsGet, QuickstartsGetReturnType } from './QuickstartsGet'
+export { default as quickstartsGet, type QuickstartsGetReturnType } from './QuickstartsGet'
 
-export { default as quickstartsIdGet, QuickstartsIdGetReturnType } from './QuickstartsIdGet'
+export { default as quickstartsIdGet, type QuickstartsIdGetReturnType } from './QuickstartsIdGet'
 
+
+export * from './types'
