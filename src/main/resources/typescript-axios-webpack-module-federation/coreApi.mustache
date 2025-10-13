@@ -56,7 +56,11 @@ export type {{operationIdCamelCase}}{{enumName}} = typeof {{operationIdCamelCase
 export type {{operationIdCamelCase}}ReturnType = AxiosPromise<{{{returnType}}}{{^returnType}}void{{/returnType}}>;
 
 const is{{operationIdCamelCase}}ObjectParams = (params: [{{operationIdCamelCase}}Params] | unknown[]): params is [{{operationIdCamelCase}}Params] => {
-  return params.length === 1{{#allParams}} && {{^required}}true{{/required}}{{#required}}Object.prototype.hasOwnProperty.call(params, '{{paramName}}'){{/required}}{{/allParams}}
+  const l = params.length === 1
+  if(l && typeof params[0] === 'object' && !Array.isArray(params[0])) {
+    return true{{#allParams}}{{#required}} && Object.prototype.hasOwnProperty.call(params[0], '{{paramName}}'){{/required}}{{/allParams}}
+  }
+  return false
 }
 /**
 * {{&notes}}
